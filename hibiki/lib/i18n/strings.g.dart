@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35258 (2074 per locale)
+/// Strings: 35326 (2078 per locale)
 ///
-/// Built on 2026-07-03 at 15:03 UTC
+/// Built on 2026-07-03 at 17:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2763,6 +2763,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get remove_from_series_confirm =>
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   String get removed_from_series => 'Removed from series';
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -7460,6 +7464,14 @@ class _StringsAr extends _StringsEn {
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   @override
   String get removed_from_series => 'Removed from series';
+  @override
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -12280,6 +12292,14 @@ class _StringsDe extends _StringsEn {
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   @override
   String get removed_from_series => 'Removed from series';
+  @override
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -17117,6 +17137,14 @@ class _StringsEs extends _StringsEn {
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   @override
   String get removed_from_series => 'Removed from series';
+  @override
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -21973,6 +22001,14 @@ class _StringsFr extends _StringsEn {
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   @override
   String get removed_from_series => 'Removed from series';
+  @override
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -26731,6 +26767,14 @@ class _StringsId extends _StringsEn {
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   @override
   String get removed_from_series => 'Removed from series';
+  @override
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -31550,6 +31594,14 @@ class _StringsIt extends _StringsEn {
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   @override
   String get removed_from_series => 'Removed from series';
+  @override
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -36094,6 +36146,14 @@ class _StringsJa extends _StringsEn {
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   @override
   String get removed_from_series => 'Removed from series';
+  @override
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -40642,6 +40702,14 @@ class _StringsKo extends _StringsEn {
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   @override
   String get removed_from_series => 'Removed from series';
+  @override
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -45429,6 +45497,14 @@ class _StringsNl extends _StringsEn {
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   @override
   String get removed_from_series => 'Removed from series';
+  @override
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -50239,6 +50315,14 @@ class _StringsPtBr extends _StringsEn {
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   @override
   String get removed_from_series => 'Removed from series';
+  @override
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -55024,6 +55108,14 @@ class _StringsRu extends _StringsEn {
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   @override
   String get removed_from_series => 'Removed from series';
+  @override
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -59722,6 +59814,14 @@ class _StringsTh extends _StringsEn {
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   @override
   String get removed_from_series => 'Removed from series';
+  @override
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -64475,6 +64575,14 @@ class _StringsTr extends _StringsEn {
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   @override
   String get removed_from_series => 'Removed from series';
+  @override
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -69203,6 +69311,14 @@ class _StringsVi extends _StringsEn {
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   @override
   String get removed_from_series => 'Removed from series';
+  @override
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -73609,6 +73725,14 @@ class _StringsZhCn extends _StringsEn {
   String get remove_from_series_confirm => '此书将移出此系列并放回书架，不会删除书籍。';
   @override
   String get removed_from_series => '已移出系列';
+  @override
+  String get shortcut_gamepad_brand_label => '手柄按钮样式';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -78055,6 +78179,14 @@ class _StringsZhHk extends _StringsEn {
       'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
   @override
   String get removed_from_series => 'Removed from series';
+  @override
+  String get shortcut_gamepad_brand_label => 'Gamepad button style';
+  @override
+  String get shortcut_gamepad_brand_xbox => 'Xbox';
+  @override
+  String get shortcut_gamepad_brand_playstation => 'PlayStation';
+  @override
+  String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
 }
 
 // Path: retrying_in
@@ -82340,6 +82472,14 @@ extension on _StringsEn {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -86585,6 +86725,14 @@ extension on _StringsAr {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -90852,6 +91000,14 @@ extension on _StringsDe {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -95117,6 +95273,14 @@ extension on _StringsEs {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -99389,6 +99553,14 @@ extension on _StringsFr {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -103641,6 +103813,14 @@ extension on _StringsId {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -107910,6 +108090,14 @@ extension on _StringsIt {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -112137,6 +112325,14 @@ extension on _StringsJa {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -116367,6 +116563,14 @@ extension on _StringsKo {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -120629,6 +120833,14 @@ extension on _StringsNl {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -124888,6 +125100,14 @@ extension on _StringsPtBr {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -129151,6 +129371,14 @@ extension on _StringsRu {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -133396,6 +133624,14 @@ extension on _StringsTh {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -137650,6 +137886,14 @@ extension on _StringsTr {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -141898,6 +142142,14 @@ extension on _StringsVi {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -146112,6 +146364,14 @@ extension on _StringsZhCn {
         return '此书将移出此系列并放回书架，不会删除书籍。';
       case 'removed_from_series':
         return '已移出系列';
+      case 'shortcut_gamepad_brand_label':
+        return '手柄按钮样式';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
@@ -150331,6 +150591,14 @@ extension on _StringsZhHk {
         return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
       case 'removed_from_series':
         return 'Removed from series';
+      case 'shortcut_gamepad_brand_label':
+        return 'Gamepad button style';
+      case 'shortcut_gamepad_brand_xbox':
+        return 'Xbox';
+      case 'shortcut_gamepad_brand_playstation':
+        return 'PlayStation';
+      case 'shortcut_gamepad_brand_switch':
+        return 'Nintendo Switch';
       default:
         return null;
     }
