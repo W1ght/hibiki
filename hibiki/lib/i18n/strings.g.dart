@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35326 (2078 per locale)
+/// Strings: 35360 (2080 per locale)
 ///
-/// Built on 2026-07-03 at 17:34 UTC
+/// Built on 2026-07-03 at 18:39 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2767,6 +2767,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_gamepad_brand_xbox => 'Xbox';
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  String get global_context_capture => 'Capture selection context';
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -7472,6 +7475,11 @@ class _StringsAr extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => 'Capture selection context';
+  @override
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -12300,6 +12308,11 @@ class _StringsDe extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => 'Capture selection context';
+  @override
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -17145,6 +17158,11 @@ class _StringsEs extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => 'Capture selection context';
+  @override
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -22009,6 +22027,11 @@ class _StringsFr extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => 'Capture selection context';
+  @override
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -26775,6 +26798,11 @@ class _StringsId extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => 'Capture selection context';
+  @override
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -31602,6 +31630,11 @@ class _StringsIt extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => 'Capture selection context';
+  @override
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -36154,6 +36187,11 @@ class _StringsJa extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => 'Capture selection context';
+  @override
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -40710,6 +40748,11 @@ class _StringsKo extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => 'Capture selection context';
+  @override
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -45505,6 +45548,11 @@ class _StringsNl extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => 'Capture selection context';
+  @override
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -50323,6 +50371,11 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => 'Capture selection context';
+  @override
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -55116,6 +55169,11 @@ class _StringsRu extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => 'Capture selection context';
+  @override
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -59822,6 +59880,11 @@ class _StringsTh extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => 'Capture selection context';
+  @override
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -64583,6 +64646,11 @@ class _StringsTr extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => 'Capture selection context';
+  @override
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -69319,6 +69387,11 @@ class _StringsVi extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => 'Capture selection context';
+  @override
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -73733,6 +73806,11 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => '抓取选中文本上下文';
+  @override
+  String get global_context_capture_hint =>
+      '从前台应用读取选区周围文本，在查词弹窗显示当前句（仅 Windows）';
 }
 
 // Path: retrying_in
@@ -78187,6 +78265,11 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_gamepad_brand_playstation => 'PlayStation';
   @override
   String get shortcut_gamepad_brand_switch => 'Nintendo Switch';
+  @override
+  String get global_context_capture => 'Capture selection context';
+  @override
+  String get global_context_capture_hint =>
+      'Read surrounding text from the foreground app to show the current sentence (Windows only)';
 }
 
 // Path: retrying_in
@@ -82480,6 +82563,10 @@ extension on _StringsEn {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
@@ -86733,6 +86820,10 @@ extension on _StringsAr {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
@@ -91008,6 +91099,10 @@ extension on _StringsDe {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
@@ -95281,6 +95376,10 @@ extension on _StringsEs {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
@@ -99561,6 +99660,10 @@ extension on _StringsFr {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
@@ -103821,6 +103924,10 @@ extension on _StringsId {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
@@ -108098,6 +108205,10 @@ extension on _StringsIt {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
@@ -112333,6 +112444,10 @@ extension on _StringsJa {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
@@ -116571,6 +116686,10 @@ extension on _StringsKo {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
@@ -120841,6 +120960,10 @@ extension on _StringsNl {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
@@ -125108,6 +125231,10 @@ extension on _StringsPtBr {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
@@ -129379,6 +129506,10 @@ extension on _StringsRu {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
@@ -133632,6 +133763,10 @@ extension on _StringsTh {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
@@ -137894,6 +138029,10 @@ extension on _StringsTr {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
@@ -142150,6 +142289,10 @@ extension on _StringsVi {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
@@ -146372,6 +146515,10 @@ extension on _StringsZhCn {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return '抓取选中文本上下文';
+      case 'global_context_capture_hint':
+        return '从前台应用读取选区周围文本，在查词弹窗显示当前句（仅 Windows）';
       default:
         return null;
     }
@@ -150599,6 +150746,10 @@ extension on _StringsZhHk {
         return 'PlayStation';
       case 'shortcut_gamepad_brand_switch':
         return 'Nintendo Switch';
+      case 'global_context_capture':
+        return 'Capture selection context';
+      case 'global_context_capture_hint':
+        return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
       default:
         return null;
     }
