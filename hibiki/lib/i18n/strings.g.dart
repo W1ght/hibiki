@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35224 (2072 per locale)
+/// Strings: 35258 (2074 per locale)
 ///
-/// Built on 2026-07-03 at 14:34 UTC
+/// Built on 2026-07-03 at 15:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2760,6 +2760,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_paired_peer_unknown => 'Unknown device';
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -7452,6 +7455,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  @override
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  @override
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -12267,6 +12275,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  @override
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  @override
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -17099,6 +17112,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  @override
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  @override
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -21950,6 +21968,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  @override
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  @override
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -26703,6 +26726,11 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  @override
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  @override
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -31517,6 +31545,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  @override
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  @override
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -36056,6 +36089,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  @override
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  @override
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -40599,6 +40637,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  @override
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  @override
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -45381,6 +45424,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  @override
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  @override
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -50186,6 +50234,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  @override
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  @override
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -54966,6 +55019,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  @override
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  @override
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -59659,6 +59717,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  @override
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  @override
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -64407,6 +64470,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  @override
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  @override
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -69130,6 +69198,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  @override
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  @override
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -73532,6 +73605,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'S 形曲线上采样可减少振铃，但会增加显卡负担。为性能默认关闭；想要更锐利的放大画质可开启。';
+  @override
+  String get remove_from_series_confirm => '此书将移出此系列并放回书架，不会删除书籍。';
+  @override
+  String get removed_from_series => '已移出系列';
 }
 
 // Path: retrying_in
@@ -77973,6 +78050,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  @override
+  String get remove_from_series_confirm =>
+      'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+  @override
+  String get removed_from_series => 'Removed from series';
 }
 
 // Path: retrying_in
@@ -82254,6 +82336,10 @@ extension on _StringsEn {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
@@ -86495,6 +86581,10 @@ extension on _StringsAr {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
@@ -90758,6 +90848,10 @@ extension on _StringsDe {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
@@ -95019,6 +95113,10 @@ extension on _StringsEs {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
@@ -99287,6 +99385,10 @@ extension on _StringsFr {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
@@ -103535,6 +103637,10 @@ extension on _StringsId {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
@@ -107800,6 +107906,10 @@ extension on _StringsIt {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
@@ -112023,6 +112133,10 @@ extension on _StringsJa {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
@@ -116249,6 +116363,10 @@ extension on _StringsKo {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
@@ -120507,6 +120625,10 @@ extension on _StringsNl {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
@@ -124762,6 +124884,10 @@ extension on _StringsPtBr {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
@@ -129021,6 +129147,10 @@ extension on _StringsRu {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
@@ -133262,6 +133392,10 @@ extension on _StringsTh {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
@@ -137512,6 +137646,10 @@ extension on _StringsTr {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
@@ -141756,6 +141894,10 @@ extension on _StringsVi {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
@@ -145966,6 +146108,10 @@ extension on _StringsZhCn {
         return '未知设备';
       case 'video_setting_mpv_sigmoid_hint':
         return 'S 形曲线上采样可减少振铃，但会增加显卡负担。为性能默认关闭；想要更锐利的放大画质可开启。';
+      case 'remove_from_series_confirm':
+        return '此书将移出此系列并放回书架，不会删除书籍。';
+      case 'removed_from_series':
+        return '已移出系列';
       default:
         return null;
     }
@@ -150181,6 +150327,10 @@ extension on _StringsZhHk {
         return 'Unknown device';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'remove_from_series_confirm':
+        return 'This book will be removed from the series and returned to the shelf. It won\'t be deleted.';
+      case 'removed_from_series':
+        return 'Removed from series';
       default:
         return null;
     }
