@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35394 (2082 per locale)
+/// Strings: 35428 (2084 per locale)
 ///
-/// Built on 2026-07-04 at 03:04 UTC
+/// Built on 2026-07-04 at 05:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2772,6 +2772,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
   String get file_picker_title => 'Select a file';
   String get file_picker_empty => 'No files';
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -7486,6 +7490,12 @@ class _StringsAr extends _StringsEn {
   String get file_picker_title => 'Select a file';
   @override
   String get file_picker_empty => 'No files';
+  @override
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -12323,6 +12333,12 @@ class _StringsDe extends _StringsEn {
   String get file_picker_title => 'Select a file';
   @override
   String get file_picker_empty => 'No files';
+  @override
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -17177,6 +17193,12 @@ class _StringsEs extends _StringsEn {
   String get file_picker_title => 'Select a file';
   @override
   String get file_picker_empty => 'No files';
+  @override
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -22050,6 +22072,12 @@ class _StringsFr extends _StringsEn {
   String get file_picker_title => 'Select a file';
   @override
   String get file_picker_empty => 'No files';
+  @override
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -26825,6 +26853,12 @@ class _StringsId extends _StringsEn {
   String get file_picker_title => 'Select a file';
   @override
   String get file_picker_empty => 'No files';
+  @override
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -31661,6 +31695,12 @@ class _StringsIt extends _StringsEn {
   String get file_picker_title => 'Select a file';
   @override
   String get file_picker_empty => 'No files';
+  @override
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -36222,6 +36262,12 @@ class _StringsJa extends _StringsEn {
   String get file_picker_title => 'Select a file';
   @override
   String get file_picker_empty => 'No files';
+  @override
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -40787,6 +40833,12 @@ class _StringsKo extends _StringsEn {
   String get file_picker_title => 'Select a file';
   @override
   String get file_picker_empty => 'No files';
+  @override
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -45591,6 +45643,12 @@ class _StringsNl extends _StringsEn {
   String get file_picker_title => 'Select a file';
   @override
   String get file_picker_empty => 'No files';
+  @override
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -50418,6 +50476,12 @@ class _StringsPtBr extends _StringsEn {
   String get file_picker_title => 'Select a file';
   @override
   String get file_picker_empty => 'No files';
+  @override
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -55220,6 +55284,12 @@ class _StringsRu extends _StringsEn {
   String get file_picker_title => 'Select a file';
   @override
   String get file_picker_empty => 'No files';
+  @override
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -59935,6 +60005,12 @@ class _StringsTh extends _StringsEn {
   String get file_picker_title => 'Select a file';
   @override
   String get file_picker_empty => 'No files';
+  @override
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -64705,6 +64781,12 @@ class _StringsTr extends _StringsEn {
   String get file_picker_title => 'Select a file';
   @override
   String get file_picker_empty => 'No files';
+  @override
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -69450,6 +69532,12 @@ class _StringsVi extends _StringsEn {
   String get file_picker_title => 'Select a file';
   @override
   String get file_picker_empty => 'No files';
+  @override
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -73873,6 +73961,11 @@ class _StringsZhCn extends _StringsEn {
   String get file_picker_title => '选择一个文件';
   @override
   String get file_picker_empty => '没有文件';
+  @override
+  String get video_windows_black_flash_notice_title => 'Windows 上黑屏闪烁？';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      '在 Windows 上，当显卡占用过高时视频画面可能出现黑屏闪烁。可尝试关闭上方的画质增强、S 形上采样和去色带，或把硬件解码切到「复制」以降低显卡负载。';
 }
 
 // Path: retrying_in
@@ -78336,6 +78429,12 @@ class _StringsZhHk extends _StringsEn {
   String get file_picker_title => 'Select a file';
   @override
   String get file_picker_empty => 'No files';
+  @override
+  String get video_windows_black_flash_notice_title =>
+      'Black flickering on Windows?';
+  @override
+  String get video_windows_black_flash_notice_body =>
+      'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
 }
 
 // Path: retrying_in
@@ -82637,6 +82736,10 @@ extension on _StringsEn {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
@@ -86898,6 +87001,10 @@ extension on _StringsAr {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
@@ -91181,6 +91288,10 @@ extension on _StringsDe {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
@@ -95462,6 +95573,10 @@ extension on _StringsEs {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
@@ -99750,6 +99865,10 @@ extension on _StringsFr {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
@@ -104018,6 +104137,10 @@ extension on _StringsId {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
@@ -108303,6 +108426,10 @@ extension on _StringsIt {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
@@ -112546,6 +112673,10 @@ extension on _StringsJa {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
@@ -116792,6 +116923,10 @@ extension on _StringsKo {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
@@ -121070,6 +121205,10 @@ extension on _StringsNl {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
@@ -125345,6 +125484,10 @@ extension on _StringsPtBr {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
@@ -129624,6 +129767,10 @@ extension on _StringsRu {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
@@ -133885,6 +134032,10 @@ extension on _StringsTh {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
@@ -138155,6 +138306,10 @@ extension on _StringsTr {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
@@ -142419,6 +142574,10 @@ extension on _StringsVi {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
@@ -146649,6 +146808,10 @@ extension on _StringsZhCn {
         return '选择一个文件';
       case 'file_picker_empty':
         return '没有文件';
+      case 'video_windows_black_flash_notice_title':
+        return 'Windows 上黑屏闪烁？';
+      case 'video_windows_black_flash_notice_body':
+        return '在 Windows 上，当显卡占用过高时视频画面可能出现黑屏闪烁。可尝试关闭上方的画质增强、S 形上采样和去色带，或把硬件解码切到「复制」以降低显卡负载。';
       default:
         return null;
     }
@@ -150884,6 +151047,10 @@ extension on _StringsZhHk {
         return 'Select a file';
       case 'file_picker_empty':
         return 'No files';
+      case 'video_windows_black_flash_notice_title':
+        return 'Black flickering on Windows?';
+      case 'video_windows_black_flash_notice_body':
+        return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
       default:
         return null;
     }
