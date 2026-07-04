@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35428 (2084 per locale)
+/// Strings: 35462 (2086 per locale)
 ///
-/// Built on 2026-07-04 at 05:47 UTC
+/// Built on 2026-07-04 at 06:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2776,6 +2776,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Black flickering on Windows?';
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  String get video_resource_missing_relink => 'Choose file';
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -7496,6 +7498,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  @override
+  String get video_resource_missing_relink => 'Choose file';
+  @override
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -12339,6 +12345,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  @override
+  String get video_resource_missing_relink => 'Choose file';
+  @override
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -17199,6 +17209,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  @override
+  String get video_resource_missing_relink => 'Choose file';
+  @override
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -22078,6 +22092,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  @override
+  String get video_resource_missing_relink => 'Choose file';
+  @override
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -26859,6 +26877,10 @@ class _StringsId extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  @override
+  String get video_resource_missing_relink => 'Choose file';
+  @override
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -31701,6 +31723,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  @override
+  String get video_resource_missing_relink => 'Choose file';
+  @override
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -36268,6 +36294,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  @override
+  String get video_resource_missing_relink => 'Choose file';
+  @override
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -40839,6 +40869,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  @override
+  String get video_resource_missing_relink => 'Choose file';
+  @override
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -45649,6 +45683,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  @override
+  String get video_resource_missing_relink => 'Choose file';
+  @override
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -50482,6 +50520,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  @override
+  String get video_resource_missing_relink => 'Choose file';
+  @override
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -55290,6 +55332,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  @override
+  String get video_resource_missing_relink => 'Choose file';
+  @override
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -60011,6 +60057,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  @override
+  String get video_resource_missing_relink => 'Choose file';
+  @override
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -64787,6 +64837,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  @override
+  String get video_resource_missing_relink => 'Choose file';
+  @override
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -69538,6 +69592,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  @override
+  String get video_resource_missing_relink => 'Choose file';
+  @override
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -73966,6 +74024,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       '在 Windows 上，当显卡占用过高时视频画面可能出现黑屏闪烁。可尝试关闭上方的画质增强、S 形上采样和去色带，或把硬件解码切到「复制」以降低显卡负载。';
+  @override
+  String get video_resource_missing_relink => '重新选择文件';
+  @override
+  String get video_resource_relink_success => '已重新链接视频文件';
 }
 
 // Path: retrying_in
@@ -78435,6 +78497,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+  @override
+  String get video_resource_missing_relink => 'Choose file';
+  @override
+  String get video_resource_relink_success => 'Video relinked';
 }
 
 // Path: retrying_in
@@ -82740,6 +82806,10 @@ extension on _StringsEn {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
@@ -87005,6 +87075,10 @@ extension on _StringsAr {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
@@ -91292,6 +91366,10 @@ extension on _StringsDe {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
@@ -95577,6 +95655,10 @@ extension on _StringsEs {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
@@ -99869,6 +99951,10 @@ extension on _StringsFr {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
@@ -104141,6 +104227,10 @@ extension on _StringsId {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
@@ -108430,6 +108520,10 @@ extension on _StringsIt {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
@@ -112677,6 +112771,10 @@ extension on _StringsJa {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
@@ -116927,6 +117025,10 @@ extension on _StringsKo {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
@@ -121209,6 +121311,10 @@ extension on _StringsNl {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
@@ -125488,6 +125594,10 @@ extension on _StringsPtBr {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
@@ -129771,6 +129881,10 @@ extension on _StringsRu {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
@@ -134036,6 +134150,10 @@ extension on _StringsTh {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
@@ -138310,6 +138428,10 @@ extension on _StringsTr {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
@@ -142578,6 +142700,10 @@ extension on _StringsVi {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
@@ -146812,6 +146938,10 @@ extension on _StringsZhCn {
         return 'Windows 上黑屏闪烁？';
       case 'video_windows_black_flash_notice_body':
         return '在 Windows 上，当显卡占用过高时视频画面可能出现黑屏闪烁。可尝试关闭上方的画质增强、S 形上采样和去色带，或把硬件解码切到「复制」以降低显卡负载。';
+      case 'video_resource_missing_relink':
+        return '重新选择文件';
+      case 'video_resource_relink_success':
+        return '已重新链接视频文件';
       default:
         return null;
     }
@@ -151051,6 +151181,10 @@ extension on _StringsZhHk {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
+      case 'video_resource_missing_relink':
+        return 'Choose file';
+      case 'video_resource_relink_success':
+        return 'Video relinked';
       default:
         return null;
     }
