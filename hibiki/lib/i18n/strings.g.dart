@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35360 (2080 per locale)
+/// Strings: 35394 (2082 per locale)
 ///
-/// Built on 2026-07-03 at 18:39 UTC
+/// Built on 2026-07-04 at 03:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2770,6 +2770,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get global_context_capture => 'Capture selection context';
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  String get file_picker_title => 'Select a file';
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -7480,6 +7482,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  @override
+  String get file_picker_title => 'Select a file';
+  @override
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -12313,6 +12319,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  @override
+  String get file_picker_title => 'Select a file';
+  @override
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -17163,6 +17173,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  @override
+  String get file_picker_title => 'Select a file';
+  @override
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -22032,6 +22046,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  @override
+  String get file_picker_title => 'Select a file';
+  @override
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -26803,6 +26821,10 @@ class _StringsId extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  @override
+  String get file_picker_title => 'Select a file';
+  @override
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -31635,6 +31657,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  @override
+  String get file_picker_title => 'Select a file';
+  @override
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -36192,6 +36218,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  @override
+  String get file_picker_title => 'Select a file';
+  @override
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -40753,6 +40783,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  @override
+  String get file_picker_title => 'Select a file';
+  @override
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -45553,6 +45587,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  @override
+  String get file_picker_title => 'Select a file';
+  @override
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -50376,6 +50414,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  @override
+  String get file_picker_title => 'Select a file';
+  @override
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -55174,6 +55216,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  @override
+  String get file_picker_title => 'Select a file';
+  @override
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -59885,6 +59931,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  @override
+  String get file_picker_title => 'Select a file';
+  @override
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -64651,6 +64701,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  @override
+  String get file_picker_title => 'Select a file';
+  @override
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -69392,6 +69446,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  @override
+  String get file_picker_title => 'Select a file';
+  @override
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -73811,6 +73869,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       '从前台应用读取选区周围文本，在查词弹窗显示当前句（仅 Windows）';
+  @override
+  String get file_picker_title => '选择一个文件';
+  @override
+  String get file_picker_empty => '没有文件';
 }
 
 // Path: retrying_in
@@ -78270,6 +78332,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+  @override
+  String get file_picker_title => 'Select a file';
+  @override
+  String get file_picker_empty => 'No files';
 }
 
 // Path: retrying_in
@@ -82567,6 +82633,10 @@ extension on _StringsEn {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
@@ -86824,6 +86894,10 @@ extension on _StringsAr {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
@@ -91103,6 +91177,10 @@ extension on _StringsDe {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
@@ -95380,6 +95458,10 @@ extension on _StringsEs {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
@@ -99664,6 +99746,10 @@ extension on _StringsFr {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
@@ -103928,6 +104014,10 @@ extension on _StringsId {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
@@ -108209,6 +108299,10 @@ extension on _StringsIt {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
@@ -112448,6 +112542,10 @@ extension on _StringsJa {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
@@ -116690,6 +116788,10 @@ extension on _StringsKo {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
@@ -120964,6 +121066,10 @@ extension on _StringsNl {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
@@ -125235,6 +125341,10 @@ extension on _StringsPtBr {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
@@ -129510,6 +129620,10 @@ extension on _StringsRu {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
@@ -133767,6 +133881,10 @@ extension on _StringsTh {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
@@ -138033,6 +138151,10 @@ extension on _StringsTr {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
@@ -142293,6 +142415,10 @@ extension on _StringsVi {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
@@ -146519,6 +146645,10 @@ extension on _StringsZhCn {
         return '抓取选中文本上下文';
       case 'global_context_capture_hint':
         return '从前台应用读取选区周围文本，在查词弹窗显示当前句（仅 Windows）';
+      case 'file_picker_title':
+        return '选择一个文件';
+      case 'file_picker_empty':
+        return '没有文件';
       default:
         return null;
     }
@@ -150750,6 +150880,10 @@ extension on _StringsZhHk {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
+      case 'file_picker_title':
+        return 'Select a file';
+      case 'file_picker_empty':
+        return 'No files';
       default:
         return null;
     }
