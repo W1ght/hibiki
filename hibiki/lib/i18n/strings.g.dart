@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 35717 (2101 per locale)
 ///
-/// Built on 2026-07-05 at 13:08 UTC
+/// Built on 2026-07-05 at 14:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1220,7 +1220,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get reader_content_timeout => 'Content loading timed out. Reopen if display is abnormal';
 	String get backup_local => 'Local Backup';
 	String get backup_export => 'Export Backup';
-	String get backup_export_hint => 'Choose what to include; the database (books, progress, stats) is always included. Uncheck large items (local audio, videos) to shrink the backup.';
+	String get backup_export_hint => 'Choose what to include. Reading data (progress, stats, settings) is always included; uncheck Books to exclude books entirely, or uncheck large items (local audio, videos) to shrink the backup.';
 	String get backup_import => 'Import Backup';
 	String get backup_import_hint => 'Restore from a backup file. The app will restart.';
 	String get backup_export_success => 'Backup exported successfully';
@@ -1651,7 +1651,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get video_subtitle_color_note => 'Subtitle colors are set inside the video player.';
 	String get theme_seed_preview_hint => 'Swatches below preview the colors actually generated from your seed. To force a specific color as the primary accent, turn on the Primary toggle and pick it explicitly.';
 	String get backup_export_categories_title => 'Choose what to export';
-	String get backup_export_categories_hint => 'Selected categories are packed into the backup. The database (books, statistics, favorites, profiles, settings) is always included.';
+	String get backup_export_categories_hint => 'Selected categories are packed into the backup. Your reading data (progress, statistics, favorites, profiles, settings) is always included in the database. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 	String get backup_category_dictionary => 'Dictionaries';
 	String get backup_category_books => 'Books';
 	String get backup_category_audiobooks => 'Audiobook audio';
@@ -33530,7 +33530,7 @@ class _StringsZhCn extends _StringsEn {
 	@override String get reader_content_timeout => '内容加载超时，如显示异常请重新打开';
 	@override String get backup_local => '本地备份';
 	@override String get backup_export => '导出备份';
-	@override String get backup_export_hint => '勾选要包含的内容；数据库（书籍、进度、统计）始终包含。取消大文件（本地音频、视频）可减小备份体积。';
+	@override String get backup_export_hint => '选择要包含的内容。阅读数据（进度、统计、设置）始终包含；取消「书籍」可完整排除书籍，取消大文件（本地音频、视频）可缩小备份。';
 	@override String get backup_import => '导入备份';
 	@override String get backup_import_hint => '从备份文件恢复。应用将会重启。';
 	@override String get backup_export_success => '备份导出成功';
@@ -33961,7 +33961,7 @@ class _StringsZhCn extends _StringsEn {
 	@override String get video_subtitle_color_note => '视频字幕颜色在视频播放器内设置。';
 	@override String get theme_seed_preview_hint => '下方色板预览由种子色实际生成的颜色。想让某个颜色固定作为主色强调色，请打开「主色」开关并显式指定。';
 	@override String get backup_export_categories_title => '选择要导出的内容';
-	@override String get backup_export_categories_hint => '勾选的类别会被打包进备份。数据库（书籍、统计、收藏、配置方案、设置）始终包含。';
+	@override String get backup_export_categories_hint => '勾选的类别会打包进备份。阅读数据（进度、统计、收藏、配置方案、设置）始终包含在数据库里。取消「书籍」会完整排除这些书——正文文件和书籍记录一并排除，导入后不会出现这些书。';
 	@override String get backup_category_dictionary => '词典';
 	@override String get backup_category_books => '书籍内容';
 	@override String get backup_category_audiobooks => '有声书音频';
@@ -37823,7 +37823,7 @@ extension on _StringsEn {
 			case 'reader_content_timeout': return 'Content loading timed out. Reopen if display is abnormal';
 			case 'backup_local': return 'Local Backup';
 			case 'backup_export': return 'Export Backup';
-			case 'backup_export_hint': return 'Choose what to include; the database (books, progress, stats) is always included. Uncheck large items (local audio, videos) to shrink the backup.';
+			case 'backup_export_hint': return 'Choose what to include. Reading data (progress, stats, settings) is always included; uncheck Books to exclude books entirely, or uncheck large items (local audio, videos) to shrink the backup.';
 			case 'backup_import': return 'Import Backup';
 			case 'backup_import_hint': return 'Restore from a backup file. The app will restart.';
 			case 'backup_export_success': return 'Backup exported successfully';
@@ -38254,7 +38254,7 @@ extension on _StringsEn {
 			case 'video_subtitle_color_note': return 'Subtitle colors are set inside the video player.';
 			case 'theme_seed_preview_hint': return 'Swatches below preview the colors actually generated from your seed. To force a specific color as the primary accent, turn on the Primary toggle and pick it explicitly.';
 			case 'backup_export_categories_title': return 'Choose what to export';
-			case 'backup_export_categories_hint': return 'Selected categories are packed into the backup. The database (books, statistics, favorites, profiles, settings) is always included.';
+			case 'backup_export_categories_hint': return 'Selected categories are packed into the backup. Your reading data (progress, statistics, favorites, profiles, settings) is always included in the database. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 			case 'backup_category_dictionary': return 'Dictionaries';
 			case 'backup_category_books': return 'Books';
 			case 'backup_category_audiobooks': return 'Audiobook audio';
@@ -69518,7 +69518,7 @@ extension on _StringsZhCn {
 			case 'reader_content_timeout': return '内容加载超时，如显示异常请重新打开';
 			case 'backup_local': return '本地备份';
 			case 'backup_export': return '导出备份';
-			case 'backup_export_hint': return '勾选要包含的内容；数据库（书籍、进度、统计）始终包含。取消大文件（本地音频、视频）可减小备份体积。';
+			case 'backup_export_hint': return '选择要包含的内容。阅读数据（进度、统计、设置）始终包含；取消「书籍」可完整排除书籍，取消大文件（本地音频、视频）可缩小备份。';
 			case 'backup_import': return '导入备份';
 			case 'backup_import_hint': return '从备份文件恢复。应用将会重启。';
 			case 'backup_export_success': return '备份导出成功';
@@ -69949,7 +69949,7 @@ extension on _StringsZhCn {
 			case 'video_subtitle_color_note': return '视频字幕颜色在视频播放器内设置。';
 			case 'theme_seed_preview_hint': return '下方色板预览由种子色实际生成的颜色。想让某个颜色固定作为主色强调色，请打开「主色」开关并显式指定。';
 			case 'backup_export_categories_title': return '选择要导出的内容';
-			case 'backup_export_categories_hint': return '勾选的类别会被打包进备份。数据库（书籍、统计、收藏、配置方案、设置）始终包含。';
+			case 'backup_export_categories_hint': return '勾选的类别会打包进备份。阅读数据（进度、统计、收藏、配置方案、设置）始终包含在数据库里。取消「书籍」会完整排除这些书——正文文件和书籍记录一并排除，导入后不会出现这些书。';
 			case 'backup_category_dictionary': return '词典';
 			case 'backup_category_books': return '书籍内容';
 			case 'backup_category_audiobooks': return '有声书音频';
