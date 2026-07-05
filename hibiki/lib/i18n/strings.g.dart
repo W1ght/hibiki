@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35717 (2101 per locale)
+/// Strings: 35819 (2107 per locale)
 ///
-/// Built on 2026-07-05 at 14:21 UTC
+/// Built on 2026-07-05 at 14:28 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2261,6 +2261,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get data_storage_migrate_failed_restart => 'Restart';
 	String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	String get data_storage_migrate_failed_title => 'Data migration failed';
+	String get backup_export_choose_books => 'Choose books';
+	String get backup_export_books_all => 'All books';
+	String get backup_export_select_all => 'Select all';
+	String get backup_export_select_none => 'Select none';
+	String get backup_export_no_books => 'No books to choose from';
+	String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -4415,6 +4421,12 @@ class _StringsAr extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -6569,6 +6581,12 @@ class _StringsDe extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -8723,6 +8741,12 @@ class _StringsEs extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -10877,6 +10901,12 @@ class _StringsFr extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -13031,6 +13061,12 @@ class _StringsId extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -15185,6 +15221,12 @@ class _StringsIt extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -17339,6 +17381,12 @@ class _StringsJa extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -19493,6 +19541,12 @@ class _StringsKo extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -21647,6 +21701,12 @@ class _StringsNl extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -23801,6 +23861,12 @@ class _StringsPtBr extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -25955,6 +26021,12 @@ class _StringsRu extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -28109,6 +28181,12 @@ class _StringsTh extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -30263,6 +30341,12 @@ class _StringsTr extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -32417,6 +32501,12 @@ class _StringsVi extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -34571,6 +34661,12 @@ class _StringsZhCn extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => '重启';
 	@override String get data_storage_reject_install_dir => '所选目录是应用的安装位置，不能用来存放数据。请另选一个空目录。';
 	@override String get data_storage_migrate_failed_title => '数据迁移失败';
+	@override String get backup_export_choose_books => '选择书籍';
+	@override String get backup_export_books_all => '全部书籍';
+	@override String get backup_export_select_all => '全选';
+	@override String get backup_export_select_none => '全不选';
+	@override String get backup_export_no_books => '没有可选的书籍';
+	@override String backup_export_books_selected({required Object count}) => '已选 ${count} 本书';
 }
 
 // Path: retrying_in
@@ -36725,6 +36821,12 @@ class _StringsZhHk extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
 }
 
 // Path: retrying_in
@@ -38864,6 +38966,12 @@ extension on _StringsEn {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
@@ -40977,6 +41085,12 @@ extension on _StringsAr {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
@@ -43090,6 +43204,12 @@ extension on _StringsDe {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
@@ -45203,6 +45323,12 @@ extension on _StringsEs {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
@@ -47316,6 +47442,12 @@ extension on _StringsFr {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
@@ -49429,6 +49561,12 @@ extension on _StringsId {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
@@ -51542,6 +51680,12 @@ extension on _StringsIt {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
@@ -53655,6 +53799,12 @@ extension on _StringsJa {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
@@ -55768,6 +55918,12 @@ extension on _StringsKo {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
@@ -57881,6 +58037,12 @@ extension on _StringsNl {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
@@ -59994,6 +60156,12 @@ extension on _StringsPtBr {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
@@ -62107,6 +62275,12 @@ extension on _StringsRu {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
@@ -64220,6 +64394,12 @@ extension on _StringsTh {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
@@ -66333,6 +66513,12 @@ extension on _StringsTr {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
@@ -68446,6 +68632,12 @@ extension on _StringsVi {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
@@ -70559,6 +70751,12 @@ extension on _StringsZhCn {
 			case 'data_storage_migrate_failed_restart': return '重启';
 			case 'data_storage_reject_install_dir': return '所选目录是应用的安装位置，不能用来存放数据。请另选一个空目录。';
 			case 'data_storage_migrate_failed_title': return '数据迁移失败';
+			case 'backup_export_choose_books': return '选择书籍';
+			case 'backup_export_books_all': return '全部书籍';
+			case 'backup_export_select_all': return '全选';
+			case 'backup_export_select_none': return '全不选';
+			case 'backup_export_no_books': return '没有可选的书籍';
+			case 'backup_export_books_selected': return ({required Object count}) => '已选 ${count} 本书';
 			default: return null;
 		}
 	}
@@ -72672,6 +72870,12 @@ extension on _StringsZhHk {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
 			default: return null;
 		}
 	}
