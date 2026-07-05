@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35581 (2093 per locale)
+/// Strings: 35632 (2096 per locale)
 ///
-/// Built on 2026-07-05 at 08:33 UTC
+/// Built on 2026-07-05 at 08:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2253,6 +2253,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	String get tag_seed_stars => 'Add star rating tags';
+	String get tag_seed_stars_added => 'Star rating tags added';
+	String get tag_seed_stars_exists => 'Star rating tags already exist';
 }
 
 // Path: retrying_in
@@ -4399,6 +4402,9 @@ class _StringsAr extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	@override String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	@override String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	@override String get tag_seed_stars => 'Add star rating tags';
+	@override String get tag_seed_stars_added => 'Star rating tags added';
+	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 }
 
 // Path: retrying_in
@@ -6545,6 +6551,9 @@ class _StringsDe extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	@override String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	@override String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	@override String get tag_seed_stars => 'Add star rating tags';
+	@override String get tag_seed_stars_added => 'Star rating tags added';
+	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 }
 
 // Path: retrying_in
@@ -8691,6 +8700,9 @@ class _StringsEs extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	@override String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	@override String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	@override String get tag_seed_stars => 'Add star rating tags';
+	@override String get tag_seed_stars_added => 'Star rating tags added';
+	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 }
 
 // Path: retrying_in
@@ -10837,6 +10849,9 @@ class _StringsFr extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	@override String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	@override String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	@override String get tag_seed_stars => 'Add star rating tags';
+	@override String get tag_seed_stars_added => 'Star rating tags added';
+	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 }
 
 // Path: retrying_in
@@ -12983,6 +12998,9 @@ class _StringsId extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	@override String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	@override String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	@override String get tag_seed_stars => 'Add star rating tags';
+	@override String get tag_seed_stars_added => 'Star rating tags added';
+	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 }
 
 // Path: retrying_in
@@ -15129,6 +15147,9 @@ class _StringsIt extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	@override String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	@override String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	@override String get tag_seed_stars => 'Add star rating tags';
+	@override String get tag_seed_stars_added => 'Star rating tags added';
+	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 }
 
 // Path: retrying_in
@@ -17275,6 +17296,9 @@ class _StringsJa extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	@override String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	@override String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	@override String get tag_seed_stars => 'Add star rating tags';
+	@override String get tag_seed_stars_added => 'Star rating tags added';
+	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 }
 
 // Path: retrying_in
@@ -19421,6 +19445,9 @@ class _StringsKo extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	@override String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	@override String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	@override String get tag_seed_stars => 'Add star rating tags';
+	@override String get tag_seed_stars_added => 'Star rating tags added';
+	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 }
 
 // Path: retrying_in
@@ -21567,6 +21594,9 @@ class _StringsNl extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	@override String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	@override String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	@override String get tag_seed_stars => 'Add star rating tags';
+	@override String get tag_seed_stars_added => 'Star rating tags added';
+	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 }
 
 // Path: retrying_in
@@ -23713,6 +23743,9 @@ class _StringsPtBr extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	@override String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	@override String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	@override String get tag_seed_stars => 'Add star rating tags';
+	@override String get tag_seed_stars_added => 'Star rating tags added';
+	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 }
 
 // Path: retrying_in
@@ -25859,6 +25892,9 @@ class _StringsRu extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	@override String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	@override String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	@override String get tag_seed_stars => 'Add star rating tags';
+	@override String get tag_seed_stars_added => 'Star rating tags added';
+	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 }
 
 // Path: retrying_in
@@ -28005,6 +28041,9 @@ class _StringsTh extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	@override String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	@override String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	@override String get tag_seed_stars => 'Add star rating tags';
+	@override String get tag_seed_stars_added => 'Star rating tags added';
+	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 }
 
 // Path: retrying_in
@@ -30151,6 +30190,9 @@ class _StringsTr extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	@override String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	@override String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	@override String get tag_seed_stars => 'Add star rating tags';
+	@override String get tag_seed_stars_added => 'Star rating tags added';
+	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 }
 
 // Path: retrying_in
@@ -32297,6 +32339,9 @@ class _StringsVi extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	@override String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	@override String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	@override String get tag_seed_stars => 'Add star rating tags';
+	@override String get tag_seed_stars_added => 'Star rating tags added';
+	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 }
 
 // Path: retrying_in
@@ -34443,6 +34488,9 @@ class _StringsZhCn extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => '毛玻璃悬浮底栏';
 	@override String get reader_frosted_bottom_bar_hint => '给阅读器控制栏加毛玻璃模糊和半透明背景';
 	@override String get reader_bottom_bar_opacity => '底栏不透明度';
+	@override String get tag_seed_stars => '添加星级标签';
+	@override String get tag_seed_stars_added => '已添加星级标签';
+	@override String get tag_seed_stars_exists => '星级标签已存在';
 }
 
 // Path: retrying_in
@@ -36589,6 +36637,9 @@ class _StringsZhHk extends _StringsEn {
 	@override String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
 	@override String get reader_frosted_bottom_bar_hint => 'Blur and translucent background for the reader control bar';
 	@override String get reader_bottom_bar_opacity => 'Bottom bar opacity';
+	@override String get tag_seed_stars => '新增星級標籤';
+	@override String get tag_seed_stars_added => '已新增星級標籤';
+	@override String get tag_seed_stars_exists => '星級標籤已存在';
 }
 
 // Path: retrying_in
@@ -38720,6 +38771,9 @@ extension on _StringsEn {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return 'Add star rating tags';
+			case 'tag_seed_stars_added': return 'Star rating tags added';
+			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			default: return null;
 		}
 	}
@@ -40825,6 +40879,9 @@ extension on _StringsAr {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return 'Add star rating tags';
+			case 'tag_seed_stars_added': return 'Star rating tags added';
+			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			default: return null;
 		}
 	}
@@ -42930,6 +42987,9 @@ extension on _StringsDe {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return 'Add star rating tags';
+			case 'tag_seed_stars_added': return 'Star rating tags added';
+			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			default: return null;
 		}
 	}
@@ -45035,6 +45095,9 @@ extension on _StringsEs {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return 'Add star rating tags';
+			case 'tag_seed_stars_added': return 'Star rating tags added';
+			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			default: return null;
 		}
 	}
@@ -47140,6 +47203,9 @@ extension on _StringsFr {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return 'Add star rating tags';
+			case 'tag_seed_stars_added': return 'Star rating tags added';
+			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			default: return null;
 		}
 	}
@@ -49245,6 +49311,9 @@ extension on _StringsId {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return 'Add star rating tags';
+			case 'tag_seed_stars_added': return 'Star rating tags added';
+			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			default: return null;
 		}
 	}
@@ -51350,6 +51419,9 @@ extension on _StringsIt {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return 'Add star rating tags';
+			case 'tag_seed_stars_added': return 'Star rating tags added';
+			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			default: return null;
 		}
 	}
@@ -53455,6 +53527,9 @@ extension on _StringsJa {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return 'Add star rating tags';
+			case 'tag_seed_stars_added': return 'Star rating tags added';
+			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			default: return null;
 		}
 	}
@@ -55560,6 +55635,9 @@ extension on _StringsKo {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return 'Add star rating tags';
+			case 'tag_seed_stars_added': return 'Star rating tags added';
+			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			default: return null;
 		}
 	}
@@ -57665,6 +57743,9 @@ extension on _StringsNl {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return 'Add star rating tags';
+			case 'tag_seed_stars_added': return 'Star rating tags added';
+			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			default: return null;
 		}
 	}
@@ -59770,6 +59851,9 @@ extension on _StringsPtBr {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return 'Add star rating tags';
+			case 'tag_seed_stars_added': return 'Star rating tags added';
+			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			default: return null;
 		}
 	}
@@ -61875,6 +61959,9 @@ extension on _StringsRu {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return 'Add star rating tags';
+			case 'tag_seed_stars_added': return 'Star rating tags added';
+			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			default: return null;
 		}
 	}
@@ -63980,6 +64067,9 @@ extension on _StringsTh {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return 'Add star rating tags';
+			case 'tag_seed_stars_added': return 'Star rating tags added';
+			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			default: return null;
 		}
 	}
@@ -66085,6 +66175,9 @@ extension on _StringsTr {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return 'Add star rating tags';
+			case 'tag_seed_stars_added': return 'Star rating tags added';
+			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			default: return null;
 		}
 	}
@@ -68190,6 +68283,9 @@ extension on _StringsVi {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return 'Add star rating tags';
+			case 'tag_seed_stars_added': return 'Star rating tags added';
+			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			default: return null;
 		}
 	}
@@ -70295,6 +70391,9 @@ extension on _StringsZhCn {
 			case 'reader_frosted_bottom_bar': return '毛玻璃悬浮底栏';
 			case 'reader_frosted_bottom_bar_hint': return '给阅读器控制栏加毛玻璃模糊和半透明背景';
 			case 'reader_bottom_bar_opacity': return '底栏不透明度';
+			case 'tag_seed_stars': return '添加星级标签';
+			case 'tag_seed_stars_added': return '已添加星级标签';
+			case 'tag_seed_stars_exists': return '星级标签已存在';
 			default: return null;
 		}
 	}
@@ -72400,6 +72499,9 @@ extension on _StringsZhHk {
 			case 'reader_frosted_bottom_bar': return 'Frosted floating bottom bar';
 			case 'reader_frosted_bottom_bar_hint': return 'Blur and translucent background for the reader control bar';
 			case 'reader_bottom_bar_opacity': return 'Bottom bar opacity';
+			case 'tag_seed_stars': return '新增星級標籤';
+			case 'tag_seed_stars_added': return '已新增星級標籤';
+			case 'tag_seed_stars_exists': return '星級標籤已存在';
 			default: return null;
 		}
 	}
