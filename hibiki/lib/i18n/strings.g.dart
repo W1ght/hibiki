@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35819 (2107 per locale)
+/// Strings: 35836 (2108 per locale)
 ///
-/// Built on 2026-07-05 at 14:28 UTC
+/// Built on 2026-07-05 at 14:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2267,6 +2267,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get backup_export_select_none => 'Select none';
 	String get backup_export_no_books => 'No books to choose from';
 	String backup_export_books_selected({required Object count}) => '${count} books selected';
+	String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -4427,6 +4428,7 @@ class _StringsAr extends _StringsEn {
 	@override String get backup_export_select_none => 'Select none';
 	@override String get backup_export_no_books => 'No books to choose from';
 	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -6587,6 +6589,7 @@ class _StringsDe extends _StringsEn {
 	@override String get backup_export_select_none => 'Select none';
 	@override String get backup_export_no_books => 'No books to choose from';
 	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -8747,6 +8750,7 @@ class _StringsEs extends _StringsEn {
 	@override String get backup_export_select_none => 'Select none';
 	@override String get backup_export_no_books => 'No books to choose from';
 	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -10907,6 +10911,7 @@ class _StringsFr extends _StringsEn {
 	@override String get backup_export_select_none => 'Select none';
 	@override String get backup_export_no_books => 'No books to choose from';
 	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -13067,6 +13072,7 @@ class _StringsId extends _StringsEn {
 	@override String get backup_export_select_none => 'Select none';
 	@override String get backup_export_no_books => 'No books to choose from';
 	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -15227,6 +15233,7 @@ class _StringsIt extends _StringsEn {
 	@override String get backup_export_select_none => 'Select none';
 	@override String get backup_export_no_books => 'No books to choose from';
 	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -17387,6 +17394,7 @@ class _StringsJa extends _StringsEn {
 	@override String get backup_export_select_none => 'Select none';
 	@override String get backup_export_no_books => 'No books to choose from';
 	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -19547,6 +19555,7 @@ class _StringsKo extends _StringsEn {
 	@override String get backup_export_select_none => 'Select none';
 	@override String get backup_export_no_books => 'No books to choose from';
 	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -21707,6 +21716,7 @@ class _StringsNl extends _StringsEn {
 	@override String get backup_export_select_none => 'Select none';
 	@override String get backup_export_no_books => 'No books to choose from';
 	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -23867,6 +23877,7 @@ class _StringsPtBr extends _StringsEn {
 	@override String get backup_export_select_none => 'Select none';
 	@override String get backup_export_no_books => 'No books to choose from';
 	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -26027,6 +26038,7 @@ class _StringsRu extends _StringsEn {
 	@override String get backup_export_select_none => 'Select none';
 	@override String get backup_export_no_books => 'No books to choose from';
 	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -28187,6 +28199,7 @@ class _StringsTh extends _StringsEn {
 	@override String get backup_export_select_none => 'Select none';
 	@override String get backup_export_no_books => 'No books to choose from';
 	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -30347,6 +30360,7 @@ class _StringsTr extends _StringsEn {
 	@override String get backup_export_select_none => 'Select none';
 	@override String get backup_export_no_books => 'No books to choose from';
 	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -32507,6 +32521,7 @@ class _StringsVi extends _StringsEn {
 	@override String get backup_export_select_none => 'Select none';
 	@override String get backup_export_no_books => 'No books to choose from';
 	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -34667,6 +34682,7 @@ class _StringsZhCn extends _StringsEn {
 	@override String get backup_export_select_none => '全不选';
 	@override String get backup_export_no_books => '没有可选的书籍';
 	@override String backup_export_books_selected({required Object count}) => '已选 ${count} 本书';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => '合并将新增 ${bookCount} 本书、更新 ${progressCount} 条阅读进度。';
 }
 
 // Path: retrying_in
@@ -36827,6 +36843,7 @@ class _StringsZhHk extends _StringsEn {
 	@override String get backup_export_select_none => 'Select none';
 	@override String get backup_export_no_books => 'No books to choose from';
 	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -38972,6 +38989,7 @@ extension on _StringsEn {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -41091,6 +41109,7 @@ extension on _StringsAr {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -43210,6 +43229,7 @@ extension on _StringsDe {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -45329,6 +45349,7 @@ extension on _StringsEs {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -47448,6 +47469,7 @@ extension on _StringsFr {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -49567,6 +49589,7 @@ extension on _StringsId {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -51686,6 +51709,7 @@ extension on _StringsIt {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -53805,6 +53829,7 @@ extension on _StringsJa {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -55924,6 +55949,7 @@ extension on _StringsKo {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -58043,6 +58069,7 @@ extension on _StringsNl {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -60162,6 +60189,7 @@ extension on _StringsPtBr {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -62281,6 +62309,7 @@ extension on _StringsRu {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -64400,6 +64429,7 @@ extension on _StringsTh {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -66519,6 +66549,7 @@ extension on _StringsTr {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -68638,6 +68669,7 @@ extension on _StringsVi {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -70757,6 +70789,7 @@ extension on _StringsZhCn {
 			case 'backup_export_select_none': return '全不选';
 			case 'backup_export_no_books': return '没有可选的书籍';
 			case 'backup_export_books_selected': return ({required Object count}) => '已选 ${count} 本书';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => '合并将新增 ${bookCount} 本书、更新 ${progressCount} 条阅读进度。';
 			default: return null;
 		}
 	}
@@ -72876,6 +72909,7 @@ extension on _StringsZhHk {
 			case 'backup_export_select_none': return 'Select none';
 			case 'backup_export_no_books': return 'No books to choose from';
 			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
