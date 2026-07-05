@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 35717 (2101 per locale)
 ///
-/// Built on 2026-07-05 at 11:28 UTC
+/// Built on 2026-07-05 at 13:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1220,7 +1220,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get reader_content_timeout => 'Content loading timed out. Reopen if display is abnormal';
 	String get backup_local => 'Local Backup';
 	String get backup_export => 'Export Backup';
-	String get backup_export_hint => 'Save all settings, reading progress, and statistics to a file';
+	String get backup_export_hint => 'Choose what to include; the database (books, progress, stats) is always included. Uncheck large items (local audio, videos) to shrink the backup.';
 	String get backup_import => 'Import Backup';
 	String get backup_import_hint => 'Restore from a backup file. The app will restart.';
 	String get backup_export_success => 'Backup exported successfully';
@@ -3374,7 +3374,7 @@ class _StringsAr extends _StringsEn {
 	@override String get reader_content_timeout => 'انتهت مهلة تحميل المحتوى. أعد الفتح إذا كان العرض غير طبيعي';
 	@override String get backup_local => 'نسخة احتياطية محلية';
 	@override String get backup_export => 'تصدير النسخة الاحتياطية';
-	@override String get backup_export_hint => 'احفظ كل الإعدادات وتقدّم القراءة والإحصاءات في ملف';
+	@override String get backup_export_hint => 'اختر ما تريد تضمينه؛ قاعدة البيانات (الكتب والتقدّم والإحصاءات) مُضمَّنة دائمًا. أزِل تحديد العناصر الكبيرة (الصوت المحلي والفيديو) لتصغير حجم النسخة الاحتياطية.';
 	@override String get backup_import => 'استيراد نسخة احتياطية';
 	@override String get backup_import_hint => 'استعادة من ملف نسخة احتياطية. سيُعاد تشغيل التطبيق.';
 	@override String get backup_export_success => 'تم تصدير النسخة الاحتياطية بنجاح';
@@ -5528,7 +5528,7 @@ class _StringsDe extends _StringsEn {
 	@override String get reader_content_timeout => 'Zeitüberschreitung beim Laden des Inhalts. Bei fehlerhafter Anzeige erneut öffnen';
 	@override String get backup_local => 'Lokales Backup';
 	@override String get backup_export => 'Backup exportieren';
-	@override String get backup_export_hint => 'Alle Einstellungen, Lesefortschritte und Statistiken in eine Datei speichern';
+	@override String get backup_export_hint => 'Wähle aus, was enthalten sein soll; die Datenbank (Bücher, Fortschritt, Statistiken) ist immer enthalten. Deaktiviere große Elemente (lokale Audios, Videos), um das Backup zu verkleinern.';
 	@override String get backup_import => 'Backup importieren';
 	@override String get backup_import_hint => 'Aus einer Backup-Datei wiederherstellen. Die App wird neu gestartet.';
 	@override String get backup_export_success => 'Backup erfolgreich exportiert';
@@ -7682,7 +7682,7 @@ class _StringsEs extends _StringsEn {
 	@override String get reader_content_timeout => 'Se agotó el tiempo al cargar el contenido. Reabre si la visualización es anómala';
 	@override String get backup_local => 'Copia de seguridad local';
 	@override String get backup_export => 'Exportar copia de seguridad';
-	@override String get backup_export_hint => 'Guarda todos los ajustes, el progreso de lectura y las estadísticas en un archivo';
+	@override String get backup_export_hint => 'Elige qué incluir; la base de datos (libros, progreso, estadísticas) siempre se incluye. Desmarca elementos grandes (audio local, vídeos) para reducir el tamaño de la copia.';
 	@override String get backup_import => 'Importar copia de seguridad';
 	@override String get backup_import_hint => 'Restaura desde un archivo de copia de seguridad. La app se reiniciará.';
 	@override String get backup_export_success => 'Copia de seguridad exportada correctamente';
@@ -9836,7 +9836,7 @@ class _StringsFr extends _StringsEn {
 	@override String get reader_content_timeout => 'Délai de chargement du contenu dépassé. Rouvrez si l\'affichage est anormal';
 	@override String get backup_local => 'Sauvegarde locale';
 	@override String get backup_export => 'Exporter la sauvegarde';
-	@override String get backup_export_hint => 'Enregistrer tous les réglages, la progression de lecture et les statistiques dans un fichier';
+	@override String get backup_export_hint => 'Choisissez ce qu’il faut inclure ; la base de données (livres, progression, statistiques) est toujours incluse. Décochez les éléments volumineux (audio local, vidéos) pour réduire la sauvegarde.';
 	@override String get backup_import => 'Importer une sauvegarde';
 	@override String get backup_import_hint => 'Restaurer depuis un fichier de sauvegarde. L\'application redémarrera.';
 	@override String get backup_export_success => 'Sauvegarde exportée avec succès';
@@ -11990,7 +11990,7 @@ class _StringsId extends _StringsEn {
 	@override String get reader_content_timeout => 'Pemuatan konten habis waktu. Buka ulang jika tampilan tidak normal';
 	@override String get backup_local => 'Cadangan Lokal';
 	@override String get backup_export => 'Ekspor Cadangan';
-	@override String get backup_export_hint => 'Simpan semua pengaturan, progres membaca, dan statistik ke berkas';
+	@override String get backup_export_hint => 'Pilih apa yang disertakan; basis data (buku, progres, statistik) selalu disertakan. Hapus centang item besar (audio lokal, video) untuk memperkecil cadangan.';
 	@override String get backup_import => 'Impor Cadangan';
 	@override String get backup_import_hint => 'Pulihkan dari berkas cadangan. Aplikasi akan dimulai ulang.';
 	@override String get backup_export_success => 'Cadangan berhasil diekspor';
@@ -14144,7 +14144,7 @@ class _StringsIt extends _StringsEn {
 	@override String get reader_content_timeout => 'Timeout nel caricamento del contenuto. Riapri se la visualizzazione è anomala';
 	@override String get backup_local => 'Backup locale';
 	@override String get backup_export => 'Esporta backup';
-	@override String get backup_export_hint => 'Salva tutte le impostazioni, i progressi di lettura e le statistiche in un file';
+	@override String get backup_export_hint => 'Scegli cosa includere; il database (libri, progressi, statistiche) è sempre incluso. Deseleziona gli elementi grandi (audio locale, video) per ridurre il backup.';
 	@override String get backup_import => 'Importa backup';
 	@override String get backup_import_hint => 'Ripristina da un file di backup. L\'app verrà riavviata.';
 	@override String get backup_export_success => 'Backup esportato correttamente';
@@ -16298,7 +16298,7 @@ class _StringsJa extends _StringsEn {
 	@override String get reader_content_timeout => 'コンテンツの読み込みがタイムアウトしました。表示が異常な場合は開き直してください';
 	@override String get backup_local => 'ローカルバックアップ';
 	@override String get backup_export => 'バックアップを書き出す';
-	@override String get backup_export_hint => 'すべての設定・読書進捗・統計をファイルに保存します';
+	@override String get backup_export_hint => '含める内容を選べます。データベース（書籍・進捗・統計）は常に含まれます。大きな項目（ローカル音声・動画）のチェックを外すとバックアップを小さくできます。';
 	@override String get backup_import => 'バックアップを読み込む';
 	@override String get backup_import_hint => 'バックアップファイルから復元します。アプリが再起動します。';
 	@override String get backup_export_success => 'バックアップを書き出しました';
@@ -18452,7 +18452,7 @@ class _StringsKo extends _StringsEn {
 	@override String get reader_content_timeout => '콘텐츠 로딩 시간이 초과되었습니다. 표시가 비정상이면 다시 열어 주세요';
 	@override String get backup_local => '로컬 백업';
 	@override String get backup_export => '백업 내보내기';
-	@override String get backup_export_hint => '모든 설정, 읽기 진행 상황, 통계를 파일로 저장합니다';
+	@override String get backup_export_hint => '포함할 항목을 선택하세요. 데이터베이스(도서, 진행 상황, 통계)는 항상 포함됩니다. 큰 항목(로컬 오디오, 동영상)의 선택을 해제하면 백업 크기를 줄일 수 있습니다.';
 	@override String get backup_import => '백업 가져오기';
 	@override String get backup_import_hint => '백업 파일에서 복원합니다. 앱이 다시 시작됩니다.';
 	@override String get backup_export_success => '백업을 내보냈습니다';
@@ -20606,7 +20606,7 @@ class _StringsNl extends _StringsEn {
 	@override String get reader_content_timeout => 'Time-out bij laden van inhoud. Open opnieuw als de weergave afwijkt';
 	@override String get backup_local => 'Lokale back-up';
 	@override String get backup_export => 'Back-up exporteren';
-	@override String get backup_export_hint => 'Sla alle instellingen, leesvoortgang en statistieken op in een bestand';
+	@override String get backup_export_hint => 'Kies wat je wilt opnemen; de database (boeken, voortgang, statistieken) wordt altijd opgenomen. Schakel grote items (lokale audio, video\'s) uit om de back-up te verkleinen.';
 	@override String get backup_import => 'Back-up importeren';
 	@override String get backup_import_hint => 'Herstel vanuit een back-upbestand. De app wordt opnieuw gestart.';
 	@override String get backup_export_success => 'Back-up geëxporteerd';
@@ -22760,7 +22760,7 @@ class _StringsPtBr extends _StringsEn {
 	@override String get reader_content_timeout => 'O carregamento do conteúdo expirou. Reabra se a exibição estiver anormal';
 	@override String get backup_local => 'Backup local';
 	@override String get backup_export => 'Exportar backup';
-	@override String get backup_export_hint => 'Salvar todas as configurações, progresso de leitura e estatísticas em um arquivo';
+	@override String get backup_export_hint => 'Escolha o que incluir; o banco de dados (livros, progresso, estatísticas) é sempre incluído. Desmarque itens grandes (áudio local, vídeos) para reduzir o backup.';
 	@override String get backup_import => 'Importar backup';
 	@override String get backup_import_hint => 'Restaurar a partir de um arquivo de backup. O app será reiniciado.';
 	@override String get backup_export_success => 'Backup exportado com sucesso';
@@ -24914,7 +24914,7 @@ class _StringsRu extends _StringsEn {
 	@override String get reader_content_timeout => 'Время загрузки контента истекло. Откройте заново, если отображение некорректно';
 	@override String get backup_local => 'Локальная резервная копия';
 	@override String get backup_export => 'Экспорт копии';
-	@override String get backup_export_hint => 'Сохранить все настройки, прогресс чтения и статистику в файл';
+	@override String get backup_export_hint => 'Выберите, что включить; база данных (книги, прогресс, статистика) включается всегда. Снимите отметки с крупных элементов (локальное аудио, видео), чтобы уменьшить размер резервной копии.';
 	@override String get backup_import => 'Импорт копии';
 	@override String get backup_import_hint => 'Восстановить из файла резервной копии. Приложение перезапустится.';
 	@override String get backup_export_success => 'Резервная копия успешно экспортирована';
@@ -27068,7 +27068,7 @@ class _StringsTh extends _StringsEn {
 	@override String get reader_content_timeout => 'โหลดเนื้อหาหมดเวลา หากแสดงผลผิดปกติให้เปิดใหม่';
 	@override String get backup_local => 'สำรองข้อมูลในเครื่อง';
 	@override String get backup_export => 'ส่งออกข้อมูลสำรอง';
-	@override String get backup_export_hint => 'บันทึกการตั้งค่า ความคืบหน้าการอ่าน และสถิติทั้งหมดลงไฟล์';
+	@override String get backup_export_hint => 'เลือกสิ่งที่จะรวมไว้ ฐานข้อมูล (หนังสือ ความคืบหน้า สถิติ) จะถูกรวมไว้เสมอ ยกเลิกการเลือกรายการขนาดใหญ่ (เสียงในเครื่อง วิดีโอ) เพื่อลดขนาดข้อมูลสำรอง';
 	@override String get backup_import => 'นำเข้าข้อมูลสำรอง';
 	@override String get backup_import_hint => 'กู้คืนจากไฟล์สำรอง แอปจะรีสตาร์ท';
 	@override String get backup_export_success => 'ส่งออกข้อมูลสำรองสำเร็จ';
@@ -29222,7 +29222,7 @@ class _StringsTr extends _StringsEn {
 	@override String get reader_content_timeout => 'İçerik yüklemesi zaman aşımına uğradı. Görüntü anormalse yeniden açın';
 	@override String get backup_local => 'Yerel Yedek';
 	@override String get backup_export => 'Yedeği Dışa Aktar';
-	@override String get backup_export_hint => 'Tüm ayarları, okuma ilerlemesini ve istatistikleri bir dosyaya kaydet';
+	@override String get backup_export_hint => 'Nelerin dâhil edileceğini seçin; veritabanı (kitaplar, ilerleme, istatistikler) her zaman dâhildir. Yedeği küçültmek için büyük öğelerin (yerel ses, videolar) işaretini kaldırın.';
 	@override String get backup_import => 'Yedeği İçe Aktar';
 	@override String get backup_import_hint => 'Bir yedek dosyasından geri yükle. Uygulama yeniden başlatılacak.';
 	@override String get backup_export_success => 'Yedek başarıyla dışa aktarıldı';
@@ -31376,7 +31376,7 @@ class _StringsVi extends _StringsEn {
 	@override String get reader_content_timeout => 'Tải nội dung quá thời gian. Mở lại nếu hiển thị bất thường';
 	@override String get backup_local => 'Sao lưu cục bộ';
 	@override String get backup_export => 'Xuất bản sao lưu';
-	@override String get backup_export_hint => 'Lưu toàn bộ cài đặt, tiến độ đọc và thống kê vào một tệp';
+	@override String get backup_export_hint => 'Chọn nội dung muốn đưa vào; cơ sở dữ liệu (sách, tiến độ, thống kê) luôn được đưa vào. Bỏ chọn các mục lớn (âm thanh cục bộ, video) để giảm dung lượng bản sao lưu.';
 	@override String get backup_import => 'Nhập bản sao lưu';
 	@override String get backup_import_hint => 'Khôi phục từ tệp sao lưu. Ứng dụng sẽ khởi động lại.';
 	@override String get backup_export_success => 'Đã xuất bản sao lưu thành công';
@@ -33530,7 +33530,7 @@ class _StringsZhCn extends _StringsEn {
 	@override String get reader_content_timeout => '内容加载超时，如显示异常请重新打开';
 	@override String get backup_local => '本地备份';
 	@override String get backup_export => '导出备份';
-	@override String get backup_export_hint => '将所有设置、阅读进度和统计数据保存到文件';
+	@override String get backup_export_hint => '勾选要包含的内容；数据库（书籍、进度、统计）始终包含。取消大文件（本地音频、视频）可减小备份体积。';
 	@override String get backup_import => '导入备份';
 	@override String get backup_import_hint => '从备份文件恢复。应用将会重启。';
 	@override String get backup_export_success => '备份导出成功';
@@ -35684,7 +35684,7 @@ class _StringsZhHk extends _StringsEn {
 	@override String get reader_content_timeout => '內容載入逾時，如顯示異常請重新開啟';
 	@override String get backup_local => '本機備份';
 	@override String get backup_export => '匯出備份';
-	@override String get backup_export_hint => '將所有設定、閱讀進度及統計資料儲存到檔案';
+	@override String get backup_export_hint => '勾選要包含的內容；資料庫（書籍、進度、統計）一律包含。取消大型項目（本地音訊、影片）可縮小備份體積。';
 	@override String get backup_import => '匯入備份';
 	@override String get backup_import_hint => '從備份檔案還原。App 將會重新啟動。';
 	@override String get backup_export_success => '備份匯出成功';
@@ -37823,7 +37823,7 @@ extension on _StringsEn {
 			case 'reader_content_timeout': return 'Content loading timed out. Reopen if display is abnormal';
 			case 'backup_local': return 'Local Backup';
 			case 'backup_export': return 'Export Backup';
-			case 'backup_export_hint': return 'Save all settings, reading progress, and statistics to a file';
+			case 'backup_export_hint': return 'Choose what to include; the database (books, progress, stats) is always included. Uncheck large items (local audio, videos) to shrink the backup.';
 			case 'backup_import': return 'Import Backup';
 			case 'backup_import_hint': return 'Restore from a backup file. The app will restart.';
 			case 'backup_export_success': return 'Backup exported successfully';
@@ -39936,7 +39936,7 @@ extension on _StringsAr {
 			case 'reader_content_timeout': return 'انتهت مهلة تحميل المحتوى. أعد الفتح إذا كان العرض غير طبيعي';
 			case 'backup_local': return 'نسخة احتياطية محلية';
 			case 'backup_export': return 'تصدير النسخة الاحتياطية';
-			case 'backup_export_hint': return 'احفظ كل الإعدادات وتقدّم القراءة والإحصاءات في ملف';
+			case 'backup_export_hint': return 'اختر ما تريد تضمينه؛ قاعدة البيانات (الكتب والتقدّم والإحصاءات) مُضمَّنة دائمًا. أزِل تحديد العناصر الكبيرة (الصوت المحلي والفيديو) لتصغير حجم النسخة الاحتياطية.';
 			case 'backup_import': return 'استيراد نسخة احتياطية';
 			case 'backup_import_hint': return 'استعادة من ملف نسخة احتياطية. سيُعاد تشغيل التطبيق.';
 			case 'backup_export_success': return 'تم تصدير النسخة الاحتياطية بنجاح';
@@ -42049,7 +42049,7 @@ extension on _StringsDe {
 			case 'reader_content_timeout': return 'Zeitüberschreitung beim Laden des Inhalts. Bei fehlerhafter Anzeige erneut öffnen';
 			case 'backup_local': return 'Lokales Backup';
 			case 'backup_export': return 'Backup exportieren';
-			case 'backup_export_hint': return 'Alle Einstellungen, Lesefortschritte und Statistiken in eine Datei speichern';
+			case 'backup_export_hint': return 'Wähle aus, was enthalten sein soll; die Datenbank (Bücher, Fortschritt, Statistiken) ist immer enthalten. Deaktiviere große Elemente (lokale Audios, Videos), um das Backup zu verkleinern.';
 			case 'backup_import': return 'Backup importieren';
 			case 'backup_import_hint': return 'Aus einer Backup-Datei wiederherstellen. Die App wird neu gestartet.';
 			case 'backup_export_success': return 'Backup erfolgreich exportiert';
@@ -44162,7 +44162,7 @@ extension on _StringsEs {
 			case 'reader_content_timeout': return 'Se agotó el tiempo al cargar el contenido. Reabre si la visualización es anómala';
 			case 'backup_local': return 'Copia de seguridad local';
 			case 'backup_export': return 'Exportar copia de seguridad';
-			case 'backup_export_hint': return 'Guarda todos los ajustes, el progreso de lectura y las estadísticas en un archivo';
+			case 'backup_export_hint': return 'Elige qué incluir; la base de datos (libros, progreso, estadísticas) siempre se incluye. Desmarca elementos grandes (audio local, vídeos) para reducir el tamaño de la copia.';
 			case 'backup_import': return 'Importar copia de seguridad';
 			case 'backup_import_hint': return 'Restaura desde un archivo de copia de seguridad. La app se reiniciará.';
 			case 'backup_export_success': return 'Copia de seguridad exportada correctamente';
@@ -46275,7 +46275,7 @@ extension on _StringsFr {
 			case 'reader_content_timeout': return 'Délai de chargement du contenu dépassé. Rouvrez si l\'affichage est anormal';
 			case 'backup_local': return 'Sauvegarde locale';
 			case 'backup_export': return 'Exporter la sauvegarde';
-			case 'backup_export_hint': return 'Enregistrer tous les réglages, la progression de lecture et les statistiques dans un fichier';
+			case 'backup_export_hint': return 'Choisissez ce qu’il faut inclure ; la base de données (livres, progression, statistiques) est toujours incluse. Décochez les éléments volumineux (audio local, vidéos) pour réduire la sauvegarde.';
 			case 'backup_import': return 'Importer une sauvegarde';
 			case 'backup_import_hint': return 'Restaurer depuis un fichier de sauvegarde. L\'application redémarrera.';
 			case 'backup_export_success': return 'Sauvegarde exportée avec succès';
@@ -48388,7 +48388,7 @@ extension on _StringsId {
 			case 'reader_content_timeout': return 'Pemuatan konten habis waktu. Buka ulang jika tampilan tidak normal';
 			case 'backup_local': return 'Cadangan Lokal';
 			case 'backup_export': return 'Ekspor Cadangan';
-			case 'backup_export_hint': return 'Simpan semua pengaturan, progres membaca, dan statistik ke berkas';
+			case 'backup_export_hint': return 'Pilih apa yang disertakan; basis data (buku, progres, statistik) selalu disertakan. Hapus centang item besar (audio lokal, video) untuk memperkecil cadangan.';
 			case 'backup_import': return 'Impor Cadangan';
 			case 'backup_import_hint': return 'Pulihkan dari berkas cadangan. Aplikasi akan dimulai ulang.';
 			case 'backup_export_success': return 'Cadangan berhasil diekspor';
@@ -50501,7 +50501,7 @@ extension on _StringsIt {
 			case 'reader_content_timeout': return 'Timeout nel caricamento del contenuto. Riapri se la visualizzazione è anomala';
 			case 'backup_local': return 'Backup locale';
 			case 'backup_export': return 'Esporta backup';
-			case 'backup_export_hint': return 'Salva tutte le impostazioni, i progressi di lettura e le statistiche in un file';
+			case 'backup_export_hint': return 'Scegli cosa includere; il database (libri, progressi, statistiche) è sempre incluso. Deseleziona gli elementi grandi (audio locale, video) per ridurre il backup.';
 			case 'backup_import': return 'Importa backup';
 			case 'backup_import_hint': return 'Ripristina da un file di backup. L\'app verrà riavviata.';
 			case 'backup_export_success': return 'Backup esportato correttamente';
@@ -52614,7 +52614,7 @@ extension on _StringsJa {
 			case 'reader_content_timeout': return 'コンテンツの読み込みがタイムアウトしました。表示が異常な場合は開き直してください';
 			case 'backup_local': return 'ローカルバックアップ';
 			case 'backup_export': return 'バックアップを書き出す';
-			case 'backup_export_hint': return 'すべての設定・読書進捗・統計をファイルに保存します';
+			case 'backup_export_hint': return '含める内容を選べます。データベース（書籍・進捗・統計）は常に含まれます。大きな項目（ローカル音声・動画）のチェックを外すとバックアップを小さくできます。';
 			case 'backup_import': return 'バックアップを読み込む';
 			case 'backup_import_hint': return 'バックアップファイルから復元します。アプリが再起動します。';
 			case 'backup_export_success': return 'バックアップを書き出しました';
@@ -54727,7 +54727,7 @@ extension on _StringsKo {
 			case 'reader_content_timeout': return '콘텐츠 로딩 시간이 초과되었습니다. 표시가 비정상이면 다시 열어 주세요';
 			case 'backup_local': return '로컬 백업';
 			case 'backup_export': return '백업 내보내기';
-			case 'backup_export_hint': return '모든 설정, 읽기 진행 상황, 통계를 파일로 저장합니다';
+			case 'backup_export_hint': return '포함할 항목을 선택하세요. 데이터베이스(도서, 진행 상황, 통계)는 항상 포함됩니다. 큰 항목(로컬 오디오, 동영상)의 선택을 해제하면 백업 크기를 줄일 수 있습니다.';
 			case 'backup_import': return '백업 가져오기';
 			case 'backup_import_hint': return '백업 파일에서 복원합니다. 앱이 다시 시작됩니다.';
 			case 'backup_export_success': return '백업을 내보냈습니다';
@@ -56840,7 +56840,7 @@ extension on _StringsNl {
 			case 'reader_content_timeout': return 'Time-out bij laden van inhoud. Open opnieuw als de weergave afwijkt';
 			case 'backup_local': return 'Lokale back-up';
 			case 'backup_export': return 'Back-up exporteren';
-			case 'backup_export_hint': return 'Sla alle instellingen, leesvoortgang en statistieken op in een bestand';
+			case 'backup_export_hint': return 'Kies wat je wilt opnemen; de database (boeken, voortgang, statistieken) wordt altijd opgenomen. Schakel grote items (lokale audio, video\'s) uit om de back-up te verkleinen.';
 			case 'backup_import': return 'Back-up importeren';
 			case 'backup_import_hint': return 'Herstel vanuit een back-upbestand. De app wordt opnieuw gestart.';
 			case 'backup_export_success': return 'Back-up geëxporteerd';
@@ -58953,7 +58953,7 @@ extension on _StringsPtBr {
 			case 'reader_content_timeout': return 'O carregamento do conteúdo expirou. Reabra se a exibição estiver anormal';
 			case 'backup_local': return 'Backup local';
 			case 'backup_export': return 'Exportar backup';
-			case 'backup_export_hint': return 'Salvar todas as configurações, progresso de leitura e estatísticas em um arquivo';
+			case 'backup_export_hint': return 'Escolha o que incluir; o banco de dados (livros, progresso, estatísticas) é sempre incluído. Desmarque itens grandes (áudio local, vídeos) para reduzir o backup.';
 			case 'backup_import': return 'Importar backup';
 			case 'backup_import_hint': return 'Restaurar a partir de um arquivo de backup. O app será reiniciado.';
 			case 'backup_export_success': return 'Backup exportado com sucesso';
@@ -61066,7 +61066,7 @@ extension on _StringsRu {
 			case 'reader_content_timeout': return 'Время загрузки контента истекло. Откройте заново, если отображение некорректно';
 			case 'backup_local': return 'Локальная резервная копия';
 			case 'backup_export': return 'Экспорт копии';
-			case 'backup_export_hint': return 'Сохранить все настройки, прогресс чтения и статистику в файл';
+			case 'backup_export_hint': return 'Выберите, что включить; база данных (книги, прогресс, статистика) включается всегда. Снимите отметки с крупных элементов (локальное аудио, видео), чтобы уменьшить размер резервной копии.';
 			case 'backup_import': return 'Импорт копии';
 			case 'backup_import_hint': return 'Восстановить из файла резервной копии. Приложение перезапустится.';
 			case 'backup_export_success': return 'Резервная копия успешно экспортирована';
@@ -63179,7 +63179,7 @@ extension on _StringsTh {
 			case 'reader_content_timeout': return 'โหลดเนื้อหาหมดเวลา หากแสดงผลผิดปกติให้เปิดใหม่';
 			case 'backup_local': return 'สำรองข้อมูลในเครื่อง';
 			case 'backup_export': return 'ส่งออกข้อมูลสำรอง';
-			case 'backup_export_hint': return 'บันทึกการตั้งค่า ความคืบหน้าการอ่าน และสถิติทั้งหมดลงไฟล์';
+			case 'backup_export_hint': return 'เลือกสิ่งที่จะรวมไว้ ฐานข้อมูล (หนังสือ ความคืบหน้า สถิติ) จะถูกรวมไว้เสมอ ยกเลิกการเลือกรายการขนาดใหญ่ (เสียงในเครื่อง วิดีโอ) เพื่อลดขนาดข้อมูลสำรอง';
 			case 'backup_import': return 'นำเข้าข้อมูลสำรอง';
 			case 'backup_import_hint': return 'กู้คืนจากไฟล์สำรอง แอปจะรีสตาร์ท';
 			case 'backup_export_success': return 'ส่งออกข้อมูลสำรองสำเร็จ';
@@ -65292,7 +65292,7 @@ extension on _StringsTr {
 			case 'reader_content_timeout': return 'İçerik yüklemesi zaman aşımına uğradı. Görüntü anormalse yeniden açın';
 			case 'backup_local': return 'Yerel Yedek';
 			case 'backup_export': return 'Yedeği Dışa Aktar';
-			case 'backup_export_hint': return 'Tüm ayarları, okuma ilerlemesini ve istatistikleri bir dosyaya kaydet';
+			case 'backup_export_hint': return 'Nelerin dâhil edileceğini seçin; veritabanı (kitaplar, ilerleme, istatistikler) her zaman dâhildir. Yedeği küçültmek için büyük öğelerin (yerel ses, videolar) işaretini kaldırın.';
 			case 'backup_import': return 'Yedeği İçe Aktar';
 			case 'backup_import_hint': return 'Bir yedek dosyasından geri yükle. Uygulama yeniden başlatılacak.';
 			case 'backup_export_success': return 'Yedek başarıyla dışa aktarıldı';
@@ -67405,7 +67405,7 @@ extension on _StringsVi {
 			case 'reader_content_timeout': return 'Tải nội dung quá thời gian. Mở lại nếu hiển thị bất thường';
 			case 'backup_local': return 'Sao lưu cục bộ';
 			case 'backup_export': return 'Xuất bản sao lưu';
-			case 'backup_export_hint': return 'Lưu toàn bộ cài đặt, tiến độ đọc và thống kê vào một tệp';
+			case 'backup_export_hint': return 'Chọn nội dung muốn đưa vào; cơ sở dữ liệu (sách, tiến độ, thống kê) luôn được đưa vào. Bỏ chọn các mục lớn (âm thanh cục bộ, video) để giảm dung lượng bản sao lưu.';
 			case 'backup_import': return 'Nhập bản sao lưu';
 			case 'backup_import_hint': return 'Khôi phục từ tệp sao lưu. Ứng dụng sẽ khởi động lại.';
 			case 'backup_export_success': return 'Đã xuất bản sao lưu thành công';
@@ -69518,7 +69518,7 @@ extension on _StringsZhCn {
 			case 'reader_content_timeout': return '内容加载超时，如显示异常请重新打开';
 			case 'backup_local': return '本地备份';
 			case 'backup_export': return '导出备份';
-			case 'backup_export_hint': return '将所有设置、阅读进度和统计数据保存到文件';
+			case 'backup_export_hint': return '勾选要包含的内容；数据库（书籍、进度、统计）始终包含。取消大文件（本地音频、视频）可减小备份体积。';
 			case 'backup_import': return '导入备份';
 			case 'backup_import_hint': return '从备份文件恢复。应用将会重启。';
 			case 'backup_export_success': return '备份导出成功';
@@ -71631,7 +71631,7 @@ extension on _StringsZhHk {
 			case 'reader_content_timeout': return '內容載入逾時，如顯示異常請重新開啟';
 			case 'backup_local': return '本機備份';
 			case 'backup_export': return '匯出備份';
-			case 'backup_export_hint': return '將所有設定、閱讀進度及統計資料儲存到檔案';
+			case 'backup_export_hint': return '勾選要包含的內容；資料庫（書籍、進度、統計）一律包含。取消大型項目（本地音訊、影片）可縮小備份體積。';
 			case 'backup_import': return '匯入備份';
 			case 'backup_import_hint': return '從備份檔案還原。App 將會重新啟動。';
 			case 'backup_export_success': return '備份匯出成功';
