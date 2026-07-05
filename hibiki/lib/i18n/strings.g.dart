@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35717 (2101 per locale)
+/// Strings: 35836 (2108 per locale)
 ///
-/// Built on 2026-07-05 at 13:08 UTC
+/// Built on 2026-07-05 at 14:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1220,7 +1220,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get reader_content_timeout => 'Content loading timed out. Reopen if display is abnormal';
 	String get backup_local => 'Local Backup';
 	String get backup_export => 'Export Backup';
-	String get backup_export_hint => 'Choose what to include; the database (books, progress, stats) is always included. Uncheck large items (local audio, videos) to shrink the backup.';
+	String get backup_export_hint => 'Choose what to include. Reading data (progress, stats, settings) is always included; uncheck Books to exclude books entirely, or uncheck large items (local audio, videos) to shrink the backup.';
 	String get backup_import => 'Import Backup';
 	String get backup_import_hint => 'Restore from a backup file. The app will restart.';
 	String get backup_export_success => 'Backup exported successfully';
@@ -1651,7 +1651,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get video_subtitle_color_note => 'Subtitle colors are set inside the video player.';
 	String get theme_seed_preview_hint => 'Swatches below preview the colors actually generated from your seed. To force a specific color as the primary accent, turn on the Primary toggle and pick it explicitly.';
 	String get backup_export_categories_title => 'Choose what to export';
-	String get backup_export_categories_hint => 'Selected categories are packed into the backup. The database (books, statistics, favorites, profiles, settings) is always included.';
+	String get backup_export_categories_hint => 'Selected categories are packed into the backup. Your reading data (progress, statistics, favorites, profiles, settings) is always included in the database. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 	String get backup_category_dictionary => 'Dictionaries';
 	String get backup_category_books => 'Books';
 	String get backup_category_audiobooks => 'Audiobook audio';
@@ -2261,6 +2261,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get data_storage_migrate_failed_restart => 'Restart';
 	String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	String get data_storage_migrate_failed_title => 'Data migration failed';
+	String get backup_export_choose_books => 'Choose books';
+	String get backup_export_books_all => 'All books';
+	String get backup_export_select_all => 'Select all';
+	String get backup_export_select_none => 'Select none';
+	String get backup_export_no_books => 'No books to choose from';
+	String backup_export_books_selected({required Object count}) => '${count} books selected';
+	String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -4415,6 +4422,13 @@ class _StringsAr extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -6569,6 +6583,13 @@ class _StringsDe extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -8723,6 +8744,13 @@ class _StringsEs extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -10877,6 +10905,13 @@ class _StringsFr extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -13031,6 +13066,13 @@ class _StringsId extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -15185,6 +15227,13 @@ class _StringsIt extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -17339,6 +17388,13 @@ class _StringsJa extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -19493,6 +19549,13 @@ class _StringsKo extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -21647,6 +21710,13 @@ class _StringsNl extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -23801,6 +23871,13 @@ class _StringsPtBr extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -25955,6 +26032,13 @@ class _StringsRu extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -28109,6 +28193,13 @@ class _StringsTh extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -30263,6 +30354,13 @@ class _StringsTr extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -32417,6 +32515,13 @@ class _StringsVi extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -33530,7 +33635,7 @@ class _StringsZhCn extends _StringsEn {
 	@override String get reader_content_timeout => '内容加载超时，如显示异常请重新打开';
 	@override String get backup_local => '本地备份';
 	@override String get backup_export => '导出备份';
-	@override String get backup_export_hint => '勾选要包含的内容；数据库（书籍、进度、统计）始终包含。取消大文件（本地音频、视频）可减小备份体积。';
+	@override String get backup_export_hint => '选择要包含的内容。阅读数据（进度、统计、设置）始终包含；取消「书籍」可完整排除书籍，取消大文件（本地音频、视频）可缩小备份。';
 	@override String get backup_import => '导入备份';
 	@override String get backup_import_hint => '从备份文件恢复。应用将会重启。';
 	@override String get backup_export_success => '备份导出成功';
@@ -33961,7 +34066,7 @@ class _StringsZhCn extends _StringsEn {
 	@override String get video_subtitle_color_note => '视频字幕颜色在视频播放器内设置。';
 	@override String get theme_seed_preview_hint => '下方色板预览由种子色实际生成的颜色。想让某个颜色固定作为主色强调色，请打开「主色」开关并显式指定。';
 	@override String get backup_export_categories_title => '选择要导出的内容';
-	@override String get backup_export_categories_hint => '勾选的类别会被打包进备份。数据库（书籍、统计、收藏、配置方案、设置）始终包含。';
+	@override String get backup_export_categories_hint => '勾选的类别会打包进备份。阅读数据（进度、统计、收藏、配置方案、设置）始终包含在数据库里。取消「书籍」会完整排除这些书——正文文件和书籍记录一并排除，导入后不会出现这些书。';
 	@override String get backup_category_dictionary => '词典';
 	@override String get backup_category_books => '书籍内容';
 	@override String get backup_category_audiobooks => '有声书音频';
@@ -34571,6 +34676,13 @@ class _StringsZhCn extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => '重启';
 	@override String get data_storage_reject_install_dir => '所选目录是应用的安装位置，不能用来存放数据。请另选一个空目录。';
 	@override String get data_storage_migrate_failed_title => '数据迁移失败';
+	@override String get backup_export_choose_books => '选择书籍';
+	@override String get backup_export_books_all => '全部书籍';
+	@override String get backup_export_select_all => '全选';
+	@override String get backup_export_select_none => '全不选';
+	@override String get backup_export_no_books => '没有可选的书籍';
+	@override String backup_export_books_selected({required Object count}) => '已选 ${count} 本书';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => '合并将新增 ${bookCount} 本书、更新 ${progressCount} 条阅读进度。';
 }
 
 // Path: retrying_in
@@ -36725,6 +36837,13 @@ class _StringsZhHk extends _StringsEn {
 	@override String get data_storage_migrate_failed_restart => 'Restart';
 	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 	@override String get data_storage_migrate_failed_title => 'Data migration failed';
+	@override String get backup_export_choose_books => 'Choose books';
+	@override String get backup_export_books_all => 'All books';
+	@override String get backup_export_select_all => 'Select all';
+	@override String get backup_export_select_none => 'Select none';
+	@override String get backup_export_no_books => 'No books to choose from';
+	@override String backup_export_books_selected({required Object count}) => '${count} books selected';
+	@override String backup_import_merge_preview({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 }
 
 // Path: retrying_in
@@ -37823,7 +37942,7 @@ extension on _StringsEn {
 			case 'reader_content_timeout': return 'Content loading timed out. Reopen if display is abnormal';
 			case 'backup_local': return 'Local Backup';
 			case 'backup_export': return 'Export Backup';
-			case 'backup_export_hint': return 'Choose what to include; the database (books, progress, stats) is always included. Uncheck large items (local audio, videos) to shrink the backup.';
+			case 'backup_export_hint': return 'Choose what to include. Reading data (progress, stats, settings) is always included; uncheck Books to exclude books entirely, or uncheck large items (local audio, videos) to shrink the backup.';
 			case 'backup_import': return 'Import Backup';
 			case 'backup_import_hint': return 'Restore from a backup file. The app will restart.';
 			case 'backup_export_success': return 'Backup exported successfully';
@@ -38254,7 +38373,7 @@ extension on _StringsEn {
 			case 'video_subtitle_color_note': return 'Subtitle colors are set inside the video player.';
 			case 'theme_seed_preview_hint': return 'Swatches below preview the colors actually generated from your seed. To force a specific color as the primary accent, turn on the Primary toggle and pick it explicitly.';
 			case 'backup_export_categories_title': return 'Choose what to export';
-			case 'backup_export_categories_hint': return 'Selected categories are packed into the backup. The database (books, statistics, favorites, profiles, settings) is always included.';
+			case 'backup_export_categories_hint': return 'Selected categories are packed into the backup. Your reading data (progress, statistics, favorites, profiles, settings) is always included in the database. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 			case 'backup_category_dictionary': return 'Dictionaries';
 			case 'backup_category_books': return 'Books';
 			case 'backup_category_audiobooks': return 'Audiobook audio';
@@ -38864,6 +38983,13 @@ extension on _StringsEn {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -40977,6 +41103,13 @@ extension on _StringsAr {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -43090,6 +43223,13 @@ extension on _StringsDe {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -45203,6 +45343,13 @@ extension on _StringsEs {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -47316,6 +47463,13 @@ extension on _StringsFr {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -49429,6 +49583,13 @@ extension on _StringsId {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -51542,6 +51703,13 @@ extension on _StringsIt {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -53655,6 +53823,13 @@ extension on _StringsJa {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -55768,6 +55943,13 @@ extension on _StringsKo {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -57881,6 +58063,13 @@ extension on _StringsNl {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -59994,6 +60183,13 @@ extension on _StringsPtBr {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -62107,6 +62303,13 @@ extension on _StringsRu {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -64220,6 +64423,13 @@ extension on _StringsTh {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -66333,6 +66543,13 @@ extension on _StringsTr {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -68446,6 +68663,13 @@ extension on _StringsVi {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
@@ -69518,7 +69742,7 @@ extension on _StringsZhCn {
 			case 'reader_content_timeout': return '内容加载超时，如显示异常请重新打开';
 			case 'backup_local': return '本地备份';
 			case 'backup_export': return '导出备份';
-			case 'backup_export_hint': return '勾选要包含的内容；数据库（书籍、进度、统计）始终包含。取消大文件（本地音频、视频）可减小备份体积。';
+			case 'backup_export_hint': return '选择要包含的内容。阅读数据（进度、统计、设置）始终包含；取消「书籍」可完整排除书籍，取消大文件（本地音频、视频）可缩小备份。';
 			case 'backup_import': return '导入备份';
 			case 'backup_import_hint': return '从备份文件恢复。应用将会重启。';
 			case 'backup_export_success': return '备份导出成功';
@@ -69949,7 +70173,7 @@ extension on _StringsZhCn {
 			case 'video_subtitle_color_note': return '视频字幕颜色在视频播放器内设置。';
 			case 'theme_seed_preview_hint': return '下方色板预览由种子色实际生成的颜色。想让某个颜色固定作为主色强调色，请打开「主色」开关并显式指定。';
 			case 'backup_export_categories_title': return '选择要导出的内容';
-			case 'backup_export_categories_hint': return '勾选的类别会被打包进备份。数据库（书籍、统计、收藏、配置方案、设置）始终包含。';
+			case 'backup_export_categories_hint': return '勾选的类别会打包进备份。阅读数据（进度、统计、收藏、配置方案、设置）始终包含在数据库里。取消「书籍」会完整排除这些书——正文文件和书籍记录一并排除，导入后不会出现这些书。';
 			case 'backup_category_dictionary': return '词典';
 			case 'backup_category_books': return '书籍内容';
 			case 'backup_category_audiobooks': return '有声书音频';
@@ -70559,6 +70783,13 @@ extension on _StringsZhCn {
 			case 'data_storage_migrate_failed_restart': return '重启';
 			case 'data_storage_reject_install_dir': return '所选目录是应用的安装位置，不能用来存放数据。请另选一个空目录。';
 			case 'data_storage_migrate_failed_title': return '数据迁移失败';
+			case 'backup_export_choose_books': return '选择书籍';
+			case 'backup_export_books_all': return '全部书籍';
+			case 'backup_export_select_all': return '全选';
+			case 'backup_export_select_none': return '全不选';
+			case 'backup_export_no_books': return '没有可选的书籍';
+			case 'backup_export_books_selected': return ({required Object count}) => '已选 ${count} 本书';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => '合并将新增 ${bookCount} 本书、更新 ${progressCount} 条阅读进度。';
 			default: return null;
 		}
 	}
@@ -72672,6 +72903,13 @@ extension on _StringsZhHk {
 			case 'data_storage_migrate_failed_restart': return 'Restart';
 			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
 			case 'data_storage_migrate_failed_title': return 'Data migration failed';
+			case 'backup_export_choose_books': return 'Choose books';
+			case 'backup_export_books_all': return 'All books';
+			case 'backup_export_select_all': return 'Select all';
+			case 'backup_export_select_none': return 'Select none';
+			case 'backup_export_no_books': return 'No books to choose from';
+			case 'backup_export_books_selected': return ({required Object count}) => '${count} books selected';
+			case 'backup_import_merge_preview': return ({required Object bookCount, required Object progressCount}) => 'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
 			default: return null;
 		}
 	}
