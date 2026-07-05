@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35632 (2096 per locale)
+/// Strings: 35649 (2097 per locale)
 ///
-/// Built on 2026-07-05 at 08:58 UTC
+/// Built on 2026-07-05 at 09:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2256,6 +2256,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get tag_seed_stars => 'Add star rating tags';
 	String get tag_seed_stars_added => 'Star rating tags added';
 	String get tag_seed_stars_exists => 'Star rating tags already exist';
+	String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -4405,6 +4406,7 @@ class _StringsAr extends _StringsEn {
 	@override String get tag_seed_stars => 'Add star rating tags';
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
+	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -6554,6 +6556,7 @@ class _StringsDe extends _StringsEn {
 	@override String get tag_seed_stars => 'Add star rating tags';
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
+	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -8703,6 +8706,7 @@ class _StringsEs extends _StringsEn {
 	@override String get tag_seed_stars => 'Add star rating tags';
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
+	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -10852,6 +10856,7 @@ class _StringsFr extends _StringsEn {
 	@override String get tag_seed_stars => 'Add star rating tags';
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
+	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -13001,6 +13006,7 @@ class _StringsId extends _StringsEn {
 	@override String get tag_seed_stars => 'Add star rating tags';
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
+	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -15150,6 +15156,7 @@ class _StringsIt extends _StringsEn {
 	@override String get tag_seed_stars => 'Add star rating tags';
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
+	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -17299,6 +17306,7 @@ class _StringsJa extends _StringsEn {
 	@override String get tag_seed_stars => 'Add star rating tags';
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
+	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -19448,6 +19456,7 @@ class _StringsKo extends _StringsEn {
 	@override String get tag_seed_stars => 'Add star rating tags';
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
+	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -21597,6 +21606,7 @@ class _StringsNl extends _StringsEn {
 	@override String get tag_seed_stars => 'Add star rating tags';
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
+	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -23746,6 +23756,7 @@ class _StringsPtBr extends _StringsEn {
 	@override String get tag_seed_stars => 'Add star rating tags';
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
+	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -25895,6 +25906,7 @@ class _StringsRu extends _StringsEn {
 	@override String get tag_seed_stars => 'Add star rating tags';
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
+	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -28044,6 +28056,7 @@ class _StringsTh extends _StringsEn {
 	@override String get tag_seed_stars => 'Add star rating tags';
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
+	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -30193,6 +30206,7 @@ class _StringsTr extends _StringsEn {
 	@override String get tag_seed_stars => 'Add star rating tags';
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
+	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -32342,6 +32356,7 @@ class _StringsVi extends _StringsEn {
 	@override String get tag_seed_stars => 'Add star rating tags';
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
+	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -34491,6 +34506,7 @@ class _StringsZhCn extends _StringsEn {
 	@override String get tag_seed_stars => '添加星级标签';
 	@override String get tag_seed_stars_added => '已添加星级标签';
 	@override String get tag_seed_stars_exists => '星级标签已存在';
+	@override String get audio_source_loopback_warning => '指向本机地址，换机后需重新指向';
 }
 
 // Path: retrying_in
@@ -36640,6 +36656,7 @@ class _StringsZhHk extends _StringsEn {
 	@override String get tag_seed_stars => '新增星級標籤';
 	@override String get tag_seed_stars_added => '已新增星級標籤';
 	@override String get tag_seed_stars_exists => '星級標籤已存在';
+	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
 }
 
 // Path: retrying_in
@@ -38774,6 +38791,7 @@ extension on _StringsEn {
 			case 'tag_seed_stars': return 'Add star rating tags';
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
@@ -40882,6 +40900,7 @@ extension on _StringsAr {
 			case 'tag_seed_stars': return 'Add star rating tags';
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
@@ -42990,6 +43009,7 @@ extension on _StringsDe {
 			case 'tag_seed_stars': return 'Add star rating tags';
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
@@ -45098,6 +45118,7 @@ extension on _StringsEs {
 			case 'tag_seed_stars': return 'Add star rating tags';
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
@@ -47206,6 +47227,7 @@ extension on _StringsFr {
 			case 'tag_seed_stars': return 'Add star rating tags';
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
@@ -49314,6 +49336,7 @@ extension on _StringsId {
 			case 'tag_seed_stars': return 'Add star rating tags';
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
@@ -51422,6 +51445,7 @@ extension on _StringsIt {
 			case 'tag_seed_stars': return 'Add star rating tags';
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
@@ -53530,6 +53554,7 @@ extension on _StringsJa {
 			case 'tag_seed_stars': return 'Add star rating tags';
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
@@ -55638,6 +55663,7 @@ extension on _StringsKo {
 			case 'tag_seed_stars': return 'Add star rating tags';
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
@@ -57746,6 +57772,7 @@ extension on _StringsNl {
 			case 'tag_seed_stars': return 'Add star rating tags';
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
@@ -59854,6 +59881,7 @@ extension on _StringsPtBr {
 			case 'tag_seed_stars': return 'Add star rating tags';
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
@@ -61962,6 +61990,7 @@ extension on _StringsRu {
 			case 'tag_seed_stars': return 'Add star rating tags';
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
@@ -64070,6 +64099,7 @@ extension on _StringsTh {
 			case 'tag_seed_stars': return 'Add star rating tags';
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
@@ -66178,6 +66208,7 @@ extension on _StringsTr {
 			case 'tag_seed_stars': return 'Add star rating tags';
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
@@ -68286,6 +68317,7 @@ extension on _StringsVi {
 			case 'tag_seed_stars': return 'Add star rating tags';
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
@@ -70394,6 +70426,7 @@ extension on _StringsZhCn {
 			case 'tag_seed_stars': return '添加星级标签';
 			case 'tag_seed_stars_added': return '已添加星级标签';
 			case 'tag_seed_stars_exists': return '星级标签已存在';
+			case 'audio_source_loopback_warning': return '指向本机地址，换机后需重新指向';
 			default: return null;
 		}
 	}
@@ -72502,6 +72535,7 @@ extension on _StringsZhHk {
 			case 'tag_seed_stars': return '新增星級標籤';
 			case 'tag_seed_stars_added': return '已新增星級標籤';
 			case 'tag_seed_stars_exists': return '星級標籤已存在';
+			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
 			default: return null;
 		}
 	}
