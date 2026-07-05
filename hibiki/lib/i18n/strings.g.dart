@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35649 (2097 per locale)
+/// Strings: 35717 (2101 per locale)
 ///
-/// Built on 2026-07-05 at 09:52 UTC
+/// Built on 2026-07-05 at 11:28 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2257,6 +2257,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get tag_seed_stars_added => 'Star rating tags added';
 	String get tag_seed_stars_exists => 'Star rating tags already exist';
 	String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	String get data_storage_migrate_failed_restart => 'Restart';
+	String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -4407,6 +4411,10 @@ class _StringsAr extends _StringsEn {
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	@override String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	@override String get data_storage_migrate_failed_restart => 'Restart';
+	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	@override String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -6557,6 +6565,10 @@ class _StringsDe extends _StringsEn {
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	@override String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	@override String get data_storage_migrate_failed_restart => 'Restart';
+	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	@override String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -8707,6 +8719,10 @@ class _StringsEs extends _StringsEn {
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	@override String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	@override String get data_storage_migrate_failed_restart => 'Restart';
+	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	@override String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -10857,6 +10873,10 @@ class _StringsFr extends _StringsEn {
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	@override String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	@override String get data_storage_migrate_failed_restart => 'Restart';
+	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	@override String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -13007,6 +13027,10 @@ class _StringsId extends _StringsEn {
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	@override String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	@override String get data_storage_migrate_failed_restart => 'Restart';
+	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	@override String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -15157,6 +15181,10 @@ class _StringsIt extends _StringsEn {
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	@override String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	@override String get data_storage_migrate_failed_restart => 'Restart';
+	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	@override String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -17307,6 +17335,10 @@ class _StringsJa extends _StringsEn {
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	@override String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	@override String get data_storage_migrate_failed_restart => 'Restart';
+	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	@override String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -19457,6 +19489,10 @@ class _StringsKo extends _StringsEn {
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	@override String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	@override String get data_storage_migrate_failed_restart => 'Restart';
+	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	@override String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -21607,6 +21643,10 @@ class _StringsNl extends _StringsEn {
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	@override String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	@override String get data_storage_migrate_failed_restart => 'Restart';
+	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	@override String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -23757,6 +23797,10 @@ class _StringsPtBr extends _StringsEn {
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	@override String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	@override String get data_storage_migrate_failed_restart => 'Restart';
+	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	@override String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -25907,6 +25951,10 @@ class _StringsRu extends _StringsEn {
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	@override String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	@override String get data_storage_migrate_failed_restart => 'Restart';
+	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	@override String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -28057,6 +28105,10 @@ class _StringsTh extends _StringsEn {
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	@override String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	@override String get data_storage_migrate_failed_restart => 'Restart';
+	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	@override String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -30207,6 +30259,10 @@ class _StringsTr extends _StringsEn {
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	@override String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	@override String get data_storage_migrate_failed_restart => 'Restart';
+	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	@override String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -32357,6 +32413,10 @@ class _StringsVi extends _StringsEn {
 	@override String get tag_seed_stars_added => 'Star rating tags added';
 	@override String get tag_seed_stars_exists => 'Star rating tags already exist';
 	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	@override String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	@override String get data_storage_migrate_failed_restart => 'Restart';
+	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	@override String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -34507,6 +34567,10 @@ class _StringsZhCn extends _StringsEn {
 	@override String get tag_seed_stars_added => '已添加星级标签';
 	@override String get tag_seed_stars_exists => '星级标签已存在';
 	@override String get audio_source_loopback_warning => '指向本机地址，换机后需重新指向';
+	@override String get data_storage_migrate_failed_suggestions => '请改选一个空目录后重试。不要选择应用安装目录，并确保目标位置没有文件正在被占用。';
+	@override String get data_storage_migrate_failed_restart => '重启';
+	@override String get data_storage_reject_install_dir => '所选目录是应用的安装位置，不能用来存放数据。请另选一个空目录。';
+	@override String get data_storage_migrate_failed_title => '数据迁移失败';
 }
 
 // Path: retrying_in
@@ -36657,6 +36721,10 @@ class _StringsZhHk extends _StringsEn {
 	@override String get tag_seed_stars_added => '已新增星級標籤';
 	@override String get tag_seed_stars_exists => '星級標籤已存在';
 	@override String get audio_source_loopback_warning => 'Points at this device — re-point after switching machines';
+	@override String get data_storage_migrate_failed_suggestions => 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+	@override String get data_storage_migrate_failed_restart => 'Restart';
+	@override String get data_storage_reject_install_dir => 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+	@override String get data_storage_migrate_failed_title => 'Data migration failed';
 }
 
 // Path: retrying_in
@@ -38792,6 +38860,10 @@ extension on _StringsEn {
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
@@ -40901,6 +40973,10 @@ extension on _StringsAr {
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
@@ -43010,6 +43086,10 @@ extension on _StringsDe {
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
@@ -45119,6 +45199,10 @@ extension on _StringsEs {
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
@@ -47228,6 +47312,10 @@ extension on _StringsFr {
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
@@ -49337,6 +49425,10 @@ extension on _StringsId {
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
@@ -51446,6 +51538,10 @@ extension on _StringsIt {
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
@@ -53555,6 +53651,10 @@ extension on _StringsJa {
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
@@ -55664,6 +55764,10 @@ extension on _StringsKo {
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
@@ -57773,6 +57877,10 @@ extension on _StringsNl {
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
@@ -59882,6 +59990,10 @@ extension on _StringsPtBr {
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
@@ -61991,6 +62103,10 @@ extension on _StringsRu {
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
@@ -64100,6 +64216,10 @@ extension on _StringsTh {
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
@@ -66209,6 +66329,10 @@ extension on _StringsTr {
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
@@ -68318,6 +68442,10 @@ extension on _StringsVi {
 			case 'tag_seed_stars_added': return 'Star rating tags added';
 			case 'tag_seed_stars_exists': return 'Star rating tags already exist';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
@@ -70427,6 +70555,10 @@ extension on _StringsZhCn {
 			case 'tag_seed_stars_added': return '已添加星级标签';
 			case 'tag_seed_stars_exists': return '星级标签已存在';
 			case 'audio_source_loopback_warning': return '指向本机地址，换机后需重新指向';
+			case 'data_storage_migrate_failed_suggestions': return '请改选一个空目录后重试。不要选择应用安装目录，并确保目标位置没有文件正在被占用。';
+			case 'data_storage_migrate_failed_restart': return '重启';
+			case 'data_storage_reject_install_dir': return '所选目录是应用的安装位置，不能用来存放数据。请另选一个空目录。';
+			case 'data_storage_migrate_failed_title': return '数据迁移失败';
 			default: return null;
 		}
 	}
@@ -72536,6 +72668,10 @@ extension on _StringsZhHk {
 			case 'tag_seed_stars_added': return '已新增星級標籤';
 			case 'tag_seed_stars_exists': return '星級標籤已存在';
 			case 'audio_source_loopback_warning': return 'Points at this device — re-point after switching machines';
+			case 'data_storage_migrate_failed_suggestions': return 'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
+			case 'data_storage_migrate_failed_restart': return 'Restart';
+			case 'data_storage_reject_install_dir': return 'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
+			case 'data_storage_migrate_failed_title': return 'Data migration failed';
 			default: return null;
 		}
 	}
