@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35853 (2109 per locale)
+/// Strings: 36006 (2118 per locale)
 ///
-/// Built on 2026-07-05 at 15:42 UTC
+/// Built on 2026-07-06 at 03:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2809,6 +2809,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
           {required Object bookCount, required Object progressCount}) =>
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   String get stat_lookup => 'Lookups';
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -7587,6 +7597,25 @@ class _StringsAr extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -12488,6 +12517,25 @@ class _StringsDe extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -17406,6 +17454,25 @@ class _StringsEs extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -22343,6 +22410,25 @@ class _StringsFr extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -27182,6 +27268,25 @@ class _StringsId extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -32082,6 +32187,25 @@ class _StringsIt extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -36708,6 +36832,25 @@ class _StringsJa extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => '検索';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -41338,6 +41481,25 @@ class _StringsKo extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => '검색';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -46206,6 +46368,25 @@ class _StringsNl extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -51097,6 +51278,25 @@ class _StringsPtBr extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -55963,6 +56163,25 @@ class _StringsRu extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -60742,6 +60961,25 @@ class _StringsTh extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -65576,6 +65814,25 @@ class _StringsTr extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -70385,6 +70642,25 @@ class _StringsVi extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -74869,6 +75145,24 @@ class _StringsZhCn extends _StringsEn {
       '合并将新增 ${bookCount} 本书、更新 ${progressCount} 条阅读进度。';
   @override
   String get stat_lookup => '查词';
+  @override
+  String get video_subtitle_waveform_open => '波形对轴';
+  @override
+  String get video_subtitle_waveform_open_hint => '点击放大查看并对轴';
+  @override
+  String get video_subtitle_waveform_legend_energy => '响度';
+  @override
+  String get video_subtitle_waveform_legend_cue => '字幕边界';
+  @override
+  String get video_subtitle_waveform_legend_playhead => '播放头';
+  @override
+  String get video_subtitle_waveform_scroll_hint => '横向拖动查看时间轴，用下方控件对齐字幕';
+  @override
+  String get video_subtitle_waveform_jump_playhead => '跳到播放头';
+  @override
+  String get video_subtitle_waveform_zoom_in => '放大';
+  @override
+  String get video_subtitle_waveform_zoom_out => '缩小';
 }
 
 // Path: retrying_in
@@ -79397,6 +79691,25 @@ class _StringsZhHk extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => '查詞';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -83753,6 +84066,24 @@ extension on _StringsEn {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -88069,6 +88400,24 @@ extension on _StringsAr {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -92407,6 +92756,24 @@ extension on _StringsDe {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -96743,6 +97110,24 @@ extension on _StringsEs {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -101086,6 +101471,24 @@ extension on _StringsFr {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -105409,6 +105812,24 @@ extension on _StringsId {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -109749,6 +110170,24 @@ extension on _StringsIt {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -114047,6 +114486,24 @@ extension on _StringsJa {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return '検索';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -118348,6 +118805,24 @@ extension on _StringsKo {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return '검색';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -122681,6 +123156,24 @@ extension on _StringsNl {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -127011,6 +127504,24 @@ extension on _StringsPtBr {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -131345,6 +131856,24 @@ extension on _StringsRu {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -135661,6 +136190,24 @@ extension on _StringsTh {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -139986,6 +140533,24 @@ extension on _StringsTr {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -144305,6 +144870,24 @@ extension on _StringsVi {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -148590,6 +149173,24 @@ extension on _StringsZhCn {
             '合并将新增 ${bookCount} 本书、更新 ${progressCount} 条阅读进度。';
       case 'stat_lookup':
         return '查词';
+      case 'video_subtitle_waveform_open':
+        return '波形对轴';
+      case 'video_subtitle_waveform_open_hint':
+        return '点击放大查看并对轴';
+      case 'video_subtitle_waveform_legend_energy':
+        return '响度';
+      case 'video_subtitle_waveform_legend_cue':
+        return '字幕边界';
+      case 'video_subtitle_waveform_legend_playhead':
+        return '播放头';
+      case 'video_subtitle_waveform_scroll_hint':
+        return '横向拖动查看时间轴，用下方控件对齐字幕';
+      case 'video_subtitle_waveform_jump_playhead':
+        return '跳到播放头';
+      case 'video_subtitle_waveform_zoom_in':
+        return '放大';
+      case 'video_subtitle_waveform_zoom_out':
+        return '缩小';
       default:
         return null;
     }
@@ -152880,6 +153481,24 @@ extension on _StringsZhHk {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return '查詞';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
