@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36244 (2132 per locale)
+/// Strings: 36261 (2133 per locale)
 ///
-/// Built on 2026-07-06 at 14:34 UTC
+/// Built on 2026-07-06 at 15:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2834,6 +2834,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
   String get video_black_flash_notice_action => 'View suggestions';
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -7660,6 +7661,8 @@ class _StringsAr extends _StringsEn {
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -12609,6 +12612,8 @@ class _StringsDe extends _StringsEn {
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -17575,6 +17580,8 @@ class _StringsEs extends _StringsEn {
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -22560,6 +22567,8 @@ class _StringsFr extends _StringsEn {
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -27447,6 +27456,8 @@ class _StringsId extends _StringsEn {
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -32395,6 +32406,8 @@ class _StringsIt extends _StringsEn {
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -37069,6 +37082,8 @@ class _StringsJa extends _StringsEn {
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -41747,6 +41762,8 @@ class _StringsKo extends _StringsEn {
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -46663,6 +46680,8 @@ class _StringsNl extends _StringsEn {
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -51602,6 +51621,8 @@ class _StringsPtBr extends _StringsEn {
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -56516,6 +56537,8 @@ class _StringsRu extends _StringsEn {
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -61343,6 +61366,8 @@ class _StringsTh extends _StringsEn {
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -66225,6 +66250,8 @@ class _StringsTr extends _StringsEn {
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -71082,6 +71109,8 @@ class _StringsVi extends _StringsEn {
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -75612,6 +75641,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_black_flash_notice_action => '查看建议';
   @override
   String get video_black_flash_notice_dont_show_again => '不再提示';
+  @override
+  String get popup_no_audio_available => '暂无发音';
 }
 
 // Path: retrying_in
@@ -80188,6 +80219,8 @@ class _StringsZhHk extends _StringsEn {
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
 }
 
 // Path: retrying_in
@@ -84590,6 +84623,8 @@ extension on _StringsEn {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
@@ -88952,6 +88987,8 @@ extension on _StringsAr {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
@@ -93336,6 +93373,8 @@ extension on _StringsDe {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
@@ -97718,6 +97757,8 @@ extension on _StringsEs {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
@@ -102107,6 +102148,8 @@ extension on _StringsFr {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
@@ -106476,6 +106519,8 @@ extension on _StringsId {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
@@ -110862,6 +110907,8 @@ extension on _StringsIt {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
@@ -115206,6 +115253,8 @@ extension on _StringsJa {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
@@ -119553,6 +119602,8 @@ extension on _StringsKo {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
@@ -123932,6 +123983,8 @@ extension on _StringsNl {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
@@ -128308,6 +128361,8 @@ extension on _StringsPtBr {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
@@ -132688,6 +132743,8 @@ extension on _StringsRu {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
@@ -137050,6 +137107,8 @@ extension on _StringsTh {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
@@ -141421,6 +141480,8 @@ extension on _StringsTr {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
@@ -145786,6 +145847,8 @@ extension on _StringsVi {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
@@ -150117,6 +150180,8 @@ extension on _StringsZhCn {
         return '查看建议';
       case 'video_black_flash_notice_dont_show_again':
         return '不再提示';
+      case 'popup_no_audio_available':
+        return '暂无发音';
       default:
         return null;
     }
@@ -154453,6 +154518,8 @@ extension on _StringsZhHk {
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
         return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
       default:
         return null;
     }
