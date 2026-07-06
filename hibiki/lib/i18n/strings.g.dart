@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36278 (2134 per locale)
+/// Strings: 36312 (2136 per locale)
 ///
-/// Built on 2026-07-06 at 13:45 UTC
+/// Built on 2026-07-06 at 13:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2838,6 +2838,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_quality => 'Quality';
   String get video_quality_auto => 'Auto';
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  String get video_black_flash_notice_action => 'View suggestions';
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -7670,6 +7672,10 @@ class _StringsAr extends _StringsEn {
   String get video_quality_auto => 'Auto';
   @override
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -12625,6 +12631,10 @@ class _StringsDe extends _StringsEn {
   String get video_quality_auto => 'Auto';
   @override
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -17597,6 +17607,10 @@ class _StringsEs extends _StringsEn {
   String get video_quality_auto => 'Auto';
   @override
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -22588,6 +22602,10 @@ class _StringsFr extends _StringsEn {
   String get video_quality_auto => 'Auto';
   @override
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -27481,6 +27499,10 @@ class _StringsId extends _StringsEn {
   String get video_quality_auto => 'Auto';
   @override
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -32435,6 +32457,10 @@ class _StringsIt extends _StringsEn {
   String get video_quality_auto => 'Auto';
   @override
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -37115,6 +37141,10 @@ class _StringsJa extends _StringsEn {
   String get video_quality_auto => 'Auto';
   @override
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -41799,6 +41829,10 @@ class _StringsKo extends _StringsEn {
   String get video_quality_auto => 'Auto';
   @override
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -46721,6 +46755,10 @@ class _StringsNl extends _StringsEn {
   String get video_quality_auto => 'Auto';
   @override
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -51666,6 +51704,10 @@ class _StringsPtBr extends _StringsEn {
   String get video_quality_auto => 'Auto';
   @override
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -56586,6 +56628,10 @@ class _StringsRu extends _StringsEn {
   String get video_quality_auto => 'Auto';
   @override
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -61419,6 +61465,10 @@ class _StringsTh extends _StringsEn {
   String get video_quality_auto => 'Auto';
   @override
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -66307,6 +66357,10 @@ class _StringsTr extends _StringsEn {
   String get video_quality_auto => 'Auto';
   @override
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -71170,6 +71224,10 @@ class _StringsVi extends _StringsEn {
   String get video_quality_auto => 'Auto';
   @override
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -75705,6 +75763,10 @@ class _StringsZhCn extends _StringsEn {
   String get video_quality_auto => '自动';
   @override
   String video_quality_switched({required Object label}) => '画质：${label}';
+  @override
+  String get video_black_flash_notice_action => '查看建议';
+  @override
+  String get video_black_flash_notice_dont_show_again => '不再提示';
 }
 
 // Path: retrying_in
@@ -80287,6 +80349,10 @@ class _StringsZhHk extends _StringsEn {
   String get video_quality_auto => 'Auto';
   @override
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
 
 // Path: retrying_in
@@ -84693,6 +84759,10 @@ extension on _StringsEn {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
@@ -89059,6 +89129,10 @@ extension on _StringsAr {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
@@ -93447,6 +93521,10 @@ extension on _StringsDe {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
@@ -97833,6 +97911,10 @@ extension on _StringsEs {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
@@ -102226,6 +102308,10 @@ extension on _StringsFr {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
@@ -106599,6 +106685,10 @@ extension on _StringsId {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
@@ -110989,6 +111079,10 @@ extension on _StringsIt {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
@@ -115337,6 +115431,10 @@ extension on _StringsJa {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
@@ -119688,6 +119786,10 @@ extension on _StringsKo {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
@@ -124071,6 +124173,10 @@ extension on _StringsNl {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
@@ -128451,6 +128557,10 @@ extension on _StringsPtBr {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
@@ -132835,6 +132945,10 @@ extension on _StringsRu {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
@@ -137201,6 +137315,10 @@ extension on _StringsTh {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
@@ -141576,6 +141694,10 @@ extension on _StringsTr {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
@@ -145945,6 +146067,10 @@ extension on _StringsVi {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
@@ -150280,6 +150406,10 @@ extension on _StringsZhCn {
         return '自动';
       case 'video_quality_switched':
         return ({required Object label}) => '画质：${label}';
+      case 'video_black_flash_notice_action':
+        return '查看建议';
+      case 'video_black_flash_notice_dont_show_again':
+        return '不再提示';
       default:
         return null;
     }
@@ -154620,6 +154750,10 @@ extension on _StringsZhHk {
         return 'Auto';
       case 'video_quality_switched':
         return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
       default:
         return null;
     }
