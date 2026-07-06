@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36176 (2128 per locale)
+/// Strings: 36210 (2130 per locale)
 ///
-/// Built on 2026-07-06 at 04:44 UTC
+/// Built on 2026-07-06 at 09:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2830,6 +2830,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_profiles => 'Profiles';
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -7648,6 +7651,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -12589,6 +12597,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -17547,6 +17560,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -22524,6 +22542,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -27403,6 +27426,11 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -32343,6 +32371,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -37009,6 +37042,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -41679,6 +41717,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -46587,6 +46630,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -51518,6 +51566,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -56424,6 +56477,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -61243,6 +61301,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -66117,6 +66180,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -70966,6 +71034,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -75488,6 +75561,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       '所选类别会打包进备份。数据库中的书籍记录始终包含；阅读进度、统计、设置、配置方案可在上方分别选择排除。取消勾选「书籍」会完全排除这些书——正文文件和书籍记录一并排除——导入后不会出现这些书。';
+  @override
+  String get sync_server_tls_enable => '互联加密（HTTPS/TLS）';
+  @override
+  String get sync_server_tls_repair_hint => '切换后已配对设备需重新配对';
 }
 
 // Path: retrying_in
@@ -80056,6 +80133,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
 }
 
 // Path: retrying_in
@@ -84450,6 +84532,10 @@ extension on _StringsEn {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
@@ -88804,6 +88890,10 @@ extension on _StringsAr {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
@@ -93180,6 +93270,10 @@ extension on _StringsDe {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
@@ -97554,6 +97648,10 @@ extension on _StringsEs {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
@@ -101935,6 +102033,10 @@ extension on _StringsFr {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
@@ -106296,6 +106398,10 @@ extension on _StringsId {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
@@ -110674,6 +110780,10 @@ extension on _StringsIt {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
@@ -115010,6 +115120,10 @@ extension on _StringsJa {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
@@ -119349,6 +119463,10 @@ extension on _StringsKo {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
@@ -123720,6 +123838,10 @@ extension on _StringsNl {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
@@ -128088,6 +128210,10 @@ extension on _StringsPtBr {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
@@ -132460,6 +132586,10 @@ extension on _StringsRu {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
@@ -136814,6 +136944,10 @@ extension on _StringsTh {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
@@ -141177,6 +141311,10 @@ extension on _StringsTr {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
@@ -145534,6 +145672,10 @@ extension on _StringsVi {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
@@ -149857,6 +149999,10 @@ extension on _StringsZhCn {
         return '配置方案';
       case 'backup_export_categories_hint':
         return '所选类别会打包进备份。数据库中的书籍记录始终包含；阅读进度、统计、设置、配置方案可在上方分别选择排除。取消勾选「书籍」会完全排除这些书——正文文件和书籍记录一并排除——导入后不会出现这些书。';
+      case 'sync_server_tls_enable':
+        return '互联加密（HTTPS/TLS）';
+      case 'sync_server_tls_repair_hint':
+        return '切换后已配对设备需重新配对';
       default:
         return null;
     }
@@ -154185,6 +154331,10 @@ extension on _StringsZhHk {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
       default:
         return null;
     }
