@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36261 (2133 per locale)
+/// Strings: 36312 (2136 per locale)
 ///
-/// Built on 2026-07-06 at 13:47 UTC
+/// Built on 2026-07-06 at 13:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2835,6 +2835,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_import_validating_title => 'Reading backup…';
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
+  String get video_quality => 'Quality';
+  String get video_quality_auto => 'Auto';
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
   String get video_black_flash_notice_action => 'View suggestions';
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
@@ -7663,6 +7666,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -12616,6 +12625,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -17586,6 +17601,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -22576,6 +22597,12 @@ class _StringsFr extends _StringsEn {
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
   @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
@@ -27466,6 +27493,12 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -32419,6 +32452,12 @@ class _StringsIt extends _StringsEn {
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
   @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
@@ -37096,6 +37135,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -41778,6 +41823,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -46698,6 +46749,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -51642,6 +51699,12 @@ class _StringsPtBr extends _StringsEn {
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
   @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
@@ -56560,6 +56623,12 @@ class _StringsRu extends _StringsEn {
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
   @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
@@ -61390,6 +61459,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -66277,6 +66352,12 @@ class _StringsTr extends _StringsEn {
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
   @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
@@ -71138,6 +71219,12 @@ class _StringsVi extends _StringsEn {
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
   @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
@@ -75670,6 +75757,12 @@ class _StringsZhCn extends _StringsEn {
   String get backup_import_validating_title => '正在读取备份…';
   @override
   String get backup_import_validating_hint => '正在校验并预览备份内容，请稍候。';
+  @override
+  String get video_quality => '画质';
+  @override
+  String get video_quality_auto => '自动';
+  @override
+  String video_quality_switched({required Object label}) => '画质：${label}';
   @override
   String get video_black_flash_notice_action => '查看建议';
   @override
@@ -80251,6 +80344,12 @@ class _StringsZhHk extends _StringsEn {
   String get backup_import_validating_hint =>
       'Checking and previewing the backup file. This may take a moment.';
   @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
@@ -84654,6 +84753,12 @@ extension on _StringsEn {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -89018,6 +89123,12 @@ extension on _StringsAr {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -93404,6 +93515,12 @@ extension on _StringsDe {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -97788,6 +97905,12 @@ extension on _StringsEs {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -102179,6 +102302,12 @@ extension on _StringsFr {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -106550,6 +106679,12 @@ extension on _StringsId {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -110938,6 +111073,12 @@ extension on _StringsIt {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -115284,6 +115425,12 @@ extension on _StringsJa {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -119633,6 +119780,12 @@ extension on _StringsKo {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -124014,6 +124167,12 @@ extension on _StringsNl {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -128392,6 +128551,12 @@ extension on _StringsPtBr {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -132774,6 +132939,12 @@ extension on _StringsRu {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -137138,6 +137309,12 @@ extension on _StringsTh {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -141511,6 +141688,12 @@ extension on _StringsTr {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -145878,6 +146061,12 @@ extension on _StringsVi {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -150211,6 +150400,12 @@ extension on _StringsZhCn {
         return '正在读取备份…';
       case 'backup_import_validating_hint':
         return '正在校验并预览备份内容，请稍候。';
+      case 'video_quality':
+        return '画质';
+      case 'video_quality_auto':
+        return '自动';
+      case 'video_quality_switched':
+        return ({required Object label}) => '画质：${label}';
       case 'video_black_flash_notice_action':
         return '查看建议';
       case 'video_black_flash_notice_dont_show_again':
@@ -154549,6 +154744,12 @@ extension on _StringsZhHk {
         return 'Reading backup…';
       case 'backup_import_validating_hint':
         return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
