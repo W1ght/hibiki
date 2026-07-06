@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36312 (2136 per locale)
+/// Strings: 36244 (2132 per locale)
 ///
-/// Built on 2026-07-06 at 13:52 UTC
+/// Built on 2026-07-06 at 14:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2515,7 +2515,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_import_stream_advanced => 'Advanced (anti-leech headers)';
   String get video_import_stream_referer => 'Referer (optional)';
   String get video_import_stream_user_agent => 'User-Agent (optional)';
-  String get video_import_stream_play => 'Play stream';
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   String get settings_check_update_now => 'Check for updates';
@@ -2645,11 +2644,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_top_progress_floating => 'Floating reading progress';
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   String get anki_mined_card_title => 'Card already in Anki';
   String get anki_mined_card_subtitle =>
@@ -7101,8 +7095,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -7332,14 +7324,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -12059,8 +12043,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -12291,14 +12273,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -17035,8 +17009,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -17267,14 +17239,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -22030,8 +21994,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -22262,14 +22224,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -26927,8 +26881,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -27159,14 +27111,6 @@ class _StringsId extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -31885,8 +31829,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -32117,14 +32059,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -36571,8 +36505,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -36801,14 +36733,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -41259,8 +41183,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -41489,14 +41411,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -46183,8 +46097,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -46415,14 +46327,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -51132,8 +51036,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -51364,14 +51266,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -56056,8 +55950,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -56288,14 +56180,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -60894,8 +60778,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -61125,14 +61007,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -65785,8 +65659,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -66017,14 +65889,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -70653,8 +70517,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -70884,14 +70746,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -75231,8 +75085,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent（可选）';
   @override
-  String get video_import_stream_play => '播放流';
-  @override
   String get video_import_stream_url_invalid => '请输入有效的 http(s) 流地址';
   @override
   String get settings_check_update_now => '检查更新';
@@ -75446,13 +75298,6 @@ class _StringsZhCn extends _StringsEn {
   String get reader_top_progress_floating => '悬浮阅读进度';
   @override
   String get reader_auto_hide_chrome_duration => '悬浮控件自动隐藏延时';
-  @override
-  String get video_import_webpage_url_warning_title => '网页地址，不是视频直链';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      '这是网页地址，不是直接的视频流（.m3u8/.mp4/直链）。除 YouTube 外，Hibiki 暂不支持解析网页视频（如 Netflix/Bilibili），请提供直链。你仍可强行尝试。';
-  @override
-  String get video_import_webpage_url_try_anyway => '仍要尝试';
   @override
   String get sync_pair_pin_label => '在另一台设备上输入此 PIN';
   @override
@@ -79779,8 +79624,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -80009,14 +79852,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -84253,8 +84088,6 @@ extension on _StringsEn {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -84460,12 +84293,6 @@ extension on _StringsEn {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -88623,8 +88450,6 @@ extension on _StringsAr {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -88830,12 +88655,6 @@ extension on _StringsAr {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -93015,8 +92834,6 @@ extension on _StringsDe {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -93222,12 +93039,6 @@ extension on _StringsDe {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -97405,8 +97216,6 @@ extension on _StringsEs {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -97612,12 +97421,6 @@ extension on _StringsEs {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -101802,8 +101605,6 @@ extension on _StringsFr {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -102009,12 +101810,6 @@ extension on _StringsFr {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -106179,8 +105974,6 @@ extension on _StringsId {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -106386,12 +106179,6 @@ extension on _StringsId {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -110573,8 +110360,6 @@ extension on _StringsIt {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -110780,12 +110565,6 @@ extension on _StringsIt {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -114925,8 +114704,6 @@ extension on _StringsJa {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -115132,12 +114909,6 @@ extension on _StringsJa {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -119280,8 +119051,6 @@ extension on _StringsKo {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -119487,12 +119256,6 @@ extension on _StringsKo {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -123667,8 +123430,6 @@ extension on _StringsNl {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -123874,12 +123635,6 @@ extension on _StringsNl {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -128051,8 +127806,6 @@ extension on _StringsPtBr {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -128258,12 +128011,6 @@ extension on _StringsPtBr {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -132439,8 +132186,6 @@ extension on _StringsRu {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -132646,12 +132391,6 @@ extension on _StringsRu {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -136809,8 +136548,6 @@ extension on _StringsTh {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -137016,12 +136753,6 @@ extension on _StringsTh {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -141188,8 +140919,6 @@ extension on _StringsTr {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -141395,12 +141124,6 @@ extension on _StringsTr {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -145561,8 +145284,6 @@ extension on _StringsVi {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -145768,12 +145489,6 @@ extension on _StringsVi {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -149903,8 +149618,6 @@ extension on _StringsZhCn {
         return 'Referer（可选）';
       case 'video_import_stream_user_agent':
         return 'User-Agent（可选）';
-      case 'video_import_stream_play':
-        return '播放流';
       case 'video_import_stream_url_invalid':
         return '请输入有效的 http(s) 流地址';
       case 'settings_check_update_now':
@@ -150109,12 +149822,6 @@ extension on _StringsZhCn {
         return '悬浮阅读进度';
       case 'reader_auto_hide_chrome_duration':
         return '悬浮控件自动隐藏延时';
-      case 'video_import_webpage_url_warning_title':
-        return '网页地址，不是视频直链';
-      case 'video_import_webpage_url_warning_body':
-        return '这是网页地址，不是直接的视频流（.m3u8/.mp4/直链）。除 YouTube 外，Hibiki 暂不支持解析网页视频（如 Netflix/Bilibili），请提供直链。你仍可强行尝试。';
-      case 'video_import_webpage_url_try_anyway':
-        return '仍要尝试';
       case 'sync_pair_pin_label':
         return '在另一台设备上输入此 PIN';
       case 'anki_mined_card_title':
@@ -154244,8 +153951,6 @@ extension on _StringsZhHk {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -154451,12 +154156,6 @@ extension on _StringsZhHk {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
