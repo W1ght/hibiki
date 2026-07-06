@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 36261 (2133 per locale)
 ///
-/// Built on 2026-07-06 at 12:27 UTC
+/// Built on 2026-07-06 at 13:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2781,10 +2781,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Restoring your data. Please don\'t close the app.';
   String get backup_import_restart_button => 'Restart now';
   String get backup_import_overlay_title => 'Importing backup';
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
   String get tag_seed_stars => 'Add star rating tags';
   String get tag_seed_stars_added => 'Star rating tags added';
   String get tag_seed_stars_exists => 'Star rating tags already exist';
@@ -2829,12 +2825,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_settings => 'Settings';
   String get backup_category_profiles => 'Profiles';
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  String get icon_transparent => 'Transparent';
+  String get backup_import_validating_title => 'Reading backup…';
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   String get video_black_flash_notice_action => 'View suggestions';
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
 }
@@ -7568,13 +7568,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -7654,7 +7647,7 @@ class _StringsAr extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -7663,6 +7656,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -12521,13 +12521,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -12607,7 +12600,7 @@ class _StringsDe extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -12616,6 +12609,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -17491,13 +17491,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -17577,7 +17570,7 @@ class _StringsEs extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -17586,6 +17579,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -22480,13 +22480,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -22566,7 +22559,7 @@ class _StringsFr extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -22575,6 +22568,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -27371,13 +27371,6 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -27457,7 +27450,7 @@ class _StringsId extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -27466,6 +27459,13 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -32323,13 +32323,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -32409,7 +32402,7 @@ class _StringsIt extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -32418,6 +32411,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -37001,13 +37001,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -37087,7 +37080,7 @@ class _StringsJa extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -37096,6 +37089,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -41683,13 +41683,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -41769,7 +41762,7 @@ class _StringsKo extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -41778,6 +41771,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -46603,13 +46603,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -46689,7 +46682,7 @@ class _StringsNl extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -46698,6 +46691,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -51546,13 +51546,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -51632,7 +51625,7 @@ class _StringsPtBr extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -51641,6 +51634,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -56464,13 +56464,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -56550,7 +56543,7 @@ class _StringsRu extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -56559,6 +56552,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -61295,13 +61295,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -61381,7 +61374,7 @@ class _StringsTh extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -61390,6 +61383,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -66181,13 +66181,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -66267,7 +66260,7 @@ class _StringsTr extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -66276,6 +66269,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -71042,13 +71042,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -71128,7 +71121,7 @@ class _StringsVi extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -71137,6 +71130,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -75580,12 +75580,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_import_overlay_title => '正在导入备份';
   @override
-  String get reader_frosted_bottom_bar => '毛玻璃悬浮底栏';
-  @override
-  String get reader_frosted_bottom_bar_hint => '给阅读器控制栏加毛玻璃模糊和半透明背景';
-  @override
-  String get reader_bottom_bar_opacity => '底栏不透明度';
-  @override
   String get tag_seed_stars => '添加星级标签';
   @override
   String get tag_seed_stars_added => '已添加星级标签';
@@ -75662,7 +75656,7 @@ class _StringsZhCn extends _StringsEn {
   String get backup_category_profiles => '配置方案';
   @override
   String get backup_export_categories_hint =>
-      '所选类别会打包进备份。数据库中的书籍记录始终包含；阅读进度、统计、设置、配置方案可在上方分别选择排除。取消勾选「书籍」会完全排除这些书——正文文件和书籍记录一并排除——导入后不会出现这些书。';
+      '勾选要打包进备份的内容。取消勾选「书籍」会连同这些书的正文和记录一并移除。';
   @override
   String get floating_lyric_permission_hint_coloros =>
       '系统拒绝授予悬浮窗权限时：请用文件管理器找到安装包覆盖安装一次，或在开发者选项中关闭权限监控后重试。';
@@ -75670,6 +75664,12 @@ class _StringsZhCn extends _StringsEn {
   String get sync_server_tls_enable => '互联加密（HTTPS/TLS）';
   @override
   String get sync_server_tls_repair_hint => '切换后已配对设备需重新配对';
+  @override
+  String get icon_transparent => '透明';
+  @override
+  String get backup_import_validating_title => '正在读取备份…';
+  @override
+  String get backup_import_validating_hint => '正在校验并预览备份内容，请稍候。';
   @override
   String get video_black_flash_notice_action => '查看建议';
   @override
@@ -80155,13 +80155,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => '新增星級標籤';
   @override
   String get tag_seed_stars_added => '已新增星級標籤';
@@ -80241,7 +80234,7 @@ class _StringsZhHk extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      '勾選要打包進備份的內容。取消勾選「書籍」會連同這些書的正文和記錄一併移除。';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -80250,6 +80243,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
   @override
   String get video_black_flash_notice_action => 'View suggestions';
   @override
@@ -84569,12 +84569,6 @@ extension on _StringsEn {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -84647,13 +84641,19 @@ extension on _StringsEn {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -88933,12 +88933,6 @@ extension on _StringsAr {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -89011,13 +89005,19 @@ extension on _StringsAr {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -93319,12 +93319,6 @@ extension on _StringsDe {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -93397,13 +93391,19 @@ extension on _StringsDe {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -97703,12 +97703,6 @@ extension on _StringsEs {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -97781,13 +97775,19 @@ extension on _StringsEs {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -102094,12 +102094,6 @@ extension on _StringsFr {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -102172,13 +102166,19 @@ extension on _StringsFr {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -106465,12 +106465,6 @@ extension on _StringsId {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -106543,13 +106537,19 @@ extension on _StringsId {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -110853,12 +110853,6 @@ extension on _StringsIt {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -110931,13 +110925,19 @@ extension on _StringsIt {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -115199,12 +115199,6 @@ extension on _StringsJa {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -115277,13 +115271,19 @@ extension on _StringsJa {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -119548,12 +119548,6 @@ extension on _StringsKo {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -119626,13 +119620,19 @@ extension on _StringsKo {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -123929,12 +123929,6 @@ extension on _StringsNl {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -124007,13 +124001,19 @@ extension on _StringsNl {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -128307,12 +128307,6 @@ extension on _StringsPtBr {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -128385,13 +128379,19 @@ extension on _StringsPtBr {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -132689,12 +132689,6 @@ extension on _StringsRu {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -132767,13 +132761,19 @@ extension on _StringsRu {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -137053,12 +137053,6 @@ extension on _StringsTh {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -137131,13 +137125,19 @@ extension on _StringsTh {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -141426,12 +141426,6 @@ extension on _StringsTr {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -141504,13 +141498,19 @@ extension on _StringsTr {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -145793,12 +145793,6 @@ extension on _StringsVi {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -145871,13 +145865,19 @@ extension on _StringsVi {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
@@ -150126,12 +150126,6 @@ extension on _StringsZhCn {
         return '立即重启';
       case 'backup_import_overlay_title':
         return '正在导入备份';
-      case 'reader_frosted_bottom_bar':
-        return '毛玻璃悬浮底栏';
-      case 'reader_frosted_bottom_bar_hint':
-        return '给阅读器控制栏加毛玻璃模糊和半透明背景';
-      case 'reader_bottom_bar_opacity':
-        return '底栏不透明度';
       case 'tag_seed_stars':
         return '添加星级标签';
       case 'tag_seed_stars_added':
@@ -150204,13 +150198,19 @@ extension on _StringsZhCn {
       case 'backup_category_profiles':
         return '配置方案';
       case 'backup_export_categories_hint':
-        return '所选类别会打包进备份。数据库中的书籍记录始终包含；阅读进度、统计、设置、配置方案可在上方分别选择排除。取消勾选「书籍」会完全排除这些书——正文文件和书籍记录一并排除——导入后不会出现这些书。';
+        return '勾选要打包进备份的内容。取消勾选「书籍」会连同这些书的正文和记录一并移除。';
       case 'floating_lyric_permission_hint_coloros':
         return '系统拒绝授予悬浮窗权限时：请用文件管理器找到安装包覆盖安装一次，或在开发者选项中关闭权限监控后重试。';
       case 'sync_server_tls_enable':
         return '互联加密（HTTPS/TLS）';
       case 'sync_server_tls_repair_hint':
         return '切换后已配对设备需重新配对';
+      case 'icon_transparent':
+        return '透明';
+      case 'backup_import_validating_title':
+        return '正在读取备份…';
+      case 'backup_import_validating_hint':
+        return '正在校验并预览备份内容，请稍候。';
       case 'video_black_flash_notice_action':
         return '查看建议';
       case 'video_black_flash_notice_dont_show_again':
@@ -154464,12 +154464,6 @@ extension on _StringsZhHk {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return '新增星級標籤';
       case 'tag_seed_stars_added':
@@ -154542,13 +154536,19 @@ extension on _StringsZhHk {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return '勾選要打包進備份的內容。取消勾選「書籍」會連同這些書的正文和記錄一併移除。';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
       case 'video_black_flash_notice_action':
         return 'View suggestions';
       case 'video_black_flash_notice_dont_show_again':
