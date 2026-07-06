@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36210 (2130 per locale)
+/// Strings: 36227 (2131 per locale)
 ///
-/// Built on 2026-07-06 at 09:58 UTC
+/// Built on 2026-07-06 at 10:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2830,6 +2830,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_profiles => 'Profiles';
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
@@ -7651,6 +7653,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
   @override
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   @override
@@ -12597,6 +12602,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
   @override
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   @override
@@ -17560,6 +17568,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
   @override
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   @override
@@ -22543,6 +22554,9 @@ class _StringsFr extends _StringsEn {
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
   @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   @override
   String get sync_server_tls_repair_hint =>
@@ -27426,6 +27440,9 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
   @override
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   @override
@@ -32372,6 +32389,9 @@ class _StringsIt extends _StringsEn {
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
   @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   @override
   String get sync_server_tls_repair_hint =>
@@ -37042,6 +37062,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
   @override
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   @override
@@ -41717,6 +41740,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
   @override
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   @override
@@ -46630,6 +46656,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
   @override
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   @override
@@ -51567,6 +51596,9 @@ class _StringsPtBr extends _StringsEn {
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
   @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   @override
   String get sync_server_tls_repair_hint =>
@@ -56478,6 +56510,9 @@ class _StringsRu extends _StringsEn {
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
   @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   @override
   String get sync_server_tls_repair_hint =>
@@ -61301,6 +61336,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
   @override
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   @override
@@ -66181,6 +66219,9 @@ class _StringsTr extends _StringsEn {
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
   @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   @override
   String get sync_server_tls_repair_hint =>
@@ -71035,6 +71076,9 @@ class _StringsVi extends _StringsEn {
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
   @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   @override
   String get sync_server_tls_repair_hint =>
@@ -75561,6 +75605,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_export_categories_hint =>
       '所选类别会打包进备份。数据库中的书籍记录始终包含；阅读进度、统计、设置、配置方案可在上方分别选择排除。取消勾选「书籍」会完全排除这些书——正文文件和书籍记录一并排除——导入后不会出现这些书。';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      '系统拒绝授予悬浮窗权限时：请用文件管理器找到安装包覆盖安装一次，或在开发者选项中关闭权限监控后重试。';
   @override
   String get sync_server_tls_enable => '互联加密（HTTPS/TLS）';
   @override
@@ -80134,6 +80181,9 @@ class _StringsZhHk extends _StringsEn {
   String get backup_export_categories_hint =>
       'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
   @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   @override
   String get sync_server_tls_repair_hint =>
@@ -84532,6 +84582,8 @@ extension on _StringsEn {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
@@ -88890,6 +88942,8 @@ extension on _StringsAr {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
@@ -93270,6 +93324,8 @@ extension on _StringsDe {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
@@ -97648,6 +97704,8 @@ extension on _StringsEs {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
@@ -102033,6 +102091,8 @@ extension on _StringsFr {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
@@ -106398,6 +106458,8 @@ extension on _StringsId {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
@@ -110780,6 +110842,8 @@ extension on _StringsIt {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
@@ -115120,6 +115184,8 @@ extension on _StringsJa {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
@@ -119463,6 +119529,8 @@ extension on _StringsKo {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
@@ -123838,6 +123906,8 @@ extension on _StringsNl {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
@@ -128210,6 +128280,8 @@ extension on _StringsPtBr {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
@@ -132586,6 +132658,8 @@ extension on _StringsRu {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
@@ -136944,6 +137018,8 @@ extension on _StringsTh {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
@@ -141311,6 +141387,8 @@ extension on _StringsTr {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
@@ -145672,6 +145750,8 @@ extension on _StringsVi {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
@@ -149999,6 +150079,8 @@ extension on _StringsZhCn {
         return '配置方案';
       case 'backup_export_categories_hint':
         return '所选类别会打包进备份。数据库中的书籍记录始终包含；阅读进度、统计、设置、配置方案可在上方分别选择排除。取消勾选「书籍」会完全排除这些书——正文文件和书籍记录一并排除——导入后不会出现这些书。';
+      case 'floating_lyric_permission_hint_coloros':
+        return '系统拒绝授予悬浮窗权限时：请用文件管理器找到安装包覆盖安装一次，或在开发者选项中关闭权限监控后重试。';
       case 'sync_server_tls_enable':
         return '互联加密（HTTPS/TLS）';
       case 'sync_server_tls_repair_hint':
@@ -154331,6 +154413,8 @@ extension on _StringsZhHk {
         return 'Profiles';
       case 'backup_export_categories_hint':
         return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
