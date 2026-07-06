@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36108 (2124 per locale)
+/// Strings: 36176 (2128 per locale)
 ///
-/// Built on 2026-07-06 at 04:21 UTC
+/// Built on 2026-07-06 at 04:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1999,8 +1999,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get theme_seed_preview_hint =>
       'Swatches below preview the colors actually generated from your seed. To force a specific color as the primary accent, turn on the Primary toggle and pick it explicitly.';
   String get backup_export_categories_title => 'Choose what to export';
-  String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Your reading data (progress, statistics, favorites, profiles, settings) is always included in the database. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
   String get backup_category_dictionary => 'Dictionaries';
   String get backup_category_books => 'Books';
   String get backup_category_audiobooks => 'Audiobook audio';
@@ -2826,6 +2824,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_loading_subtitle => 'Downloading subtitles…';
   String get video_loading_buffering => 'Buffering…';
   String get video_loading_preparing => 'Preparing…';
+  String get backup_category_progress => 'Reading progress';
+  String get backup_category_statistics => 'Statistics';
+  String get backup_category_settings => 'Settings';
+  String get backup_category_profiles => 'Profiles';
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -6180,9 +6184,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_export_categories_title => 'اختر ما تريد تصديره';
   @override
-  String get backup_export_categories_hint =>
-      'تُحزَّم الفئات المحددة في النسخة الاحتياطية. تُضمَّن قاعدة البيانات (الكتب والإحصاءات والمفضلة وملفات التعريف والإعدادات) دائمًا.';
-  @override
   String get backup_category_dictionary => 'القواميس';
   @override
   String get backup_category_books => 'الكتب';
@@ -7636,6 +7637,17 @@ class _StringsAr extends _StringsEn {
   String get video_loading_buffering => 'Buffering…';
   @override
   String get video_loading_preparing => 'Preparing…';
+  @override
+  String get backup_category_progress => 'Reading progress';
+  @override
+  String get backup_category_statistics => 'Statistics';
+  @override
+  String get backup_category_settings => 'Settings';
+  @override
+  String get backup_category_profiles => 'Profiles';
+  @override
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -11091,9 +11103,6 @@ class _StringsDe extends _StringsEn {
   String get backup_export_categories_title =>
       'Wähle aus, was exportiert werden soll';
   @override
-  String get backup_export_categories_hint =>
-      'Die ausgewählten Kategorien werden in das Backup gepackt. Die Datenbank (Bücher, Statistik, Favoriten, Profile, Einstellungen) ist immer enthalten.';
-  @override
   String get backup_category_dictionary => 'Wörterbücher';
   @override
   String get backup_category_books => 'Bücher';
@@ -12569,6 +12578,17 @@ class _StringsDe extends _StringsEn {
   String get video_loading_buffering => 'Buffering…';
   @override
   String get video_loading_preparing => 'Preparing…';
+  @override
+  String get backup_category_progress => 'Reading progress';
+  @override
+  String get backup_category_statistics => 'Statistics';
+  @override
+  String get backup_category_settings => 'Settings';
+  @override
+  String get backup_category_profiles => 'Profiles';
+  @override
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -16040,9 +16060,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_export_categories_title => 'Elige qué exportar';
   @override
-  String get backup_export_categories_hint =>
-      'Las categorías seleccionadas se incluyen en la copia. La base de datos (libros, estadísticas, favoritos, perfiles, ajustes) siempre se incluye.';
-  @override
   String get backup_category_dictionary => 'Diccionarios';
   @override
   String get backup_category_books => 'Libros';
@@ -17519,6 +17536,17 @@ class _StringsEs extends _StringsEn {
   String get video_loading_buffering => 'Buffering…';
   @override
   String get video_loading_preparing => 'Preparing…';
+  @override
+  String get backup_category_progress => 'Reading progress';
+  @override
+  String get backup_category_statistics => 'Statistics';
+  @override
+  String get backup_category_settings => 'Settings';
+  @override
+  String get backup_category_profiles => 'Profiles';
+  @override
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -21009,9 +21037,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_export_categories_title => 'Choisir le contenu à exporter';
   @override
-  String get backup_export_categories_hint =>
-      'Les catégories sélectionnées sont incluses dans la sauvegarde. La base de données (livres, statistiques, favoris, profils, paramètres) est toujours incluse.';
-  @override
   String get backup_category_dictionary => 'Dictionnaires';
   @override
   String get backup_category_books => 'Livres';
@@ -22488,6 +22513,17 @@ class _StringsFr extends _StringsEn {
   String get video_loading_buffering => 'Buffering…';
   @override
   String get video_loading_preparing => 'Preparing…';
+  @override
+  String get backup_category_progress => 'Reading progress';
+  @override
+  String get backup_category_statistics => 'Statistics';
+  @override
+  String get backup_category_settings => 'Settings';
+  @override
+  String get backup_category_profiles => 'Profiles';
+  @override
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -25890,9 +25926,6 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_export_categories_title => 'Pilih yang akan diekspor';
   @override
-  String get backup_export_categories_hint =>
-      'Kategori yang dipilih dikemas ke dalam cadangan. Basis data (buku, statistik, favorit, profil, setelan) selalu disertakan.';
-  @override
   String get backup_category_dictionary => 'Kamus';
   @override
   String get backup_category_books => 'Buku';
@@ -27359,6 +27392,17 @@ class _StringsId extends _StringsEn {
   String get video_loading_buffering => 'Buffering…';
   @override
   String get video_loading_preparing => 'Preparing…';
+  @override
+  String get backup_category_progress => 'Reading progress';
+  @override
+  String get backup_category_statistics => 'Statistics';
+  @override
+  String get backup_category_settings => 'Settings';
+  @override
+  String get backup_category_profiles => 'Profiles';
+  @override
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -30811,9 +30855,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_export_categories_title => 'Scegli cosa esportare';
   @override
-  String get backup_export_categories_hint =>
-      'Le categorie selezionate vengono incluse nel backup. Il database (libri, statistiche, preferiti, profili, impostazioni) è sempre incluso.';
-  @override
   String get backup_category_dictionary => 'Dizionari';
   @override
   String get backup_category_books => 'Libri';
@@ -32291,6 +32332,17 @@ class _StringsIt extends _StringsEn {
   String get video_loading_buffering => 'Buffering…';
   @override
   String get video_loading_preparing => 'Preparing…';
+  @override
+  String get backup_category_progress => 'Reading progress';
+  @override
+  String get backup_category_statistics => 'Statistics';
+  @override
+  String get backup_category_settings => 'Settings';
+  @override
+  String get backup_category_profiles => 'Profiles';
+  @override
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -35530,9 +35582,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_export_categories_title => '書き出す内容を選択';
   @override
-  String get backup_export_categories_hint =>
-      '選択した項目がバックアップに含まれます。データベース（書籍、統計、お気に入り、プロファイル、設定）は常に含まれます。';
-  @override
   String get backup_category_dictionary => '辞書';
   @override
   String get backup_category_books => '書籍の内容';
@@ -36949,6 +36998,17 @@ class _StringsJa extends _StringsEn {
   String get video_loading_buffering => 'Buffering…';
   @override
   String get video_loading_preparing => 'Preparing…';
+  @override
+  String get backup_category_progress => 'Reading progress';
+  @override
+  String get backup_category_statistics => 'Statistics';
+  @override
+  String get backup_category_settings => 'Settings';
+  @override
+  String get backup_category_profiles => 'Profiles';
+  @override
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -40193,9 +40253,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_export_categories_title => '내보낼 항목 선택';
   @override
-  String get backup_export_categories_hint =>
-      '선택한 항목이 백업에 포함됩니다. 데이터베이스(책, 통계, 즐겨찾기, 프로필, 설정)는 항상 포함됩니다.';
-  @override
   String get backup_category_dictionary => '사전';
   @override
   String get backup_category_books => '책 내용';
@@ -41611,6 +41668,17 @@ class _StringsKo extends _StringsEn {
   String get video_loading_buffering => 'Buffering…';
   @override
   String get video_loading_preparing => 'Preparing…';
+  @override
+  String get backup_category_progress => 'Reading progress';
+  @override
+  String get backup_category_statistics => 'Statistics';
+  @override
+  String get backup_category_settings => 'Settings';
+  @override
+  String get backup_category_profiles => 'Profiles';
+  @override
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -45039,9 +45107,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_export_categories_title => 'Kies wat je wilt exporteren';
   @override
-  String get backup_export_categories_hint =>
-      'De geselecteerde categorieën worden in de back-up verpakt. De database (boeken, statistieken, favorieten, profielen, instellingen) wordt altijd meegenomen.';
-  @override
   String get backup_category_dictionary => 'Woordenboeken';
   @override
   String get backup_category_books => 'Boeken';
@@ -46511,6 +46576,17 @@ class _StringsNl extends _StringsEn {
   String get video_loading_buffering => 'Buffering…';
   @override
   String get video_loading_preparing => 'Preparing…';
+  @override
+  String get backup_category_progress => 'Reading progress';
+  @override
+  String get backup_category_statistics => 'Statistics';
+  @override
+  String get backup_category_settings => 'Settings';
+  @override
+  String get backup_category_profiles => 'Profiles';
+  @override
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -49958,9 +50034,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_export_categories_title => 'Escolha o que exportar';
   @override
-  String get backup_export_categories_hint =>
-      'As categorias selecionadas são incluídas no backup. O banco de dados (livros, estatísticas, favoritos, perfis, configurações) é sempre incluído.';
-  @override
   String get backup_category_dictionary => 'Dicionários';
   @override
   String get backup_category_books => 'Livros';
@@ -51434,6 +51507,17 @@ class _StringsPtBr extends _StringsEn {
   String get video_loading_buffering => 'Buffering…';
   @override
   String get video_loading_preparing => 'Preparing…';
+  @override
+  String get backup_category_progress => 'Reading progress';
+  @override
+  String get backup_category_statistics => 'Statistics';
+  @override
+  String get backup_category_settings => 'Settings';
+  @override
+  String get backup_category_profiles => 'Profiles';
+  @override
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -54858,9 +54942,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_export_categories_title => 'Выберите, что экспортировать';
   @override
-  String get backup_export_categories_hint =>
-      'Выбранные категории попадут в резервную копию. База данных (книги, статистика, избранное, профили, настройки) включается всегда.';
-  @override
   String get backup_category_dictionary => 'Словари';
   @override
   String get backup_category_books => 'Книги';
@@ -56332,6 +56413,17 @@ class _StringsRu extends _StringsEn {
   String get video_loading_buffering => 'Buffering…';
   @override
   String get video_loading_preparing => 'Preparing…';
+  @override
+  String get backup_category_progress => 'Reading progress';
+  @override
+  String get backup_category_statistics => 'Statistics';
+  @override
+  String get backup_category_settings => 'Settings';
+  @override
+  String get backup_category_profiles => 'Profiles';
+  @override
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -59683,9 +59775,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_export_categories_title => 'เลือกสิ่งที่จะส่งออก';
   @override
-  String get backup_export_categories_hint =>
-      'หมวดที่เลือกจะถูกแพ็กลงในไฟล์สำรอง ฐานข้อมูล (หนังสือ สถิติ รายการโปรด โปรไฟล์ การตั้งค่า) จะรวมอยู่เสมอ';
-  @override
   String get backup_category_dictionary => 'พจนานุกรม';
   @override
   String get backup_category_books => 'เนื้อหาหนังสือ';
@@ -61143,6 +61232,17 @@ class _StringsTh extends _StringsEn {
   String get video_loading_buffering => 'Buffering…';
   @override
   String get video_loading_preparing => 'Preparing…';
+  @override
+  String get backup_category_progress => 'Reading progress';
+  @override
+  String get backup_category_statistics => 'Statistics';
+  @override
+  String get backup_category_settings => 'Settings';
+  @override
+  String get backup_category_profiles => 'Profiles';
+  @override
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -64543,9 +64643,6 @@ class _StringsTr extends _StringsEn {
   String get backup_export_categories_title =>
       'Neyin dışa aktarılacağını seçin';
   @override
-  String get backup_export_categories_hint =>
-      'Seçilen kategoriler yedeğe paketlenir. Veritabanı (kitaplar, istatistikler, sık kullanılanlar, profiller, ayarlar) her zaman dahil edilir.';
-  @override
   String get backup_category_dictionary => 'Sözlükler';
   @override
   String get backup_category_books => 'Kitaplar';
@@ -66009,6 +66106,17 @@ class _StringsTr extends _StringsEn {
   String get video_loading_buffering => 'Buffering…';
   @override
   String get video_loading_preparing => 'Preparing…';
+  @override
+  String get backup_category_progress => 'Reading progress';
+  @override
+  String get backup_category_statistics => 'Statistics';
+  @override
+  String get backup_category_settings => 'Settings';
+  @override
+  String get backup_category_profiles => 'Profiles';
+  @override
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -69389,9 +69497,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_export_categories_title => 'Chọn nội dung để xuất';
   @override
-  String get backup_export_categories_hint =>
-      'Các hạng mục đã chọn sẽ được đóng gói vào bản sao lưu. Cơ sở dữ liệu (sách, thống kê, mục yêu thích, hồ sơ, cài đặt) luôn được bao gồm.';
-  @override
   String get backup_category_dictionary => 'Từ điển';
   @override
   String get backup_category_books => 'Nội dung sách';
@@ -70850,6 +70955,17 @@ class _StringsVi extends _StringsEn {
   String get video_loading_buffering => 'Buffering…';
   @override
   String get video_loading_preparing => 'Preparing…';
+  @override
+  String get backup_category_progress => 'Reading progress';
+  @override
+  String get backup_category_statistics => 'Statistics';
+  @override
+  String get backup_category_settings => 'Settings';
+  @override
+  String get backup_category_profiles => 'Profiles';
+  @override
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -74015,9 +74131,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_export_categories_title => '选择要导出的内容';
   @override
-  String get backup_export_categories_hint =>
-      '勾选的类别会打包进备份。阅读数据（进度、统计、收藏、配置方案、设置）始终包含在数据库里。取消「书籍」会完整排除这些书——正文文件和书籍记录一并排除，导入后不会出现这些书。';
-  @override
   String get backup_category_dictionary => '词典';
   @override
   String get backup_category_books => '书籍内容';
@@ -75364,6 +75477,17 @@ class _StringsZhCn extends _StringsEn {
   String get video_loading_buffering => '正在缓冲…';
   @override
   String get video_loading_preparing => '正在准备…';
+  @override
+  String get backup_category_progress => '阅读进度';
+  @override
+  String get backup_category_statistics => '统计数据';
+  @override
+  String get backup_category_settings => '设置';
+  @override
+  String get backup_category_profiles => '配置方案';
+  @override
+  String get backup_export_categories_hint =>
+      '所选类别会打包进备份。数据库中的书籍记录始终包含；阅读进度、统计、设置、配置方案可在上方分别选择排除。取消勾选「书籍」会完全排除这些书——正文文件和书籍记录一并排除——导入后不会出现这些书。';
 }
 
 // Path: retrying_in
@@ -78529,9 +78653,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_export_categories_title => '選擇要匯出的內容';
   @override
-  String get backup_export_categories_hint =>
-      '勾選的類別會打包進備份。資料庫（書籍、統計、收藏、Profile、設定）必定包含在內。';
-  @override
   String get backup_category_dictionary => '詞典';
   @override
   String get backup_category_books => '書籍內容';
@@ -79924,6 +80045,17 @@ class _StringsZhHk extends _StringsEn {
   String get video_loading_buffering => 'Buffering…';
   @override
   String get video_loading_preparing => 'Preparing…';
+  @override
+  String get backup_category_progress => 'Reading progress';
+  @override
+  String get backup_category_statistics => 'Statistics';
+  @override
+  String get backup_category_settings => 'Settings';
+  @override
+  String get backup_category_profiles => 'Profiles';
+  @override
+  String get backup_export_categories_hint =>
+      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
 }
 
 // Path: retrying_in
@@ -83019,8 +83151,6 @@ extension on _StringsEn {
         return 'Swatches below preview the colors actually generated from your seed. To force a specific color as the primary accent, turn on the Primary toggle and pick it explicitly.';
       case 'backup_export_categories_title':
         return 'Choose what to export';
-      case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Your reading data (progress, statistics, favorites, profiles, settings) is always included in the database. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       case 'backup_category_dictionary':
         return 'Dictionaries';
       case 'backup_category_books':
@@ -84310,6 +84440,16 @@ extension on _StringsEn {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
@@ -87363,8 +87503,6 @@ extension on _StringsAr {
         return 'تعرض العينات أدناه الألوان المُولَّدة فعليًا من لون البذرة. لفرض لون محدد كلون التمييز الأساسي، فعّل مفتاح «الأساسي» وحدّده صراحةً.';
       case 'backup_export_categories_title':
         return 'اختر ما تريد تصديره';
-      case 'backup_export_categories_hint':
-        return 'تُحزَّم الفئات المحددة في النسخة الاحتياطية. تُضمَّن قاعدة البيانات (الكتب والإحصاءات والمفضلة وملفات التعريف والإعدادات) دائمًا.';
       case 'backup_category_dictionary':
         return 'القواميس';
       case 'backup_category_books':
@@ -88656,6 +88794,16 @@ extension on _StringsAr {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
@@ -91730,8 +91878,6 @@ extension on _StringsDe {
         return 'Die Farbfelder unten zeigen eine Vorschau der tatsächlich aus deiner Startfarbe generierten Farben. Um eine bestimmte Farbe als Primär-Akzentfarbe festzulegen, aktiviere den Schalter „Primär“ und wähle sie ausdrücklich.';
       case 'backup_export_categories_title':
         return 'Wähle aus, was exportiert werden soll';
-      case 'backup_export_categories_hint':
-        return 'Die ausgewählten Kategorien werden in das Backup gepackt. Die Datenbank (Bücher, Statistik, Favoriten, Profile, Einstellungen) ist immer enthalten.';
       case 'backup_category_dictionary':
         return 'Wörterbücher';
       case 'backup_category_books':
@@ -93024,6 +93170,16 @@ extension on _StringsDe {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
@@ -96095,8 +96251,6 @@ extension on _StringsEs {
         return 'Las muestras de abajo previsualizan los colores generados a partir de tu color semilla. Para fijar un color concreto como acento principal, activa el interruptor Principal y elígelo de forma explícita.';
       case 'backup_export_categories_title':
         return 'Elige qué exportar';
-      case 'backup_export_categories_hint':
-        return 'Las categorías seleccionadas se incluyen en la copia. La base de datos (libros, estadísticas, favoritos, perfiles, ajustes) siempre se incluye.';
       case 'backup_category_dictionary':
         return 'Diccionarios';
       case 'backup_category_books':
@@ -97390,6 +97544,16 @@ extension on _StringsEs {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
@@ -100465,8 +100629,6 @@ extension on _StringsFr {
         return 'Les échantillons ci-dessous prévisualisent les couleurs réellement générées à partir de votre couleur de base. Pour imposer une couleur précise comme accent principal, activez l\'option « Couleur principale » et choisissez-la explicitement.';
       case 'backup_export_categories_title':
         return 'Choisir le contenu à exporter';
-      case 'backup_export_categories_hint':
-        return 'Les catégories sélectionnées sont incluses dans la sauvegarde. La base de données (livres, statistiques, favoris, profils, paramètres) est toujours incluse.';
       case 'backup_category_dictionary':
         return 'Dictionnaires';
       case 'backup_category_books':
@@ -101763,6 +101925,16 @@ extension on _StringsFr {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
@@ -104823,8 +104995,6 @@ extension on _StringsId {
         return 'Petak warna di bawah menampilkan pratinjau warna yang sebenarnya dihasilkan dari warna benih kamu. Untuk memaksa warna tertentu sebagai aksen utama, aktifkan toggle Primer dan pilih warnanya secara eksplisit.';
       case 'backup_export_categories_title':
         return 'Pilih yang akan diekspor';
-      case 'backup_export_categories_hint':
-        return 'Kategori yang dipilih dikemas ke dalam cadangan. Basis data (buku, statistik, favorit, profil, setelan) selalu disertakan.';
       case 'backup_category_dictionary':
         return 'Kamus';
       case 'backup_category_books':
@@ -106116,6 +106286,16 @@ extension on _StringsId {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
@@ -109187,8 +109367,6 @@ extension on _StringsIt {
         return 'I campioni qui sotto mostrano in anteprima i colori effettivamente generati dal tuo colore seme. Per forzare un colore specifico come accento primario, attiva l\'opzione Primario e selezionalo esplicitamente.';
       case 'backup_export_categories_title':
         return 'Scegli cosa esportare';
-      case 'backup_export_categories_hint':
-        return 'Le categorie selezionate vengono incluse nel backup. Il database (libri, statistiche, preferiti, profili, impostazioni) è sempre incluso.';
       case 'backup_category_dictionary':
         return 'Dizionari';
       case 'backup_category_books':
@@ -110486,6 +110664,16 @@ extension on _StringsIt {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
@@ -113524,8 +113712,6 @@ extension on _StringsJa {
         return '下のスウォッチは、シードカラーから実際に生成される色をプレビューしています。特定の色をメインのアクセントとして固定したい場合は、「メインカラー」をオンにして明示的に指定してください。';
       case 'backup_export_categories_title':
         return '書き出す内容を選択';
-      case 'backup_export_categories_hint':
-        return '選択した項目がバックアップに含まれます。データベース（書籍、統計、お気に入り、プロファイル、設定）は常に含まれます。';
       case 'backup_category_dictionary':
         return '辞書';
       case 'backup_category_books':
@@ -114814,6 +115000,16 @@ extension on _StringsJa {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
@@ -117855,8 +118051,6 @@ extension on _StringsKo {
         return '아래 색상 견본은 시드 색상에서 실제로 생성된 색을 미리 보여 줍니다. 특정 색을 주요 강조색으로 고정하려면 「주요 색」 토글을 켜고 직접 선택하세요.';
       case 'backup_export_categories_title':
         return '내보낼 항목 선택';
-      case 'backup_export_categories_hint':
-        return '선택한 항목이 백업에 포함됩니다. 데이터베이스(책, 통계, 즐겨찾기, 프로필, 설정)는 항상 포함됩니다.';
       case 'backup_category_dictionary':
         return '사전';
       case 'backup_category_books':
@@ -119145,6 +119339,16 @@ extension on _StringsKo {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
@@ -122212,8 +122416,6 @@ extension on _StringsNl {
         return 'De stalen hieronder tonen een voorbeeld van de kleuren die daadwerkelijk uit je startkleur worden gegenereerd. Om een specifieke kleur als primaire accentkleur af te dwingen, zet je de schakelaar Primair aan en kies je hem expliciet.';
       case 'backup_export_categories_title':
         return 'Kies wat je wilt exporteren';
-      case 'backup_export_categories_hint':
-        return 'De geselecteerde categorieën worden in de back-up verpakt. De database (boeken, statistieken, favorieten, profielen, instellingen) wordt altijd meegenomen.';
       case 'backup_category_dictionary':
         return 'Woordenboeken';
       case 'backup_category_books':
@@ -123508,6 +123710,16 @@ extension on _StringsNl {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
@@ -126574,8 +126786,6 @@ extension on _StringsPtBr {
         return 'As amostras abaixo mostram uma prévia das cores realmente geradas a partir da sua cor-semente. Para forçar uma cor específica como o destaque primário, ative a opção Primária e escolha-a explicitamente.';
       case 'backup_export_categories_title':
         return 'Escolha o que exportar';
-      case 'backup_export_categories_hint':
-        return 'As categorias selecionadas são incluídas no backup. O banco de dados (livros, estatísticas, favoritos, perfis, configurações) é sempre incluído.';
       case 'backup_category_dictionary':
         return 'Dicionários';
       case 'backup_category_books':
@@ -127868,6 +128078,16 @@ extension on _StringsPtBr {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
@@ -130936,8 +131156,6 @@ extension on _StringsRu {
         return 'Образцы ниже показывают цвета, фактически сгенерированные из вашего исходного цвета. Чтобы закрепить определённый цвет как основной акцент, включите переключатель «Основной» и выберите его явно.';
       case 'backup_export_categories_title':
         return 'Выберите, что экспортировать';
-      case 'backup_export_categories_hint':
-        return 'Выбранные категории попадут в резервную копию. База данных (книги, статистика, избранное, профили, настройки) включается всегда.';
       case 'backup_category_dictionary':
         return 'Словари';
       case 'backup_category_books':
@@ -132232,6 +132450,16 @@ extension on _StringsRu {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
@@ -135285,8 +135513,6 @@ extension on _StringsTh {
         return 'ตัวอย่างสีด้านล่างคือสีที่สร้างจริงจากสีเริ่มต้นของคุณ หากต้องการกำหนดสีใดเป็นสีเน้นหลักโดยเฉพาะ ให้เปิดสวิตช์ "สีหลัก" แล้วเลือกสีนั้นโดยตรง';
       case 'backup_export_categories_title':
         return 'เลือกสิ่งที่จะส่งออก';
-      case 'backup_export_categories_hint':
-        return 'หมวดที่เลือกจะถูกแพ็กลงในไฟล์สำรอง ฐานข้อมูล (หนังสือ สถิติ รายการโปรด โปรไฟล์ การตั้งค่า) จะรวมอยู่เสมอ';
       case 'backup_category_dictionary':
         return 'พจนานุกรม';
       case 'backup_category_books':
@@ -136578,6 +136804,16 @@ extension on _StringsTh {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
@@ -139636,8 +139872,6 @@ extension on _StringsTr {
         return 'Aşağıdaki örnekler, tohum renginizden gerçekte üretilen renkleri önizler. Belirli bir rengi birincil vurgu olarak zorlamak için Birincil anahtarını açıp rengi açıkça seçin.';
       case 'backup_export_categories_title':
         return 'Neyin dışa aktarılacağını seçin';
-      case 'backup_export_categories_hint':
-        return 'Seçilen kategoriler yedeğe paketlenir. Veritabanı (kitaplar, istatistikler, sık kullanılanlar, profiller, ayarlar) her zaman dahil edilir.';
       case 'backup_category_dictionary':
         return 'Sözlükler';
       case 'backup_category_books':
@@ -140933,6 +141167,16 @@ extension on _StringsTr {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
@@ -143988,8 +144232,6 @@ extension on _StringsVi {
         return 'Các ô màu bên dưới xem trước những màu thực sự được tạo từ màu hạt giống của bạn. Để buộc một màu cụ thể làm màu nhấn chính, hãy bật công tắc Màu chính và chọn nó rõ ràng.';
       case 'backup_export_categories_title':
         return 'Chọn nội dung để xuất';
-      case 'backup_export_categories_hint':
-        return 'Các hạng mục đã chọn sẽ được đóng gói vào bản sao lưu. Cơ sở dữ liệu (sách, thống kê, mục yêu thích, hồ sơ, cài đặt) luôn được bao gồm.';
       case 'backup_category_dictionary':
         return 'Từ điển';
       case 'backup_category_books':
@@ -145282,6 +145524,16 @@ extension on _StringsVi {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
@@ -148314,8 +148566,6 @@ extension on _StringsZhCn {
         return '下方色板预览由种子色实际生成的颜色。想让某个颜色固定作为主色强调色，请打开「主色」开关并显式指定。';
       case 'backup_export_categories_title':
         return '选择要导出的内容';
-      case 'backup_export_categories_hint':
-        return '勾选的类别会打包进备份。阅读数据（进度、统计、收藏、配置方案、设置）始终包含在数据库里。取消「书籍」会完整排除这些书——正文文件和书籍记录一并排除，导入后不会出现这些书。';
       case 'backup_category_dictionary':
         return '词典';
       case 'backup_category_books':
@@ -149597,6 +149847,16 @@ extension on _StringsZhCn {
         return '正在缓冲…';
       case 'video_loading_preparing':
         return '正在准备…';
+      case 'backup_category_progress':
+        return '阅读进度';
+      case 'backup_category_statistics':
+        return '统计数据';
+      case 'backup_category_settings':
+        return '设置';
+      case 'backup_category_profiles':
+        return '配置方案';
+      case 'backup_export_categories_hint':
+        return '所选类别会打包进备份。数据库中的书籍记录始终包含；阅读进度、统计、设置、配置方案可在上方分别选择排除。取消勾选「书籍」会完全排除这些书——正文文件和书籍记录一并排除——导入后不会出现这些书。';
       default:
         return null;
     }
@@ -152630,8 +152890,6 @@ extension on _StringsZhHk {
         return '下方色板預覽由種子色實際產生的顏色。若想固定以某個顏色作為主要強調色，請開啟「主色」開關並明確指定。';
       case 'backup_export_categories_title':
         return '選擇要匯出的內容';
-      case 'backup_export_categories_hint':
-        return '勾選的類別會打包進備份。資料庫（書籍、統計、收藏、Profile、設定）必定包含在內。';
       case 'backup_category_dictionary':
         return '詞典';
       case 'backup_category_books':
@@ -153917,6 +154175,16 @@ extension on _StringsZhHk {
         return 'Buffering…';
       case 'video_loading_preparing':
         return 'Preparing…';
+      case 'backup_category_progress':
+        return 'Reading progress';
+      case 'backup_category_statistics':
+        return 'Statistics';
+      case 'backup_category_settings':
+        return 'Settings';
+      case 'backup_category_profiles':
+        return 'Profiles';
+      case 'backup_export_categories_hint':
+        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
       default:
         return null;
     }
