@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35853 (2109 per locale)
+/// Strings: 35887 (2111 per locale)
 ///
-/// Built on 2026-07-05 at 15:42 UTC
+/// Built on 2026-07-06 at 03:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2809,6 +2809,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
           {required Object bookCount, required Object progressCount}) =>
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   String get stat_lookup => 'Lookups';
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -7587,6 +7590,11 @@ class _StringsAr extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  @override
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -12488,6 +12496,11 @@ class _StringsDe extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  @override
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -17406,6 +17419,11 @@ class _StringsEs extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  @override
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -22343,6 +22361,11 @@ class _StringsFr extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  @override
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -27182,6 +27205,11 @@ class _StringsId extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  @override
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -32082,6 +32110,11 @@ class _StringsIt extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  @override
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -36708,6 +36741,11 @@ class _StringsJa extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => '検索';
+  @override
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  @override
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -41338,6 +41376,11 @@ class _StringsKo extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => '검색';
+  @override
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  @override
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -46206,6 +46249,11 @@ class _StringsNl extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  @override
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -51097,6 +51145,11 @@ class _StringsPtBr extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  @override
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -55963,6 +56016,11 @@ class _StringsRu extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  @override
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -60742,6 +60800,11 @@ class _StringsTh extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  @override
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -65576,6 +65639,11 @@ class _StringsTr extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  @override
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -70385,6 +70453,11 @@ class _StringsVi extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => 'Lookups';
+  @override
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  @override
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -74869,6 +74942,10 @@ class _StringsZhCn extends _StringsEn {
       '合并将新增 ${bookCount} 本书、更新 ${progressCount} 条阅读进度。';
   @override
   String get stat_lookup => '查词';
+  @override
+  String get stat_delete_message => '删除该项的时长、字数与查词/制卡统计？你收藏的单词和句子不受影响。';
+  @override
+  String get stat_delete_title => '删除统计数据';
 }
 
 // Path: retrying_in
@@ -79397,6 +79474,11 @@ class _StringsZhHk extends _StringsEn {
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   @override
   String get stat_lookup => '查詞';
+  @override
+  String get stat_delete_message =>
+      'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+  @override
+  String get stat_delete_title => 'Delete statistics';
 }
 
 // Path: retrying_in
@@ -83753,6 +83835,10 @@ extension on _StringsEn {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
@@ -88069,6 +88155,10 @@ extension on _StringsAr {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
@@ -92407,6 +92497,10 @@ extension on _StringsDe {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
@@ -96743,6 +96837,10 @@ extension on _StringsEs {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
@@ -101086,6 +101184,10 @@ extension on _StringsFr {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
@@ -105409,6 +105511,10 @@ extension on _StringsId {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
@@ -109749,6 +109855,10 @@ extension on _StringsIt {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
@@ -114047,6 +114157,10 @@ extension on _StringsJa {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return '検索';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
@@ -118348,6 +118462,10 @@ extension on _StringsKo {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return '검색';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
@@ -122681,6 +122799,10 @@ extension on _StringsNl {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
@@ -127011,6 +127133,10 @@ extension on _StringsPtBr {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
@@ -131345,6 +131471,10 @@ extension on _StringsRu {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
@@ -135661,6 +135791,10 @@ extension on _StringsTh {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
@@ -139986,6 +140120,10 @@ extension on _StringsTr {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
@@ -144305,6 +144443,10 @@ extension on _StringsVi {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return 'Lookups';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
@@ -148590,6 +148732,10 @@ extension on _StringsZhCn {
             '合并将新增 ${bookCount} 本书、更新 ${progressCount} 条阅读进度。';
       case 'stat_lookup':
         return '查词';
+      case 'stat_delete_message':
+        return '删除该项的时长、字数与查词/制卡统计？你收藏的单词和句子不受影响。';
+      case 'stat_delete_title':
+        return '删除统计数据';
       default:
         return null;
     }
@@ -152880,6 +153026,10 @@ extension on _StringsZhHk {
             'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
       case 'stat_lookup':
         return '查詞';
+      case 'stat_delete_message':
+        return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
+      case 'stat_delete_title':
+        return 'Delete statistics';
       default:
         return null;
     }
