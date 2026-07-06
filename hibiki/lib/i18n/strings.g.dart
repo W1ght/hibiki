@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36227 (2131 per locale)
+/// Strings: 36176 (2128 per locale)
 ///
-/// Built on 2026-07-06 at 10:31 UTC
+/// Built on 2026-07-06 at 12:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2781,10 +2781,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Restoring your data. Please don\'t close the app.';
   String get backup_import_restart_button => 'Restart now';
   String get backup_import_overlay_title => 'Importing backup';
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
   String get tag_seed_stars => 'Add star rating tags';
   String get tag_seed_stars_added => 'Star rating tags added';
   String get tag_seed_stars_exists => 'Star rating tags already exist';
@@ -7565,13 +7561,6 @@ class _StringsAr extends _StringsEn {
   String get backup_import_restart_button => 'Restart now';
   @override
   String get backup_import_overlay_title => 'Importing backup';
-  @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
   @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
@@ -12514,13 +12503,6 @@ class _StringsDe extends _StringsEn {
   String get backup_import_restart_button => 'Restart now';
   @override
   String get backup_import_overlay_title => 'Importing backup';
-  @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
   @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
@@ -17480,13 +17462,6 @@ class _StringsEs extends _StringsEn {
   String get backup_import_restart_button => 'Restart now';
   @override
   String get backup_import_overlay_title => 'Importing backup';
-  @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
   @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
@@ -22466,13 +22441,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -27352,13 +27320,6 @@ class _StringsId extends _StringsEn {
   String get backup_import_restart_button => 'Restart now';
   @override
   String get backup_import_overlay_title => 'Importing backup';
-  @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
   @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
@@ -32301,13 +32262,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -36974,13 +36928,6 @@ class _StringsJa extends _StringsEn {
   String get backup_import_restart_button => 'Restart now';
   @override
   String get backup_import_overlay_title => 'Importing backup';
-  @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
   @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
@@ -41652,13 +41599,6 @@ class _StringsKo extends _StringsEn {
   String get backup_import_restart_button => 'Restart now';
   @override
   String get backup_import_overlay_title => 'Importing backup';
-  @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
   @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
@@ -46568,13 +46508,6 @@ class _StringsNl extends _StringsEn {
   String get backup_import_restart_button => 'Restart now';
   @override
   String get backup_import_overlay_title => 'Importing backup';
-  @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
   @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
@@ -51508,13 +51441,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -56422,13 +56348,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -61248,13 +61167,6 @@ class _StringsTh extends _StringsEn {
   String get backup_import_restart_button => 'Restart now';
   @override
   String get backup_import_overlay_title => 'Importing backup';
-  @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
   @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
@@ -66131,13 +66043,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -70988,13 +70893,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -75521,12 +75419,6 @@ class _StringsZhCn extends _StringsEn {
   String get backup_import_restart_button => '立即重启';
   @override
   String get backup_import_overlay_title => '正在导入备份';
-  @override
-  String get reader_frosted_bottom_bar => '毛玻璃悬浮底栏';
-  @override
-  String get reader_frosted_bottom_bar_hint => '给阅读器控制栏加毛玻璃模糊和半透明背景';
-  @override
-  String get reader_bottom_bar_opacity => '底栏不透明度';
   @override
   String get tag_seed_stars => '添加星级标签';
   @override
@@ -80093,13 +79985,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => '新增星級標籤';
   @override
   String get tag_seed_stars_added => '已新增星級標籤';
@@ -84503,12 +84388,6 @@ extension on _StringsEn {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -88863,12 +88742,6 @@ extension on _StringsAr {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -93245,12 +93118,6 @@ extension on _StringsDe {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -97625,12 +97492,6 @@ extension on _StringsEs {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -102012,12 +101873,6 @@ extension on _StringsFr {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -106379,12 +106234,6 @@ extension on _StringsId {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -110763,12 +110612,6 @@ extension on _StringsIt {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -115105,12 +114948,6 @@ extension on _StringsJa {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -119450,12 +119287,6 @@ extension on _StringsKo {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -123827,12 +123658,6 @@ extension on _StringsNl {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -128201,12 +128026,6 @@ extension on _StringsPtBr {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -132579,12 +132398,6 @@ extension on _StringsRu {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -136939,12 +136752,6 @@ extension on _StringsTh {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -141308,12 +141115,6 @@ extension on _StringsTr {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -145671,12 +145472,6 @@ extension on _StringsVi {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -150000,12 +149795,6 @@ extension on _StringsZhCn {
         return '立即重启';
       case 'backup_import_overlay_title':
         return '正在导入备份';
-      case 'reader_frosted_bottom_bar':
-        return '毛玻璃悬浮底栏';
-      case 'reader_frosted_bottom_bar_hint':
-        return '给阅读器控制栏加毛玻璃模糊和半透明背景';
-      case 'reader_bottom_bar_opacity':
-        return '底栏不透明度';
       case 'tag_seed_stars':
         return '添加星级标签';
       case 'tag_seed_stars_added':
@@ -154334,12 +154123,6 @@ extension on _StringsZhHk {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return '新增星級標籤';
       case 'tag_seed_stars_added':
