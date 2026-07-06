@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36261 (2133 per locale)
+/// Strings: 36295 (2135 per locale)
 ///
-/// Built on 2026-07-06 at 15:33 UTC
+/// Built on 2026-07-06 at 16:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2835,6 +2835,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_black_flash_notice_action => 'View suggestions';
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   String get popup_no_audio_available => 'No audio available';
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -7663,6 +7666,11 @@ class _StringsAr extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   @override
   String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -12614,6 +12622,11 @@ class _StringsDe extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   @override
   String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -17582,6 +17595,11 @@ class _StringsEs extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   @override
   String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -22569,6 +22587,11 @@ class _StringsFr extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   @override
   String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -27458,6 +27481,11 @@ class _StringsId extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   @override
   String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -32408,6 +32436,11 @@ class _StringsIt extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   @override
   String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -37084,6 +37117,11 @@ class _StringsJa extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   @override
   String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -41764,6 +41802,11 @@ class _StringsKo extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   @override
   String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -46682,6 +46725,11 @@ class _StringsNl extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   @override
   String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -51623,6 +51671,11 @@ class _StringsPtBr extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   @override
   String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -56539,6 +56592,11 @@ class _StringsRu extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   @override
   String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -61368,6 +61426,11 @@ class _StringsTh extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   @override
   String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -66252,6 +66315,11 @@ class _StringsTr extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   @override
   String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -71111,6 +71179,11 @@ class _StringsVi extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   @override
   String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -75643,6 +75716,11 @@ class _StringsZhCn extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => '不再提示';
   @override
   String get popup_no_audio_available => '暂无发音';
+  @override
+  String get loading_slow_title => '启动耗时超出预期';
+  @override
+  String get loading_slow_message =>
+      '如果你把数据存储位置设在了当前未连接的网络盘 / 移动盘上，启动可能卡住。点「重试」即可用默认存储位置启动本次会话；你的数据仍保留在原位置不动。';
 }
 
 // Path: retrying_in
@@ -80221,6 +80299,11 @@ class _StringsZhHk extends _StringsEn {
   String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
   @override
   String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
 }
 
 // Path: retrying_in
@@ -84625,6 +84708,10 @@ extension on _StringsEn {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
@@ -88989,6 +89076,10 @@ extension on _StringsAr {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
@@ -93375,6 +93466,10 @@ extension on _StringsDe {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
@@ -97759,6 +97854,10 @@ extension on _StringsEs {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
@@ -102150,6 +102249,10 @@ extension on _StringsFr {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
@@ -106521,6 +106624,10 @@ extension on _StringsId {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
@@ -110909,6 +111016,10 @@ extension on _StringsIt {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
@@ -115255,6 +115366,10 @@ extension on _StringsJa {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
@@ -119604,6 +119719,10 @@ extension on _StringsKo {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
@@ -123985,6 +124104,10 @@ extension on _StringsNl {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
@@ -128363,6 +128486,10 @@ extension on _StringsPtBr {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
@@ -132745,6 +132872,10 @@ extension on _StringsRu {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
@@ -137109,6 +137240,10 @@ extension on _StringsTh {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
@@ -141482,6 +141617,10 @@ extension on _StringsTr {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
@@ -145849,6 +145988,10 @@ extension on _StringsVi {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
@@ -150182,6 +150325,10 @@ extension on _StringsZhCn {
         return '不再提示';
       case 'popup_no_audio_available':
         return '暂无发音';
+      case 'loading_slow_title':
+        return '启动耗时超出预期';
+      case 'loading_slow_message':
+        return '如果你把数据存储位置设在了当前未连接的网络盘 / 移动盘上，启动可能卡住。点「重试」即可用默认存储位置启动本次会话；你的数据仍保留在原位置不动。';
       default:
         return null;
     }
@@ -154520,6 +154667,10 @@ extension on _StringsZhHk {
         return 'Don\'t show again';
       case 'popup_no_audio_available':
         return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       default:
         return null;
     }
