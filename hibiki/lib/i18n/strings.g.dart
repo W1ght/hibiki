@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 36278 (2134 per locale)
 ///
-/// Built on 2026-07-06 at 13:06 UTC
+/// Built on 2026-07-06 at 13:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2825,7 +2825,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_settings => 'Settings';
   String get backup_category_profiles => 'Profiles';
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
@@ -7648,7 +7648,7 @@ class _StringsAr extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -12603,7 +12603,7 @@ class _StringsDe extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -17575,7 +17575,7 @@ class _StringsEs extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -22566,7 +22566,7 @@ class _StringsFr extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -27459,7 +27459,7 @@ class _StringsId extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -32413,7 +32413,7 @@ class _StringsIt extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -37093,7 +37093,7 @@ class _StringsJa extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -41777,7 +41777,7 @@ class _StringsKo extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -46699,7 +46699,7 @@ class _StringsNl extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -51644,7 +51644,7 @@ class _StringsPtBr extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -56564,7 +56564,7 @@ class _StringsRu extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -61397,7 +61397,7 @@ class _StringsTh extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -66285,7 +66285,7 @@ class _StringsTr extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -71148,7 +71148,7 @@ class _StringsVi extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -75685,7 +75685,7 @@ class _StringsZhCn extends _StringsEn {
   String get backup_category_profiles => '配置方案';
   @override
   String get backup_export_categories_hint =>
-      '所选类别会打包进备份。数据库中的书籍记录始终包含；阅读进度、统计、设置、配置方案可在上方分别选择排除。取消勾选「书籍」会完全排除这些书——正文文件和书籍记录一并排除——导入后不会出现这些书。';
+      '勾选要打包进备份的内容。取消勾选「书籍」会连同这些书的正文和记录一并移除。';
   @override
   String get floating_lyric_permission_hint_coloros =>
       '系统拒绝授予悬浮窗权限时：请用文件管理器找到安装包覆盖安装一次，或在开发者选项中关闭权限监控后重试。';
@@ -80265,7 +80265,7 @@ class _StringsZhHk extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      '勾選要打包進備份的內容。取消勾選「書籍」會連同這些書的正文和記錄一併移除。';
   @override
   String get floating_lyric_permission_hint_coloros =>
       'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
@@ -84674,7 +84674,7 @@ extension on _StringsEn {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
@@ -89040,7 +89040,7 @@ extension on _StringsAr {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
@@ -93428,7 +93428,7 @@ extension on _StringsDe {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
@@ -97814,7 +97814,7 @@ extension on _StringsEs {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
@@ -102207,7 +102207,7 @@ extension on _StringsFr {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
@@ -106580,7 +106580,7 @@ extension on _StringsId {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
@@ -110970,7 +110970,7 @@ extension on _StringsIt {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
@@ -115318,7 +115318,7 @@ extension on _StringsJa {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
@@ -119669,7 +119669,7 @@ extension on _StringsKo {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
@@ -124052,7 +124052,7 @@ extension on _StringsNl {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
@@ -128432,7 +128432,7 @@ extension on _StringsPtBr {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
@@ -132816,7 +132816,7 @@ extension on _StringsRu {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
@@ -137182,7 +137182,7 @@ extension on _StringsTh {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
@@ -141557,7 +141557,7 @@ extension on _StringsTr {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
@@ -145926,7 +145926,7 @@ extension on _StringsVi {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
@@ -150261,7 +150261,7 @@ extension on _StringsZhCn {
       case 'backup_category_profiles':
         return '配置方案';
       case 'backup_export_categories_hint':
-        return '所选类别会打包进备份。数据库中的书籍记录始终包含；阅读进度、统计、设置、配置方案可在上方分别选择排除。取消勾选「书籍」会完全排除这些书——正文文件和书籍记录一并排除——导入后不会出现这些书。';
+        return '勾选要打包进备份的内容。取消勾选「书籍」会连同这些书的正文和记录一并移除。';
       case 'floating_lyric_permission_hint_coloros':
         return '系统拒绝授予悬浮窗权限时：请用文件管理器找到安装包覆盖安装一次，或在开发者选项中关闭权限监控后重试。';
       case 'sync_server_tls_enable':
@@ -154601,7 +154601,7 @@ extension on _StringsZhHk {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return '勾選要打包進備份的內容。取消勾選「書籍」會連同這些書的正文和記錄一併移除。';
       case 'floating_lyric_permission_hint_coloros':
         return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
       case 'sync_server_tls_enable':
