@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36227 (2131 per locale)
+/// Strings: 36244 (2132 per locale)
 ///
-/// Built on 2026-07-06 at 10:31 UTC
+/// Built on 2026-07-06 at 11:48 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2835,6 +2835,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -7661,6 +7662,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -12610,6 +12613,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -17576,6 +17581,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -22561,6 +22568,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -27448,6 +27457,8 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -32396,6 +32407,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -37070,6 +37083,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -41748,6 +41763,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -46664,6 +46681,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -51603,6 +51622,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -56517,6 +56538,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -61344,6 +61367,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -66226,6 +66251,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -71083,6 +71110,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -75612,6 +75641,8 @@ class _StringsZhCn extends _StringsEn {
   String get sync_server_tls_enable => '互联加密（HTTPS/TLS）';
   @override
   String get sync_server_tls_repair_hint => '切换后已配对设备需重新配对';
+  @override
+  String get icon_transparent => '透明';
 }
 
 // Path: retrying_in
@@ -80188,6 +80219,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_server_tls_repair_hint =>
       'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
 }
 
 // Path: retrying_in
@@ -84588,6 +84621,8 @@ extension on _StringsEn {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
@@ -88948,6 +88983,8 @@ extension on _StringsAr {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
@@ -93330,6 +93367,8 @@ extension on _StringsDe {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
@@ -97710,6 +97749,8 @@ extension on _StringsEs {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
@@ -102097,6 +102138,8 @@ extension on _StringsFr {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
@@ -106464,6 +106507,8 @@ extension on _StringsId {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
@@ -110848,6 +110893,8 @@ extension on _StringsIt {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
@@ -115190,6 +115237,8 @@ extension on _StringsJa {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
@@ -119535,6 +119584,8 @@ extension on _StringsKo {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
@@ -123912,6 +123963,8 @@ extension on _StringsNl {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
@@ -128286,6 +128339,8 @@ extension on _StringsPtBr {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
@@ -132664,6 +132719,8 @@ extension on _StringsRu {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
@@ -137024,6 +137081,8 @@ extension on _StringsTh {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
@@ -141393,6 +141452,8 @@ extension on _StringsTr {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
@@ -145756,6 +145817,8 @@ extension on _StringsVi {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
@@ -150085,6 +150148,8 @@ extension on _StringsZhCn {
         return '互联加密（HTTPS/TLS）';
       case 'sync_server_tls_repair_hint':
         return '切换后已配对设备需重新配对';
+      case 'icon_transparent':
+        return '透明';
       default:
         return null;
     }
@@ -154419,6 +154484,8 @@ extension on _StringsZhHk {
         return 'Interconnect encryption (HTTPS/TLS)';
       case 'sync_server_tls_repair_hint':
         return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
       default:
         return null;
     }
