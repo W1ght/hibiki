@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36040 (2120 per locale)
+/// Strings: 36108 (2124 per locale)
 ///
-/// Built on 2026-07-06 at 03:33 UTC
+/// Built on 2026-07-06 at 04:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2822,6 +2822,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  String get video_loading_connecting => 'Connecting to stream…';
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  String get video_loading_buffering => 'Buffering…';
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -7624,6 +7628,14 @@ class _StringsAr extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   @override
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  @override
+  String get video_loading_connecting => 'Connecting to stream…';
+  @override
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  @override
+  String get video_loading_buffering => 'Buffering…';
+  @override
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -12549,6 +12561,14 @@ class _StringsDe extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   @override
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  @override
+  String get video_loading_connecting => 'Connecting to stream…';
+  @override
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  @override
+  String get video_loading_buffering => 'Buffering…';
+  @override
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -17491,6 +17511,14 @@ class _StringsEs extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   @override
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  @override
+  String get video_loading_connecting => 'Connecting to stream…';
+  @override
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  @override
+  String get video_loading_buffering => 'Buffering…';
+  @override
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -22452,6 +22480,14 @@ class _StringsFr extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   @override
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  @override
+  String get video_loading_connecting => 'Connecting to stream…';
+  @override
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  @override
+  String get video_loading_buffering => 'Buffering…';
+  @override
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -27315,6 +27351,14 @@ class _StringsId extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   @override
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  @override
+  String get video_loading_connecting => 'Connecting to stream…';
+  @override
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  @override
+  String get video_loading_buffering => 'Buffering…';
+  @override
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -32239,6 +32283,14 @@ class _StringsIt extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   @override
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  @override
+  String get video_loading_connecting => 'Connecting to stream…';
+  @override
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  @override
+  String get video_loading_buffering => 'Buffering…';
+  @override
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -36889,6 +36941,14 @@ class _StringsJa extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   @override
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  @override
+  String get video_loading_connecting => 'Connecting to stream…';
+  @override
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  @override
+  String get video_loading_buffering => 'Buffering…';
+  @override
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -41543,6 +41603,14 @@ class _StringsKo extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   @override
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  @override
+  String get video_loading_connecting => 'Connecting to stream…';
+  @override
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  @override
+  String get video_loading_buffering => 'Buffering…';
+  @override
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -46435,6 +46503,14 @@ class _StringsNl extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   @override
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  @override
+  String get video_loading_connecting => 'Connecting to stream…';
+  @override
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  @override
+  String get video_loading_buffering => 'Buffering…';
+  @override
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -51350,6 +51426,14 @@ class _StringsPtBr extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   @override
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  @override
+  String get video_loading_connecting => 'Connecting to stream…';
+  @override
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  @override
+  String get video_loading_buffering => 'Buffering…';
+  @override
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -56240,6 +56324,14 @@ class _StringsRu extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   @override
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  @override
+  String get video_loading_connecting => 'Connecting to stream…';
+  @override
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  @override
+  String get video_loading_buffering => 'Buffering…';
+  @override
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -61043,6 +61135,14 @@ class _StringsTh extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   @override
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  @override
+  String get video_loading_connecting => 'Connecting to stream…';
+  @override
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  @override
+  String get video_loading_buffering => 'Buffering…';
+  @override
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -65901,6 +66001,14 @@ class _StringsTr extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   @override
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  @override
+  String get video_loading_connecting => 'Connecting to stream…';
+  @override
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  @override
+  String get video_loading_buffering => 'Buffering…';
+  @override
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -70734,6 +70842,14 @@ class _StringsVi extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   @override
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  @override
+  String get video_loading_connecting => 'Connecting to stream…';
+  @override
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  @override
+  String get video_loading_buffering => 'Buffering…';
+  @override
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -75240,6 +75356,14 @@ class _StringsZhCn extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => '放大';
   @override
   String get video_subtitle_waveform_zoom_out => '缩小';
+  @override
+  String get video_loading_connecting => '正在连接视频流…';
+  @override
+  String get video_loading_subtitle => '正在下载字幕…';
+  @override
+  String get video_loading_buffering => '正在缓冲…';
+  @override
+  String get video_loading_preparing => '正在准备…';
 }
 
 // Path: retrying_in
@@ -79792,6 +79916,14 @@ class _StringsZhHk extends _StringsEn {
   String get video_subtitle_waveform_zoom_in => 'Zoom in';
   @override
   String get video_subtitle_waveform_zoom_out => 'Zoom out';
+  @override
+  String get video_loading_connecting => 'Connecting to stream…';
+  @override
+  String get video_loading_subtitle => 'Downloading subtitles…';
+  @override
+  String get video_loading_buffering => 'Buffering…';
+  @override
+  String get video_loading_preparing => 'Preparing…';
 }
 
 // Path: retrying_in
@@ -84170,6 +84302,14 @@ extension on _StringsEn {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
@@ -88508,6 +88648,14 @@ extension on _StringsAr {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
@@ -92868,6 +93016,14 @@ extension on _StringsDe {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
@@ -97226,6 +97382,14 @@ extension on _StringsEs {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
@@ -101591,6 +101755,14 @@ extension on _StringsFr {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
@@ -105936,6 +106108,14 @@ extension on _StringsId {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
@@ -110298,6 +110478,14 @@ extension on _StringsIt {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
@@ -114618,6 +114806,14 @@ extension on _StringsJa {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
@@ -118941,6 +119137,14 @@ extension on _StringsKo {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
@@ -123296,6 +123500,14 @@ extension on _StringsNl {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
@@ -127648,6 +127860,14 @@ extension on _StringsPtBr {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
@@ -132004,6 +132224,14 @@ extension on _StringsRu {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
@@ -136342,6 +136570,14 @@ extension on _StringsTh {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
@@ -140689,6 +140925,14 @@ extension on _StringsTr {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
@@ -145030,6 +145274,14 @@ extension on _StringsVi {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
@@ -149337,6 +149589,14 @@ extension on _StringsZhCn {
         return '放大';
       case 'video_subtitle_waveform_zoom_out':
         return '缩小';
+      case 'video_loading_connecting':
+        return '正在连接视频流…';
+      case 'video_loading_subtitle':
+        return '正在下载字幕…';
+      case 'video_loading_buffering':
+        return '正在缓冲…';
+      case 'video_loading_preparing':
+        return '正在准备…';
       default:
         return null;
     }
@@ -153649,6 +153909,14 @@ extension on _StringsZhHk {
         return 'Zoom in';
       case 'video_subtitle_waveform_zoom_out':
         return 'Zoom out';
+      case 'video_loading_connecting':
+        return 'Connecting to stream…';
+      case 'video_loading_subtitle':
+        return 'Downloading subtitles…';
+      case 'video_loading_buffering':
+        return 'Buffering…';
+      case 'video_loading_preparing':
+        return 'Preparing…';
       default:
         return null;
     }
