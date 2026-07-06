@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36295 (2135 per locale)
+/// Strings: 36312 (2136 per locale)
 ///
-/// Built on 2026-07-06 at 16:50 UTC
+/// Built on 2026-07-06 at 19:24 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2838,6 +2838,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get loading_slow_title => 'Startup is taking longer than usual';
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -7671,6 +7673,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -12627,6 +12632,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -17600,6 +17608,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -22592,6 +22603,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -27486,6 +27500,9 @@ class _StringsId extends _StringsEn {
   @override
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -32441,6 +32458,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -37122,6 +37142,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -41807,6 +41830,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -46730,6 +46756,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -51676,6 +51705,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -56597,6 +56629,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -61431,6 +61466,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -66320,6 +66358,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -71184,6 +71225,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -75721,6 +75765,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get loading_slow_message =>
       '如果你把数据存储位置设在了当前未连接的网络盘 / 移动盘上，启动可能卡住。点「重试」即可用默认存储位置启动本次会话；你的数据仍保留在原位置不动。';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      '未检测到 GameInput 组件，手柄功能不可用。可安装 Windows「游戏服务(Gaming Services)」以启用手柄支持。';
 }
 
 // Path: retrying_in
@@ -80304,6 +80351,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get loading_slow_message =>
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
 }
 
 // Path: retrying_in
@@ -84712,6 +84762,8 @@ extension on _StringsEn {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
@@ -89080,6 +89132,8 @@ extension on _StringsAr {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
@@ -93470,6 +93524,8 @@ extension on _StringsDe {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
@@ -97858,6 +97914,8 @@ extension on _StringsEs {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
@@ -102253,6 +102311,8 @@ extension on _StringsFr {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
@@ -106628,6 +106688,8 @@ extension on _StringsId {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
@@ -111020,6 +111082,8 @@ extension on _StringsIt {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
@@ -115370,6 +115434,8 @@ extension on _StringsJa {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
@@ -119723,6 +119789,8 @@ extension on _StringsKo {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
@@ -124108,6 +124176,8 @@ extension on _StringsNl {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
@@ -128490,6 +128560,8 @@ extension on _StringsPtBr {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
@@ -132876,6 +132948,8 @@ extension on _StringsRu {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
@@ -137244,6 +137318,8 @@ extension on _StringsTh {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
@@ -141621,6 +141697,8 @@ extension on _StringsTr {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
@@ -145992,6 +146070,8 @@ extension on _StringsVi {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
@@ -150329,6 +150409,8 @@ extension on _StringsZhCn {
         return '启动耗时超出预期';
       case 'loading_slow_message':
         return '如果你把数据存储位置设在了当前未连接的网络盘 / 移动盘上，启动可能卡住。点「重试」即可用默认存储位置启动本次会话；你的数据仍保留在原位置不动。';
+      case 'shortcut_gamepad_unavailable_hint':
+        return '未检测到 GameInput 组件，手柄功能不可用。可安装 Windows「游戏服务(Gaming Services)」以启用手柄支持。';
       default:
         return null;
     }
@@ -154671,6 +154753,8 @@ extension on _StringsZhHk {
         return 'Startup is taking longer than usual';
       case 'loading_slow_message':
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
       default:
         return null;
     }
