@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36312 (2136 per locale)
+/// Strings: 36346 (2138 per locale)
 ///
-/// Built on 2026-07-06 at 19:24 UTC
+/// Built on 2026-07-06 at 19:48 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2840,6 +2840,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  String get shortcut_view_list => 'List view';
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -7676,6 +7678,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -12635,6 +12641,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -17611,6 +17621,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -22606,6 +22620,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -27503,6 +27521,10 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -32461,6 +32483,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -37145,6 +37171,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -41833,6 +41863,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -46759,6 +46793,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -51708,6 +51746,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -56632,6 +56674,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -61469,6 +61515,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -66361,6 +66411,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -71228,6 +71282,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -75768,6 +75826,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       '未检测到 GameInput 组件，手柄功能不可用。可安装 Windows「游戏服务(Gaming Services)」以启用手柄支持。';
+  @override
+  String get shortcut_view_list => '列表视图';
+  @override
+  String get shortcut_view_visual => '手柄可视化图';
 }
 
 // Path: retrying_in
@@ -80354,6 +80416,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_gamepad_unavailable_hint =>
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
 }
 
 // Path: retrying_in
@@ -84764,6 +84830,10 @@ extension on _StringsEn {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
@@ -89134,6 +89204,10 @@ extension on _StringsAr {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
@@ -93526,6 +93600,10 @@ extension on _StringsDe {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
@@ -97916,6 +97994,10 @@ extension on _StringsEs {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
@@ -102313,6 +102395,10 @@ extension on _StringsFr {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
@@ -106690,6 +106776,10 @@ extension on _StringsId {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
@@ -111084,6 +111174,10 @@ extension on _StringsIt {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
@@ -115436,6 +115530,10 @@ extension on _StringsJa {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
@@ -119791,6 +119889,10 @@ extension on _StringsKo {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
@@ -124178,6 +124280,10 @@ extension on _StringsNl {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
@@ -128562,6 +128668,10 @@ extension on _StringsPtBr {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
@@ -132950,6 +133060,10 @@ extension on _StringsRu {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
@@ -137320,6 +137434,10 @@ extension on _StringsTh {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
@@ -141699,6 +141817,10 @@ extension on _StringsTr {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
@@ -146072,6 +146194,10 @@ extension on _StringsVi {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
@@ -150411,6 +150537,10 @@ extension on _StringsZhCn {
         return '如果你把数据存储位置设在了当前未连接的网络盘 / 移动盘上，启动可能卡住。点「重试」即可用默认存储位置启动本次会话；你的数据仍保留在原位置不动。';
       case 'shortcut_gamepad_unavailable_hint':
         return '未检测到 GameInput 组件，手柄功能不可用。可安装 Windows「游戏服务(Gaming Services)」以启用手柄支持。';
+      case 'shortcut_view_list':
+        return '列表视图';
+      case 'shortcut_view_visual':
+        return '手柄可视化图';
       default:
         return null;
     }
@@ -154755,6 +154885,10 @@ extension on _StringsZhHk {
         return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
       case 'shortcut_gamepad_unavailable_hint':
         return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
       default:
         return null;
     }
