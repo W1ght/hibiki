@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35887 (2111 per locale)
+/// Strings: 36040 (2120 per locale)
 ///
-/// Built on 2026-07-06 at 03:11 UTC
+/// Built on 2026-07-06 at 03:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2812,6 +2812,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get stat_delete_message =>
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   String get stat_delete_title => 'Delete statistics';
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -7595,6 +7605,25 @@ class _StringsAr extends _StringsEn {
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   @override
   String get stat_delete_title => 'Delete statistics';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -12501,6 +12530,25 @@ class _StringsDe extends _StringsEn {
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   @override
   String get stat_delete_title => 'Delete statistics';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -17424,6 +17472,25 @@ class _StringsEs extends _StringsEn {
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   @override
   String get stat_delete_title => 'Delete statistics';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -22366,6 +22433,25 @@ class _StringsFr extends _StringsEn {
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   @override
   String get stat_delete_title => 'Delete statistics';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -27210,6 +27296,25 @@ class _StringsId extends _StringsEn {
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   @override
   String get stat_delete_title => 'Delete statistics';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -32115,6 +32220,25 @@ class _StringsIt extends _StringsEn {
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   @override
   String get stat_delete_title => 'Delete statistics';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -36746,6 +36870,25 @@ class _StringsJa extends _StringsEn {
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   @override
   String get stat_delete_title => 'Delete statistics';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -41381,6 +41524,25 @@ class _StringsKo extends _StringsEn {
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   @override
   String get stat_delete_title => 'Delete statistics';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -46254,6 +46416,25 @@ class _StringsNl extends _StringsEn {
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   @override
   String get stat_delete_title => 'Delete statistics';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -51150,6 +51331,25 @@ class _StringsPtBr extends _StringsEn {
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   @override
   String get stat_delete_title => 'Delete statistics';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -56021,6 +56221,25 @@ class _StringsRu extends _StringsEn {
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   @override
   String get stat_delete_title => 'Delete statistics';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -60805,6 +61024,25 @@ class _StringsTh extends _StringsEn {
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   @override
   String get stat_delete_title => 'Delete statistics';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -65644,6 +65882,25 @@ class _StringsTr extends _StringsEn {
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   @override
   String get stat_delete_title => 'Delete statistics';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -70458,6 +70715,25 @@ class _StringsVi extends _StringsEn {
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   @override
   String get stat_delete_title => 'Delete statistics';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -74946,6 +75222,24 @@ class _StringsZhCn extends _StringsEn {
   String get stat_delete_message => '删除该项的时长、字数与查词/制卡统计？你收藏的单词和句子不受影响。';
   @override
   String get stat_delete_title => '删除统计数据';
+  @override
+  String get video_subtitle_waveform_open => '波形对轴';
+  @override
+  String get video_subtitle_waveform_open_hint => '点击放大查看并对轴';
+  @override
+  String get video_subtitle_waveform_legend_energy => '响度';
+  @override
+  String get video_subtitle_waveform_legend_cue => '字幕边界';
+  @override
+  String get video_subtitle_waveform_legend_playhead => '播放头';
+  @override
+  String get video_subtitle_waveform_scroll_hint => '横向拖动查看时间轴，用下方控件对齐字幕';
+  @override
+  String get video_subtitle_waveform_jump_playhead => '跳到播放头';
+  @override
+  String get video_subtitle_waveform_zoom_in => '放大';
+  @override
+  String get video_subtitle_waveform_zoom_out => '缩小';
 }
 
 // Path: retrying_in
@@ -79479,6 +79773,25 @@ class _StringsZhHk extends _StringsEn {
       'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
   @override
   String get stat_delete_title => 'Delete statistics';
+  @override
+  String get video_subtitle_waveform_open => 'Waveform alignment';
+  @override
+  String get video_subtitle_waveform_open_hint => 'Tap to zoom in and align';
+  @override
+  String get video_subtitle_waveform_legend_energy => 'Loudness';
+  @override
+  String get video_subtitle_waveform_legend_cue => 'Subtitle cue';
+  @override
+  String get video_subtitle_waveform_legend_playhead => 'Playhead';
+  @override
+  String get video_subtitle_waveform_scroll_hint =>
+      'Drag to scan the timeline; use the controls below to align';
+  @override
+  String get video_subtitle_waveform_jump_playhead => 'Jump to playhead';
+  @override
+  String get video_subtitle_waveform_zoom_in => 'Zoom in';
+  @override
+  String get video_subtitle_waveform_zoom_out => 'Zoom out';
 }
 
 // Path: retrying_in
@@ -83839,6 +84152,24 @@ extension on _StringsEn {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -88159,6 +88490,24 @@ extension on _StringsAr {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -92501,6 +92850,24 @@ extension on _StringsDe {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -96841,6 +97208,24 @@ extension on _StringsEs {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -101188,6 +101573,24 @@ extension on _StringsFr {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -105515,6 +105918,24 @@ extension on _StringsId {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -109859,6 +110280,24 @@ extension on _StringsIt {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -114161,6 +114600,24 @@ extension on _StringsJa {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -118466,6 +118923,24 @@ extension on _StringsKo {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -122803,6 +123278,24 @@ extension on _StringsNl {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -127137,6 +127630,24 @@ extension on _StringsPtBr {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -131475,6 +131986,24 @@ extension on _StringsRu {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -135795,6 +136324,24 @@ extension on _StringsTh {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -140124,6 +140671,24 @@ extension on _StringsTr {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -144447,6 +145012,24 @@ extension on _StringsVi {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
@@ -148736,6 +149319,24 @@ extension on _StringsZhCn {
         return '删除该项的时长、字数与查词/制卡统计？你收藏的单词和句子不受影响。';
       case 'stat_delete_title':
         return '删除统计数据';
+      case 'video_subtitle_waveform_open':
+        return '波形对轴';
+      case 'video_subtitle_waveform_open_hint':
+        return '点击放大查看并对轴';
+      case 'video_subtitle_waveform_legend_energy':
+        return '响度';
+      case 'video_subtitle_waveform_legend_cue':
+        return '字幕边界';
+      case 'video_subtitle_waveform_legend_playhead':
+        return '播放头';
+      case 'video_subtitle_waveform_scroll_hint':
+        return '横向拖动查看时间轴，用下方控件对齐字幕';
+      case 'video_subtitle_waveform_jump_playhead':
+        return '跳到播放头';
+      case 'video_subtitle_waveform_zoom_in':
+        return '放大';
+      case 'video_subtitle_waveform_zoom_out':
+        return '缩小';
       default:
         return null;
     }
@@ -153030,6 +153631,24 @@ extension on _StringsZhHk {
         return 'Delete this item\'s time, character count, and lookup/mining statistics? Your saved words and sentences are not affected.';
       case 'stat_delete_title':
         return 'Delete statistics';
+      case 'video_subtitle_waveform_open':
+        return 'Waveform alignment';
+      case 'video_subtitle_waveform_open_hint':
+        return 'Tap to zoom in and align';
+      case 'video_subtitle_waveform_legend_energy':
+        return 'Loudness';
+      case 'video_subtitle_waveform_legend_cue':
+        return 'Subtitle cue';
+      case 'video_subtitle_waveform_legend_playhead':
+        return 'Playhead';
+      case 'video_subtitle_waveform_scroll_hint':
+        return 'Drag to scan the timeline; use the controls below to align';
+      case 'video_subtitle_waveform_jump_playhead':
+        return 'Jump to playhead';
+      case 'video_subtitle_waveform_zoom_in':
+        return 'Zoom in';
+      case 'video_subtitle_waveform_zoom_out':
+        return 'Zoom out';
       default:
         return null;
     }
