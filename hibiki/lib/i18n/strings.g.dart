@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36737 (2161 per locale)
+/// Strings: 36754 (2162 per locale)
 ///
-/// Built on 2026-07-07 at 12:57 UTC
+/// Built on 2026-07-07 at 14:55 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2869,6 +2869,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get render_impeller_disable_hint =>
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   String get render_restart_required => 'Takes effect after restarting the app';
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -7759,6 +7761,9 @@ class _StringsAr extends _StringsEn {
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -12772,6 +12777,9 @@ class _StringsDe extends _StringsEn {
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -17802,6 +17810,9 @@ class _StringsEs extends _StringsEn {
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -22851,6 +22862,9 @@ class _StringsFr extends _StringsEn {
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -27802,6 +27816,9 @@ class _StringsId extends _StringsEn {
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -32814,6 +32831,9 @@ class _StringsIt extends _StringsEn {
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -37552,6 +37572,9 @@ class _StringsJa extends _StringsEn {
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -42294,6 +42317,9 @@ class _StringsKo extends _StringsEn {
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -47274,6 +47300,9 @@ class _StringsNl extends _StringsEn {
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -52277,6 +52306,9 @@ class _StringsPtBr extends _StringsEn {
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -57255,6 +57287,9 @@ class _StringsRu extends _StringsEn {
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -62146,6 +62181,9 @@ class _StringsTh extends _StringsEn {
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -67092,6 +67130,9 @@ class _StringsTr extends _StringsEn {
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -72013,6 +72054,9 @@ class _StringsVi extends _StringsEn {
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -76604,6 +76648,8 @@ class _StringsZhCn extends _StringsEn {
       '改用 Skia 渲染后端。视频能播放但画面恒黑时可尝试；重启 App 后生效。';
   @override
   String get render_restart_required => '重启 App 后生效';
+  @override
+  String get video_subtitle_waveform_unavailable => '本设备无法生成波形';
 }
 
 // Path: retrying_in
@@ -81244,6 +81290,9 @@ class _StringsZhHk extends _StringsEn {
       'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -85704,6 +85753,8 @@ extension on _StringsEn {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -90124,6 +90175,8 @@ extension on _StringsAr {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -94566,6 +94619,8 @@ extension on _StringsDe {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -99006,6 +99061,8 @@ extension on _StringsEs {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -103453,6 +103510,8 @@ extension on _StringsFr {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -107880,6 +107939,8 @@ extension on _StringsId {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -112324,6 +112385,8 @@ extension on _StringsIt {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -116726,6 +116789,8 @@ extension on _StringsJa {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -121131,6 +121196,8 @@ extension on _StringsKo {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -125568,6 +125635,8 @@ extension on _StringsNl {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -130002,6 +130071,8 @@ extension on _StringsPtBr {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -134440,6 +134511,8 @@ extension on _StringsRu {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -138860,6 +138933,8 @@ extension on _StringsTh {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -143289,6 +143364,8 @@ extension on _StringsTr {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -147712,6 +147789,8 @@ extension on _StringsVi {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -152101,6 +152180,8 @@ extension on _StringsZhCn {
         return '改用 Skia 渲染后端。视频能播放但画面恒黑时可尝试；重启 App 后生效。';
       case 'render_restart_required':
         return '重启 App 后生效';
+      case 'video_subtitle_waveform_unavailable':
+        return '本设备无法生成波形';
       default:
         return null;
     }
@@ -156495,6 +156576,8 @@ extension on _StringsZhHk {
         return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
