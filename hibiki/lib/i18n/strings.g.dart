@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36771 (2163 per locale)
+/// Strings: 36788 (2164 per locale)
 ///
-/// Built on 2026-07-07 at 14:58 UTC
+/// Built on 2026-07-07 at 15:24 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2871,6 +2871,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get render_restart_required => 'Takes effect after restarting the app';
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -7765,6 +7767,9 @@ class _StringsAr extends _StringsEn {
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   @override
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -12782,6 +12787,9 @@ class _StringsDe extends _StringsEn {
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   @override
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -17816,6 +17824,9 @@ class _StringsEs extends _StringsEn {
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   @override
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -22869,6 +22880,9 @@ class _StringsFr extends _StringsEn {
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   @override
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -27824,6 +27838,9 @@ class _StringsId extends _StringsEn {
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   @override
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -32840,6 +32857,9 @@ class _StringsIt extends _StringsEn {
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   @override
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -37582,6 +37602,9 @@ class _StringsJa extends _StringsEn {
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   @override
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -42328,6 +42351,9 @@ class _StringsKo extends _StringsEn {
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   @override
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -47312,6 +47338,9 @@ class _StringsNl extends _StringsEn {
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   @override
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -52319,6 +52348,9 @@ class _StringsPtBr extends _StringsEn {
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   @override
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -57301,6 +57333,9 @@ class _StringsRu extends _StringsEn {
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   @override
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -62196,6 +62231,9 @@ class _StringsTh extends _StringsEn {
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   @override
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -67146,6 +67184,9 @@ class _StringsTr extends _StringsEn {
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   @override
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -72071,6 +72112,9 @@ class _StringsVi extends _StringsEn {
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   @override
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -76666,6 +76710,8 @@ class _StringsZhCn extends _StringsEn {
   String get handlebar_card_image => '卡片图片（封面 / 视频 GIF）';
   @override
   String get video_subtitle_youtube_captions => 'YouTube 字幕';
+  @override
+  String get video_subtitle_waveform_unavailable => '本设备无法生成波形';
 }
 
 // Path: retrying_in
@@ -81310,6 +81356,9 @@ class _StringsZhHk extends _StringsEn {
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   @override
   String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
 }
 
 // Path: retrying_in
@@ -85774,6 +85823,8 @@ extension on _StringsEn {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -90198,6 +90249,8 @@ extension on _StringsAr {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -94644,6 +94697,8 @@ extension on _StringsDe {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -99088,6 +99143,8 @@ extension on _StringsEs {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -103539,6 +103596,8 @@ extension on _StringsFr {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -107970,6 +108029,8 @@ extension on _StringsId {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -112418,6 +112479,8 @@ extension on _StringsIt {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -116824,6 +116887,8 @@ extension on _StringsJa {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -121233,6 +121298,8 @@ extension on _StringsKo {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -125674,6 +125741,8 @@ extension on _StringsNl {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -130112,6 +130181,8 @@ extension on _StringsPtBr {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -134554,6 +134625,8 @@ extension on _StringsRu {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -138978,6 +139051,8 @@ extension on _StringsTh {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -143411,6 +143486,8 @@ extension on _StringsTr {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -147838,6 +147915,8 @@ extension on _StringsVi {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
@@ -152231,6 +152310,8 @@ extension on _StringsZhCn {
         return '卡片图片（封面 / 视频 GIF）';
       case 'video_subtitle_youtube_captions':
         return 'YouTube 字幕';
+      case 'video_subtitle_waveform_unavailable':
+        return '本设备无法生成波形';
       default:
         return null;
     }
@@ -156629,6 +156710,8 @@ extension on _StringsZhHk {
         return 'Card Image (Cover / GIF)';
       case 'video_subtitle_youtube_captions':
         return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
       default:
         return null;
     }
