@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36788 (2164 per locale)
+/// Strings: 36805 (2165 per locale)
 ///
-/// Built on 2026-07-07 at 15:24 UTC
+/// Built on 2026-07-07 at 15:26 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2873,6 +2873,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_subtitle_youtube_captions => 'YouTube captions';
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -7770,6 +7771,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -12790,6 +12793,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -17827,6 +17832,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -22883,6 +22890,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -27841,6 +27850,8 @@ class _StringsId extends _StringsEn {
   @override
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -32860,6 +32871,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -37605,6 +37618,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -42354,6 +42369,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -47341,6 +47358,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -52351,6 +52370,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -57336,6 +57357,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -62234,6 +62257,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -67187,6 +67212,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -72115,6 +72142,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -76712,6 +76741,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_subtitle_youtube_captions => 'YouTube 字幕';
   @override
   String get video_subtitle_waveform_unavailable => '本设备无法生成波形';
+  @override
+  String get shortcut_action_reader_open_navigation => '打开导航';
 }
 
 // Path: retrying_in
@@ -81359,6 +81390,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
 }
 
 // Path: retrying_in
@@ -85825,6 +85858,8 @@ extension on _StringsEn {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
@@ -90251,6 +90286,8 @@ extension on _StringsAr {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
@@ -94699,6 +94736,8 @@ extension on _StringsDe {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
@@ -99145,6 +99184,8 @@ extension on _StringsEs {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
@@ -103598,6 +103639,8 @@ extension on _StringsFr {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
@@ -108031,6 +108074,8 @@ extension on _StringsId {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
@@ -112481,6 +112526,8 @@ extension on _StringsIt {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
@@ -116889,6 +116936,8 @@ extension on _StringsJa {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
@@ -121300,6 +121349,8 @@ extension on _StringsKo {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
@@ -125743,6 +125794,8 @@ extension on _StringsNl {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
@@ -130183,6 +130236,8 @@ extension on _StringsPtBr {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
@@ -134627,6 +134682,8 @@ extension on _StringsRu {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
@@ -139053,6 +139110,8 @@ extension on _StringsTh {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
@@ -143488,6 +143547,8 @@ extension on _StringsTr {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
@@ -147917,6 +147978,8 @@ extension on _StringsVi {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
@@ -152312,6 +152375,8 @@ extension on _StringsZhCn {
         return 'YouTube 字幕';
       case 'video_subtitle_waveform_unavailable':
         return '本设备无法生成波形';
+      case 'shortcut_action_reader_open_navigation':
+        return '打开导航';
       default:
         return null;
     }
@@ -156712,6 +156777,8 @@ extension on _StringsZhHk {
         return 'YouTube captions';
       case 'video_subtitle_waveform_unavailable':
         return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
       default:
         return null;
     }
