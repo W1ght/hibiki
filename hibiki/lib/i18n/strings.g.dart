@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 36737 (2161 per locale)
 ///
-/// Built on 2026-07-07 at 09:59 UTC
+/// Built on 2026-07-07 at 12:57 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2732,7 +2732,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get browser_extension_step_pick_folder =>
       'Select the extension folder below (its path is already copied to your clipboard).';
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. Hibiki\'s Yomitan API server is now on and the extension is auto-configured to connect to it — no host/port/token to fill in.';
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
   String get copied => 'Copied';
@@ -76373,7 +76373,7 @@ class _StringsZhCn extends _StringsEn {
   String get browser_extension_step_pick_folder => '选择下方的扩展文件夹（其路径已复制到剪贴板）。';
   @override
   String get browser_extension_step_done_auto =>
-      '完成。扩展已自动配置为连接本应用——无需填写 host/端口/token。';
+      '完成。已自动开启 Yomitan API 服务器，扩展已配置好连接本应用（查词 API，与设备互联/同步无关）——无需填写 host/端口/token。';
   @override
   String get browser_extension_enable_server_first =>
       '提示：请先在上方开启「Yomitan API 服务器」并设置 API 密钥，扩展才能被自动配置为可用连接。';
@@ -81000,7 +81000,7 @@ class _StringsZhHk extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. Hibiki\'s Yomitan API server is now on and the extension is auto-configured to connect to it — no host/port/token to fill in.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -85488,7 +85488,7 @@ extension on _StringsEn {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. Hibiki\'s Yomitan API server is now on and the extension is auto-configured to connect to it — no host/port/token to fill in.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -151885,7 +151885,7 @@ extension on _StringsZhCn {
       case 'browser_extension_step_pick_folder':
         return '选择下方的扩展文件夹（其路径已复制到剪贴板）。';
       case 'browser_extension_step_done_auto':
-        return '完成。扩展已自动配置为连接本应用——无需填写 host/端口/token。';
+        return '完成。已自动开启 Yomitan API 服务器，扩展已配置好连接本应用（查词 API，与设备互联/同步无关）——无需填写 host/端口/token。';
       case 'browser_extension_enable_server_first':
         return '提示：请先在上方开启「Yomitan API 服务器」并设置 API 密钥，扩展才能被自动配置为可用连接。';
       case 'copied':
@@ -156279,7 +156279,7 @@ extension on _StringsZhHk {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. Hibiki\'s Yomitan API server is now on and the extension is auto-configured to connect to it — no host/port/token to fill in.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
