@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 36737 (2161 per locale)
 ///
-/// Built on 2026-07-07 at 09:27 UTC
+/// Built on 2026-07-07 at 09:59 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2858,7 +2858,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get stat_fastest_day => 'Fastest Day';
   String get stat_slowest_day => 'Slowest Day';
   String get stat_col_book => 'Book';
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   String get media_source_network_remote_path => 'Remote path';
   String get media_source_network_label_optional => 'Display name (optional)';
   String get media_source_network_missing_fields =>
@@ -7741,7 +7742,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get stat_col_book => 'Book';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   @override
   String get media_source_network_remote_path => 'Remote path';
   @override
@@ -12753,7 +12755,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get stat_col_book => 'Book';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   @override
   String get media_source_network_remote_path => 'Remote path';
   @override
@@ -17782,7 +17785,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get stat_col_book => 'Book';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   @override
   String get media_source_network_remote_path => 'Remote path';
   @override
@@ -22830,7 +22834,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get stat_col_book => 'Book';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   @override
   String get media_source_network_remote_path => 'Remote path';
   @override
@@ -27780,7 +27785,8 @@ class _StringsId extends _StringsEn {
   @override
   String get stat_col_book => 'Book';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   @override
   String get media_source_network_remote_path => 'Remote path';
   @override
@@ -32791,7 +32797,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get stat_col_book => 'Book';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   @override
   String get media_source_network_remote_path => 'Remote path';
   @override
@@ -37528,7 +37535,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get stat_col_book => 'Book';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   @override
   String get media_source_network_remote_path => 'Remote path';
   @override
@@ -42269,7 +42277,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get stat_col_book => 'Book';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   @override
   String get media_source_network_remote_path => 'Remote path';
   @override
@@ -47248,7 +47257,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get stat_col_book => 'Book';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   @override
   String get media_source_network_remote_path => 'Remote path';
   @override
@@ -52250,7 +52260,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get stat_col_book => 'Book';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   @override
   String get media_source_network_remote_path => 'Remote path';
   @override
@@ -57227,7 +57238,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get stat_col_book => 'Book';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   @override
   String get media_source_network_remote_path => 'Remote path';
   @override
@@ -62117,7 +62129,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get stat_col_book => 'Book';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   @override
   String get media_source_network_remote_path => 'Remote path';
   @override
@@ -67062,7 +67075,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get stat_col_book => 'Book';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   @override
   String get media_source_network_remote_path => 'Remote path';
   @override
@@ -71982,7 +71996,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get stat_col_book => 'Book';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   @override
   String get media_source_network_remote_path => 'Remote path';
   @override
@@ -76575,7 +76590,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get stat_col_book => '书籍';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP 远端书库';
+  String get media_source_network_subtitle => 'SFTP / FTP / WebDAV 远端书库';
   @override
   String get media_source_network_remote_path => '远端路径';
   @override
@@ -81212,7 +81227,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get stat_col_book => 'Book';
   @override
-  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
   @override
   String get media_source_network_remote_path => 'Remote path';
   @override
@@ -85675,7 +85691,7 @@ extension on _StringsEn {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
@@ -90095,7 +90111,7 @@ extension on _StringsAr {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
@@ -94537,7 +94553,7 @@ extension on _StringsDe {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
@@ -98977,7 +98993,7 @@ extension on _StringsEs {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
@@ -103424,7 +103440,7 @@ extension on _StringsFr {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
@@ -107851,7 +107867,7 @@ extension on _StringsId {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
@@ -112295,7 +112311,7 @@ extension on _StringsIt {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
@@ -116697,7 +116713,7 @@ extension on _StringsJa {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
@@ -121102,7 +121118,7 @@ extension on _StringsKo {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
@@ -125539,7 +125555,7 @@ extension on _StringsNl {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
@@ -129973,7 +129989,7 @@ extension on _StringsPtBr {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
@@ -134411,7 +134427,7 @@ extension on _StringsRu {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
@@ -138831,7 +138847,7 @@ extension on _StringsTh {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
@@ -143260,7 +143276,7 @@ extension on _StringsTr {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
@@ -147683,7 +147699,7 @@ extension on _StringsVi {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
@@ -152072,7 +152088,7 @@ extension on _StringsZhCn {
       case 'stat_col_book':
         return '书籍';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP 远端书库';
+        return 'SFTP / FTP / WebDAV 远端书库';
       case 'media_source_network_remote_path':
         return '远端路径';
       case 'media_source_network_label_optional':
@@ -156466,7 +156482,7 @@ extension on _StringsZhHk {
       case 'stat_col_book':
         return 'Book';
       case 'media_source_network_subtitle':
-        return 'SFTP / FTP remote library';
+        return 'SFTP / FTP / WebDAV remote library';
       case 'media_source_network_remote_path':
         return 'Remote path';
       case 'media_source_network_label_optional':
