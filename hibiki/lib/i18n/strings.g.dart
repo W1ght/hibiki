@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36992 (2176 per locale)
+/// Strings: 37009 (2177 per locale)
 ///
-/// Built on 2026-07-07 at 17:28 UTC
+/// Built on 2026-07-07 at 18:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2887,6 +2887,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_subtitle_text_color_cyan => 'Cyan';
   String get video_setting_subtitle_text_color_green => 'Green';
   String get video_setting_subtitle_text_color_red => 'Red';
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -7810,6 +7811,8 @@ class _StringsAr extends _StringsEn {
   String get video_setting_subtitle_text_color_green => 'Green';
   @override
   String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -12856,6 +12859,8 @@ class _StringsDe extends _StringsEn {
   String get video_setting_subtitle_text_color_green => 'Green';
   @override
   String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -17919,6 +17924,8 @@ class _StringsEs extends _StringsEn {
   String get video_setting_subtitle_text_color_green => 'Green';
   @override
   String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -23001,6 +23008,8 @@ class _StringsFr extends _StringsEn {
   String get video_setting_subtitle_text_color_green => 'Green';
   @override
   String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -27985,6 +27994,8 @@ class _StringsId extends _StringsEn {
   String get video_setting_subtitle_text_color_green => 'Green';
   @override
   String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -33030,6 +33041,8 @@ class _StringsIt extends _StringsEn {
   String get video_setting_subtitle_text_color_green => 'Green';
   @override
   String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -37801,6 +37814,8 @@ class _StringsJa extends _StringsEn {
   String get video_setting_subtitle_text_color_green => 'Green';
   @override
   String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -42576,6 +42591,8 @@ class _StringsKo extends _StringsEn {
   String get video_setting_subtitle_text_color_green => 'Green';
   @override
   String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -47589,6 +47606,8 @@ class _StringsNl extends _StringsEn {
   String get video_setting_subtitle_text_color_green => 'Green';
   @override
   String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -52625,6 +52644,8 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_subtitle_text_color_green => 'Green';
   @override
   String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -57636,6 +57657,8 @@ class _StringsRu extends _StringsEn {
   String get video_setting_subtitle_text_color_green => 'Green';
   @override
   String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -62560,6 +62583,8 @@ class _StringsTh extends _StringsEn {
   String get video_setting_subtitle_text_color_green => 'Green';
   @override
   String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -67539,6 +67564,8 @@ class _StringsTr extends _StringsEn {
   String get video_setting_subtitle_text_color_green => 'Green';
   @override
   String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -72493,6 +72520,8 @@ class _StringsVi extends _StringsEn {
   String get video_setting_subtitle_text_color_green => 'Green';
   @override
   String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -77116,6 +77145,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_subtitle_text_color_green => '绿色';
   @override
   String get video_setting_subtitle_text_color_red => '红色';
+  @override
+  String get card_mining_pending => '制卡中…';
 }
 
 // Path: retrying_in
@@ -81789,6 +81820,8 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_subtitle_text_color_green => 'Green';
   @override
   String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
 }
 
 // Path: retrying_in
@@ -86279,6 +86312,8 @@ extension on _StringsEn {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
@@ -90729,6 +90764,8 @@ extension on _StringsAr {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
@@ -95201,6 +95238,8 @@ extension on _StringsDe {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
@@ -99671,6 +99710,8 @@ extension on _StringsEs {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
@@ -104148,6 +104189,8 @@ extension on _StringsFr {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
@@ -108605,6 +108648,8 @@ extension on _StringsId {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
@@ -113079,6 +113124,8 @@ extension on _StringsIt {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
@@ -117511,6 +117558,8 @@ extension on _StringsJa {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
@@ -121946,6 +121995,8 @@ extension on _StringsKo {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
@@ -126413,6 +126464,8 @@ extension on _StringsNl {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
@@ -130877,6 +130930,8 @@ extension on _StringsPtBr {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
@@ -135345,6 +135400,8 @@ extension on _StringsRu {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
@@ -139795,6 +139852,8 @@ extension on _StringsTh {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
@@ -144254,6 +144313,8 @@ extension on _StringsTr {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
@@ -148707,6 +148768,8 @@ extension on _StringsVi {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
@@ -153126,6 +153189,8 @@ extension on _StringsZhCn {
         return '绿色';
       case 'video_setting_subtitle_text_color_red':
         return '红色';
+      case 'card_mining_pending':
+        return '制卡中…';
       default:
         return null;
     }
@@ -157550,6 +157615,8 @@ extension on _StringsZhHk {
         return 'Green';
       case 'video_setting_subtitle_text_color_red':
         return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
       default:
         return null;
     }
