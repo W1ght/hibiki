@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36346 (2138 per locale)
+/// Strings: 36618 (2154 per locale)
 ///
-/// Built on 2026-07-06 at 19:48 UTC
+/// Built on 2026-07-07 at 04:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2842,6 +2842,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
   String get shortcut_view_list => 'List view';
   String get shortcut_view_visual => 'Controller layout';
+  String get stat_range_and_trend => 'Range & Trend';
+  String get stat_metric_chars => 'Characters';
+  String get stat_metric_time => 'Time';
+  String get stat_metric_speed => 'Speed';
+  String get stat_goal => 'Daily Goal';
+  String get stat_streak => 'Streak';
+  String stat_format_days({required Object n}) => '${n} days';
+  String get stat_bookshelf_compare => 'Bookshelf';
+  String get stat_speed_summary => 'Speed Summary';
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  String get stat_typical_day => 'Typical Day';
+  String get stat_recent_active => 'Active Days (7d)';
+  String get stat_vs_prev => 'vs prev 14d';
+  String get stat_fastest_day => 'Fastest Day';
+  String get stat_slowest_day => 'Slowest Day';
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -7682,6 +7698,38 @@ class _StringsAr extends _StringsEn {
   String get shortcut_view_list => 'List view';
   @override
   String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -12645,6 +12693,38 @@ class _StringsDe extends _StringsEn {
   String get shortcut_view_list => 'List view';
   @override
   String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -17625,6 +17705,38 @@ class _StringsEs extends _StringsEn {
   String get shortcut_view_list => 'List view';
   @override
   String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -22624,6 +22736,38 @@ class _StringsFr extends _StringsEn {
   String get shortcut_view_list => 'List view';
   @override
   String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -27525,6 +27669,38 @@ class _StringsId extends _StringsEn {
   String get shortcut_view_list => 'List view';
   @override
   String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -32487,6 +32663,38 @@ class _StringsIt extends _StringsEn {
   String get shortcut_view_list => 'List view';
   @override
   String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -37175,6 +37383,38 @@ class _StringsJa extends _StringsEn {
   String get shortcut_view_list => 'List view';
   @override
   String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -41867,6 +42107,38 @@ class _StringsKo extends _StringsEn {
   String get shortcut_view_list => 'List view';
   @override
   String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -46797,6 +47069,38 @@ class _StringsNl extends _StringsEn {
   String get shortcut_view_list => 'List view';
   @override
   String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -51750,6 +52054,38 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_view_list => 'List view';
   @override
   String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -56678,6 +57014,38 @@ class _StringsRu extends _StringsEn {
   String get shortcut_view_list => 'List view';
   @override
   String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -61519,6 +61887,38 @@ class _StringsTh extends _StringsEn {
   String get shortcut_view_list => 'List view';
   @override
   String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -66415,6 +66815,38 @@ class _StringsTr extends _StringsEn {
   String get shortcut_view_list => 'List view';
   @override
   String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -71286,6 +71718,38 @@ class _StringsVi extends _StringsEn {
   String get shortcut_view_list => 'List view';
   @override
   String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -75830,6 +76294,38 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_view_list => '列表视图';
   @override
   String get shortcut_view_visual => '手柄可视化图';
+  @override
+  String get stat_range_and_trend => '范围与趋势';
+  @override
+  String get stat_metric_chars => '字数';
+  @override
+  String get stat_metric_time => '时长';
+  @override
+  String get stat_metric_speed => '速度';
+  @override
+  String get stat_goal => '每日目标';
+  @override
+  String get stat_streak => '连续天数';
+  @override
+  String stat_format_days({required Object n}) => '${n} 天';
+  @override
+  String get stat_bookshelf_compare => '书架对比';
+  @override
+  String get stat_speed_summary => '速度摘要';
+  @override
+  String get stat_weighted_avg_speed => '加权均速';
+  @override
+  String get stat_typical_day => '典型日';
+  @override
+  String get stat_recent_active => '近 7 日活跃';
+  @override
+  String get stat_vs_prev => '较前 14 天';
+  @override
+  String get stat_fastest_day => '最快日';
+  @override
+  String get stat_slowest_day => '最慢日';
+  @override
+  String get stat_col_book => '书籍';
 }
 
 // Path: retrying_in
@@ -80420,6 +80916,38 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_view_list => 'List view';
   @override
   String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
 }
 
 // Path: retrying_in
@@ -84834,6 +85362,38 @@ extension on _StringsEn {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
@@ -89208,6 +89768,38 @@ extension on _StringsAr {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
@@ -93604,6 +94196,38 @@ extension on _StringsDe {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
@@ -97998,6 +98622,38 @@ extension on _StringsEs {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
@@ -102399,6 +103055,38 @@ extension on _StringsFr {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
@@ -106780,6 +107468,38 @@ extension on _StringsId {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
@@ -111178,6 +111898,38 @@ extension on _StringsIt {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
@@ -115534,6 +116286,38 @@ extension on _StringsJa {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
@@ -119893,6 +120677,38 @@ extension on _StringsKo {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
@@ -124284,6 +125100,38 @@ extension on _StringsNl {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
@@ -128672,6 +129520,38 @@ extension on _StringsPtBr {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
@@ -133064,6 +133944,38 @@ extension on _StringsRu {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
@@ -137438,6 +138350,38 @@ extension on _StringsTh {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
@@ -141821,6 +142765,38 @@ extension on _StringsTr {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
@@ -146198,6 +147174,38 @@ extension on _StringsVi {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
@@ -150541,6 +151549,38 @@ extension on _StringsZhCn {
         return '列表视图';
       case 'shortcut_view_visual':
         return '手柄可视化图';
+      case 'stat_range_and_trend':
+        return '范围与趋势';
+      case 'stat_metric_chars':
+        return '字数';
+      case 'stat_metric_time':
+        return '时长';
+      case 'stat_metric_speed':
+        return '速度';
+      case 'stat_goal':
+        return '每日目标';
+      case 'stat_streak':
+        return '连续天数';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} 天';
+      case 'stat_bookshelf_compare':
+        return '书架对比';
+      case 'stat_speed_summary':
+        return '速度摘要';
+      case 'stat_weighted_avg_speed':
+        return '加权均速';
+      case 'stat_typical_day':
+        return '典型日';
+      case 'stat_recent_active':
+        return '近 7 日活跃';
+      case 'stat_vs_prev':
+        return '较前 14 天';
+      case 'stat_fastest_day':
+        return '最快日';
+      case 'stat_slowest_day':
+        return '最慢日';
+      case 'stat_col_book':
+        return '书籍';
       default:
         return null;
     }
@@ -154889,6 +155929,38 @@ extension on _StringsZhHk {
         return 'List view';
       case 'shortcut_view_visual':
         return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
       default:
         return null;
     }
