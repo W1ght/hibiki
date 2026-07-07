@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36805 (2165 per locale)
+/// Strings: 36890 (2170 per locale)
 ///
-/// Built on 2026-07-07 at 15:26 UTC
+/// Built on 2026-07-07 at 16:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2874,6 +2874,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  String get stat_clear_all => 'Clear statistics';
+  String get stat_clear_all_title => 'Clear all statistics';
+  String get stat_clear_all_confirm => 'Clear';
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -7773,6 +7780,18 @@ class _StringsAr extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -12795,6 +12814,18 @@ class _StringsDe extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -17834,6 +17865,18 @@ class _StringsEs extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -22892,6 +22935,18 @@ class _StringsFr extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -27852,6 +27907,18 @@ class _StringsId extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -32873,6 +32940,18 @@ class _StringsIt extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -37620,6 +37699,18 @@ class _StringsJa extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -42371,6 +42462,18 @@ class _StringsKo extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -47360,6 +47463,18 @@ class _StringsNl extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -52372,6 +52487,18 @@ class _StringsPtBr extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -57359,6 +57486,18 @@ class _StringsRu extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -62259,6 +62398,18 @@ class _StringsTh extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -67214,6 +67365,18 @@ class _StringsTr extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -72144,6 +72307,18 @@ class _StringsVi extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -76743,6 +76918,18 @@ class _StringsZhCn extends _StringsEn {
   String get video_subtitle_waveform_unavailable => '本设备无法生成波形';
   @override
   String get shortcut_action_reader_open_navigation => '打开导航';
+  @override
+  String get stat_clear_all => '清空统计';
+  @override
+  String get stat_clear_all_title => '清空全部统计';
+  @override
+  String get stat_clear_all_confirm => '清空';
+  @override
+  String get stat_clear_all_reading_message =>
+      '确定清空全部阅读统计吗？将删除所有阅读时长、字数以及查词 / 制卡计数。你收藏的词、句子和已制卡片不受影响。此操作不可撤销。';
+  @override
+  String get stat_clear_all_video_message =>
+      '确定清空全部视频统计吗？将删除所有观看时长、字幕字数以及查词 / 制卡计数。你收藏的词、句子和已制卡片不受影响。此操作不可撤销。';
 }
 
 // Path: retrying_in
@@ -81392,6 +81579,18 @@ class _StringsZhHk extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
 }
 
 // Path: retrying_in
@@ -85860,6 +86059,16 @@ extension on _StringsEn {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -90288,6 +90497,16 @@ extension on _StringsAr {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -94738,6 +94957,16 @@ extension on _StringsDe {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -99186,6 +99415,16 @@ extension on _StringsEs {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -103641,6 +103880,16 @@ extension on _StringsFr {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -108076,6 +108325,16 @@ extension on _StringsId {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -112528,6 +112787,16 @@ extension on _StringsIt {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -116938,6 +117207,16 @@ extension on _StringsJa {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -121351,6 +121630,16 @@ extension on _StringsKo {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -125796,6 +126085,16 @@ extension on _StringsNl {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -130238,6 +130537,16 @@ extension on _StringsPtBr {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -134684,6 +134993,16 @@ extension on _StringsRu {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -139112,6 +139431,16 @@ extension on _StringsTh {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -143549,6 +143878,16 @@ extension on _StringsTr {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -147980,6 +148319,16 @@ extension on _StringsVi {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -152377,6 +152726,16 @@ extension on _StringsZhCn {
         return '本设备无法生成波形';
       case 'shortcut_action_reader_open_navigation':
         return '打开导航';
+      case 'stat_clear_all':
+        return '清空统计';
+      case 'stat_clear_all_title':
+        return '清空全部统计';
+      case 'stat_clear_all_confirm':
+        return '清空';
+      case 'stat_clear_all_reading_message':
+        return '确定清空全部阅读统计吗？将删除所有阅读时长、字数以及查词 / 制卡计数。你收藏的词、句子和已制卡片不受影响。此操作不可撤销。';
+      case 'stat_clear_all_video_message':
+        return '确定清空全部视频统计吗？将删除所有观看时长、字幕字数以及查词 / 制卡计数。你收藏的词、句子和已制卡片不受影响。此操作不可撤销。';
       default:
         return null;
     }
@@ -156779,6 +157138,16 @@ extension on _StringsZhHk {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       default:
         return null;
     }
