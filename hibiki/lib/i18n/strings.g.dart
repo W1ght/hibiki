@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36890 (2170 per locale)
+/// Strings: 36992 (2176 per locale)
 ///
-/// Built on 2026-07-07 at 16:33 UTC
+/// Built on 2026-07-07 at 17:28 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2881,6 +2881,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  String get video_setting_subtitle_text_color => 'Text color';
+  String get video_setting_subtitle_text_color_white => 'White';
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  String get video_setting_subtitle_text_color_green => 'Green';
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -7792,6 +7798,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -12826,6 +12844,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -17877,6 +17907,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -22947,6 +22989,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -27919,6 +27973,18 @@ class _StringsId extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -32952,6 +33018,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -37711,6 +37789,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -42474,6 +42564,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -47475,6 +47577,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -52499,6 +52613,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -57498,6 +57624,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -62410,6 +62548,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -67377,6 +67527,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -72319,6 +72481,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -76930,6 +77104,18 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       '确定清空全部视频统计吗？将删除所有观看时长、字幕字数以及查词 / 制卡计数。你收藏的词、句子和已制卡片不受影响。此操作不可撤销。';
+  @override
+  String get video_setting_subtitle_text_color => '文字颜色';
+  @override
+  String get video_setting_subtitle_text_color_white => '白色';
+  @override
+  String get video_setting_subtitle_text_color_yellow => '黄色';
+  @override
+  String get video_setting_subtitle_text_color_cyan => '青色';
+  @override
+  String get video_setting_subtitle_text_color_green => '绿色';
+  @override
+  String get video_setting_subtitle_text_color_red => '红色';
 }
 
 // Path: retrying_in
@@ -81591,6 +81777,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -86069,6 +86267,18 @@ extension on _StringsEn {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -90507,6 +90717,18 @@ extension on _StringsAr {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -94967,6 +95189,18 @@ extension on _StringsDe {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -99425,6 +99659,18 @@ extension on _StringsEs {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -103890,6 +104136,18 @@ extension on _StringsFr {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -108335,6 +108593,18 @@ extension on _StringsId {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -112797,6 +113067,18 @@ extension on _StringsIt {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -117217,6 +117499,18 @@ extension on _StringsJa {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -121640,6 +121934,18 @@ extension on _StringsKo {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -126095,6 +126401,18 @@ extension on _StringsNl {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -130547,6 +130865,18 @@ extension on _StringsPtBr {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -135003,6 +135333,18 @@ extension on _StringsRu {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -139441,6 +139783,18 @@ extension on _StringsTh {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -143888,6 +144242,18 @@ extension on _StringsTr {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -148329,6 +148695,18 @@ extension on _StringsVi {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -152736,6 +153114,18 @@ extension on _StringsZhCn {
         return '确定清空全部阅读统计吗？将删除所有阅读时长、字数以及查词 / 制卡计数。你收藏的词、句子和已制卡片不受影响。此操作不可撤销。';
       case 'stat_clear_all_video_message':
         return '确定清空全部视频统计吗？将删除所有观看时长、字幕字数以及查词 / 制卡计数。你收藏的词、句子和已制卡片不受影响。此操作不可撤销。';
+      case 'video_setting_subtitle_text_color':
+        return '文字颜色';
+      case 'video_setting_subtitle_text_color_white':
+        return '白色';
+      case 'video_setting_subtitle_text_color_yellow':
+        return '黄色';
+      case 'video_setting_subtitle_text_color_cyan':
+        return '青色';
+      case 'video_setting_subtitle_text_color_green':
+        return '绿色';
+      case 'video_setting_subtitle_text_color_red':
+        return '红色';
       default:
         return null;
     }
@@ -157148,6 +157538,18 @@ extension on _StringsZhHk {
         return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'stat_clear_all_video_message':
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
