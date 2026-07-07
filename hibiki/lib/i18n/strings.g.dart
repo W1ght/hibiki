@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36618 (2154 per locale)
+/// Strings: 36686 (2158 per locale)
 ///
-/// Built on 2026-07-07 at 04:49 UTC
+/// Built on 2026-07-07 at 08:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2858,6 +2858,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get stat_fastest_day => 'Fastest Day';
   String get stat_slowest_day => 'Slowest Day';
   String get stat_col_book => 'Book';
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  String get media_source_network_remote_path => 'Remote path';
+  String get media_source_network_label_optional => 'Display name (optional)';
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -7730,6 +7735,15 @@ class _StringsAr extends _StringsEn {
   String get stat_slowest_day => 'Slowest Day';
   @override
   String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -12725,6 +12739,15 @@ class _StringsDe extends _StringsEn {
   String get stat_slowest_day => 'Slowest Day';
   @override
   String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -17737,6 +17760,15 @@ class _StringsEs extends _StringsEn {
   String get stat_slowest_day => 'Slowest Day';
   @override
   String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -22768,6 +22800,15 @@ class _StringsFr extends _StringsEn {
   String get stat_slowest_day => 'Slowest Day';
   @override
   String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -27701,6 +27742,15 @@ class _StringsId extends _StringsEn {
   String get stat_slowest_day => 'Slowest Day';
   @override
   String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -32695,6 +32745,15 @@ class _StringsIt extends _StringsEn {
   String get stat_slowest_day => 'Slowest Day';
   @override
   String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -37415,6 +37474,15 @@ class _StringsJa extends _StringsEn {
   String get stat_slowest_day => 'Slowest Day';
   @override
   String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -42139,6 +42207,15 @@ class _StringsKo extends _StringsEn {
   String get stat_slowest_day => 'Slowest Day';
   @override
   String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -47101,6 +47178,15 @@ class _StringsNl extends _StringsEn {
   String get stat_slowest_day => 'Slowest Day';
   @override
   String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -52086,6 +52172,15 @@ class _StringsPtBr extends _StringsEn {
   String get stat_slowest_day => 'Slowest Day';
   @override
   String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -57046,6 +57141,15 @@ class _StringsRu extends _StringsEn {
   String get stat_slowest_day => 'Slowest Day';
   @override
   String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -61919,6 +62023,15 @@ class _StringsTh extends _StringsEn {
   String get stat_slowest_day => 'Slowest Day';
   @override
   String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -66847,6 +66960,15 @@ class _StringsTr extends _StringsEn {
   String get stat_slowest_day => 'Slowest Day';
   @override
   String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -71750,6 +71872,15 @@ class _StringsVi extends _StringsEn {
   String get stat_slowest_day => 'Slowest Day';
   @override
   String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -76326,6 +76457,14 @@ class _StringsZhCn extends _StringsEn {
   String get stat_slowest_day => '最慢日';
   @override
   String get stat_col_book => '书籍';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP 远端书库';
+  @override
+  String get media_source_network_remote_path => '远端路径';
+  @override
+  String get media_source_network_label_optional => '显示名（可选）';
+  @override
+  String get media_source_network_missing_fields => '请填写主机、用户名、远端路径，以及密码或私钥';
 }
 
 // Path: retrying_in
@@ -80948,6 +81087,15 @@ class _StringsZhHk extends _StringsEn {
   String get stat_slowest_day => 'Slowest Day';
   @override
   String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
 }
 
 // Path: retrying_in
@@ -85394,6 +85542,14 @@ extension on _StringsEn {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
@@ -89800,6 +89956,14 @@ extension on _StringsAr {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
@@ -94228,6 +94392,14 @@ extension on _StringsDe {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
@@ -98654,6 +98826,14 @@ extension on _StringsEs {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
@@ -103087,6 +103267,14 @@ extension on _StringsFr {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
@@ -107500,6 +107688,14 @@ extension on _StringsId {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
@@ -111930,6 +112126,14 @@ extension on _StringsIt {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
@@ -116318,6 +116522,14 @@ extension on _StringsJa {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
@@ -120709,6 +120921,14 @@ extension on _StringsKo {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
@@ -125132,6 +125352,14 @@ extension on _StringsNl {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
@@ -129552,6 +129780,14 @@ extension on _StringsPtBr {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
@@ -133976,6 +134212,14 @@ extension on _StringsRu {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
@@ -138382,6 +138626,14 @@ extension on _StringsTh {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
@@ -142797,6 +143049,14 @@ extension on _StringsTr {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
@@ -147206,6 +147466,14 @@ extension on _StringsVi {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
@@ -151581,6 +151849,14 @@ extension on _StringsZhCn {
         return '最慢日';
       case 'stat_col_book':
         return '书籍';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP 远端书库';
+      case 'media_source_network_remote_path':
+        return '远端路径';
+      case 'media_source_network_label_optional':
+        return '显示名（可选）';
+      case 'media_source_network_missing_fields':
+        return '请填写主机、用户名、远端路径，以及密码或私钥';
       default:
         return null;
     }
@@ -155961,6 +156237,14 @@ extension on _StringsZhHk {
         return 'Slowest Day';
       case 'stat_col_book':
         return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
       default:
         return null;
     }
