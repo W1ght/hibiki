@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36805 (2165 per locale)
+/// Strings: 36907 (2171 per locale)
 ///
-/// Built on 2026-07-07 at 15:26 UTC
+/// Built on 2026-07-07 at 16:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2874,6 +2874,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_subtitle_waveform_unavailable =>
       'Waveform unavailable on this device';
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  String get video_setting_subtitle_text_color => 'Text color';
+  String get video_setting_subtitle_text_color_white => 'White';
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  String get video_setting_subtitle_text_color_green => 'Green';
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -7773,6 +7779,18 @@ class _StringsAr extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -12795,6 +12813,18 @@ class _StringsDe extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -17834,6 +17864,18 @@ class _StringsEs extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -22892,6 +22934,18 @@ class _StringsFr extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -27852,6 +27906,18 @@ class _StringsId extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -32873,6 +32939,18 @@ class _StringsIt extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -37620,6 +37698,18 @@ class _StringsJa extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -42371,6 +42461,18 @@ class _StringsKo extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -47360,6 +47462,18 @@ class _StringsNl extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -52372,6 +52486,18 @@ class _StringsPtBr extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -57359,6 +57485,18 @@ class _StringsRu extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -62259,6 +62397,18 @@ class _StringsTh extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -67214,6 +67364,18 @@ class _StringsTr extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -72144,6 +72306,18 @@ class _StringsVi extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -76743,6 +76917,18 @@ class _StringsZhCn extends _StringsEn {
   String get video_subtitle_waveform_unavailable => '本设备无法生成波形';
   @override
   String get shortcut_action_reader_open_navigation => '打开导航';
+  @override
+  String get video_setting_subtitle_text_color => '文字颜色';
+  @override
+  String get video_setting_subtitle_text_color_white => '白色';
+  @override
+  String get video_setting_subtitle_text_color_yellow => '黄色';
+  @override
+  String get video_setting_subtitle_text_color_cyan => '青色';
+  @override
+  String get video_setting_subtitle_text_color_green => '绿色';
+  @override
+  String get video_setting_subtitle_text_color_red => '红色';
 }
 
 // Path: retrying_in
@@ -81392,6 +81578,18 @@ class _StringsZhHk extends _StringsEn {
       'Waveform unavailable on this device';
   @override
   String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
 }
 
 // Path: retrying_in
@@ -85860,6 +86058,18 @@ extension on _StringsEn {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -90288,6 +90498,18 @@ extension on _StringsAr {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -94738,6 +94960,18 @@ extension on _StringsDe {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -99186,6 +99420,18 @@ extension on _StringsEs {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -103641,6 +103887,18 @@ extension on _StringsFr {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -108076,6 +108334,18 @@ extension on _StringsId {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -112528,6 +112798,18 @@ extension on _StringsIt {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -116938,6 +117220,18 @@ extension on _StringsJa {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -121351,6 +121645,18 @@ extension on _StringsKo {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -125796,6 +126102,18 @@ extension on _StringsNl {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -130238,6 +130556,18 @@ extension on _StringsPtBr {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -134684,6 +135014,18 @@ extension on _StringsRu {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -139112,6 +139454,18 @@ extension on _StringsTh {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -143549,6 +143903,18 @@ extension on _StringsTr {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -147980,6 +148346,18 @@ extension on _StringsVi {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
@@ -152377,6 +152755,18 @@ extension on _StringsZhCn {
         return '本设备无法生成波形';
       case 'shortcut_action_reader_open_navigation':
         return '打开导航';
+      case 'video_setting_subtitle_text_color':
+        return '文字颜色';
+      case 'video_setting_subtitle_text_color_white':
+        return '白色';
+      case 'video_setting_subtitle_text_color_yellow':
+        return '黄色';
+      case 'video_setting_subtitle_text_color_cyan':
+        return '青色';
+      case 'video_setting_subtitle_text_color_green':
+        return '绿色';
+      case 'video_setting_subtitle_text_color_red':
+        return '红色';
       default:
         return null;
     }
@@ -156779,6 +157169,18 @@ extension on _StringsZhHk {
         return 'Waveform unavailable on this device';
       case 'shortcut_action_reader_open_navigation':
         return 'Open Navigation';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
       default:
         return null;
     }
