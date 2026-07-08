@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37077 (2181 per locale)
+/// Strings: 37128 (2184 per locale)
 ///
-/// Built on 2026-07-08 at 04:07 UTC
+/// Built on 2026-07-08 at 04:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2894,6 +2894,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (translated)';
   String get video_subtitle_youtube_empty => 'This caption track has no text';
+  String get sync_client_token => 'Peer access token';
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -7829,6 +7834,14 @@ class _StringsAr extends _StringsEn {
       '${lang} (translated)';
   @override
   String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -12887,6 +12900,14 @@ class _StringsDe extends _StringsEn {
       '${lang} (translated)';
   @override
   String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -17962,6 +17983,14 @@ class _StringsEs extends _StringsEn {
       '${lang} (translated)';
   @override
   String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -23056,6 +23085,14 @@ class _StringsFr extends _StringsEn {
       '${lang} (translated)';
   @override
   String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -28052,6 +28089,14 @@ class _StringsId extends _StringsEn {
       '${lang} (translated)';
   @override
   String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -33109,6 +33154,14 @@ class _StringsIt extends _StringsEn {
       '${lang} (translated)';
   @override
   String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -37892,6 +37945,14 @@ class _StringsJa extends _StringsEn {
       '${lang} (translated)';
   @override
   String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -42679,6 +42740,14 @@ class _StringsKo extends _StringsEn {
       '${lang} (translated)';
   @override
   String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -47704,6 +47773,14 @@ class _StringsNl extends _StringsEn {
       '${lang} (translated)';
   @override
   String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -52752,6 +52829,14 @@ class _StringsPtBr extends _StringsEn {
       '${lang} (translated)';
   @override
   String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -57775,6 +57860,14 @@ class _StringsRu extends _StringsEn {
       '${lang} (translated)';
   @override
   String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -62711,6 +62804,14 @@ class _StringsTh extends _StringsEn {
       '${lang} (translated)';
   @override
   String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -67702,6 +67803,14 @@ class _StringsTr extends _StringsEn {
       '${lang} (translated)';
   @override
   String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -72668,6 +72777,14 @@ class _StringsVi extends _StringsEn {
       '${lang} (translated)';
   @override
   String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -77302,6 +77419,14 @@ class _StringsZhCn extends _StringsEn {
       '${lang}（翻译）';
   @override
   String get video_subtitle_youtube_empty => '该字幕轨没有文字';
+  @override
+  String get sync_client_token => '对端访问令牌';
+  @override
+  String get sync_client_token_hint =>
+      '配对成功后由对端自动签发并填入；这是对端发给本设备的专属令牌，与对端服务器显示的共享令牌不同，两者都能连接。';
+  @override
+  String get sync_server_token_self_hint =>
+      '本设备的服务器共享令牌；已配对的设备会另获各自的专属令牌，此共享令牌也可手动填入连接。';
 }
 
 // Path: retrying_in
@@ -81987,6 +82112,14 @@ class _StringsZhHk extends _StringsEn {
       '${lang}（翻譯）';
   @override
   String get video_subtitle_youtube_empty => '該字幕軌沒有文字';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -86487,6 +86620,12 @@ extension on _StringsEn {
         return ({required Object lang}) => '${lang} (translated)';
       case 'video_subtitle_youtube_empty':
         return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -90947,6 +91086,12 @@ extension on _StringsAr {
         return ({required Object lang}) => '${lang} (translated)';
       case 'video_subtitle_youtube_empty':
         return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -95429,6 +95574,12 @@ extension on _StringsDe {
         return ({required Object lang}) => '${lang} (translated)';
       case 'video_subtitle_youtube_empty':
         return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -99909,6 +100060,12 @@ extension on _StringsEs {
         return ({required Object lang}) => '${lang} (translated)';
       case 'video_subtitle_youtube_empty':
         return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -104396,6 +104553,12 @@ extension on _StringsFr {
         return ({required Object lang}) => '${lang} (translated)';
       case 'video_subtitle_youtube_empty':
         return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -108863,6 +109026,12 @@ extension on _StringsId {
         return ({required Object lang}) => '${lang} (translated)';
       case 'video_subtitle_youtube_empty':
         return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -113347,6 +113516,12 @@ extension on _StringsIt {
         return ({required Object lang}) => '${lang} (translated)';
       case 'video_subtitle_youtube_empty':
         return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -117789,6 +117964,12 @@ extension on _StringsJa {
         return ({required Object lang}) => '${lang} (translated)';
       case 'video_subtitle_youtube_empty':
         return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -122234,6 +122415,12 @@ extension on _StringsKo {
         return ({required Object lang}) => '${lang} (translated)';
       case 'video_subtitle_youtube_empty':
         return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -126711,6 +126898,12 @@ extension on _StringsNl {
         return ({required Object lang}) => '${lang} (translated)';
       case 'video_subtitle_youtube_empty':
         return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -131185,6 +131378,12 @@ extension on _StringsPtBr {
         return ({required Object lang}) => '${lang} (translated)';
       case 'video_subtitle_youtube_empty':
         return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -135663,6 +135862,12 @@ extension on _StringsRu {
         return ({required Object lang}) => '${lang} (translated)';
       case 'video_subtitle_youtube_empty':
         return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -140123,6 +140328,12 @@ extension on _StringsTh {
         return ({required Object lang}) => '${lang} (translated)';
       case 'video_subtitle_youtube_empty':
         return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -144592,6 +144803,12 @@ extension on _StringsTr {
         return ({required Object lang}) => '${lang} (translated)';
       case 'video_subtitle_youtube_empty':
         return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -149055,6 +149272,12 @@ extension on _StringsVi {
         return ({required Object lang}) => '${lang} (translated)';
       case 'video_subtitle_youtube_empty':
         return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -153484,6 +153707,12 @@ extension on _StringsZhCn {
         return ({required Object lang}) => '${lang}（翻译）';
       case 'video_subtitle_youtube_empty':
         return '该字幕轨没有文字';
+      case 'sync_client_token':
+        return '对端访问令牌';
+      case 'sync_client_token_hint':
+        return '配对成功后由对端自动签发并填入；这是对端发给本设备的专属令牌，与对端服务器显示的共享令牌不同，两者都能连接。';
+      case 'sync_server_token_self_hint':
+        return '本设备的服务器共享令牌；已配对的设备会另获各自的专属令牌，此共享令牌也可手动填入连接。';
       default:
         return null;
     }
@@ -157918,6 +158147,12 @@ extension on _StringsZhHk {
         return ({required Object lang}) => '${lang}（翻譯）';
       case 'video_subtitle_youtube_empty':
         return '該字幕軌沒有文字';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
