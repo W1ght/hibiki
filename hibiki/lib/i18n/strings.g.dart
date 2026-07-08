@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37043 (2179 per locale)
+/// Strings: 37077 (2181 per locale)
 ///
-/// Built on 2026-07-08 at 02:23 UTC
+/// Built on 2026-07-08 at 04:07 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2891,6 +2891,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_pair_pin_waiting =>
       'Waiting for the other device to enter this PIN…';
   String get sync_pair_repair => 'Pair again';
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
 }
 
 // Path: retrying_in
@@ -7821,6 +7824,11 @@ class _StringsAr extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
 }
 
 // Path: retrying_in
@@ -12874,6 +12882,11 @@ class _StringsDe extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
 }
 
 // Path: retrying_in
@@ -17944,6 +17957,11 @@ class _StringsEs extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
 }
 
 // Path: retrying_in
@@ -23033,6 +23051,11 @@ class _StringsFr extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
 }
 
 // Path: retrying_in
@@ -28024,6 +28047,11 @@ class _StringsId extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
 }
 
 // Path: retrying_in
@@ -33076,6 +33104,11 @@ class _StringsIt extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
 }
 
 // Path: retrying_in
@@ -37854,6 +37887,11 @@ class _StringsJa extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
 }
 
 // Path: retrying_in
@@ -42636,6 +42674,11 @@ class _StringsKo extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
 }
 
 // Path: retrying_in
@@ -47656,6 +47699,11 @@ class _StringsNl extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
 }
 
 // Path: retrying_in
@@ -52699,6 +52747,11 @@ class _StringsPtBr extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
 }
 
 // Path: retrying_in
@@ -57717,6 +57770,11 @@ class _StringsRu extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
 }
 
 // Path: retrying_in
@@ -62648,6 +62706,11 @@ class _StringsTh extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
 }
 
 // Path: retrying_in
@@ -67634,6 +67697,11 @@ class _StringsTr extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
 }
 
 // Path: retrying_in
@@ -72595,6 +72663,11 @@ class _StringsVi extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
 }
 
 // Path: retrying_in
@@ -77224,6 +77297,11 @@ class _StringsZhCn extends _StringsEn {
   String get sync_pair_pin_waiting => '等待对方设备输入此 PIN…';
   @override
   String get sync_pair_repair => '重新配对';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang}（翻译）';
+  @override
+  String get video_subtitle_youtube_empty => '该字幕轨没有文字';
 }
 
 // Path: retrying_in
@@ -81904,6 +81982,11 @@ class _StringsZhHk extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang}（翻譯）';
+  @override
+  String get video_subtitle_youtube_empty => '該字幕軌沒有文字';
 }
 
 // Path: retrying_in
@@ -86400,6 +86483,10 @@ extension on _StringsEn {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
       default:
         return null;
     }
@@ -90856,6 +90943,10 @@ extension on _StringsAr {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
       default:
         return null;
     }
@@ -95334,6 +95425,10 @@ extension on _StringsDe {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
       default:
         return null;
     }
@@ -99810,6 +99905,10 @@ extension on _StringsEs {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
       default:
         return null;
     }
@@ -104293,6 +104392,10 @@ extension on _StringsFr {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
       default:
         return null;
     }
@@ -108756,6 +108859,10 @@ extension on _StringsId {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
       default:
         return null;
     }
@@ -113236,6 +113343,10 @@ extension on _StringsIt {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
       default:
         return null;
     }
@@ -117674,6 +117785,10 @@ extension on _StringsJa {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
       default:
         return null;
     }
@@ -122115,6 +122230,10 @@ extension on _StringsKo {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
       default:
         return null;
     }
@@ -126588,6 +126707,10 @@ extension on _StringsNl {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
       default:
         return null;
     }
@@ -131058,6 +131181,10 @@ extension on _StringsPtBr {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
       default:
         return null;
     }
@@ -135532,6 +135659,10 @@ extension on _StringsRu {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
       default:
         return null;
     }
@@ -139988,6 +140119,10 @@ extension on _StringsTh {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
       default:
         return null;
     }
@@ -144453,6 +144588,10 @@ extension on _StringsTr {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
       default:
         return null;
     }
@@ -148912,6 +149051,10 @@ extension on _StringsVi {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
       default:
         return null;
     }
@@ -153337,6 +153480,10 @@ extension on _StringsZhCn {
         return '等待对方设备输入此 PIN…';
       case 'sync_pair_repair':
         return '重新配对';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang}（翻译）';
+      case 'video_subtitle_youtube_empty':
+        return '该字幕轨没有文字';
       default:
         return null;
     }
@@ -157767,6 +157914,10 @@ extension on _StringsZhHk {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang}（翻譯）';
+      case 'video_subtitle_youtube_empty':
+        return '該字幕軌沒有文字';
       default:
         return null;
     }
