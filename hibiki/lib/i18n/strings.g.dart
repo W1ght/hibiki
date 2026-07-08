@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37230 (2190 per locale)
+/// Strings: 37247 (2191 per locale)
 ///
-/// Built on 2026-07-08 at 18:54 UTC
+/// Built on 2026-07-08 at 18:56 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2905,6 +2905,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_theme => 'Theme';
   String get video_setting_theme_hint => 'Switch the app color theme';
   String get video_audio_track_empty => 'No switchable audio tracks';
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -7860,6 +7862,9 @@ class _StringsAr extends _StringsEn {
   String get video_setting_theme_hint => 'Switch the app color theme';
   @override
   String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -12938,6 +12943,9 @@ class _StringsDe extends _StringsEn {
   String get video_setting_theme_hint => 'Switch the app color theme';
   @override
   String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -18033,6 +18041,9 @@ class _StringsEs extends _StringsEn {
   String get video_setting_theme_hint => 'Switch the app color theme';
   @override
   String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -23147,6 +23158,9 @@ class _StringsFr extends _StringsEn {
   String get video_setting_theme_hint => 'Switch the app color theme';
   @override
   String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -28163,6 +28177,9 @@ class _StringsId extends _StringsEn {
   String get video_setting_theme_hint => 'Switch the app color theme';
   @override
   String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -33240,6 +33257,9 @@ class _StringsIt extends _StringsEn {
   String get video_setting_theme_hint => 'Switch the app color theme';
   @override
   String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -38043,6 +38063,9 @@ class _StringsJa extends _StringsEn {
   String get video_setting_theme_hint => 'Switch the app color theme';
   @override
   String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -42850,6 +42873,9 @@ class _StringsKo extends _StringsEn {
   String get video_setting_theme_hint => 'Switch the app color theme';
   @override
   String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -47895,6 +47921,9 @@ class _StringsNl extends _StringsEn {
   String get video_setting_theme_hint => 'Switch the app color theme';
   @override
   String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -52963,6 +52992,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_theme_hint => 'Switch the app color theme';
   @override
   String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -58006,6 +58038,9 @@ class _StringsRu extends _StringsEn {
   String get video_setting_theme_hint => 'Switch the app color theme';
   @override
   String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -62962,6 +62997,9 @@ class _StringsTh extends _StringsEn {
   String get video_setting_theme_hint => 'Switch the app color theme';
   @override
   String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -67973,6 +68011,9 @@ class _StringsTr extends _StringsEn {
   String get video_setting_theme_hint => 'Switch the app color theme';
   @override
   String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -72959,6 +73000,9 @@ class _StringsVi extends _StringsEn {
   String get video_setting_theme_hint => 'Switch the app color theme';
   @override
   String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -77613,6 +77657,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_theme_hint => '切换应用配色主题';
   @override
   String get video_audio_track_empty => '没有可切换的音频轨';
+  @override
+  String get dictionary_font_size_zoom_hint => 'Ctrl+滚轮可直接缩放查词弹窗内容';
 }
 
 // Path: retrying_in
@@ -82318,6 +82364,9 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_theme_hint => 'Switch the app color theme';
   @override
   String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
 }
 
 // Path: retrying_in
@@ -86836,6 +86885,8 @@ extension on _StringsEn {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
@@ -91314,6 +91365,8 @@ extension on _StringsAr {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
@@ -95814,6 +95867,8 @@ extension on _StringsDe {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
@@ -100312,6 +100367,8 @@ extension on _StringsEs {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
@@ -104817,6 +104874,8 @@ extension on _StringsFr {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
@@ -109302,6 +109361,8 @@ extension on _StringsId {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
@@ -113804,6 +113865,8 @@ extension on _StringsIt {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
@@ -118264,6 +118327,8 @@ extension on _StringsJa {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
@@ -122727,6 +122792,8 @@ extension on _StringsKo {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
@@ -127222,6 +127289,8 @@ extension on _StringsNl {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
@@ -131714,6 +131783,8 @@ extension on _StringsPtBr {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
@@ -136210,6 +136281,8 @@ extension on _StringsRu {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
@@ -140688,6 +140761,8 @@ extension on _StringsTh {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
@@ -145175,6 +145250,8 @@ extension on _StringsTr {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
@@ -149656,6 +149733,8 @@ extension on _StringsVi {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
@@ -154103,6 +154182,8 @@ extension on _StringsZhCn {
         return '切换应用配色主题';
       case 'video_audio_track_empty':
         return '没有可切换的音频轨';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl+滚轮可直接缩放查词弹窗内容';
       default:
         return null;
     }
@@ -158555,6 +158636,8 @@ extension on _StringsZhHk {
         return 'Switch the app color theme';
       case 'video_audio_track_empty':
         return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
       default:
         return null;
     }
