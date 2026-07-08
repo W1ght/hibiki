@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37247 (2191 per locale)
+/// Strings: 37383 (2199 per locale)
 ///
-/// Built on 2026-07-08 at 18:56 UTC
+/// Built on 2026-07-08 at 20:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2907,6 +2907,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_audio_track_empty => 'No switchable audio tracks';
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  String get external_window_none => 'No window bound (tap to select)';
+  String get external_window_refresh => 'Refresh window list';
+  String get external_window_unbind => 'Unbind window';
+  String get external_window_capture_failed => 'Window capture failed';
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  String get external_window_no_windows => 'No capturable windows found';
+  String get external_window_mining => 'External window mining';
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -7865,6 +7874,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -12946,6 +12972,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -18044,6 +18087,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -23161,6 +23221,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -28180,6 +28257,23 @@ class _StringsId extends _StringsEn {
   @override
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -33260,6 +33354,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -38066,6 +38177,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -42876,6 +43004,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -47924,6 +48069,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -52995,6 +53157,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -58041,6 +58220,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -63000,6 +63196,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -68014,6 +68227,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -73003,6 +73233,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -77659,6 +77906,22 @@ class _StringsZhCn extends _StringsEn {
   String get video_audio_track_empty => '没有可切换的音频轨';
   @override
   String get dictionary_font_size_zoom_hint => 'Ctrl+滚轮可直接缩放查词弹窗内容';
+  @override
+  String get external_window_none => '未绑定窗口（点此选择）';
+  @override
+  String get external_window_refresh => '刷新窗口列表';
+  @override
+  String get external_window_unbind => '解除窗口绑定';
+  @override
+  String get external_window_capture_failed => '窗口截图失败';
+  @override
+  String get external_window_unsupported => '外部窗口挖矿仅支持 Windows';
+  @override
+  String get external_window_no_windows => '未找到可捕获的窗口';
+  @override
+  String get external_window_mining => '外部窗口挖矿';
+  @override
+  String get external_window_select => '选择目标窗口';
 }
 
 // Path: retrying_in
@@ -82367,6 +82630,23 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get dictionary_font_size_zoom_hint =>
       'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
 }
 
 // Path: retrying_in
@@ -86887,6 +87167,22 @@ extension on _StringsEn {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
@@ -91367,6 +91663,22 @@ extension on _StringsAr {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
@@ -95869,6 +96181,22 @@ extension on _StringsDe {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
@@ -100369,6 +100697,22 @@ extension on _StringsEs {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
@@ -104876,6 +105220,22 @@ extension on _StringsFr {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
@@ -109363,6 +109723,22 @@ extension on _StringsId {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
@@ -113867,6 +114243,22 @@ extension on _StringsIt {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
@@ -118329,6 +118721,22 @@ extension on _StringsJa {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
@@ -122794,6 +123202,22 @@ extension on _StringsKo {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
@@ -127291,6 +127715,22 @@ extension on _StringsNl {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
@@ -131785,6 +132225,22 @@ extension on _StringsPtBr {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
@@ -136283,6 +136739,22 @@ extension on _StringsRu {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
@@ -140763,6 +141235,22 @@ extension on _StringsTh {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
@@ -145252,6 +145740,22 @@ extension on _StringsTr {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
@@ -149735,6 +150239,22 @@ extension on _StringsVi {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
@@ -154184,6 +154704,22 @@ extension on _StringsZhCn {
         return '没有可切换的音频轨';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl+滚轮可直接缩放查词弹窗内容';
+      case 'external_window_none':
+        return '未绑定窗口（点此选择）';
+      case 'external_window_refresh':
+        return '刷新窗口列表';
+      case 'external_window_unbind':
+        return '解除窗口绑定';
+      case 'external_window_capture_failed':
+        return '窗口截图失败';
+      case 'external_window_unsupported':
+        return '外部窗口挖矿仅支持 Windows';
+      case 'external_window_no_windows':
+        return '未找到可捕获的窗口';
+      case 'external_window_mining':
+        return '外部窗口挖矿';
+      case 'external_window_select':
+        return '选择目标窗口';
       default:
         return null;
     }
@@ -158638,6 +159174,22 @@ extension on _StringsZhHk {
         return 'No switchable audio tracks';
       case 'dictionary_font_size_zoom_hint':
         return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
       default:
         return null;
     }
