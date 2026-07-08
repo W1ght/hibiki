@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37128 (2184 per locale)
+/// Strings: 37196 (2188 per locale)
 ///
-/// Built on 2026-07-08 at 04:34 UTC
+/// Built on 2026-07-08 at 17:42 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2899,6 +2899,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  String get video_settings_cat_audio => 'Audio';
+  String get video_setting_theme => 'Theme';
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -7842,6 +7846,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -12908,6 +12920,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -17991,6 +18011,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -23093,6 +23121,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -28097,6 +28133,14 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -33162,6 +33206,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -37953,6 +38005,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -42748,6 +42808,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -47781,6 +47849,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -52837,6 +52913,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -57868,6 +57952,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -62812,6 +62904,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -67811,6 +67911,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -72785,6 +72893,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -77427,6 +77543,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       '本设备的服务器共享令牌；已配对的设备会另获各自的专属令牌，此共享令牌也可手动填入连接。';
+  @override
+  String get video_settings_cat_audio => '音频';
+  @override
+  String get video_setting_theme => '主题';
+  @override
+  String get video_setting_theme_hint => '切换应用配色主题';
+  @override
+  String get video_audio_track_empty => '没有可切换的音频轨';
 }
 
 // Path: retrying_in
@@ -82120,6 +82244,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_server_token_self_hint =>
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -86626,6 +86758,14 @@ extension on _StringsEn {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -91092,6 +91232,14 @@ extension on _StringsAr {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -95580,6 +95728,14 @@ extension on _StringsDe {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -100066,6 +100222,14 @@ extension on _StringsEs {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -104559,6 +104723,14 @@ extension on _StringsFr {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -109032,6 +109204,14 @@ extension on _StringsId {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -113522,6 +113702,14 @@ extension on _StringsIt {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -117970,6 +118158,14 @@ extension on _StringsJa {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -122421,6 +122617,14 @@ extension on _StringsKo {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -126904,6 +127108,14 @@ extension on _StringsNl {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -131384,6 +131596,14 @@ extension on _StringsPtBr {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -135868,6 +136088,14 @@ extension on _StringsRu {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -140334,6 +140562,14 @@ extension on _StringsTh {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -144809,6 +145045,14 @@ extension on _StringsTr {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -149278,6 +149522,14 @@ extension on _StringsVi {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -153713,6 +153965,14 @@ extension on _StringsZhCn {
         return '配对成功后由对端自动签发并填入；这是对端发给本设备的专属令牌，与对端服务器显示的共享令牌不同，两者都能连接。';
       case 'sync_server_token_self_hint':
         return '本设备的服务器共享令牌；已配对的设备会另获各自的专属令牌，此共享令牌也可手动填入连接。';
+      case 'video_settings_cat_audio':
+        return '音频';
+      case 'video_setting_theme':
+        return '主题';
+      case 'video_setting_theme_hint':
+        return '切换应用配色主题';
+      case 'video_audio_track_empty':
+        return '没有可切换的音频轨';
       default:
         return null;
     }
@@ -158153,6 +158413,14 @@ extension on _StringsZhHk {
         return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
       case 'sync_server_token_self_hint':
         return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
