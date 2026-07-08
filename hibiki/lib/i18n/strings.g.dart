@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37162 (2186 per locale)
+/// Strings: 37230 (2190 per locale)
 ///
-/// Built on 2026-07-08 at 17:08 UTC
+/// Built on 2026-07-08 at 18:54 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2901,6 +2901,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
   String get theme_eyecare => 'Eye Care';
   String get reader_theme_eyecare => 'Eye Care';
+  String get video_settings_cat_audio => 'Audio';
+  String get video_setting_theme => 'Theme';
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -7848,6 +7852,14 @@ class _StringsAr extends _StringsEn {
   String get theme_eyecare => 'Eye Care';
   @override
   String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -12918,6 +12930,14 @@ class _StringsDe extends _StringsEn {
   String get theme_eyecare => 'Eye Care';
   @override
   String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -18005,6 +18025,14 @@ class _StringsEs extends _StringsEn {
   String get theme_eyecare => 'Eye Care';
   @override
   String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -23111,6 +23139,14 @@ class _StringsFr extends _StringsEn {
   String get theme_eyecare => 'Eye Care';
   @override
   String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -28119,6 +28155,14 @@ class _StringsId extends _StringsEn {
   String get theme_eyecare => 'Eye Care';
   @override
   String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -33188,6 +33232,14 @@ class _StringsIt extends _StringsEn {
   String get theme_eyecare => 'Eye Care';
   @override
   String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -37983,6 +38035,14 @@ class _StringsJa extends _StringsEn {
   String get theme_eyecare => 'Eye Care';
   @override
   String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -42782,6 +42842,14 @@ class _StringsKo extends _StringsEn {
   String get theme_eyecare => 'Eye Care';
   @override
   String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -47819,6 +47887,14 @@ class _StringsNl extends _StringsEn {
   String get theme_eyecare => 'Eye Care';
   @override
   String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -52879,6 +52955,14 @@ class _StringsPtBr extends _StringsEn {
   String get theme_eyecare => 'Eye Care';
   @override
   String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -57914,6 +57998,14 @@ class _StringsRu extends _StringsEn {
   String get theme_eyecare => 'Eye Care';
   @override
   String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -62862,6 +62954,14 @@ class _StringsTh extends _StringsEn {
   String get theme_eyecare => 'Eye Care';
   @override
   String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -67865,6 +67965,14 @@ class _StringsTr extends _StringsEn {
   String get theme_eyecare => 'Eye Care';
   @override
   String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -72843,6 +72951,14 @@ class _StringsVi extends _StringsEn {
   String get theme_eyecare => 'Eye Care';
   @override
   String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -77489,6 +77605,14 @@ class _StringsZhCn extends _StringsEn {
   String get theme_eyecare => '护眼';
   @override
   String get reader_theme_eyecare => '护眼';
+  @override
+  String get video_settings_cat_audio => '音频';
+  @override
+  String get video_setting_theme => '主题';
+  @override
+  String get video_setting_theme_hint => '切换应用配色主题';
+  @override
+  String get video_audio_track_empty => '没有可切换的音频轨';
 }
 
 // Path: retrying_in
@@ -82186,6 +82310,14 @@ class _StringsZhHk extends _StringsEn {
   String get theme_eyecare => '護眼';
   @override
   String get reader_theme_eyecare => '護眼';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
 }
 
 // Path: retrying_in
@@ -86696,6 +86828,14 @@ extension on _StringsEn {
         return 'Eye Care';
       case 'reader_theme_eyecare':
         return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -91166,6 +91306,14 @@ extension on _StringsAr {
         return 'Eye Care';
       case 'reader_theme_eyecare':
         return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -95658,6 +95806,14 @@ extension on _StringsDe {
         return 'Eye Care';
       case 'reader_theme_eyecare':
         return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -100148,6 +100304,14 @@ extension on _StringsEs {
         return 'Eye Care';
       case 'reader_theme_eyecare':
         return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -104645,6 +104809,14 @@ extension on _StringsFr {
         return 'Eye Care';
       case 'reader_theme_eyecare':
         return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -109122,6 +109294,14 @@ extension on _StringsId {
         return 'Eye Care';
       case 'reader_theme_eyecare':
         return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -113616,6 +113796,14 @@ extension on _StringsIt {
         return 'Eye Care';
       case 'reader_theme_eyecare':
         return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -118068,6 +118256,14 @@ extension on _StringsJa {
         return 'Eye Care';
       case 'reader_theme_eyecare':
         return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -122523,6 +122719,14 @@ extension on _StringsKo {
         return 'Eye Care';
       case 'reader_theme_eyecare':
         return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -127010,6 +127214,14 @@ extension on _StringsNl {
         return 'Eye Care';
       case 'reader_theme_eyecare':
         return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -131494,6 +131706,14 @@ extension on _StringsPtBr {
         return 'Eye Care';
       case 'reader_theme_eyecare':
         return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -135982,6 +136202,14 @@ extension on _StringsRu {
         return 'Eye Care';
       case 'reader_theme_eyecare':
         return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -140452,6 +140680,14 @@ extension on _StringsTh {
         return 'Eye Care';
       case 'reader_theme_eyecare':
         return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -144931,6 +145167,14 @@ extension on _StringsTr {
         return 'Eye Care';
       case 'reader_theme_eyecare':
         return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -149404,6 +149648,14 @@ extension on _StringsVi {
         return 'Eye Care';
       case 'reader_theme_eyecare':
         return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
@@ -153843,6 +154095,14 @@ extension on _StringsZhCn {
         return '护眼';
       case 'reader_theme_eyecare':
         return '护眼';
+      case 'video_settings_cat_audio':
+        return '音频';
+      case 'video_setting_theme':
+        return '主题';
+      case 'video_setting_theme_hint':
+        return '切换应用配色主题';
+      case 'video_audio_track_empty':
+        return '没有可切换的音频轨';
       default:
         return null;
     }
@@ -158287,6 +158547,14 @@ extension on _StringsZhHk {
         return '護眼';
       case 'reader_theme_eyecare':
         return '護眼';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
       default:
         return null;
     }
