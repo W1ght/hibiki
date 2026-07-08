@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37043 (2179 per locale)
+/// Strings: 37094 (2182 per locale)
 ///
-/// Built on 2026-07-08 at 02:23 UTC
+/// Built on 2026-07-08 at 03:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2891,6 +2891,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_pair_pin_waiting =>
       'Waiting for the other device to enter this PIN…';
   String get sync_pair_repair => 'Pair again';
+  String get sync_client_token => 'Peer access token';
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -7821,6 +7826,14 @@ class _StringsAr extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -12874,6 +12887,14 @@ class _StringsDe extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -17944,6 +17965,14 @@ class _StringsEs extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -23033,6 +23062,14 @@ class _StringsFr extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -28024,6 +28061,14 @@ class _StringsId extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -33076,6 +33121,14 @@ class _StringsIt extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -37854,6 +37907,14 @@ class _StringsJa extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -42636,6 +42697,14 @@ class _StringsKo extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -47656,6 +47725,14 @@ class _StringsNl extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -52699,6 +52776,14 @@ class _StringsPtBr extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -57717,6 +57802,14 @@ class _StringsRu extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -62648,6 +62741,14 @@ class _StringsTh extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -67634,6 +67735,14 @@ class _StringsTr extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -72595,6 +72704,14 @@ class _StringsVi extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -77224,6 +77341,14 @@ class _StringsZhCn extends _StringsEn {
   String get sync_pair_pin_waiting => '等待对方设备输入此 PIN…';
   @override
   String get sync_pair_repair => '重新配对';
+  @override
+  String get sync_client_token => '对端访问令牌';
+  @override
+  String get sync_client_token_hint =>
+      '配对成功后由对端自动签发并填入；这是对端发给本设备的专属令牌，与对端服务器显示的共享令牌不同，两者都能连接。';
+  @override
+  String get sync_server_token_self_hint =>
+      '本设备的服务器共享令牌；已配对的设备会另获各自的专属令牌，此共享令牌也可手动填入连接。';
 }
 
 // Path: retrying_in
@@ -81904,6 +82029,14 @@ class _StringsZhHk extends _StringsEn {
       'Waiting for the other device to enter this PIN…';
   @override
   String get sync_pair_repair => 'Pair again';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
 }
 
 // Path: retrying_in
@@ -86400,6 +86533,12 @@ extension on _StringsEn {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -90856,6 +90995,12 @@ extension on _StringsAr {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -95334,6 +95479,12 @@ extension on _StringsDe {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -99810,6 +99961,12 @@ extension on _StringsEs {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -104293,6 +104450,12 @@ extension on _StringsFr {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -108756,6 +108919,12 @@ extension on _StringsId {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -113236,6 +113405,12 @@ extension on _StringsIt {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -117674,6 +117849,12 @@ extension on _StringsJa {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -122115,6 +122296,12 @@ extension on _StringsKo {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -126588,6 +126775,12 @@ extension on _StringsNl {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -131058,6 +131251,12 @@ extension on _StringsPtBr {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -135532,6 +135731,12 @@ extension on _StringsRu {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -139988,6 +140193,12 @@ extension on _StringsTh {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -144453,6 +144664,12 @@ extension on _StringsTr {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -148912,6 +149129,12 @@ extension on _StringsVi {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
@@ -153337,6 +153560,12 @@ extension on _StringsZhCn {
         return '等待对方设备输入此 PIN…';
       case 'sync_pair_repair':
         return '重新配对';
+      case 'sync_client_token':
+        return '对端访问令牌';
+      case 'sync_client_token_hint':
+        return '配对成功后由对端自动签发并填入；这是对端发给本设备的专属令牌，与对端服务器显示的共享令牌不同，两者都能连接。';
+      case 'sync_server_token_self_hint':
+        return '本设备的服务器共享令牌；已配对的设备会另获各自的专属令牌，此共享令牌也可手动填入连接。';
       default:
         return null;
     }
@@ -157767,6 +157996,12 @@ extension on _StringsZhHk {
         return 'Waiting for the other device to enter this PIN…';
       case 'sync_pair_repair':
         return 'Pair again';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
       default:
         return null;
     }
