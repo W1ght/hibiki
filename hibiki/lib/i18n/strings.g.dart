@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36176 (2128 per locale)
+/// Strings: 37587 (2211 per locale)
 ///
-/// Built on 2026-07-06 at 04:44 UTC
+/// Built on 2026-07-09 at 04:54 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2515,7 +2515,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_import_stream_advanced => 'Advanced (anti-leech headers)';
   String get video_import_stream_referer => 'Referer (optional)';
   String get video_import_stream_user_agent => 'User-Agent (optional)';
-  String get video_import_stream_play => 'Play stream';
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   String get settings_check_update_now => 'Check for updates';
@@ -2645,11 +2644,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_top_progress_floating => 'Floating reading progress';
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   String get anki_mined_card_title => 'Card already in Anki';
   String get anki_mined_card_subtitle =>
@@ -2738,7 +2732,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get browser_extension_step_pick_folder =>
       'Select the extension folder below (its path is already copied to your clipboard).';
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. Hibiki\'s Yomitan API server is now on and the extension is auto-configured to connect to it — no host/port/token to fill in.';
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
   String get copied => 'Copied';
@@ -2781,10 +2775,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Restoring your data. Please don\'t close the app.';
   String get backup_import_restart_button => 'Restart now';
   String get backup_import_overlay_title => 'Importing backup';
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
   String get tag_seed_stars => 'Add star rating tags';
   String get tag_seed_stars_added => 'Star rating tags added';
   String get tag_seed_stars_exists => 'Star rating tags already exist';
@@ -2829,7 +2819,120 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_settings => 'Settings';
   String get backup_category_profiles => 'Profiles';
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  String get icon_transparent => 'Transparent';
+  String get backup_import_validating_title => 'Reading backup…';
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  String get video_quality => 'Quality';
+  String get video_quality_auto => 'Auto';
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  String get video_black_flash_notice_action => 'View suggestions';
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  String get popup_no_audio_available => 'No audio available';
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  String get shortcut_view_list => 'List view';
+  String get shortcut_view_visual => 'Controller layout';
+  String get stat_range_and_trend => 'Range & Trend';
+  String get stat_metric_chars => 'Characters';
+  String get stat_metric_time => 'Time';
+  String get stat_metric_speed => 'Speed';
+  String get stat_goal => 'Daily Goal';
+  String get stat_streak => 'Streak';
+  String stat_format_days({required Object n}) => '${n} days';
+  String get stat_bookshelf_compare => 'Bookshelf';
+  String get stat_speed_summary => 'Speed Summary';
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  String get stat_typical_day => 'Typical Day';
+  String get stat_recent_active => 'Active Days (7d)';
+  String get stat_vs_prev => 'vs prev 14d';
+  String get stat_fastest_day => 'Fastest Day';
+  String get stat_slowest_day => 'Slowest Day';
+  String get stat_col_book => 'Book';
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  String get media_source_network_remote_path => 'Remote path';
+  String get media_source_network_label_optional => 'Display name (optional)';
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  String get render_restart_required => 'Takes effect after restarting the app';
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  String get stat_clear_all => 'Clear statistics';
+  String get stat_clear_all_title => 'Clear all statistics';
+  String get stat_clear_all_confirm => 'Clear';
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  String get video_setting_subtitle_text_color => 'Text color';
+  String get video_setting_subtitle_text_color_white => 'White';
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  String get video_setting_subtitle_text_color_green => 'Green';
+  String get video_setting_subtitle_text_color_red => 'Red';
+  String get card_mining_pending => 'Adding card…';
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  String get sync_pair_repair => 'Pair again';
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
+  String get sync_client_token => 'Peer access token';
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  String get theme_eyecare => 'Eye Care';
+  String get reader_theme_eyecare => 'Eye Care';
+  String get video_settings_cat_audio => 'Audio';
+  String get video_setting_theme => 'Theme';
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  String get external_window_none => 'No window bound (tap to select)';
+  String get external_window_refresh => 'Refresh window list';
+  String get external_window_unbind => 'Unbind window';
+  String get external_window_capture_failed => 'Window capture failed';
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  String get external_window_no_windows => 'No capturable windows found';
+  String get external_window_mining => 'External window mining';
+  String get external_window_select => 'Select target window';
+  String get backup_import_contents_title => 'This backup contains';
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  String get backup_category_videos_desc => 'Local video files';
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  String get backup_category_settings_desc => 'App and reader settings';
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -7091,8 +7194,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -7322,14 +7423,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -7561,13 +7654,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -7647,7 +7733,210 @@ class _StringsAr extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  @override
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  @override
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  @override
+  String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
+  @override
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  @override
+  String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get theme_eyecare => 'Eye Care';
+  @override
+  String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -12031,8 +12320,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -12264,14 +12551,6 @@ class _StringsDe extends _StringsEn {
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
   @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
-  @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
   String get anki_mined_card_title => 'Card already in Anki';
@@ -12502,13 +12781,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -12588,7 +12860,210 @@ class _StringsDe extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  @override
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  @override
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  @override
+  String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
+  @override
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  @override
+  String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get theme_eyecare => 'Eye Care';
+  @override
+  String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -16989,8 +17464,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -17222,14 +17695,6 @@ class _StringsEs extends _StringsEn {
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
   @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
-  @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
   String get anki_mined_card_title => 'Card already in Anki';
@@ -17460,13 +17925,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -17546,7 +18004,210 @@ class _StringsEs extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  @override
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  @override
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  @override
+  String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
+  @override
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  @override
+  String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get theme_eyecare => 'Eye Care';
+  @override
+  String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -21966,8 +22627,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -22199,14 +22858,6 @@ class _StringsFr extends _StringsEn {
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
   @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
-  @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
   String get anki_mined_card_title => 'Card already in Anki';
@@ -22437,13 +23088,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -22523,7 +23167,210 @@ class _StringsFr extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  @override
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  @override
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  @override
+  String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
+  @override
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  @override
+  String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get theme_eyecare => 'Eye Care';
+  @override
+  String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -26845,8 +27692,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -27078,14 +27923,6 @@ class _StringsId extends _StringsEn {
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
   @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
-  @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
   String get anki_mined_card_title => 'Card already in Anki';
@@ -27316,13 +28153,6 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -27402,7 +28232,210 @@ class _StringsId extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  @override
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  @override
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  @override
+  String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
+  @override
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  @override
+  String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get theme_eyecare => 'Eye Care';
+  @override
+  String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -31785,8 +32818,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -32018,14 +33049,6 @@ class _StringsIt extends _StringsEn {
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
   @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
-  @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
   String get anki_mined_card_title => 'Card already in Anki';
@@ -32256,13 +33279,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -32342,7 +33358,210 @@ class _StringsIt extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  @override
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  @override
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  @override
+  String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
+  @override
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  @override
+  String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get theme_eyecare => 'Eye Care';
+  @override
+  String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -36453,8 +37672,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -36683,14 +37900,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -36922,13 +38131,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -37008,7 +38210,210 @@ class _StringsJa extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  @override
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  @override
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  @override
+  String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
+  @override
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  @override
+  String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get theme_eyecare => 'Eye Care';
+  @override
+  String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -41123,8 +42528,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -41353,14 +42756,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -41592,13 +42987,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -41678,7 +43066,210 @@ class _StringsKo extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  @override
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  @override
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  @override
+  String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
+  @override
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  @override
+  String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get theme_eyecare => 'Eye Care';
+  @override
+  String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -46029,8 +47620,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -46262,14 +47851,6 @@ class _StringsNl extends _StringsEn {
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
   @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
-  @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
   String get anki_mined_card_title => 'Card already in Anki';
@@ -46500,13 +48081,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -46586,7 +48160,210 @@ class _StringsNl extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  @override
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  @override
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  @override
+  String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
+  @override
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  @override
+  String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get theme_eyecare => 'Eye Care';
+  @override
+  String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -50960,8 +52737,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -51193,14 +52968,6 @@ class _StringsPtBr extends _StringsEn {
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
   @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
-  @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
   String get anki_mined_card_title => 'Card already in Anki';
@@ -51431,13 +53198,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -51517,7 +53277,210 @@ class _StringsPtBr extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  @override
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  @override
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  @override
+  String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
+  @override
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  @override
+  String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get theme_eyecare => 'Eye Care';
+  @override
+  String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -55866,8 +57829,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -56099,14 +58060,6 @@ class _StringsRu extends _StringsEn {
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
   @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
-  @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
   String get anki_mined_card_title => 'Card already in Anki';
@@ -56337,13 +58290,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -56423,7 +58369,210 @@ class _StringsRu extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  @override
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  @override
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  @override
+  String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
+  @override
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  @override
+  String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get theme_eyecare => 'Eye Care';
+  @override
+  String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -60686,8 +62835,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -60917,14 +63064,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -61156,13 +63295,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -61242,7 +63374,210 @@ class _StringsTh extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  @override
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  @override
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  @override
+  String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
+  @override
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  @override
+  String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get theme_eyecare => 'Eye Care';
+  @override
+  String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -65559,8 +67894,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -65792,14 +68125,6 @@ class _StringsTr extends _StringsEn {
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
   @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
-  @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
   String get anki_mined_card_title => 'Card already in Anki';
@@ -66030,13 +68355,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -66116,7 +68434,210 @@ class _StringsTr extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  @override
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  @override
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  @override
+  String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
+  @override
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  @override
+  String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get theme_eyecare => 'Eye Care';
+  @override
+  String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -70409,8 +72930,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -70640,14 +73159,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
-  @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
   @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
@@ -70879,13 +73390,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_import_overlay_title => 'Importing backup';
   @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
-  @override
   String get tag_seed_stars => 'Add star rating tags';
   @override
   String get tag_seed_stars_added => 'Star rating tags added';
@@ -70965,7 +73469,210 @@ class _StringsVi extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  @override
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  @override
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  @override
+  String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
+  @override
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  @override
+  String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang} (translated)';
+  @override
+  String get video_subtitle_youtube_empty => 'This caption track has no text';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get theme_eyecare => 'Eye Care';
+  @override
+  String get reader_theme_eyecare => 'Eye Care';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -74969,8 +77676,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent（可选）';
   @override
-  String get video_import_stream_play => '播放流';
-  @override
   String get video_import_stream_url_invalid => '请输入有效的 http(s) 流地址';
   @override
   String get settings_check_update_now => '检查更新';
@@ -75185,13 +77890,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get reader_auto_hide_chrome_duration => '悬浮控件自动隐藏延时';
   @override
-  String get video_import_webpage_url_warning_title => '网页地址，不是视频直链';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      '这是网页地址，不是直接的视频流（.m3u8/.mp4/直链）。除 YouTube 外，Hibiki 暂不支持解析网页视频（如 Netflix/Bilibili），请提供直链。你仍可强行尝试。';
-  @override
-  String get video_import_webpage_url_try_anyway => '仍要尝试';
-  @override
   String get sync_pair_pin_label => '在另一台设备上输入此 PIN';
   @override
   String get anki_mined_card_title => '卡片已在 Anki 中';
@@ -75335,7 +78033,7 @@ class _StringsZhCn extends _StringsEn {
   String get browser_extension_step_pick_folder => '选择下方的扩展文件夹（其路径已复制到剪贴板）。';
   @override
   String get browser_extension_step_done_auto =>
-      '完成。扩展已自动配置为连接本应用——无需填写 host/端口/token。';
+      '完成。已自动开启 Yomitan API 服务器，扩展已配置好连接本应用（查词 API，与设备互联/同步无关）——无需填写 host/端口/token。';
   @override
   String get browser_extension_enable_server_first =>
       '提示：请先在上方开启「Yomitan API 服务器」并设置 API 密钥，扩展才能被自动配置为可用连接。';
@@ -75404,12 +78102,6 @@ class _StringsZhCn extends _StringsEn {
   String get backup_import_restart_button => '立即重启';
   @override
   String get backup_import_overlay_title => '正在导入备份';
-  @override
-  String get reader_frosted_bottom_bar => '毛玻璃悬浮底栏';
-  @override
-  String get reader_frosted_bottom_bar_hint => '给阅读器控制栏加毛玻璃模糊和半透明背景';
-  @override
-  String get reader_bottom_bar_opacity => '底栏不透明度';
   @override
   String get tag_seed_stars => '添加星级标签';
   @override
@@ -75487,7 +78179,197 @@ class _StringsZhCn extends _StringsEn {
   String get backup_category_profiles => '配置方案';
   @override
   String get backup_export_categories_hint =>
-      '所选类别会打包进备份。数据库中的书籍记录始终包含；阅读进度、统计、设置、配置方案可在上方分别选择排除。取消勾选「书籍」会完全排除这些书——正文文件和书籍记录一并排除——导入后不会出现这些书。';
+      '勾选要打包进备份的内容。取消勾选「书籍」会连同这些书的正文和记录一并移除。';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      '系统拒绝授予悬浮窗权限时：请用文件管理器找到安装包覆盖安装一次，或在开发者选项中关闭权限监控后重试。';
+  @override
+  String get sync_server_tls_enable => '互联加密（HTTPS/TLS）';
+  @override
+  String get sync_server_tls_repair_hint => '切换后已配对设备需重新配对';
+  @override
+  String get icon_transparent => '透明';
+  @override
+  String get backup_import_validating_title => '正在读取备份…';
+  @override
+  String get backup_import_validating_hint => '正在校验并预览备份内容，请稍候。';
+  @override
+  String get video_quality => '画质';
+  @override
+  String get video_quality_auto => '自动';
+  @override
+  String video_quality_switched({required Object label}) => '画质：${label}';
+  @override
+  String get video_black_flash_notice_action => '查看建议';
+  @override
+  String get video_black_flash_notice_dont_show_again => '不再提示';
+  @override
+  String get popup_no_audio_available => '暂无发音';
+  @override
+  String get loading_slow_title => '启动耗时超出预期';
+  @override
+  String get loading_slow_message =>
+      '如果你把数据存储位置设在了当前未连接的网络盘 / 移动盘上，启动可能卡住。点「重试」即可用默认存储位置启动本次会话；你的数据仍保留在原位置不动。';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      '未检测到 GameInput 组件，手柄功能不可用。可安装 Windows「游戏服务(Gaming Services)」以启用手柄支持。';
+  @override
+  String get shortcut_view_list => '列表视图';
+  @override
+  String get shortcut_view_visual => '手柄可视化图';
+  @override
+  String get stat_range_and_trend => '范围与趋势';
+  @override
+  String get stat_metric_chars => '字数';
+  @override
+  String get stat_metric_time => '时长';
+  @override
+  String get stat_metric_speed => '速度';
+  @override
+  String get stat_goal => '每日目标';
+  @override
+  String get stat_streak => '连续天数';
+  @override
+  String stat_format_days({required Object n}) => '${n} 天';
+  @override
+  String get stat_bookshelf_compare => '书架对比';
+  @override
+  String get stat_speed_summary => '速度摘要';
+  @override
+  String get stat_weighted_avg_speed => '加权均速';
+  @override
+  String get stat_typical_day => '典型日';
+  @override
+  String get stat_recent_active => '近 7 日活跃';
+  @override
+  String get stat_vs_prev => '较前 14 天';
+  @override
+  String get stat_fastest_day => '最快日';
+  @override
+  String get stat_slowest_day => '最慢日';
+  @override
+  String get stat_col_book => '书籍';
+  @override
+  String get media_source_network_subtitle => 'SFTP / FTP / WebDAV 远端书库';
+  @override
+  String get media_source_network_remote_path => '远端路径';
+  @override
+  String get media_source_network_label_optional => '显示名（可选）';
+  @override
+  String get media_source_network_missing_fields => '请填写主机、用户名、远端路径，以及密码或私钥';
+  @override
+  String get render_impeller_disable_toggle => '关闭 Impeller（改用 Skia 渲染）';
+  @override
+  String get render_impeller_disable_hint =>
+      '改用 Skia 渲染后端。视频能播放但画面恒黑时可尝试；重启 App 后生效。';
+  @override
+  String get render_restart_required => '重启 App 后生效';
+  @override
+  String get handlebar_card_image => '卡片图片（封面 / 视频 GIF）';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube 字幕';
+  @override
+  String get video_subtitle_waveform_unavailable => '本设备无法生成波形';
+  @override
+  String get shortcut_action_reader_open_navigation => '打开导航';
+  @override
+  String get stat_clear_all => '清空统计';
+  @override
+  String get stat_clear_all_title => '清空全部统计';
+  @override
+  String get stat_clear_all_confirm => '清空';
+  @override
+  String get stat_clear_all_reading_message =>
+      '确定清空全部阅读统计吗？将删除所有阅读时长、字数以及查词 / 制卡计数。你收藏的词、句子和已制卡片不受影响。此操作不可撤销。';
+  @override
+  String get stat_clear_all_video_message =>
+      '确定清空全部视频统计吗？将删除所有观看时长、字幕字数以及查词 / 制卡计数。你收藏的词、句子和已制卡片不受影响。此操作不可撤销。';
+  @override
+  String get video_setting_subtitle_text_color => '文字颜色';
+  @override
+  String get video_setting_subtitle_text_color_white => '白色';
+  @override
+  String get video_setting_subtitle_text_color_yellow => '黄色';
+  @override
+  String get video_setting_subtitle_text_color_cyan => '青色';
+  @override
+  String get video_setting_subtitle_text_color_green => '绿色';
+  @override
+  String get video_setting_subtitle_text_color_red => '红色';
+  @override
+  String get card_mining_pending => '制卡中…';
+  @override
+  String get sync_pair_pin_waiting => '等待对方设备输入此 PIN…';
+  @override
+  String get sync_pair_repair => '重新配对';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang}（翻译）';
+  @override
+  String get video_subtitle_youtube_empty => '该字幕轨没有文字';
+  @override
+  String get sync_client_token => '对端访问令牌';
+  @override
+  String get sync_client_token_hint =>
+      '配对成功后由对端自动签发并填入；这是对端发给本设备的专属令牌，与对端服务器显示的共享令牌不同，两者都能连接。';
+  @override
+  String get sync_server_token_self_hint =>
+      '本设备的服务器共享令牌；已配对的设备会另获各自的专属令牌，此共享令牌也可手动填入连接。';
+  @override
+  String get theme_eyecare => '护眼';
+  @override
+  String get reader_theme_eyecare => '护眼';
+  @override
+  String get video_settings_cat_audio => '音频';
+  @override
+  String get video_setting_theme => '主题';
+  @override
+  String get video_setting_theme_hint => '切换应用配色主题';
+  @override
+  String get video_audio_track_empty => '没有可切换的音频轨';
+  @override
+  String get dictionary_font_size_zoom_hint => 'Ctrl+滚轮可直接缩放查词弹窗内容';
+  @override
+  String get external_window_none => '未绑定窗口（点此选择）';
+  @override
+  String get external_window_refresh => '刷新窗口列表';
+  @override
+  String get external_window_unbind => '解除窗口绑定';
+  @override
+  String get external_window_capture_failed => '窗口截图失败';
+  @override
+  String get external_window_unsupported => '外部窗口挖矿仅支持 Windows';
+  @override
+  String get external_window_no_windows => '未找到可捕获的窗口';
+  @override
+  String get external_window_mining => '外部窗口挖矿';
+  @override
+  String get external_window_select => '选择目标窗口';
+  @override
+  String get backup_import_contents_title => '此备份包含';
+  @override
+  String get backup_category_dictionary_desc => '已导入的词典及其文件';
+  @override
+  String get backup_category_books_desc => '书籍文件（EPUB 及解压内容）';
+  @override
+  String get backup_category_audiobooks_desc => '有声书音频与对齐数据';
+  @override
+  String get backup_category_fonts_desc => '已导入的自定义字体文件';
+  @override
+  String get backup_category_videos_desc => '本地视频文件';
+  @override
+  String get backup_category_local_audio_desc => '本地发音音频库';
+  @override
+  String get backup_category_progress_desc => '阅读进度与书签';
+  @override
+  String get backup_category_statistics_desc => '阅读、视频与制卡统计';
+  @override
+  String get backup_category_settings_desc => '应用与阅读器设置';
+  @override
+  String get backup_category_profiles_desc => '配置方案';
+  @override
+  String get backup_import_contents_hint =>
+      '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
 }
 
 // Path: retrying_in
@@ -79500,8 +82382,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_import_stream_user_agent => 'User-Agent (optional)';
   @override
-  String get video_import_stream_play => 'Play stream';
-  @override
   String get video_import_stream_url_invalid =>
       'Enter a valid http(s) stream URL';
   @override
@@ -79731,14 +82611,6 @@ class _StringsZhHk extends _StringsEn {
   String get reader_auto_hide_chrome_duration =>
       'Auto-hide floating controls after';
   @override
-  String get video_import_webpage_url_warning_title =>
-      'Web page address, not a direct stream';
-  @override
-  String get video_import_webpage_url_warning_body =>
-      'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-  @override
-  String get video_import_webpage_url_try_anyway => 'Try anyway';
-  @override
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
   @override
   String get anki_mined_card_title => 'Card already in Anki';
@@ -79894,7 +82766,7 @@ class _StringsZhHk extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. Hibiki\'s Yomitan API server is now on and the extension is auto-configured to connect to it — no host/port/token to fill in.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -79968,13 +82840,6 @@ class _StringsZhHk extends _StringsEn {
   String get backup_import_restart_button => 'Restart now';
   @override
   String get backup_import_overlay_title => 'Importing backup';
-  @override
-  String get reader_frosted_bottom_bar => 'Frosted floating bottom bar';
-  @override
-  String get reader_frosted_bottom_bar_hint =>
-      'Blur and translucent background for the reader control bar';
-  @override
-  String get reader_bottom_bar_opacity => 'Bottom bar opacity';
   @override
   String get tag_seed_stars => '新增星級標籤';
   @override
@@ -80055,7 +82920,210 @@ class _StringsZhHk extends _StringsEn {
   String get backup_category_profiles => 'Profiles';
   @override
   String get backup_export_categories_hint =>
-      'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+      '勾選要打包進備份的內容。取消勾選「書籍」會連同這些書的正文和記錄一併移除。';
+  @override
+  String get floating_lyric_permission_hint_coloros =>
+      'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+  @override
+  String get sync_server_tls_enable => 'Interconnect encryption (HTTPS/TLS)';
+  @override
+  String get sync_server_tls_repair_hint =>
+      'Changing this requires paired devices to pair again';
+  @override
+  String get icon_transparent => 'Transparent';
+  @override
+  String get backup_import_validating_title => 'Reading backup…';
+  @override
+  String get backup_import_validating_hint =>
+      'Checking and previewing the backup file. This may take a moment.';
+  @override
+  String get video_quality => 'Quality';
+  @override
+  String get video_quality_auto => 'Auto';
+  @override
+  String video_quality_switched({required Object label}) => 'Quality: ${label}';
+  @override
+  String get video_black_flash_notice_action => 'View suggestions';
+  @override
+  String get video_black_flash_notice_dont_show_again => 'Don\'t show again';
+  @override
+  String get popup_no_audio_available => 'No audio available';
+  @override
+  String get loading_slow_title => 'Startup is taking longer than usual';
+  @override
+  String get loading_slow_message =>
+      'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+  @override
+  String get shortcut_gamepad_unavailable_hint =>
+      'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+  @override
+  String get shortcut_view_list => 'List view';
+  @override
+  String get shortcut_view_visual => 'Controller layout';
+  @override
+  String get stat_range_and_trend => 'Range & Trend';
+  @override
+  String get stat_metric_chars => 'Characters';
+  @override
+  String get stat_metric_time => 'Time';
+  @override
+  String get stat_metric_speed => 'Speed';
+  @override
+  String get stat_goal => 'Daily Goal';
+  @override
+  String get stat_streak => 'Streak';
+  @override
+  String stat_format_days({required Object n}) => '${n} days';
+  @override
+  String get stat_bookshelf_compare => 'Bookshelf';
+  @override
+  String get stat_speed_summary => 'Speed Summary';
+  @override
+  String get stat_weighted_avg_speed => 'Weighted Avg';
+  @override
+  String get stat_typical_day => 'Typical Day';
+  @override
+  String get stat_recent_active => 'Active Days (7d)';
+  @override
+  String get stat_vs_prev => 'vs prev 14d';
+  @override
+  String get stat_fastest_day => 'Fastest Day';
+  @override
+  String get stat_slowest_day => 'Slowest Day';
+  @override
+  String get stat_col_book => 'Book';
+  @override
+  String get media_source_network_subtitle =>
+      'SFTP / FTP / WebDAV remote library';
+  @override
+  String get media_source_network_remote_path => 'Remote path';
+  @override
+  String get media_source_network_label_optional => 'Display name (optional)';
+  @override
+  String get media_source_network_missing_fields =>
+      'Enter host, username, remote path, and a password or key';
+  @override
+  String get render_impeller_disable_toggle =>
+      'Disable Impeller (use Skia renderer)';
+  @override
+  String get render_impeller_disable_hint =>
+      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+  @override
+  String get render_restart_required => 'Takes effect after restarting the app';
+  @override
+  String get handlebar_card_image => 'Card Image (Cover / GIF)';
+  @override
+  String get video_subtitle_youtube_captions => 'YouTube captions';
+  @override
+  String get video_subtitle_waveform_unavailable =>
+      'Waveform unavailable on this device';
+  @override
+  String get shortcut_action_reader_open_navigation => 'Open Navigation';
+  @override
+  String get stat_clear_all => 'Clear statistics';
+  @override
+  String get stat_clear_all_title => 'Clear all statistics';
+  @override
+  String get stat_clear_all_confirm => 'Clear';
+  @override
+  String get stat_clear_all_reading_message =>
+      'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get stat_clear_all_video_message =>
+      'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+  @override
+  String get video_setting_subtitle_text_color => 'Text color';
+  @override
+  String get video_setting_subtitle_text_color_white => 'White';
+  @override
+  String get video_setting_subtitle_text_color_yellow => 'Yellow';
+  @override
+  String get video_setting_subtitle_text_color_cyan => 'Cyan';
+  @override
+  String get video_setting_subtitle_text_color_green => 'Green';
+  @override
+  String get video_setting_subtitle_text_color_red => 'Red';
+  @override
+  String get card_mining_pending => 'Adding card…';
+  @override
+  String get sync_pair_pin_waiting =>
+      'Waiting for the other device to enter this PIN…';
+  @override
+  String get sync_pair_repair => 'Pair again';
+  @override
+  String video_subtitle_youtube_translated({required Object lang}) =>
+      '${lang}（翻譯）';
+  @override
+  String get video_subtitle_youtube_empty => '該字幕軌沒有文字';
+  @override
+  String get sync_client_token => 'Peer access token';
+  @override
+  String get sync_client_token_hint =>
+      'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+  @override
+  String get sync_server_token_self_hint =>
+      'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+  @override
+  String get theme_eyecare => '護眼';
+  @override
+  String get reader_theme_eyecare => '護眼';
+  @override
+  String get video_settings_cat_audio => 'Audio';
+  @override
+  String get video_setting_theme => 'Theme';
+  @override
+  String get video_setting_theme_hint => 'Switch the app color theme';
+  @override
+  String get video_audio_track_empty => 'No switchable audio tracks';
+  @override
+  String get dictionary_font_size_zoom_hint =>
+      'Ctrl + scroll wheel zooms the popup content';
+  @override
+  String get external_window_none => 'No window bound (tap to select)';
+  @override
+  String get external_window_refresh => 'Refresh window list';
+  @override
+  String get external_window_unbind => 'Unbind window';
+  @override
+  String get external_window_capture_failed => 'Window capture failed';
+  @override
+  String get external_window_unsupported =>
+      'External window mining is Windows-only';
+  @override
+  String get external_window_no_windows => 'No capturable windows found';
+  @override
+  String get external_window_mining => 'External window mining';
+  @override
+  String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -83956,8 +87024,6 @@ extension on _StringsEn {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -84163,12 +87229,6 @@ extension on _StringsEn {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -84308,7 +87368,7 @@ extension on _StringsEn {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. Hibiki\'s Yomitan API server is now on and the extension is auto-configured to connect to it — no host/port/token to fill in.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -84371,12 +87431,6 @@ extension on _StringsEn {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -84449,7 +87503,187 @@ extension on _StringsEn {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return 'Eye Care';
+      case 'reader_theme_eyecare':
+        return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -88310,8 +91544,6 @@ extension on _StringsAr {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -88517,12 +91749,6 @@ extension on _StringsAr {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -88725,12 +91951,6 @@ extension on _StringsAr {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -88803,7 +92023,187 @@ extension on _StringsAr {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return 'Eye Care';
+      case 'reader_theme_eyecare':
+        return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -92686,8 +96086,6 @@ extension on _StringsDe {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -92893,12 +96291,6 @@ extension on _StringsDe {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -93101,12 +96493,6 @@ extension on _StringsDe {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -93179,7 +96565,187 @@ extension on _StringsDe {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return 'Eye Care';
+      case 'reader_theme_eyecare':
+        return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -97060,8 +100626,6 @@ extension on _StringsEs {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -97267,12 +100831,6 @@ extension on _StringsEs {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -97475,12 +101033,6 @@ extension on _StringsEs {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -97553,7 +101105,187 @@ extension on _StringsEs {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return 'Eye Care';
+      case 'reader_theme_eyecare':
+        return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -101441,8 +105173,6 @@ extension on _StringsFr {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -101648,12 +105378,6 @@ extension on _StringsFr {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -101856,12 +105580,6 @@ extension on _StringsFr {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -101934,7 +105652,187 @@ extension on _StringsFr {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return 'Eye Care';
+      case 'reader_theme_eyecare':
+        return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -105802,8 +109700,6 @@ extension on _StringsId {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -106009,12 +109905,6 @@ extension on _StringsId {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -106217,12 +110107,6 @@ extension on _StringsId {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -106295,7 +110179,187 @@ extension on _StringsId {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return 'Eye Care';
+      case 'reader_theme_eyecare':
+        return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -110180,8 +114244,6 @@ extension on _StringsIt {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -110387,12 +114449,6 @@ extension on _StringsIt {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -110595,12 +114651,6 @@ extension on _StringsIt {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -110673,7 +114723,187 @@ extension on _StringsIt {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return 'Eye Care';
+      case 'reader_theme_eyecare':
+        return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -114516,8 +118746,6 @@ extension on _StringsJa {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -114723,12 +118951,6 @@ extension on _StringsJa {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -114931,12 +119153,6 @@ extension on _StringsJa {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -115009,7 +119225,187 @@ extension on _StringsJa {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return 'Eye Care';
+      case 'reader_theme_eyecare':
+        return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -118855,8 +123251,6 @@ extension on _StringsKo {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -119062,12 +123456,6 @@ extension on _StringsKo {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -119270,12 +123658,6 @@ extension on _StringsKo {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -119348,7 +123730,187 @@ extension on _StringsKo {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return 'Eye Care';
+      case 'reader_theme_eyecare':
+        return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -123226,8 +127788,6 @@ extension on _StringsNl {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -123433,12 +127993,6 @@ extension on _StringsNl {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -123641,12 +128195,6 @@ extension on _StringsNl {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -123719,7 +128267,187 @@ extension on _StringsNl {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return 'Eye Care';
+      case 'reader_theme_eyecare':
+        return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -127594,8 +132322,6 @@ extension on _StringsPtBr {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -127801,12 +132527,6 @@ extension on _StringsPtBr {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -128009,12 +132729,6 @@ extension on _StringsPtBr {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -128087,7 +132801,187 @@ extension on _StringsPtBr {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return 'Eye Care';
+      case 'reader_theme_eyecare':
+        return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -131966,8 +136860,6 @@ extension on _StringsRu {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -132173,12 +137065,6 @@ extension on _StringsRu {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -132381,12 +137267,6 @@ extension on _StringsRu {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -132459,7 +137339,187 @@ extension on _StringsRu {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return 'Eye Care';
+      case 'reader_theme_eyecare':
+        return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -136320,8 +141380,6 @@ extension on _StringsTh {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -136527,12 +141585,6 @@ extension on _StringsTh {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -136735,12 +141787,6 @@ extension on _StringsTh {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -136813,7 +141859,187 @@ extension on _StringsTh {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return 'Eye Care';
+      case 'reader_theme_eyecare':
+        return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -140683,8 +145909,6 @@ extension on _StringsTr {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -140890,12 +146114,6 @@ extension on _StringsTr {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -141098,12 +146316,6 @@ extension on _StringsTr {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -141176,7 +146388,187 @@ extension on _StringsTr {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return 'Eye Care';
+      case 'reader_theme_eyecare':
+        return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -145040,8 +150432,6 @@ extension on _StringsVi {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -145247,12 +150637,6 @@ extension on _StringsVi {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -145455,12 +150839,6 @@ extension on _StringsVi {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return 'Add star rating tags';
       case 'tag_seed_stars_added':
@@ -145533,7 +150911,187 @@ extension on _StringsVi {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return 'Tick what to pack into the backup. Unchecking Books removes those books entirely — their content and records go with them.';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang} (translated)';
+      case 'video_subtitle_youtube_empty':
+        return 'This caption track has no text';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return 'Eye Care';
+      case 'reader_theme_eyecare':
+        return 'Eye Care';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -149366,8 +154924,6 @@ extension on _StringsZhCn {
         return 'Referer（可选）';
       case 'video_import_stream_user_agent':
         return 'User-Agent（可选）';
-      case 'video_import_stream_play':
-        return '播放流';
       case 'video_import_stream_url_invalid':
         return '请输入有效的 http(s) 流地址';
       case 'settings_check_update_now':
@@ -149572,12 +155128,6 @@ extension on _StringsZhCn {
         return '悬浮阅读进度';
       case 'reader_auto_hide_chrome_duration':
         return '悬浮控件自动隐藏延时';
-      case 'video_import_webpage_url_warning_title':
-        return '网页地址，不是视频直链';
-      case 'video_import_webpage_url_warning_body':
-        return '这是网页地址，不是直接的视频流（.m3u8/.mp4/直链）。除 YouTube 外，Hibiki 暂不支持解析网页视频（如 Netflix/Bilibili），请提供直链。你仍可强行尝试。';
-      case 'video_import_webpage_url_try_anyway':
-        return '仍要尝试';
       case 'sync_pair_pin_label':
         return '在另一台设备上输入此 PIN';
       case 'anki_mined_card_title':
@@ -149715,7 +155265,7 @@ extension on _StringsZhCn {
       case 'browser_extension_step_pick_folder':
         return '选择下方的扩展文件夹（其路径已复制到剪贴板）。';
       case 'browser_extension_step_done_auto':
-        return '完成。扩展已自动配置为连接本应用——无需填写 host/端口/token。';
+        return '完成。已自动开启 Yomitan API 服务器，扩展已配置好连接本应用（查词 API，与设备互联/同步无关）——无需填写 host/端口/token。';
       case 'browser_extension_enable_server_first':
         return '提示：请先在上方开启「Yomitan API 服务器」并设置 API 密钥，扩展才能被自动配置为可用连接。';
       case 'copied':
@@ -149778,12 +155328,6 @@ extension on _StringsZhCn {
         return '立即重启';
       case 'backup_import_overlay_title':
         return '正在导入备份';
-      case 'reader_frosted_bottom_bar':
-        return '毛玻璃悬浮底栏';
-      case 'reader_frosted_bottom_bar_hint':
-        return '给阅读器控制栏加毛玻璃模糊和半透明背景';
-      case 'reader_bottom_bar_opacity':
-        return '底栏不透明度';
       case 'tag_seed_stars':
         return '添加星级标签';
       case 'tag_seed_stars_added':
@@ -149856,7 +155400,187 @@ extension on _StringsZhCn {
       case 'backup_category_profiles':
         return '配置方案';
       case 'backup_export_categories_hint':
-        return '所选类别会打包进备份。数据库中的书籍记录始终包含；阅读进度、统计、设置、配置方案可在上方分别选择排除。取消勾选「书籍」会完全排除这些书——正文文件和书籍记录一并排除——导入后不会出现这些书。';
+        return '勾选要打包进备份的内容。取消勾选「书籍」会连同这些书的正文和记录一并移除。';
+      case 'floating_lyric_permission_hint_coloros':
+        return '系统拒绝授予悬浮窗权限时：请用文件管理器找到安装包覆盖安装一次，或在开发者选项中关闭权限监控后重试。';
+      case 'sync_server_tls_enable':
+        return '互联加密（HTTPS/TLS）';
+      case 'sync_server_tls_repair_hint':
+        return '切换后已配对设备需重新配对';
+      case 'icon_transparent':
+        return '透明';
+      case 'backup_import_validating_title':
+        return '正在读取备份…';
+      case 'backup_import_validating_hint':
+        return '正在校验并预览备份内容，请稍候。';
+      case 'video_quality':
+        return '画质';
+      case 'video_quality_auto':
+        return '自动';
+      case 'video_quality_switched':
+        return ({required Object label}) => '画质：${label}';
+      case 'video_black_flash_notice_action':
+        return '查看建议';
+      case 'video_black_flash_notice_dont_show_again':
+        return '不再提示';
+      case 'popup_no_audio_available':
+        return '暂无发音';
+      case 'loading_slow_title':
+        return '启动耗时超出预期';
+      case 'loading_slow_message':
+        return '如果你把数据存储位置设在了当前未连接的网络盘 / 移动盘上，启动可能卡住。点「重试」即可用默认存储位置启动本次会话；你的数据仍保留在原位置不动。';
+      case 'shortcut_gamepad_unavailable_hint':
+        return '未检测到 GameInput 组件，手柄功能不可用。可安装 Windows「游戏服务(Gaming Services)」以启用手柄支持。';
+      case 'shortcut_view_list':
+        return '列表视图';
+      case 'shortcut_view_visual':
+        return '手柄可视化图';
+      case 'stat_range_and_trend':
+        return '范围与趋势';
+      case 'stat_metric_chars':
+        return '字数';
+      case 'stat_metric_time':
+        return '时长';
+      case 'stat_metric_speed':
+        return '速度';
+      case 'stat_goal':
+        return '每日目标';
+      case 'stat_streak':
+        return '连续天数';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} 天';
+      case 'stat_bookshelf_compare':
+        return '书架对比';
+      case 'stat_speed_summary':
+        return '速度摘要';
+      case 'stat_weighted_avg_speed':
+        return '加权均速';
+      case 'stat_typical_day':
+        return '典型日';
+      case 'stat_recent_active':
+        return '近 7 日活跃';
+      case 'stat_vs_prev':
+        return '较前 14 天';
+      case 'stat_fastest_day':
+        return '最快日';
+      case 'stat_slowest_day':
+        return '最慢日';
+      case 'stat_col_book':
+        return '书籍';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV 远端书库';
+      case 'media_source_network_remote_path':
+        return '远端路径';
+      case 'media_source_network_label_optional':
+        return '显示名（可选）';
+      case 'media_source_network_missing_fields':
+        return '请填写主机、用户名、远端路径，以及密码或私钥';
+      case 'render_impeller_disable_toggle':
+        return '关闭 Impeller（改用 Skia 渲染）';
+      case 'render_impeller_disable_hint':
+        return '改用 Skia 渲染后端。视频能播放但画面恒黑时可尝试；重启 App 后生效。';
+      case 'render_restart_required':
+        return '重启 App 后生效';
+      case 'handlebar_card_image':
+        return '卡片图片（封面 / 视频 GIF）';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube 字幕';
+      case 'video_subtitle_waveform_unavailable':
+        return '本设备无法生成波形';
+      case 'shortcut_action_reader_open_navigation':
+        return '打开导航';
+      case 'stat_clear_all':
+        return '清空统计';
+      case 'stat_clear_all_title':
+        return '清空全部统计';
+      case 'stat_clear_all_confirm':
+        return '清空';
+      case 'stat_clear_all_reading_message':
+        return '确定清空全部阅读统计吗？将删除所有阅读时长、字数以及查词 / 制卡计数。你收藏的词、句子和已制卡片不受影响。此操作不可撤销。';
+      case 'stat_clear_all_video_message':
+        return '确定清空全部视频统计吗？将删除所有观看时长、字幕字数以及查词 / 制卡计数。你收藏的词、句子和已制卡片不受影响。此操作不可撤销。';
+      case 'video_setting_subtitle_text_color':
+        return '文字颜色';
+      case 'video_setting_subtitle_text_color_white':
+        return '白色';
+      case 'video_setting_subtitle_text_color_yellow':
+        return '黄色';
+      case 'video_setting_subtitle_text_color_cyan':
+        return '青色';
+      case 'video_setting_subtitle_text_color_green':
+        return '绿色';
+      case 'video_setting_subtitle_text_color_red':
+        return '红色';
+      case 'card_mining_pending':
+        return '制卡中…';
+      case 'sync_pair_pin_waiting':
+        return '等待对方设备输入此 PIN…';
+      case 'sync_pair_repair':
+        return '重新配对';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang}（翻译）';
+      case 'video_subtitle_youtube_empty':
+        return '该字幕轨没有文字';
+      case 'sync_client_token':
+        return '对端访问令牌';
+      case 'sync_client_token_hint':
+        return '配对成功后由对端自动签发并填入；这是对端发给本设备的专属令牌，与对端服务器显示的共享令牌不同，两者都能连接。';
+      case 'sync_server_token_self_hint':
+        return '本设备的服务器共享令牌；已配对的设备会另获各自的专属令牌，此共享令牌也可手动填入连接。';
+      case 'theme_eyecare':
+        return '护眼';
+      case 'reader_theme_eyecare':
+        return '护眼';
+      case 'video_settings_cat_audio':
+        return '音频';
+      case 'video_setting_theme':
+        return '主题';
+      case 'video_setting_theme_hint':
+        return '切换应用配色主题';
+      case 'video_audio_track_empty':
+        return '没有可切换的音频轨';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl+滚轮可直接缩放查词弹窗内容';
+      case 'external_window_none':
+        return '未绑定窗口（点此选择）';
+      case 'external_window_refresh':
+        return '刷新窗口列表';
+      case 'external_window_unbind':
+        return '解除窗口绑定';
+      case 'external_window_capture_failed':
+        return '窗口截图失败';
+      case 'external_window_unsupported':
+        return '外部窗口挖矿仅支持 Windows';
+      case 'external_window_no_windows':
+        return '未找到可捕获的窗口';
+      case 'external_window_mining':
+        return '外部窗口挖矿';
+      case 'external_window_select':
+        return '选择目标窗口';
+      case 'backup_import_contents_title':
+        return '此备份包含';
+      case 'backup_category_dictionary_desc':
+        return '已导入的词典及其文件';
+      case 'backup_category_books_desc':
+        return '书籍文件（EPUB 及解压内容）';
+      case 'backup_category_audiobooks_desc':
+        return '有声书音频与对齐数据';
+      case 'backup_category_fonts_desc':
+        return '已导入的自定义字体文件';
+      case 'backup_category_videos_desc':
+        return '本地视频文件';
+      case 'backup_category_local_audio_desc':
+        return '本地发音音频库';
+      case 'backup_category_progress_desc':
+        return '阅读进度与书签';
+      case 'backup_category_statistics_desc':
+        return '阅读、视频与制卡统计';
+      case 'backup_category_settings_desc':
+        return '应用与阅读器设置';
+      case 'backup_category_profiles_desc':
+        return '配置方案';
+      case 'backup_import_contents_hint':
+        return '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
       default:
         return null;
     }
@@ -153691,8 +159415,6 @@ extension on _StringsZhHk {
         return 'Referer (optional)';
       case 'video_import_stream_user_agent':
         return 'User-Agent (optional)';
-      case 'video_import_stream_play':
-        return 'Play stream';
       case 'video_import_stream_url_invalid':
         return 'Enter a valid http(s) stream URL';
       case 'settings_check_update_now':
@@ -153898,12 +159620,6 @@ extension on _StringsZhHk {
         return 'Floating reading progress';
       case 'reader_auto_hide_chrome_duration':
         return 'Auto-hide floating controls after';
-      case 'video_import_webpage_url_warning_title':
-        return 'Web page address, not a direct stream';
-      case 'video_import_webpage_url_warning_body':
-        return 'This looks like a web page, not a direct video stream (.m3u8/.mp4/direct link). Apart from YouTube, Hibiki cannot extract video from web pages (e.g. Netflix/Bilibili) yet — please provide a direct stream URL. You can still try anyway.';
-      case 'video_import_webpage_url_try_anyway':
-        return 'Try anyway';
       case 'sync_pair_pin_label':
         return 'Enter this PIN on the other device';
       case 'anki_mined_card_title':
@@ -154043,7 +159759,7 @@ extension on _StringsZhHk {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. Hibiki\'s Yomitan API server is now on and the extension is auto-configured to connect to it — no host/port/token to fill in.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -154106,12 +159822,6 @@ extension on _StringsZhHk {
         return 'Restart now';
       case 'backup_import_overlay_title':
         return 'Importing backup';
-      case 'reader_frosted_bottom_bar':
-        return 'Frosted floating bottom bar';
-      case 'reader_frosted_bottom_bar_hint':
-        return 'Blur and translucent background for the reader control bar';
-      case 'reader_bottom_bar_opacity':
-        return 'Bottom bar opacity';
       case 'tag_seed_stars':
         return '新增星級標籤';
       case 'tag_seed_stars_added':
@@ -154184,7 +159894,187 @@ extension on _StringsZhHk {
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_export_categories_hint':
-        return 'Selected categories are packed into the backup. Book records are always kept in the database; reading progress, statistics, settings and profiles can each be excluded above. Unchecking Books excludes those books entirely — both their content files and their records — so they will not appear after import.';
+        return '勾選要打包進備份的內容。取消勾選「書籍」會連同這些書的正文和記錄一併移除。';
+      case 'floating_lyric_permission_hint_coloros':
+        return 'If the system keeps refusing the overlay permission: reinstall this app\'s APK once with a file manager, or turn off permission monitoring in Developer options, then try again.';
+      case 'sync_server_tls_enable':
+        return 'Interconnect encryption (HTTPS/TLS)';
+      case 'sync_server_tls_repair_hint':
+        return 'Changing this requires paired devices to pair again';
+      case 'icon_transparent':
+        return 'Transparent';
+      case 'backup_import_validating_title':
+        return 'Reading backup…';
+      case 'backup_import_validating_hint':
+        return 'Checking and previewing the backup file. This may take a moment.';
+      case 'video_quality':
+        return 'Quality';
+      case 'video_quality_auto':
+        return 'Auto';
+      case 'video_quality_switched':
+        return ({required Object label}) => 'Quality: ${label}';
+      case 'video_black_flash_notice_action':
+        return 'View suggestions';
+      case 'video_black_flash_notice_dont_show_again':
+        return 'Don\'t show again';
+      case 'popup_no_audio_available':
+        return 'No audio available';
+      case 'loading_slow_title':
+        return 'Startup is taking longer than usual';
+      case 'loading_slow_message':
+        return 'If your data storage location is on a network or removable drive that is currently disconnected, startup can stall. Tap Retry to launch using the default storage location for this session; your data stays where it is.';
+      case 'shortcut_gamepad_unavailable_hint':
+        return 'GameInput component not detected — gamepad support is unavailable. Install the Windows Gaming Services to enable controller support.';
+      case 'shortcut_view_list':
+        return 'List view';
+      case 'shortcut_view_visual':
+        return 'Controller layout';
+      case 'stat_range_and_trend':
+        return 'Range & Trend';
+      case 'stat_metric_chars':
+        return 'Characters';
+      case 'stat_metric_time':
+        return 'Time';
+      case 'stat_metric_speed':
+        return 'Speed';
+      case 'stat_goal':
+        return 'Daily Goal';
+      case 'stat_streak':
+        return 'Streak';
+      case 'stat_format_days':
+        return ({required Object n}) => '${n} days';
+      case 'stat_bookshelf_compare':
+        return 'Bookshelf';
+      case 'stat_speed_summary':
+        return 'Speed Summary';
+      case 'stat_weighted_avg_speed':
+        return 'Weighted Avg';
+      case 'stat_typical_day':
+        return 'Typical Day';
+      case 'stat_recent_active':
+        return 'Active Days (7d)';
+      case 'stat_vs_prev':
+        return 'vs prev 14d';
+      case 'stat_fastest_day':
+        return 'Fastest Day';
+      case 'stat_slowest_day':
+        return 'Slowest Day';
+      case 'stat_col_book':
+        return 'Book';
+      case 'media_source_network_subtitle':
+        return 'SFTP / FTP / WebDAV remote library';
+      case 'media_source_network_remote_path':
+        return 'Remote path';
+      case 'media_source_network_label_optional':
+        return 'Display name (optional)';
+      case 'media_source_network_missing_fields':
+        return 'Enter host, username, remote path, and a password or key';
+      case 'render_impeller_disable_toggle':
+        return 'Disable Impeller (use Skia renderer)';
+      case 'render_impeller_disable_hint':
+        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
+      case 'render_restart_required':
+        return 'Takes effect after restarting the app';
+      case 'handlebar_card_image':
+        return 'Card Image (Cover / GIF)';
+      case 'video_subtitle_youtube_captions':
+        return 'YouTube captions';
+      case 'video_subtitle_waveform_unavailable':
+        return 'Waveform unavailable on this device';
+      case 'shortcut_action_reader_open_navigation':
+        return 'Open Navigation';
+      case 'stat_clear_all':
+        return 'Clear statistics';
+      case 'stat_clear_all_title':
+        return 'Clear all statistics';
+      case 'stat_clear_all_confirm':
+        return 'Clear';
+      case 'stat_clear_all_reading_message':
+        return 'Clear all reading time, character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'stat_clear_all_video_message':
+        return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
+      case 'video_setting_subtitle_text_color':
+        return 'Text color';
+      case 'video_setting_subtitle_text_color_white':
+        return 'White';
+      case 'video_setting_subtitle_text_color_yellow':
+        return 'Yellow';
+      case 'video_setting_subtitle_text_color_cyan':
+        return 'Cyan';
+      case 'video_setting_subtitle_text_color_green':
+        return 'Green';
+      case 'video_setting_subtitle_text_color_red':
+        return 'Red';
+      case 'card_mining_pending':
+        return 'Adding card…';
+      case 'sync_pair_pin_waiting':
+        return 'Waiting for the other device to enter this PIN…';
+      case 'sync_pair_repair':
+        return 'Pair again';
+      case 'video_subtitle_youtube_translated':
+        return ({required Object lang}) => '${lang}（翻譯）';
+      case 'video_subtitle_youtube_empty':
+        return '該字幕軌沒有文字';
+      case 'sync_client_token':
+        return 'Peer access token';
+      case 'sync_client_token_hint':
+        return 'Auto-filled after pairing: a device-specific token the peer issued to this device. It differs from the peer\'s shared server token, and both can connect.';
+      case 'sync_server_token_self_hint':
+        return 'This device\'s shared server token. Paired devices each get their own device-specific token; this shared token can also be entered manually to connect.';
+      case 'theme_eyecare':
+        return '護眼';
+      case 'reader_theme_eyecare':
+        return '護眼';
+      case 'video_settings_cat_audio':
+        return 'Audio';
+      case 'video_setting_theme':
+        return 'Theme';
+      case 'video_setting_theme_hint':
+        return 'Switch the app color theme';
+      case 'video_audio_track_empty':
+        return 'No switchable audio tracks';
+      case 'dictionary_font_size_zoom_hint':
+        return 'Ctrl + scroll wheel zooms the popup content';
+      case 'external_window_none':
+        return 'No window bound (tap to select)';
+      case 'external_window_refresh':
+        return 'Refresh window list';
+      case 'external_window_unbind':
+        return 'Unbind window';
+      case 'external_window_capture_failed':
+        return 'Window capture failed';
+      case 'external_window_unsupported':
+        return 'External window mining is Windows-only';
+      case 'external_window_no_windows':
+        return 'No capturable windows found';
+      case 'external_window_mining':
+        return 'External window mining';
+      case 'external_window_select':
+        return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
