@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37383 (2199 per locale)
+/// Strings: 37587 (2211 per locale)
 ///
-/// Built on 2026-07-08 at 20:43 UTC
+/// Built on 2026-07-09 at 04:27 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2916,6 +2916,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get external_window_no_windows => 'No capturable windows found';
   String get external_window_mining => 'External window mining';
   String get external_window_select => 'Select target window';
+  String get backup_import_contents_title => 'This backup contains';
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  String get backup_category_videos_desc => 'Local video files';
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  String get backup_category_settings_desc => 'App and reader settings';
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -7891,6 +7908,35 @@ class _StringsAr extends _StringsEn {
   String get external_window_mining => 'External window mining';
   @override
   String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -12989,6 +13035,35 @@ class _StringsDe extends _StringsEn {
   String get external_window_mining => 'External window mining';
   @override
   String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -18104,6 +18179,35 @@ class _StringsEs extends _StringsEn {
   String get external_window_mining => 'External window mining';
   @override
   String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -23238,6 +23342,35 @@ class _StringsFr extends _StringsEn {
   String get external_window_mining => 'External window mining';
   @override
   String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -28274,6 +28407,35 @@ class _StringsId extends _StringsEn {
   String get external_window_mining => 'External window mining';
   @override
   String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -33371,6 +33533,35 @@ class _StringsIt extends _StringsEn {
   String get external_window_mining => 'External window mining';
   @override
   String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -38194,6 +38385,35 @@ class _StringsJa extends _StringsEn {
   String get external_window_mining => 'External window mining';
   @override
   String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -43021,6 +43241,35 @@ class _StringsKo extends _StringsEn {
   String get external_window_mining => 'External window mining';
   @override
   String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -48086,6 +48335,35 @@ class _StringsNl extends _StringsEn {
   String get external_window_mining => 'External window mining';
   @override
   String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -53174,6 +53452,35 @@ class _StringsPtBr extends _StringsEn {
   String get external_window_mining => 'External window mining';
   @override
   String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -58237,6 +58544,35 @@ class _StringsRu extends _StringsEn {
   String get external_window_mining => 'External window mining';
   @override
   String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -63213,6 +63549,35 @@ class _StringsTh extends _StringsEn {
   String get external_window_mining => 'External window mining';
   @override
   String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -68244,6 +68609,35 @@ class _StringsTr extends _StringsEn {
   String get external_window_mining => 'External window mining';
   @override
   String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -73250,6 +73644,35 @@ class _StringsVi extends _StringsEn {
   String get external_window_mining => 'External window mining';
   @override
   String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -77922,6 +78345,31 @@ class _StringsZhCn extends _StringsEn {
   String get external_window_mining => '外部窗口挖矿';
   @override
   String get external_window_select => '选择目标窗口';
+  @override
+  String get backup_import_contents_title => '此备份包含';
+  @override
+  String get backup_category_dictionary_desc => '已导入的词典及其文件';
+  @override
+  String get backup_category_books_desc => '书籍文件（EPUB 及解压内容）';
+  @override
+  String get backup_category_audiobooks_desc => '有声书音频与对齐数据';
+  @override
+  String get backup_category_fonts_desc => '已导入的自定义字体文件';
+  @override
+  String get backup_category_videos_desc => '本地视频文件';
+  @override
+  String get backup_category_local_audio_desc => '本地发音音频库';
+  @override
+  String get backup_category_progress_desc => '阅读进度与书签';
+  @override
+  String get backup_category_statistics_desc => '阅读、视频与制卡统计';
+  @override
+  String get backup_category_settings_desc => '应用与阅读器设置';
+  @override
+  String get backup_category_profiles_desc => '配置方案';
+  @override
+  String get backup_import_contents_hint =>
+      '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
 }
 
 // Path: retrying_in
@@ -82647,6 +83095,35 @@ class _StringsZhHk extends _StringsEn {
   String get external_window_mining => 'External window mining';
   @override
   String get external_window_select => 'Select target window';
+  @override
+  String get backup_import_contents_title => 'This backup contains';
+  @override
+  String get backup_category_dictionary_desc =>
+      'Imported dictionaries and their files';
+  @override
+  String get backup_category_books_desc =>
+      'Book files (EPUB and extracted content)';
+  @override
+  String get backup_category_audiobooks_desc => 'Audiobook audio and alignment';
+  @override
+  String get backup_category_fonts_desc => 'Imported custom font files';
+  @override
+  String get backup_category_videos_desc => 'Local video files';
+  @override
+  String get backup_category_local_audio_desc =>
+      'Local pronunciation audio databases';
+  @override
+  String get backup_category_progress_desc => 'Reading positions and bookmarks';
+  @override
+  String get backup_category_statistics_desc =>
+      'Reading, video and mining statistics';
+  @override
+  String get backup_category_settings_desc => 'App and reader settings';
+  @override
+  String get backup_category_profiles_desc => 'Configuration profiles';
+  @override
+  String get backup_import_contents_hint =>
+      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
 }
 
 // Path: retrying_in
@@ -87183,6 +87660,30 @@ extension on _StringsEn {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -91679,6 +92180,30 @@ extension on _StringsAr {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -96197,6 +96722,30 @@ extension on _StringsDe {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -100713,6 +101262,30 @@ extension on _StringsEs {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -105236,6 +105809,30 @@ extension on _StringsFr {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -109739,6 +110336,30 @@ extension on _StringsId {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -114259,6 +114880,30 @@ extension on _StringsIt {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -118737,6 +119382,30 @@ extension on _StringsJa {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -123218,6 +123887,30 @@ extension on _StringsKo {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -127731,6 +128424,30 @@ extension on _StringsNl {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -132241,6 +132958,30 @@ extension on _StringsPtBr {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -136755,6 +137496,30 @@ extension on _StringsRu {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -141251,6 +142016,30 @@ extension on _StringsTh {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -145756,6 +146545,30 @@ extension on _StringsTr {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -150255,6 +151068,30 @@ extension on _StringsVi {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
@@ -154720,6 +155557,30 @@ extension on _StringsZhCn {
         return '外部窗口挖矿';
       case 'external_window_select':
         return '选择目标窗口';
+      case 'backup_import_contents_title':
+        return '此备份包含';
+      case 'backup_category_dictionary_desc':
+        return '已导入的词典及其文件';
+      case 'backup_category_books_desc':
+        return '书籍文件（EPUB 及解压内容）';
+      case 'backup_category_audiobooks_desc':
+        return '有声书音频与对齐数据';
+      case 'backup_category_fonts_desc':
+        return '已导入的自定义字体文件';
+      case 'backup_category_videos_desc':
+        return '本地视频文件';
+      case 'backup_category_local_audio_desc':
+        return '本地发音音频库';
+      case 'backup_category_progress_desc':
+        return '阅读进度与书签';
+      case 'backup_category_statistics_desc':
+        return '阅读、视频与制卡统计';
+      case 'backup_category_settings_desc':
+        return '应用与阅读器设置';
+      case 'backup_category_profiles_desc':
+        return '配置方案';
+      case 'backup_import_contents_hint':
+        return '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
       default:
         return null;
     }
@@ -159190,6 +160051,30 @@ extension on _StringsZhHk {
         return 'External window mining';
       case 'external_window_select':
         return 'Select target window';
+      case 'backup_import_contents_title':
+        return 'This backup contains';
+      case 'backup_category_dictionary_desc':
+        return 'Imported dictionaries and their files';
+      case 'backup_category_books_desc':
+        return 'Book files (EPUB and extracted content)';
+      case 'backup_category_audiobooks_desc':
+        return 'Audiobook audio and alignment';
+      case 'backup_category_fonts_desc':
+        return 'Imported custom font files';
+      case 'backup_category_videos_desc':
+        return 'Local video files';
+      case 'backup_category_local_audio_desc':
+        return 'Local pronunciation audio databases';
+      case 'backup_category_progress_desc':
+        return 'Reading positions and bookmarks';
+      case 'backup_category_statistics_desc':
+        return 'Reading, video and mining statistics';
+      case 'backup_category_settings_desc':
+        return 'App and reader settings';
+      case 'backup_category_profiles_desc':
+        return 'Configuration profiles';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       default:
         return null;
     }
