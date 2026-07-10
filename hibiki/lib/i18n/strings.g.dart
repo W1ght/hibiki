@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38012 (2236 per locale)
+/// Strings: 38131 (2243 per locale)
 ///
-/// Built on 2026-07-10 at 08:07 UTC
+/// Built on 2026-07-10 at 10:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1899,7 +1899,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_window_mode_normal => 'Off';
   String get desktop_clipboard_window_mode_lookup => 'Lookup only';
   String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows. Only watches the clipboard and global hotkey on the lookup tab.';
+      'Controls whether Hibiki stays above other windows';
   String get desktop_clipboard_window_mode_always => 'Always';
   String get popup_instant_scroll => 'Instant popup scroll';
   String get popup_instant_scroll_hint =>
@@ -2968,6 +2968,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Network error. Check your connection and try again.';
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  String get desktop_clipboard_destination_main => 'Main window';
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  String get clipboard_panel_opacity => 'Panel opacity';
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -6150,7 +6159,7 @@ class _StringsAr extends _StringsEn {
   String get desktop_clipboard_window_mode_lookup => 'أثناء البحث فقط';
   @override
   String get desktop_clipboard_window_mode_hint =>
-      'يتحكم في بقاء Hibiki فوق النوافذ الأخرى. يراقب الحافظة ومفتاح الاختصار العام فقط في تبويب البحث.';
+      'Controls whether Hibiki stays above other windows';
   @override
   String get desktop_clipboard_window_mode_always => 'دائمًا';
   @override
@@ -8032,6 +8041,22 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -11309,7 +11334,7 @@ class _StringsDe extends _StringsEn {
   String get desktop_clipboard_window_mode_lookup => 'Nur beim Nachschlagen';
   @override
   String get desktop_clipboard_window_mode_hint =>
-      'Steuert, ob Hibiki über anderen Fenstern bleibt. Überwacht Zwischenablage und globales Tastenkürzel nur im Nachschlagen-Tab.';
+      'Controls whether Hibiki stays above other windows';
   @override
   String get desktop_clipboard_window_mode_always => 'Immer';
   @override
@@ -13219,6 +13244,22 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -16511,7 +16552,7 @@ class _StringsEs extends _StringsEn {
   String get desktop_clipboard_window_mode_always => 'Siempre';
   @override
   String get desktop_clipboard_window_mode_hint =>
-      'Controla si Hibiki permanece sobre las demás ventanas. Solo vigila el portapapeles y el atajo global en la pestaña de consulta.';
+      'Controls whether Hibiki stays above other windows';
   @override
   String get desktop_clipboard_window_mode_lookup => 'Solo al consultar';
   @override
@@ -18423,6 +18464,22 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -21735,7 +21792,7 @@ class _StringsFr extends _StringsEn {
   String get desktop_clipboard_window_mode_lookup => 'Recherche uniquement';
   @override
   String get desktop_clipboard_window_mode_hint =>
-      'Détermine si Hibiki reste au-dessus des autres fenêtres. Ne surveille le presse-papiers et le raccourci global que dans l\'onglet de recherche.';
+      'Controls whether Hibiki stays above other windows';
   @override
   String get desktop_clipboard_window_mode_always => 'Toujours';
   @override
@@ -23646,6 +23703,22 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -26872,7 +26945,7 @@ class _StringsId extends _StringsEn {
   String get desktop_clipboard_window_mode_lookup => 'Hanya saat mencari';
   @override
   String get desktop_clipboard_window_mode_hint =>
-      'Mengatur apakah Hibiki tetap di atas jendela lain. Hanya memantau papan klip dan hotkey global di tab pencarian kata.';
+      'Controls whether Hibiki stays above other windows';
   @override
   String get desktop_clipboard_window_mode_always => 'Selalu';
   @override
@@ -28771,6 +28844,22 @@ class _StringsId extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -32040,7 +32129,7 @@ class _StringsIt extends _StringsEn {
   String get desktop_clipboard_window_mode => 'Fissaggio finestra';
   @override
   String get desktop_clipboard_window_mode_hint =>
-      'Controlla se Hibiki resta sopra le altre finestre. Monitora gli appunti e il tasto globale solo nella scheda di ricerca.';
+      'Controls whether Hibiki stays above other windows';
   @override
   String get desktop_clipboard_window_mode_lookup => 'Solo durante la ricerca';
   @override
@@ -33957,6 +34046,22 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -37027,7 +37132,7 @@ class _StringsJa extends _StringsEn {
   String get desktop_clipboard_window_mode => 'ウィンドウの最前面固定';
   @override
   String get desktop_clipboard_window_mode_hint =>
-      'Hibiki を他のウィンドウより前面に保つかを制御します。クリップボードとグローバルホットキーは辞書タブでのみ監視します。';
+      'Controls whether Hibiki stays above other windows';
   @override
   String get desktop_clipboard_window_mode_lookup => '辞書引き中のみ';
   @override
@@ -38869,6 +38974,22 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -41943,7 +42064,7 @@ class _StringsKo extends _StringsEn {
   String get desktop_clipboard_window_mode => '창 고정';
   @override
   String get desktop_clipboard_window_mode_hint =>
-      'Hibiki를 다른 창 위에 유지할지 제어합니다. 단어 찾기 탭에서만 클립보드와 전역 단축키를 감시합니다.';
+      'Controls whether Hibiki stays above other windows';
   @override
   String get desktop_clipboard_window_mode_lookup => '단어 찾기 중에만';
   @override
@@ -43785,6 +43906,22 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -47031,7 +47168,7 @@ class _StringsNl extends _StringsEn {
   String get desktop_clipboard_window_mode => 'Venster vastzetten';
   @override
   String get desktop_clipboard_window_mode_hint =>
-      'Bepaalt of Hibiki boven andere vensters blijft. Bewaakt het klembord en de globale sneltoets alleen op het opzoektabblad.';
+      'Controls whether Hibiki stays above other windows';
   @override
   String get desktop_clipboard_window_mode_always => 'Altijd';
   @override
@@ -48939,6 +49076,22 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -52203,7 +52356,7 @@ class _StringsPtBr extends _StringsEn {
   String get desktop_clipboard_window_mode => 'Fixação da janela';
   @override
   String get desktop_clipboard_window_mode_hint =>
-      'Controla se o Hibiki fica acima das outras janelas. Só monitora a área de transferência e o atalho global na aba de consulta.';
+      'Controls whether Hibiki stays above other windows';
   @override
   String get desktop_clipboard_window_mode_lookup =>
       'Apenas durante a consulta';
@@ -54116,6 +54269,22 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -57359,7 +57528,7 @@ class _StringsRu extends _StringsEn {
   String get desktop_clipboard_window_mode => 'Закрепление окна';
   @override
   String get desktop_clipboard_window_mode_hint =>
-      'Определяет, остаётся ли Hibiki поверх других окон. Следит за буфером обмена и глобальной горячей клавишей только на вкладке поиска.';
+      'Controls whether Hibiki stays above other windows';
   @override
   String get desktop_clipboard_window_mode_lookup => 'Только при поиске';
   @override
@@ -59268,6 +59437,22 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -62449,7 +62634,7 @@ class _StringsTh extends _StringsEn {
   String get desktop_clipboard_window_mode_lookup => 'เฉพาะตอนค้นคำ';
   @override
   String get desktop_clipboard_window_mode_hint =>
-      'ควบคุมว่า Hibiki จะอยู่เหนือหน้าต่างอื่นหรือไม่ จะเฝ้าดูคลิปบอร์ดและฮอตคีย์ทั่วระบบเฉพาะในแท็บค้นคำ';
+      'Controls whether Hibiki stays above other windows';
   @override
   String get popup_instant_scroll => 'เลื่อนหน้าต่างค้นคำแบบทันที';
   @override
@@ -64333,6 +64518,22 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -67560,7 +67761,7 @@ class _StringsTr extends _StringsEn {
   String get desktop_clipboard_window_mode_lookup => 'Yalnızca arama sırasında';
   @override
   String get desktop_clipboard_window_mode_hint =>
-      'Hibiki\'nin diğer pencerelerin üstünde kalıp kalmayacağını denetler. Pano ve genel kısayol tuşu yalnızca arama sekmesinde izlenir.';
+      'Controls whether Hibiki stays above other windows';
   @override
   String get popup_instant_scroll => 'Anında açılır pencere kaydırma';
   @override
@@ -69453,6 +69654,22 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -72653,7 +72870,7 @@ class _StringsVi extends _StringsEn {
   String get desktop_clipboard_window_mode => 'Ghim cửa sổ';
   @override
   String get desktop_clipboard_window_mode_hint =>
-      'Quyết định Hibiki có nằm trên các cửa sổ khác hay không. Chỉ theo dõi clipboard và phím tắt toàn cục ở tab tra từ.';
+      'Controls whether Hibiki stays above other windows';
   @override
   String get desktop_clipboard_window_mode_always => 'Luôn luôn';
   @override
@@ -74548,6 +74765,22 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -77549,8 +77782,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => '窗口置顶策略';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      '控制 Hibiki 是否保持在其他窗口上方；仅在查词界面监听剪贴板和全局热键';
+  String get desktop_clipboard_window_mode_hint => '控制 Hibiki 是否保持在其他窗口上方';
   @override
   String get desktop_clipboard_window_mode_always => '始终置顶';
   @override
@@ -79298,6 +79530,21 @@ class _StringsZhCn extends _StringsEn {
   String get video_danmaku_manual_network_error => '网络错误，请检查连接后重试。';
   @override
   String get video_danmaku_manual_server_error => '搜索失败，请稍后重试。';
+  @override
+  String get desktop_clipboard_destination => '剪贴板查词显示位置';
+  @override
+  String get desktop_clipboard_destination_hint => '剪贴板查词结果显示在哪里';
+  @override
+  String get desktop_clipboard_destination_main => '主窗口';
+  @override
+  String get desktop_clipboard_destination_panel => '悬浮面板';
+  @override
+  String get desktop_clipboard_destination_transient => '光标处弹卡';
+  @override
+  String get clipboard_panel_opacity => '面板不透明度';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      '悬浮查词面板的卡片背景不透明度（需要 Windows 11 背景材质支持）';
 }
 
 // Path: retrying_in
@@ -82300,7 +82547,7 @@ class _StringsZhHk extends _StringsEn {
   String get desktop_clipboard_window_mode => '視窗置頂策略';
   @override
   String get desktop_clipboard_window_mode_hint =>
-      '控制 Hibiki 是否保持在其他視窗上方；只在查詞分頁監聽剪貼簿與全域熱鍵。';
+      'Controls whether Hibiki stays above other windows';
   @override
   String get desktop_clipboard_window_mode_always => '永遠置頂';
   @override
@@ -84112,6 +84359,22 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -87061,7 +87324,7 @@ extension on _StringsEn {
       case 'desktop_clipboard_window_mode_lookup':
         return 'Lookup only';
       case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows. Only watches the clipboard and global hotkey on the lookup tab.';
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Always';
       case 'popup_instant_scroll':
@@ -88722,6 +88985,20 @@ extension on _StringsEn {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -91629,7 +91906,7 @@ extension on _StringsAr {
       case 'desktop_clipboard_window_mode_lookup':
         return 'أثناء البحث فقط';
       case 'desktop_clipboard_window_mode_hint':
-        return 'يتحكم في بقاء Hibiki فوق النوافذ الأخرى. يراقب الحافظة ومفتاح الاختصار العام فقط في تبويب البحث.';
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'دائمًا';
       case 'popup_instant_scroll':
@@ -93292,6 +93569,20 @@ extension on _StringsAr {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -96217,7 +96508,7 @@ extension on _StringsDe {
       case 'desktop_clipboard_window_mode_lookup':
         return 'Nur beim Nachschlagen';
       case 'desktop_clipboard_window_mode_hint':
-        return 'Steuert, ob Hibiki über anderen Fenstern bleibt. Überwacht Zwischenablage und globales Tastenkürzel nur im Nachschlagen-Tab.';
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Immer';
       case 'popup_instant_scroll':
@@ -97884,6 +98175,20 @@ extension on _StringsDe {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -100807,7 +101112,7 @@ extension on _StringsEs {
       case 'desktop_clipboard_window_mode_always':
         return 'Siempre';
       case 'desktop_clipboard_window_mode_hint':
-        return 'Controla si Hibiki permanece sobre las demás ventanas. Solo vigila el portapapeles y el atajo global en la pestaña de consulta.';
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Solo al consultar';
       case 'popup_instant_scroll':
@@ -102474,6 +102779,20 @@ extension on _StringsEs {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -105400,7 +105719,7 @@ extension on _StringsFr {
       case 'desktop_clipboard_window_mode_lookup':
         return 'Recherche uniquement';
       case 'desktop_clipboard_window_mode_hint':
-        return 'Détermine si Hibiki reste au-dessus des autres fenêtres. Ne surveille le presse-papiers et le raccourci global que dans l\'onglet de recherche.';
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Toujours';
       case 'popup_instant_scroll':
@@ -107071,6 +107390,20 @@ extension on _StringsFr {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -109985,7 +110318,7 @@ extension on _StringsId {
       case 'desktop_clipboard_window_mode_lookup':
         return 'Hanya saat mencari';
       case 'desktop_clipboard_window_mode_hint':
-        return 'Mengatur apakah Hibiki tetap di atas jendela lain. Hanya memantau papan klip dan hotkey global di tab pencarian kata.';
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Selalu';
       case 'popup_instant_scroll':
@@ -111648,6 +111981,20 @@ extension on _StringsId {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -114566,7 +114913,7 @@ extension on _StringsIt {
       case 'desktop_clipboard_window_mode':
         return 'Fissaggio finestra';
       case 'desktop_clipboard_window_mode_hint':
-        return 'Controlla se Hibiki resta sopra le altre finestre. Monitora gli appunti e il tasto globale solo nella scheda di ricerca.';
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Solo durante la ricerca';
       case 'desktop_clipboard_window_mode_normal':
@@ -116242,6 +116589,20 @@ extension on _StringsIt {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -119130,7 +119491,7 @@ extension on _StringsJa {
       case 'desktop_clipboard_window_mode':
         return 'ウィンドウの最前面固定';
       case 'desktop_clipboard_window_mode_hint':
-        return 'Hibiki を他のウィンドウより前面に保つかを制御します。クリップボードとグローバルホットキーは辞書タブでのみ監視します。';
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return '辞書引き中のみ';
       case 'desktop_clipboard_window_mode_normal':
@@ -120794,6 +121155,20 @@ extension on _StringsJa {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -123685,7 +124060,7 @@ extension on _StringsKo {
       case 'desktop_clipboard_window_mode':
         return '창 고정';
       case 'desktop_clipboard_window_mode_hint':
-        return 'Hibiki를 다른 창 위에 유지할지 제어합니다. 단어 찾기 탭에서만 클립보드와 전역 단축키를 감시합니다.';
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return '단어 찾기 중에만';
       case 'desktop_clipboard_window_mode_normal':
@@ -125349,6 +125724,20 @@ extension on _StringsKo {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -128264,7 +128653,7 @@ extension on _StringsNl {
       case 'desktop_clipboard_window_mode':
         return 'Venster vastzetten';
       case 'desktop_clipboard_window_mode_hint':
-        return 'Bepaalt of Hibiki boven andere vensters blijft. Bewaakt het klembord en de globale sneltoets alleen op het opzoektabblad.';
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Altijd';
       case 'desktop_clipboard_window_mode_lookup':
@@ -129936,6 +130325,20 @@ extension on _StringsNl {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -132850,7 +133253,7 @@ extension on _StringsPtBr {
       case 'desktop_clipboard_window_mode':
         return 'Fixação da janela';
       case 'desktop_clipboard_window_mode_hint':
-        return 'Controla se o Hibiki fica acima das outras janelas. Só monitora a área de transferência e o atalho global na aba de consulta.';
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Apenas durante a consulta';
       case 'desktop_clipboard_window_mode_normal':
@@ -134520,6 +134923,20 @@ extension on _StringsPtBr {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -137436,7 +137853,7 @@ extension on _StringsRu {
       case 'desktop_clipboard_window_mode':
         return 'Закрепление окна';
       case 'desktop_clipboard_window_mode_hint':
-        return 'Определяет, остаётся ли Hibiki поверх других окон. Следит за буфером обмена и глобальной горячей клавишей только на вкладке поиска.';
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Только при поиске';
       case 'desktop_clipboard_window_mode_normal':
@@ -139108,6 +139525,20 @@ extension on _StringsRu {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -142017,7 +142448,7 @@ extension on _StringsTh {
       case 'desktop_clipboard_window_mode_lookup':
         return 'เฉพาะตอนค้นคำ';
       case 'desktop_clipboard_window_mode_hint':
-        return 'ควบคุมว่า Hibiki จะอยู่เหนือหน้าต่างอื่นหรือไม่ จะเฝ้าดูคลิปบอร์ดและฮอตคีย์ทั่วระบบเฉพาะในแท็บค้นคำ';
+        return 'Controls whether Hibiki stays above other windows';
       case 'popup_instant_scroll':
         return 'เลื่อนหน้าต่างค้นคำแบบทันที';
       case 'popup_instant_scroll_hint':
@@ -143678,6 +144109,20 @@ extension on _StringsTh {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -146592,7 +147037,7 @@ extension on _StringsTr {
       case 'desktop_clipboard_window_mode_lookup':
         return 'Yalnızca arama sırasında';
       case 'desktop_clipboard_window_mode_hint':
-        return 'Hibiki\'nin diğer pencerelerin üstünde kalıp kalmayacağını denetler. Pano ve genel kısayol tuşu yalnızca arama sekmesinde izlenir.';
+        return 'Controls whether Hibiki stays above other windows';
       case 'popup_instant_scroll':
         return 'Anında açılır pencere kaydırma';
       case 'popup_instant_scroll_hint':
@@ -148257,6 +148702,20 @@ extension on _StringsTr {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -151160,7 +151619,7 @@ extension on _StringsVi {
       case 'desktop_clipboard_window_mode':
         return 'Ghim cửa sổ';
       case 'desktop_clipboard_window_mode_hint':
-        return 'Quyết định Hibiki có nằm trên các cửa sổ khác hay không. Chỉ theo dõi clipboard và phím tắt toàn cục ở tab tra từ.';
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Luôn luôn';
       case 'desktop_clipboard_window_mode_lookup':
@@ -152830,6 +153289,20 @@ extension on _StringsVi {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -155712,7 +156185,7 @@ extension on _StringsZhCn {
       case 'desktop_clipboard_window_mode':
         return '窗口置顶策略';
       case 'desktop_clipboard_window_mode_hint':
-        return '控制 Hibiki 是否保持在其他窗口上方；仅在查词界面监听剪贴板和全局热键';
+        return '控制 Hibiki 是否保持在其他窗口上方';
       case 'desktop_clipboard_window_mode_always':
         return '始终置顶';
       case 'desktop_clipboard_window_mode_lookup':
@@ -157369,6 +157842,20 @@ extension on _StringsZhCn {
         return '网络错误，请检查连接后重试。';
       case 'video_danmaku_manual_server_error':
         return '搜索失败，请稍后重试。';
+      case 'desktop_clipboard_destination':
+        return '剪贴板查词显示位置';
+      case 'desktop_clipboard_destination_hint':
+        return '剪贴板查词结果显示在哪里';
+      case 'desktop_clipboard_destination_main':
+        return '主窗口';
+      case 'desktop_clipboard_destination_panel':
+        return '悬浮面板';
+      case 'desktop_clipboard_destination_transient':
+        return '光标处弹卡';
+      case 'clipboard_panel_opacity':
+        return '面板不透明度';
+      case 'clipboard_panel_opacity_hint':
+        return '悬浮查词面板的卡片背景不透明度（需要 Windows 11 背景材质支持）';
       default:
         return null;
     }
@@ -160252,7 +160739,7 @@ extension on _StringsZhHk {
       case 'desktop_clipboard_window_mode':
         return '視窗置頂策略';
       case 'desktop_clipboard_window_mode_hint':
-        return '控制 Hibiki 是否保持在其他視窗上方；只在查詞分頁監聽剪貼簿與全域熱鍵。';
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return '永遠置頂';
       case 'desktop_clipboard_window_mode_lookup':
@@ -161913,6 +162400,20 @@ extension on _StringsZhHk {
         return 'Network error. Check your connection and try again.';
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
