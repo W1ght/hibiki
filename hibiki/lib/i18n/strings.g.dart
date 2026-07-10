@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 37587 (2211 per locale)
 ///
-/// Built on 2026-07-09 at 04:54 UTC
+/// Built on 2026-07-10 at 03:09 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1898,8 +1898,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_window_mode => 'Window pinning';
   String get desktop_clipboard_window_mode_normal => 'Off';
   String get desktop_clipboard_window_mode_lookup => 'Lookup only';
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows. Only watches the clipboard and global hotkey on the lookup tab.';
   String get desktop_clipboard_window_mode_always => 'Always';
   String get popup_instant_scroll => 'Instant popup scroll';
   String get popup_instant_scroll_hint =>
@@ -2933,6 +2931,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_profiles_desc => 'Configuration profiles';
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -6114,9 +6114,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'أثناء البحث فقط';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'يتحكم في بقاء Hibiki فوق النوافذ الأخرى. يراقب الحافظة ومفتاح الاختصار العام فقط في تبويب البحث.';
-  @override
   String get desktop_clipboard_window_mode_always => 'دائمًا';
   @override
   String get popup_instant_scroll => 'تمرير فوري للنافذة المنبثقة';
@@ -7937,6 +7934,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -11213,9 +11213,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Nur beim Nachschlagen';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Steuert, ob Hibiki über anderen Fenstern bleibt. Überwacht Zwischenablage und globales Tastenkürzel nur im Nachschlagen-Tab.';
-  @override
   String get desktop_clipboard_window_mode_always => 'Immer';
   @override
   String get popup_instant_scroll => 'Sofortiges Popup-Scrollen';
@@ -13064,6 +13061,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -16355,9 +16355,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_always => 'Siempre';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controla si Hibiki permanece sobre las demás ventanas. Solo vigila el portapapeles y el atajo global en la pestaña de consulta.';
-  @override
   String get desktop_clipboard_window_mode_lookup => 'Solo al consultar';
   @override
   String get popup_instant_scroll => 'Desplazamiento instantáneo de la ventana';
@@ -18208,6 +18205,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -21519,9 +21519,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Recherche uniquement';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Détermine si Hibiki reste au-dessus des autres fenêtres. Ne surveille le presse-papiers et le raccourci global que dans l\'onglet de recherche.';
-  @override
   String get desktop_clipboard_window_mode_always => 'Toujours';
   @override
   String get popup_instant_scroll => 'Défilement instantané de la fenêtre';
@@ -23371,6 +23368,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -26596,9 +26596,6 @@ class _StringsId extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Hanya saat mencari';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Mengatur apakah Hibiki tetap di atas jendela lain. Hanya memantau papan klip dan hotkey global di tab pencarian kata.';
-  @override
   String get desktop_clipboard_window_mode_always => 'Selalu';
   @override
   String get popup_instant_scroll => 'Gulir popup seketika';
@@ -28436,6 +28433,9 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -31704,9 +31704,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Fissaggio finestra';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controlla se Hibiki resta sopra le altre finestre. Monitora gli appunti e il tasto globale solo nella scheda di ricerca.';
-  @override
   String get desktop_clipboard_window_mode_lookup => 'Solo durante la ricerca';
   @override
   String get desktop_clipboard_window_mode_normal => 'Disattivato';
@@ -33562,6 +33559,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -36631,9 +36631,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'ウィンドウの最前面固定';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Hibiki を他のウィンドウより前面に保つかを制御します。クリップボードとグローバルホットキーは辞書タブでのみ監視します。';
-  @override
   String get desktop_clipboard_window_mode_lookup => '辞書引き中のみ';
   @override
   String get desktop_clipboard_window_mode_normal => '固定しない';
@@ -38414,6 +38411,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -41487,9 +41487,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => '창 고정';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Hibiki를 다른 창 위에 유지할지 제어합니다. 단어 찾기 탭에서만 클립보드와 전역 단축키를 감시합니다.';
-  @override
   String get desktop_clipboard_window_mode_lookup => '단어 찾기 중에만';
   @override
   String get desktop_clipboard_window_mode_normal => '끄기';
@@ -43270,6 +43267,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -46515,9 +46515,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Venster vastzetten';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Bepaalt of Hibiki boven andere vensters blijft. Bewaakt het klembord en de globale sneltoets alleen op het opzoektabblad.';
-  @override
   String get desktop_clipboard_window_mode_always => 'Altijd';
   @override
   String get desktop_clipboard_window_mode_lookup => 'Alleen tijdens opzoeken';
@@ -48364,6 +48361,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -51627,9 +51627,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Fixação da janela';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controla se o Hibiki fica acima das outras janelas. Só monitora a área de transferência e o atalho global na aba de consulta.';
-  @override
   String get desktop_clipboard_window_mode_lookup =>
       'Apenas durante a consulta';
   @override
@@ -53481,6 +53478,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -56723,9 +56723,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Закрепление окна';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Определяет, остаётся ли Hibiki поверх других окон. Следит за буфером обмена и глобальной горячей клавишей только на вкладке поиска.';
-  @override
   String get desktop_clipboard_window_mode_lookup => 'Только при поиске';
   @override
   String get desktop_clipboard_window_mode_normal => 'Выкл.';
@@ -58573,6 +58570,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -61753,9 +61753,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'เฉพาะตอนค้นคำ';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'ควบคุมว่า Hibiki จะอยู่เหนือหน้าต่างอื่นหรือไม่ จะเฝ้าดูคลิปบอร์ดและฮอตคีย์ทั่วระบบเฉพาะในแท็บค้นคำ';
-  @override
   String get popup_instant_scroll => 'เลื่อนหน้าต่างค้นคำแบบทันที';
   @override
   String get popup_instant_scroll_hint =>
@@ -63578,6 +63575,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -66804,9 +66804,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Yalnızca arama sırasında';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Hibiki\'nin diğer pencerelerin üstünde kalıp kalmayacağını denetler. Pano ve genel kısayol tuşu yalnızca arama sekmesinde izlenir.';
-  @override
   String get popup_instant_scroll => 'Anında açılır pencere kaydırma';
   @override
   String get popup_instant_scroll_hint =>
@@ -68638,6 +68635,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -71837,9 +71837,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Ghim cửa sổ';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Quyết định Hibiki có nằm trên các cửa sổ khác hay không. Chỉ theo dõi clipboard và phím tắt toàn cục ở tab tra từ.';
-  @override
   String get desktop_clipboard_window_mode_always => 'Luôn luôn';
   @override
   String get desktop_clipboard_window_mode_lookup => 'Chỉ khi tra từ';
@@ -73673,6 +73670,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -76674,9 +76674,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => '窗口置顶策略';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      '控制 Hibiki 是否保持在其他窗口上方；仅在查词界面监听剪贴板和全局热键';
-  @override
   String get desktop_clipboard_window_mode_always => '始终置顶';
   @override
   String get desktop_clipboard_window_mode_lookup => '仅查词期间';
@@ -78370,6 +78367,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
+  @override
+  String get desktop_clipboard_window_mode_hint => '控制 Hibiki 是否保持在其他窗口上方';
 }
 
 // Path: retrying_in
@@ -81371,9 +81370,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => '視窗置頂策略';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      '控制 Hibiki 是否保持在其他視窗上方；只在查詞分頁監聽剪貼簿與全域熱鍵。';
-  @override
   String get desktop_clipboard_window_mode_always => '永遠置頂';
   @override
   String get desktop_clipboard_window_mode_lookup => '僅查詞期間';
@@ -83124,6 +83120,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: retrying_in
@@ -86072,8 +86071,6 @@ extension on _StringsEn {
         return 'Off';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Lookup only';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows. Only watches the clipboard and global hotkey on the lookup tab.';
       case 'desktop_clipboard_window_mode_always':
         return 'Always';
       case 'popup_instant_scroll':
@@ -87684,6 +87681,8 @@ extension on _StringsEn {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -90590,8 +90589,6 @@ extension on _StringsAr {
         return 'إيقاف';
       case 'desktop_clipboard_window_mode_lookup':
         return 'أثناء البحث فقط';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'يتحكم في بقاء Hibiki فوق النوافذ الأخرى. يراقب الحافظة ومفتاح الاختصار العام فقط في تبويب البحث.';
       case 'desktop_clipboard_window_mode_always':
         return 'دائمًا';
       case 'popup_instant_scroll':
@@ -92204,6 +92201,8 @@ extension on _StringsAr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -95128,8 +95127,6 @@ extension on _StringsDe {
         return 'Aus';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Nur beim Nachschlagen';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Steuert, ob Hibiki über anderen Fenstern bleibt. Überwacht Zwischenablage und globales Tastenkürzel nur im Nachschlagen-Tab.';
       case 'desktop_clipboard_window_mode_always':
         return 'Immer';
       case 'popup_instant_scroll':
@@ -96746,6 +96743,8 @@ extension on _StringsDe {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -99668,8 +99667,6 @@ extension on _StringsEs {
         return 'Desactivado';
       case 'desktop_clipboard_window_mode_always':
         return 'Siempre';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controla si Hibiki permanece sobre las demás ventanas. Solo vigila el portapapeles y el atajo global en la pestaña de consulta.';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Solo al consultar';
       case 'popup_instant_scroll':
@@ -101286,6 +101283,8 @@ extension on _StringsEs {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -104211,8 +104210,6 @@ extension on _StringsFr {
         return 'Désactivé';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Recherche uniquement';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Détermine si Hibiki reste au-dessus des autres fenêtres. Ne surveille le presse-papiers et le raccourci global que dans l\'onglet de recherche.';
       case 'desktop_clipboard_window_mode_always':
         return 'Toujours';
       case 'popup_instant_scroll':
@@ -105833,6 +105830,8 @@ extension on _StringsFr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -108746,8 +108745,6 @@ extension on _StringsId {
         return 'Mati';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Hanya saat mencari';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Mengatur apakah Hibiki tetap di atas jendela lain. Hanya memantau papan klip dan hotkey global di tab pencarian kata.';
       case 'desktop_clipboard_window_mode_always':
         return 'Selalu';
       case 'popup_instant_scroll':
@@ -110360,6 +110357,8 @@ extension on _StringsId {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -113277,8 +113276,6 @@ extension on _StringsIt {
         return 'Tienilo attivo con il blocco posizione se vuoi comunque la ricerca parole.';
       case 'desktop_clipboard_window_mode':
         return 'Fissaggio finestra';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controlla se Hibiki resta sopra le altre finestre. Monitora gli appunti e il tasto globale solo nella scheda di ricerca.';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Solo durante la ricerca';
       case 'desktop_clipboard_window_mode_normal':
@@ -114904,6 +114901,8 @@ extension on _StringsIt {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -117791,8 +117790,6 @@ extension on _StringsJa {
         return '位置を固定したままでも辞書引きを使いたい場合はオンにしてください。';
       case 'desktop_clipboard_window_mode':
         return 'ウィンドウの最前面固定';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Hibiki を他のウィンドウより前面に保つかを制御します。クリップボードとグローバルホットキーは辞書タブでのみ監視します。';
       case 'desktop_clipboard_window_mode_lookup':
         return '辞書引き中のみ';
       case 'desktop_clipboard_window_mode_normal':
@@ -119406,6 +119403,8 @@ extension on _StringsJa {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -122296,8 +122295,6 @@ extension on _StringsKo {
         return '위치를 고정해도 단어 찾기를 쓰려면 이 옵션을 켜 두세요.';
       case 'desktop_clipboard_window_mode':
         return '창 고정';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Hibiki를 다른 창 위에 유지할지 제어합니다. 단어 찾기 탭에서만 클립보드와 전역 단축키를 감시합니다.';
       case 'desktop_clipboard_window_mode_lookup':
         return '단어 찾기 중에만';
       case 'desktop_clipboard_window_mode_normal':
@@ -123911,6 +123908,8 @@ extension on _StringsKo {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -126825,8 +126824,6 @@ extension on _StringsNl {
         return 'Houd dit aan met positievergrendeling als je nog steeds woorden wilt opzoeken.';
       case 'desktop_clipboard_window_mode':
         return 'Venster vastzetten';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Bepaalt of Hibiki boven andere vensters blijft. Bewaakt het klembord en de globale sneltoets alleen op het opzoektabblad.';
       case 'desktop_clipboard_window_mode_always':
         return 'Altijd';
       case 'desktop_clipboard_window_mode_lookup':
@@ -128448,6 +128445,8 @@ extension on _StringsNl {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -131361,8 +131360,6 @@ extension on _StringsPtBr {
         return 'Mantenha isto ativado com a posição travada se ainda quiser consultar palavras.';
       case 'desktop_clipboard_window_mode':
         return 'Fixação da janela';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controla se o Hibiki fica acima das outras janelas. Só monitora a área de transferência e o atalho global na aba de consulta.';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Apenas durante a consulta';
       case 'desktop_clipboard_window_mode_normal':
@@ -132982,6 +132979,8 @@ extension on _StringsPtBr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -135897,8 +135896,6 @@ extension on _StringsRu {
         return 'Оставьте включённым с фиксацией положения, если хотите сохранить поиск слов.';
       case 'desktop_clipboard_window_mode':
         return 'Закрепление окна';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Определяет, остаётся ли Hibiki поверх других окон. Следит за буфером обмена и глобальной горячей клавишей только на вкладке поиска.';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Только при поиске';
       case 'desktop_clipboard_window_mode_normal':
@@ -137520,6 +137517,8 @@ extension on _StringsRu {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -140428,8 +140427,6 @@ extension on _StringsTh {
         return 'เสมอ';
       case 'desktop_clipboard_window_mode_lookup':
         return 'เฉพาะตอนค้นคำ';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'ควบคุมว่า Hibiki จะอยู่เหนือหน้าต่างอื่นหรือไม่ จะเฝ้าดูคลิปบอร์ดและฮอตคีย์ทั่วระบบเฉพาะในแท็บค้นคำ';
       case 'popup_instant_scroll':
         return 'เลื่อนหน้าต่างค้นคำแบบทันที';
       case 'popup_instant_scroll_hint':
@@ -142040,6 +142037,8 @@ extension on _StringsTh {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -144953,8 +144952,6 @@ extension on _StringsTr {
         return 'Her zaman';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Yalnızca arama sırasında';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Hibiki\'nin diğer pencerelerin üstünde kalıp kalmayacağını denetler. Pano ve genel kısayol tuşu yalnızca arama sekmesinde izlenir.';
       case 'popup_instant_scroll':
         return 'Anında açılır pencere kaydırma';
       case 'popup_instant_scroll_hint':
@@ -146569,6 +146566,8 @@ extension on _StringsTr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -149471,8 +149470,6 @@ extension on _StringsVi {
         return 'Bật mục này cùng với khóa vị trí nếu bạn vẫn muốn tra từ.';
       case 'desktop_clipboard_window_mode':
         return 'Ghim cửa sổ';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Quyết định Hibiki có nằm trên các cửa sổ khác hay không. Chỉ theo dõi clipboard và phím tắt toàn cục ở tab tra từ.';
       case 'desktop_clipboard_window_mode_always':
         return 'Luôn luôn';
       case 'desktop_clipboard_window_mode_lookup':
@@ -151092,6 +151089,8 @@ extension on _StringsVi {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -153973,8 +153972,6 @@ extension on _StringsZhCn {
         return '锁定悬浮字幕位置时仍可保留点击查词。';
       case 'desktop_clipboard_window_mode':
         return '窗口置顶策略';
-      case 'desktop_clipboard_window_mode_hint':
-        return '控制 Hibiki 是否保持在其他窗口上方；仅在查词界面监听剪贴板和全局热键';
       case 'desktop_clipboard_window_mode_always':
         return '始终置顶';
       case 'desktop_clipboard_window_mode_lookup':
@@ -155581,6 +155578,8 @@ extension on _StringsZhCn {
         return '配置方案';
       case 'backup_import_contents_hint':
         return '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
+      case 'desktop_clipboard_window_mode_hint':
+        return '控制 Hibiki 是否保持在其他窗口上方';
       default:
         return null;
     }
@@ -158463,8 +158462,6 @@ extension on _StringsZhHk {
         return '鎖定懸浮字幕位置時若仍想查詞，請保持開啟。';
       case 'desktop_clipboard_window_mode':
         return '視窗置頂策略';
-      case 'desktop_clipboard_window_mode_hint':
-        return '控制 Hibiki 是否保持在其他視窗上方；只在查詞分頁監聽剪貼簿與全域熱鍵。';
       case 'desktop_clipboard_window_mode_always':
         return '永遠置頂';
       case 'desktop_clipboard_window_mode_lookup':
@@ -160075,6 +160072,8 @@ extension on _StringsZhHk {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
