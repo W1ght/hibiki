@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37672 (2216 per locale)
+/// Strings: 37706 (2218 per locale)
 ///
-/// Built on 2026-07-10 at 03:11 UTC
+/// Built on 2026-07-10 at 04:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2939,6 +2939,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_destination_main => 'Main window';
   String get desktop_clipboard_destination_panel => 'Floating panel';
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  String get clipboard_panel_opacity => 'Panel opacity';
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -7954,6 +7957,11 @@ class _StringsAr extends _StringsEn {
   String get desktop_clipboard_destination_panel => 'Floating panel';
   @override
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -13092,6 +13100,11 @@ class _StringsDe extends _StringsEn {
   String get desktop_clipboard_destination_panel => 'Floating panel';
   @override
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -18247,6 +18260,11 @@ class _StringsEs extends _StringsEn {
   String get desktop_clipboard_destination_panel => 'Floating panel';
   @override
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -23421,6 +23439,11 @@ class _StringsFr extends _StringsEn {
   String get desktop_clipboard_destination_panel => 'Floating panel';
   @override
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -28497,6 +28520,11 @@ class _StringsId extends _StringsEn {
   String get desktop_clipboard_destination_panel => 'Floating panel';
   @override
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -33634,6 +33662,11 @@ class _StringsIt extends _StringsEn {
   String get desktop_clipboard_destination_panel => 'Floating panel';
   @override
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -38497,6 +38530,11 @@ class _StringsJa extends _StringsEn {
   String get desktop_clipboard_destination_panel => 'Floating panel';
   @override
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -43364,6 +43402,11 @@ class _StringsKo extends _StringsEn {
   String get desktop_clipboard_destination_panel => 'Floating panel';
   @override
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -48469,6 +48512,11 @@ class _StringsNl extends _StringsEn {
   String get desktop_clipboard_destination_panel => 'Floating panel';
   @override
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -53597,6 +53645,11 @@ class _StringsPtBr extends _StringsEn {
   String get desktop_clipboard_destination_panel => 'Floating panel';
   @override
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -58700,6 +58753,11 @@ class _StringsRu extends _StringsEn {
   String get desktop_clipboard_destination_panel => 'Floating panel';
   @override
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -63716,6 +63774,11 @@ class _StringsTh extends _StringsEn {
   String get desktop_clipboard_destination_panel => 'Floating panel';
   @override
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -68787,6 +68850,11 @@ class _StringsTr extends _StringsEn {
   String get desktop_clipboard_destination_panel => 'Floating panel';
   @override
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -73833,6 +73901,11 @@ class _StringsVi extends _StringsEn {
   String get desktop_clipboard_destination_panel => 'Floating panel';
   @override
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -78539,6 +78612,11 @@ class _StringsZhCn extends _StringsEn {
   String get desktop_clipboard_destination_panel => '悬浮面板';
   @override
   String get desktop_clipboard_destination_transient => '光标处弹卡';
+  @override
+  String get clipboard_panel_opacity => '面板不透明度';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      '悬浮查词面板的卡片背景不透明度（需要 Windows 11 背景材质支持）';
 }
 
 // Path: retrying_in
@@ -83304,6 +83382,11 @@ class _StringsZhHk extends _StringsEn {
   String get desktop_clipboard_destination_panel => 'Floating panel';
   @override
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
+  @override
+  String get clipboard_panel_opacity => 'Panel opacity';
+  @override
+  String get clipboard_panel_opacity_hint =>
+      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
 }
 
 // Path: retrying_in
@@ -87874,6 +87957,10 @@ extension on _StringsEn {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -92404,6 +92491,10 @@ extension on _StringsAr {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -96956,6 +97047,10 @@ extension on _StringsDe {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -101506,6 +101601,10 @@ extension on _StringsEs {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -106063,6 +106162,10 @@ extension on _StringsFr {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -110600,6 +110703,10 @@ extension on _StringsId {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -115154,6 +115261,10 @@ extension on _StringsIt {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -119666,6 +119777,10 @@ extension on _StringsJa {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -124181,6 +124296,10 @@ extension on _StringsKo {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -128728,6 +128847,10 @@ extension on _StringsNl {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -133272,6 +133395,10 @@ extension on _StringsPtBr {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -137820,6 +137947,10 @@ extension on _StringsRu {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -142350,6 +142481,10 @@ extension on _StringsTh {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -146889,6 +147024,10 @@ extension on _StringsTr {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -151422,6 +151561,10 @@ extension on _StringsVi {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
@@ -155921,6 +156064,10 @@ extension on _StringsZhCn {
         return '悬浮面板';
       case 'desktop_clipboard_destination_transient':
         return '光标处弹卡';
+      case 'clipboard_panel_opacity':
+        return '面板不透明度';
+      case 'clipboard_panel_opacity_hint':
+        return '悬浮查词面板的卡片背景不透明度（需要 Windows 11 背景材质支持）';
       default:
         return null;
     }
@@ -160425,6 +160572,10 @@ extension on _StringsZhHk {
         return 'Floating panel';
       case 'desktop_clipboard_destination_transient':
         return 'Popup at cursor';
+      case 'clipboard_panel_opacity':
+        return 'Panel opacity';
+      case 'clipboard_panel_opacity_hint':
+        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
       default:
         return null;
     }
