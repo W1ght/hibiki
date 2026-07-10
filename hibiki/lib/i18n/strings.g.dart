@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37706 (2218 per locale)
+/// Strings: 38131 (2243 per locale)
 ///
-/// Built on 2026-07-10 at 04:08 UTC
+/// Built on 2026-07-10 at 10:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1898,6 +1898,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_window_mode => 'Window pinning';
   String get desktop_clipboard_window_mode_normal => 'Off';
   String get desktop_clipboard_window_mode_lookup => 'Lookup only';
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
   String get desktop_clipboard_window_mode_always => 'Always';
   String get popup_instant_scroll => 'Instant popup scroll';
   String get popup_instant_scroll_hint =>
@@ -2931,8 +2933,41 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_profiles_desc => 'Configuration profiles';
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  String get popup_font_size_increase => 'Larger dictionary text';
+  String get remote_book_cloud => 'Cloud library';
+  String get remote_book_cloud_device => 'Cloud backup books';
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  String get video_setting_danmaku_font_scale => 'Font size';
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  String get video_setting_danmaku_opacity => 'Opacity';
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  String get video_setting_danmaku_speed => 'Speed';
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  String get video_setting_danmaku_area => 'Display area';
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  String get video_danmaku_manual_search_action => 'Search';
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   String get desktop_clipboard_destination_hint =>
       'Where clipboard lookups appear';
@@ -6123,6 +6158,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'أثناء البحث فقط';
   @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
   String get desktop_clipboard_window_mode_always => 'دائمًا';
   @override
   String get popup_instant_scroll => 'تمرير فوري للنافذة المنبثقة';
@@ -7944,8 +7982,65 @@ class _StringsAr extends _StringsEn {
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
@@ -11238,6 +11333,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Nur beim Nachschlagen';
   @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
   String get desktop_clipboard_window_mode_always => 'Immer';
   @override
   String get popup_instant_scroll => 'Sofortiges Popup-Scrollen';
@@ -13087,8 +13185,65 @@ class _StringsDe extends _StringsEn {
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
@@ -16396,6 +16551,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_always => 'Siempre';
   @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
   String get desktop_clipboard_window_mode_lookup => 'Solo al consultar';
   @override
   String get popup_instant_scroll => 'Desplazamiento instantáneo de la ventana';
@@ -18247,8 +18405,65 @@ class _StringsEs extends _StringsEn {
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
@@ -21576,6 +21791,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Recherche uniquement';
   @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
   String get desktop_clipboard_window_mode_always => 'Toujours';
   @override
   String get popup_instant_scroll => 'Défilement instantané de la fenêtre';
@@ -23426,8 +23644,65 @@ class _StringsFr extends _StringsEn {
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
@@ -26669,6 +26944,9 @@ class _StringsId extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Hanya saat mencari';
   @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
   String get desktop_clipboard_window_mode_always => 'Selalu';
   @override
   String get popup_instant_scroll => 'Gulir popup seketika';
@@ -28507,8 +28785,65 @@ class _StringsId extends _StringsEn {
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
@@ -31793,6 +32128,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Fissaggio finestra';
   @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
   String get desktop_clipboard_window_mode_lookup => 'Solo durante la ricerca';
   @override
   String get desktop_clipboard_window_mode_normal => 'Disattivato';
@@ -33649,8 +33987,65 @@ class _StringsIt extends _StringsEn {
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
@@ -36736,6 +37131,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'ウィンドウの最前面固定';
   @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
   String get desktop_clipboard_window_mode_lookup => '辞書引き中のみ';
   @override
   String get desktop_clipboard_window_mode_normal => '固定しない';
@@ -38517,8 +38915,65 @@ class _StringsJa extends _StringsEn {
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
@@ -41608,6 +42063,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => '창 고정';
   @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
   String get desktop_clipboard_window_mode_lookup => '단어 찾기 중에만';
   @override
   String get desktop_clipboard_window_mode_normal => '끄기';
@@ -43389,8 +43847,65 @@ class _StringsKo extends _StringsEn {
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
@@ -46652,6 +47167,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Venster vastzetten';
   @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
   String get desktop_clipboard_window_mode_always => 'Altijd';
   @override
   String get desktop_clipboard_window_mode_lookup => 'Alleen tijdens opzoeken';
@@ -48499,8 +49017,65 @@ class _StringsNl extends _StringsEn {
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
@@ -51780,6 +52355,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Fixação da janela';
   @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
   String get desktop_clipboard_window_mode_lookup =>
       'Apenas durante a consulta';
   @override
@@ -53632,8 +54210,65 @@ class _StringsPtBr extends _StringsEn {
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
@@ -56892,6 +57527,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Закрепление окна';
   @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
   String get desktop_clipboard_window_mode_lookup => 'Только при поиске';
   @override
   String get desktop_clipboard_window_mode_normal => 'Выкл.';
@@ -58740,8 +59378,65 @@ class _StringsRu extends _StringsEn {
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
@@ -61938,6 +62633,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'เฉพาะตอนค้นคำ';
   @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
   String get popup_instant_scroll => 'เลื่อนหน้าต่างค้นคำแบบทันที';
   @override
   String get popup_instant_scroll_hint =>
@@ -63761,8 +64459,65 @@ class _StringsTh extends _StringsEn {
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
@@ -67005,6 +67760,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Yalnızca arama sırasında';
   @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
   String get popup_instant_scroll => 'Anında açılır pencere kaydırma';
   @override
   String get popup_instant_scroll_hint =>
@@ -68837,8 +69595,65 @@ class _StringsTr extends _StringsEn {
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
@@ -72054,6 +72869,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Ghim cửa sổ';
   @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
   String get desktop_clipboard_window_mode_always => 'Luôn luôn';
   @override
   String get desktop_clipboard_window_mode_lookup => 'Chỉ khi tra từ';
@@ -73888,8 +74706,65 @@ class _StringsVi extends _StringsEn {
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
@@ -76907,6 +77782,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => '窗口置顶策略';
   @override
+  String get desktop_clipboard_window_mode_hint => '控制 Hibiki 是否保持在其他窗口上方';
+  @override
   String get desktop_clipboard_window_mode_always => '始终置顶';
   @override
   String get desktop_clipboard_window_mode_lookup => '仅查词期间';
@@ -78601,7 +79478,58 @@ class _StringsZhCn extends _StringsEn {
   String get backup_import_contents_hint =>
       '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
   @override
-  String get desktop_clipboard_window_mode_hint => '控制 Hibiki 是否保持在其他窗口上方';
+  String get popup_font_size_decrease => '缩小查词字号';
+  @override
+  String get popup_font_size_increase => '放大查词字号';
+  @override
+  String get remote_book_cloud => '云端书库';
+  @override
+  String get remote_book_cloud_device => '云盘备份书籍';
+  @override
+  String get remote_book_cloud_load_failed => '无法加载云端书籍';
+  @override
+  String get video_setting_danmaku_font_scale => '字号';
+  @override
+  String get video_setting_danmaku_font_scale_hint => '缩放弹幕文字大小。';
+  @override
+  String get video_setting_danmaku_opacity => '不透明度';
+  @override
+  String get video_setting_danmaku_opacity_hint => '弹幕整体透明度。';
+  @override
+  String get video_setting_danmaku_speed => '速度';
+  @override
+  String get video_setting_danmaku_speed_hint => '越大越快，滚动弹幕更快划过屏幕。';
+  @override
+  String get video_setting_danmaku_area => '显示区域';
+  @override
+  String get video_setting_danmaku_area_hint => '弹幕可占用的画面高度比例（从顶部起）。';
+  @override
+  String get video_setting_danmaku_block_rules => '屏蔽词 / 正则';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      '每行一条规则。用斜杠包裹（如 /pattern/）视为正则，否则按忽略大小写的文本子串匹配。';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      '例如 剧透 或 /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => '手动匹配';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      '自动匹配失败或匹配错集时，按标题搜索弹弹play 并手动选集。';
+  @override
+  String get video_danmaku_manual_match_title => '匹配弹幕';
+  @override
+  String get video_danmaku_manual_search_hint => '番剧名';
+  @override
+  String get video_danmaku_manual_search_prompt => '按番剧名搜索弹弹play，再选择分集。';
+  @override
+  String get video_danmaku_manual_search_action => '搜索';
+  @override
+  String get video_danmaku_manual_no_result => '未找到匹配的番剧。';
+  @override
+  String get video_danmaku_manual_network_error => '网络错误，请检查连接后重试。';
+  @override
+  String get video_danmaku_manual_server_error => '搜索失败，请稍后重试。';
   @override
   String get desktop_clipboard_destination => '剪贴板查词显示位置';
   @override
@@ -81618,6 +82546,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => '視窗置頂策略';
   @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
   String get desktop_clipboard_window_mode_always => '永遠置頂';
   @override
   String get desktop_clipboard_window_mode_lookup => '僅查詞期間';
@@ -83369,8 +84300,65 @@ class _StringsZhHk extends _StringsEn {
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
+  @override
+  String get remote_book_cloud => '雲端書庫';
+  @override
+  String get remote_book_cloud_device => '雲端備份書籍';
+  @override
+  String get remote_book_cloud_load_failed => '無法載入雲端書籍';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
@@ -86335,6 +87323,8 @@ extension on _StringsEn {
         return 'Off';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Lookup only';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Always';
       case 'popup_instant_scroll':
@@ -87945,8 +88935,56 @@ extension on _StringsEn {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
@@ -90867,6 +91905,8 @@ extension on _StringsAr {
         return 'إيقاف';
       case 'desktop_clipboard_window_mode_lookup':
         return 'أثناء البحث فقط';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'دائمًا';
       case 'popup_instant_scroll':
@@ -92479,8 +93519,56 @@ extension on _StringsAr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
@@ -95419,6 +96507,8 @@ extension on _StringsDe {
         return 'Aus';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Nur beim Nachschlagen';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Immer';
       case 'popup_instant_scroll':
@@ -97035,8 +98125,56 @@ extension on _StringsDe {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
@@ -99973,6 +101111,8 @@ extension on _StringsEs {
         return 'Desactivado';
       case 'desktop_clipboard_window_mode_always':
         return 'Siempre';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Solo al consultar';
       case 'popup_instant_scroll':
@@ -101589,8 +102729,56 @@ extension on _StringsEs {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
@@ -104530,6 +105718,8 @@ extension on _StringsFr {
         return 'Désactivé';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Recherche uniquement';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Toujours';
       case 'popup_instant_scroll':
@@ -106150,8 +107340,56 @@ extension on _StringsFr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
@@ -109079,6 +110317,8 @@ extension on _StringsId {
         return 'Mati';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Hanya saat mencari';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Selalu';
       case 'popup_instant_scroll':
@@ -110691,8 +111931,56 @@ extension on _StringsId {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
@@ -113624,6 +114912,8 @@ extension on _StringsIt {
         return 'Tienilo attivo con il blocco posizione se vuoi comunque la ricerca parole.';
       case 'desktop_clipboard_window_mode':
         return 'Fissaggio finestra';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Solo durante la ricerca';
       case 'desktop_clipboard_window_mode_normal':
@@ -115249,8 +116539,56 @@ extension on _StringsIt {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
@@ -118152,6 +119490,8 @@ extension on _StringsJa {
         return '位置を固定したままでも辞書引きを使いたい場合はオンにしてください。';
       case 'desktop_clipboard_window_mode':
         return 'ウィンドウの最前面固定';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return '辞書引き中のみ';
       case 'desktop_clipboard_window_mode_normal':
@@ -119765,8 +121105,56 @@ extension on _StringsJa {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
@@ -122671,6 +124059,8 @@ extension on _StringsKo {
         return '위치를 고정해도 단어 찾기를 쓰려면 이 옵션을 켜 두세요.';
       case 'desktop_clipboard_window_mode':
         return '창 고정';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return '단어 찾기 중에만';
       case 'desktop_clipboard_window_mode_normal':
@@ -124284,8 +125674,56 @@ extension on _StringsKo {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
@@ -127214,6 +128652,8 @@ extension on _StringsNl {
         return 'Houd dit aan met positievergrendeling als je nog steeds woorden wilt opzoeken.';
       case 'desktop_clipboard_window_mode':
         return 'Venster vastzetten';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Altijd';
       case 'desktop_clipboard_window_mode_lookup':
@@ -128835,8 +130275,56 @@ extension on _StringsNl {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
@@ -131764,6 +133252,8 @@ extension on _StringsPtBr {
         return 'Mantenha isto ativado com a posição travada se ainda quiser consultar palavras.';
       case 'desktop_clipboard_window_mode':
         return 'Fixação da janela';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Apenas durante a consulta';
       case 'desktop_clipboard_window_mode_normal':
@@ -133383,8 +134873,56 @@ extension on _StringsPtBr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
@@ -136314,6 +137852,8 @@ extension on _StringsRu {
         return 'Оставьте включённым с фиксацией положения, если хотите сохранить поиск слов.';
       case 'desktop_clipboard_window_mode':
         return 'Закрепление окна';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Только при поиске';
       case 'desktop_clipboard_window_mode_normal':
@@ -137935,8 +139475,56 @@ extension on _StringsRu {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
@@ -140859,6 +142447,8 @@ extension on _StringsTh {
         return 'เสมอ';
       case 'desktop_clipboard_window_mode_lookup':
         return 'เฉพาะตอนค้นคำ';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'popup_instant_scroll':
         return 'เลื่อนหน้าต่างค้นคำแบบทันที';
       case 'popup_instant_scroll_hint':
@@ -142469,8 +144059,56 @@ extension on _StringsTh {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
@@ -145398,6 +147036,8 @@ extension on _StringsTr {
         return 'Her zaman';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Yalnızca arama sırasında';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'popup_instant_scroll':
         return 'Anında açılır pencere kaydırma';
       case 'popup_instant_scroll_hint':
@@ -147012,8 +148652,56 @@ extension on _StringsTr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
@@ -149930,6 +151618,8 @@ extension on _StringsVi {
         return 'Bật mục này cùng với khóa vị trí nếu bạn vẫn muốn tra từ.';
       case 'desktop_clipboard_window_mode':
         return 'Ghim cửa sổ';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Luôn luôn';
       case 'desktop_clipboard_window_mode_lookup':
@@ -151549,8 +153239,56 @@ extension on _StringsVi {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
@@ -154446,6 +156184,8 @@ extension on _StringsZhCn {
         return '锁定悬浮字幕位置时仍可保留点击查词。';
       case 'desktop_clipboard_window_mode':
         return '窗口置顶策略';
+      case 'desktop_clipboard_window_mode_hint':
+        return '控制 Hibiki 是否保持在其他窗口上方';
       case 'desktop_clipboard_window_mode_always':
         return '始终置顶';
       case 'desktop_clipboard_window_mode_lookup':
@@ -156052,8 +157792,56 @@ extension on _StringsZhCn {
         return '配置方案';
       case 'backup_import_contents_hint':
         return '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
-      case 'desktop_clipboard_window_mode_hint':
-        return '控制 Hibiki 是否保持在其他窗口上方';
+      case 'popup_font_size_decrease':
+        return '缩小查词字号';
+      case 'popup_font_size_increase':
+        return '放大查词字号';
+      case 'remote_book_cloud':
+        return '云端书库';
+      case 'remote_book_cloud_device':
+        return '云盘备份书籍';
+      case 'remote_book_cloud_load_failed':
+        return '无法加载云端书籍';
+      case 'video_setting_danmaku_font_scale':
+        return '字号';
+      case 'video_setting_danmaku_font_scale_hint':
+        return '缩放弹幕文字大小。';
+      case 'video_setting_danmaku_opacity':
+        return '不透明度';
+      case 'video_setting_danmaku_opacity_hint':
+        return '弹幕整体透明度。';
+      case 'video_setting_danmaku_speed':
+        return '速度';
+      case 'video_setting_danmaku_speed_hint':
+        return '越大越快，滚动弹幕更快划过屏幕。';
+      case 'video_setting_danmaku_area':
+        return '显示区域';
+      case 'video_setting_danmaku_area_hint':
+        return '弹幕可占用的画面高度比例（从顶部起）。';
+      case 'video_setting_danmaku_block_rules':
+        return '屏蔽词 / 正则';
+      case 'video_setting_danmaku_block_rules_hint':
+        return '每行一条规则。用斜杠包裹（如 /pattern/）视为正则，否则按忽略大小写的文本子串匹配。';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return '例如 剧透 或 /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return '手动匹配';
+      case 'video_setting_danmaku_manual_match_hint':
+        return '自动匹配失败或匹配错集时，按标题搜索弹弹play 并手动选集。';
+      case 'video_danmaku_manual_match_title':
+        return '匹配弹幕';
+      case 'video_danmaku_manual_search_hint':
+        return '番剧名';
+      case 'video_danmaku_manual_search_prompt':
+        return '按番剧名搜索弹弹play，再选择分集。';
+      case 'video_danmaku_manual_search_action':
+        return '搜索';
+      case 'video_danmaku_manual_no_result':
+        return '未找到匹配的番剧。';
+      case 'video_danmaku_manual_network_error':
+        return '网络错误，请检查连接后重试。';
+      case 'video_danmaku_manual_server_error':
+        return '搜索失败，请稍后重试。';
       case 'desktop_clipboard_destination':
         return '剪贴板查词显示位置';
       case 'desktop_clipboard_destination_hint':
@@ -158950,6 +160738,8 @@ extension on _StringsZhHk {
         return '鎖定懸浮字幕位置時若仍想查詞，請保持開啟。';
       case 'desktop_clipboard_window_mode':
         return '視窗置頂策略';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return '永遠置頂';
       case 'desktop_clipboard_window_mode_lookup':
@@ -160560,8 +162350,56 @@ extension on _StringsZhHk {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
+      case 'remote_book_cloud':
+        return '雲端書庫';
+      case 'remote_book_cloud_device':
+        return '雲端備份書籍';
+      case 'remote_book_cloud_load_failed':
+        return '無法載入雲端書籍';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
       case 'desktop_clipboard_destination_hint':
