@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37587 (2211 per locale)
+/// Strings: 37672 (2216 per locale)
 ///
-/// Built on 2026-07-10 at 03:09 UTC
+/// Built on 2026-07-10 at 03:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2933,6 +2933,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  String get desktop_clipboard_destination_main => 'Main window';
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -7937,6 +7943,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -13064,6 +13081,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -18208,6 +18236,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -23371,6 +23410,17 @@ class _StringsFr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -28436,6 +28486,17 @@ class _StringsId extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -33562,6 +33623,17 @@ class _StringsIt extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -38414,6 +38486,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -43270,6 +43353,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -48364,6 +48458,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -53481,6 +53586,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -58573,6 +58689,17 @@ class _StringsRu extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -63578,6 +63705,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -68638,6 +68776,17 @@ class _StringsTr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -73673,6 +73822,17 @@ class _StringsVi extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -78369,6 +78529,16 @@ class _StringsZhCn extends _StringsEn {
       '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
   @override
   String get desktop_clipboard_window_mode_hint => '控制 Hibiki 是否保持在其他窗口上方';
+  @override
+  String get desktop_clipboard_destination => '剪贴板查词显示位置';
+  @override
+  String get desktop_clipboard_destination_hint => '剪贴板查词结果显示在哪里';
+  @override
+  String get desktop_clipboard_destination_main => '主窗口';
+  @override
+  String get desktop_clipboard_destination_panel => '悬浮面板';
+  @override
+  String get desktop_clipboard_destination_transient => '光标处弹卡';
 }
 
 // Path: retrying_in
@@ -83123,6 +83293,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get desktop_clipboard_destination_main => 'Main window';
+  @override
+  String get desktop_clipboard_destination_panel => 'Floating panel';
+  @override
+  String get desktop_clipboard_destination_transient => 'Popup at cursor';
 }
 
 // Path: retrying_in
@@ -87683,6 +87864,16 @@ extension on _StringsEn {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
@@ -92203,6 +92394,16 @@ extension on _StringsAr {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
@@ -96745,6 +96946,16 @@ extension on _StringsDe {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
@@ -101285,6 +101496,16 @@ extension on _StringsEs {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
@@ -105832,6 +106053,16 @@ extension on _StringsFr {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
@@ -110359,6 +110590,16 @@ extension on _StringsId {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
@@ -114903,6 +115144,16 @@ extension on _StringsIt {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
@@ -119405,6 +119656,16 @@ extension on _StringsJa {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
@@ -123910,6 +124171,16 @@ extension on _StringsKo {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
@@ -128447,6 +128718,16 @@ extension on _StringsNl {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
@@ -132981,6 +133262,16 @@ extension on _StringsPtBr {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
@@ -137519,6 +137810,16 @@ extension on _StringsRu {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
@@ -142039,6 +142340,16 @@ extension on _StringsTh {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
@@ -146568,6 +146879,16 @@ extension on _StringsTr {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
@@ -151091,6 +151412,16 @@ extension on _StringsVi {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
@@ -155580,6 +155911,16 @@ extension on _StringsZhCn {
         return '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
       case 'desktop_clipboard_window_mode_hint':
         return '控制 Hibiki 是否保持在其他窗口上方';
+      case 'desktop_clipboard_destination':
+        return '剪贴板查词显示位置';
+      case 'desktop_clipboard_destination_hint':
+        return '剪贴板查词结果显示在哪里';
+      case 'desktop_clipboard_destination_main':
+        return '主窗口';
+      case 'desktop_clipboard_destination_panel':
+        return '悬浮面板';
+      case 'desktop_clipboard_destination_transient':
+        return '光标处弹卡';
       default:
         return null;
     }
@@ -160074,6 +160415,16 @@ extension on _StringsZhHk {
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'desktop_clipboard_destination':
+        return 'Clipboard lookup destination';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'desktop_clipboard_destination_main':
+        return 'Main window';
+      case 'desktop_clipboard_destination_panel':
+        return 'Floating panel';
+      case 'desktop_clipboard_destination_transient':
+        return 'Popup at cursor';
       default:
         return null;
     }
