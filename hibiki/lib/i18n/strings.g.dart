@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37587 (2211 per locale)
+/// Strings: 37638 (2214 per locale)
 ///
-/// Built on 2026-07-09 at 04:54 UTC
+/// Built on 2026-07-10 at 03:12 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2933,6 +2933,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_profiles_desc => 'Configuration profiles';
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  String get remote_book_cloud => 'Cloud library';
+  String get remote_book_cloud_device => 'Cloud backup books';
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
 }
 
 // Path: retrying_in
@@ -7937,6 +7940,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
 }
 
 // Path: retrying_in
@@ -13064,6 +13073,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
 }
 
 // Path: retrying_in
@@ -18208,6 +18223,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
 }
 
 // Path: retrying_in
@@ -23371,6 +23392,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
 }
 
 // Path: retrying_in
@@ -28436,6 +28463,12 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
 }
 
 // Path: retrying_in
@@ -33562,6 +33595,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
 }
 
 // Path: retrying_in
@@ -38414,6 +38453,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
 }
 
 // Path: retrying_in
@@ -43270,6 +43315,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
 }
 
 // Path: retrying_in
@@ -48364,6 +48415,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
 }
 
 // Path: retrying_in
@@ -53481,6 +53538,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
 }
 
 // Path: retrying_in
@@ -58573,6 +58636,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
 }
 
 // Path: retrying_in
@@ -63578,6 +63647,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
 }
 
 // Path: retrying_in
@@ -68638,6 +68713,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
 }
 
 // Path: retrying_in
@@ -73673,6 +73754,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
 }
 
 // Path: retrying_in
@@ -78370,6 +78457,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
+  @override
+  String get remote_book_cloud => '云端书库';
+  @override
+  String get remote_book_cloud_device => '云盘备份书籍';
+  @override
+  String get remote_book_cloud_load_failed => '无法加载云端书籍';
 }
 
 // Path: retrying_in
@@ -83124,6 +83217,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get remote_book_cloud => '雲端書庫';
+  @override
+  String get remote_book_cloud_device => '雲端備份書籍';
+  @override
+  String get remote_book_cloud_load_failed => '無法載入雲端書籍';
 }
 
 // Path: retrying_in
@@ -87684,6 +87783,12 @@ extension on _StringsEn {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
       default:
         return null;
     }
@@ -92204,6 +92309,12 @@ extension on _StringsAr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
       default:
         return null;
     }
@@ -96746,6 +96857,12 @@ extension on _StringsDe {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
       default:
         return null;
     }
@@ -101286,6 +101403,12 @@ extension on _StringsEs {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
       default:
         return null;
     }
@@ -105833,6 +105956,12 @@ extension on _StringsFr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
       default:
         return null;
     }
@@ -110360,6 +110489,12 @@ extension on _StringsId {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
       default:
         return null;
     }
@@ -114904,6 +115039,12 @@ extension on _StringsIt {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
       default:
         return null;
     }
@@ -119406,6 +119547,12 @@ extension on _StringsJa {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
       default:
         return null;
     }
@@ -123911,6 +124058,12 @@ extension on _StringsKo {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
       default:
         return null;
     }
@@ -128448,6 +128601,12 @@ extension on _StringsNl {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
       default:
         return null;
     }
@@ -132982,6 +133141,12 @@ extension on _StringsPtBr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
       default:
         return null;
     }
@@ -137520,6 +137685,12 @@ extension on _StringsRu {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
       default:
         return null;
     }
@@ -142040,6 +142211,12 @@ extension on _StringsTh {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
       default:
         return null;
     }
@@ -146569,6 +146746,12 @@ extension on _StringsTr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
       default:
         return null;
     }
@@ -151092,6 +151275,12 @@ extension on _StringsVi {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
       default:
         return null;
     }
@@ -155581,6 +155770,12 @@ extension on _StringsZhCn {
         return '配置方案';
       case 'backup_import_contents_hint':
         return '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
+      case 'remote_book_cloud':
+        return '云端书库';
+      case 'remote_book_cloud_device':
+        return '云盘备份书籍';
+      case 'remote_book_cloud_load_failed':
+        return '无法加载云端书籍';
       default:
         return null;
     }
@@ -160075,6 +160270,12 @@ extension on _StringsZhHk {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'remote_book_cloud':
+        return '雲端書庫';
+      case 'remote_book_cloud_device':
+        return '雲端備份書籍';
+      case 'remote_book_cloud_load_failed':
+        return '無法載入雲端書籍';
       default:
         return null;
     }
