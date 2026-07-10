@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37587 (2211 per locale)
+/// Strings: 37621 (2213 per locale)
 ///
-/// Built on 2026-07-09 at 04:54 UTC
+/// Built on 2026-07-09 at 19:00 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2933,6 +2933,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_profiles_desc => 'Configuration profiles';
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -7937,6 +7939,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -13064,6 +13070,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -18208,6 +18218,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -23371,6 +23385,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -28436,6 +28454,10 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -33562,6 +33584,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -38414,6 +38440,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -43270,6 +43300,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -48364,6 +48398,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -53481,6 +53519,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -58573,6 +58615,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -63578,6 +63624,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -68638,6 +68688,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -73673,6 +73727,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -78370,6 +78428,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
+  @override
+  String get popup_font_size_decrease => '缩小查词字号';
+  @override
+  String get popup_font_size_increase => '放大查词字号';
 }
 
 // Path: retrying_in
@@ -83124,6 +83186,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_import_contents_hint =>
       'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+  @override
+  String get popup_font_size_decrease => 'Smaller dictionary text';
+  @override
+  String get popup_font_size_increase => 'Larger dictionary text';
 }
 
 // Path: retrying_in
@@ -87684,6 +87750,10 @@ extension on _StringsEn {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
@@ -92204,6 +92274,10 @@ extension on _StringsAr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
@@ -96746,6 +96820,10 @@ extension on _StringsDe {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
@@ -101286,6 +101364,10 @@ extension on _StringsEs {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
@@ -105833,6 +105915,10 @@ extension on _StringsFr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
@@ -110360,6 +110446,10 @@ extension on _StringsId {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
@@ -114904,6 +114994,10 @@ extension on _StringsIt {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
@@ -119406,6 +119500,10 @@ extension on _StringsJa {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
@@ -123911,6 +124009,10 @@ extension on _StringsKo {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
@@ -128448,6 +128550,10 @@ extension on _StringsNl {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
@@ -132982,6 +133088,10 @@ extension on _StringsPtBr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
@@ -137520,6 +137630,10 @@ extension on _StringsRu {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
@@ -142040,6 +142154,10 @@ extension on _StringsTh {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
@@ -146569,6 +146687,10 @@ extension on _StringsTr {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
@@ -151092,6 +151214,10 @@ extension on _StringsVi {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
@@ -155581,6 +155707,10 @@ extension on _StringsZhCn {
         return '配置方案';
       case 'backup_import_contents_hint':
         return '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
+      case 'popup_font_size_decrease':
+        return '缩小查词字号';
+      case 'popup_font_size_increase':
+        return '放大查词字号';
       default:
         return null;
     }
@@ -160075,6 +160205,10 @@ extension on _StringsZhHk {
         return 'Configuration profiles';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
+      case 'popup_font_size_decrease':
+        return 'Smaller dictionary text';
+      case 'popup_font_size_increase':
+        return 'Larger dictionary text';
       default:
         return null;
     }
