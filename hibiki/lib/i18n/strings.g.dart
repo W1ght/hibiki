@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 38369 (2257 per locale)
 ///
-/// Built on 2026-07-11 at 04:56 UTC
+/// Built on 2026-07-11 at 05:39 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2972,7 +2972,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
   String get clipboard_panel_opacity => 'Panel opacity';
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   String get sync_client_connected => 'Connected';
   String get sync_client_token_manual => 'Enter token manually';
   String get popup_ctx_adjust_button => 'Adjust context';
@@ -8062,7 +8062,7 @@ class _StringsAr extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -13291,7 +13291,7 @@ class _StringsDe extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -18537,7 +18537,7 @@ class _StringsEs extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -23802,7 +23802,7 @@ class _StringsFr extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -28969,7 +28969,7 @@ class _StringsId extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -34197,7 +34197,7 @@ class _StringsIt extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -39151,7 +39151,7 @@ class _StringsJa extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -44109,7 +44109,7 @@ class _StringsKo extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -49305,7 +49305,7 @@ class _StringsNl extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -54524,7 +54524,7 @@ class _StringsPtBr extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -59718,7 +59718,7 @@ class _StringsRu extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -64825,7 +64825,7 @@ class _StringsTh extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -69987,7 +69987,7 @@ class _StringsTr extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -75124,7 +75124,7 @@ class _StringsVi extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -79913,8 +79913,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get clipboard_panel_opacity => '面板不透明度';
   @override
-  String get clipboard_panel_opacity_hint =>
-      '悬浮查词面板的卡片背景不透明度（需要 Windows 11 背景材质支持）';
+  String get clipboard_panel_opacity_hint => '整个面板的不透明度——可透视底下的游戏/网页';
   @override
   String get sync_client_connected => '已连接';
   @override
@@ -84770,7 +84769,7 @@ class _StringsZhHk extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -89422,7 +89421,7 @@ extension on _StringsEn {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -94034,7 +94033,7 @@ extension on _StringsAr {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -98668,7 +98667,7 @@ extension on _StringsDe {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -103300,7 +103299,7 @@ extension on _StringsEs {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -107939,7 +107938,7 @@ extension on _StringsFr {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -112558,7 +112557,7 @@ extension on _StringsId {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -117194,7 +117193,7 @@ extension on _StringsIt {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -121788,7 +121787,7 @@ extension on _StringsJa {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -126385,7 +126384,7 @@ extension on _StringsKo {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -131014,7 +131013,7 @@ extension on _StringsNl {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -135640,7 +135639,7 @@ extension on _StringsPtBr {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -140270,7 +140269,7 @@ extension on _StringsRu {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -144882,7 +144881,7 @@ extension on _StringsTh {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -149503,7 +149502,7 @@ extension on _StringsTr {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -154118,7 +154117,7 @@ extension on _StringsVi {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -158699,7 +158698,7 @@ extension on _StringsZhCn {
       case 'clipboard_panel_opacity':
         return '面板不透明度';
       case 'clipboard_panel_opacity_hint':
-        return '悬浮查词面板的卡片背景不透明度（需要 Windows 11 背景材质支持）';
+        return '整个面板的不透明度——可透视底下的游戏/网页';
       case 'sync_client_connected':
         return '已连接';
       case 'sync_client_token_manual':
@@ -163285,7 +163284,7 @@ extension on _StringsZhHk {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
