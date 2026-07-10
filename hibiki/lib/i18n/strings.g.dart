@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37672 (2216 per locale)
+/// Strings: 38012 (2236 per locale)
 ///
-/// Built on 2026-07-10 at 04:31 UTC
+/// Built on 2026-07-10 at 08:07 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2938,6 +2938,36 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get remote_book_cloud => 'Cloud library';
   String get remote_book_cloud_device => 'Cloud backup books';
   String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  String get video_setting_danmaku_font_scale => 'Font size';
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  String get video_setting_danmaku_opacity => 'Opacity';
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  String get video_setting_danmaku_speed => 'Speed';
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  String get video_setting_danmaku_area => 'Display area';
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  String get video_danmaku_manual_search_action => 'Search';
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -7952,6 +7982,56 @@ class _StringsAr extends _StringsEn {
   String get remote_book_cloud_device => 'Cloud backup books';
   @override
   String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -13089,6 +13169,56 @@ class _StringsDe extends _StringsEn {
   String get remote_book_cloud_device => 'Cloud backup books';
   @override
   String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -18243,6 +18373,56 @@ class _StringsEs extends _StringsEn {
   String get remote_book_cloud_device => 'Cloud backup books';
   @override
   String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -23416,6 +23596,56 @@ class _StringsFr extends _StringsEn {
   String get remote_book_cloud_device => 'Cloud backup books';
   @override
   String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -28491,6 +28721,56 @@ class _StringsId extends _StringsEn {
   String get remote_book_cloud_device => 'Cloud backup books';
   @override
   String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -33627,6 +33907,56 @@ class _StringsIt extends _StringsEn {
   String get remote_book_cloud_device => 'Cloud backup books';
   @override
   String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -38489,6 +38819,56 @@ class _StringsJa extends _StringsEn {
   String get remote_book_cloud_device => 'Cloud backup books';
   @override
   String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -43355,6 +43735,56 @@ class _StringsKo extends _StringsEn {
   String get remote_book_cloud_device => 'Cloud backup books';
   @override
   String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -48459,6 +48889,56 @@ class _StringsNl extends _StringsEn {
   String get remote_book_cloud_device => 'Cloud backup books';
   @override
   String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -53586,6 +54066,56 @@ class _StringsPtBr extends _StringsEn {
   String get remote_book_cloud_device => 'Cloud backup books';
   @override
   String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -58688,6 +59218,56 @@ class _StringsRu extends _StringsEn {
   String get remote_book_cloud_device => 'Cloud backup books';
   @override
   String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -63703,6 +64283,56 @@ class _StringsTh extends _StringsEn {
   String get remote_book_cloud_device => 'Cloud backup books';
   @override
   String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -68773,6 +69403,56 @@ class _StringsTr extends _StringsEn {
   String get remote_book_cloud_device => 'Cloud backup books';
   @override
   String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -73818,6 +74498,56 @@ class _StringsVi extends _StringsEn {
   String get remote_book_cloud_device => 'Cloud backup books';
   @override
   String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -78525,6 +79255,49 @@ class _StringsZhCn extends _StringsEn {
   String get remote_book_cloud_device => '云盘备份书籍';
   @override
   String get remote_book_cloud_load_failed => '无法加载云端书籍';
+  @override
+  String get video_setting_danmaku_font_scale => '字号';
+  @override
+  String get video_setting_danmaku_font_scale_hint => '缩放弹幕文字大小。';
+  @override
+  String get video_setting_danmaku_opacity => '不透明度';
+  @override
+  String get video_setting_danmaku_opacity_hint => '弹幕整体透明度。';
+  @override
+  String get video_setting_danmaku_speed => '速度';
+  @override
+  String get video_setting_danmaku_speed_hint => '越大越快，滚动弹幕更快划过屏幕。';
+  @override
+  String get video_setting_danmaku_area => '显示区域';
+  @override
+  String get video_setting_danmaku_area_hint => '弹幕可占用的画面高度比例（从顶部起）。';
+  @override
+  String get video_setting_danmaku_block_rules => '屏蔽词 / 正则';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      '每行一条规则。用斜杠包裹（如 /pattern/）视为正则，否则按忽略大小写的文本子串匹配。';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      '例如 剧透 或 /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => '手动匹配';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      '自动匹配失败或匹配错集时，按标题搜索弹弹play 并手动选集。';
+  @override
+  String get video_danmaku_manual_match_title => '匹配弹幕';
+  @override
+  String get video_danmaku_manual_search_hint => '番剧名';
+  @override
+  String get video_danmaku_manual_search_prompt => '按番剧名搜索弹弹play，再选择分集。';
+  @override
+  String get video_danmaku_manual_search_action => '搜索';
+  @override
+  String get video_danmaku_manual_no_result => '未找到匹配的番剧。';
+  @override
+  String get video_danmaku_manual_network_error => '网络错误，请检查连接后重试。';
+  @override
+  String get video_danmaku_manual_server_error => '搜索失败，请稍后重试。';
 }
 
 // Path: retrying_in
@@ -83289,6 +84062,56 @@ class _StringsZhHk extends _StringsEn {
   String get remote_book_cloud_device => '雲端備份書籍';
   @override
   String get remote_book_cloud_load_failed => '無法載入雲端書籍';
+  @override
+  String get video_setting_danmaku_font_scale => 'Font size';
+  @override
+  String get video_setting_danmaku_font_scale_hint =>
+      'Scale the danmaku text size.';
+  @override
+  String get video_setting_danmaku_opacity => 'Opacity';
+  @override
+  String get video_setting_danmaku_opacity_hint =>
+      'Overall danmaku transparency.';
+  @override
+  String get video_setting_danmaku_speed => 'Speed';
+  @override
+  String get video_setting_danmaku_speed_hint =>
+      'Higher is faster; scrolling danmaku cross the screen sooner.';
+  @override
+  String get video_setting_danmaku_area => 'Display area';
+  @override
+  String get video_setting_danmaku_area_hint =>
+      'Fraction of the screen height danmaku may occupy, from the top.';
+  @override
+  String get video_setting_danmaku_block_rules => 'Block words / regex';
+  @override
+  String get video_setting_danmaku_block_rules_hint =>
+      'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+  @override
+  String get video_setting_danmaku_block_rules_placeholder =>
+      'e.g. spoiler or /pattern/';
+  @override
+  String get video_setting_danmaku_manual_match => 'Manual match';
+  @override
+  String get video_setting_danmaku_manual_match_hint =>
+      'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+  @override
+  String get video_danmaku_manual_match_title => 'Match danmaku';
+  @override
+  String get video_danmaku_manual_search_hint => 'Anime title';
+  @override
+  String get video_danmaku_manual_search_prompt =>
+      'Search Dandanplay by anime title, then pick an episode.';
+  @override
+  String get video_danmaku_manual_search_action => 'Search';
+  @override
+  String get video_danmaku_manual_no_result => 'No matching anime found.';
+  @override
+  String get video_danmaku_manual_network_error =>
+      'Network error. Check your connection and try again.';
+  @override
+  String get video_danmaku_manual_server_error =>
+      'Search failed. Try again later.';
 }
 
 // Path: retrying_in
@@ -87859,6 +88682,46 @@ extension on _StringsEn {
         return 'Cloud backup books';
       case 'remote_book_cloud_load_failed':
         return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
@@ -92389,6 +93252,46 @@ extension on _StringsAr {
         return 'Cloud backup books';
       case 'remote_book_cloud_load_failed':
         return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
@@ -96941,6 +97844,46 @@ extension on _StringsDe {
         return 'Cloud backup books';
       case 'remote_book_cloud_load_failed':
         return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
@@ -101491,6 +102434,46 @@ extension on _StringsEs {
         return 'Cloud backup books';
       case 'remote_book_cloud_load_failed':
         return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
@@ -106048,6 +107031,46 @@ extension on _StringsFr {
         return 'Cloud backup books';
       case 'remote_book_cloud_load_failed':
         return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
@@ -110585,6 +111608,46 @@ extension on _StringsId {
         return 'Cloud backup books';
       case 'remote_book_cloud_load_failed':
         return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
@@ -115139,6 +116202,46 @@ extension on _StringsIt {
         return 'Cloud backup books';
       case 'remote_book_cloud_load_failed':
         return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
@@ -119651,6 +120754,46 @@ extension on _StringsJa {
         return 'Cloud backup books';
       case 'remote_book_cloud_load_failed':
         return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
@@ -124166,6 +125309,46 @@ extension on _StringsKo {
         return 'Cloud backup books';
       case 'remote_book_cloud_load_failed':
         return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
@@ -128713,6 +129896,46 @@ extension on _StringsNl {
         return 'Cloud backup books';
       case 'remote_book_cloud_load_failed':
         return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
@@ -133257,6 +134480,46 @@ extension on _StringsPtBr {
         return 'Cloud backup books';
       case 'remote_book_cloud_load_failed':
         return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
@@ -137805,6 +139068,46 @@ extension on _StringsRu {
         return 'Cloud backup books';
       case 'remote_book_cloud_load_failed':
         return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
@@ -142335,6 +143638,46 @@ extension on _StringsTh {
         return 'Cloud backup books';
       case 'remote_book_cloud_load_failed':
         return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
@@ -146874,6 +148217,46 @@ extension on _StringsTr {
         return 'Cloud backup books';
       case 'remote_book_cloud_load_failed':
         return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
@@ -151407,6 +152790,46 @@ extension on _StringsVi {
         return 'Cloud backup books';
       case 'remote_book_cloud_load_failed':
         return 'Could not load cloud books';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
@@ -155906,6 +157329,46 @@ extension on _StringsZhCn {
         return '云盘备份书籍';
       case 'remote_book_cloud_load_failed':
         return '无法加载云端书籍';
+      case 'video_setting_danmaku_font_scale':
+        return '字号';
+      case 'video_setting_danmaku_font_scale_hint':
+        return '缩放弹幕文字大小。';
+      case 'video_setting_danmaku_opacity':
+        return '不透明度';
+      case 'video_setting_danmaku_opacity_hint':
+        return '弹幕整体透明度。';
+      case 'video_setting_danmaku_speed':
+        return '速度';
+      case 'video_setting_danmaku_speed_hint':
+        return '越大越快，滚动弹幕更快划过屏幕。';
+      case 'video_setting_danmaku_area':
+        return '显示区域';
+      case 'video_setting_danmaku_area_hint':
+        return '弹幕可占用的画面高度比例（从顶部起）。';
+      case 'video_setting_danmaku_block_rules':
+        return '屏蔽词 / 正则';
+      case 'video_setting_danmaku_block_rules_hint':
+        return '每行一条规则。用斜杠包裹（如 /pattern/）视为正则，否则按忽略大小写的文本子串匹配。';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return '例如 剧透 或 /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return '手动匹配';
+      case 'video_setting_danmaku_manual_match_hint':
+        return '自动匹配失败或匹配错集时，按标题搜索弹弹play 并手动选集。';
+      case 'video_danmaku_manual_match_title':
+        return '匹配弹幕';
+      case 'video_danmaku_manual_search_hint':
+        return '番剧名';
+      case 'video_danmaku_manual_search_prompt':
+        return '按番剧名搜索弹弹play，再选择分集。';
+      case 'video_danmaku_manual_search_action':
+        return '搜索';
+      case 'video_danmaku_manual_no_result':
+        return '未找到匹配的番剧。';
+      case 'video_danmaku_manual_network_error':
+        return '网络错误，请检查连接后重试。';
+      case 'video_danmaku_manual_server_error':
+        return '搜索失败，请稍后重试。';
       default:
         return null;
     }
@@ -160410,6 +161873,46 @@ extension on _StringsZhHk {
         return '雲端備份書籍';
       case 'remote_book_cloud_load_failed':
         return '無法載入雲端書籍';
+      case 'video_setting_danmaku_font_scale':
+        return 'Font size';
+      case 'video_setting_danmaku_font_scale_hint':
+        return 'Scale the danmaku text size.';
+      case 'video_setting_danmaku_opacity':
+        return 'Opacity';
+      case 'video_setting_danmaku_opacity_hint':
+        return 'Overall danmaku transparency.';
+      case 'video_setting_danmaku_speed':
+        return 'Speed';
+      case 'video_setting_danmaku_speed_hint':
+        return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_danmaku_area':
+        return 'Display area';
+      case 'video_setting_danmaku_area_hint':
+        return 'Fraction of the screen height danmaku may occupy, from the top.';
+      case 'video_setting_danmaku_block_rules':
+        return 'Block words / regex';
+      case 'video_setting_danmaku_block_rules_hint':
+        return 'One rule per line. Wrap a line in slashes like /pattern/ for a regular expression; otherwise it matches as case-insensitive text.';
+      case 'video_setting_danmaku_block_rules_placeholder':
+        return 'e.g. spoiler or /pattern/';
+      case 'video_setting_danmaku_manual_match':
+        return 'Manual match';
+      case 'video_setting_danmaku_manual_match_hint':
+        return 'Search Dandanplay by title and pick the episode when auto match fails or is wrong.';
+      case 'video_danmaku_manual_match_title':
+        return 'Match danmaku';
+      case 'video_danmaku_manual_search_hint':
+        return 'Anime title';
+      case 'video_danmaku_manual_search_prompt':
+        return 'Search Dandanplay by anime title, then pick an episode.';
+      case 'video_danmaku_manual_search_action':
+        return 'Search';
+      case 'video_danmaku_manual_no_result':
+        return 'No matching anime found.';
+      case 'video_danmaku_manual_network_error':
+        return 'Network error. Check your connection and try again.';
+      case 'video_danmaku_manual_server_error':
+        return 'Search failed. Try again later.';
       default:
         return null;
     }
