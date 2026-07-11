@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 38437 (2261 per locale)
 ///
-/// Built on 2026-07-11 at 06:03 UTC
+/// Built on 2026-07-11 at 10:14 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2927,8 +2927,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Reading, video and mining statistics';
   String get backup_category_settings_desc => 'App and reader settings';
   String get backup_category_profiles_desc => 'Configuration profiles';
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   String get popup_font_size_decrease => 'Smaller dictionary text';
   String get popup_font_size_increase => 'Larger dictionary text';
   String get remote_book_cloud => 'Cloud library';
@@ -2994,6 +2992,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_export_no_videos => 'No videos to choose from';
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -7990,9 +7989,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -8109,6 +8105,8 @@ class _StringsAr extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -13228,9 +13226,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -13347,6 +13342,8 @@ class _StringsDe extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -18483,9 +18480,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -18602,6 +18596,8 @@ class _StringsEs extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -23757,9 +23753,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -23876,6 +23869,8 @@ class _StringsFr extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -28933,9 +28928,6 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -29052,6 +29044,8 @@ class _StringsId extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -34170,9 +34164,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -34289,6 +34280,8 @@ class _StringsIt extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -39133,9 +39126,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -39252,6 +39242,8 @@ class _StringsJa extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -44100,9 +44092,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -44219,6 +44208,8 @@ class _StringsKo extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -49305,9 +49296,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -49424,6 +49412,8 @@ class _StringsNl extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -54533,9 +54523,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -54652,6 +54639,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -59736,9 +59725,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -59855,6 +59841,8 @@ class _StringsRu extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -64852,9 +64840,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -64971,6 +64956,8 @@ class _StringsTh extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -70023,9 +70010,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -70142,6 +70126,8 @@ class _StringsTr extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -75169,9 +75155,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -75288,6 +75271,8 @@ class _StringsVi extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -79976,9 +79961,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_category_profiles_desc => '配置方案';
   @override
-  String get backup_import_contents_hint =>
-      '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
-  @override
   String get popup_font_size_decrease => '缩小查词字号';
   @override
   String get popup_font_size_increase => '放大查词字号';
@@ -80087,6 +80069,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '已选 ${count} 个视频';
+  @override
+  String get backup_import_contents_hint => '取消勾选某项即可跳过它。';
 }
 
 // Path: retrying_in
@@ -84833,9 +84817,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -84952,6 +84933,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -89506,8 +89489,6 @@ extension on _StringsEn {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -89612,6 +89593,8 @@ extension on _StringsEn {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -94126,8 +94109,6 @@ extension on _StringsAr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -94232,6 +94213,8 @@ extension on _StringsAr {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -98768,8 +98751,6 @@ extension on _StringsDe {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -98874,6 +98855,8 @@ extension on _StringsDe {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -103408,8 +103391,6 @@ extension on _StringsEs {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -103514,6 +103495,8 @@ extension on _StringsEs {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -108055,8 +108038,6 @@ extension on _StringsFr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -108161,6 +108142,8 @@ extension on _StringsFr {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -112682,8 +112665,6 @@ extension on _StringsId {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -112788,6 +112769,8 @@ extension on _StringsId {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -117326,8 +117309,6 @@ extension on _StringsIt {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -117432,6 +117413,8 @@ extension on _StringsIt {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -121928,8 +121911,6 @@ extension on _StringsJa {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -122034,6 +122015,8 @@ extension on _StringsJa {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -126533,8 +126516,6 @@ extension on _StringsKo {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -126639,6 +126620,8 @@ extension on _StringsKo {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -131170,8 +131153,6 @@ extension on _StringsNl {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -131276,6 +131257,8 @@ extension on _StringsNl {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -135804,8 +135787,6 @@ extension on _StringsPtBr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -135910,6 +135891,8 @@ extension on _StringsPtBr {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -140442,8 +140425,6 @@ extension on _StringsRu {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -140548,6 +140529,8 @@ extension on _StringsRu {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -145062,8 +145045,6 @@ extension on _StringsTh {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -145168,6 +145149,8 @@ extension on _StringsTh {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -149691,8 +149674,6 @@ extension on _StringsTr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -149797,6 +149778,8 @@ extension on _StringsTr {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -154314,8 +154297,6 @@ extension on _StringsVi {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -154420,6 +154401,8 @@ extension on _StringsVi {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -158903,8 +158886,6 @@ extension on _StringsZhCn {
         return '应用与阅读器设置';
       case 'backup_category_profiles_desc':
         return '配置方案';
-      case 'backup_import_contents_hint':
-        return '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
       case 'popup_font_size_decrease':
         return '缩小查词字号';
       case 'popup_font_size_increase':
@@ -159009,6 +158990,8 @@ extension on _StringsZhCn {
         return '没有可选的视频';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '已选 ${count} 个视频';
+      case 'backup_import_contents_hint':
+        return '取消勾选某项即可跳过它。';
       default:
         return null;
     }
@@ -163497,8 +163480,6 @@ extension on _StringsZhHk {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -163603,6 +163584,8 @@ extension on _StringsZhHk {
         return 'No videos to choose from';
       case 'backup_export_videos_selected':
         return ({required Object count}) => '${count} videos selected';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
