@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 38369 (2257 per locale)
 ///
-/// Built on 2026-07-10 at 18:01 UTC
+/// Built on 2026-07-11 at 04:56 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1574,7 +1574,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_reader_toggle_furigana => 'Toggle furigana';
   String get shortcut_action_reader_lookup_at_cursor =>
       'Lookup / activate cursor';
-  String get shortcut_action_reader_shift_lookup => 'Shift lookup';
+  String get shortcut_action_reader_shift_lookup => 'Look up word at caret';
   String get shortcut_action_reader_create_card_from_popup =>
       'Create card from popup';
   String get on_screen_keyboard => 'On-screen keyboard';
@@ -36734,7 +36734,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_reader_lookup_at_cursor => '辞書を引く／カーソルを有効化';
   @override
-  String get shortcut_action_reader_shift_lookup => 'Shift 辞書引き';
+  String get shortcut_action_reader_shift_lookup => 'カーソル位置で辞書引き';
   @override
   String get shortcut_action_reader_create_card_from_popup => 'ポップアップからカード作成';
   @override
@@ -77617,7 +77617,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_reader_lookup_at_cursor => '查词/激活光标';
   @override
-  String get shortcut_action_reader_shift_lookup => 'Shift 查词';
+  String get shortcut_action_reader_shift_lookup => '光标处查词';
   @override
   String get shortcut_action_reader_create_card_from_popup => '从弹窗制卡';
   @override
@@ -82404,7 +82404,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_reader_lookup_at_cursor => '查詞／啟用游標';
   @override
-  String get shortcut_action_reader_shift_lookup => 'Shift 查詞';
+  String get shortcut_action_reader_shift_lookup => '游標處查詞';
   @override
   String get shortcut_action_reader_create_card_from_popup => '由彈窗製卡';
   @override
@@ -87219,7 +87219,7 @@ extension on _StringsEn {
       case 'shortcut_action_reader_lookup_at_cursor':
         return 'Lookup / activate cursor';
       case 'shortcut_action_reader_shift_lookup':
-        return 'Shift lookup';
+        return 'Look up word at caret';
       case 'shortcut_action_reader_create_card_from_popup':
         return 'Create card from popup';
       case 'on_screen_keyboard':
@@ -119590,7 +119590,7 @@ extension on _StringsJa {
       case 'shortcut_action_reader_lookup_at_cursor':
         return '辞書を引く／カーソルを有効化';
       case 'shortcut_action_reader_shift_lookup':
-        return 'Shift 辞書引き';
+        return 'カーソル位置で辞書引き';
       case 'shortcut_action_reader_create_card_from_popup':
         return 'ポップアップからカード作成';
       case 'on_screen_keyboard':
@@ -156510,7 +156510,7 @@ extension on _StringsZhCn {
       case 'shortcut_action_reader_lookup_at_cursor':
         return '查词/激活光标';
       case 'shortcut_action_reader_shift_lookup':
-        return 'Shift 查词';
+        return '光标处查词';
       case 'shortcut_action_reader_create_card_from_popup':
         return '从弹窗制卡';
       case 'on_screen_keyboard':
@@ -161091,7 +161091,7 @@ extension on _StringsZhHk {
       case 'shortcut_action_reader_lookup_at_cursor':
         return '查詞／啟用游標';
       case 'shortcut_action_reader_shift_lookup':
-        return 'Shift 查詞';
+        return '游標處查詞';
       case 'shortcut_action_reader_create_card_from_popup':
         return '由彈窗製卡';
       case 'on_screen_keyboard':
