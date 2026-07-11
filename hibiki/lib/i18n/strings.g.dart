@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38369 (2257 per locale)
+/// Strings: 38437 (2261 per locale)
 ///
-/// Built on 2026-07-11 at 05:39 UTC
+/// Built on 2026-07-11 at 07:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2989,6 +2989,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get popup_ctx_next_plus => 'Add after';
   String get popup_ctx_confirm => 'Confirm';
   String get popup_ctx_cancel => 'Cancel';
+  String get backup_export_choose_videos => 'Choose videos';
+  String get backup_export_videos_all => 'All videos';
+  String get backup_export_no_videos => 'No videos to choose from';
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -8095,6 +8100,15 @@ class _StringsAr extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -13324,6 +13338,15 @@ class _StringsDe extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -18570,6 +18593,15 @@ class _StringsEs extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -23835,6 +23867,15 @@ class _StringsFr extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -29002,6 +29043,15 @@ class _StringsId extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -34230,6 +34280,15 @@ class _StringsIt extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -39184,6 +39243,15 @@ class _StringsJa extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -44142,6 +44210,15 @@ class _StringsKo extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -49338,6 +49415,15 @@ class _StringsNl extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -54557,6 +54643,15 @@ class _StringsPtBr extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -59751,6 +59846,15 @@ class _StringsRu extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -64858,6 +64962,15 @@ class _StringsTh extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -70020,6 +70133,15 @@ class _StringsTr extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -75157,6 +75279,15 @@ class _StringsVi extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -79946,6 +80077,15 @@ class _StringsZhCn extends _StringsEn {
   String get popup_ctx_confirm => '确认制卡';
   @override
   String get popup_ctx_cancel => '取消';
+  @override
+  String get backup_export_choose_videos => '选择视频';
+  @override
+  String get backup_export_videos_all => '全部视频';
+  @override
+  String get backup_export_no_videos => '没有可选的视频';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '已选 ${count} 个视频';
 }
 
 // Path: retrying_in
@@ -84802,6 +84942,15 @@ class _StringsZhHk extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -89454,6 +89603,14 @@ extension on _StringsEn {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -94066,6 +94223,14 @@ extension on _StringsAr {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -98700,6 +98865,14 @@ extension on _StringsDe {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -103332,6 +103505,14 @@ extension on _StringsEs {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -107971,6 +108152,14 @@ extension on _StringsFr {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -112590,6 +112779,14 @@ extension on _StringsId {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -117226,6 +117423,14 @@ extension on _StringsIt {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -121820,6 +122025,14 @@ extension on _StringsJa {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -126417,6 +126630,14 @@ extension on _StringsKo {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -131046,6 +131267,14 @@ extension on _StringsNl {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -135672,6 +135901,14 @@ extension on _StringsPtBr {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -140302,6 +140539,14 @@ extension on _StringsRu {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -144914,6 +145159,14 @@ extension on _StringsTh {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -149535,6 +149788,14 @@ extension on _StringsTr {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -154150,6 +154411,14 @@ extension on _StringsVi {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -158731,6 +159000,14 @@ extension on _StringsZhCn {
         return '确认制卡';
       case 'popup_ctx_cancel':
         return '取消';
+      case 'backup_export_choose_videos':
+        return '选择视频';
+      case 'backup_export_videos_all':
+        return '全部视频';
+      case 'backup_export_no_videos':
+        return '没有可选的视频';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '已选 ${count} 个视频';
       default:
         return null;
     }
@@ -163317,6 +163594,14 @@ extension on _StringsZhHk {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
