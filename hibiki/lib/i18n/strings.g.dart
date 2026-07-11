@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38216 (2248 per locale)
+/// Strings: 38352 (2256 per locale)
 ///
-/// Built on 2026-07-11 at 07:31 UTC
+/// Built on 2026-07-11 at 13:26 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2981,6 +2981,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_play => 'Play';
   String get rename_collection => 'Rename collection';
   String get delete_collection => 'Delete collection';
+  String get video_continue_watching => 'Continue Watching';
+  String get video_library_overview => 'Library Overview';
+  String get video_stat_total_videos => 'Total';
+  String get video_stat_unfinished => 'Unfinished';
+  String get video_stat_recent_imports => 'New in 7 days';
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -8070,6 +8078,22 @@ class _StringsAr extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -13282,6 +13306,22 @@ class _StringsDe extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -18511,6 +18551,22 @@ class _StringsEs extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -23759,6 +23815,22 @@ class _StringsFr extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -28909,6 +28981,22 @@ class _StringsId extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -34120,6 +34208,22 @@ class _StringsIt extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -39057,6 +39161,22 @@ class _StringsJa extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -43998,6 +44118,22 @@ class _StringsKo extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -49177,6 +49313,22 @@ class _StringsNl extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -54379,6 +54531,22 @@ class _StringsPtBr extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -59556,6 +59724,22 @@ class _StringsRu extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -64646,6 +64830,22 @@ class _StringsTh extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -69791,6 +69991,22 @@ class _StringsTr extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -74911,6 +75127,22 @@ class _StringsVi extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -79683,6 +79915,22 @@ class _StringsZhCn extends _StringsEn {
   String get rename_collection => '重命名合集';
   @override
   String get delete_collection => '删除合集';
+  @override
+  String get video_continue_watching => '继续观看';
+  @override
+  String get video_library_overview => '媒体库概览';
+  @override
+  String get video_stat_total_videos => '总数';
+  @override
+  String get video_stat_unfinished => '未完成';
+  @override
+  String get video_stat_recent_imports => '近7天导入';
+  @override
+  String video_watched_up_to({required Object time}) => '已看至 ${time}';
+  @override
+  String video_last_watched({required Object date}) => '上次观看 ${date}';
+  @override
+  String get collection_view_all => '查看全部';
 }
 
 // Path: retrying_in
@@ -84522,6 +84770,22 @@ class _StringsZhHk extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
 }
 
 // Path: retrying_in
@@ -89156,6 +89420,22 @@ extension on _StringsEn {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
@@ -93750,6 +94030,22 @@ extension on _StringsAr {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
@@ -98366,6 +98662,22 @@ extension on _StringsDe {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
@@ -102980,6 +103292,22 @@ extension on _StringsEs {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
@@ -107601,6 +107929,22 @@ extension on _StringsFr {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
@@ -112202,6 +112546,22 @@ extension on _StringsId {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
@@ -116820,6 +117180,22 @@ extension on _StringsIt {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
@@ -121396,6 +121772,22 @@ extension on _StringsJa {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
@@ -125975,6 +126367,22 @@ extension on _StringsKo {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
@@ -130586,6 +130994,22 @@ extension on _StringsNl {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
@@ -135194,6 +135618,22 @@ extension on _StringsPtBr {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
@@ -139806,6 +140246,22 @@ extension on _StringsRu {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
@@ -144400,6 +144856,22 @@ extension on _StringsTh {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
@@ -149003,6 +149475,22 @@ extension on _StringsTr {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
@@ -153600,6 +154088,22 @@ extension on _StringsVi {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
@@ -158163,6 +158667,22 @@ extension on _StringsZhCn {
         return '重命名合集';
       case 'delete_collection':
         return '删除合集';
+      case 'video_continue_watching':
+        return '继续观看';
+      case 'video_library_overview':
+        return '媒体库概览';
+      case 'video_stat_total_videos':
+        return '总数';
+      case 'video_stat_unfinished':
+        return '未完成';
+      case 'video_stat_recent_imports':
+        return '近7天导入';
+      case 'video_watched_up_to':
+        return ({required Object time}) => '已看至 ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => '上次观看 ${date}';
+      case 'collection_view_all':
+        return '查看全部';
       default:
         return null;
     }
@@ -162731,6 +163251,22 @@ extension on _StringsZhHk {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
       default:
         return null;
     }
