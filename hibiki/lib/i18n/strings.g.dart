@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38216 (2248 per locale)
+/// Strings: 38522 (2266 per locale)
 ///
-/// Built on 2026-07-11 at 07:31 UTC
+/// Built on 2026-07-11 at 08:59 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1574,7 +1574,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_reader_toggle_furigana => 'Toggle furigana';
   String get shortcut_action_reader_lookup_at_cursor =>
       'Lookup / activate cursor';
-  String get shortcut_action_reader_shift_lookup => 'Shift lookup';
+  String get shortcut_action_reader_shift_lookup => 'Look up word at caret';
   String get shortcut_action_reader_create_card_from_popup =>
       'Create card from popup';
   String get on_screen_keyboard => 'On-screen keyboard';
@@ -2972,7 +2972,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
   String get clipboard_panel_opacity => 'Panel opacity';
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   String get sync_client_connected => 'Connected';
   String get sync_client_token_manual => 'Enter token manually';
   String get delete_collection_confirm =>
@@ -2981,6 +2981,25 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_play => 'Play';
   String get rename_collection => 'Rename collection';
   String get delete_collection => 'Delete collection';
+  String get popup_ctx_adjust_button => 'Adjust context';
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  String get popup_ctx_modal_title => 'Select sentence context';
+  String get popup_ctx_modal_count => 'Selected %d';
+  String get popup_ctx_box_prev => 'Before';
+  String get popup_ctx_box_current => 'Current';
+  String get popup_ctx_box_next => 'After';
+  String get popup_ctx_box_empty => '(none)';
+  String get popup_ctx_prev_minus => 'Remove before';
+  String get popup_ctx_prev_plus => 'Add before';
+  String get popup_ctx_next_minus => 'Remove after';
+  String get popup_ctx_next_plus => 'Add after';
+  String get popup_ctx_confirm => 'Confirm';
+  String get popup_ctx_cancel => 'Cancel';
+  String get backup_export_choose_videos => 'Choose videos';
+  String get backup_export_videos_all => 'All videos';
+  String get backup_export_no_videos => 'No videos to choose from';
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -8054,7 +8073,7 @@ class _StringsAr extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -8070,6 +8089,43 @@ class _StringsAr extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -13266,7 +13322,7 @@ class _StringsDe extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -13282,6 +13338,43 @@ class _StringsDe extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -18495,7 +18588,7 @@ class _StringsEs extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -18511,6 +18604,43 @@ class _StringsEs extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -23743,7 +23873,7 @@ class _StringsFr extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -23759,6 +23889,43 @@ class _StringsFr extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -28893,7 +29060,7 @@ class _StringsId extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -28909,6 +29076,43 @@ class _StringsId extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -34104,7 +34308,7 @@ class _StringsIt extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -34120,6 +34324,43 @@ class _StringsIt extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -36624,7 +36865,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_reader_lookup_at_cursor => '辞書を引く／カーソルを有効化';
   @override
-  String get shortcut_action_reader_shift_lookup => 'Shift 辞書引き';
+  String get shortcut_action_reader_shift_lookup => 'カーソル位置で辞書引き';
   @override
   String get shortcut_action_reader_create_card_from_popup => 'ポップアップからカード作成';
   @override
@@ -39041,7 +39282,7 @@ class _StringsJa extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -39057,6 +39298,43 @@ class _StringsJa extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -43982,7 +44260,7 @@ class _StringsKo extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -43998,6 +44276,43 @@ class _StringsKo extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -49161,7 +49476,7 @@ class _StringsNl extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -49177,6 +49492,43 @@ class _StringsNl extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -54363,7 +54715,7 @@ class _StringsPtBr extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -54379,6 +54731,43 @@ class _StringsPtBr extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -59540,7 +59929,7 @@ class _StringsRu extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -59556,6 +59945,43 @@ class _StringsRu extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -64630,7 +65056,7 @@ class _StringsTh extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -64646,6 +65072,43 @@ class _StringsTh extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -69775,7 +70238,7 @@ class _StringsTr extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -69791,6 +70254,43 @@ class _StringsTr extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -74895,7 +75395,7 @@ class _StringsVi extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -74911,6 +75411,43 @@ class _StringsVi extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -77371,7 +77908,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_reader_lookup_at_cursor => '查词/激活光标';
   @override
-  String get shortcut_action_reader_shift_lookup => 'Shift 查词';
+  String get shortcut_action_reader_shift_lookup => '光标处查词';
   @override
   String get shortcut_action_reader_create_card_from_popup => '从弹窗制卡';
   @override
@@ -79667,8 +80204,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get clipboard_panel_opacity => '面板不透明度';
   @override
-  String get clipboard_panel_opacity_hint =>
-      '悬浮查词面板的卡片背景不透明度（需要 Windows 11 背景材质支持）';
+  String get clipboard_panel_opacity_hint => '整个面板的不透明度——可透视底下的游戏/网页';
   @override
   String get sync_client_connected => '已连接';
   @override
@@ -79683,6 +80219,43 @@ class _StringsZhCn extends _StringsEn {
   String get rename_collection => '重命名合集';
   @override
   String get delete_collection => '删除合集';
+  @override
+  String get popup_ctx_adjust_button => '调整上下文';
+  @override
+  String get popup_ctx_modal_eyebrow => '制卡前调整';
+  @override
+  String get popup_ctx_modal_title => '选择句子上下文';
+  @override
+  String get popup_ctx_modal_count => '已选择 %d 句';
+  @override
+  String get popup_ctx_box_prev => '前文';
+  @override
+  String get popup_ctx_box_current => '当前句';
+  @override
+  String get popup_ctx_box_next => '后文';
+  @override
+  String get popup_ctx_box_empty => '（无）';
+  @override
+  String get popup_ctx_prev_minus => '前退一句';
+  @override
+  String get popup_ctx_prev_plus => '前加一句';
+  @override
+  String get popup_ctx_next_minus => '后退一句';
+  @override
+  String get popup_ctx_next_plus => '后加一句';
+  @override
+  String get popup_ctx_confirm => '确认制卡';
+  @override
+  String get popup_ctx_cancel => '取消';
+  @override
+  String get backup_export_choose_videos => '选择视频';
+  @override
+  String get backup_export_videos_all => '全部视频';
+  @override
+  String get backup_export_no_videos => '没有可选的视频';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '已选 ${count} 个视频';
 }
 
 // Path: retrying_in
@@ -82140,7 +82713,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_reader_lookup_at_cursor => '查詞／啟用游標';
   @override
-  String get shortcut_action_reader_shift_lookup => 'Shift 查詞';
+  String get shortcut_action_reader_shift_lookup => '游標處查詞';
   @override
   String get shortcut_action_reader_create_card_from_popup => '由彈窗製卡';
   @override
@@ -84506,7 +85079,7 @@ class _StringsZhHk extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -84522,6 +85095,43 @@ class _StringsZhHk extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
 }
 
 // Path: retrying_in
@@ -86938,7 +87548,7 @@ extension on _StringsEn {
       case 'shortcut_action_reader_lookup_at_cursor':
         return 'Lookup / activate cursor';
       case 'shortcut_action_reader_shift_lookup':
-        return 'Shift lookup';
+        return 'Look up word at caret';
       case 'shortcut_action_reader_create_card_from_popup':
         return 'Create card from popup';
       case 'on_screen_keyboard':
@@ -89141,7 +89751,7 @@ extension on _StringsEn {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -89156,6 +89766,42 @@ extension on _StringsEn {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -93735,7 +94381,7 @@ extension on _StringsAr {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -93750,6 +94396,42 @@ extension on _StringsAr {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -98351,7 +99033,7 @@ extension on _StringsDe {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -98366,6 +99048,42 @@ extension on _StringsDe {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -102965,7 +103683,7 @@ extension on _StringsEs {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -102980,6 +103698,42 @@ extension on _StringsEs {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -107586,7 +108340,7 @@ extension on _StringsFr {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -107601,6 +108355,42 @@ extension on _StringsFr {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -112187,7 +112977,7 @@ extension on _StringsId {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -112202,6 +112992,42 @@ extension on _StringsId {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -116805,7 +117631,7 @@ extension on _StringsIt {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -116820,6 +117646,42 @@ extension on _StringsIt {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -119183,7 +120045,7 @@ extension on _StringsJa {
       case 'shortcut_action_reader_lookup_at_cursor':
         return '辞書を引く／カーソルを有効化';
       case 'shortcut_action_reader_shift_lookup':
-        return 'Shift 辞書引き';
+        return 'カーソル位置で辞書引き';
       case 'shortcut_action_reader_create_card_from_popup':
         return 'ポップアップからカード作成';
       case 'on_screen_keyboard':
@@ -121381,7 +122243,7 @@ extension on _StringsJa {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -121396,6 +122258,42 @@ extension on _StringsJa {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -125960,7 +126858,7 @@ extension on _StringsKo {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -125975,6 +126873,42 @@ extension on _StringsKo {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -130571,7 +131505,7 @@ extension on _StringsNl {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -130586,6 +131520,42 @@ extension on _StringsNl {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -135179,7 +136149,7 @@ extension on _StringsPtBr {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -135194,6 +136164,42 @@ extension on _StringsPtBr {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -139791,7 +140797,7 @@ extension on _StringsRu {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -139806,6 +140812,42 @@ extension on _StringsRu {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -144385,7 +145427,7 @@ extension on _StringsTh {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -144400,6 +145442,42 @@ extension on _StringsTh {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -148988,7 +150066,7 @@ extension on _StringsTr {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -149003,6 +150081,42 @@ extension on _StringsTr {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -153585,7 +154699,7 @@ extension on _StringsVi {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -153600,6 +154714,42 @@ extension on _StringsVi {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
@@ -155959,7 +157109,7 @@ extension on _StringsZhCn {
       case 'shortcut_action_reader_lookup_at_cursor':
         return '查词/激活光标';
       case 'shortcut_action_reader_shift_lookup':
-        return 'Shift 查词';
+        return '光标处查词';
       case 'shortcut_action_reader_create_card_from_popup':
         return '从弹窗制卡';
       case 'on_screen_keyboard':
@@ -158148,7 +159298,7 @@ extension on _StringsZhCn {
       case 'clipboard_panel_opacity':
         return '面板不透明度';
       case 'clipboard_panel_opacity_hint':
-        return '悬浮查词面板的卡片背景不透明度（需要 Windows 11 背景材质支持）';
+        return '整个面板的不透明度——可透视底下的游戏/网页';
       case 'sync_client_connected':
         return '已连接';
       case 'sync_client_token_manual':
@@ -158163,6 +159313,42 @@ extension on _StringsZhCn {
         return '重命名合集';
       case 'delete_collection':
         return '删除合集';
+      case 'popup_ctx_adjust_button':
+        return '调整上下文';
+      case 'popup_ctx_modal_eyebrow':
+        return '制卡前调整';
+      case 'popup_ctx_modal_title':
+        return '选择句子上下文';
+      case 'popup_ctx_modal_count':
+        return '已选择 %d 句';
+      case 'popup_ctx_box_prev':
+        return '前文';
+      case 'popup_ctx_box_current':
+        return '当前句';
+      case 'popup_ctx_box_next':
+        return '后文';
+      case 'popup_ctx_box_empty':
+        return '（无）';
+      case 'popup_ctx_prev_minus':
+        return '前退一句';
+      case 'popup_ctx_prev_plus':
+        return '前加一句';
+      case 'popup_ctx_next_minus':
+        return '后退一句';
+      case 'popup_ctx_next_plus':
+        return '后加一句';
+      case 'popup_ctx_confirm':
+        return '确认制卡';
+      case 'popup_ctx_cancel':
+        return '取消';
+      case 'backup_export_choose_videos':
+        return '选择视频';
+      case 'backup_export_videos_all':
+        return '全部视频';
+      case 'backup_export_no_videos':
+        return '没有可选的视频';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '已选 ${count} 个视频';
       default:
         return null;
     }
@@ -160522,7 +161708,7 @@ extension on _StringsZhHk {
       case 'shortcut_action_reader_lookup_at_cursor':
         return '查詞／啟用游標';
       case 'shortcut_action_reader_shift_lookup':
-        return 'Shift 查詞';
+        return '游標處查詞';
       case 'shortcut_action_reader_create_card_from_popup':
         return '由彈窗製卡';
       case 'on_screen_keyboard':
@@ -162716,7 +163902,7 @@ extension on _StringsZhHk {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -162731,6 +163917,42 @@ extension on _StringsZhHk {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       default:
         return null;
     }
