@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38131 (2243 per locale)
+/// Strings: 38216 (2248 per locale)
 ///
-/// Built on 2026-07-10 at 12:03 UTC
+/// Built on 2026-07-11 at 07:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2975,6 +2975,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
   String get sync_client_connected => 'Connected';
   String get sync_client_token_manual => 'Enter token manually';
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  String get collection_empty => 'Collection is empty';
+  String get collection_play => 'Play';
+  String get rename_collection => 'Rename collection';
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -8053,6 +8059,17 @@ class _StringsAr extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -13254,6 +13271,17 @@ class _StringsDe extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -18472,6 +18500,17 @@ class _StringsEs extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -23709,6 +23748,17 @@ class _StringsFr extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -28848,6 +28898,17 @@ class _StringsId extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -34048,6 +34109,17 @@ class _StringsIt extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -38974,6 +39046,17 @@ class _StringsJa extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -43904,6 +43987,17 @@ class _StringsKo extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -49072,6 +49166,17 @@ class _StringsNl extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -54263,6 +54368,17 @@ class _StringsPtBr extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -59429,6 +59545,17 @@ class _StringsRu extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -64508,6 +64635,17 @@ class _StringsTh extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -69642,6 +69780,17 @@ class _StringsTr extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -74751,6 +74900,17 @@ class _StringsVi extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -79513,6 +79673,16 @@ class _StringsZhCn extends _StringsEn {
   String get sync_client_connected => '已连接';
   @override
   String get sync_client_token_manual => '手动填写令牌';
+  @override
+  String get delete_collection_confirm => '删除合集不会删除其中的视频。';
+  @override
+  String get collection_empty => '合集为空';
+  @override
+  String get collection_play => '播放';
+  @override
+  String get rename_collection => '重命名合集';
+  @override
+  String get delete_collection => '删除合集';
 }
 
 // Path: retrying_in
@@ -84341,6 +84511,17 @@ class _StringsZhHk extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
 }
 
 // Path: retrying_in
@@ -88965,6 +89146,16 @@ extension on _StringsEn {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
@@ -93549,6 +93740,16 @@ extension on _StringsAr {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
@@ -98155,6 +98356,16 @@ extension on _StringsDe {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
@@ -102759,6 +102970,16 @@ extension on _StringsEs {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
@@ -107370,6 +107591,16 @@ extension on _StringsFr {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
@@ -111961,6 +112192,16 @@ extension on _StringsId {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
@@ -116569,6 +116810,16 @@ extension on _StringsIt {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
@@ -121135,6 +121386,16 @@ extension on _StringsJa {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
@@ -125704,6 +125965,16 @@ extension on _StringsKo {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
@@ -130305,6 +130576,16 @@ extension on _StringsNl {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
@@ -134903,6 +135184,16 @@ extension on _StringsPtBr {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
@@ -139505,6 +139796,16 @@ extension on _StringsRu {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
@@ -144089,6 +144390,16 @@ extension on _StringsTh {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
@@ -148682,6 +148993,16 @@ extension on _StringsTr {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
@@ -153269,6 +153590,16 @@ extension on _StringsVi {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
@@ -157822,6 +158153,16 @@ extension on _StringsZhCn {
         return '已连接';
       case 'sync_client_token_manual':
         return '手动填写令牌';
+      case 'delete_collection_confirm':
+        return '删除合集不会删除其中的视频。';
+      case 'collection_empty':
+        return '合集为空';
+      case 'collection_play':
+        return '播放';
+      case 'rename_collection':
+        return '重命名合集';
+      case 'delete_collection':
+        return '删除合集';
       default:
         return null;
     }
@@ -162380,6 +162721,16 @@ extension on _StringsZhHk {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       default:
         return null;
     }
