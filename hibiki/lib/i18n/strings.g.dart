@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38131 (2243 per locale)
+/// Strings: 38369 (2257 per locale)
 ///
-/// Built on 2026-07-10 at 12:03 UTC
+/// Built on 2026-07-10 at 18:01 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2975,6 +2975,20 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
   String get sync_client_connected => 'Connected';
   String get sync_client_token_manual => 'Enter token manually';
+  String get popup_ctx_adjust_button => 'Adjust context';
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  String get popup_ctx_modal_title => 'Select sentence context';
+  String get popup_ctx_modal_count => 'Selected %d';
+  String get popup_ctx_box_prev => 'Before';
+  String get popup_ctx_box_current => 'Current';
+  String get popup_ctx_box_next => 'After';
+  String get popup_ctx_box_empty => '(none)';
+  String get popup_ctx_prev_minus => 'Remove before';
+  String get popup_ctx_prev_plus => 'Add before';
+  String get popup_ctx_next_minus => 'Remove after';
+  String get popup_ctx_next_plus => 'Add after';
+  String get popup_ctx_confirm => 'Confirm';
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -8053,6 +8067,34 @@ class _StringsAr extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -13254,6 +13296,34 @@ class _StringsDe extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -18472,6 +18542,34 @@ class _StringsEs extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -23709,6 +23807,34 @@ class _StringsFr extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -28848,6 +28974,34 @@ class _StringsId extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -34048,6 +34202,34 @@ class _StringsIt extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -38974,6 +39156,34 @@ class _StringsJa extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -43904,6 +44114,34 @@ class _StringsKo extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -49072,6 +49310,34 @@ class _StringsNl extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -54263,6 +54529,34 @@ class _StringsPtBr extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -59429,6 +59723,34 @@ class _StringsRu extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -64508,6 +64830,34 @@ class _StringsTh extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -69642,6 +69992,34 @@ class _StringsTr extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -74751,6 +75129,34 @@ class _StringsVi extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -79513,6 +79919,34 @@ class _StringsZhCn extends _StringsEn {
   String get sync_client_connected => '已连接';
   @override
   String get sync_client_token_manual => '手动填写令牌';
+  @override
+  String get popup_ctx_adjust_button => '调整上下文';
+  @override
+  String get popup_ctx_modal_eyebrow => '制卡前调整';
+  @override
+  String get popup_ctx_modal_title => '选择句子上下文';
+  @override
+  String get popup_ctx_modal_count => '已选择 %d 句';
+  @override
+  String get popup_ctx_box_prev => '前文';
+  @override
+  String get popup_ctx_box_current => '当前句';
+  @override
+  String get popup_ctx_box_next => '后文';
+  @override
+  String get popup_ctx_box_empty => '（无）';
+  @override
+  String get popup_ctx_prev_minus => '前退一句';
+  @override
+  String get popup_ctx_prev_plus => '前加一句';
+  @override
+  String get popup_ctx_next_minus => '后退一句';
+  @override
+  String get popup_ctx_next_plus => '后加一句';
+  @override
+  String get popup_ctx_confirm => '确认制卡';
+  @override
+  String get popup_ctx_cancel => '取消';
 }
 
 // Path: retrying_in
@@ -84341,6 +84775,34 @@ class _StringsZhHk extends _StringsEn {
   String get sync_client_connected => 'Connected';
   @override
   String get sync_client_token_manual => 'Enter token manually';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
 }
 
 // Path: retrying_in
@@ -88965,6 +89427,34 @@ extension on _StringsEn {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
@@ -93549,6 +94039,34 @@ extension on _StringsAr {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
@@ -98155,6 +98673,34 @@ extension on _StringsDe {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
@@ -102759,6 +103305,34 @@ extension on _StringsEs {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
@@ -107370,6 +107944,34 @@ extension on _StringsFr {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
@@ -111961,6 +112563,34 @@ extension on _StringsId {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
@@ -116569,6 +117199,34 @@ extension on _StringsIt {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
@@ -121135,6 +121793,34 @@ extension on _StringsJa {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
@@ -125704,6 +126390,34 @@ extension on _StringsKo {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
@@ -130305,6 +131019,34 @@ extension on _StringsNl {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
@@ -134903,6 +135645,34 @@ extension on _StringsPtBr {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
@@ -139505,6 +140275,34 @@ extension on _StringsRu {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
@@ -144089,6 +144887,34 @@ extension on _StringsTh {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
@@ -148682,6 +149508,34 @@ extension on _StringsTr {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
@@ -153269,6 +154123,34 @@ extension on _StringsVi {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
@@ -157822,6 +158704,34 @@ extension on _StringsZhCn {
         return '已连接';
       case 'sync_client_token_manual':
         return '手动填写令牌';
+      case 'popup_ctx_adjust_button':
+        return '调整上下文';
+      case 'popup_ctx_modal_eyebrow':
+        return '制卡前调整';
+      case 'popup_ctx_modal_title':
+        return '选择句子上下文';
+      case 'popup_ctx_modal_count':
+        return '已选择 %d 句';
+      case 'popup_ctx_box_prev':
+        return '前文';
+      case 'popup_ctx_box_current':
+        return '当前句';
+      case 'popup_ctx_box_next':
+        return '后文';
+      case 'popup_ctx_box_empty':
+        return '（无）';
+      case 'popup_ctx_prev_minus':
+        return '前退一句';
+      case 'popup_ctx_prev_plus':
+        return '前加一句';
+      case 'popup_ctx_next_minus':
+        return '后退一句';
+      case 'popup_ctx_next_plus':
+        return '后加一句';
+      case 'popup_ctx_confirm':
+        return '确认制卡';
+      case 'popup_ctx_cancel':
+        return '取消';
       default:
         return null;
     }
@@ -162380,6 +163290,34 @@ extension on _StringsZhHk {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
       default:
         return null;
     }
