@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38352 (2256 per locale)
+/// Strings: 38437 (2261 per locale)
 ///
-/// Built on 2026-07-11 at 13:26 UTC
+/// Built on 2026-07-11 at 14:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2989,6 +2989,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   String get collection_view_all => 'View all';
+  String get collection_merged_hint => 'Merged into collection';
+  String get collection_remove_member => 'Remove from collection';
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  String get collection_member_removed => 'Removed from collection';
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -8094,6 +8100,17 @@ class _StringsAr extends _StringsEn {
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   @override
   String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -13322,6 +13339,17 @@ class _StringsDe extends _StringsEn {
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   @override
   String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -18567,6 +18595,17 @@ class _StringsEs extends _StringsEn {
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   @override
   String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -23831,6 +23870,17 @@ class _StringsFr extends _StringsEn {
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   @override
   String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -28997,6 +29047,17 @@ class _StringsId extends _StringsEn {
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   @override
   String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -34224,6 +34285,17 @@ class _StringsIt extends _StringsEn {
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   @override
   String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -39177,6 +39249,17 @@ class _StringsJa extends _StringsEn {
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   @override
   String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -44134,6 +44217,17 @@ class _StringsKo extends _StringsEn {
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   @override
   String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -49329,6 +49423,17 @@ class _StringsNl extends _StringsEn {
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   @override
   String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -54547,6 +54652,17 @@ class _StringsPtBr extends _StringsEn {
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   @override
   String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -59740,6 +59856,17 @@ class _StringsRu extends _StringsEn {
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   @override
   String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -64846,6 +64973,17 @@ class _StringsTh extends _StringsEn {
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   @override
   String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -70007,6 +70145,17 @@ class _StringsTr extends _StringsEn {
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   @override
   String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -75143,6 +75292,17 @@ class _StringsVi extends _StringsEn {
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   @override
   String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -79931,6 +80091,16 @@ class _StringsZhCn extends _StringsEn {
   String video_last_watched({required Object date}) => '上次观看 ${date}';
   @override
   String get collection_view_all => '查看全部';
+  @override
+  String get collection_merged_hint => '已合并进合集';
+  @override
+  String get collection_remove_member => '移出合集';
+  @override
+  String get collection_remove_member_confirm => '将该条目移出合集？条目本身保留。';
+  @override
+  String get collection_member_removed => '已移出合集';
+  @override
+  String get collection_default_name => '新合集';
 }
 
 // Path: retrying_in
@@ -84786,6 +84956,17 @@ class _StringsZhHk extends _StringsEn {
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   @override
   String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
 }
 
 // Path: retrying_in
@@ -89436,6 +89617,16 @@ extension on _StringsEn {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
@@ -94046,6 +94237,16 @@ extension on _StringsAr {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
@@ -98678,6 +98879,16 @@ extension on _StringsDe {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
@@ -103308,6 +103519,16 @@ extension on _StringsEs {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
@@ -107945,6 +108166,16 @@ extension on _StringsFr {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
@@ -112562,6 +112793,16 @@ extension on _StringsId {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
@@ -117196,6 +117437,16 @@ extension on _StringsIt {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
@@ -121788,6 +122039,16 @@ extension on _StringsJa {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
@@ -126383,6 +126644,16 @@ extension on _StringsKo {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
@@ -131010,6 +131281,16 @@ extension on _StringsNl {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
@@ -135634,6 +135915,16 @@ extension on _StringsPtBr {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
@@ -140262,6 +140553,16 @@ extension on _StringsRu {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
@@ -144872,6 +145173,16 @@ extension on _StringsTh {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
@@ -149491,6 +149802,16 @@ extension on _StringsTr {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
@@ -154104,6 +154425,16 @@ extension on _StringsVi {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
@@ -158683,6 +159014,16 @@ extension on _StringsZhCn {
         return ({required Object date}) => '上次观看 ${date}';
       case 'collection_view_all':
         return '查看全部';
+      case 'collection_merged_hint':
+        return '已合并进合集';
+      case 'collection_remove_member':
+        return '移出合集';
+      case 'collection_remove_member_confirm':
+        return '将该条目移出合集？条目本身保留。';
+      case 'collection_member_removed':
+        return '已移出合集';
+      case 'collection_default_name':
+        return '新合集';
       default:
         return null;
     }
@@ -163267,6 +163608,16 @@ extension on _StringsZhHk {
         return ({required Object date}) => 'Last watched ${date}';
       case 'collection_view_all':
         return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
       default:
         return null;
     }
