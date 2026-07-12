@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38760 (2280 per locale)
+/// Strings: 38726 (2278 per locale)
 ///
-/// Built on 2026-07-12 at 05:02 UTC
+/// Built on 2026-07-12 at 05:57 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2135,8 +2135,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_seek_seconds => 'Seek seconds';
   String get section_video_danmaku => 'Danmaku';
   String get video_setting_danmaku_server_url => 'Danmaku server URL';
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
   String card_overwritten({required Object deck}) =>
       'Card overwritten in 『${deck}』.';
   String get video_bottom_seek_back_label => '−10s';
@@ -6616,10 +6614,6 @@ class _StringsAr extends _StringsEn {
   String get section_video_danmaku => 'Danmaku';
   @override
   String get video_setting_danmaku_server_url => 'عنوان خادم Danmaku';
-  @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
   @override
   String card_overwritten({required Object deck}) =>
       'تمت الكتابة فوق البطاقة في『${deck}』.';
@@ -11878,10 +11872,6 @@ class _StringsDe extends _StringsEn {
   String get section_video_danmaku => 'Danmaku';
   @override
   String get video_setting_danmaku_server_url => 'Danmaku-Server-URL';
-  @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
   @override
   String card_overwritten({required Object deck}) =>
       'Karte in 『${deck}』 überschrieben.';
@@ -17173,10 +17163,6 @@ class _StringsEs extends _StringsEn {
   String get section_video_danmaku => 'Danmaku';
   @override
   String get video_setting_danmaku_server_url => 'URL del servidor de danmaku';
-  @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
   @override
   String card_overwritten({required Object deck}) =>
       'Tarjeta sobrescrita en 『${deck}』.';
@@ -22487,10 +22473,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL du serveur danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Carte remplacée dans « ${deck} ».';
   @override
@@ -27704,10 +27686,6 @@ class _StringsId extends _StringsEn {
   String get section_video_danmaku => 'Danmaku';
   @override
   String get video_setting_danmaku_server_url => 'URL server danmaku';
-  @override
-  String get video_setting_danmaku_app_id => 'AppId Dandanplay';
-  @override
-  String get video_setting_danmaku_app_secret => 'AppSecret Dandanplay';
   @override
   String card_overwritten({required Object deck}) =>
       'Kartu ditimpa di 『${deck}』.';
@@ -32978,10 +32956,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL del server danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Carta sovrascritta in『${deck}』.';
   @override
@@ -38016,10 +37990,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => '弾幕サーバーの URL';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) => '『${deck}』のカードを上書きしました。';
   @override
   String get video_bottom_seek_back_label => '−10s';
@@ -43023,10 +42993,6 @@ class _StringsKo extends _StringsEn {
   String get section_video_danmaku => '탄막';
   @override
   String get video_setting_danmaku_server_url => '탄막 서버 주소';
-  @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
   @override
   String card_overwritten({required Object deck}) => '『${deck}』에 카드를 덮어썼습니다.';
   @override
@@ -48234,10 +48200,6 @@ class _StringsNl extends _StringsEn {
   String get section_video_danmaku => 'Danmaku';
   @override
   String get video_setting_danmaku_server_url => 'URL danmaku-server';
-  @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
   @override
   String card_overwritten({required Object deck}) =>
       'Kaart overschreven in 『${deck}』.';
@@ -53499,10 +53461,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL do servidor de danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Cartão sobrescrito em 『${deck}』.';
   @override
@@ -58738,10 +58696,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'Адрес сервера данмаку';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Карточка перезаписана в «${deck}».';
   @override
@@ -63904,10 +63858,6 @@ class _StringsTh extends _StringsEn {
   String get section_video_danmaku => 'ดันมากุ';
   @override
   String get video_setting_danmaku_server_url => 'URL เซิร์ฟเวอร์ดันมากุ';
-  @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
   @override
   String card_overwritten({required Object deck}) =>
       'เขียนทับการ์ดใน『${deck}』แล้ว';
@@ -69111,10 +69061,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'Danmaku sunucu URL\'si';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Kart 『${deck}』 destesinde üzerine yazıldı.';
   @override
@@ -74298,10 +74244,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'Địa chỉ máy chủ danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Đã ghi đè thẻ trong 『${deck}』.';
   @override
@@ -79246,10 +79188,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => '弹幕服务器地址';
   @override
-  String get video_setting_danmaku_app_id => '弹弹play AppId';
-  @override
-  String get video_setting_danmaku_app_secret => '弹弹play AppSecret';
-  @override
   String card_overwritten({required Object deck}) => '卡片已覆盖到『${deck}』。';
   @override
   String get video_bottom_seek_back_label => '−10s';
@@ -84084,10 +84022,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => '彈幕伺服器網址';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) => '卡片已覆寫至『${deck}』。';
   @override
   String get video_bottom_seek_back_label => '−10s';
@@ -88914,10 +88848,6 @@ extension on _StringsEn {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Danmaku server URL';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Card overwritten in 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -93570,10 +93500,6 @@ extension on _StringsAr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'عنوان خادم Danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) =>
             'تمت الكتابة فوق البطاقة في『${deck}』.';
@@ -98249,10 +98175,6 @@ extension on _StringsDe {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Danmaku-Server-URL';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Karte in 『${deck}』 überschrieben.';
       case 'video_bottom_seek_back_label':
@@ -102926,10 +102848,6 @@ extension on _StringsEs {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL del servidor de danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Tarjeta sobrescrita en 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -107608,10 +107526,6 @@ extension on _StringsFr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL du serveur danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Carte remplacée dans « ${deck} ».';
       case 'video_bottom_seek_back_label':
@@ -112278,10 +112192,6 @@ extension on _StringsId {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL server danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'AppId Dandanplay';
-      case 'video_setting_danmaku_app_secret':
-        return 'AppSecret Dandanplay';
       case 'card_overwritten':
         return ({required Object deck}) => 'Kartu ditimpa di 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -116954,10 +116864,6 @@ extension on _StringsIt {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL del server danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Carta sovrascritta in『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -121603,10 +121509,6 @@ extension on _StringsJa {
         return '弾幕';
       case 'video_setting_danmaku_server_url':
         return '弾幕サーバーの URL';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '『${deck}』のカードを上書きしました。';
       case 'video_bottom_seek_back_label':
@@ -126246,10 +126148,6 @@ extension on _StringsKo {
         return '탄막';
       case 'video_setting_danmaku_server_url':
         return '탄막 서버 주소';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '『${deck}』에 카드를 덮어썼습니다.';
       case 'video_bottom_seek_back_label':
@@ -130915,10 +130813,6 @@ extension on _StringsNl {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL danmaku-server';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Kaart overschreven in 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -135589,10 +135483,6 @@ extension on _StringsPtBr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL do servidor de danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Cartão sobrescrito em 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -140263,10 +140153,6 @@ extension on _StringsRu {
         return 'Данмаку';
       case 'video_setting_danmaku_server_url':
         return 'Адрес сервера данмаку';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Карточка перезаписана в «${deck}».';
       case 'video_bottom_seek_back_label':
@@ -144924,10 +144810,6 @@ extension on _StringsTh {
         return 'ดันมากุ';
       case 'video_setting_danmaku_server_url':
         return 'URL เซิร์ฟเวอร์ดันมากุ';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'เขียนทับการ์ดใน『${deck}』แล้ว';
       case 'video_bottom_seek_back_label':
@@ -149587,10 +149469,6 @@ extension on _StringsTr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Danmaku sunucu URL\'si';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) =>
             'Kart 『${deck}』 destesinde üzerine yazıldı.';
@@ -154251,10 +154129,6 @@ extension on _StringsVi {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Địa chỉ máy chủ danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Đã ghi đè thẻ trong 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -158889,10 +158763,6 @@ extension on _StringsZhCn {
         return '弹幕';
       case 'video_setting_danmaku_server_url':
         return '弹幕服务器地址';
-      case 'video_setting_danmaku_app_id':
-        return '弹弹play AppId';
-      case 'video_setting_danmaku_app_secret':
-        return '弹弹play AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '卡片已覆盖到『${deck}』。';
       case 'video_bottom_seek_back_label':
@@ -163517,10 +163387,6 @@ extension on _StringsZhHk {
         return '彈幕';
       case 'video_setting_danmaku_server_url':
         return '彈幕伺服器網址';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '卡片已覆寫至『${deck}』。';
       case 'video_bottom_seek_back_label':
