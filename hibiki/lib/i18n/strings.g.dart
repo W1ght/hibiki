@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38726 (2278 per locale)
+/// Strings: 38811 (2283 per locale)
 ///
-/// Built on 2026-07-12 at 05:57 UTC
+/// Built on 2026-07-12 at 10:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3012,6 +3012,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_default_name => 'New collection';
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -8162,6 +8171,20 @@ class _StringsAr extends _StringsEn {
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   @override
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -13435,6 +13458,20 @@ class _StringsDe extends _StringsEn {
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   @override
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -18725,6 +18762,20 @@ class _StringsEs extends _StringsEn {
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   @override
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -24034,6 +24085,20 @@ class _StringsFr extends _StringsEn {
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   @override
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -29245,6 +29310,20 @@ class _StringsId extends _StringsEn {
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   @override
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -34517,6 +34596,20 @@ class _StringsIt extends _StringsEn {
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   @override
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -39515,6 +39608,20 @@ class _StringsJa extends _StringsEn {
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   @override
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -44517,6 +44624,20 @@ class _StringsKo extends _StringsEn {
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   @override
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -49757,6 +49878,20 @@ class _StringsNl extends _StringsEn {
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   @override
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -55020,6 +55155,20 @@ class _StringsPtBr extends _StringsEn {
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   @override
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -60258,6 +60407,20 @@ class _StringsRu extends _StringsEn {
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   @override
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -65409,6 +65572,20 @@ class _StringsTh extends _StringsEn {
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   @override
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -70615,6 +70792,20 @@ class _StringsTr extends _StringsEn {
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   @override
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -75796,6 +75987,20 @@ class _StringsVi extends _StringsEn {
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   @override
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -80627,6 +80832,16 @@ class _StringsZhCn extends _StringsEn {
   String get backup_import_contents_hint => '取消勾选某项即可跳过它。';
   @override
   String get clipboard_panel_window_title => 'Hibiki 剪贴板查词';
+  @override
+  String get video_render_skia_fix_confirm_title => '切换到 Skia 并重启？';
+  @override
+  String get video_render_skia_fix_confirm_body => '将关闭 Impeller 渲染器并重启应用使其生效。';
+  @override
+  String get video_render_skia_fix_confirm_action => '重启';
+  @override
+  String get video_render_skia_fix_title => '画面全黑？切换渲染器（Skia）';
+  @override
+  String get video_render_skia_fix_hint => '有声音但画面全黑时用。关闭 Impeller，重启后生效。';
 }
 
 // Path: retrying_in
@@ -85527,6 +85742,20 @@ class _StringsZhHk extends _StringsEn {
   String get backup_import_contents_hint => 'Untick an item to skip it.';
   @override
   String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
 }
 
 // Path: retrying_in
@@ -90221,6 +90450,16 @@ extension on _StringsEn {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
@@ -94875,6 +95114,16 @@ extension on _StringsAr {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
@@ -99551,6 +99800,16 @@ extension on _StringsDe {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
@@ -104225,6 +104484,16 @@ extension on _StringsEs {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
@@ -108906,6 +109175,16 @@ extension on _StringsFr {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
@@ -113567,6 +113846,16 @@ extension on _StringsId {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
@@ -118245,6 +118534,16 @@ extension on _StringsIt {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
@@ -122881,6 +123180,16 @@ extension on _StringsJa {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
@@ -127520,6 +127829,16 @@ extension on _StringsKo {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
@@ -132191,6 +132510,16 @@ extension on _StringsNl {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
@@ -136859,6 +137188,16 @@ extension on _StringsPtBr {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
@@ -141531,6 +141870,16 @@ extension on _StringsRu {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
@@ -146185,6 +146534,16 @@ extension on _StringsTh {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
@@ -150848,6 +151207,16 @@ extension on _StringsTr {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
@@ -155505,6 +155874,16 @@ extension on _StringsVi {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
@@ -160128,6 +160507,16 @@ extension on _StringsZhCn {
         return '取消勾选某项即可跳过它。';
       case 'clipboard_panel_window_title':
         return 'Hibiki 剪贴板查词';
+      case 'video_render_skia_fix_confirm_title':
+        return '切换到 Skia 并重启？';
+      case 'video_render_skia_fix_confirm_body':
+        return '将关闭 Impeller 渲染器并重启应用使其生效。';
+      case 'video_render_skia_fix_confirm_action':
+        return '重启';
+      case 'video_render_skia_fix_title':
+        return '画面全黑？切换渲染器（Skia）';
+      case 'video_render_skia_fix_hint':
+        return '有声音但画面全黑时用。关闭 Impeller，重启后生效。';
       default:
         return null;
     }
@@ -164756,6 +165145,16 @@ extension on _StringsZhHk {
         return 'Untick an item to skip it.';
       case 'clipboard_panel_window_title':
         return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       default:
         return null;
     }
