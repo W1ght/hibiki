@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38743 (2279 per locale)
+/// Strings: 38760 (2280 per locale)
 ///
-/// Built on 2026-07-12 at 04:08 UTC
+/// Built on 2026-07-12 at 05:02 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3013,6 +3013,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_member_removed => 'Removed from collection';
   String get collection_default_name => 'New collection';
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -8165,6 +8166,8 @@ class _StringsAr extends _StringsEn {
   String get collection_default_name => 'New collection';
   @override
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -13440,6 +13443,8 @@ class _StringsDe extends _StringsEn {
   String get collection_default_name => 'New collection';
   @override
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -18732,6 +18737,8 @@ class _StringsEs extends _StringsEn {
   String get collection_default_name => 'New collection';
   @override
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -24043,6 +24050,8 @@ class _StringsFr extends _StringsEn {
   String get collection_default_name => 'New collection';
   @override
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -29256,6 +29265,8 @@ class _StringsId extends _StringsEn {
   String get collection_default_name => 'New collection';
   @override
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -34530,6 +34541,8 @@ class _StringsIt extends _StringsEn {
   String get collection_default_name => 'New collection';
   @override
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -39530,6 +39543,8 @@ class _StringsJa extends _StringsEn {
   String get collection_default_name => 'New collection';
   @override
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -44534,6 +44549,8 @@ class _StringsKo extends _StringsEn {
   String get collection_default_name => 'New collection';
   @override
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -49776,6 +49793,8 @@ class _StringsNl extends _StringsEn {
   String get collection_default_name => 'New collection';
   @override
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -55041,6 +55060,8 @@ class _StringsPtBr extends _StringsEn {
   String get collection_default_name => 'New collection';
   @override
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -60281,6 +60302,8 @@ class _StringsRu extends _StringsEn {
   String get collection_default_name => 'New collection';
   @override
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -65434,6 +65457,8 @@ class _StringsTh extends _StringsEn {
   String get collection_default_name => 'New collection';
   @override
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -70642,6 +70667,8 @@ class _StringsTr extends _StringsEn {
   String get collection_default_name => 'New collection';
   @override
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -75825,6 +75852,8 @@ class _StringsVi extends _StringsEn {
   String get collection_default_name => 'New collection';
   @override
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -80658,6 +80687,8 @@ class _StringsZhCn extends _StringsEn {
   String get collection_default_name => '新合集';
   @override
   String get backup_import_contents_hint => '取消勾选某项即可跳过它。';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki 剪贴板查词';
 }
 
 // Path: retrying_in
@@ -85560,6 +85591,8 @@ class _StringsZhHk extends _StringsEn {
   String get collection_default_name => 'New collection';
   @override
   String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
 }
 
 // Path: retrying_in
@@ -90256,6 +90289,8 @@ extension on _StringsEn {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
@@ -94912,6 +94947,8 @@ extension on _StringsAr {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
@@ -99590,6 +99627,8 @@ extension on _StringsDe {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
@@ -104266,6 +104305,8 @@ extension on _StringsEs {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
@@ -108949,6 +108990,8 @@ extension on _StringsFr {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
@@ -113612,6 +113655,8 @@ extension on _StringsId {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
@@ -118292,6 +118337,8 @@ extension on _StringsIt {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
@@ -122930,6 +122977,8 @@ extension on _StringsJa {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
@@ -127571,6 +127620,8 @@ extension on _StringsKo {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
@@ -132244,6 +132295,8 @@ extension on _StringsNl {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
@@ -136914,6 +136967,8 @@ extension on _StringsPtBr {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
@@ -141588,6 +141643,8 @@ extension on _StringsRu {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
@@ -146244,6 +146301,8 @@ extension on _StringsTh {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
@@ -150909,6 +150968,8 @@ extension on _StringsTr {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
@@ -155568,6 +155629,8 @@ extension on _StringsVi {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
@@ -160193,6 +160256,8 @@ extension on _StringsZhCn {
         return '新合集';
       case 'backup_import_contents_hint':
         return '取消勾选某项即可跳过它。';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki 剪贴板查词';
       default:
         return null;
     }
@@ -164823,6 +164888,8 @@ extension on _StringsZhHk {
         return 'New collection';
       case 'backup_import_contents_hint':
         return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
       default:
         return null;
     }
