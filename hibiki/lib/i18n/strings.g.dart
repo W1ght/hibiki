@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38624 (2272 per locale)
+/// Strings: 38658 (2274 per locale)
 ///
-/// Built on 2026-07-12 at 07:53 UTC
+/// Built on 2026-07-12 at 13:02 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3006,6 +3006,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sort_imported => 'Import date';
   String get collection_sort_by_title => 'Sort by name';
   String get collection_sort_by_imported => 'Sort by import date';
+  String get collection_collapse => 'Collapse';
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -8144,6 +8146,10 @@ class _StringsAr extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -13405,6 +13411,10 @@ class _StringsDe extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -18683,6 +18693,10 @@ class _StringsEs extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -23980,6 +23994,10 @@ class _StringsFr extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -29179,6 +29197,10 @@ class _StringsId extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -34439,6 +34461,10 @@ class _StringsIt extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -39425,6 +39451,10 @@ class _StringsJa extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -44415,6 +44445,10 @@ class _StringsKo extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -49643,6 +49677,10 @@ class _StringsNl extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -54894,6 +54932,10 @@ class _StringsPtBr extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -60120,6 +60162,10 @@ class _StringsRu extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -65259,6 +65305,10 @@ class _StringsTh extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -70453,6 +70503,10 @@ class _StringsTr extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -75622,6 +75676,10 @@ class _StringsVi extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -80442,6 +80500,10 @@ class _StringsZhCn extends _StringsEn {
   String get collection_sort_by_title => '按名称排序';
   @override
   String get collection_sort_by_imported => '按导入时间排序';
+  @override
+  String get collection_collapse => '折叠';
+  @override
+  String get collection_expand => '展开';
 }
 
 // Path: retrying_in
@@ -85330,6 +85392,10 @@ class _StringsZhHk extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
 }
 
 // Path: retrying_in
@@ -90012,6 +90078,10 @@ extension on _StringsEn {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -94654,6 +94724,10 @@ extension on _StringsAr {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -99318,6 +99392,10 @@ extension on _StringsDe {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -103980,6 +104058,10 @@ extension on _StringsEs {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -108649,6 +108731,10 @@ extension on _StringsFr {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -113298,6 +113384,10 @@ extension on _StringsId {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -117964,6 +118054,10 @@ extension on _StringsIt {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -122588,6 +122682,10 @@ extension on _StringsJa {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -127215,6 +127313,10 @@ extension on _StringsKo {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -131874,6 +131976,10 @@ extension on _StringsNl {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -136530,6 +136636,10 @@ extension on _StringsPtBr {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -141190,6 +141300,10 @@ extension on _StringsRu {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -145832,6 +145946,10 @@ extension on _StringsTh {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -150483,6 +150601,10 @@ extension on _StringsTr {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -155128,6 +155250,10 @@ extension on _StringsVi {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -159739,6 +159865,10 @@ extension on _StringsZhCn {
         return '按名称排序';
       case 'collection_sort_by_imported':
         return '按导入时间排序';
+      case 'collection_collapse':
+        return '折叠';
+      case 'collection_expand':
+        return '展开';
       default:
         return null;
     }
@@ -164355,6 +164485,10 @@ extension on _StringsZhHk {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
       default:
         return null;
     }
