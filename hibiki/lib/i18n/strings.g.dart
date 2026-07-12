@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38369 (2257 per locale)
+/// Strings: 39066 (2298 per locale)
 ///
-/// Built on 2026-07-11 at 05:39 UTC
+/// Built on 2026-07-12 at 18:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2135,8 +2135,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_seek_seconds => 'Seek seconds';
   String get section_video_danmaku => 'Danmaku';
   String get video_setting_danmaku_server_url => 'Danmaku server URL';
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
   String card_overwritten({required Object deck}) =>
       'Card overwritten in 『${deck}』.';
   String get video_bottom_seek_back_label => '−10s';
@@ -2927,8 +2925,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Reading, video and mining statistics';
   String get backup_category_settings_desc => 'App and reader settings';
   String get backup_category_profiles_desc => 'Configuration profiles';
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   String get popup_font_size_decrease => 'Smaller dictionary text';
   String get popup_font_size_increase => 'Larger dictionary text';
   String get remote_book_cloud => 'Cloud library';
@@ -2975,6 +2971,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Whole-panel opacity — see through to the game or page beneath';
   String get sync_client_connected => 'Connected';
   String get sync_client_token_manual => 'Enter token manually';
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  String get collection_empty => 'Collection is empty';
+  String get collection_play => 'Play';
+  String get rename_collection => 'Rename collection';
+  String get delete_collection => 'Delete collection';
   String get popup_ctx_adjust_button => 'Adjust context';
   String get popup_ctx_modal_eyebrow => 'Before mining';
   String get popup_ctx_modal_title => 'Select sentence context';
@@ -2989,6 +2991,55 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get popup_ctx_next_plus => 'Add after';
   String get popup_ctx_confirm => 'Confirm';
   String get popup_ctx_cancel => 'Cancel';
+  String get backup_export_choose_videos => 'Choose videos';
+  String get backup_export_videos_all => 'All videos';
+  String get backup_export_no_videos => 'No videos to choose from';
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  String get video_continue_watching => 'Continue Watching';
+  String get video_library_overview => 'Library Overview';
+  String get video_stat_total_videos => 'Total';
+  String get video_stat_unfinished => 'Unfinished';
+  String get video_stat_recent_imports => 'New in 7 days';
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  String get collection_view_all => 'View all';
+  String get collection_merged_hint => 'Merged into collection';
+  String get collection_remove_member => 'Remove from collection';
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  String get collection_member_removed => 'Removed from collection';
+  String get collection_default_name => 'New collection';
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  String get book_continue_reading => 'Continue Reading';
+  String get book_library_overview => 'Library Overview';
+  String get shelf_stat_reading => 'Reading';
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  String get sort_by => 'Sort';
+  String get sort_recent_read => 'Recently read';
+  String get sort_recent_watched => 'Recently watched';
+  String get sort_title => 'Name';
+  String get sort_imported => 'Import date';
+  String get collection_sort_by_title => 'Sort by name';
+  String get collection_sort_by_imported => 'Sort by import date';
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -6592,10 +6643,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'عنوان خادم Danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'تمت الكتابة فوق البطاقة في『${deck}』.';
   @override
@@ -7985,9 +8032,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -8068,6 +8112,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_client_token_manual => 'Enter token manually';
   @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
+  @override
   String get popup_ctx_adjust_button => 'Adjust context';
   @override
   String get popup_ctx_modal_eyebrow => 'Before mining';
@@ -8095,6 +8150,94 @@ class _StringsAr extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -11806,10 +11949,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'Danmaku-Server-URL';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Karte in 『${deck}』 überschrieben.';
   @override
@@ -13214,9 +13353,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -13297,6 +13433,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_client_token_manual => 'Enter token manually';
   @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
+  @override
   String get popup_ctx_adjust_button => 'Adjust context';
   @override
   String get popup_ctx_modal_eyebrow => 'Before mining';
@@ -13324,6 +13471,94 @@ class _StringsDe extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -17053,10 +17288,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL del servidor de danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Tarjeta sobrescrita en 『${deck}』.';
   @override
@@ -18460,9 +18691,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -18543,6 +18771,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_client_token_manual => 'Enter token manually';
   @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
+  @override
   String get popup_ctx_adjust_button => 'Adjust context';
   @override
   String get popup_ctx_modal_eyebrow => 'Before mining';
@@ -18570,6 +18809,94 @@ class _StringsEs extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -22318,10 +22645,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL du serveur danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Carte remplacée dans « ${deck} ».';
   @override
@@ -23725,9 +24048,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -23808,6 +24128,17 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_client_token_manual => 'Enter token manually';
   @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
+  @override
   String get popup_ctx_adjust_button => 'Adjust context';
   @override
   String get popup_ctx_modal_eyebrow => 'Before mining';
@@ -23835,6 +24166,94 @@ class _StringsFr extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -27488,10 +27907,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL server danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'AppId Dandanplay';
-  @override
-  String get video_setting_danmaku_app_secret => 'AppSecret Dandanplay';
-  @override
   String card_overwritten({required Object deck}) =>
       'Kartu ditimpa di 『${deck}』.';
   @override
@@ -28892,9 +29307,6 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -28975,6 +29387,17 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_client_token_manual => 'Enter token manually';
   @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
+  @override
   String get popup_ctx_adjust_button => 'Adjust context';
   @override
   String get popup_ctx_modal_eyebrow => 'Before mining';
@@ -29002,6 +29425,94 @@ class _StringsId extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -32713,10 +33224,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL del server danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Carta sovrascritta in『${deck}』.';
   @override
@@ -34120,9 +34627,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -34203,6 +34707,17 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_client_token_manual => 'Enter token manually';
   @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
+  @override
   String get popup_ctx_adjust_button => 'Adjust context';
   @override
   String get popup_ctx_modal_eyebrow => 'Before mining';
@@ -34230,6 +34745,94 @@ class _StringsIt extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -37703,10 +38306,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => '弾幕サーバーの URL';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) => '『${deck}』のカードを上書きしました。';
   @override
   String get video_bottom_seek_back_label => '−10s';
@@ -39074,9 +39673,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -39157,6 +39753,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_client_token_manual => 'Enter token manually';
   @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
+  @override
   String get popup_ctx_adjust_button => 'Adjust context';
   @override
   String get popup_ctx_modal_eyebrow => 'Before mining';
@@ -39184,6 +39791,93 @@ class _StringsJa extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      '${n} 本の動画を削除しますか？この操作は元に戻せません。';
+  @override
+  String batch_delete_success_video({required Object n}) => '${n} 本の動画を削除しました。';
+  @override
+  String batch_tag_added_video({required Object n, required Object name}) =>
+      '${n} 本の動画にタグ「${name}」を追加しました。';
+  @override
+  String batch_tag_removed_video({required Object n, required Object name}) =>
+      '${n} 本の動画からタグ「${name}」を削除しました。';
 }
 
 // Path: retrying_in
@@ -42663,10 +43357,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => '탄막 서버 주소';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) => '『${deck}』에 카드를 덮어썼습니다.';
   @override
   String get video_bottom_seek_back_label => '−10s';
@@ -44032,9 +44722,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -44115,6 +44802,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_client_token_manual => 'Enter token manually';
   @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
+  @override
   String get popup_ctx_adjust_button => 'Adjust context';
   @override
   String get popup_ctx_modal_eyebrow => 'Before mining';
@@ -44142,6 +44840,94 @@ class _StringsKo extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -47826,10 +48612,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL danmaku-server';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Kaart overschreven in 『${deck}』.';
   @override
@@ -49228,9 +50010,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -49311,6 +50090,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_client_token_manual => 'Enter token manually';
   @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
+  @override
   String get popup_ctx_adjust_button => 'Adjust context';
   @override
   String get popup_ctx_modal_eyebrow => 'Before mining';
@@ -49338,6 +50128,94 @@ class _StringsNl extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -53042,10 +53920,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL do servidor de danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Cartão sobrescrito em 『${deck}』.';
   @override
@@ -54447,9 +55321,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -54530,6 +55401,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_client_token_manual => 'Enter token manually';
   @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
+  @override
   String get popup_ctx_adjust_button => 'Adjust context';
   @override
   String get popup_ctx_modal_eyebrow => 'Before mining';
@@ -54557,6 +55439,94 @@ class _StringsPtBr extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -58233,10 +59203,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'Адрес сервера данмаку';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Карточка перезаписана в «${deck}».';
   @override
@@ -59641,9 +60607,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -59724,6 +60687,17 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_client_token_manual => 'Enter token manually';
   @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
+  @override
   String get popup_ctx_adjust_button => 'Adjust context';
   @override
   String get popup_ctx_modal_eyebrow => 'Before mining';
@@ -59751,6 +60725,94 @@ class _StringsRu extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -63352,10 +64414,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL เซิร์ฟเวอร์ดันมากุ';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'เขียนทับการ์ดใน『${deck}』แล้ว';
   @override
@@ -64748,9 +65806,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -64831,6 +65886,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_client_token_manual => 'Enter token manually';
   @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
+  @override
   String get popup_ctx_adjust_button => 'Adjust context';
   @override
   String get popup_ctx_modal_eyebrow => 'Before mining';
@@ -64858,6 +65924,94 @@ class _StringsTh extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -68510,10 +69664,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'Danmaku sunucu URL\'si';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Kart 『${deck}』 destesinde üzerine yazıldı.';
   @override
@@ -69910,9 +71060,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -69993,6 +71140,17 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_client_token_manual => 'Enter token manually';
   @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
+  @override
   String get popup_ctx_adjust_button => 'Adjust context';
   @override
   String get popup_ctx_modal_eyebrow => 'Before mining';
@@ -70020,6 +71178,94 @@ class _StringsTr extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -73649,10 +74895,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'Địa chỉ máy chủ danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Đã ghi đè thẻ trong 『${deck}』.';
   @override
@@ -75047,9 +76289,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -75130,6 +76369,17 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_client_token_manual => 'Enter token manually';
   @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
+  @override
   String get popup_ctx_adjust_button => 'Adjust context';
   @override
   String get popup_ctx_modal_eyebrow => 'Before mining';
@@ -75157,6 +76407,94 @@ class _StringsVi extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -78549,10 +79887,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => '弹幕服务器地址';
   @override
-  String get video_setting_danmaku_app_id => '弹弹play AppId';
-  @override
-  String get video_setting_danmaku_app_secret => '弹弹play AppSecret';
-  @override
   String card_overwritten({required Object deck}) => '卡片已覆盖到『${deck}』。';
   @override
   String get video_bottom_seek_back_label => '−10s';
@@ -79845,9 +81179,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_category_profiles_desc => '配置方案';
   @override
-  String get backup_import_contents_hint =>
-      '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
-  @override
   String get popup_font_size_decrease => '缩小查词字号';
   @override
   String get popup_font_size_increase => '放大查词字号';
@@ -79919,6 +81250,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_client_token_manual => '手动填写令牌';
   @override
+  String get delete_collection_confirm => '删除合集不会删除其中的视频。';
+  @override
+  String get collection_empty => '合集为空';
+  @override
+  String get collection_play => '播放';
+  @override
+  String get rename_collection => '重命名合集';
+  @override
+  String get delete_collection => '删除合集';
+  @override
   String get popup_ctx_adjust_button => '调整上下文';
   @override
   String get popup_ctx_modal_eyebrow => '制卡前调整';
@@ -79946,6 +81287,88 @@ class _StringsZhCn extends _StringsEn {
   String get popup_ctx_confirm => '确认制卡';
   @override
   String get popup_ctx_cancel => '取消';
+  @override
+  String get backup_export_choose_videos => '选择视频';
+  @override
+  String get backup_export_videos_all => '全部视频';
+  @override
+  String get backup_export_no_videos => '没有可选的视频';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '已选 ${count} 个视频';
+  @override
+  String get video_continue_watching => '继续观看';
+  @override
+  String get video_library_overview => '媒体库概览';
+  @override
+  String get video_stat_total_videos => '总数';
+  @override
+  String get video_stat_unfinished => '未完成';
+  @override
+  String get video_stat_recent_imports => '近7天导入';
+  @override
+  String video_watched_up_to({required Object time}) => '已看至 ${time}';
+  @override
+  String video_last_watched({required Object date}) => '上次观看 ${date}';
+  @override
+  String get collection_view_all => '查看全部';
+  @override
+  String get collection_merged_hint => '已合并进合集';
+  @override
+  String get collection_remove_member => '移出合集';
+  @override
+  String get collection_remove_member_confirm => '将该条目移出合集？条目本身保留。';
+  @override
+  String get collection_member_removed => '已移出合集';
+  @override
+  String get collection_default_name => '新合集';
+  @override
+  String get backup_import_contents_hint => '取消勾选某项即可跳过它。';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki 剪贴板查词';
+  @override
+  String get video_render_skia_fix_confirm_title => '切换到 Skia 并重启？';
+  @override
+  String get video_render_skia_fix_confirm_body => '将关闭 Impeller 渲染器并重启应用使其生效。';
+  @override
+  String get video_render_skia_fix_confirm_action => '重启';
+  @override
+  String get video_render_skia_fix_title => '画面全黑？切换渲染器（Skia）';
+  @override
+  String get video_render_skia_fix_hint => '有声音但画面全黑时用。关闭 Impeller，重启后生效。';
+  @override
+  String get book_continue_reading => '继续阅读';
+  @override
+  String get book_library_overview => '书库概览';
+  @override
+  String get shelf_stat_reading => '在读';
+  @override
+  String book_read_progress({required Object percent}) => '已读 ${percent}%';
+  @override
+  String get sort_by => '排序方式';
+  @override
+  String get sort_recent_read => '最近阅读';
+  @override
+  String get sort_recent_watched => '最近观看';
+  @override
+  String get sort_title => '名称';
+  @override
+  String get sort_imported => '导入时间';
+  @override
+  String get collection_sort_by_title => '按名称排序';
+  @override
+  String get collection_sort_by_imported => '按导入时间排序';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      '确定删除 ${n} 个视频？此操作不可撤销。';
+  @override
+  String batch_delete_success_video({required Object n}) => '已删除 ${n} 个视频。';
+  @override
+  String batch_tag_added_video({required Object n, required Object name}) =>
+      '已为 ${n} 个视频添加标签「${name}」。';
+  @override
+  String batch_tag_removed_video({required Object n, required Object name}) =>
+      '已从 ${n} 个视频移除标签「${name}」。';
 }
 
 // Path: retrying_in
@@ -83341,10 +84764,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => '彈幕伺服器網址';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) => '卡片已覆寫至『${deck}』。';
   @override
   String get video_bottom_seek_back_label => '−10s';
@@ -84692,9 +86111,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -84775,6 +86191,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_client_token_manual => 'Enter token manually';
   @override
+  String get delete_collection_confirm =>
+      'Deleting the collection won\'t delete its videos.';
+  @override
+  String get collection_empty => 'Collection is empty';
+  @override
+  String get collection_play => 'Play';
+  @override
+  String get rename_collection => 'Rename collection';
+  @override
+  String get delete_collection => 'Delete collection';
+  @override
   String get popup_ctx_adjust_button => 'Adjust context';
   @override
   String get popup_ctx_modal_eyebrow => 'Before mining';
@@ -84802,6 +86229,93 @@ class _StringsZhHk extends _StringsEn {
   String get popup_ctx_confirm => 'Confirm';
   @override
   String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
+  @override
+  String get video_continue_watching => 'Continue Watching';
+  @override
+  String get video_library_overview => 'Library Overview';
+  @override
+  String get video_stat_total_videos => 'Total';
+  @override
+  String get video_stat_unfinished => 'Unfinished';
+  @override
+  String get video_stat_recent_imports => 'New in 7 days';
+  @override
+  String video_watched_up_to({required Object time}) => 'Watched to ${time}';
+  @override
+  String video_last_watched({required Object date}) => 'Last watched ${date}';
+  @override
+  String get collection_view_all => 'View all';
+  @override
+  String get collection_merged_hint => 'Merged into collection';
+  @override
+  String get collection_remove_member => 'Remove from collection';
+  @override
+  String get collection_remove_member_confirm =>
+      'Remove this item from the collection? The item itself is kept.';
+  @override
+  String get collection_member_removed => 'Removed from collection';
+  @override
+  String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      '確定刪除 ${n} 個影片？此操作不可撤銷。';
+  @override
+  String batch_delete_success_video({required Object n}) => '已刪除 ${n} 個影片。';
+  @override
+  String batch_tag_added_video({required Object n, required Object name}) =>
+      '已為 ${n} 個影片添加標籤「${name}」。';
+  @override
+  String batch_tag_removed_video({required Object n, required Object name}) =>
+      '已從 ${n} 個影片移除標籤「${name}」。';
 }
 
 // Path: retrying_in
@@ -88123,10 +89637,6 @@ extension on _StringsEn {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Danmaku server URL';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Card overwritten in 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -89356,8 +90866,6 @@ extension on _StringsEn {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -89426,6 +90934,16 @@ extension on _StringsEn {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -89454,6 +90972,87 @@ extension on _StringsEn {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -92733,10 +94332,6 @@ extension on _StringsAr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'عنوان خادم Danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) =>
             'تمت الكتابة فوق البطاقة في『${deck}』.';
@@ -93968,8 +95563,6 @@ extension on _StringsAr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -94038,6 +95631,16 @@ extension on _StringsAr {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -94066,6 +95669,87 @@ extension on _StringsAr {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -97366,10 +99050,6 @@ extension on _StringsDe {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Danmaku-Server-URL';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Karte in 『${deck}』 überschrieben.';
       case 'video_bottom_seek_back_label':
@@ -98602,8 +100282,6 @@ extension on _StringsDe {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -98672,6 +100350,16 @@ extension on _StringsDe {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -98700,6 +100388,87 @@ extension on _StringsDe {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -101997,10 +103766,6 @@ extension on _StringsEs {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL del servidor de danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Tarjeta sobrescrita en 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -103234,8 +104999,6 @@ extension on _StringsEs {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -103304,6 +105067,16 @@ extension on _StringsEs {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -103332,6 +105105,87 @@ extension on _StringsEs {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -106633,10 +108487,6 @@ extension on _StringsFr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL du serveur danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Carte remplacée dans « ${deck} ».';
       case 'video_bottom_seek_back_label':
@@ -107873,8 +109723,6 @@ extension on _StringsFr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -107943,6 +109791,16 @@ extension on _StringsFr {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -107971,6 +109829,87 @@ extension on _StringsFr {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -111257,10 +113196,6 @@ extension on _StringsId {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL server danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'AppId Dandanplay';
-      case 'video_setting_danmaku_app_secret':
-        return 'AppSecret Dandanplay';
       case 'card_overwritten':
         return ({required Object deck}) => 'Kartu ditimpa di 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -112492,8 +114427,6 @@ extension on _StringsId {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -112562,6 +114495,16 @@ extension on _StringsId {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -112590,6 +114533,87 @@ extension on _StringsId {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -115887,10 +117911,6 @@ extension on _StringsIt {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL del server danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Carta sovrascritta in『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -117128,8 +119148,6 @@ extension on _StringsIt {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -117198,6 +119216,16 @@ extension on _StringsIt {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -117226,6 +119254,87 @@ extension on _StringsIt {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -120490,10 +122599,6 @@ extension on _StringsJa {
         return '弾幕';
       case 'video_setting_danmaku_server_url':
         return '弾幕サーバーの URL';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '『${deck}』のカードを上書きしました。';
       case 'video_bottom_seek_back_label':
@@ -121722,8 +123827,6 @@ extension on _StringsJa {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -121792,6 +123895,16 @@ extension on _StringsJa {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -121820,6 +123933,86 @@ extension on _StringsJa {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) => '${n} 本の動画を削除しますか？この操作は元に戻せません。';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => '${n} 本の動画を削除しました。';
+      case 'batch_tag_added_video':
+        return ({required Object n, required Object name}) =>
+            '${n} 本の動画にタグ「${name}」を追加しました。';
+      case 'batch_tag_removed_video':
+        return ({required Object n, required Object name}) =>
+            '${n} 本の動画からタグ「${name}」を削除しました。';
       default:
         return null;
     }
@@ -125087,10 +127280,6 @@ extension on _StringsKo {
         return '탄막';
       case 'video_setting_danmaku_server_url':
         return '탄막 서버 주소';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '『${deck}』에 카드를 덮어썼습니다.';
       case 'video_bottom_seek_back_label':
@@ -126319,8 +128508,6 @@ extension on _StringsKo {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -126389,6 +128576,16 @@ extension on _StringsKo {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -126417,6 +128614,87 @@ extension on _StringsKo {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -129710,10 +131988,6 @@ extension on _StringsNl {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL danmaku-server';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Kaart overschreven in 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -130948,8 +133222,6 @@ extension on _StringsNl {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -131018,6 +133290,16 @@ extension on _StringsNl {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -131046,6 +133328,87 @@ extension on _StringsNl {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -134338,10 +136701,6 @@ extension on _StringsPtBr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL do servidor de danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Cartão sobrescrito em 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -135574,8 +137933,6 @@ extension on _StringsPtBr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -135644,6 +138001,16 @@ extension on _StringsPtBr {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -135672,6 +138039,87 @@ extension on _StringsPtBr {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -138966,10 +141414,6 @@ extension on _StringsRu {
         return 'Данмаку';
       case 'video_setting_danmaku_server_url':
         return 'Адрес сервера данмаку';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Карточка перезаписана в «${deck}».';
       case 'video_bottom_seek_back_label':
@@ -140204,8 +142648,6 @@ extension on _StringsRu {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -140274,6 +142716,16 @@ extension on _StringsRu {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -140302,6 +142754,87 @@ extension on _StringsRu {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -143581,10 +146114,6 @@ extension on _StringsTh {
         return 'ดันมากุ';
       case 'video_setting_danmaku_server_url':
         return 'URL เซิร์ฟเวอร์ดันมากุ';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'เขียนทับการ์ดใน『${deck}』แล้ว';
       case 'video_bottom_seek_back_label':
@@ -144816,8 +147345,6 @@ extension on _StringsTh {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -144886,6 +147413,16 @@ extension on _StringsTh {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -144914,6 +147451,87 @@ extension on _StringsTh {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -148198,10 +150816,6 @@ extension on _StringsTr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Danmaku sunucu URL\'si';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) =>
             'Kart 『${deck}』 destesinde üzerine yazıldı.';
@@ -149437,8 +152051,6 @@ extension on _StringsTr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -149507,6 +152119,16 @@ extension on _StringsTr {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -149535,6 +152157,87 @@ extension on _StringsTr {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -152816,10 +155519,6 @@ extension on _StringsVi {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Địa chỉ máy chủ danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Đã ghi đè thẻ trong 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -154052,8 +156751,6 @@ extension on _StringsVi {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -154122,6 +156819,16 @@ extension on _StringsVi {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -154150,6 +156857,87 @@ extension on _StringsVi {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -157408,10 +160196,6 @@ extension on _StringsZhCn {
         return '弹幕';
       case 'video_setting_danmaku_server_url':
         return '弹幕服务器地址';
-      case 'video_setting_danmaku_app_id':
-        return '弹弹play AppId';
-      case 'video_setting_danmaku_app_secret':
-        return '弹弹play AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '卡片已覆盖到『${deck}』。';
       case 'video_bottom_seek_back_label':
@@ -158633,8 +161417,6 @@ extension on _StringsZhCn {
         return '应用与阅读器设置';
       case 'backup_category_profiles_desc':
         return '配置方案';
-      case 'backup_import_contents_hint':
-        return '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
       case 'popup_font_size_decrease':
         return '缩小查词字号';
       case 'popup_font_size_increase':
@@ -158703,6 +161485,16 @@ extension on _StringsZhCn {
         return '已连接';
       case 'sync_client_token_manual':
         return '手动填写令牌';
+      case 'delete_collection_confirm':
+        return '删除合集不会删除其中的视频。';
+      case 'collection_empty':
+        return '合集为空';
+      case 'collection_play':
+        return '播放';
+      case 'rename_collection':
+        return '重命名合集';
+      case 'delete_collection':
+        return '删除合集';
       case 'popup_ctx_adjust_button':
         return '调整上下文';
       case 'popup_ctx_modal_eyebrow':
@@ -158731,6 +161523,86 @@ extension on _StringsZhCn {
         return '确认制卡';
       case 'popup_ctx_cancel':
         return '取消';
+      case 'backup_export_choose_videos':
+        return '选择视频';
+      case 'backup_export_videos_all':
+        return '全部视频';
+      case 'backup_export_no_videos':
+        return '没有可选的视频';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '已选 ${count} 个视频';
+      case 'video_continue_watching':
+        return '继续观看';
+      case 'video_library_overview':
+        return '媒体库概览';
+      case 'video_stat_total_videos':
+        return '总数';
+      case 'video_stat_unfinished':
+        return '未完成';
+      case 'video_stat_recent_imports':
+        return '近7天导入';
+      case 'video_watched_up_to':
+        return ({required Object time}) => '已看至 ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => '上次观看 ${date}';
+      case 'collection_view_all':
+        return '查看全部';
+      case 'collection_merged_hint':
+        return '已合并进合集';
+      case 'collection_remove_member':
+        return '移出合集';
+      case 'collection_remove_member_confirm':
+        return '将该条目移出合集？条目本身保留。';
+      case 'collection_member_removed':
+        return '已移出合集';
+      case 'collection_default_name':
+        return '新合集';
+      case 'backup_import_contents_hint':
+        return '取消勾选某项即可跳过它。';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki 剪贴板查词';
+      case 'video_render_skia_fix_confirm_title':
+        return '切换到 Skia 并重启？';
+      case 'video_render_skia_fix_confirm_body':
+        return '将关闭 Impeller 渲染器并重启应用使其生效。';
+      case 'video_render_skia_fix_confirm_action':
+        return '重启';
+      case 'video_render_skia_fix_title':
+        return '画面全黑？切换渲染器（Skia）';
+      case 'video_render_skia_fix_hint':
+        return '有声音但画面全黑时用。关闭 Impeller，重启后生效。';
+      case 'book_continue_reading':
+        return '继续阅读';
+      case 'book_library_overview':
+        return '书库概览';
+      case 'shelf_stat_reading':
+        return '在读';
+      case 'book_read_progress':
+        return ({required Object percent}) => '已读 ${percent}%';
+      case 'sort_by':
+        return '排序方式';
+      case 'sort_recent_read':
+        return '最近阅读';
+      case 'sort_recent_watched':
+        return '最近观看';
+      case 'sort_title':
+        return '名称';
+      case 'sort_imported':
+        return '导入时间';
+      case 'collection_sort_by_title':
+        return '按名称排序';
+      case 'collection_sort_by_imported':
+        return '按导入时间排序';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) => '确定删除 ${n} 个视频？此操作不可撤销。';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => '已删除 ${n} 个视频。';
+      case 'batch_tag_added_video':
+        return ({required Object n, required Object name}) =>
+            '已为 ${n} 个视频添加标签「${name}」。';
+      case 'batch_tag_removed_video':
+        return ({required Object n, required Object name}) =>
+            '已从 ${n} 个视频移除标签「${name}」。';
       default:
         return null;
     }
@@ -161990,10 +164862,6 @@ extension on _StringsZhHk {
         return '彈幕';
       case 'video_setting_danmaku_server_url':
         return '彈幕伺服器網址';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '卡片已覆寫至『${deck}』。';
       case 'video_bottom_seek_back_label':
@@ -163219,8 +166087,6 @@ extension on _StringsZhHk {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -163289,6 +166155,16 @@ extension on _StringsZhHk {
         return 'Connected';
       case 'sync_client_token_manual':
         return 'Enter token manually';
+      case 'delete_collection_confirm':
+        return 'Deleting the collection won\'t delete its videos.';
+      case 'collection_empty':
+        return 'Collection is empty';
+      case 'collection_play':
+        return 'Play';
+      case 'rename_collection':
+        return 'Rename collection';
+      case 'delete_collection':
+        return 'Delete collection';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
@@ -163317,6 +166193,86 @@ extension on _StringsZhHk {
         return 'Confirm';
       case 'popup_ctx_cancel':
         return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
+      case 'video_continue_watching':
+        return 'Continue Watching';
+      case 'video_library_overview':
+        return 'Library Overview';
+      case 'video_stat_total_videos':
+        return 'Total';
+      case 'video_stat_unfinished':
+        return 'Unfinished';
+      case 'video_stat_recent_imports':
+        return 'New in 7 days';
+      case 'video_watched_up_to':
+        return ({required Object time}) => 'Watched to ${time}';
+      case 'video_last_watched':
+        return ({required Object date}) => 'Last watched ${date}';
+      case 'collection_view_all':
+        return 'View all';
+      case 'collection_merged_hint':
+        return 'Merged into collection';
+      case 'collection_remove_member':
+        return 'Remove from collection';
+      case 'collection_remove_member_confirm':
+        return 'Remove this item from the collection? The item itself is kept.';
+      case 'collection_member_removed':
+        return 'Removed from collection';
+      case 'collection_default_name':
+        return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) => '確定刪除 ${n} 個影片？此操作不可撤銷。';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => '已刪除 ${n} 個影片。';
+      case 'batch_tag_added_video':
+        return ({required Object n, required Object name}) =>
+            '已為 ${n} 個影片添加標籤「${name}」。';
+      case 'batch_tag_removed_video':
+        return ({required Object n, required Object name}) =>
+            '已從 ${n} 個影片移除標籤「${name}」。';
       default:
         return null;
     }
