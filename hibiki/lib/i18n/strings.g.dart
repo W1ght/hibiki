@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38658 (2274 per locale)
+/// Strings: 38709 (2277 per locale)
 ///
-/// Built on 2026-07-12 at 13:02 UTC
+/// Built on 2026-07-12 at 15:57 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3008,6 +3008,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_sort_by_imported => 'Sort by import date';
   String get collection_collapse => 'Collapse';
   String get collection_expand => 'Expand';
+  String get sync_video_files_warning => 'Video files can be very large.';
+  String get sync_progress_videos => 'Syncing videos';
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -8150,6 +8153,12 @@ class _StringsAr extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -13415,6 +13424,12 @@ class _StringsDe extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -18697,6 +18712,12 @@ class _StringsEs extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -23998,6 +24019,12 @@ class _StringsFr extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -29201,6 +29228,12 @@ class _StringsId extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -34465,6 +34498,12 @@ class _StringsIt extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -39455,6 +39494,12 @@ class _StringsJa extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -44449,6 +44494,12 @@ class _StringsKo extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -49681,6 +49732,12 @@ class _StringsNl extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -54936,6 +54993,12 @@ class _StringsPtBr extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -60166,6 +60229,12 @@ class _StringsRu extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -65309,6 +65378,12 @@ class _StringsTh extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -70507,6 +70582,12 @@ class _StringsTr extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -75680,6 +75761,12 @@ class _StringsVi extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -80504,6 +80591,12 @@ class _StringsZhCn extends _StringsEn {
   String get collection_collapse => '折叠';
   @override
   String get collection_expand => '展开';
+  @override
+  String get sync_video_files_warning => '视频文件可能非常大。';
+  @override
+  String get sync_progress_videos => '同步视频';
+  @override
+  String get sync_video_files => '上传视频文件';
 }
 
 // Path: retrying_in
@@ -85396,6 +85489,12 @@ class _StringsZhHk extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
 }
 
 // Path: retrying_in
@@ -90082,6 +90181,12 @@ extension on _StringsEn {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
@@ -94728,6 +94833,12 @@ extension on _StringsAr {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
@@ -99396,6 +99507,12 @@ extension on _StringsDe {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
@@ -104062,6 +104179,12 @@ extension on _StringsEs {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
@@ -108735,6 +108858,12 @@ extension on _StringsFr {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
@@ -113388,6 +113517,12 @@ extension on _StringsId {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
@@ -118058,6 +118193,12 @@ extension on _StringsIt {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
@@ -122686,6 +122827,12 @@ extension on _StringsJa {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
@@ -127317,6 +127464,12 @@ extension on _StringsKo {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
@@ -131980,6 +132133,12 @@ extension on _StringsNl {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
@@ -136640,6 +136799,12 @@ extension on _StringsPtBr {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
@@ -141304,6 +141469,12 @@ extension on _StringsRu {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
@@ -145950,6 +146121,12 @@ extension on _StringsTh {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
@@ -150605,6 +150782,12 @@ extension on _StringsTr {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
@@ -155254,6 +155437,12 @@ extension on _StringsVi {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
@@ -159869,6 +160058,12 @@ extension on _StringsZhCn {
         return '折叠';
       case 'collection_expand':
         return '展开';
+      case 'sync_video_files_warning':
+        return '视频文件可能非常大。';
+      case 'sync_progress_videos':
+        return '同步视频';
+      case 'sync_video_files':
+        return '上传视频文件';
       default:
         return null;
     }
@@ -164489,6 +164684,12 @@ extension on _StringsZhHk {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
       default:
         return null;
     }
