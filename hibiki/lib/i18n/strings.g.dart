@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38505 (2265 per locale)
+/// Strings: 38624 (2272 per locale)
 ///
-/// Built on 2026-07-12 at 06:43 UTC
+/// Built on 2026-07-12 at 07:53 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2999,6 +2999,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get book_library_overview => 'Library Overview';
   String get shelf_stat_reading => 'Reading';
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  String get sort_by => 'Sort';
+  String get sort_recent_read => 'Recently read';
+  String get sort_recent_watched => 'Recently watched';
+  String get sort_title => 'Name';
+  String get sort_imported => 'Import date';
+  String get collection_sort_by_title => 'Sort by name';
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -8123,6 +8130,20 @@ class _StringsAr extends _StringsEn {
   String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -13370,6 +13391,20 @@ class _StringsDe extends _StringsEn {
   String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -18634,6 +18669,20 @@ class _StringsEs extends _StringsEn {
   String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -23917,6 +23966,20 @@ class _StringsFr extends _StringsEn {
   String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -29102,6 +29165,20 @@ class _StringsId extends _StringsEn {
   String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -34348,6 +34425,20 @@ class _StringsIt extends _StringsEn {
   String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -39320,6 +39411,20 @@ class _StringsJa extends _StringsEn {
   String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -44296,6 +44401,20 @@ class _StringsKo extends _StringsEn {
   String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -49510,6 +49629,20 @@ class _StringsNl extends _StringsEn {
   String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -54747,6 +54880,20 @@ class _StringsPtBr extends _StringsEn {
   String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -59959,6 +60106,20 @@ class _StringsRu extends _StringsEn {
   String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -65084,6 +65245,20 @@ class _StringsTh extends _StringsEn {
   String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -70264,6 +70439,20 @@ class _StringsTr extends _StringsEn {
   String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -75419,6 +75608,20 @@ class _StringsVi extends _StringsEn {
   String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -80225,6 +80428,20 @@ class _StringsZhCn extends _StringsEn {
   String get shelf_stat_reading => '在读';
   @override
   String book_read_progress({required Object percent}) => '已读 ${percent}%';
+  @override
+  String get sort_by => '排序方式';
+  @override
+  String get sort_recent_read => '最近阅读';
+  @override
+  String get sort_recent_watched => '最近观看';
+  @override
+  String get sort_title => '名称';
+  @override
+  String get sort_imported => '导入时间';
+  @override
+  String get collection_sort_by_title => '按名称排序';
+  @override
+  String get collection_sort_by_imported => '按导入时间排序';
 }
 
 // Path: retrying_in
@@ -85099,6 +85316,20 @@ class _StringsZhHk extends _StringsEn {
   String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
+  @override
+  String get sort_by => 'Sort';
+  @override
+  String get sort_recent_read => 'Recently read';
+  @override
+  String get sort_recent_watched => 'Recently watched';
+  @override
+  String get sort_title => 'Name';
+  @override
+  String get sort_imported => 'Import date';
+  @override
+  String get collection_sort_by_title => 'Sort by name';
+  @override
+  String get collection_sort_by_imported => 'Sort by import date';
 }
 
 // Path: retrying_in
@@ -89767,6 +89998,20 @@ extension on _StringsEn {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
@@ -94395,6 +94640,20 @@ extension on _StringsAr {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
@@ -99045,6 +99304,20 @@ extension on _StringsDe {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
@@ -103693,6 +103966,20 @@ extension on _StringsEs {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
@@ -108348,6 +108635,20 @@ extension on _StringsFr {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
@@ -112983,6 +113284,20 @@ extension on _StringsId {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
@@ -117635,6 +117950,20 @@ extension on _StringsIt {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
@@ -122245,6 +122574,20 @@ extension on _StringsJa {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
@@ -126858,6 +127201,20 @@ extension on _StringsKo {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
@@ -131503,6 +131860,20 @@ extension on _StringsNl {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
@@ -136145,6 +136516,20 @@ extension on _StringsPtBr {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
@@ -140791,6 +141176,20 @@ extension on _StringsRu {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
@@ -145419,6 +145818,20 @@ extension on _StringsTh {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
@@ -150056,6 +150469,20 @@ extension on _StringsTr {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
@@ -154687,6 +155114,20 @@ extension on _StringsVi {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
@@ -159284,6 +159725,20 @@ extension on _StringsZhCn {
         return '在读';
       case 'book_read_progress':
         return ({required Object percent}) => '已读 ${percent}%';
+      case 'sort_by':
+        return '排序方式';
+      case 'sort_recent_read':
+        return '最近阅读';
+      case 'sort_recent_watched':
+        return '最近观看';
+      case 'sort_title':
+        return '名称';
+      case 'sort_imported':
+        return '导入时间';
+      case 'collection_sort_by_title':
+        return '按名称排序';
+      case 'collection_sort_by_imported':
+        return '按导入时间排序';
       default:
         return null;
     }
@@ -163886,6 +164341,20 @@ extension on _StringsZhHk {
         return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
+      case 'sort_by':
+        return 'Sort';
+      case 'sort_recent_read':
+        return 'Recently read';
+      case 'sort_recent_watched':
+        return 'Recently watched';
+      case 'sort_title':
+        return 'Name';
+      case 'sort_imported':
+        return 'Import date';
+      case 'collection_sort_by_title':
+        return 'Sort by name';
+      case 'collection_sort_by_imported':
+        return 'Sort by import date';
       default:
         return null;
     }
