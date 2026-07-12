@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39066 (2298 per locale)
+/// Strings: 39083 (2299 per locale)
 ///
-/// Built on 2026-07-12 at 18:13 UTC
+/// Built on 2026-07-12 at 20:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3040,6 +3040,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Added tag "${name}" to ${n} video(s).';
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -8238,6 +8239,8 @@ class _StringsAr extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -13559,6 +13562,8 @@ class _StringsDe extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -18897,6 +18902,8 @@ class _StringsEs extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -24254,6 +24261,8 @@ class _StringsFr extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -29513,6 +29522,8 @@ class _StringsId extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -34833,6 +34844,8 @@ class _StringsIt extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -39878,6 +39891,8 @@ class _StringsJa extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object n, required Object name}) =>
       '${n} 本の動画からタグ「${name}」を削除しました。';
+  @override
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -44928,6 +44943,8 @@ class _StringsKo extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -50216,6 +50233,8 @@ class _StringsNl extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -55527,6 +55546,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -60813,6 +60834,8 @@ class _StringsRu extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -66012,6 +66035,8 @@ class _StringsTh extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -71266,6 +71291,8 @@ class _StringsTr extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -76495,6 +76522,8 @@ class _StringsVi extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -81369,6 +81398,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object n, required Object name}) =>
       '已从 ${n} 个视频移除标签「${name}」。';
+  @override
+  String get stat_daily_average => '日均';
 }
 
 // Path: retrying_in
@@ -86316,6 +86347,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String batch_tag_removed_video({required Object n, required Object name}) =>
       '已從 ${n} 個影片移除標籤「${name}」。';
+  @override
+  String get stat_daily_average => 'Daily avg';
 }
 
 // Path: retrying_in
@@ -91053,6 +91086,8 @@ extension on _StringsEn {
       case 'batch_tag_removed_video':
         return ({required Object name, required Object n}) =>
             'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
@@ -95750,6 +95785,8 @@ extension on _StringsAr {
       case 'batch_tag_removed_video':
         return ({required Object name, required Object n}) =>
             'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
@@ -100469,6 +100506,8 @@ extension on _StringsDe {
       case 'batch_tag_removed_video':
         return ({required Object name, required Object n}) =>
             'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
@@ -105186,6 +105225,8 @@ extension on _StringsEs {
       case 'batch_tag_removed_video':
         return ({required Object name, required Object n}) =>
             'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
@@ -109910,6 +109951,8 @@ extension on _StringsFr {
       case 'batch_tag_removed_video':
         return ({required Object name, required Object n}) =>
             'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
@@ -114614,6 +114657,8 @@ extension on _StringsId {
       case 'batch_tag_removed_video':
         return ({required Object name, required Object n}) =>
             'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
@@ -119335,6 +119380,8 @@ extension on _StringsIt {
       case 'batch_tag_removed_video':
         return ({required Object name, required Object n}) =>
             'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
@@ -124013,6 +124060,8 @@ extension on _StringsJa {
       case 'batch_tag_removed_video':
         return ({required Object n, required Object name}) =>
             '${n} 本の動画からタグ「${name}」を削除しました。';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
@@ -128695,6 +128744,8 @@ extension on _StringsKo {
       case 'batch_tag_removed_video':
         return ({required Object name, required Object n}) =>
             'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
@@ -133409,6 +133460,8 @@ extension on _StringsNl {
       case 'batch_tag_removed_video':
         return ({required Object name, required Object n}) =>
             'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
@@ -138120,6 +138173,8 @@ extension on _StringsPtBr {
       case 'batch_tag_removed_video':
         return ({required Object name, required Object n}) =>
             'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
@@ -142835,6 +142890,8 @@ extension on _StringsRu {
       case 'batch_tag_removed_video':
         return ({required Object name, required Object n}) =>
             'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
@@ -147532,6 +147589,8 @@ extension on _StringsTh {
       case 'batch_tag_removed_video':
         return ({required Object name, required Object n}) =>
             'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
@@ -152238,6 +152297,8 @@ extension on _StringsTr {
       case 'batch_tag_removed_video':
         return ({required Object name, required Object n}) =>
             'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
@@ -156938,6 +156999,8 @@ extension on _StringsVi {
       case 'batch_tag_removed_video':
         return ({required Object name, required Object n}) =>
             'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
@@ -161603,6 +161666,8 @@ extension on _StringsZhCn {
       case 'batch_tag_removed_video':
         return ({required Object n, required Object name}) =>
             '已从 ${n} 个视频移除标签「${name}」。';
+      case 'stat_daily_average':
+        return '日均';
       default:
         return null;
     }
@@ -166273,6 +166338,8 @@ extension on _StringsZhHk {
       case 'batch_tag_removed_video':
         return ({required Object n, required Object name}) =>
             '已從 ${n} 個影片移除標籤「${name}」。';
+      case 'stat_daily_average':
+        return 'Daily avg';
       default:
         return null;
     }
