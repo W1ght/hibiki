@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38658 (2274 per locale)
+/// Strings: 38692 (2276 per locale)
 ///
-/// Built on 2026-07-12 at 13:02 UTC
+/// Built on 2026-07-12 at 15:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3008,6 +3008,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_sort_by_imported => 'Sort by import date';
   String get collection_collapse => 'Collapse';
   String get collection_expand => 'Expand';
+  String get sync_show_remote_entries => 'Show remote entries';
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -8150,6 +8153,11 @@ class _StringsAr extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -13415,6 +13423,11 @@ class _StringsDe extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -18697,6 +18710,11 @@ class _StringsEs extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -23998,6 +24016,11 @@ class _StringsFr extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -29201,6 +29224,11 @@ class _StringsId extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -34465,6 +34493,11 @@ class _StringsIt extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -39455,6 +39488,11 @@ class _StringsJa extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -44449,6 +44487,11 @@ class _StringsKo extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -49681,6 +49724,11 @@ class _StringsNl extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -54936,6 +54984,11 @@ class _StringsPtBr extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -60166,6 +60219,11 @@ class _StringsRu extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -65309,6 +65367,11 @@ class _StringsTh extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -70507,6 +70570,11 @@ class _StringsTr extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -75680,6 +75748,11 @@ class _StringsVi extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -80504,6 +80577,11 @@ class _StringsZhCn extends _StringsEn {
   String get collection_collapse => '折叠';
   @override
   String get collection_expand => '展开';
+  @override
+  String get sync_show_remote_entries => '显示远端条目';
+  @override
+  String get sync_show_remote_entries_warning =>
+      '把配对设备或云端有、本机没有的书籍和视频显示为可下载/流播的占位卡。';
 }
 
 // Path: retrying_in
@@ -85396,6 +85474,11 @@ class _StringsZhHk extends _StringsEn {
   String get collection_collapse => 'Collapse';
   @override
   String get collection_expand => 'Expand';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -90082,6 +90165,10 @@ extension on _StringsEn {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -94728,6 +94815,10 @@ extension on _StringsAr {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -99396,6 +99487,10 @@ extension on _StringsDe {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -104062,6 +104157,10 @@ extension on _StringsEs {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -108735,6 +108834,10 @@ extension on _StringsFr {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -113388,6 +113491,10 @@ extension on _StringsId {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -118058,6 +118165,10 @@ extension on _StringsIt {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -122686,6 +122797,10 @@ extension on _StringsJa {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -127317,6 +127432,10 @@ extension on _StringsKo {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -131980,6 +132099,10 @@ extension on _StringsNl {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -136640,6 +136763,10 @@ extension on _StringsPtBr {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -141304,6 +141431,10 @@ extension on _StringsRu {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -145950,6 +146081,10 @@ extension on _StringsTh {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -150605,6 +150740,10 @@ extension on _StringsTr {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -155254,6 +155393,10 @@ extension on _StringsVi {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -159869,6 +160012,10 @@ extension on _StringsZhCn {
         return '折叠';
       case 'collection_expand':
         return '展开';
+      case 'sync_show_remote_entries':
+        return '显示远端条目';
+      case 'sync_show_remote_entries_warning':
+        return '把配对设备或云端有、本机没有的书籍和视频显示为可下载/流播的占位卡。';
       default:
         return null;
     }
@@ -164489,6 +164636,10 @@ extension on _StringsZhHk {
         return 'Collapse';
       case 'collection_expand':
         return 'Expand';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
