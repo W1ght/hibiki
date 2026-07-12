@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38709 (2277 per locale)
+/// Strings: 38743 (2279 per locale)
 ///
-/// Built on 2026-07-12 at 15:57 UTC
+/// Built on 2026-07-12 at 16:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3011,6 +3011,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_video_files_warning => 'Video files can be very large.';
   String get sync_progress_videos => 'Syncing videos';
   String get sync_video_files => 'Upload video files';
+  String get sync_show_remote_entries => 'Show remote entries';
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -8159,6 +8162,11 @@ class _StringsAr extends _StringsEn {
   String get sync_progress_videos => 'Syncing videos';
   @override
   String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -13430,6 +13438,11 @@ class _StringsDe extends _StringsEn {
   String get sync_progress_videos => 'Syncing videos';
   @override
   String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -18718,6 +18731,11 @@ class _StringsEs extends _StringsEn {
   String get sync_progress_videos => 'Syncing videos';
   @override
   String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -24025,6 +24043,11 @@ class _StringsFr extends _StringsEn {
   String get sync_progress_videos => 'Syncing videos';
   @override
   String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -29234,6 +29257,11 @@ class _StringsId extends _StringsEn {
   String get sync_progress_videos => 'Syncing videos';
   @override
   String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -34504,6 +34532,11 @@ class _StringsIt extends _StringsEn {
   String get sync_progress_videos => 'Syncing videos';
   @override
   String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -39500,6 +39533,11 @@ class _StringsJa extends _StringsEn {
   String get sync_progress_videos => 'Syncing videos';
   @override
   String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -44500,6 +44538,11 @@ class _StringsKo extends _StringsEn {
   String get sync_progress_videos => 'Syncing videos';
   @override
   String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -49738,6 +49781,11 @@ class _StringsNl extends _StringsEn {
   String get sync_progress_videos => 'Syncing videos';
   @override
   String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -54999,6 +55047,11 @@ class _StringsPtBr extends _StringsEn {
   String get sync_progress_videos => 'Syncing videos';
   @override
   String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -60235,6 +60288,11 @@ class _StringsRu extends _StringsEn {
   String get sync_progress_videos => 'Syncing videos';
   @override
   String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -65384,6 +65442,11 @@ class _StringsTh extends _StringsEn {
   String get sync_progress_videos => 'Syncing videos';
   @override
   String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -70588,6 +70651,11 @@ class _StringsTr extends _StringsEn {
   String get sync_progress_videos => 'Syncing videos';
   @override
   String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -75767,6 +75835,11 @@ class _StringsVi extends _StringsEn {
   String get sync_progress_videos => 'Syncing videos';
   @override
   String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -80597,6 +80670,11 @@ class _StringsZhCn extends _StringsEn {
   String get sync_progress_videos => '同步视频';
   @override
   String get sync_video_files => '上传视频文件';
+  @override
+  String get sync_show_remote_entries => '显示远端条目';
+  @override
+  String get sync_show_remote_entries_warning =>
+      '把配对设备或云端有、本机没有的书籍和视频显示为可下载/流播的占位卡。';
 }
 
 // Path: retrying_in
@@ -85495,6 +85573,11 @@ class _StringsZhHk extends _StringsEn {
   String get sync_progress_videos => 'Syncing videos';
   @override
   String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
 }
 
 // Path: retrying_in
@@ -90187,6 +90270,10 @@ extension on _StringsEn {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -94839,6 +94926,10 @@ extension on _StringsAr {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -99513,6 +99604,10 @@ extension on _StringsDe {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -104185,6 +104280,10 @@ extension on _StringsEs {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -108864,6 +108963,10 @@ extension on _StringsFr {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -113523,6 +113626,10 @@ extension on _StringsId {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -118199,6 +118306,10 @@ extension on _StringsIt {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -122833,6 +122944,10 @@ extension on _StringsJa {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -127470,6 +127585,10 @@ extension on _StringsKo {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -132139,6 +132258,10 @@ extension on _StringsNl {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -136805,6 +136928,10 @@ extension on _StringsPtBr {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -141475,6 +141602,10 @@ extension on _StringsRu {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -146127,6 +146258,10 @@ extension on _StringsTh {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -150788,6 +150923,10 @@ extension on _StringsTr {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -155443,6 +155582,10 @@ extension on _StringsVi {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
@@ -160064,6 +160207,10 @@ extension on _StringsZhCn {
         return '同步视频';
       case 'sync_video_files':
         return '上传视频文件';
+      case 'sync_show_remote_entries':
+        return '显示远端条目';
+      case 'sync_show_remote_entries_warning':
+        return '把配对设备或云端有、本机没有的书籍和视频显示为可下载/流播的占位卡。';
       default:
         return null;
     }
@@ -164690,6 +164837,10 @@ extension on _StringsZhHk {
         return 'Syncing videos';
       case 'sync_video_files':
         return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
       default:
         return null;
     }
