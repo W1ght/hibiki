@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38743 (2279 per locale)
+/// Strings: 38709 (2277 per locale)
 ///
-/// Built on 2026-07-12 at 03:32 UTC
+/// Built on 2026-07-12 at 04:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2135,8 +2135,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_seek_seconds => 'Seek seconds';
   String get section_video_danmaku => 'Danmaku';
   String get video_setting_danmaku_server_url => 'Danmaku server URL';
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
   String card_overwritten({required Object deck}) =>
       'Card overwritten in 『${deck}』.';
   String get video_bottom_seek_back_label => '−10s';
@@ -2927,8 +2925,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Reading, video and mining statistics';
   String get backup_category_settings_desc => 'App and reader settings';
   String get backup_category_profiles_desc => 'Configuration profiles';
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   String get popup_font_size_decrease => 'Smaller dictionary text';
   String get popup_font_size_increase => 'Larger dictionary text';
   String get remote_book_cloud => 'Cloud library';
@@ -3014,6 +3010,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Remove this item from the collection? The item itself is kept.';
   String get collection_member_removed => 'Removed from collection';
   String get collection_default_name => 'New collection';
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -6617,10 +6614,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'عنوان خادم Danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'تمت الكتابة فوق البطاقة في『${deck}』.';
   @override
@@ -8010,9 +8003,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -8167,6 +8157,8 @@ class _StringsAr extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -11878,10 +11870,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'Danmaku-Server-URL';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Karte in 『${deck}』 überschrieben.';
   @override
@@ -13286,9 +13274,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -13443,6 +13428,8 @@ class _StringsDe extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -17172,10 +17159,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL del servidor de danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Tarjeta sobrescrita en 『${deck}』.';
   @override
@@ -18579,9 +18562,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -18736,6 +18716,8 @@ class _StringsEs extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -22484,10 +22466,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL du serveur danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Carte remplacée dans « ${deck} ».';
   @override
@@ -23891,9 +23869,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -24048,6 +24023,8 @@ class _StringsFr extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -27701,10 +27678,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL server danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'AppId Dandanplay';
-  @override
-  String get video_setting_danmaku_app_secret => 'AppSecret Dandanplay';
-  @override
   String card_overwritten({required Object deck}) =>
       'Kartu ditimpa di 『${deck}』.';
   @override
@@ -29105,9 +29078,6 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -29262,6 +29232,8 @@ class _StringsId extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -32973,10 +32945,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL del server danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Carta sovrascritta in『${deck}』.';
   @override
@@ -34380,9 +34348,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -34537,6 +34502,8 @@ class _StringsIt extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -38010,10 +37977,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => '弾幕サーバーの URL';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) => '『${deck}』のカードを上書きしました。';
   @override
   String get video_bottom_seek_back_label => '−10s';
@@ -39381,9 +39344,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -39538,6 +39498,8 @@ class _StringsJa extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -43017,10 +42979,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => '탄막 서버 주소';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) => '『${deck}』에 카드를 덮어썼습니다.';
   @override
   String get video_bottom_seek_back_label => '−10s';
@@ -44386,9 +44344,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -44543,6 +44498,8 @@ class _StringsKo extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -48227,10 +48184,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL danmaku-server';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Kaart overschreven in 『${deck}』.';
   @override
@@ -49629,9 +49582,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -49786,6 +49736,8 @@ class _StringsNl extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -53490,10 +53442,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL do servidor de danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Cartão sobrescrito em 『${deck}』.';
   @override
@@ -54895,9 +54843,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -55052,6 +54997,8 @@ class _StringsPtBr extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -58728,10 +58675,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'Адрес сервера данмаку';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Карточка перезаписана в «${deck}».';
   @override
@@ -60136,9 +60079,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -60293,6 +60233,8 @@ class _StringsRu extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -63894,10 +63836,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL เซิร์ฟเวอร์ดันมากุ';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'เขียนทับการ์ดใน『${deck}』แล้ว';
   @override
@@ -65290,9 +65228,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -65447,6 +65382,8 @@ class _StringsTh extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -69099,10 +69036,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'Danmaku sunucu URL\'si';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Kart 『${deck}』 destesinde üzerine yazıldı.';
   @override
@@ -70499,9 +70432,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -70656,6 +70586,8 @@ class _StringsTr extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -74285,10 +74217,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'Địa chỉ máy chủ danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Đã ghi đè thẻ trong 『${deck}』.';
   @override
@@ -75683,9 +75611,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -75840,6 +75765,8 @@ class _StringsVi extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -79232,10 +79159,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => '弹幕服务器地址';
   @override
-  String get video_setting_danmaku_app_id => '弹弹play AppId';
-  @override
-  String get video_setting_danmaku_app_secret => '弹弹play AppSecret';
-  @override
   String card_overwritten({required Object deck}) => '卡片已覆盖到『${deck}』。';
   @override
   String get video_bottom_seek_back_label => '−10s';
@@ -80528,9 +80451,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_category_profiles_desc => '配置方案';
   @override
-  String get backup_import_contents_hint =>
-      '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
-  @override
   String get popup_font_size_decrease => '缩小查词字号';
   @override
   String get popup_font_size_increase => '放大查词字号';
@@ -80674,6 +80594,8 @@ class _StringsZhCn extends _StringsEn {
   String get collection_member_removed => '已移出合集';
   @override
   String get collection_default_name => '新合集';
+  @override
+  String get backup_import_contents_hint => '取消勾选某项即可跳过它。';
 }
 
 // Path: retrying_in
@@ -84069,10 +83991,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => '彈幕伺服器網址';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) => '卡片已覆寫至『${deck}』。';
   @override
   String get video_bottom_seek_back_label => '−10s';
@@ -85420,9 +85338,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -85577,6 +85492,8 @@ class _StringsZhHk extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
 }
 
 // Path: retrying_in
@@ -88898,10 +88815,6 @@ extension on _StringsEn {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Danmaku server URL';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Card overwritten in 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -90131,8 +90044,6 @@ extension on _StringsEn {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -90273,6 +90184,8 @@ extension on _StringsEn {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -93552,10 +93465,6 @@ extension on _StringsAr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'عنوان خادم Danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) =>
             'تمت الكتابة فوق البطاقة في『${deck}』.';
@@ -94787,8 +94696,6 @@ extension on _StringsAr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -94929,6 +94836,8 @@ extension on _StringsAr {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -98229,10 +98138,6 @@ extension on _StringsDe {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Danmaku-Server-URL';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Karte in 『${deck}』 überschrieben.';
       case 'video_bottom_seek_back_label':
@@ -99465,8 +99370,6 @@ extension on _StringsDe {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -99607,6 +99510,8 @@ extension on _StringsDe {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -102904,10 +102809,6 @@ extension on _StringsEs {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL del servidor de danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Tarjeta sobrescrita en 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -104141,8 +104042,6 @@ extension on _StringsEs {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -104283,6 +104182,8 @@ extension on _StringsEs {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -107584,10 +107485,6 @@ extension on _StringsFr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL du serveur danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Carte remplacée dans « ${deck} ».';
       case 'video_bottom_seek_back_label':
@@ -108824,8 +108721,6 @@ extension on _StringsFr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -108966,6 +108861,8 @@ extension on _StringsFr {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -112252,10 +112149,6 @@ extension on _StringsId {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL server danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'AppId Dandanplay';
-      case 'video_setting_danmaku_app_secret':
-        return 'AppSecret Dandanplay';
       case 'card_overwritten':
         return ({required Object deck}) => 'Kartu ditimpa di 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -113487,8 +113380,6 @@ extension on _StringsId {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -113629,6 +113520,8 @@ extension on _StringsId {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -116926,10 +116819,6 @@ extension on _StringsIt {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL del server danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Carta sovrascritta in『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -118167,8 +118056,6 @@ extension on _StringsIt {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -118309,6 +118196,8 @@ extension on _StringsIt {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -121573,10 +121462,6 @@ extension on _StringsJa {
         return '弾幕';
       case 'video_setting_danmaku_server_url':
         return '弾幕サーバーの URL';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '『${deck}』のカードを上書きしました。';
       case 'video_bottom_seek_back_label':
@@ -122805,8 +122690,6 @@ extension on _StringsJa {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -122947,6 +122830,8 @@ extension on _StringsJa {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -126214,10 +126099,6 @@ extension on _StringsKo {
         return '탄막';
       case 'video_setting_danmaku_server_url':
         return '탄막 서버 주소';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '『${deck}』에 카드를 덮어썼습니다.';
       case 'video_bottom_seek_back_label':
@@ -127446,8 +127327,6 @@ extension on _StringsKo {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -127588,6 +127467,8 @@ extension on _StringsKo {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -130881,10 +130762,6 @@ extension on _StringsNl {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL danmaku-server';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Kaart overschreven in 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -132119,8 +131996,6 @@ extension on _StringsNl {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -132261,6 +132136,8 @@ extension on _StringsNl {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -135553,10 +135430,6 @@ extension on _StringsPtBr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL do servidor de danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Cartão sobrescrito em 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -136789,8 +136662,6 @@ extension on _StringsPtBr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -136931,6 +136802,8 @@ extension on _StringsPtBr {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -140225,10 +140098,6 @@ extension on _StringsRu {
         return 'Данмаку';
       case 'video_setting_danmaku_server_url':
         return 'Адрес сервера данмаку';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Карточка перезаписана в «${deck}».';
       case 'video_bottom_seek_back_label':
@@ -141463,8 +141332,6 @@ extension on _StringsRu {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -141605,6 +141472,8 @@ extension on _StringsRu {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -144884,10 +144753,6 @@ extension on _StringsTh {
         return 'ดันมากุ';
       case 'video_setting_danmaku_server_url':
         return 'URL เซิร์ฟเวอร์ดันมากุ';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'เขียนทับการ์ดใน『${deck}』แล้ว';
       case 'video_bottom_seek_back_label':
@@ -146119,8 +145984,6 @@ extension on _StringsTh {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -146261,6 +146124,8 @@ extension on _StringsTh {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -149545,10 +149410,6 @@ extension on _StringsTr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Danmaku sunucu URL\'si';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) =>
             'Kart 『${deck}』 destesinde üzerine yazıldı.';
@@ -150784,8 +150645,6 @@ extension on _StringsTr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -150926,6 +150785,8 @@ extension on _StringsTr {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -154207,10 +154068,6 @@ extension on _StringsVi {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Địa chỉ máy chủ danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Đã ghi đè thẻ trong 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -155443,8 +155300,6 @@ extension on _StringsVi {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -155585,6 +155440,8 @@ extension on _StringsVi {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
@@ -158843,10 +158700,6 @@ extension on _StringsZhCn {
         return '弹幕';
       case 'video_setting_danmaku_server_url':
         return '弹幕服务器地址';
-      case 'video_setting_danmaku_app_id':
-        return '弹弹play AppId';
-      case 'video_setting_danmaku_app_secret':
-        return '弹弹play AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '卡片已覆盖到『${deck}』。';
       case 'video_bottom_seek_back_label':
@@ -160068,8 +159921,6 @@ extension on _StringsZhCn {
         return '应用与阅读器设置';
       case 'backup_category_profiles_desc':
         return '配置方案';
-      case 'backup_import_contents_hint':
-        return '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
       case 'popup_font_size_decrease':
         return '缩小查词字号';
       case 'popup_font_size_increase':
@@ -160210,6 +160061,8 @@ extension on _StringsZhCn {
         return '已移出合集';
       case 'collection_default_name':
         return '新合集';
+      case 'backup_import_contents_hint':
+        return '取消勾选某项即可跳过它。';
       default:
         return null;
     }
@@ -163469,10 +163322,6 @@ extension on _StringsZhHk {
         return '彈幕';
       case 'video_setting_danmaku_server_url':
         return '彈幕伺服器網址';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '卡片已覆寫至『${deck}』。';
       case 'video_bottom_seek_back_label':
@@ -164698,8 +164547,6 @@ extension on _StringsZhHk {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -164840,6 +164687,8 @@ extension on _StringsZhHk {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
       default:
         return null;
     }
