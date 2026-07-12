@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38998 (2294 per locale)
+/// Strings: 39066 (2298 per locale)
 ///
-/// Built on 2026-07-12 at 11:45 UTC
+/// Built on 2026-07-12 at 18:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3032,6 +3032,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sort_imported => 'Import date';
   String get collection_sort_by_title => 'Sort by name';
   String get collection_sort_by_imported => 'Sort by import date';
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -8218,6 +8226,18 @@ class _StringsAr extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -13527,6 +13547,18 @@ class _StringsDe extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -18853,6 +18885,18 @@ class _StringsEs extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -24198,6 +24242,18 @@ class _StringsFr extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -29445,6 +29501,18 @@ class _StringsId extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -34753,6 +34821,18 @@ class _StringsIt extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -39787,6 +39867,17 @@ class _StringsJa extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      '${n} 本の動画を削除しますか？この操作は元に戻せません。';
+  @override
+  String batch_delete_success_video({required Object n}) => '${n} 本の動画を削除しました。';
+  @override
+  String batch_tag_added_video({required Object n, required Object name}) =>
+      '${n} 本の動画にタグ「${name}」を追加しました。';
+  @override
+  String batch_tag_removed_video({required Object n, required Object name}) =>
+      '${n} 本の動画からタグ「${name}」を削除しました。';
 }
 
 // Path: retrying_in
@@ -44825,6 +44916,18 @@ class _StringsKo extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -50101,6 +50204,18 @@ class _StringsNl extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -55400,6 +55515,18 @@ class _StringsPtBr extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -60674,6 +60801,18 @@ class _StringsRu extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -65861,6 +66000,18 @@ class _StringsTh extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -71103,6 +71254,18 @@ class _StringsTr extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -76320,6 +76483,18 @@ class _StringsVi extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
 }
 
 // Path: retrying_in
@@ -81183,6 +81358,17 @@ class _StringsZhCn extends _StringsEn {
   String get collection_sort_by_title => '按名称排序';
   @override
   String get collection_sort_by_imported => '按导入时间排序';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      '确定删除 ${n} 个视频？此操作不可撤销。';
+  @override
+  String batch_delete_success_video({required Object n}) => '已删除 ${n} 个视频。';
+  @override
+  String batch_tag_added_video({required Object n, required Object name}) =>
+      '已为 ${n} 个视频添加标签「${name}」。';
+  @override
+  String batch_tag_removed_video({required Object n, required Object name}) =>
+      '已从 ${n} 个视频移除标签「${name}」。';
 }
 
 // Path: retrying_in
@@ -86119,6 +86305,17 @@ class _StringsZhHk extends _StringsEn {
   String get collection_sort_by_title => 'Sort by name';
   @override
   String get collection_sort_by_imported => 'Sort by import date';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      '確定刪除 ${n} 個影片？此操作不可撤銷。';
+  @override
+  String batch_delete_success_video({required Object n}) => '已刪除 ${n} 個影片。';
+  @override
+  String batch_tag_added_video({required Object n, required Object name}) =>
+      '已為 ${n} 個影片添加標籤「${name}」。';
+  @override
+  String batch_tag_removed_video({required Object n, required Object name}) =>
+      '已從 ${n} 個影片移除標籤「${name}」。';
 }
 
 // Path: retrying_in
@@ -90845,6 +91042,17 @@ extension on _StringsEn {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -95531,6 +95739,17 @@ extension on _StringsAr {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -100239,6 +100458,17 @@ extension on _StringsDe {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -104945,6 +105175,17 @@ extension on _StringsEs {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -109658,6 +109899,17 @@ extension on _StringsFr {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -114351,6 +114603,17 @@ extension on _StringsId {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -119061,6 +119324,17 @@ extension on _StringsIt {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -123729,6 +124003,16 @@ extension on _StringsJa {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) => '${n} 本の動画を削除しますか？この操作は元に戻せません。';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => '${n} 本の動画を削除しました。';
+      case 'batch_tag_added_video':
+        return ({required Object n, required Object name}) =>
+            '${n} 本の動画にタグ「${name}」を追加しました。';
+      case 'batch_tag_removed_video':
+        return ({required Object n, required Object name}) =>
+            '${n} 本の動画からタグ「${name}」を削除しました。';
       default:
         return null;
     }
@@ -128400,6 +128684,17 @@ extension on _StringsKo {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -133103,6 +133398,17 @@ extension on _StringsNl {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -137803,6 +138109,17 @@ extension on _StringsPtBr {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -142507,6 +142824,17 @@ extension on _StringsRu {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -147193,6 +147521,17 @@ extension on _StringsTh {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -151888,6 +152227,17 @@ extension on _StringsTr {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -156577,6 +156927,17 @@ extension on _StringsVi {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
       default:
         return null;
     }
@@ -161232,6 +161593,16 @@ extension on _StringsZhCn {
         return '按名称排序';
       case 'collection_sort_by_imported':
         return '按导入时间排序';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) => '确定删除 ${n} 个视频？此操作不可撤销。';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => '已删除 ${n} 个视频。';
+      case 'batch_tag_added_video':
+        return ({required Object n, required Object name}) =>
+            '已为 ${n} 个视频添加标签「${name}」。';
+      case 'batch_tag_removed_video':
+        return ({required Object n, required Object name}) =>
+            '已从 ${n} 个视频移除标签「${name}」。';
       default:
         return null;
     }
@@ -165892,6 +166263,16 @@ extension on _StringsZhHk {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) => '確定刪除 ${n} 個影片？此操作不可撤銷。';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => '已刪除 ${n} 個影片。';
+      case 'batch_tag_added_video':
+        return ({required Object n, required Object name}) =>
+            '已為 ${n} 個影片添加標籤「${name}」。';
+      case 'batch_tag_removed_video':
+        return ({required Object n, required Object name}) =>
+            '已從 ${n} 個影片移除標籤「${name}」。';
       default:
         return null;
     }
