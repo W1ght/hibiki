@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38437 (2261 per locale)
+/// Strings: 38505 (2265 per locale)
 ///
-/// Built on 2026-07-11 at 14:06 UTC
+/// Built on 2026-07-12 at 06:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2995,6 +2995,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Remove this item from the collection? The item itself is kept.';
   String get collection_member_removed => 'Removed from collection';
   String get collection_default_name => 'New collection';
+  String get book_continue_reading => 'Continue Reading';
+  String get book_library_overview => 'Library Overview';
+  String get shelf_stat_reading => 'Reading';
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -8111,6 +8115,14 @@ class _StringsAr extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -13350,6 +13362,14 @@ class _StringsDe extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -18606,6 +18626,14 @@ class _StringsEs extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -23881,6 +23909,14 @@ class _StringsFr extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -29058,6 +29094,14 @@ class _StringsId extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -34296,6 +34340,14 @@ class _StringsIt extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -39260,6 +39312,14 @@ class _StringsJa extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -44228,6 +44288,14 @@ class _StringsKo extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -49434,6 +49502,14 @@ class _StringsNl extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -54663,6 +54739,14 @@ class _StringsPtBr extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -59867,6 +59951,14 @@ class _StringsRu extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -64984,6 +65076,14 @@ class _StringsTh extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -70156,6 +70256,14 @@ class _StringsTr extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -75303,6 +75411,14 @@ class _StringsVi extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -80101,6 +80217,14 @@ class _StringsZhCn extends _StringsEn {
   String get collection_member_removed => '已移出合集';
   @override
   String get collection_default_name => '新合集';
+  @override
+  String get book_continue_reading => '继续阅读';
+  @override
+  String get book_library_overview => '书库概览';
+  @override
+  String get shelf_stat_reading => '在读';
+  @override
+  String book_read_progress({required Object percent}) => '已读 ${percent}%';
 }
 
 // Path: retrying_in
@@ -84967,6 +85091,14 @@ class _StringsZhHk extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get book_continue_reading => 'Continue Reading';
+  @override
+  String get book_library_overview => 'Library Overview';
+  @override
+  String get shelf_stat_reading => 'Reading';
+  @override
+  String book_read_progress({required Object percent}) => 'Read ${percent}%';
 }
 
 // Path: retrying_in
@@ -89627,6 +89759,14 @@ extension on _StringsEn {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
@@ -94247,6 +94387,14 @@ extension on _StringsAr {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
@@ -98889,6 +99037,14 @@ extension on _StringsDe {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
@@ -103529,6 +103685,14 @@ extension on _StringsEs {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
@@ -108176,6 +108340,14 @@ extension on _StringsFr {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
@@ -112803,6 +112975,14 @@ extension on _StringsId {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
@@ -117447,6 +117627,14 @@ extension on _StringsIt {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
@@ -122049,6 +122237,14 @@ extension on _StringsJa {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
@@ -126654,6 +126850,14 @@ extension on _StringsKo {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
@@ -131291,6 +131495,14 @@ extension on _StringsNl {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
@@ -135925,6 +136137,14 @@ extension on _StringsPtBr {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
@@ -140563,6 +140783,14 @@ extension on _StringsRu {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
@@ -145183,6 +145411,14 @@ extension on _StringsTh {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
@@ -149812,6 +150048,14 @@ extension on _StringsTr {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
@@ -154435,6 +154679,14 @@ extension on _StringsVi {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
@@ -159024,6 +159276,14 @@ extension on _StringsZhCn {
         return '已移出合集';
       case 'collection_default_name':
         return '新合集';
+      case 'book_continue_reading':
+        return '继续阅读';
+      case 'book_library_overview':
+        return '书库概览';
+      case 'shelf_stat_reading':
+        return '在读';
+      case 'book_read_progress':
+        return ({required Object percent}) => '已读 ${percent}%';
       default:
         return null;
     }
@@ -163618,6 +163878,14 @@ extension on _StringsZhHk {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'book_continue_reading':
+        return 'Continue Reading';
+      case 'book_library_overview':
+        return 'Library Overview';
+      case 'shelf_stat_reading':
+        return 'Reading';
+      case 'book_read_progress':
+        return ({required Object percent}) => 'Read ${percent}%';
       default:
         return null;
     }
