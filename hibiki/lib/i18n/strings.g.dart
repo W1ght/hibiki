@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38590 (2270 per locale)
+/// Strings: 38709 (2277 per locale)
 ///
-/// Built on 2026-07-12 at 17:09 UTC
+/// Built on 2026-07-12 at 18:56 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3005,6 +3005,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_show_remote_entries => 'Show remote entries';
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  String get collection_merge_title => 'Merge collections';
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -8140,6 +8152,25 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -13396,6 +13427,25 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -18669,6 +18719,25 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -23961,6 +24030,25 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -29155,6 +29243,25 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -34410,6 +34517,25 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -39393,6 +39519,25 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -44380,6 +44525,25 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -49603,6 +49767,25 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -54849,6 +55032,25 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -60070,6 +60272,25 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -65206,6 +65427,25 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -70395,6 +70635,25 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -75559,6 +75818,25 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -80376,6 +80654,24 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       '把配对设备或云端有、本机没有的书籍和视频显示为可下载/流播的占位卡。';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      '解散 ${m} 个合集？只解除分组，不删除媒体本体。';
+  @override
+  String batch_dissolve_success({required Object m}) => '已解散 ${m} 个合集。';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      '删除 ${n} 个媒体、解散 ${m} 个合集？此操作无法撤销。';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      '已删除 ${n} 个媒体、解散 ${m} 个合集。';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      '已把 ${n} 项加入合集。';
+  @override
+  String get collection_merge_title => '合并合集';
+  @override
+  String get collection_merged => '已合并合集。';
 }
 
 // Path: retrying_in
@@ -85261,6 +85557,25 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_show_remote_entries_warning =>
       'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
 }
 
 // Path: retrying_in
@@ -89939,6 +90254,23 @@ extension on _StringsEn {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
@@ -94577,6 +94909,23 @@ extension on _StringsAr {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
@@ -99237,6 +99586,23 @@ extension on _StringsDe {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
@@ -103895,6 +104261,23 @@ extension on _StringsEs {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
@@ -108560,6 +108943,23 @@ extension on _StringsFr {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
@@ -113205,6 +113605,23 @@ extension on _StringsId {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
@@ -117867,6 +118284,23 @@ extension on _StringsIt {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
@@ -122487,6 +122921,23 @@ extension on _StringsJa {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
@@ -127110,6 +127561,23 @@ extension on _StringsKo {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
@@ -131765,6 +132233,23 @@ extension on _StringsNl {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
@@ -136417,6 +136902,23 @@ extension on _StringsPtBr {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
@@ -141073,6 +141575,23 @@ extension on _StringsRu {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
@@ -145711,6 +146230,23 @@ extension on _StringsTh {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
@@ -150358,6 +150894,23 @@ extension on _StringsTr {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
@@ -154999,6 +155552,23 @@ extension on _StringsVi {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
@@ -159606,6 +160176,22 @@ extension on _StringsZhCn {
         return '显示远端条目';
       case 'sync_show_remote_entries_warning':
         return '把配对设备或云端有、本机没有的书籍和视频显示为可下载/流播的占位卡。';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) => '解散 ${m} 个合集？只解除分组，不删除媒体本体。';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => '已解散 ${m} 个合集。';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            '删除 ${n} 个媒体、解散 ${m} 个合集？此操作无法撤销。';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            '已删除 ${n} 个媒体、解散 ${m} 个合集。';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => '已把 ${n} 项加入合集。';
+      case 'collection_merge_title':
+        return '合并合集';
+      case 'collection_merged':
+        return '已合并合集。';
       default:
         return null;
     }
@@ -164218,6 +164804,23 @@ extension on _StringsZhHk {
         return 'Show remote entries';
       case 'sync_show_remote_entries_warning':
         return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       default:
         return null;
     }
