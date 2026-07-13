@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39100 (2300 per locale)
+/// Strings: 39627 (2331 per locale)
 ///
-/// Built on 2026-07-13 at 03:56 UTC
+/// Built on 2026-07-13 at 09:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1904,19 +1904,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get popup_instant_scroll => 'Instant popup scroll';
   String get popup_instant_scroll_hint =>
       'Jump the lookup popup by fixed distances without animated scrolling for e-ink screens.';
-  String get remote_video_interconnect => 'Hibiki Interconnect';
-  String get remote_video_paired_device => 'Paired device videos';
   String get remote_video_download => 'Download to this device';
   String get remote_video_downloaded => 'Downloaded remote video';
-  String get remote_video_load_failed => 'Could not load paired device videos';
   String get remote_video_download_failed => 'Could not download remote video';
   String get video_setting_subtitle_font_weight => 'Font weight';
   String get video_setting_subtitle_shadow => 'Shadow';
-  String get remote_book_interconnect => 'Hibiki Interconnect';
-  String get remote_book_paired_device => 'Paired device books';
   String get remote_book_download => 'Download to this device';
   String get remote_book_downloaded => 'Downloaded remote book';
-  String get remote_book_load_failed => 'Could not load paired device books';
   String get remote_book_download_failed => 'Could not download remote book';
   String get video_drop_audio_unsupported =>
       'Drop subtitle files onto the current video. Audio files cannot be attached here.';
@@ -2927,9 +2921,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_profiles_desc => 'Configuration profiles';
   String get popup_font_size_decrease => 'Smaller dictionary text';
   String get popup_font_size_increase => 'Larger dictionary text';
-  String get remote_book_cloud => 'Cloud library';
-  String get remote_book_cloud_device => 'Cloud backup books';
-  String get remote_book_cloud_load_failed => 'Could not load cloud books';
   String get video_setting_danmaku_font_scale => 'Font size';
   String get video_setting_danmaku_font_scale_hint =>
       'Scale the danmaku text size.';
@@ -3032,6 +3023,27 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sort_imported => 'Import date';
   String get collection_sort_by_title => 'Sort by name';
   String get collection_sort_by_imported => 'Sort by import date';
+  String get collection_collapse => 'Collapse';
+  String get collection_expand => 'Expand';
+  String get sync_video_files_warning => 'Video files can be very large.';
+  String get sync_progress_videos => 'Syncing videos';
+  String get sync_video_files => 'Upload video files';
+  String get sync_show_remote_entries => 'Show remote entries';
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  String get collection_open => 'Open';
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  String get collection_merge_title => 'Merge collections';
+  String get collection_merged => 'Collections merged.';
   String batch_delete_confirm_video({required Object n}) =>
       'Delete ${n} video(s)? This cannot be undone.';
   String batch_delete_success_video({required Object n}) =>
@@ -3042,6 +3054,40 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Removed tag "${name}" from ${n} video(s).';
   String get stat_daily_average => 'Daily avg';
   String get handlebar_sentence_audio => 'Sentence Audio';
+  String get video_mining_image_mode => 'Video card image';
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  String get remote_video_paired_device => 'Paired device videos';
+  String get remote_video_load_failed => 'Could not load paired device videos';
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  String get remote_book_paired_device => 'Paired device books';
+  String get remote_book_load_failed => 'Could not load paired device books';
+  String get remote_book_cloud => 'Cloud library';
+  String get remote_book_cloud_device => 'Cloud backup books';
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  String get extension_popup_max_width => 'Extension popup max width';
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -6233,15 +6279,9 @@ class _StringsAr extends _StringsEn {
   String get popup_instant_scroll_hint =>
       'نقل نافذة البحث المنبثقة بمسافات ثابتة دون تمرير متحرك، لشاشات الحبر الإلكتروني.';
   @override
-  String get remote_video_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_video_paired_device => 'فيديوهات الجهاز المقترن';
-  @override
   String get remote_video_download => 'التنزيل إلى هذا الجهاز';
   @override
   String get remote_video_downloaded => 'تم تنزيل الفيديو البعيد';
-  @override
-  String get remote_video_load_failed => 'تعذّر تحميل فيديوهات الجهاز المقترن';
   @override
   String get remote_video_download_failed => 'تعذّر تنزيل الفيديو البعيد';
   @override
@@ -6249,15 +6289,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => 'الظل';
   @override
-  String get remote_book_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_book_paired_device => 'كتب الجهاز المقترن';
-  @override
   String get remote_book_download => 'التنزيل إلى هذا الجهاز';
   @override
   String get remote_book_downloaded => 'تم تنزيل الكتاب البعيد';
-  @override
-  String get remote_book_load_failed => 'تعذّر تحميل كتب الجهاز المقترن';
   @override
   String get remote_book_download_failed => 'تعذّر تنزيل الكتاب البعيد';
   @override
@@ -8038,12 +8072,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
   @override
-  String get remote_book_cloud => 'Cloud library';
-  @override
-  String get remote_book_cloud_device => 'Cloud backup books';
-  @override
-  String get remote_book_cloud_load_failed => 'Could not load cloud books';
-  @override
   String get video_setting_danmaku_font_scale => 'Font size';
   @override
   String get video_setting_danmaku_font_scale_hint =>
@@ -8229,6 +8257,42 @@ class _StringsAr extends _StringsEn {
   @override
   String get collection_sort_by_imported => 'Sort by import date';
   @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String get collection_open => 'Open';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       'Delete ${n} video(s)? This cannot be undone.';
   @override
@@ -8244,6 +8308,65 @@ class _StringsAr extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'فيديوهات الجهاز المقترن';
+  @override
+  String get remote_video_load_failed => 'تعذّر تحميل فيديوهات الجهاز المقترن';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'كتب الجهاز المقترن';
+  @override
+  String get remote_book_load_failed => 'تعذّر تحميل كتب الجهاز المقترن';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -11530,16 +11653,9 @@ class _StringsDe extends _StringsEn {
   String get popup_instant_scroll_hint =>
       'Lässt das Nachschlage-Popup ohne Scroll-Animation um feste Distanzen springen – für E-Ink-Bildschirme.';
   @override
-  String get remote_video_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_video_paired_device => 'Videos vom gekoppelten Gerät';
-  @override
   String get remote_video_download => 'Auf dieses Gerät herunterladen';
   @override
   String get remote_video_downloaded => 'Remote-Video heruntergeladen';
-  @override
-  String get remote_video_load_failed =>
-      'Videos des gekoppelten Geräts konnten nicht geladen werden';
   @override
   String get remote_video_download_failed =>
       'Remote-Video konnte nicht heruntergeladen werden';
@@ -11548,16 +11664,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => 'Schatten';
   @override
-  String get remote_book_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_book_paired_device => 'Bücher vom gekoppelten Gerät';
-  @override
   String get remote_book_download => 'Auf dieses Gerät herunterladen';
   @override
   String get remote_book_downloaded => 'Remote-Buch heruntergeladen';
-  @override
-  String get remote_book_load_failed =>
-      'Bücher des gekoppelten Geräts konnten nicht geladen werden';
   @override
   String get remote_book_download_failed =>
       'Remote-Buch konnte nicht heruntergeladen werden';
@@ -13363,12 +13472,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
   @override
-  String get remote_book_cloud => 'Cloud library';
-  @override
-  String get remote_book_cloud_device => 'Cloud backup books';
-  @override
-  String get remote_book_cloud_load_failed => 'Could not load cloud books';
-  @override
   String get video_setting_danmaku_font_scale => 'Font size';
   @override
   String get video_setting_danmaku_font_scale_hint =>
@@ -13554,6 +13657,42 @@ class _StringsDe extends _StringsEn {
   @override
   String get collection_sort_by_imported => 'Sort by import date';
   @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String get collection_open => 'Open';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       'Delete ${n} video(s)? This cannot be undone.';
   @override
@@ -13569,6 +13708,67 @@ class _StringsDe extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Videos vom gekoppelten Gerät';
+  @override
+  String get remote_video_load_failed =>
+      'Videos des gekoppelten Geräts konnten nicht geladen werden';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Bücher vom gekoppelten Gerät';
+  @override
+  String get remote_book_load_failed =>
+      'Bücher des gekoppelten Geräts konnten nicht geladen werden';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -16870,16 +17070,9 @@ class _StringsEs extends _StringsEn {
   String get popup_instant_scroll_hint =>
       'Mueve la ventana de consulta a distancias fijas sin animación de desplazamiento, para pantallas de tinta electrónica.';
   @override
-  String get remote_video_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_video_paired_device => 'Vídeos del dispositivo emparejado';
-  @override
   String get remote_video_download => 'Descargar a este dispositivo';
   @override
   String get remote_video_downloaded => 'Vídeo remoto descargado';
-  @override
-  String get remote_video_load_failed =>
-      'No se pudieron cargar los vídeos del dispositivo emparejado';
   @override
   String get remote_video_download_failed =>
       'No se pudo descargar el vídeo remoto';
@@ -16888,16 +17081,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => 'Sombra';
   @override
-  String get remote_book_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_book_paired_device => 'Libros del dispositivo emparejado';
-  @override
   String get remote_book_download => 'Descargar a este dispositivo';
   @override
   String get remote_book_downloaded => 'Libro remoto descargado';
-  @override
-  String get remote_book_load_failed =>
-      'No se pudieron cargar los libros del dispositivo emparejado';
   @override
   String get remote_book_download_failed =>
       'No se pudo descargar el libro remoto';
@@ -18705,12 +18891,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
   @override
-  String get remote_book_cloud => 'Cloud library';
-  @override
-  String get remote_book_cloud_device => 'Cloud backup books';
-  @override
-  String get remote_book_cloud_load_failed => 'Could not load cloud books';
-  @override
   String get video_setting_danmaku_font_scale => 'Font size';
   @override
   String get video_setting_danmaku_font_scale_hint =>
@@ -18896,6 +19076,42 @@ class _StringsEs extends _StringsEn {
   @override
   String get collection_sort_by_imported => 'Sort by import date';
   @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String get collection_open => 'Open';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       'Delete ${n} video(s)? This cannot be undone.';
   @override
@@ -18911,6 +19127,67 @@ class _StringsEs extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Vídeos del dispositivo emparejado';
+  @override
+  String get remote_video_load_failed =>
+      'No se pudieron cargar los vídeos del dispositivo emparejado';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Libros del dispositivo emparejado';
+  @override
+  String get remote_book_load_failed =>
+      'No se pudieron cargar los libros del dispositivo emparejado';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -22232,16 +22509,9 @@ class _StringsFr extends _StringsEn {
   String get popup_instant_scroll_hint =>
       'Pour les écrans e-ink : la fenêtre de recherche saute par paliers fixes, sans animation de défilement.';
   @override
-  String get remote_video_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_video_paired_device => 'Vidéos de l\'appareil appairé';
-  @override
   String get remote_video_download => 'Télécharger sur cet appareil';
   @override
   String get remote_video_downloaded => 'Vidéo distante téléchargée';
-  @override
-  String get remote_video_load_failed =>
-      'Impossible de charger les vidéos de l\'appareil appairé';
   @override
   String get remote_video_download_failed =>
       'Impossible de télécharger la vidéo distante';
@@ -22250,16 +22520,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => 'Ombre';
   @override
-  String get remote_book_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_book_paired_device => 'Livres de l\'appareil appairé';
-  @override
   String get remote_book_download => 'Télécharger sur cet appareil';
   @override
   String get remote_book_downloaded => 'Livre distant téléchargé';
-  @override
-  String get remote_book_load_failed =>
-      'Impossible de charger les livres de l\'appareil appairé';
   @override
   String get remote_book_download_failed =>
       'Impossible de télécharger le livre distant';
@@ -24066,12 +24329,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
   @override
-  String get remote_book_cloud => 'Cloud library';
-  @override
-  String get remote_book_cloud_device => 'Cloud backup books';
-  @override
-  String get remote_book_cloud_load_failed => 'Could not load cloud books';
-  @override
   String get video_setting_danmaku_font_scale => 'Font size';
   @override
   String get video_setting_danmaku_font_scale_hint =>
@@ -24257,6 +24514,42 @@ class _StringsFr extends _StringsEn {
   @override
   String get collection_sort_by_imported => 'Sort by import date';
   @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String get collection_open => 'Open';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       'Delete ${n} video(s)? This cannot be undone.';
   @override
@@ -24272,6 +24565,67 @@ class _StringsFr extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Vidéos de l\'appareil appairé';
+  @override
+  String get remote_video_load_failed =>
+      'Impossible de charger les vidéos de l\'appareil appairé';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Livres de l\'appareil appairé';
+  @override
+  String get remote_book_load_failed =>
+      'Impossible de charger les livres de l\'appareil appairé';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -27507,16 +27861,9 @@ class _StringsId extends _StringsEn {
   String get popup_instant_scroll_hint =>
       'Pindahkan popup pencarian dengan jarak tetap tanpa animasi gulir untuk layar e-ink.';
   @override
-  String get remote_video_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_video_paired_device => 'Video perangkat berpasangan';
-  @override
   String get remote_video_download => 'Unduh ke perangkat ini';
   @override
   String get remote_video_downloaded => 'Video jarak jauh terunduh';
-  @override
-  String get remote_video_load_failed =>
-      'Tidak dapat memuat video perangkat berpasangan';
   @override
   String get remote_video_download_failed =>
       'Tidak dapat mengunduh video jarak jauh';
@@ -27525,16 +27872,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => 'Bayangan';
   @override
-  String get remote_book_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_book_paired_device => 'Buku perangkat berpasangan';
-  @override
   String get remote_book_download => 'Unduh ke perangkat ini';
   @override
   String get remote_book_downloaded => 'Buku jarak jauh terunduh';
-  @override
-  String get remote_book_load_failed =>
-      'Tidak dapat memuat buku perangkat berpasangan';
   @override
   String get remote_book_download_failed =>
       'Tidak dapat mengunduh buku jarak jauh';
@@ -29329,12 +29669,6 @@ class _StringsId extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
   @override
-  String get remote_book_cloud => 'Cloud library';
-  @override
-  String get remote_book_cloud_device => 'Cloud backup books';
-  @override
-  String get remote_book_cloud_load_failed => 'Could not load cloud books';
-  @override
   String get video_setting_danmaku_font_scale => 'Font size';
   @override
   String get video_setting_danmaku_font_scale_hint =>
@@ -29520,6 +29854,42 @@ class _StringsId extends _StringsEn {
   @override
   String get collection_sort_by_imported => 'Sort by import date';
   @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String get collection_open => 'Open';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       'Delete ${n} video(s)? This cannot be undone.';
   @override
@@ -29535,6 +29905,67 @@ class _StringsId extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Video perangkat berpasangan';
+  @override
+  String get remote_video_load_failed =>
+      'Tidak dapat memuat video perangkat berpasangan';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Buku perangkat berpasangan';
+  @override
+  String get remote_book_load_failed =>
+      'Tidak dapat memuat buku perangkat berpasangan';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -32817,16 +33248,9 @@ class _StringsIt extends _StringsEn {
   String get popup_instant_scroll_hint =>
       'Sposta il popup di ricerca a distanze fisse senza scorrimento animato, per schermi e-ink.';
   @override
-  String get remote_video_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_video_paired_device => 'Video del dispositivo abbinato';
-  @override
   String get remote_video_download => 'Scarica su questo dispositivo';
   @override
   String get remote_video_downloaded => 'Video remoto scaricato';
-  @override
-  String get remote_video_load_failed =>
-      'Impossibile caricare i video del dispositivo abbinato';
   @override
   String get remote_video_download_failed =>
       'Impossibile scaricare il video remoto';
@@ -32835,16 +33259,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => 'Ombra';
   @override
-  String get remote_book_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_book_paired_device => 'Libri del dispositivo abbinato';
-  @override
   String get remote_book_download => 'Scarica su questo dispositivo';
   @override
   String get remote_book_downloaded => 'Libro remoto scaricato';
-  @override
-  String get remote_book_load_failed =>
-      'Impossibile caricare i libri del dispositivo abbinato';
   @override
   String get remote_book_download_failed =>
       'Impossibile scaricare il libro remoto';
@@ -34653,12 +35070,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
   @override
-  String get remote_book_cloud => 'Cloud library';
-  @override
-  String get remote_book_cloud_device => 'Cloud backup books';
-  @override
-  String get remote_book_cloud_load_failed => 'Could not load cloud books';
-  @override
   String get video_setting_danmaku_font_scale => 'Font size';
   @override
   String get video_setting_danmaku_font_scale_hint =>
@@ -34844,6 +35255,42 @@ class _StringsIt extends _StringsEn {
   @override
   String get collection_sort_by_imported => 'Sort by import date';
   @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String get collection_open => 'Open';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       'Delete ${n} video(s)? This cannot be undone.';
   @override
@@ -34859,6 +35306,67 @@ class _StringsIt extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Video del dispositivo abbinato';
+  @override
+  String get remote_video_load_failed =>
+      'Impossibile caricare i video del dispositivo abbinato';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Libri del dispositivo abbinato';
+  @override
+  String get remote_book_load_failed =>
+      'Impossibile caricare i libri del dispositivo abbinato';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -37942,15 +38450,9 @@ class _StringsJa extends _StringsEn {
   String get popup_instant_scroll_hint =>
       '電子ペーパー向け。辞書ポップアップをスクロールアニメなしで一定距離ずつ瞬時に移動します。';
   @override
-  String get remote_video_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_video_paired_device => 'ペアリング済みデバイスの動画';
-  @override
   String get remote_video_download => 'このデバイスにダウンロード';
   @override
   String get remote_video_downloaded => 'リモート動画をダウンロードしました';
-  @override
-  String get remote_video_load_failed => 'ペアリング済みデバイスの動画を読み込めませんでした';
   @override
   String get remote_video_download_failed => 'リモート動画をダウンロードできませんでした';
   @override
@@ -37958,15 +38460,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => '影';
   @override
-  String get remote_book_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_book_paired_device => 'ペアリング済みデバイスの書籍';
-  @override
   String get remote_book_download => 'このデバイスにダウンロード';
   @override
   String get remote_book_downloaded => 'リモート書籍をダウンロードしました';
-  @override
-  String get remote_book_load_failed => 'ペアリング済みデバイスの書籍を読み込めませんでした';
   @override
   String get remote_book_download_failed => 'リモート書籍をダウンロードできませんでした';
   @override
@@ -39703,12 +40199,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
   @override
-  String get remote_book_cloud => 'Cloud library';
-  @override
-  String get remote_book_cloud_device => 'Cloud backup books';
-  @override
-  String get remote_book_cloud_load_failed => 'Could not load cloud books';
-  @override
   String get video_setting_danmaku_font_scale => 'Font size';
   @override
   String get video_setting_danmaku_font_scale_hint =>
@@ -39894,6 +40384,42 @@ class _StringsJa extends _StringsEn {
   @override
   String get collection_sort_by_imported => 'Sort by import date';
   @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String get collection_open => 'Open';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       '${n} 本の動画を削除しますか？この操作は元に戻せません。';
   @override
@@ -39908,6 +40434,65 @@ class _StringsJa extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'ペアリング済みデバイスの動画';
+  @override
+  String get remote_video_load_failed => 'ペアリング済みデバイスの動画を読み込めませんでした';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'ペアリング済みデバイスの書籍';
+  @override
+  String get remote_book_load_failed => 'ペアリング済みデバイスの書籍を読み込めませんでした';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -42995,15 +43580,9 @@ class _StringsKo extends _StringsEn {
   String get popup_instant_scroll_hint =>
       'e-잉크 화면용: 단어 찾기 팝업을 스크롤 애니메이션 없이 고정 거리만큼 즉시 이동합니다.';
   @override
-  String get remote_video_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_video_paired_device => '페어링된 기기의 비디오';
-  @override
   String get remote_video_download => '이 기기로 다운로드';
   @override
   String get remote_video_downloaded => '원격 비디오를 다운로드함';
-  @override
-  String get remote_video_load_failed => '페어링된 기기의 비디오를 불러올 수 없습니다';
   @override
   String get remote_video_download_failed => '원격 비디오를 다운로드할 수 없습니다';
   @override
@@ -43011,15 +43590,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => '그림자';
   @override
-  String get remote_book_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_book_paired_device => '페어링된 기기의 책';
-  @override
   String get remote_book_download => '이 기기로 다운로드';
   @override
   String get remote_book_downloaded => '원격 책을 다운로드함';
-  @override
-  String get remote_book_load_failed => '페어링된 기기의 책을 불러올 수 없습니다';
   @override
   String get remote_book_download_failed => '원격 책을 다운로드할 수 없습니다';
   @override
@@ -44756,12 +45329,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
   @override
-  String get remote_book_cloud => 'Cloud library';
-  @override
-  String get remote_book_cloud_device => 'Cloud backup books';
-  @override
-  String get remote_book_cloud_load_failed => 'Could not load cloud books';
-  @override
   String get video_setting_danmaku_font_scale => 'Font size';
   @override
   String get video_setting_danmaku_font_scale_hint =>
@@ -44947,6 +45514,42 @@ class _StringsKo extends _StringsEn {
   @override
   String get collection_sort_by_imported => 'Sort by import date';
   @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String get collection_open => 'Open';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       'Delete ${n} video(s)? This cannot be undone.';
   @override
@@ -44962,6 +45565,65 @@ class _StringsKo extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => '페어링된 기기의 비디오';
+  @override
+  String get remote_video_load_failed => '페어링된 기기의 비디오를 불러올 수 없습니다';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => '페어링된 기기의 책';
+  @override
+  String get remote_book_load_failed => '페어링된 기기의 책을 불러올 수 없습니다';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -48221,16 +48883,9 @@ class _StringsNl extends _StringsEn {
   String get popup_instant_scroll_hint =>
       'Verspring de opzoek-pop-up over vaste afstanden zonder scrollanimatie, voor e-inkschermen.';
   @override
-  String get remote_video_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_video_paired_device => 'Video\'s van gekoppeld apparaat';
-  @override
   String get remote_video_download => 'Naar dit apparaat downloaden';
   @override
   String get remote_video_downloaded => 'Externe video gedownload';
-  @override
-  String get remote_video_load_failed =>
-      'Kan video\'s van gekoppeld apparaat niet laden';
   @override
   String get remote_video_download_failed =>
       'Kan externe video niet downloaden';
@@ -48239,16 +48894,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => 'Schaduw';
   @override
-  String get remote_book_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_book_paired_device => 'Boeken van gekoppeld apparaat';
-  @override
   String get remote_book_download => 'Naar dit apparaat downloaden';
   @override
   String get remote_book_downloaded => 'Extern boek gedownload';
-  @override
-  String get remote_book_load_failed =>
-      'Kan boeken van gekoppeld apparaat niet laden';
   @override
   String get remote_book_download_failed => 'Kan extern boek niet downloaden';
   @override
@@ -50048,12 +50696,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
   @override
-  String get remote_book_cloud => 'Cloud library';
-  @override
-  String get remote_book_cloud_device => 'Cloud backup books';
-  @override
-  String get remote_book_cloud_load_failed => 'Could not load cloud books';
-  @override
   String get video_setting_danmaku_font_scale => 'Font size';
   @override
   String get video_setting_danmaku_font_scale_hint =>
@@ -50239,6 +50881,42 @@ class _StringsNl extends _StringsEn {
   @override
   String get collection_sort_by_imported => 'Sort by import date';
   @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String get collection_open => 'Open';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       'Delete ${n} video(s)? This cannot be undone.';
   @override
@@ -50254,6 +50932,67 @@ class _StringsNl extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Video\'s van gekoppeld apparaat';
+  @override
+  String get remote_video_load_failed =>
+      'Kan video\'s van gekoppeld apparaat niet laden';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Boeken van gekoppeld apparaat';
+  @override
+  String get remote_book_load_failed =>
+      'Kan boeken van gekoppeld apparaat niet laden';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -53532,16 +54271,9 @@ class _StringsPtBr extends _StringsEn {
   String get popup_instant_scroll_hint =>
       'Faz o pop-up de consulta saltar por distâncias fixas sem animação de rolagem, para telas de tinta eletrônica.';
   @override
-  String get remote_video_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_video_paired_device => 'Vídeos do dispositivo pareado';
-  @override
   String get remote_video_download => 'Baixar para este dispositivo';
   @override
   String get remote_video_downloaded => 'Vídeo remoto baixado';
-  @override
-  String get remote_video_load_failed =>
-      'Não foi possível carregar os vídeos do dispositivo pareado';
   @override
   String get remote_video_download_failed =>
       'Não foi possível baixar o vídeo remoto';
@@ -53550,16 +54282,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => 'Sombra';
   @override
-  String get remote_book_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_book_paired_device => 'Livros do dispositivo pareado';
-  @override
   String get remote_book_download => 'Baixar para este dispositivo';
   @override
   String get remote_book_downloaded => 'Livro remoto baixado';
-  @override
-  String get remote_book_load_failed =>
-      'Não foi possível carregar os livros do dispositivo pareado';
   @override
   String get remote_book_download_failed =>
       'Não foi possível baixar o livro remoto';
@@ -55363,12 +56088,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
   @override
-  String get remote_book_cloud => 'Cloud library';
-  @override
-  String get remote_book_cloud_device => 'Cloud backup books';
-  @override
-  String get remote_book_cloud_load_failed => 'Could not load cloud books';
-  @override
   String get video_setting_danmaku_font_scale => 'Font size';
   @override
   String get video_setting_danmaku_font_scale_hint =>
@@ -55554,6 +56273,42 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get collection_sort_by_imported => 'Sort by import date';
   @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String get collection_open => 'Open';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       'Delete ${n} video(s)? This cannot be undone.';
   @override
@@ -55569,6 +56324,67 @@ class _StringsPtBr extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Vídeos do dispositivo pareado';
+  @override
+  String get remote_video_load_failed =>
+      'Não foi possível carregar os vídeos do dispositivo pareado';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Livros do dispositivo pareado';
+  @override
+  String get remote_book_load_failed =>
+      'Não foi possível carregar os livros do dispositivo pareado';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -58825,16 +59641,9 @@ class _StringsRu extends _StringsEn {
   String get popup_instant_scroll_hint =>
       'Для экранов e-ink: окно поиска перемещается на фиксированное расстояние без анимации прокрутки.';
   @override
-  String get remote_video_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_video_paired_device => 'Видео сопряжённого устройства';
-  @override
   String get remote_video_download => 'Загрузить на это устройство';
   @override
   String get remote_video_downloaded => 'Видео с устройства загружено';
-  @override
-  String get remote_video_load_failed =>
-      'Не удалось загрузить видео сопряжённого устройства';
   @override
   String get remote_video_download_failed =>
       'Не удалось загрузить видео с устройства';
@@ -58843,16 +59652,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => 'Тень';
   @override
-  String get remote_book_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_book_paired_device => 'Книги сопряжённого устройства';
-  @override
   String get remote_book_download => 'Загрузить на это устройство';
   @override
   String get remote_book_downloaded => 'Книга с устройства загружена';
-  @override
-  String get remote_book_load_failed =>
-      'Не удалось загрузить книги сопряжённого устройства';
   @override
   String get remote_book_download_failed =>
       'Не удалось загрузить книгу с устройства';
@@ -60653,12 +61455,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
   @override
-  String get remote_book_cloud => 'Cloud library';
-  @override
-  String get remote_book_cloud_device => 'Cloud backup books';
-  @override
-  String get remote_book_cloud_load_failed => 'Could not load cloud books';
-  @override
   String get video_setting_danmaku_font_scale => 'Font size';
   @override
   String get video_setting_danmaku_font_scale_hint =>
@@ -60844,6 +61640,42 @@ class _StringsRu extends _StringsEn {
   @override
   String get collection_sort_by_imported => 'Sort by import date';
   @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String get collection_open => 'Open';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       'Delete ${n} video(s)? This cannot be undone.';
   @override
@@ -60859,6 +61691,67 @@ class _StringsRu extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Видео сопряжённого устройства';
+  @override
+  String get remote_video_load_failed =>
+      'Не удалось загрузить видео сопряжённого устройства';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Книги сопряжённого устройства';
+  @override
+  String get remote_book_load_failed =>
+      'Не удалось загрузить книги сопряжённого устройства';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -64047,15 +64940,9 @@ class _StringsTh extends _StringsEn {
   String get popup_instant_scroll_hint =>
       'สำหรับจอ e-ink: เลื่อนหน้าต่างค้นคำเป็นระยะคงที่แบบทันทีโดยไม่มีอนิเมชัน';
   @override
-  String get remote_video_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_video_paired_device => 'วิดีโอจากอุปกรณ์ที่จับคู่';
-  @override
   String get remote_video_download => 'ดาวน์โหลดมาที่เครื่องนี้';
   @override
   String get remote_video_downloaded => 'ดาวน์โหลดวิดีโอจากปลายทางแล้ว';
-  @override
-  String get remote_video_load_failed => 'โหลดวิดีโอจากอุปกรณ์ที่จับคู่ไม่ได้';
   @override
   String get remote_video_download_failed => 'ดาวน์โหลดวิดีโอจากปลายทางไม่ได้';
   @override
@@ -64063,15 +64950,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => 'เงา';
   @override
-  String get remote_book_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_book_paired_device => 'หนังสือจากอุปกรณ์ที่จับคู่';
-  @override
   String get remote_book_download => 'ดาวน์โหลดมาที่เครื่องนี้';
   @override
   String get remote_book_downloaded => 'ดาวน์โหลดหนังสือจากปลายทางแล้ว';
-  @override
-  String get remote_book_load_failed => 'โหลดหนังสือจากอุปกรณ์ที่จับคู่ไม่ได้';
   @override
   String get remote_book_download_failed => 'ดาวน์โหลดหนังสือจากปลายทางไม่ได้';
   @override
@@ -65856,12 +66737,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
   @override
-  String get remote_book_cloud => 'Cloud library';
-  @override
-  String get remote_book_cloud_device => 'Cloud backup books';
-  @override
-  String get remote_book_cloud_load_failed => 'Could not load cloud books';
-  @override
   String get video_setting_danmaku_font_scale => 'Font size';
   @override
   String get video_setting_danmaku_font_scale_hint =>
@@ -66047,6 +66922,42 @@ class _StringsTh extends _StringsEn {
   @override
   String get collection_sort_by_imported => 'Sort by import date';
   @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String get collection_open => 'Open';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       'Delete ${n} video(s)? This cannot be undone.';
   @override
@@ -66062,6 +66973,65 @@ class _StringsTh extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'วิดีโอจากอุปกรณ์ที่จับคู่';
+  @override
+  String get remote_video_load_failed => 'โหลดวิดีโอจากอุปกรณ์ที่จับคู่ไม่ได้';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'หนังสือจากอุปกรณ์ที่จับคู่';
+  @override
+  String get remote_book_load_failed => 'โหลดหนังสือจากอุปกรณ์ที่จับคู่ไม่ได้';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -69296,16 +70266,9 @@ class _StringsTr extends _StringsEn {
   String get popup_instant_scroll_hint =>
       'E-mürekkep ekranlar için arama açılır penceresini animasyonlu kaydırma olmadan sabit mesafelerle atlat.';
   @override
-  String get remote_video_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_video_paired_device => 'Eşleştirilmiş cihaz videoları';
-  @override
   String get remote_video_download => 'Bu cihaza indir';
   @override
   String get remote_video_downloaded => 'Uzak video indirildi';
-  @override
-  String get remote_video_load_failed =>
-      'Eşleştirilmiş cihaz videoları yüklenemedi';
   @override
   String get remote_video_download_failed => 'Uzak video indirilemedi';
   @override
@@ -69313,16 +70276,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => 'Gölge';
   @override
-  String get remote_book_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_book_paired_device => 'Eşleştirilmiş cihaz kitapları';
-  @override
   String get remote_book_download => 'Bu cihaza indir';
   @override
   String get remote_book_downloaded => 'Uzak kitap indirildi';
-  @override
-  String get remote_book_load_failed =>
-      'Eşleştirilmiş cihaz kitapları yüklenemedi';
   @override
   String get remote_book_download_failed => 'Uzak kitap indirilemedi';
   @override
@@ -71114,12 +72070,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
   @override
-  String get remote_book_cloud => 'Cloud library';
-  @override
-  String get remote_book_cloud_device => 'Cloud backup books';
-  @override
-  String get remote_book_cloud_load_failed => 'Could not load cloud books';
-  @override
   String get video_setting_danmaku_font_scale => 'Font size';
   @override
   String get video_setting_danmaku_font_scale_hint =>
@@ -71305,6 +72255,42 @@ class _StringsTr extends _StringsEn {
   @override
   String get collection_sort_by_imported => 'Sort by import date';
   @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String get collection_open => 'Open';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       'Delete ${n} video(s)? This cannot be undone.';
   @override
@@ -71320,6 +72306,67 @@ class _StringsTr extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Eşleştirilmiş cihaz videoları';
+  @override
+  String get remote_video_load_failed =>
+      'Eşleştirilmiş cihaz videoları yüklenemedi';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Eşleştirilmiş cihaz kitapları';
+  @override
+  String get remote_book_load_failed =>
+      'Eşleştirilmiş cihaz kitapları yüklenemedi';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -74533,16 +75580,9 @@ class _StringsVi extends _StringsEn {
   String get popup_instant_scroll_hint =>
       'Dành cho màn hình e-ink: cửa sổ tra nhảy theo khoảng cách cố định, không có hiệu ứng cuộn.';
   @override
-  String get remote_video_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_video_paired_device => 'Video trên thiết bị đã ghép nối';
-  @override
   String get remote_video_download => 'Tải về thiết bị này';
   @override
   String get remote_video_downloaded => 'Đã tải video từ thiết bị kia';
-  @override
-  String get remote_video_load_failed =>
-      'Không tải được video của thiết bị đã ghép nối';
   @override
   String get remote_video_download_failed =>
       'Không tải được video từ thiết bị kia';
@@ -74551,16 +75591,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => 'Bóng đổ';
   @override
-  String get remote_book_interconnect => 'Hibiki Interconnect';
-  @override
-  String get remote_book_paired_device => 'Sách trên thiết bị đã ghép nối';
-  @override
   String get remote_book_download => 'Tải về thiết bị này';
   @override
   String get remote_book_downloaded => 'Đã tải sách từ thiết bị kia';
-  @override
-  String get remote_book_load_failed =>
-      'Không tải được sách của thiết bị đã ghép nối';
   @override
   String get remote_book_download_failed =>
       'Không tải được sách từ thiết bị kia';
@@ -76347,12 +77380,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
   @override
-  String get remote_book_cloud => 'Cloud library';
-  @override
-  String get remote_book_cloud_device => 'Cloud backup books';
-  @override
-  String get remote_book_cloud_load_failed => 'Could not load cloud books';
-  @override
   String get video_setting_danmaku_font_scale => 'Font size';
   @override
   String get video_setting_danmaku_font_scale_hint =>
@@ -76538,6 +77565,42 @@ class _StringsVi extends _StringsEn {
   @override
   String get collection_sort_by_imported => 'Sort by import date';
   @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String get collection_open => 'Open';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       'Delete ${n} video(s)? This cannot be undone.';
   @override
@@ -76553,6 +77616,67 @@ class _StringsVi extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Video trên thiết bị đã ghép nối';
+  @override
+  String get remote_video_load_failed =>
+      'Không tải được video của thiết bị đã ghép nối';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Sách trên thiết bị đã ghép nối';
+  @override
+  String get remote_book_load_failed =>
+      'Không tải được sách của thiết bị đã ghép nối';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -79566,15 +80690,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get popup_instant_scroll_hint => '为墨水屏使用：查词弹窗按固定距离瞬时跳动，不播放滚动动画。';
   @override
-  String get remote_video_interconnect => 'Hibiki 互联';
-  @override
-  String get remote_video_paired_device => '对端设备视频';
-  @override
   String get remote_video_download => '下载到本机';
   @override
   String get remote_video_downloaded => '已下载对端视频';
-  @override
-  String get remote_video_load_failed => '无法加载对端设备视频';
   @override
   String get remote_video_download_failed => '无法下载对端视频';
   @override
@@ -79582,15 +80700,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => '阴影';
   @override
-  String get remote_book_interconnect => 'Hibiki 互联';
-  @override
-  String get remote_book_paired_device => '对端设备书籍';
-  @override
   String get remote_book_download => '下载到本机';
   @override
   String get remote_book_downloaded => '已下载对端书籍';
-  @override
-  String get remote_book_load_failed => '无法加载对端设备书籍';
   @override
   String get remote_book_download_failed => '无法下载对端书籍';
   @override
@@ -81241,12 +82353,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get popup_font_size_increase => '放大查词字号';
   @override
-  String get remote_book_cloud => '云端书库';
-  @override
-  String get remote_book_cloud_device => '云盘备份书籍';
-  @override
-  String get remote_book_cloud_load_failed => '无法加载云端书籍';
-  @override
   String get video_setting_danmaku_font_scale => '字号';
   @override
   String get video_setting_danmaku_font_scale_hint => '缩放弹幕文字大小。';
@@ -81417,6 +82523,41 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get collection_sort_by_imported => '按导入时间排序';
   @override
+  String get collection_collapse => '折叠';
+  @override
+  String get collection_expand => '展开';
+  @override
+  String get sync_video_files_warning => '视频文件可能非常大。';
+  @override
+  String get sync_progress_videos => '同步视频';
+  @override
+  String get sync_video_files => '上传视频文件';
+  @override
+  String get sync_show_remote_entries => '显示远端条目';
+  @override
+  String get sync_show_remote_entries_warning =>
+      '把配对设备或云端有、本机没有的书籍和视频显示为可下载/流播的占位卡。';
+  @override
+  String get collection_open => '打开';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      '解散 ${m} 个合集？只解除分组，不删除媒体本体。';
+  @override
+  String batch_dissolve_success({required Object m}) => '已解散 ${m} 个合集。';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      '删除 ${n} 个媒体、解散 ${m} 个合集？此操作无法撤销。';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      '已删除 ${n} 个媒体、解散 ${m} 个合集。';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      '已把 ${n} 项加入合集。';
+  @override
+  String get collection_merge_title => '合并合集';
+  @override
+  String get collection_merged => '已合并合集。';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       '确定删除 ${n} 个视频？此操作不可撤销。';
   @override
@@ -81431,6 +82572,58 @@ class _StringsZhCn extends _StringsEn {
   String get stat_daily_average => '日均';
   @override
   String get handlebar_sentence_audio => '句子音频';
+  @override
+  String get video_mining_image_mode => '视频卡片图片';
+  @override
+  String get video_mining_image_mode_hint => '视频制卡封面用动图还是截图';
+  @override
+  String get video_mining_image_mode_gif => '动图 GIF（字幕片段）';
+  @override
+  String get video_mining_image_mode_current_frame => '制卡时截图';
+  @override
+  String get video_mining_image_mode_subtitle_start => '字幕开头截图';
+  @override
+  String get local_audio_invalid_db => '该文件不是可用的音频数据库（不是本地音频源数据库，或其中没有任何音频）。';
+  @override
+  String get remote_video_interconnect => 'Hibiki 互联';
+  @override
+  String get remote_video_paired_device => '对端设备视频';
+  @override
+  String get remote_video_load_failed => '无法加载对端设备视频';
+  @override
+  String get remote_book_interconnect => 'Hibiki 互联';
+  @override
+  String get remote_book_paired_device => '对端设备书籍';
+  @override
+  String get remote_book_load_failed => '无法加载对端设备书籍';
+  @override
+  String get remote_book_cloud => '云端书库';
+  @override
+  String get remote_book_cloud_device => '云盘备份书籍';
+  @override
+  String get remote_book_cloud_load_failed => '无法加载云端书籍';
+  @override
+  String get popup_dictionary_max_columns => '词典最多列数（自动填充）';
+  @override
+  String get popup_dictionary_max_columns_hint => '每行自动填充词典，最多不超过此列数；窄屏会自动减少';
+  @override
+  String get overlay_lookup_independent_size => '弹出查词窗独立尺寸';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      '让 app 外弹出查词窗使用独立最大尺寸，而非跟随 app 内查词弹窗';
+  @override
+  String get overlay_lookup_max_width => '弹出查词窗最大宽度';
+  @override
+  String get overlay_lookup_max_height => '弹出查词窗最大高度';
+  @override
+  String get extension_popup_independent_size => '浏览器扩展独立尺寸';
+  @override
+  String get extension_popup_independent_size_hint =>
+      '让浏览器扩展查词弹窗使用独立最大尺寸，而非跟随 app 内查词弹窗';
+  @override
+  String get extension_popup_max_width => '扩展弹窗最大宽度';
+  @override
+  String get extension_popup_max_height => '扩展弹窗最大高度';
 }
 
 // Path: retrying_in
@@ -84445,15 +85638,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_instant_scroll_hint => '供電子墨水屏使用：查詞彈窗按固定距離即時跳動，不播放捲動動畫。';
   @override
-  String get remote_video_interconnect => 'Hibiki 互聯';
-  @override
-  String get remote_video_paired_device => '已配對裝置的影片';
-  @override
   String get remote_video_download => '下載到本機';
   @override
   String get remote_video_downloaded => '已下載對端影片';
-  @override
-  String get remote_video_load_failed => '無法載入已配對裝置的影片';
   @override
   String get remote_video_download_failed => '無法下載遠端影片';
   @override
@@ -84461,15 +85648,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_subtitle_shadow => '陰影';
   @override
-  String get remote_book_interconnect => 'Hibiki 互聯';
-  @override
-  String get remote_book_paired_device => '已配對裝置的書籍';
-  @override
   String get remote_book_download => '下載到本機';
   @override
   String get remote_book_downloaded => '已下載對端書籍';
-  @override
-  String get remote_book_load_failed => '無法載入已配對裝置的書籍';
   @override
   String get remote_book_download_failed => '無法下載遠端書籍';
   @override
@@ -86177,12 +87358,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
   @override
-  String get remote_book_cloud => '雲端書庫';
-  @override
-  String get remote_book_cloud_device => '雲端備份書籍';
-  @override
-  String get remote_book_cloud_load_failed => '無法載入雲端書籍';
-  @override
   String get video_setting_danmaku_font_scale => 'Font size';
   @override
   String get video_setting_danmaku_font_scale_hint =>
@@ -86368,6 +87543,42 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get collection_sort_by_imported => 'Sort by import date';
   @override
+  String get collection_collapse => 'Collapse';
+  @override
+  String get collection_expand => 'Expand';
+  @override
+  String get sync_video_files_warning => 'Video files can be very large.';
+  @override
+  String get sync_progress_videos => 'Syncing videos';
+  @override
+  String get sync_video_files => 'Upload video files';
+  @override
+  String get sync_show_remote_entries => 'Show remote entries';
+  @override
+  String get sync_show_remote_entries_warning =>
+      'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+  @override
+  String get collection_open => 'Open';
+  @override
+  String batch_dissolve_confirm({required Object m}) =>
+      'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+  @override
+  String batch_dissolve_success({required Object m}) =>
+      'Dissolved ${m} collection(s).';
+  @override
+  String batch_delete_mixed_confirm({required Object n, required Object m}) =>
+      'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+  @override
+  String batch_delete_mixed_success({required Object n, required Object m}) =>
+      'Deleted ${n} media, dissolved ${m} collection(s).';
+  @override
+  String batch_add_to_collection_success({required Object n}) =>
+      'Added ${n} item(s) to the collection.';
+  @override
+  String get collection_merge_title => 'Merge collections';
+  @override
+  String get collection_merged => 'Collections merged.';
+  @override
   String batch_delete_confirm_video({required Object n}) =>
       '確定刪除 ${n} 個影片？此操作不可撤銷。';
   @override
@@ -86382,6 +87593,65 @@ class _StringsZhHk extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki 互聯';
+  @override
+  String get remote_video_paired_device => '已配對裝置的影片';
+  @override
+  String get remote_video_load_failed => '無法載入已配對裝置的影片';
+  @override
+  String get remote_book_interconnect => 'Hibiki 互聯';
+  @override
+  String get remote_book_paired_device => '已配對裝置的書籍';
+  @override
+  String get remote_book_load_failed => '無法載入已配對裝置的書籍';
+  @override
+  String get remote_book_cloud => '雲端書庫';
+  @override
+  String get remote_book_cloud_device => '雲端備份書籍';
+  @override
+  String get remote_book_cloud_load_failed => '無法載入雲端書籍';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -89338,32 +90608,20 @@ extension on _StringsEn {
         return 'Instant popup scroll';
       case 'popup_instant_scroll_hint':
         return 'Jump the lookup popup by fixed distances without animated scrolling for e-ink screens.';
-      case 'remote_video_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_video_paired_device':
-        return 'Paired device videos';
       case 'remote_video_download':
         return 'Download to this device';
       case 'remote_video_downloaded':
         return 'Downloaded remote video';
-      case 'remote_video_load_failed':
-        return 'Could not load paired device videos';
       case 'remote_video_download_failed':
         return 'Could not download remote video';
       case 'video_setting_subtitle_font_weight':
         return 'Font weight';
       case 'video_setting_subtitle_shadow':
         return 'Shadow';
-      case 'remote_book_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_book_paired_device':
-        return 'Paired device books';
       case 'remote_book_download':
         return 'Download to this device';
       case 'remote_book_downloaded':
         return 'Downloaded remote book';
-      case 'remote_book_load_failed':
-        return 'Could not load paired device books';
       case 'remote_book_download_failed':
         return 'Could not download remote book';
       case 'video_drop_audio_unsupported':
@@ -90936,12 +92194,6 @@ extension on _StringsEn {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return 'Cloud library';
-      case 'remote_book_cloud_device':
-        return 'Cloud backup books';
-      case 'remote_book_cloud_load_failed':
-        return 'Could not load cloud books';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -91108,6 +92360,39 @@ extension on _StringsEn {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) =>
             'Delete ${n} video(s)? This cannot be undone.';
@@ -91123,6 +92408,56 @@ extension on _StringsEn {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Paired device videos';
+      case 'remote_video_load_failed':
+        return 'Could not load paired device videos';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Paired device books';
+      case 'remote_book_load_failed':
+        return 'Could not load paired device books';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -94037,32 +95372,20 @@ extension on _StringsAr {
         return 'تمرير فوري للنافذة المنبثقة';
       case 'popup_instant_scroll_hint':
         return 'نقل نافذة البحث المنبثقة بمسافات ثابتة دون تمرير متحرك، لشاشات الحبر الإلكتروني.';
-      case 'remote_video_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_video_paired_device':
-        return 'فيديوهات الجهاز المقترن';
       case 'remote_video_download':
         return 'التنزيل إلى هذا الجهاز';
       case 'remote_video_downloaded':
         return 'تم تنزيل الفيديو البعيد';
-      case 'remote_video_load_failed':
-        return 'تعذّر تحميل فيديوهات الجهاز المقترن';
       case 'remote_video_download_failed':
         return 'تعذّر تنزيل الفيديو البعيد';
       case 'video_setting_subtitle_font_weight':
         return 'ثقل الخط';
       case 'video_setting_subtitle_shadow':
         return 'الظل';
-      case 'remote_book_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_book_paired_device':
-        return 'كتب الجهاز المقترن';
       case 'remote_book_download':
         return 'التنزيل إلى هذا الجهاز';
       case 'remote_book_downloaded':
         return 'تم تنزيل الكتاب البعيد';
-      case 'remote_book_load_failed':
-        return 'تعذّر تحميل كتب الجهاز المقترن';
       case 'remote_book_download_failed':
         return 'تعذّر تنزيل الكتاب البعيد';
       case 'video_drop_audio_unsupported':
@@ -95637,12 +96960,6 @@ extension on _StringsAr {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return 'Cloud library';
-      case 'remote_book_cloud_device':
-        return 'Cloud backup books';
-      case 'remote_book_cloud_load_failed':
-        return 'Could not load cloud books';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -95809,6 +97126,39 @@ extension on _StringsAr {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) =>
             'Delete ${n} video(s)? This cannot be undone.';
@@ -95824,6 +97174,56 @@ extension on _StringsAr {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'فيديوهات الجهاز المقترن';
+      case 'remote_video_load_failed':
+        return 'تعذّر تحميل فيديوهات الجهاز المقترن';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'كتب الجهاز المقترن';
+      case 'remote_book_load_failed':
+        return 'تعذّر تحميل كتب الجهاز المقترن';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -98756,32 +100156,20 @@ extension on _StringsDe {
         return 'Sofortiges Popup-Scrollen';
       case 'popup_instant_scroll_hint':
         return 'Lässt das Nachschlage-Popup ohne Scroll-Animation um feste Distanzen springen – für E-Ink-Bildschirme.';
-      case 'remote_video_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_video_paired_device':
-        return 'Videos vom gekoppelten Gerät';
       case 'remote_video_download':
         return 'Auf dieses Gerät herunterladen';
       case 'remote_video_downloaded':
         return 'Remote-Video heruntergeladen';
-      case 'remote_video_load_failed':
-        return 'Videos des gekoppelten Geräts konnten nicht geladen werden';
       case 'remote_video_download_failed':
         return 'Remote-Video konnte nicht heruntergeladen werden';
       case 'video_setting_subtitle_font_weight':
         return 'Schriftstärke';
       case 'video_setting_subtitle_shadow':
         return 'Schatten';
-      case 'remote_book_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_book_paired_device':
-        return 'Bücher vom gekoppelten Gerät';
       case 'remote_book_download':
         return 'Auf dieses Gerät herunterladen';
       case 'remote_book_downloaded':
         return 'Remote-Buch heruntergeladen';
-      case 'remote_book_load_failed':
-        return 'Bücher des gekoppelten Geräts konnten nicht geladen werden';
       case 'remote_book_download_failed':
         return 'Remote-Buch konnte nicht heruntergeladen werden';
       case 'video_drop_audio_unsupported':
@@ -100360,12 +101748,6 @@ extension on _StringsDe {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return 'Cloud library';
-      case 'remote_book_cloud_device':
-        return 'Cloud backup books';
-      case 'remote_book_cloud_load_failed':
-        return 'Could not load cloud books';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -100532,6 +101914,39 @@ extension on _StringsDe {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) =>
             'Delete ${n} video(s)? This cannot be undone.';
@@ -100547,6 +101962,56 @@ extension on _StringsDe {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Videos vom gekoppelten Gerät';
+      case 'remote_video_load_failed':
+        return 'Videos des gekoppelten Geräts konnten nicht geladen werden';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Bücher vom gekoppelten Gerät';
+      case 'remote_book_load_failed':
+        return 'Bücher des gekoppelten Geräts konnten nicht geladen werden';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -103477,32 +104942,20 @@ extension on _StringsEs {
         return 'Desplazamiento instantáneo de la ventana';
       case 'popup_instant_scroll_hint':
         return 'Mueve la ventana de consulta a distancias fijas sin animación de desplazamiento, para pantallas de tinta electrónica.';
-      case 'remote_video_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_video_paired_device':
-        return 'Vídeos del dispositivo emparejado';
       case 'remote_video_download':
         return 'Descargar a este dispositivo';
       case 'remote_video_downloaded':
         return 'Vídeo remoto descargado';
-      case 'remote_video_load_failed':
-        return 'No se pudieron cargar los vídeos del dispositivo emparejado';
       case 'remote_video_download_failed':
         return 'No se pudo descargar el vídeo remoto';
       case 'video_setting_subtitle_font_weight':
         return 'Grosor de fuente';
       case 'video_setting_subtitle_shadow':
         return 'Sombra';
-      case 'remote_book_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_book_paired_device':
-        return 'Libros del dispositivo emparejado';
       case 'remote_book_download':
         return 'Descargar a este dispositivo';
       case 'remote_book_downloaded':
         return 'Libro remoto descargado';
-      case 'remote_book_load_failed':
-        return 'No se pudieron cargar los libros del dispositivo emparejado';
       case 'remote_book_download_failed':
         return 'No se pudo descargar el libro remoto';
       case 'video_drop_audio_unsupported':
@@ -105081,12 +106534,6 @@ extension on _StringsEs {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return 'Cloud library';
-      case 'remote_book_cloud_device':
-        return 'Cloud backup books';
-      case 'remote_book_cloud_load_failed':
-        return 'Could not load cloud books';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -105253,6 +106700,39 @@ extension on _StringsEs {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) =>
             'Delete ${n} video(s)? This cannot be undone.';
@@ -105268,6 +106748,56 @@ extension on _StringsEs {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Vídeos del dispositivo emparejado';
+      case 'remote_video_load_failed':
+        return 'No se pudieron cargar los vídeos del dispositivo emparejado';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Libros del dispositivo emparejado';
+      case 'remote_book_load_failed':
+        return 'No se pudieron cargar los libros del dispositivo emparejado';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -108201,32 +109731,20 @@ extension on _StringsFr {
         return 'Défilement instantané de la fenêtre';
       case 'popup_instant_scroll_hint':
         return 'Pour les écrans e-ink : la fenêtre de recherche saute par paliers fixes, sans animation de défilement.';
-      case 'remote_video_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_video_paired_device':
-        return 'Vidéos de l\'appareil appairé';
       case 'remote_video_download':
         return 'Télécharger sur cet appareil';
       case 'remote_video_downloaded':
         return 'Vidéo distante téléchargée';
-      case 'remote_video_load_failed':
-        return 'Impossible de charger les vidéos de l\'appareil appairé';
       case 'remote_video_download_failed':
         return 'Impossible de télécharger la vidéo distante';
       case 'video_setting_subtitle_font_weight':
         return 'Graisse de la police';
       case 'video_setting_subtitle_shadow':
         return 'Ombre';
-      case 'remote_book_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_book_paired_device':
-        return 'Livres de l\'appareil appairé';
       case 'remote_book_download':
         return 'Télécharger sur cet appareil';
       case 'remote_book_downloaded':
         return 'Livre distant téléchargé';
-      case 'remote_book_load_failed':
-        return 'Impossible de charger les livres de l\'appareil appairé';
       case 'remote_book_download_failed':
         return 'Impossible de télécharger le livre distant';
       case 'video_drop_audio_unsupported':
@@ -109809,12 +111327,6 @@ extension on _StringsFr {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return 'Cloud library';
-      case 'remote_book_cloud_device':
-        return 'Cloud backup books';
-      case 'remote_book_cloud_load_failed':
-        return 'Could not load cloud books';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -109981,6 +111493,39 @@ extension on _StringsFr {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) =>
             'Delete ${n} video(s)? This cannot be undone.';
@@ -109996,6 +111541,56 @@ extension on _StringsFr {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Vidéos de l\'appareil appairé';
+      case 'remote_video_load_failed':
+        return 'Impossible de charger les vidéos de l\'appareil appairé';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Livres de l\'appareil appairé';
+      case 'remote_book_load_failed':
+        return 'Impossible de charger les livres de l\'appareil appairé';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -112917,32 +114512,20 @@ extension on _StringsId {
         return 'Gulir popup seketika';
       case 'popup_instant_scroll_hint':
         return 'Pindahkan popup pencarian dengan jarak tetap tanpa animasi gulir untuk layar e-ink.';
-      case 'remote_video_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_video_paired_device':
-        return 'Video perangkat berpasangan';
       case 'remote_video_download':
         return 'Unduh ke perangkat ini';
       case 'remote_video_downloaded':
         return 'Video jarak jauh terunduh';
-      case 'remote_video_load_failed':
-        return 'Tidak dapat memuat video perangkat berpasangan';
       case 'remote_video_download_failed':
         return 'Tidak dapat mengunduh video jarak jauh';
       case 'video_setting_subtitle_font_weight':
         return 'Ketebalan font';
       case 'video_setting_subtitle_shadow':
         return 'Bayangan';
-      case 'remote_book_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_book_paired_device':
-        return 'Buku perangkat berpasangan';
       case 'remote_book_download':
         return 'Unduh ke perangkat ini';
       case 'remote_book_downloaded':
         return 'Buku jarak jauh terunduh';
-      case 'remote_book_load_failed':
-        return 'Tidak dapat memuat buku perangkat berpasangan';
       case 'remote_book_download_failed':
         return 'Tidak dapat mengunduh buku jarak jauh';
       case 'video_drop_audio_unsupported':
@@ -114517,12 +116100,6 @@ extension on _StringsId {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return 'Cloud library';
-      case 'remote_book_cloud_device':
-        return 'Cloud backup books';
-      case 'remote_book_cloud_load_failed':
-        return 'Could not load cloud books';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -114689,6 +116266,39 @@ extension on _StringsId {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) =>
             'Delete ${n} video(s)? This cannot be undone.';
@@ -114704,6 +116314,56 @@ extension on _StringsId {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Video perangkat berpasangan';
+      case 'remote_video_load_failed':
+        return 'Tidak dapat memuat video perangkat berpasangan';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Buku perangkat berpasangan';
+      case 'remote_book_load_failed':
+        return 'Tidak dapat memuat buku perangkat berpasangan';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -117633,32 +119293,20 @@ extension on _StringsIt {
         return 'Scorrimento istantaneo del popup';
       case 'popup_instant_scroll_hint':
         return 'Sposta il popup di ricerca a distanze fisse senza scorrimento animato, per schermi e-ink.';
-      case 'remote_video_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_video_paired_device':
-        return 'Video del dispositivo abbinato';
       case 'remote_video_download':
         return 'Scarica su questo dispositivo';
       case 'remote_video_downloaded':
         return 'Video remoto scaricato';
-      case 'remote_video_load_failed':
-        return 'Impossibile caricare i video del dispositivo abbinato';
       case 'remote_video_download_failed':
         return 'Impossibile scaricare il video remoto';
       case 'video_setting_subtitle_font_weight':
         return 'Spessore carattere';
       case 'video_setting_subtitle_shadow':
         return 'Ombra';
-      case 'remote_book_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_book_paired_device':
-        return 'Libri del dispositivo abbinato';
       case 'remote_book_download':
         return 'Scarica su questo dispositivo';
       case 'remote_book_downloaded':
         return 'Libro remoto scaricato';
-      case 'remote_book_load_failed':
-        return 'Impossibile caricare i libri del dispositivo abbinato';
       case 'remote_book_download_failed':
         return 'Impossibile scaricare il libro remoto';
       case 'video_drop_audio_unsupported':
@@ -119242,12 +120890,6 @@ extension on _StringsIt {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return 'Cloud library';
-      case 'remote_book_cloud_device':
-        return 'Cloud backup books';
-      case 'remote_book_cloud_load_failed':
-        return 'Could not load cloud books';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -119414,6 +121056,39 @@ extension on _StringsIt {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) =>
             'Delete ${n} video(s)? This cannot be undone.';
@@ -119429,6 +121104,56 @@ extension on _StringsIt {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Video del dispositivo abbinato';
+      case 'remote_video_load_failed':
+        return 'Impossibile caricare i video del dispositivo abbinato';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Libri del dispositivo abbinato';
+      case 'remote_book_load_failed':
+        return 'Impossibile caricare i libri del dispositivo abbinato';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -122328,32 +124053,20 @@ extension on _StringsJa {
         return 'ポップアップを瞬時にスクロール';
       case 'popup_instant_scroll_hint':
         return '電子ペーパー向け。辞書ポップアップをスクロールアニメなしで一定距離ずつ瞬時に移動します。';
-      case 'remote_video_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_video_paired_device':
-        return 'ペアリング済みデバイスの動画';
       case 'remote_video_download':
         return 'このデバイスにダウンロード';
       case 'remote_video_downloaded':
         return 'リモート動画をダウンロードしました';
-      case 'remote_video_load_failed':
-        return 'ペアリング済みデバイスの動画を読み込めませんでした';
       case 'remote_video_download_failed':
         return 'リモート動画をダウンロードできませんでした';
       case 'video_setting_subtitle_font_weight':
         return '文字の太さ';
       case 'video_setting_subtitle_shadow':
         return '影';
-      case 'remote_book_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_book_paired_device':
-        return 'ペアリング済みデバイスの書籍';
       case 'remote_book_download':
         return 'このデバイスにダウンロード';
       case 'remote_book_downloaded':
         return 'リモート書籍をダウンロードしました';
-      case 'remote_book_load_failed':
-        return 'ペアリング済みデバイスの書籍を読み込めませんでした';
       case 'remote_book_download_failed':
         return 'リモート書籍をダウンロードできませんでした';
       case 'video_drop_audio_unsupported':
@@ -123925,12 +125638,6 @@ extension on _StringsJa {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return 'Cloud library';
-      case 'remote_book_cloud_device':
-        return 'Cloud backup books';
-      case 'remote_book_cloud_load_failed':
-        return 'Could not load cloud books';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -124097,6 +125804,39 @@ extension on _StringsJa {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) => '${n} 本の動画を削除しますか？この操作は元に戻せません。';
       case 'batch_delete_success_video':
@@ -124111,6 +125851,56 @@ extension on _StringsJa {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'ペアリング済みデバイスの動画';
+      case 'remote_video_load_failed':
+        return 'ペアリング済みデバイスの動画を読み込めませんでした';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'ペアリング済みデバイスの書籍';
+      case 'remote_book_load_failed':
+        return 'ペアリング済みデバイスの書籍を読み込めませんでした';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -127013,32 +128803,20 @@ extension on _StringsKo {
         return '팝업 즉시 스크롤';
       case 'popup_instant_scroll_hint':
         return 'e-잉크 화면용: 단어 찾기 팝업을 스크롤 애니메이션 없이 고정 거리만큼 즉시 이동합니다.';
-      case 'remote_video_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_video_paired_device':
-        return '페어링된 기기의 비디오';
       case 'remote_video_download':
         return '이 기기로 다운로드';
       case 'remote_video_downloaded':
         return '원격 비디오를 다운로드함';
-      case 'remote_video_load_failed':
-        return '페어링된 기기의 비디오를 불러올 수 없습니다';
       case 'remote_video_download_failed':
         return '원격 비디오를 다운로드할 수 없습니다';
       case 'video_setting_subtitle_font_weight':
         return '글자 두께';
       case 'video_setting_subtitle_shadow':
         return '그림자';
-      case 'remote_book_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_book_paired_device':
-        return '페어링된 기기의 책';
       case 'remote_book_download':
         return '이 기기로 다운로드';
       case 'remote_book_downloaded':
         return '원격 책을 다운로드함';
-      case 'remote_book_load_failed':
-        return '페어링된 기기의 책을 불러올 수 없습니다';
       case 'remote_book_download_failed':
         return '원격 책을 다운로드할 수 없습니다';
       case 'video_drop_audio_unsupported':
@@ -128610,12 +130388,6 @@ extension on _StringsKo {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return 'Cloud library';
-      case 'remote_book_cloud_device':
-        return 'Cloud backup books';
-      case 'remote_book_cloud_load_failed':
-        return 'Could not load cloud books';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -128782,6 +130554,39 @@ extension on _StringsKo {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) =>
             'Delete ${n} video(s)? This cannot be undone.';
@@ -128797,6 +130602,56 @@ extension on _StringsKo {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return '페어링된 기기의 비디오';
+      case 'remote_video_load_failed':
+        return '페어링된 기기의 비디오를 불러올 수 없습니다';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return '페어링된 기기의 책';
+      case 'remote_book_load_failed':
+        return '페어링된 기기의 책을 불러올 수 없습니다';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -131723,32 +133578,20 @@ extension on _StringsNl {
         return 'Direct scrollen in pop-up';
       case 'popup_instant_scroll_hint':
         return 'Verspring de opzoek-pop-up over vaste afstanden zonder scrollanimatie, voor e-inkschermen.';
-      case 'remote_video_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_video_paired_device':
-        return 'Video\'s van gekoppeld apparaat';
       case 'remote_video_download':
         return 'Naar dit apparaat downloaden';
       case 'remote_video_downloaded':
         return 'Externe video gedownload';
-      case 'remote_video_load_failed':
-        return 'Kan video\'s van gekoppeld apparaat niet laden';
       case 'remote_video_download_failed':
         return 'Kan externe video niet downloaden';
       case 'video_setting_subtitle_font_weight':
         return 'Tekendikte';
       case 'video_setting_subtitle_shadow':
         return 'Schaduw';
-      case 'remote_book_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_book_paired_device':
-        return 'Boeken van gekoppeld apparaat';
       case 'remote_book_download':
         return 'Naar dit apparaat downloaden';
       case 'remote_book_downloaded':
         return 'Extern boek gedownload';
-      case 'remote_book_load_failed':
-        return 'Kan boeken van gekoppeld apparaat niet laden';
       case 'remote_book_download_failed':
         return 'Kan extern boek niet downloaden';
       case 'video_drop_audio_unsupported':
@@ -133328,12 +135171,6 @@ extension on _StringsNl {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return 'Cloud library';
-      case 'remote_book_cloud_device':
-        return 'Cloud backup books';
-      case 'remote_book_cloud_load_failed':
-        return 'Could not load cloud books';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -133500,6 +135337,39 @@ extension on _StringsNl {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) =>
             'Delete ${n} video(s)? This cannot be undone.';
@@ -133515,6 +135385,56 @@ extension on _StringsNl {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Video\'s van gekoppeld apparaat';
+      case 'remote_video_load_failed':
+        return 'Kan video\'s van gekoppeld apparaat niet laden';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Boeken van gekoppeld apparaat';
+      case 'remote_book_load_failed':
+        return 'Kan boeken van gekoppeld apparaat niet laden';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -136440,32 +138360,20 @@ extension on _StringsPtBr {
         return 'Rolagem instantânea do pop-up';
       case 'popup_instant_scroll_hint':
         return 'Faz o pop-up de consulta saltar por distâncias fixas sem animação de rolagem, para telas de tinta eletrônica.';
-      case 'remote_video_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_video_paired_device':
-        return 'Vídeos do dispositivo pareado';
       case 'remote_video_download':
         return 'Baixar para este dispositivo';
       case 'remote_video_downloaded':
         return 'Vídeo remoto baixado';
-      case 'remote_video_load_failed':
-        return 'Não foi possível carregar os vídeos do dispositivo pareado';
       case 'remote_video_download_failed':
         return 'Não foi possível baixar o vídeo remoto';
       case 'video_setting_subtitle_font_weight':
         return 'Espessura da fonte';
       case 'video_setting_subtitle_shadow':
         return 'Sombra';
-      case 'remote_book_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_book_paired_device':
-        return 'Livros do dispositivo pareado';
       case 'remote_book_download':
         return 'Baixar para este dispositivo';
       case 'remote_book_downloaded':
         return 'Livro remoto baixado';
-      case 'remote_book_load_failed':
-        return 'Não foi possível carregar os livros do dispositivo pareado';
       case 'remote_book_download_failed':
         return 'Não foi possível baixar o livro remoto';
       case 'video_drop_audio_unsupported':
@@ -138043,12 +139951,6 @@ extension on _StringsPtBr {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return 'Cloud library';
-      case 'remote_book_cloud_device':
-        return 'Cloud backup books';
-      case 'remote_book_cloud_load_failed':
-        return 'Could not load cloud books';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -138215,6 +140117,39 @@ extension on _StringsPtBr {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) =>
             'Delete ${n} video(s)? This cannot be undone.';
@@ -138230,6 +140165,56 @@ extension on _StringsPtBr {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Vídeos do dispositivo pareado';
+      case 'remote_video_load_failed':
+        return 'Não foi possível carregar os vídeos do dispositivo pareado';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Livros do dispositivo pareado';
+      case 'remote_book_load_failed':
+        return 'Não foi possível carregar os livros do dispositivo pareado';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -141157,32 +143142,20 @@ extension on _StringsRu {
         return 'Мгновенная прокрутка окна поиска';
       case 'popup_instant_scroll_hint':
         return 'Для экранов e-ink: окно поиска перемещается на фиксированное расстояние без анимации прокрутки.';
-      case 'remote_video_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_video_paired_device':
-        return 'Видео сопряжённого устройства';
       case 'remote_video_download':
         return 'Загрузить на это устройство';
       case 'remote_video_downloaded':
         return 'Видео с устройства загружено';
-      case 'remote_video_load_failed':
-        return 'Не удалось загрузить видео сопряжённого устройства';
       case 'remote_video_download_failed':
         return 'Не удалось загрузить видео с устройства';
       case 'video_setting_subtitle_font_weight':
         return 'Насыщенность шрифта';
       case 'video_setting_subtitle_shadow':
         return 'Тень';
-      case 'remote_book_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_book_paired_device':
-        return 'Книги сопряжённого устройства';
       case 'remote_book_download':
         return 'Загрузить на это устройство';
       case 'remote_book_downloaded':
         return 'Книга с устройства загружена';
-      case 'remote_book_load_failed':
-        return 'Не удалось загрузить книги сопряжённого устройства';
       case 'remote_book_download_failed':
         return 'Не удалось загрузить книгу с устройства';
       case 'video_drop_audio_unsupported':
@@ -142762,12 +144735,6 @@ extension on _StringsRu {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return 'Cloud library';
-      case 'remote_book_cloud_device':
-        return 'Cloud backup books';
-      case 'remote_book_cloud_load_failed':
-        return 'Could not load cloud books';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -142934,6 +144901,39 @@ extension on _StringsRu {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) =>
             'Delete ${n} video(s)? This cannot be undone.';
@@ -142949,6 +144949,56 @@ extension on _StringsRu {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Видео сопряжённого устройства';
+      case 'remote_video_load_failed':
+        return 'Не удалось загрузить видео сопряжённого устройства';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Книги сопряжённого устройства';
+      case 'remote_book_load_failed':
+        return 'Не удалось загрузить книги сопряжённого устройства';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -145863,32 +147913,20 @@ extension on _StringsTh {
         return 'เลื่อนหน้าต่างค้นคำแบบทันที';
       case 'popup_instant_scroll_hint':
         return 'สำหรับจอ e-ink: เลื่อนหน้าต่างค้นคำเป็นระยะคงที่แบบทันทีโดยไม่มีอนิเมชัน';
-      case 'remote_video_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_video_paired_device':
-        return 'วิดีโอจากอุปกรณ์ที่จับคู่';
       case 'remote_video_download':
         return 'ดาวน์โหลดมาที่เครื่องนี้';
       case 'remote_video_downloaded':
         return 'ดาวน์โหลดวิดีโอจากปลายทางแล้ว';
-      case 'remote_video_load_failed':
-        return 'โหลดวิดีโอจากอุปกรณ์ที่จับคู่ไม่ได้';
       case 'remote_video_download_failed':
         return 'ดาวน์โหลดวิดีโอจากปลายทางไม่ได้';
       case 'video_setting_subtitle_font_weight':
         return 'น้ำหนักตัวอักษร';
       case 'video_setting_subtitle_shadow':
         return 'เงา';
-      case 'remote_book_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_book_paired_device':
-        return 'หนังสือจากอุปกรณ์ที่จับคู่';
       case 'remote_book_download':
         return 'ดาวน์โหลดมาที่เครื่องนี้';
       case 'remote_book_downloaded':
         return 'ดาวน์โหลดหนังสือจากปลายทางแล้ว';
-      case 'remote_book_load_failed':
-        return 'โหลดหนังสือจากอุปกรณ์ที่จับคู่ไม่ได้';
       case 'remote_book_download_failed':
         return 'ดาวน์โหลดหนังสือจากปลายทางไม่ได้';
       case 'video_drop_audio_unsupported':
@@ -147463,12 +149501,6 @@ extension on _StringsTh {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return 'Cloud library';
-      case 'remote_book_cloud_device':
-        return 'Cloud backup books';
-      case 'remote_book_cloud_load_failed':
-        return 'Could not load cloud books';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -147635,6 +149667,39 @@ extension on _StringsTh {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) =>
             'Delete ${n} video(s)? This cannot be undone.';
@@ -147650,6 +149715,56 @@ extension on _StringsTh {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'วิดีโอจากอุปกรณ์ที่จับคู่';
+      case 'remote_video_load_failed':
+        return 'โหลดวิดีโอจากอุปกรณ์ที่จับคู่ไม่ได้';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'หนังสือจากอุปกรณ์ที่จับคู่';
+      case 'remote_book_load_failed':
+        return 'โหลดหนังสือจากอุปกรณ์ที่จับคู่ไม่ได้';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -150569,32 +152684,20 @@ extension on _StringsTr {
         return 'Anında açılır pencere kaydırma';
       case 'popup_instant_scroll_hint':
         return 'E-mürekkep ekranlar için arama açılır penceresini animasyonlu kaydırma olmadan sabit mesafelerle atlat.';
-      case 'remote_video_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_video_paired_device':
-        return 'Eşleştirilmiş cihaz videoları';
       case 'remote_video_download':
         return 'Bu cihaza indir';
       case 'remote_video_downloaded':
         return 'Uzak video indirildi';
-      case 'remote_video_load_failed':
-        return 'Eşleştirilmiş cihaz videoları yüklenemedi';
       case 'remote_video_download_failed':
         return 'Uzak video indirilemedi';
       case 'video_setting_subtitle_font_weight':
         return 'Yazı kalınlığı';
       case 'video_setting_subtitle_shadow':
         return 'Gölge';
-      case 'remote_book_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_book_paired_device':
-        return 'Eşleştirilmiş cihaz kitapları';
       case 'remote_book_download':
         return 'Bu cihaza indir';
       case 'remote_book_downloaded':
         return 'Uzak kitap indirildi';
-      case 'remote_book_load_failed':
-        return 'Eşleştirilmiş cihaz kitapları yüklenemedi';
       case 'remote_book_download_failed':
         return 'Uzak kitap indirilemedi';
       case 'video_drop_audio_unsupported':
@@ -152173,12 +154276,6 @@ extension on _StringsTr {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return 'Cloud library';
-      case 'remote_book_cloud_device':
-        return 'Cloud backup books';
-      case 'remote_book_cloud_load_failed':
-        return 'Could not load cloud books';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -152345,6 +154442,39 @@ extension on _StringsTr {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) =>
             'Delete ${n} video(s)? This cannot be undone.';
@@ -152360,6 +154490,56 @@ extension on _StringsTr {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Eşleştirilmiş cihaz videoları';
+      case 'remote_video_load_failed':
+        return 'Eşleştirilmiş cihaz videoları yüklenemedi';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Eşleştirilmiş cihaz kitapları';
+      case 'remote_book_load_failed':
+        return 'Eşleştirilmiş cihaz kitapları yüklenemedi';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -155274,32 +157454,20 @@ extension on _StringsVi {
         return 'Cuộn tức thì cửa sổ tra';
       case 'popup_instant_scroll_hint':
         return 'Dành cho màn hình e-ink: cửa sổ tra nhảy theo khoảng cách cố định, không có hiệu ứng cuộn.';
-      case 'remote_video_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_video_paired_device':
-        return 'Video trên thiết bị đã ghép nối';
       case 'remote_video_download':
         return 'Tải về thiết bị này';
       case 'remote_video_downloaded':
         return 'Đã tải video từ thiết bị kia';
-      case 'remote_video_load_failed':
-        return 'Không tải được video của thiết bị đã ghép nối';
       case 'remote_video_download_failed':
         return 'Không tải được video từ thiết bị kia';
       case 'video_setting_subtitle_font_weight':
         return 'Độ đậm chữ';
       case 'video_setting_subtitle_shadow':
         return 'Bóng đổ';
-      case 'remote_book_interconnect':
-        return 'Hibiki Interconnect';
-      case 'remote_book_paired_device':
-        return 'Sách trên thiết bị đã ghép nối';
       case 'remote_book_download':
         return 'Tải về thiết bị này';
       case 'remote_book_downloaded':
         return 'Đã tải sách từ thiết bị kia';
-      case 'remote_book_load_failed':
-        return 'Không tải được sách của thiết bị đã ghép nối';
       case 'remote_book_download_failed':
         return 'Không tải được sách từ thiết bị kia';
       case 'video_drop_audio_unsupported':
@@ -156877,12 +159045,6 @@ extension on _StringsVi {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return 'Cloud library';
-      case 'remote_book_cloud_device':
-        return 'Cloud backup books';
-      case 'remote_book_cloud_load_failed':
-        return 'Could not load cloud books';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -157049,6 +159211,39 @@ extension on _StringsVi {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) =>
             'Delete ${n} video(s)? This cannot be undone.';
@@ -157064,6 +159259,56 @@ extension on _StringsVi {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Video trên thiết bị đã ghép nối';
+      case 'remote_video_load_failed':
+        return 'Không tải được video của thiết bị đã ghép nối';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Sách trên thiết bị đã ghép nối';
+      case 'remote_book_load_failed':
+        return 'Không tải được sách của thiết bị đã ghép nối';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -159957,32 +162202,20 @@ extension on _StringsZhCn {
         return '查词弹窗瞬时滚动';
       case 'popup_instant_scroll_hint':
         return '为墨水屏使用：查词弹窗按固定距离瞬时跳动，不播放滚动动画。';
-      case 'remote_video_interconnect':
-        return 'Hibiki 互联';
-      case 'remote_video_paired_device':
-        return '对端设备视频';
       case 'remote_video_download':
         return '下载到本机';
       case 'remote_video_downloaded':
         return '已下载对端视频';
-      case 'remote_video_load_failed':
-        return '无法加载对端设备视频';
       case 'remote_video_download_failed':
         return '无法下载对端视频';
       case 'video_setting_subtitle_font_weight':
         return '字重';
       case 'video_setting_subtitle_shadow':
         return '阴影';
-      case 'remote_book_interconnect':
-        return 'Hibiki 互联';
-      case 'remote_book_paired_device':
-        return '对端设备书籍';
       case 'remote_book_download':
         return '下载到本机';
       case 'remote_book_downloaded':
         return '已下载对端书籍';
-      case 'remote_book_load_failed':
-        return '无法加载对端设备书籍';
       case 'remote_book_download_failed':
         return '无法下载对端书籍';
       case 'video_drop_audio_unsupported':
@@ -161547,12 +163780,6 @@ extension on _StringsZhCn {
         return '缩小查词字号';
       case 'popup_font_size_increase':
         return '放大查词字号';
-      case 'remote_book_cloud':
-        return '云端书库';
-      case 'remote_book_cloud_device':
-        return '云盘备份书籍';
-      case 'remote_book_cloud_load_failed':
-        return '无法加载云端书籍';
       case 'video_setting_danmaku_font_scale':
         return '字号';
       case 'video_setting_danmaku_font_scale_hint':
@@ -161719,6 +163946,38 @@ extension on _StringsZhCn {
         return '按名称排序';
       case 'collection_sort_by_imported':
         return '按导入时间排序';
+      case 'collection_collapse':
+        return '折叠';
+      case 'collection_expand':
+        return '展开';
+      case 'sync_video_files_warning':
+        return '视频文件可能非常大。';
+      case 'sync_progress_videos':
+        return '同步视频';
+      case 'sync_video_files':
+        return '上传视频文件';
+      case 'sync_show_remote_entries':
+        return '显示远端条目';
+      case 'sync_show_remote_entries_warning':
+        return '把配对设备或云端有、本机没有的书籍和视频显示为可下载/流播的占位卡。';
+      case 'collection_open':
+        return '打开';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) => '解散 ${m} 个合集？只解除分组，不删除媒体本体。';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => '已解散 ${m} 个合集。';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            '删除 ${n} 个媒体、解散 ${m} 个合集？此操作无法撤销。';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            '已删除 ${n} 个媒体、解散 ${m} 个合集。';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => '已把 ${n} 项加入合集。';
+      case 'collection_merge_title':
+        return '合并合集';
+      case 'collection_merged':
+        return '已合并合集。';
       case 'batch_delete_confirm_video':
         return ({required Object n}) => '确定删除 ${n} 个视频？此操作不可撤销。';
       case 'batch_delete_success_video':
@@ -161733,6 +163992,56 @@ extension on _StringsZhCn {
         return '日均';
       case 'handlebar_sentence_audio':
         return '句子音频';
+      case 'video_mining_image_mode':
+        return '视频卡片图片';
+      case 'video_mining_image_mode_hint':
+        return '视频制卡封面用动图还是截图';
+      case 'video_mining_image_mode_gif':
+        return '动图 GIF（字幕片段）';
+      case 'video_mining_image_mode_current_frame':
+        return '制卡时截图';
+      case 'video_mining_image_mode_subtitle_start':
+        return '字幕开头截图';
+      case 'local_audio_invalid_db':
+        return '该文件不是可用的音频数据库（不是本地音频源数据库，或其中没有任何音频）。';
+      case 'remote_video_interconnect':
+        return 'Hibiki 互联';
+      case 'remote_video_paired_device':
+        return '对端设备视频';
+      case 'remote_video_load_failed':
+        return '无法加载对端设备视频';
+      case 'remote_book_interconnect':
+        return 'Hibiki 互联';
+      case 'remote_book_paired_device':
+        return '对端设备书籍';
+      case 'remote_book_load_failed':
+        return '无法加载对端设备书籍';
+      case 'remote_book_cloud':
+        return '云端书库';
+      case 'remote_book_cloud_device':
+        return '云盘备份书籍';
+      case 'remote_book_cloud_load_failed':
+        return '无法加载云端书籍';
+      case 'popup_dictionary_max_columns':
+        return '词典最多列数（自动填充）';
+      case 'popup_dictionary_max_columns_hint':
+        return '每行自动填充词典，最多不超过此列数；窄屏会自动减少';
+      case 'overlay_lookup_independent_size':
+        return '弹出查词窗独立尺寸';
+      case 'overlay_lookup_independent_size_hint':
+        return '让 app 外弹出查词窗使用独立最大尺寸，而非跟随 app 内查词弹窗';
+      case 'overlay_lookup_max_width':
+        return '弹出查词窗最大宽度';
+      case 'overlay_lookup_max_height':
+        return '弹出查词窗最大高度';
+      case 'extension_popup_independent_size':
+        return '浏览器扩展独立尺寸';
+      case 'extension_popup_independent_size_hint':
+        return '让浏览器扩展查词弹窗使用独立最大尺寸，而非跟随 app 内查词弹窗';
+      case 'extension_popup_max_width':
+        return '扩展弹窗最大宽度';
+      case 'extension_popup_max_height':
+        return '扩展弹窗最大高度';
       default:
         return null;
     }
@@ -164627,32 +166936,20 @@ extension on _StringsZhHk {
         return '查詞彈窗即時捲動';
       case 'popup_instant_scroll_hint':
         return '供電子墨水屏使用：查詞彈窗按固定距離即時跳動，不播放捲動動畫。';
-      case 'remote_video_interconnect':
-        return 'Hibiki 互聯';
-      case 'remote_video_paired_device':
-        return '已配對裝置的影片';
       case 'remote_video_download':
         return '下載到本機';
       case 'remote_video_downloaded':
         return '已下載對端影片';
-      case 'remote_video_load_failed':
-        return '無法載入已配對裝置的影片';
       case 'remote_video_download_failed':
         return '無法下載遠端影片';
       case 'video_setting_subtitle_font_weight':
         return '字型粗幼';
       case 'video_setting_subtitle_shadow':
         return '陰影';
-      case 'remote_book_interconnect':
-        return 'Hibiki 互聯';
-      case 'remote_book_paired_device':
-        return '已配對裝置的書籍';
       case 'remote_book_download':
         return '下載到本機';
       case 'remote_book_downloaded':
         return '已下載對端書籍';
-      case 'remote_book_load_failed':
-        return '無法載入已配對裝置的書籍';
       case 'remote_book_download_failed':
         return '無法下載遠端書籍';
       case 'video_drop_audio_unsupported':
@@ -166221,12 +168518,6 @@ extension on _StringsZhHk {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
-      case 'remote_book_cloud':
-        return '雲端書庫';
-      case 'remote_book_cloud_device':
-        return '雲端備份書籍';
-      case 'remote_book_cloud_load_failed':
-        return '無法載入雲端書籍';
       case 'video_setting_danmaku_font_scale':
         return 'Font size';
       case 'video_setting_danmaku_font_scale_hint':
@@ -166393,6 +168684,39 @@ extension on _StringsZhHk {
         return 'Sort by name';
       case 'collection_sort_by_imported':
         return 'Sort by import date';
+      case 'collection_collapse':
+        return 'Collapse';
+      case 'collection_expand':
+        return 'Expand';
+      case 'sync_video_files_warning':
+        return 'Video files can be very large.';
+      case 'sync_progress_videos':
+        return 'Syncing videos';
+      case 'sync_video_files':
+        return 'Upload video files';
+      case 'sync_show_remote_entries':
+        return 'Show remote entries';
+      case 'sync_show_remote_entries_warning':
+        return 'Show books and videos that exist on paired devices or the cloud as placeholder cards you can download or stream.';
+      case 'collection_open':
+        return 'Open';
+      case 'batch_dissolve_confirm':
+        return ({required Object m}) =>
+            'Dissolve ${m} collection(s)? Grouping is removed; the media is kept.';
+      case 'batch_dissolve_success':
+        return ({required Object m}) => 'Dissolved ${m} collection(s).';
+      case 'batch_delete_mixed_confirm':
+        return ({required Object n, required Object m}) =>
+            'Delete ${n} media and dissolve ${m} collection(s)? This cannot be undone.';
+      case 'batch_delete_mixed_success':
+        return ({required Object n, required Object m}) =>
+            'Deleted ${n} media, dissolved ${m} collection(s).';
+      case 'batch_add_to_collection_success':
+        return ({required Object n}) => 'Added ${n} item(s) to the collection.';
+      case 'collection_merge_title':
+        return 'Merge collections';
+      case 'collection_merged':
+        return 'Collections merged.';
       case 'batch_delete_confirm_video':
         return ({required Object n}) => '確定刪除 ${n} 個影片？此操作不可撤銷。';
       case 'batch_delete_success_video':
@@ -166407,6 +168731,56 @@ extension on _StringsZhHk {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki 互聯';
+      case 'remote_video_paired_device':
+        return '已配對裝置的影片';
+      case 'remote_video_load_failed':
+        return '無法載入已配對裝置的影片';
+      case 'remote_book_interconnect':
+        return 'Hibiki 互聯';
+      case 'remote_book_paired_device':
+        return '已配對裝置的書籍';
+      case 'remote_book_load_failed':
+        return '無法載入已配對裝置的書籍';
+      case 'remote_book_cloud':
+        return '雲端書庫';
+      case 'remote_book_cloud_device':
+        return '雲端備份書籍';
+      case 'remote_book_cloud_load_failed':
+        return '無法載入雲端書籍';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
