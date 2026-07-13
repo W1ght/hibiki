@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39661 (2333 per locale)
+/// Strings: 39695 (2335 per locale)
 ///
-/// Built on 2026-07-13 at 15:49 UTC
+/// Built on 2026-07-13 at 18:38 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3091,6 +3091,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -8375,6 +8377,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -13782,6 +13788,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -19206,6 +19216,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -24649,6 +24663,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -29994,6 +30012,10 @@ class _StringsId extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -35400,6 +35422,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -40531,6 +40557,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -45667,6 +45697,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -51041,6 +51075,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -56438,6 +56476,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -61810,6 +61852,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -67095,6 +67141,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -72435,6 +72485,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -77750,6 +77804,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -82701,6 +82759,10 @@ class _StringsZhCn extends _StringsEn {
   String get desktop_clipboard_auto_lookup => '复制后自动查词';
   @override
   String get desktop_clipboard_auto_lookup_hint => '关闭后面板只显示复制到的文字，点词才查词。';
+  @override
+  String get video_subtitle_filter_favorites_empty => '暂无收藏的句子';
+  @override
+  String get video_subtitle_filter_selected_empty => '还未选择句子';
 }
 
 // Path: retrying_in
@@ -87734,6 +87796,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
 }
 
 // Path: retrying_in
@@ -92544,6 +92610,10 @@ extension on _StringsEn {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
@@ -97314,6 +97384,10 @@ extension on _StringsAr {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
@@ -102106,6 +102180,10 @@ extension on _StringsDe {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
@@ -106896,6 +106974,10 @@ extension on _StringsEs {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
@@ -111693,6 +111775,10 @@ extension on _StringsFr {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
@@ -116470,6 +116556,10 @@ extension on _StringsId {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
@@ -121264,6 +121354,10 @@ extension on _StringsIt {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
@@ -126015,6 +126109,10 @@ extension on _StringsJa {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
@@ -130770,6 +130868,10 @@ extension on _StringsKo {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
@@ -135557,6 +135659,10 @@ extension on _StringsNl {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
@@ -140341,6 +140447,10 @@ extension on _StringsPtBr {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
@@ -145129,6 +145239,10 @@ extension on _StringsRu {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
@@ -149899,6 +150013,10 @@ extension on _StringsTh {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
@@ -154678,6 +154796,10 @@ extension on _StringsTr {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
@@ -159451,6 +159573,10 @@ extension on _StringsVi {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
@@ -164188,6 +164314,10 @@ extension on _StringsZhCn {
         return '复制后自动查词';
       case 'desktop_clipboard_auto_lookup_hint':
         return '关闭后面板只显示复制到的文字，点词才查词。';
+      case 'video_subtitle_filter_favorites_empty':
+        return '暂无收藏的句子';
+      case 'video_subtitle_filter_selected_empty':
+        return '还未选择句子';
       default:
         return null;
     }
@@ -168931,6 +169061,10 @@ extension on _StringsZhHk {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       default:
         return null;
     }
