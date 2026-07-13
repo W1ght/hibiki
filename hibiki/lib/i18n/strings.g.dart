@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39304 (2312 per locale)
+/// Strings: 39627 (2331 per locale)
 ///
-/// Built on 2026-07-13 at 09:10 UTC
+/// Built on 2026-07-13 at 09:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3063,6 +3063,31 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Screenshot at subtitle start';
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  String get remote_video_paired_device => 'Paired device videos';
+  String get remote_video_load_failed => 'Could not load paired device videos';
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  String get remote_book_paired_device => 'Paired device books';
+  String get remote_book_load_failed => 'Could not load paired device books';
+  String get remote_book_cloud => 'Cloud library';
+  String get remote_book_cloud_device => 'Cloud backup books';
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  String get extension_popup_max_width => 'Extension popup max width';
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -8298,6 +8323,50 @@ class _StringsAr extends _StringsEn {
   @override
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'فيديوهات الجهاز المقترن';
+  @override
+  String get remote_video_load_failed => 'تعذّر تحميل فيديوهات الجهاز المقترن';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'كتب الجهاز المقترن';
+  @override
+  String get remote_book_load_failed => 'تعذّر تحميل كتب الجهاز المقترن';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -13654,6 +13723,52 @@ class _StringsDe extends _StringsEn {
   @override
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Videos vom gekoppelten Gerät';
+  @override
+  String get remote_video_load_failed =>
+      'Videos des gekoppelten Geräts konnten nicht geladen werden';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Bücher vom gekoppelten Gerät';
+  @override
+  String get remote_book_load_failed =>
+      'Bücher des gekoppelten Geräts konnten nicht geladen werden';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -19027,6 +19142,52 @@ class _StringsEs extends _StringsEn {
   @override
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Vídeos del dispositivo emparejado';
+  @override
+  String get remote_video_load_failed =>
+      'No se pudieron cargar los vídeos del dispositivo emparejado';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Libros del dispositivo emparejado';
+  @override
+  String get remote_book_load_failed =>
+      'No se pudieron cargar los libros del dispositivo emparejado';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -24419,6 +24580,52 @@ class _StringsFr extends _StringsEn {
   @override
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Vidéos de l\'appareil appairé';
+  @override
+  String get remote_video_load_failed =>
+      'Impossible de charger les vidéos de l\'appareil appairé';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Livres de l\'appareil appairé';
+  @override
+  String get remote_book_load_failed =>
+      'Impossible de charger les livres de l\'appareil appairé';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -29713,6 +29920,52 @@ class _StringsId extends _StringsEn {
   @override
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Video perangkat berpasangan';
+  @override
+  String get remote_video_load_failed =>
+      'Tidak dapat memuat video perangkat berpasangan';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Buku perangkat berpasangan';
+  @override
+  String get remote_book_load_failed =>
+      'Tidak dapat memuat buku perangkat berpasangan';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -35068,6 +35321,52 @@ class _StringsIt extends _StringsEn {
   @override
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Video del dispositivo abbinato';
+  @override
+  String get remote_video_load_failed =>
+      'Impossibile caricare i video del dispositivo abbinato';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Libri del dispositivo abbinato';
+  @override
+  String get remote_book_load_failed =>
+      'Impossibile caricare i libri del dispositivo abbinato';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -40150,6 +40449,50 @@ class _StringsJa extends _StringsEn {
   @override
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'ペアリング済みデバイスの動画';
+  @override
+  String get remote_video_load_failed => 'ペアリング済みデバイスの動画を読み込めませんでした';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'ペアリング済みデバイスの書籍';
+  @override
+  String get remote_book_load_failed => 'ペアリング済みデバイスの書籍を読み込めませんでした';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -45237,6 +45580,50 @@ class _StringsKo extends _StringsEn {
   @override
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => '페어링된 기기의 비디오';
+  @override
+  String get remote_video_load_failed => '페어링된 기기의 비디오를 불러올 수 없습니다';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => '페어링된 기기의 책';
+  @override
+  String get remote_book_load_failed => '페어링된 기기의 책을 불러올 수 없습니다';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -50560,6 +50947,52 @@ class _StringsNl extends _StringsEn {
   @override
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Video\'s van gekoppeld apparaat';
+  @override
+  String get remote_video_load_failed =>
+      'Kan video\'s van gekoppeld apparaat niet laden';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Boeken van gekoppeld apparaat';
+  @override
+  String get remote_book_load_failed =>
+      'Kan boeken van gekoppeld apparaat niet laden';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -55906,6 +56339,52 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Vídeos do dispositivo pareado';
+  @override
+  String get remote_video_load_failed =>
+      'Não foi possível carregar os vídeos do dispositivo pareado';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Livros do dispositivo pareado';
+  @override
+  String get remote_book_load_failed =>
+      'Não foi possível carregar os livros do dispositivo pareado';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -61227,6 +61706,52 @@ class _StringsRu extends _StringsEn {
   @override
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Видео сопряжённого устройства';
+  @override
+  String get remote_video_load_failed =>
+      'Не удалось загрузить видео сопряжённого устройства';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Книги сопряжённого устройства';
+  @override
+  String get remote_book_load_failed =>
+      'Не удалось загрузить книги сопряжённого устройства';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -66463,6 +66988,50 @@ class _StringsTh extends _StringsEn {
   @override
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'วิดีโอจากอุปกรณ์ที่จับคู่';
+  @override
+  String get remote_video_load_failed => 'โหลดวิดีโอจากอุปกรณ์ที่จับคู่ไม่ได้';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'หนังสือจากอุปกรณ์ที่จับคู่';
+  @override
+  String get remote_book_load_failed => 'โหลดหนังสือจากอุปกรณ์ที่จับคู่ไม่ได้';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -71752,6 +72321,52 @@ class _StringsTr extends _StringsEn {
   @override
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Eşleştirilmiş cihaz videoları';
+  @override
+  String get remote_video_load_failed =>
+      'Eşleştirilmiş cihaz videoları yüklenemedi';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Eşleştirilmiş cihaz kitapları';
+  @override
+  String get remote_book_load_failed =>
+      'Eşleştirilmiş cihaz kitapları yüklenemedi';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -77016,6 +77631,52 @@ class _StringsVi extends _StringsEn {
   @override
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_video_paired_device => 'Video trên thiết bị đã ghép nối';
+  @override
+  String get remote_video_load_failed =>
+      'Không tải được video của thiết bị đã ghép nối';
+  @override
+  String get remote_book_interconnect => 'Hibiki Interconnect';
+  @override
+  String get remote_book_paired_device => 'Sách trên thiết bị đã ghép nối';
+  @override
+  String get remote_book_load_failed =>
+      'Không tải được sách của thiết bị đã ghép nối';
+  @override
+  String get remote_book_cloud => 'Cloud library';
+  @override
+  String get remote_book_cloud_device => 'Cloud backup books';
+  @override
+  String get remote_book_cloud_load_failed => 'Could not load cloud books';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -81923,6 +82584,46 @@ class _StringsZhCn extends _StringsEn {
   String get video_mining_image_mode_subtitle_start => '字幕开头截图';
   @override
   String get local_audio_invalid_db => '该文件不是可用的音频数据库（不是本地音频源数据库，或其中没有任何音频）。';
+  @override
+  String get remote_video_interconnect => 'Hibiki 互联';
+  @override
+  String get remote_video_paired_device => '对端设备视频';
+  @override
+  String get remote_video_load_failed => '无法加载对端设备视频';
+  @override
+  String get remote_book_interconnect => 'Hibiki 互联';
+  @override
+  String get remote_book_paired_device => '对端设备书籍';
+  @override
+  String get remote_book_load_failed => '无法加载对端设备书籍';
+  @override
+  String get remote_book_cloud => '云端书库';
+  @override
+  String get remote_book_cloud_device => '云盘备份书籍';
+  @override
+  String get remote_book_cloud_load_failed => '无法加载云端书籍';
+  @override
+  String get popup_dictionary_max_columns => '词典最多列数（自动填充）';
+  @override
+  String get popup_dictionary_max_columns_hint => '每行自动填充词典，最多不超过此列数；窄屏会自动减少';
+  @override
+  String get overlay_lookup_independent_size => '弹出查词窗独立尺寸';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      '让 app 外弹出查词窗使用独立最大尺寸，而非跟随 app 内查词弹窗';
+  @override
+  String get overlay_lookup_max_width => '弹出查词窗最大宽度';
+  @override
+  String get overlay_lookup_max_height => '弹出查词窗最大高度';
+  @override
+  String get extension_popup_independent_size => '浏览器扩展独立尺寸';
+  @override
+  String get extension_popup_independent_size_hint =>
+      '让浏览器扩展查词弹窗使用独立最大尺寸，而非跟随 app 内查词弹窗';
+  @override
+  String get extension_popup_max_width => '扩展弹窗最大宽度';
+  @override
+  String get extension_popup_max_height => '扩展弹窗最大高度';
 }
 
 // Path: retrying_in
@@ -86907,6 +87608,50 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get local_audio_invalid_db =>
       'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+  @override
+  String get remote_video_interconnect => 'Hibiki 互聯';
+  @override
+  String get remote_video_paired_device => '已配對裝置的影片';
+  @override
+  String get remote_video_load_failed => '無法載入已配對裝置的影片';
+  @override
+  String get remote_book_interconnect => 'Hibiki 互聯';
+  @override
+  String get remote_book_paired_device => '已配對裝置的書籍';
+  @override
+  String get remote_book_load_failed => '無法載入已配對裝置的書籍';
+  @override
+  String get remote_book_cloud => '雲端書庫';
+  @override
+  String get remote_book_cloud_device => '雲端備份書籍';
+  @override
+  String get remote_book_cloud_load_failed => '無法載入雲端書籍';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -91675,6 +92420,44 @@ extension on _StringsEn {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Paired device videos';
+      case 'remote_video_load_failed':
+        return 'Could not load paired device videos';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Paired device books';
+      case 'remote_book_load_failed':
+        return 'Could not load paired device books';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -96403,6 +97186,44 @@ extension on _StringsAr {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'فيديوهات الجهاز المقترن';
+      case 'remote_video_load_failed':
+        return 'تعذّر تحميل فيديوهات الجهاز المقترن';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'كتب الجهاز المقترن';
+      case 'remote_book_load_failed':
+        return 'تعذّر تحميل كتب الجهاز المقترن';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -101153,6 +101974,44 @@ extension on _StringsDe {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Videos vom gekoppelten Gerät';
+      case 'remote_video_load_failed':
+        return 'Videos des gekoppelten Geräts konnten nicht geladen werden';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Bücher vom gekoppelten Gerät';
+      case 'remote_book_load_failed':
+        return 'Bücher des gekoppelten Geräts konnten nicht geladen werden';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -105901,6 +106760,44 @@ extension on _StringsEs {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Vídeos del dispositivo emparejado';
+      case 'remote_video_load_failed':
+        return 'No se pudieron cargar los vídeos del dispositivo emparejado';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Libros del dispositivo emparejado';
+      case 'remote_book_load_failed':
+        return 'No se pudieron cargar los libros del dispositivo emparejado';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -110656,6 +111553,44 @@ extension on _StringsFr {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Vidéos de l\'appareil appairé';
+      case 'remote_video_load_failed':
+        return 'Impossible de charger les vidéos de l\'appareil appairé';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Livres de l\'appareil appairé';
+      case 'remote_book_load_failed':
+        return 'Impossible de charger les livres de l\'appareil appairé';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -115391,6 +116326,44 @@ extension on _StringsId {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Video perangkat berpasangan';
+      case 'remote_video_load_failed':
+        return 'Tidak dapat memuat video perangkat berpasangan';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Buku perangkat berpasangan';
+      case 'remote_book_load_failed':
+        return 'Tidak dapat memuat buku perangkat berpasangan';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -120143,6 +121116,44 @@ extension on _StringsIt {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Video del dispositivo abbinato';
+      case 'remote_video_load_failed':
+        return 'Impossibile caricare i video del dispositivo abbinato';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Libri del dispositivo abbinato';
+      case 'remote_book_load_failed':
+        return 'Impossibile caricare i libri del dispositivo abbinato';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -124852,6 +125863,44 @@ extension on _StringsJa {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'ペアリング済みデバイスの動画';
+      case 'remote_video_load_failed':
+        return 'ペアリング済みデバイスの動画を読み込めませんでした';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'ペアリング済みデバイスの書籍';
+      case 'remote_book_load_failed':
+        return 'ペアリング済みデバイスの書籍を読み込めませんでした';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -129565,6 +130614,44 @@ extension on _StringsKo {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return '페어링된 기기의 비디오';
+      case 'remote_video_load_failed':
+        return '페어링된 기기의 비디오를 불러올 수 없습니다';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return '페어링된 기기의 책';
+      case 'remote_book_load_failed':
+        return '페어링된 기기의 책을 불러올 수 없습니다';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -134310,6 +135397,44 @@ extension on _StringsNl {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Video\'s van gekoppeld apparaat';
+      case 'remote_video_load_failed':
+        return 'Kan video\'s van gekoppeld apparaat niet laden';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Boeken van gekoppeld apparaat';
+      case 'remote_book_load_failed':
+        return 'Kan boeken van gekoppeld apparaat niet laden';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -139052,6 +140177,44 @@ extension on _StringsPtBr {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Vídeos do dispositivo pareado';
+      case 'remote_video_load_failed':
+        return 'Não foi possível carregar os vídeos do dispositivo pareado';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Livros do dispositivo pareado';
+      case 'remote_book_load_failed':
+        return 'Não foi possível carregar os livros do dispositivo pareado';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -143798,6 +144961,44 @@ extension on _StringsRu {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Видео сопряжённого устройства';
+      case 'remote_video_load_failed':
+        return 'Не удалось загрузить видео сопряжённого устройства';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Книги сопряжённого устройства';
+      case 'remote_book_load_failed':
+        return 'Не удалось загрузить книги сопряжённого устройства';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -148526,6 +149727,44 @@ extension on _StringsTh {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'วิดีโอจากอุปกรณ์ที่จับคู่';
+      case 'remote_video_load_failed':
+        return 'โหลดวิดีโอจากอุปกรณ์ที่จับคู่ไม่ได้';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'หนังสือจากอุปกรณ์ที่จับคู่';
+      case 'remote_book_load_failed':
+        return 'โหลดหนังสือจากอุปกรณ์ที่จับคู่ไม่ได้';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -153263,6 +154502,44 @@ extension on _StringsTr {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Eşleştirilmiş cihaz videoları';
+      case 'remote_video_load_failed':
+        return 'Eşleştirilmiş cihaz videoları yüklenemedi';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Eşleştirilmiş cihaz kitapları';
+      case 'remote_book_load_failed':
+        return 'Eşleştirilmiş cihaz kitapları yüklenemedi';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -157994,6 +159271,44 @@ extension on _StringsVi {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_video_paired_device':
+        return 'Video trên thiết bị đã ghép nối';
+      case 'remote_video_load_failed':
+        return 'Không tải được video của thiết bị đã ghép nối';
+      case 'remote_book_interconnect':
+        return 'Hibiki Interconnect';
+      case 'remote_book_paired_device':
+        return 'Sách trên thiết bị đã ghép nối';
+      case 'remote_book_load_failed':
+        return 'Không tải được sách của thiết bị đã ghép nối';
+      case 'remote_book_cloud':
+        return 'Cloud library';
+      case 'remote_book_cloud_device':
+        return 'Cloud backup books';
+      case 'remote_book_cloud_load_failed':
+        return 'Could not load cloud books';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -162689,6 +164004,44 @@ extension on _StringsZhCn {
         return '字幕开头截图';
       case 'local_audio_invalid_db':
         return '该文件不是可用的音频数据库（不是本地音频源数据库，或其中没有任何音频）。';
+      case 'remote_video_interconnect':
+        return 'Hibiki 互联';
+      case 'remote_video_paired_device':
+        return '对端设备视频';
+      case 'remote_video_load_failed':
+        return '无法加载对端设备视频';
+      case 'remote_book_interconnect':
+        return 'Hibiki 互联';
+      case 'remote_book_paired_device':
+        return '对端设备书籍';
+      case 'remote_book_load_failed':
+        return '无法加载对端设备书籍';
+      case 'remote_book_cloud':
+        return '云端书库';
+      case 'remote_book_cloud_device':
+        return '云盘备份书籍';
+      case 'remote_book_cloud_load_failed':
+        return '无法加载云端书籍';
+      case 'popup_dictionary_max_columns':
+        return '词典最多列数（自动填充）';
+      case 'popup_dictionary_max_columns_hint':
+        return '每行自动填充词典，最多不超过此列数；窄屏会自动减少';
+      case 'overlay_lookup_independent_size':
+        return '弹出查词窗独立尺寸';
+      case 'overlay_lookup_independent_size_hint':
+        return '让 app 外弹出查词窗使用独立最大尺寸，而非跟随 app 内查词弹窗';
+      case 'overlay_lookup_max_width':
+        return '弹出查词窗最大宽度';
+      case 'overlay_lookup_max_height':
+        return '弹出查词窗最大高度';
+      case 'extension_popup_independent_size':
+        return '浏览器扩展独立尺寸';
+      case 'extension_popup_independent_size_hint':
+        return '让浏览器扩展查词弹窗使用独立最大尺寸，而非跟随 app 内查词弹窗';
+      case 'extension_popup_max_width':
+        return '扩展弹窗最大宽度';
+      case 'extension_popup_max_height':
+        return '扩展弹窗最大高度';
       default:
         return null;
     }
@@ -167390,6 +168743,44 @@ extension on _StringsZhHk {
         return 'Screenshot at subtitle start';
       case 'local_audio_invalid_db':
         return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
+      case 'remote_video_interconnect':
+        return 'Hibiki 互聯';
+      case 'remote_video_paired_device':
+        return '已配對裝置的影片';
+      case 'remote_video_load_failed':
+        return '無法載入已配對裝置的影片';
+      case 'remote_book_interconnect':
+        return 'Hibiki 互聯';
+      case 'remote_book_paired_device':
+        return '已配對裝置的書籍';
+      case 'remote_book_load_failed':
+        return '無法載入已配對裝置的書籍';
+      case 'remote_book_cloud':
+        return '雲端書庫';
+      case 'remote_book_cloud_device':
+        return '雲端備份書籍';
+      case 'remote_book_cloud_load_failed':
+        return '無法載入雲端書籍';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
