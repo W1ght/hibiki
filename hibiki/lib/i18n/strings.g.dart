@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39083 (2299 per locale)
+/// Strings: 39100 (2300 per locale)
 ///
-/// Built on 2026-07-12 at 20:35 UTC
+/// Built on 2026-07-13 at 03:56 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2620,7 +2620,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get card_mined_unmapped_sentence_field =>
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   String get audiobook_export_clip_saved => 'Clip saved';
   String get audiobook_export_clip_failed => 'Clip export failed';
@@ -3041,6 +3041,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
   String get stat_daily_average => 'Daily avg';
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -7489,7 +7490,7 @@ class _StringsAr extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -8241,6 +8242,8 @@ class _StringsAr extends _StringsEn {
       'Removed tag "${name}" from ${n} video(s).';
   @override
   String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -12812,7 +12815,7 @@ class _StringsDe extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -13564,6 +13567,8 @@ class _StringsDe extends _StringsEn {
       'Removed tag "${name}" from ${n} video(s).';
   @override
   String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -18152,7 +18157,7 @@ class _StringsEs extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -18904,6 +18909,8 @@ class _StringsEs extends _StringsEn {
       'Removed tag "${name}" from ${n} video(s).';
   @override
   String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -23511,7 +23518,7 @@ class _StringsFr extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -24263,6 +24270,8 @@ class _StringsFr extends _StringsEn {
       'Removed tag "${name}" from ${n} video(s).';
   @override
   String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -28772,7 +28781,7 @@ class _StringsId extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -29524,6 +29533,8 @@ class _StringsId extends _StringsEn {
       'Removed tag "${name}" from ${n} video(s).';
   @override
   String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -34094,7 +34105,7 @@ class _StringsIt extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -34846,6 +34857,8 @@ class _StringsIt extends _StringsEn {
       'Removed tag "${name}" from ${n} video(s).';
   @override
   String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -39142,7 +39155,7 @@ class _StringsJa extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -39893,6 +39906,8 @@ class _StringsJa extends _StringsEn {
       '${n} 本の動画からタグ「${name}」を削除しました。';
   @override
   String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -44193,7 +44208,7 @@ class _StringsKo extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -44945,6 +44960,8 @@ class _StringsKo extends _StringsEn {
       'Removed tag "${name}" from ${n} video(s).';
   @override
   String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -49483,7 +49500,7 @@ class _StringsNl extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -50235,6 +50252,8 @@ class _StringsNl extends _StringsEn {
       'Removed tag "${name}" from ${n} video(s).';
   @override
   String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -54796,7 +54815,7 @@ class _StringsPtBr extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -55548,6 +55567,8 @@ class _StringsPtBr extends _StringsEn {
       'Removed tag "${name}" from ${n} video(s).';
   @override
   String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -60084,7 +60105,7 @@ class _StringsRu extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -60836,6 +60857,8 @@ class _StringsRu extends _StringsEn {
       'Removed tag "${name}" from ${n} video(s).';
   @override
   String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -65285,7 +65308,7 @@ class _StringsTh extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -66037,6 +66060,8 @@ class _StringsTh extends _StringsEn {
       'Removed tag "${name}" from ${n} video(s).';
   @override
   String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -70541,7 +70566,7 @@ class _StringsTr extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -71293,6 +71318,8 @@ class _StringsTr extends _StringsEn {
       'Removed tag "${name}" from ${n} video(s).';
   @override
   String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -75772,7 +75799,7 @@ class _StringsVi extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -76524,6 +76551,8 @@ class _StringsVi extends _StringsEn {
       'Removed tag "${name}" from ${n} video(s).';
   @override
   String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -80699,7 +80728,7 @@ class _StringsZhCn extends _StringsEn {
       '卡片已创建，但当前 Anki 卡片模板没有任何字段映射到句子。请用设置页『一键创建 Lapis 卡组』，或把某字段映射到 {sentence}。';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      '卡片已创建并含句子音频，但当前 Anki 卡片模板没有字段映射到它。请把某字段映射到 {sasayaki-audio}。';
+      '卡片已创建并含句子音频，但当前 Anki 卡片模板没有字段映射到它。请把某字段映射到 {sentence-audio}。';
   @override
   String get audiobook_export_clip_in_progress => '正在导出片段…';
   @override
@@ -81400,6 +81429,8 @@ class _StringsZhCn extends _StringsEn {
       '已从 ${n} 个视频移除标签「${name}」。';
   @override
   String get stat_daily_average => '日均';
+  @override
+  String get handlebar_sentence_audio => '句子音频';
 }
 
 // Path: retrying_in
@@ -85598,7 +85629,7 @@ class _StringsZhHk extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -86349,6 +86380,8 @@ class _StringsZhHk extends _StringsEn {
       '已從 ${n} 個影片移除標籤「${name}」。';
   @override
   String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
 }
 
 // Path: retrying_in
@@ -90416,7 +90449,7 @@ extension on _StringsEn {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -91088,6 +91121,8 @@ extension on _StringsEn {
             'Removed tag "${name}" from ${n} video(s).';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
@@ -95115,7 +95150,7 @@ extension on _StringsAr {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -95787,6 +95822,8 @@ extension on _StringsAr {
             'Removed tag "${name}" from ${n} video(s).';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
@@ -99836,7 +99873,7 @@ extension on _StringsDe {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -100508,6 +100545,8 @@ extension on _StringsDe {
             'Removed tag "${name}" from ${n} video(s).';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
@@ -104555,7 +104594,7 @@ extension on _StringsEs {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -105227,6 +105266,8 @@ extension on _StringsEs {
             'Removed tag "${name}" from ${n} video(s).';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
@@ -109281,7 +109322,7 @@ extension on _StringsFr {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -109953,6 +109994,8 @@ extension on _StringsFr {
             'Removed tag "${name}" from ${n} video(s).';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
@@ -113987,7 +114030,7 @@ extension on _StringsId {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -114659,6 +114702,8 @@ extension on _StringsId {
             'Removed tag "${name}" from ${n} video(s).';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
@@ -118710,7 +118755,7 @@ extension on _StringsIt {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -119382,6 +119427,8 @@ extension on _StringsIt {
             'Removed tag "${name}" from ${n} video(s).';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
@@ -123391,7 +123438,7 @@ extension on _StringsJa {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -124062,6 +124109,8 @@ extension on _StringsJa {
             '${n} 本の動画からタグ「${name}」を削除しました。';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
@@ -128074,7 +128123,7 @@ extension on _StringsKo {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -128746,6 +128795,8 @@ extension on _StringsKo {
             'Removed tag "${name}" from ${n} video(s).';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
@@ -132790,7 +132841,7 @@ extension on _StringsNl {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -133462,6 +133513,8 @@ extension on _StringsNl {
             'Removed tag "${name}" from ${n} video(s).';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
@@ -137503,7 +137556,7 @@ extension on _StringsPtBr {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -138175,6 +138228,8 @@ extension on _StringsPtBr {
             'Removed tag "${name}" from ${n} video(s).';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
@@ -142220,7 +142275,7 @@ extension on _StringsRu {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -142892,6 +142947,8 @@ extension on _StringsRu {
             'Removed tag "${name}" from ${n} video(s).';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
@@ -146919,7 +146976,7 @@ extension on _StringsTh {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -147591,6 +147648,8 @@ extension on _StringsTh {
             'Removed tag "${name}" from ${n} video(s).';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
@@ -151627,7 +151686,7 @@ extension on _StringsTr {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -152299,6 +152358,8 @@ extension on _StringsTr {
             'Removed tag "${name}" from ${n} video(s).';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
@@ -156329,7 +156390,7 @@ extension on _StringsVi {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -157001,6 +157062,8 @@ extension on _StringsVi {
             'Removed tag "${name}" from ${n} video(s).';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
@@ -160999,7 +161062,7 @@ extension on _StringsZhCn {
       case 'card_mined_unmapped_sentence_field':
         return '卡片已创建，但当前 Anki 卡片模板没有任何字段映射到句子。请用设置页『一键创建 Lapis 卡组』，或把某字段映射到 {sentence}。';
       case 'card_mined_unmapped_sentence_audio_field':
-        return '卡片已创建并含句子音频，但当前 Anki 卡片模板没有字段映射到它。请把某字段映射到 {sasayaki-audio}。';
+        return '卡片已创建并含句子音频，但当前 Anki 卡片模板没有字段映射到它。请把某字段映射到 {sentence-audio}。';
       case 'audiobook_export_clip_in_progress':
         return '正在导出片段…';
       case 'audiobook_export_clip_saved':
@@ -161668,6 +161731,8 @@ extension on _StringsZhCn {
             '已从 ${n} 个视频移除标签「${name}」。';
       case 'stat_daily_average':
         return '日均';
+      case 'handlebar_sentence_audio':
+        return '句子音频';
       default:
         return null;
     }
@@ -165669,7 +165734,7 @@ extension on _StringsZhHk {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -166340,6 +166405,8 @@ extension on _StringsZhHk {
             '已從 ${n} 個影片移除標籤「${name}」。';
       case 'stat_daily_average':
         return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
       default:
         return null;
     }
