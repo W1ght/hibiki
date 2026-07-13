@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39185 (2305 per locale)
+/// Strings: 39321 (2313 per locale)
 ///
-/// Built on 2026-07-13 at 05:32 UTC
+/// Built on 2026-07-13 at 08:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2409,9 +2409,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get remote_book_info_has_audiobook => 'Includes audiobook';
   String get remote_video_info => 'Info';
   String get remote_video_info_has_subtitle => 'Includes subtitles';
-  String get popup_dictionary_columns => 'Dictionaries per row';
-  String get popup_dictionary_columns_hint =>
-      'Show multiple dictionaries side by side; use fewer columns on narrow screens';
   String card_exported_audio_failed({required Object reason}) =>
       'Card exported, but the audio failed to download (${reason}).';
   String get card_mined_without_sentence_audio =>
@@ -3049,6 +3046,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_mining_image_mode_current_frame => 'Screenshot at mining';
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  String get extension_popup_max_width => 'Extension popup max width';
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -7116,11 +7129,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => 'يتضمّن ترجمات';
   @override
-  String get popup_dictionary_columns => 'القواميس في كل صف';
-  @override
-  String get popup_dictionary_columns_hint =>
-      'عرض عدة قواميس جنبًا إلى جنب؛ استخدم أعمدة أقل على الشاشات الضيقة';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       'تم تصدير البطاقة، لكن فشل تنزيل الصوت (${reason}).';
   @override
@@ -8263,6 +8271,32 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -12452,11 +12486,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => 'Enthält Untertitel';
   @override
-  String get popup_dictionary_columns => 'Wörterbücher pro Zeile';
-  @override
-  String get popup_dictionary_columns_hint =>
-      'Mehrere Wörterbücher nebeneinander anzeigen; auf schmalen Bildschirmen weniger Spalten verwenden';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       'Karte exportiert, aber das Audio konnte nicht heruntergeladen werden (${reason}).';
   @override
@@ -13600,6 +13629,32 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -17806,11 +17861,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => 'Incluye subtítulos';
   @override
-  String get popup_dictionary_columns => 'Diccionarios por fila';
-  @override
-  String get popup_dictionary_columns_hint =>
-      'Muestra varios diccionarios en paralelo; usa menos columnas en pantallas estrechas';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       'Tarjeta exportada, pero falló la descarga del audio (${reason}).';
   @override
@@ -18954,6 +19004,32 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -23179,11 +23255,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => 'Sous-titres inclus';
   @override
-  String get popup_dictionary_columns => 'Dictionnaires par ligne';
-  @override
-  String get popup_dictionary_columns_hint =>
-      'Afficher plusieurs dictionnaires côte à côte ; réduisez les colonnes sur écrans étroits';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       'Carte exportée, mais le téléchargement de l\'audio a échoué (${reason}).';
   @override
@@ -24327,6 +24398,32 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -28454,11 +28551,6 @@ class _StringsId extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => 'Termasuk subtitle';
   @override
-  String get popup_dictionary_columns => 'Kamus per baris';
-  @override
-  String get popup_dictionary_columns_hint =>
-      'Tampilkan beberapa kamus berdampingan; gunakan lebih sedikit kolom pada layar sempit';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       'Kartu diekspor, tetapi audio gagal diunduh (${reason}).';
   @override
@@ -29602,6 +29694,32 @@ class _StringsId extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -33790,11 +33908,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => 'Include sottotitoli';
   @override
-  String get popup_dictionary_columns => 'Dizionari per riga';
-  @override
-  String get popup_dictionary_columns_hint =>
-      'Mostra più dizionari affiancati; usa meno colonne su schermi stretti';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       'Carta esportata, ma il download dell\'audio non è riuscito (${reason}).';
   @override
@@ -34938,6 +35051,32 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -38854,11 +38993,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => '字幕を含む';
   @override
-  String get popup_dictionary_columns => '1 行あたりの辞書数';
-  @override
-  String get popup_dictionary_columns_hint =>
-      '複数の辞書を横並びで表示します。画面が狭い場合は列数を減らしてください';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       'カードを書き出しましたが、音声のダウンロードに失敗しました（${reason}）。';
   @override
@@ -39999,6 +40133,32 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -43919,11 +44079,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => '자막 포함';
   @override
-  String get popup_dictionary_columns => '한 줄당 사전 수';
-  @override
-  String get popup_dictionary_columns_hint =>
-      '여러 사전을 나란히 표시합니다. 화면이 좁으면 열 수를 줄이세요';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       '카드를 내보냈지만 오디오 다운로드에 실패했습니다(${reason}).';
   @override
@@ -45065,6 +45220,32 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -49221,11 +49402,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => 'Bevat ondertitels';
   @override
-  String get popup_dictionary_columns => 'Woordenboeken per rij';
-  @override
-  String get popup_dictionary_columns_hint =>
-      'Meerdere woordenboeken naast elkaar tonen; gebruik minder kolommen op smalle schermen';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       'Kaart geëxporteerd, maar de audio kon niet worden gedownload (${reason}).';
   @override
@@ -50369,6 +50545,32 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -54548,11 +54750,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => 'Inclui legendas';
   @override
-  String get popup_dictionary_columns => 'Dicionários por linha';
-  @override
-  String get popup_dictionary_columns_hint =>
-      'Mostrar vários dicionários lado a lado; use menos colunas em telas estreitas';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       'Cartão exportado, mas o download do áudio falhou (${reason}).';
   @override
@@ -55696,6 +55893,32 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -59850,11 +60073,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => 'Включает субтитры';
   @override
-  String get popup_dictionary_columns => 'Словарей в ряду';
-  @override
-  String get popup_dictionary_columns_hint =>
-      'Показывать несколько словарей рядом; на узких экранах используйте меньше столбцов';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       'Карточка экспортирована, но не удалось загрузить аудио (${reason}).';
   @override
@@ -60998,6 +61216,32 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -65066,11 +65310,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => 'มีคำบรรยาย';
   @override
-  String get popup_dictionary_columns => 'จำนวนพจนานุกรมต่อแถว';
-  @override
-  String get popup_dictionary_columns_hint =>
-      'แสดงพจนานุกรมหลายเล่มเคียงข้างกัน ใช้คอลัมน์น้อยลงบนหน้าจอแคบ';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       'ส่งออกการ์ดแล้ว แต่ดาวน์โหลดเสียงไม่สำเร็จ (${reason})';
   @override
@@ -66213,6 +66452,32 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -70335,11 +70600,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => 'Altyazı içerir';
   @override
-  String get popup_dictionary_columns => 'Satır başına sözlük';
-  @override
-  String get popup_dictionary_columns_hint =>
-      'Birden çok sözlüğü yan yana göster; dar ekranlarda daha az sütun kullan';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       'Kart aktarıldı ancak ses indirilemedi (${reason}).';
   @override
@@ -71483,6 +71743,32 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -75581,11 +75867,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => 'Bao gồm phụ đề';
   @override
-  String get popup_dictionary_columns => 'Số từ điển mỗi hàng';
-  @override
-  String get popup_dictionary_columns_hint =>
-      'Hiển thị nhiều từ điển cạnh nhau; dùng ít cột hơn trên màn hình hẹp';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       'Đã xuất thẻ, nhưng tải âm thanh thất bại (${reason}).';
   @override
@@ -76728,6 +77009,32 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -80545,10 +80852,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => '包含字幕';
   @override
-  String get popup_dictionary_columns => '每行词典数';
-  @override
-  String get popup_dictionary_columns_hint => '在一行内并排显示多个词典；窄屏建议少列';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       '卡片已导出，但音频下载失败（${reason}）。';
   @override
@@ -81616,6 +81919,28 @@ class _StringsZhCn extends _StringsEn {
   String get video_mining_image_mode_current_frame => '制卡时截图';
   @override
   String get video_mining_image_mode_subtitle_start => '字幕开头截图';
+  @override
+  String get popup_dictionary_max_columns => '词典最多列数（自动填充）';
+  @override
+  String get popup_dictionary_max_columns_hint => '每行自动填充词典，最多不超过此列数；窄屏会自动减少';
+  @override
+  String get overlay_lookup_independent_size => '弹出查词窗独立尺寸';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      '让 app 外弹出查词窗使用独立最大尺寸，而非跟随 app 内查词弹窗';
+  @override
+  String get overlay_lookup_max_width => '弹出查词窗最大宽度';
+  @override
+  String get overlay_lookup_max_height => '弹出查词窗最大高度';
+  @override
+  String get extension_popup_independent_size => '浏览器扩展独立尺寸';
+  @override
+  String get extension_popup_independent_size_hint =>
+      '让浏览器扩展查词弹窗使用独立最大尺寸，而非跟随 app 内查词弹窗';
+  @override
+  String get extension_popup_max_width => '扩展弹窗最大宽度';
+  @override
+  String get extension_popup_max_height => '扩展弹窗最大高度';
 }
 
 // Path: retrying_in
@@ -85436,10 +85761,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get remote_video_info_has_subtitle => '包含字幕';
   @override
-  String get popup_dictionary_columns => '每行詞典數';
-  @override
-  String get popup_dictionary_columns_hint => '在一行內並排顯示多個詞典；窄螢幕建議少列';
-  @override
   String card_exported_audio_failed({required Object reason}) =>
       '卡片已匯出，但音訊下載失敗（${reason}）。';
   @override
@@ -86579,6 +86900,32 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get popup_dictionary_max_columns =>
+      'Max dictionary columns (auto-fill)';
+  @override
+  String get popup_dictionary_max_columns_hint =>
+      'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+  @override
+  String get overlay_lookup_independent_size =>
+      'Separate size for pop-out lookup';
+  @override
+  String get overlay_lookup_independent_size_hint =>
+      'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+  @override
+  String get overlay_lookup_max_width => 'Pop-out lookup max width';
+  @override
+  String get overlay_lookup_max_height => 'Pop-out lookup max height';
+  @override
+  String get extension_popup_independent_size =>
+      'Separate size for browser extension';
+  @override
+  String get extension_popup_independent_size_hint =>
+      'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+  @override
+  String get extension_popup_max_width => 'Extension popup max width';
+  @override
+  String get extension_popup_max_height => 'Extension popup max height';
 }
 
 // Path: retrying_in
@@ -90300,10 +90647,6 @@ extension on _StringsEn {
         return 'Info';
       case 'remote_video_info_has_subtitle':
         return 'Includes subtitles';
-      case 'popup_dictionary_columns':
-        return 'Dictionaries per row';
-      case 'popup_dictionary_columns_hint':
-        return 'Show multiple dictionaries side by side; use fewer columns on narrow screens';
       case 'card_exported_audio_failed':
         return ({required Object reason}) =>
             'Card exported, but the audio failed to download (${reason}).';
@@ -91330,6 +91673,26 @@ extension on _StringsEn {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -95011,10 +95374,6 @@ extension on _StringsAr {
         return 'معلومات';
       case 'remote_video_info_has_subtitle':
         return 'يتضمّن ترجمات';
-      case 'popup_dictionary_columns':
-        return 'القواميس في كل صف';
-      case 'popup_dictionary_columns_hint':
-        return 'عرض عدة قواميس جنبًا إلى جنب؛ استخدم أعمدة أقل على الشاشات الضيقة';
       case 'card_exported_audio_failed':
         return ({required Object reason}) =>
             'تم تصدير البطاقة، لكن فشل تنزيل الصوت (${reason}).';
@@ -96041,6 +96400,26 @@ extension on _StringsAr {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -99744,10 +100123,6 @@ extension on _StringsDe {
         return 'Info';
       case 'remote_video_info_has_subtitle':
         return 'Enthält Untertitel';
-      case 'popup_dictionary_columns':
-        return 'Wörterbücher pro Zeile';
-      case 'popup_dictionary_columns_hint':
-        return 'Mehrere Wörterbücher nebeneinander anzeigen; auf schmalen Bildschirmen weniger Spalten verwenden';
       case 'card_exported_audio_failed':
         return ({required Object reason}) =>
             'Karte exportiert, aber das Audio konnte nicht heruntergeladen werden (${reason}).';
@@ -100774,6 +101149,26 @@ extension on _StringsDe {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -104475,10 +104870,6 @@ extension on _StringsEs {
         return 'Información';
       case 'remote_video_info_has_subtitle':
         return 'Incluye subtítulos';
-      case 'popup_dictionary_columns':
-        return 'Diccionarios por fila';
-      case 'popup_dictionary_columns_hint':
-        return 'Muestra varios diccionarios en paralelo; usa menos columnas en pantallas estrechas';
       case 'card_exported_audio_failed':
         return ({required Object reason}) =>
             'Tarjeta exportada, pero falló la descarga del audio (${reason}).';
@@ -105505,6 +105896,26 @@ extension on _StringsEs {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -109213,10 +109624,6 @@ extension on _StringsFr {
         return 'Infos';
       case 'remote_video_info_has_subtitle':
         return 'Sous-titres inclus';
-      case 'popup_dictionary_columns':
-        return 'Dictionnaires par ligne';
-      case 'popup_dictionary_columns_hint':
-        return 'Afficher plusieurs dictionnaires côte à côte ; réduisez les colonnes sur écrans étroits';
       case 'card_exported_audio_failed':
         return ({required Object reason}) =>
             'Carte exportée, mais le téléchargement de l\'audio a échoué (${reason}).';
@@ -110243,6 +110650,26 @@ extension on _StringsFr {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -113931,10 +114358,6 @@ extension on _StringsId {
         return 'Info';
       case 'remote_video_info_has_subtitle':
         return 'Termasuk subtitle';
-      case 'popup_dictionary_columns':
-        return 'Kamus per baris';
-      case 'popup_dictionary_columns_hint':
-        return 'Tampilkan beberapa kamus berdampingan; gunakan lebih sedikit kolom pada layar sempit';
       case 'card_exported_audio_failed':
         return ({required Object reason}) =>
             'Kartu diekspor, tetapi audio gagal diunduh (${reason}).';
@@ -114961,6 +115384,26 @@ extension on _StringsId {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -118666,10 +119109,6 @@ extension on _StringsIt {
         return 'Info';
       case 'remote_video_info_has_subtitle':
         return 'Include sottotitoli';
-      case 'popup_dictionary_columns':
-        return 'Dizionari per riga';
-      case 'popup_dictionary_columns_hint':
-        return 'Mostra più dizionari affiancati; usa meno colonne su schermi stretti';
       case 'card_exported_audio_failed':
         return ({required Object reason}) =>
             'Carta esportata, ma il download dell\'audio non è riuscito (${reason}).';
@@ -119696,6 +120135,26 @@ extension on _StringsIt {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -123359,10 +123818,6 @@ extension on _StringsJa {
         return '情報';
       case 'remote_video_info_has_subtitle':
         return '字幕を含む';
-      case 'popup_dictionary_columns':
-        return '1 行あたりの辞書数';
-      case 'popup_dictionary_columns_hint':
-        return '複数の辞書を横並びで表示します。画面が狭い場合は列数を減らしてください';
       case 'card_exported_audio_failed':
         return ({required Object reason}) =>
             'カードを書き出しましたが、音声のダウンロードに失敗しました（${reason}）。';
@@ -124388,6 +124843,26 @@ extension on _StringsJa {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -128054,10 +128529,6 @@ extension on _StringsKo {
         return '정보';
       case 'remote_video_info_has_subtitle':
         return '자막 포함';
-      case 'popup_dictionary_columns':
-        return '한 줄당 사전 수';
-      case 'popup_dictionary_columns_hint':
-        return '여러 사전을 나란히 표시합니다. 화면이 좁으면 열 수를 줄이세요';
       case 'card_exported_audio_failed':
         return ({required Object reason}) =>
             '카드를 내보냈지만 오디오 다운로드에 실패했습니다(${reason}).';
@@ -129084,6 +129555,26 @@ extension on _StringsKo {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -132782,10 +133273,6 @@ extension on _StringsNl {
         return 'Info';
       case 'remote_video_info_has_subtitle':
         return 'Bevat ondertitels';
-      case 'popup_dictionary_columns':
-        return 'Woordenboeken per rij';
-      case 'popup_dictionary_columns_hint':
-        return 'Meerdere woordenboeken naast elkaar tonen; gebruik minder kolommen op smalle schermen';
       case 'card_exported_audio_failed':
         return ({required Object reason}) =>
             'Kaart geëxporteerd, maar de audio kon niet worden gedownload (${reason}).';
@@ -133812,6 +134299,26 @@ extension on _StringsNl {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -137507,10 +138014,6 @@ extension on _StringsPtBr {
         return 'Informações';
       case 'remote_video_info_has_subtitle':
         return 'Inclui legendas';
-      case 'popup_dictionary_columns':
-        return 'Dicionários por linha';
-      case 'popup_dictionary_columns_hint':
-        return 'Mostrar vários dicionários lado a lado; use menos colunas em telas estreitas';
       case 'card_exported_audio_failed':
         return ({required Object reason}) =>
             'Cartão exportado, mas o download do áudio falhou (${reason}).';
@@ -138537,6 +139040,26 @@ extension on _StringsPtBr {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -142236,10 +142759,6 @@ extension on _StringsRu {
         return 'Сведения';
       case 'remote_video_info_has_subtitle':
         return 'Включает субтитры';
-      case 'popup_dictionary_columns':
-        return 'Словарей в ряду';
-      case 'popup_dictionary_columns_hint':
-        return 'Показывать несколько словарей рядом; на узких экранах используйте меньше столбцов';
       case 'card_exported_audio_failed':
         return ({required Object reason}) =>
             'Карточка экспортирована, но не удалось загрузить аудио (${reason}).';
@@ -143266,6 +143785,26 @@ extension on _StringsRu {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -146947,10 +147486,6 @@ extension on _StringsTh {
         return 'ข้อมูล';
       case 'remote_video_info_has_subtitle':
         return 'มีคำบรรยาย';
-      case 'popup_dictionary_columns':
-        return 'จำนวนพจนานุกรมต่อแถว';
-      case 'popup_dictionary_columns_hint':
-        return 'แสดงพจนานุกรมหลายเล่มเคียงข้างกัน ใช้คอลัมน์น้อยลงบนหน้าจอแคบ';
       case 'card_exported_audio_failed':
         return ({required Object reason}) =>
             'ส่งออกการ์ดแล้ว แต่ดาวน์โหลดเสียงไม่สำเร็จ (${reason})';
@@ -147977,6 +148512,26 @@ extension on _StringsTh {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -151667,10 +152222,6 @@ extension on _StringsTr {
         return 'Bilgi';
       case 'remote_video_info_has_subtitle':
         return 'Altyazı içerir';
-      case 'popup_dictionary_columns':
-        return 'Satır başına sözlük';
-      case 'popup_dictionary_columns_hint':
-        return 'Birden çok sözlüğü yan yana göster; dar ekranlarda daha az sütun kullan';
       case 'card_exported_audio_failed':
         return ({required Object reason}) =>
             'Kart aktarıldı ancak ses indirilemedi (${reason}).';
@@ -152697,6 +153248,26 @@ extension on _StringsTr {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -156381,10 +156952,6 @@ extension on _StringsVi {
         return 'Thông tin';
       case 'remote_video_info_has_subtitle':
         return 'Bao gồm phụ đề';
-      case 'popup_dictionary_columns':
-        return 'Số từ điển mỗi hàng';
-      case 'popup_dictionary_columns_hint':
-        return 'Hiển thị nhiều từ điển cạnh nhau; dùng ít cột hơn trên màn hình hẹp';
       case 'card_exported_audio_failed':
         return ({required Object reason}) =>
             'Đã xuất thẻ, nhưng tải âm thanh thất bại (${reason}).';
@@ -157411,6 +157978,26 @@ extension on _StringsVi {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
@@ -161066,10 +161653,6 @@ extension on _StringsZhCn {
         return '信息';
       case 'remote_video_info_has_subtitle':
         return '包含字幕';
-      case 'popup_dictionary_columns':
-        return '每行词典数';
-      case 'popup_dictionary_columns_hint':
-        return '在一行内并排显示多个词典；窄屏建议少列';
       case 'card_exported_audio_failed':
         return ({required Object reason}) => '卡片已导出，但音频下载失败（${reason}）。';
       case 'card_mined_without_sentence_audio':
@@ -162090,6 +162673,26 @@ extension on _StringsZhCn {
         return '制卡时截图';
       case 'video_mining_image_mode_subtitle_start':
         return '字幕开头截图';
+      case 'popup_dictionary_max_columns':
+        return '词典最多列数（自动填充）';
+      case 'popup_dictionary_max_columns_hint':
+        return '每行自动填充词典，最多不超过此列数；窄屏会自动减少';
+      case 'overlay_lookup_independent_size':
+        return '弹出查词窗独立尺寸';
+      case 'overlay_lookup_independent_size_hint':
+        return '让 app 外弹出查词窗使用独立最大尺寸，而非跟随 app 内查词弹窗';
+      case 'overlay_lookup_max_width':
+        return '弹出查词窗最大宽度';
+      case 'overlay_lookup_max_height':
+        return '弹出查词窗最大高度';
+      case 'extension_popup_independent_size':
+        return '浏览器扩展独立尺寸';
+      case 'extension_popup_independent_size_hint':
+        return '让浏览器扩展查词弹窗使用独立最大尺寸，而非跟随 app 内查词弹窗';
+      case 'extension_popup_max_width':
+        return '扩展弹窗最大宽度';
+      case 'extension_popup_max_height':
+        return '扩展弹窗最大高度';
       default:
         return null;
     }
@@ -165746,10 +166349,6 @@ extension on _StringsZhHk {
         return '資訊';
       case 'remote_video_info_has_subtitle':
         return '包含字幕';
-      case 'popup_dictionary_columns':
-        return '每行詞典數';
-      case 'popup_dictionary_columns_hint':
-        return '在一行內並排顯示多個詞典；窄螢幕建議少列';
       case 'card_exported_audio_failed':
         return ({required Object reason}) => '卡片已匯出，但音訊下載失敗（${reason}）。';
       case 'card_mined_without_sentence_audio':
@@ -166774,6 +167373,26 @@ extension on _StringsZhHk {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'popup_dictionary_max_columns':
+        return 'Max dictionary columns (auto-fill)';
+      case 'popup_dictionary_max_columns_hint':
+        return 'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
+      case 'overlay_lookup_independent_size':
+        return 'Separate size for pop-out lookup';
+      case 'overlay_lookup_independent_size_hint':
+        return 'Give the app-external pop-out lookup window its own max size instead of following the in-app popup';
+      case 'overlay_lookup_max_width':
+        return 'Pop-out lookup max width';
+      case 'overlay_lookup_max_height':
+        return 'Pop-out lookup max height';
+      case 'extension_popup_independent_size':
+        return 'Separate size for browser extension';
+      case 'extension_popup_independent_size_hint':
+        return 'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
+      case 'extension_popup_max_width':
+        return 'Extension popup max width';
+      case 'extension_popup_max_height':
+        return 'Extension popup max height';
       default:
         return null;
     }
