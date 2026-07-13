@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39695 (2335 per locale)
+/// Strings: 39729 (2337 per locale)
 ///
-/// Built on 2026-07-13 at 16:24 UTC
+/// Built on 2026-07-13 at 17:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3094,6 +3094,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get clipboard_panel_transparent => 'Transparent panel background';
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -8383,6 +8386,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  @override
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  @override
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -13795,6 +13803,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  @override
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  @override
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -19224,6 +19237,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  @override
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  @override
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -24672,6 +24690,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  @override
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  @override
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -30022,6 +30045,11 @@ class _StringsId extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  @override
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  @override
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -35433,6 +35461,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  @override
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  @override
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -40569,6 +40602,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  @override
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  @override
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -45710,6 +45748,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  @override
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  @override
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -51089,6 +51132,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  @override
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  @override
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -56491,6 +56539,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  @override
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  @override
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -61868,6 +61921,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  @override
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  @override
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -67158,6 +67216,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  @override
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  @override
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -72503,6 +72566,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  @override
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  @override
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -77823,6 +77891,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  @override
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  @override
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -82779,6 +82852,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       '逐像素透明：只显示文字，背后的游戏画面透过来（Windows）。';
+  @override
+  String get clipboard_panel_peek => '面板栏悬停显示';
+  @override
+  String get clipboard_panel_peek_hint => '隐藏拖动/图钉/关闭栏；鼠标移到顶部才显示。';
 }
 
 // Path: retrying_in
@@ -87817,6 +87894,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+  @override
+  String get clipboard_panel_peek => 'Auto-hide panel bar';
+  @override
+  String get clipboard_panel_peek_hint =>
+      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -92631,6 +92713,10 @@ extension on _StringsEn {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -97405,6 +97491,10 @@ extension on _StringsAr {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -102201,6 +102291,10 @@ extension on _StringsDe {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -106995,6 +107089,10 @@ extension on _StringsEs {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -111796,6 +111894,10 @@ extension on _StringsFr {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -116577,6 +116679,10 @@ extension on _StringsId {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -121375,6 +121481,10 @@ extension on _StringsIt {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -126130,6 +126240,10 @@ extension on _StringsJa {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -130889,6 +131003,10 @@ extension on _StringsKo {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -135680,6 +135798,10 @@ extension on _StringsNl {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -140468,6 +140590,10 @@ extension on _StringsPtBr {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -145260,6 +145386,10 @@ extension on _StringsRu {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -150034,6 +150164,10 @@ extension on _StringsTh {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -154817,6 +154951,10 @@ extension on _StringsTr {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -159594,6 +159732,10 @@ extension on _StringsVi {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -164335,6 +164477,10 @@ extension on _StringsZhCn {
         return '面板背景透明';
       case 'clipboard_panel_transparent_hint':
         return '逐像素透明：只显示文字，背后的游戏画面透过来（Windows）。';
+      case 'clipboard_panel_peek':
+        return '面板栏悬停显示';
+      case 'clipboard_panel_peek_hint':
+        return '隐藏拖动/图钉/关闭栏；鼠标移到顶部才显示。';
       default:
         return null;
     }
@@ -169082,6 +169228,10 @@ extension on _StringsZhHk {
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
         return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
+      case 'clipboard_panel_peek':
+        return 'Auto-hide panel bar';
+      case 'clipboard_panel_peek_hint':
+        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
