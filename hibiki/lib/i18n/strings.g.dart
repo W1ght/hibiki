@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39287 (2311 per locale)
+/// Strings: 39304 (2312 per locale)
 ///
-/// Built on 2026-07-13 at 08:33 UTC
+/// Built on 2026-07-13 at 09:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3061,6 +3061,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_mining_image_mode_current_frame => 'Screenshot at mining';
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -8293,6 +8295,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -13646,6 +13651,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -19016,6 +19024,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -24405,6 +24416,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -29696,6 +29710,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -35048,6 +35065,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -40127,6 +40147,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -45211,6 +45234,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -50531,6 +50557,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -55874,6 +55903,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -61192,6 +61224,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -66425,6 +66460,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -71711,6 +71749,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -76972,6 +77013,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -81877,6 +81921,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_mining_image_mode_current_frame => '制卡时截图';
   @override
   String get video_mining_image_mode_subtitle_start => '字幕开头截图';
+  @override
+  String get local_audio_invalid_db => '该文件不是可用的音频数据库（不是本地音频源数据库，或其中没有任何音频）。';
 }
 
 // Path: retrying_in
@@ -86858,6 +86904,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
+  @override
+  String get local_audio_invalid_db =>
+      'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
 }
 
 // Path: retrying_in
@@ -91624,6 +91673,8 @@ extension on _StringsEn {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
@@ -96350,6 +96401,8 @@ extension on _StringsAr {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
@@ -101098,6 +101151,8 @@ extension on _StringsDe {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
@@ -105844,6 +105899,8 @@ extension on _StringsEs {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
@@ -110597,6 +110654,8 @@ extension on _StringsFr {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
@@ -115330,6 +115389,8 @@ extension on _StringsId {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
@@ -120080,6 +120141,8 @@ extension on _StringsIt {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
@@ -124787,6 +124850,8 @@ extension on _StringsJa {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
@@ -129498,6 +129563,8 @@ extension on _StringsKo {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
@@ -134241,6 +134308,8 @@ extension on _StringsNl {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
@@ -138981,6 +139050,8 @@ extension on _StringsPtBr {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
@@ -143725,6 +143796,8 @@ extension on _StringsRu {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
@@ -148451,6 +148524,8 @@ extension on _StringsTh {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
@@ -153186,6 +153261,8 @@ extension on _StringsTr {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
@@ -157915,6 +157992,8 @@ extension on _StringsVi {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
@@ -162608,6 +162687,8 @@ extension on _StringsZhCn {
         return '制卡时截图';
       case 'video_mining_image_mode_subtitle_start':
         return '字幕开头截图';
+      case 'local_audio_invalid_db':
+        return '该文件不是可用的音频数据库（不是本地音频源数据库，或其中没有任何音频）。';
       default:
         return null;
     }
@@ -167307,6 +167388,8 @@ extension on _StringsZhHk {
         return 'Screenshot at mining';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
+      case 'local_audio_invalid_db':
+        return 'This file isn\'t a usable audio database (not a Local Audio Server database, or it has no audio).';
       default:
         return null;
     }
