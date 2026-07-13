@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39100 (2300 per locale)
+/// Strings: 39185 (2305 per locale)
 ///
-/// Built on 2026-07-13 at 03:56 UTC
+/// Built on 2026-07-13 at 05:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3042,6 +3042,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Removed tag "${name}" from ${n} video(s).';
   String get stat_daily_average => 'Daily avg';
   String get handlebar_sentence_audio => 'Sentence Audio';
+  String get video_mining_image_mode => 'Video card image';
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -8244,6 +8251,18 @@ class _StringsAr extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -13569,6 +13588,18 @@ class _StringsDe extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -18911,6 +18942,18 @@ class _StringsEs extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -24272,6 +24315,18 @@ class _StringsFr extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -29535,6 +29590,18 @@ class _StringsId extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -34859,6 +34926,18 @@ class _StringsIt extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -39908,6 +39987,18 @@ class _StringsJa extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -44962,6 +45053,18 @@ class _StringsKo extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -50254,6 +50357,18 @@ class _StringsNl extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -55569,6 +55684,18 @@ class _StringsPtBr extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -60859,6 +60986,18 @@ class _StringsRu extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -66062,6 +66201,18 @@ class _StringsTh extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -71320,6 +71471,18 @@ class _StringsTr extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -76553,6 +76716,18 @@ class _StringsVi extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -81431,6 +81606,16 @@ class _StringsZhCn extends _StringsEn {
   String get stat_daily_average => '日均';
   @override
   String get handlebar_sentence_audio => '句子音频';
+  @override
+  String get video_mining_image_mode => '视频卡片图片';
+  @override
+  String get video_mining_image_mode_hint => '视频制卡封面用动图还是截图';
+  @override
+  String get video_mining_image_mode_gif => '动图 GIF（字幕片段）';
+  @override
+  String get video_mining_image_mode_current_frame => '制卡时截图';
+  @override
+  String get video_mining_image_mode_subtitle_start => '字幕开头截图';
 }
 
 // Path: retrying_in
@@ -86382,6 +86567,18 @@ class _StringsZhHk extends _StringsEn {
   String get stat_daily_average => 'Daily avg';
   @override
   String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -91123,6 +91320,16 @@ extension on _StringsEn {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -95824,6 +96031,16 @@ extension on _StringsAr {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -100547,6 +100764,16 @@ extension on _StringsDe {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -105268,6 +105495,16 @@ extension on _StringsEs {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -109996,6 +110233,16 @@ extension on _StringsFr {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -114704,6 +114951,16 @@ extension on _StringsId {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -119429,6 +119686,16 @@ extension on _StringsIt {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -124111,6 +124378,16 @@ extension on _StringsJa {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -128797,6 +129074,16 @@ extension on _StringsKo {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -133515,6 +133802,16 @@ extension on _StringsNl {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -138230,6 +138527,16 @@ extension on _StringsPtBr {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -142949,6 +143256,16 @@ extension on _StringsRu {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -147650,6 +147967,16 @@ extension on _StringsTh {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -152360,6 +152687,16 @@ extension on _StringsTr {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -157064,6 +157401,16 @@ extension on _StringsVi {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -161733,6 +162080,16 @@ extension on _StringsZhCn {
         return '日均';
       case 'handlebar_sentence_audio':
         return '句子音频';
+      case 'video_mining_image_mode':
+        return '视频卡片图片';
+      case 'video_mining_image_mode_hint':
+        return '视频制卡封面用动图还是截图';
+      case 'video_mining_image_mode_gif':
+        return '动图 GIF（字幕片段）';
+      case 'video_mining_image_mode_current_frame':
+        return '制卡时截图';
+      case 'video_mining_image_mode_subtitle_start':
+        return '字幕开头截图';
       default:
         return null;
     }
@@ -166407,6 +166764,16 @@ extension on _StringsZhHk {
         return 'Daily avg';
       case 'handlebar_sentence_audio':
         return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
