@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39627 (2331 per locale)
+/// Strings: 39661 (2333 per locale)
 ///
-/// Built on 2026-07-13 at 09:47 UTC
+/// Built on 2026-07-13 at 15:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3088,6 +3088,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Give the browser-extension lookup popup its own max size instead of following the in-app popup';
   String get extension_popup_max_width => 'Extension popup max width';
   String get extension_popup_max_height => 'Extension popup max height';
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -8367,6 +8370,11 @@ class _StringsAr extends _StringsEn {
   String get extension_popup_max_width => 'Extension popup max width';
   @override
   String get extension_popup_max_height => 'Extension popup max height';
+  @override
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  @override
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -13769,6 +13777,11 @@ class _StringsDe extends _StringsEn {
   String get extension_popup_max_width => 'Extension popup max width';
   @override
   String get extension_popup_max_height => 'Extension popup max height';
+  @override
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  @override
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -19188,6 +19201,11 @@ class _StringsEs extends _StringsEn {
   String get extension_popup_max_width => 'Extension popup max width';
   @override
   String get extension_popup_max_height => 'Extension popup max height';
+  @override
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  @override
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -24626,6 +24644,11 @@ class _StringsFr extends _StringsEn {
   String get extension_popup_max_width => 'Extension popup max width';
   @override
   String get extension_popup_max_height => 'Extension popup max height';
+  @override
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  @override
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -29966,6 +29989,11 @@ class _StringsId extends _StringsEn {
   String get extension_popup_max_width => 'Extension popup max width';
   @override
   String get extension_popup_max_height => 'Extension popup max height';
+  @override
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  @override
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -35367,6 +35395,11 @@ class _StringsIt extends _StringsEn {
   String get extension_popup_max_width => 'Extension popup max width';
   @override
   String get extension_popup_max_height => 'Extension popup max height';
+  @override
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  @override
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -40493,6 +40526,11 @@ class _StringsJa extends _StringsEn {
   String get extension_popup_max_width => 'Extension popup max width';
   @override
   String get extension_popup_max_height => 'Extension popup max height';
+  @override
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  @override
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -45624,6 +45662,11 @@ class _StringsKo extends _StringsEn {
   String get extension_popup_max_width => 'Extension popup max width';
   @override
   String get extension_popup_max_height => 'Extension popup max height';
+  @override
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  @override
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -50993,6 +51036,11 @@ class _StringsNl extends _StringsEn {
   String get extension_popup_max_width => 'Extension popup max width';
   @override
   String get extension_popup_max_height => 'Extension popup max height';
+  @override
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  @override
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -56385,6 +56433,11 @@ class _StringsPtBr extends _StringsEn {
   String get extension_popup_max_width => 'Extension popup max width';
   @override
   String get extension_popup_max_height => 'Extension popup max height';
+  @override
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  @override
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -61752,6 +61805,11 @@ class _StringsRu extends _StringsEn {
   String get extension_popup_max_width => 'Extension popup max width';
   @override
   String get extension_popup_max_height => 'Extension popup max height';
+  @override
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  @override
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -67032,6 +67090,11 @@ class _StringsTh extends _StringsEn {
   String get extension_popup_max_width => 'Extension popup max width';
   @override
   String get extension_popup_max_height => 'Extension popup max height';
+  @override
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  @override
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -72367,6 +72430,11 @@ class _StringsTr extends _StringsEn {
   String get extension_popup_max_width => 'Extension popup max width';
   @override
   String get extension_popup_max_height => 'Extension popup max height';
+  @override
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  @override
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -77677,6 +77745,11 @@ class _StringsVi extends _StringsEn {
   String get extension_popup_max_width => 'Extension popup max width';
   @override
   String get extension_popup_max_height => 'Extension popup max height';
+  @override
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  @override
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -82624,6 +82697,10 @@ class _StringsZhCn extends _StringsEn {
   String get extension_popup_max_width => '扩展弹窗最大宽度';
   @override
   String get extension_popup_max_height => '扩展弹窗最大高度';
+  @override
+  String get desktop_clipboard_auto_lookup => '复制后自动查词';
+  @override
+  String get desktop_clipboard_auto_lookup_hint => '关闭后面板只显示复制到的文字，点词才查词。';
 }
 
 // Path: retrying_in
@@ -87652,6 +87729,11 @@ class _StringsZhHk extends _StringsEn {
   String get extension_popup_max_width => 'Extension popup max width';
   @override
   String get extension_popup_max_height => 'Extension popup max height';
+  @override
+  String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
+  @override
+  String get desktop_clipboard_auto_lookup_hint =>
+      'When off, the panel shows only the copied text; tap a word to look it up.';
 }
 
 // Path: retrying_in
@@ -92458,6 +92540,10 @@ extension on _StringsEn {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
@@ -97224,6 +97310,10 @@ extension on _StringsAr {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
@@ -102012,6 +102102,10 @@ extension on _StringsDe {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
@@ -106798,6 +106892,10 @@ extension on _StringsEs {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
@@ -111591,6 +111689,10 @@ extension on _StringsFr {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
@@ -116364,6 +116466,10 @@ extension on _StringsId {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
@@ -121154,6 +121260,10 @@ extension on _StringsIt {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
@@ -125901,6 +126011,10 @@ extension on _StringsJa {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
@@ -130652,6 +130766,10 @@ extension on _StringsKo {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
@@ -135435,6 +135553,10 @@ extension on _StringsNl {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
@@ -140215,6 +140337,10 @@ extension on _StringsPtBr {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
@@ -144999,6 +145125,10 @@ extension on _StringsRu {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
@@ -149765,6 +149895,10 @@ extension on _StringsTh {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
@@ -154540,6 +154674,10 @@ extension on _StringsTr {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
@@ -159309,6 +159447,10 @@ extension on _StringsVi {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
@@ -164042,6 +164184,10 @@ extension on _StringsZhCn {
         return '扩展弹窗最大宽度';
       case 'extension_popup_max_height':
         return '扩展弹窗最大高度';
+      case 'desktop_clipboard_auto_lookup':
+        return '复制后自动查词';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return '关闭后面板只显示复制到的文字，点词才查词。';
       default:
         return null;
     }
@@ -168781,6 +168927,10 @@ extension on _StringsZhHk {
         return 'Extension popup max width';
       case 'extension_popup_max_height':
         return 'Extension popup max height';
+      case 'desktop_clipboard_auto_lookup':
+        return 'Auto-look-up on copy';
+      case 'desktop_clipboard_auto_lookup_hint':
+        return 'When off, the panel shows only the copied text; tap a word to look it up.';
       default:
         return null;
     }
