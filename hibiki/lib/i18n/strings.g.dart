@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39661 (2333 per locale)
+/// Strings: 39695 (2335 per locale)
 ///
-/// Built on 2026-07-13 at 15:49 UTC
+/// Built on 2026-07-13 at 16:24 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3091,6 +3091,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -8375,6 +8378,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -13782,6 +13790,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -19206,6 +19219,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -24649,6 +24667,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -29994,6 +30017,11 @@ class _StringsId extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -35400,6 +35428,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -40531,6 +40564,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -45667,6 +45705,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -51041,6 +51084,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -56438,6 +56486,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -61810,6 +61863,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -67095,6 +67153,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -72435,6 +72498,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -77750,6 +77818,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -82701,6 +82774,11 @@ class _StringsZhCn extends _StringsEn {
   String get desktop_clipboard_auto_lookup => '复制后自动查词';
   @override
   String get desktop_clipboard_auto_lookup_hint => '关闭后面板只显示复制到的文字，点词才查词。';
+  @override
+  String get clipboard_panel_transparent => '面板背景透明';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      '逐像素透明：只显示文字，背后的游戏画面透过来（Windows）。';
 }
 
 // Path: retrying_in
@@ -87734,6 +87812,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get clipboard_panel_transparent => 'Transparent panel background';
+  @override
+  String get clipboard_panel_transparent_hint =>
+      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
 }
 
 // Path: retrying_in
@@ -92544,6 +92627,10 @@ extension on _StringsEn {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
@@ -97314,6 +97401,10 @@ extension on _StringsAr {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
@@ -102106,6 +102197,10 @@ extension on _StringsDe {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
@@ -106896,6 +106991,10 @@ extension on _StringsEs {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
@@ -111693,6 +111792,10 @@ extension on _StringsFr {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
@@ -116470,6 +116573,10 @@ extension on _StringsId {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
@@ -121264,6 +121371,10 @@ extension on _StringsIt {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
@@ -126015,6 +126126,10 @@ extension on _StringsJa {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
@@ -130770,6 +130885,10 @@ extension on _StringsKo {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
@@ -135557,6 +135676,10 @@ extension on _StringsNl {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
@@ -140341,6 +140464,10 @@ extension on _StringsPtBr {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
@@ -145129,6 +145256,10 @@ extension on _StringsRu {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
@@ -149899,6 +150030,10 @@ extension on _StringsTh {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
@@ -154678,6 +154813,10 @@ extension on _StringsTr {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
@@ -159451,6 +159590,10 @@ extension on _StringsVi {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
@@ -164188,6 +164331,10 @@ extension on _StringsZhCn {
         return '复制后自动查词';
       case 'desktop_clipboard_auto_lookup_hint':
         return '关闭后面板只显示复制到的文字，点词才查词。';
+      case 'clipboard_panel_transparent':
+        return '面板背景透明';
+      case 'clipboard_panel_transparent_hint':
+        return '逐像素透明：只显示文字，背后的游戏画面透过来（Windows）。';
       default:
         return null;
     }
@@ -168931,6 +169078,10 @@ extension on _StringsZhHk {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'clipboard_panel_transparent':
+        return 'Transparent panel background';
+      case 'clipboard_panel_transparent_hint':
+        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
       default:
         return null;
     }
