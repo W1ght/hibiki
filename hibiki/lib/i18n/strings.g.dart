@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38726 (2278 per locale)
+/// Strings: 39287 (2311 per locale)
 ///
-/// Built on 2026-07-12 at 19:21 UTC
+/// Built on 2026-07-13 at 08:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1574,7 +1574,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_reader_toggle_furigana => 'Toggle furigana';
   String get shortcut_action_reader_lookup_at_cursor =>
       'Lookup / activate cursor';
-  String get shortcut_action_reader_shift_lookup => 'Shift lookup';
+  String get shortcut_action_reader_shift_lookup => 'Look up word at caret';
   String get shortcut_action_reader_create_card_from_popup =>
       'Create card from popup';
   String get on_screen_keyboard => 'On-screen keyboard';
@@ -2129,8 +2129,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_seek_seconds => 'Seek seconds';
   String get section_video_danmaku => 'Danmaku';
   String get video_setting_danmaku_server_url => 'Danmaku server URL';
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
   String card_overwritten({required Object deck}) =>
       'Card overwritten in 『${deck}』.';
   String get video_bottom_seek_back_label => '−10s';
@@ -2616,7 +2614,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get card_mined_unmapped_sentence_field =>
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   String get audiobook_export_clip_saved => 'Clip saved';
   String get audiobook_export_clip_failed => 'Clip export failed';
@@ -2921,8 +2919,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Reading, video and mining statistics';
   String get backup_category_settings_desc => 'App and reader settings';
   String get backup_category_profiles_desc => 'Configuration profiles';
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
   String get popup_font_size_decrease => 'Smaller dictionary text';
   String get popup_font_size_increase => 'Larger dictionary text';
   String get video_setting_danmaku_font_scale => 'Font size';
@@ -2963,7 +2959,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
   String get clipboard_panel_opacity => 'Panel opacity';
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   String get sync_client_connected => 'Connected';
   String get sync_client_token_manual => 'Enter token manually';
   String get delete_collection_confirm =>
@@ -2972,6 +2968,25 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_play => 'Play';
   String get rename_collection => 'Rename collection';
   String get delete_collection => 'Delete collection';
+  String get popup_ctx_adjust_button => 'Adjust context';
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  String get popup_ctx_modal_title => 'Select sentence context';
+  String get popup_ctx_modal_count => 'Selected %d';
+  String get popup_ctx_box_prev => 'Before';
+  String get popup_ctx_box_current => 'Current';
+  String get popup_ctx_box_next => 'After';
+  String get popup_ctx_box_empty => '(none)';
+  String get popup_ctx_prev_minus => 'Remove before';
+  String get popup_ctx_prev_plus => 'Add before';
+  String get popup_ctx_next_minus => 'Remove after';
+  String get popup_ctx_next_plus => 'Add after';
+  String get popup_ctx_confirm => 'Confirm';
+  String get popup_ctx_cancel => 'Cancel';
+  String get backup_export_choose_videos => 'Choose videos';
+  String get backup_export_videos_all => 'All videos';
+  String get backup_export_no_videos => 'No videos to choose from';
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   String get video_continue_watching => 'Continue Watching';
   String get video_library_overview => 'Library Overview';
   String get video_stat_total_videos => 'Total';
@@ -2986,6 +3001,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Remove this item from the collection? The item itself is kept.';
   String get collection_member_removed => 'Removed from collection';
   String get collection_default_name => 'New collection';
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   String get book_continue_reading => 'Continue Reading';
   String get book_library_overview => 'Library Overview';
   String get shelf_stat_reading => 'Reading';
@@ -3018,6 +3044,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Added ${n} item(s) to the collection.';
   String get collection_merge_title => 'Merge collections';
   String get collection_merged => 'Collections merged.';
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
+  String get stat_daily_average => 'Daily avg';
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  String get video_mining_image_mode => 'Video card image';
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -6609,10 +6652,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'عنوان خادم Danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'تمت الكتابة فوق البطاقة في『${deck}』.';
   @override
@@ -7458,7 +7497,7 @@ class _StringsAr extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -8002,9 +8041,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -8073,7 +8109,7 @@ class _StringsAr extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -8089,6 +8125,43 @@ class _StringsAr extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -8116,6 +8189,24 @@ class _StringsAr extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
@@ -8174,6 +8265,34 @@ class _StringsAr extends _StringsEn {
   String get collection_merge_title => 'Merge collections';
   @override
   String get collection_merged => 'Collections merged.';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -11871,10 +11990,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'Danmaku-Server-URL';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Karte in 『${deck}』 überschrieben.';
   @override
@@ -12735,7 +12850,7 @@ class _StringsDe extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -13279,9 +13394,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -13350,7 +13462,7 @@ class _StringsDe extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -13366,6 +13478,43 @@ class _StringsDe extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -13393,6 +13542,24 @@ class _StringsDe extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
@@ -13451,6 +13618,34 @@ class _StringsDe extends _StringsEn {
   String get collection_merge_title => 'Merge collections';
   @override
   String get collection_merged => 'Collections merged.';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -17166,10 +17361,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL del servidor de danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Tarjeta sobrescrita en 『${deck}』.';
   @override
@@ -18029,7 +18220,7 @@ class _StringsEs extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -18573,9 +18764,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -18644,7 +18832,7 @@ class _StringsEs extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -18660,6 +18848,43 @@ class _StringsEs extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -18687,6 +18912,24 @@ class _StringsEs extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
@@ -18745,6 +18988,34 @@ class _StringsEs extends _StringsEn {
   String get collection_merge_title => 'Merge collections';
   @override
   String get collection_merged => 'Collections merged.';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -22479,10 +22750,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL du serveur danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Carte remplacée dans « ${deck} ».';
   @override
@@ -23342,7 +23609,7 @@ class _StringsFr extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -23886,9 +24153,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -23957,7 +24221,7 @@ class _StringsFr extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -23973,6 +24237,43 @@ class _StringsFr extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -24000,6 +24301,24 @@ class _StringsFr extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
@@ -24058,6 +24377,34 @@ class _StringsFr extends _StringsEn {
   String get collection_merge_title => 'Merge collections';
   @override
   String get collection_merged => 'Collections merged.';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -27697,10 +28044,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL server danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'AppId Dandanplay';
-  @override
-  String get video_setting_danmaku_app_secret => 'AppSecret Dandanplay';
-  @override
   String card_overwritten({required Object deck}) =>
       'Kartu ditimpa di 『${deck}』.';
   @override
@@ -28557,7 +28900,7 @@ class _StringsId extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -29101,9 +29444,6 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -29172,7 +29512,7 @@ class _StringsId extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -29188,6 +29528,43 @@ class _StringsId extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -29215,6 +29592,24 @@ class _StringsId extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
@@ -29273,6 +29668,34 @@ class _StringsId extends _StringsEn {
   String get collection_merge_title => 'Merge collections';
   @override
   String get collection_merged => 'Collections merged.';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -32970,10 +33393,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL del server danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Carta sovrascritta in『${deck}』.';
   @override
@@ -33833,7 +34252,7 @@ class _StringsIt extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -34377,9 +34796,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -34448,7 +34864,7 @@ class _StringsIt extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -34464,6 +34880,43 @@ class _StringsIt extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -34491,6 +34944,24 @@ class _StringsIt extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
@@ -34549,6 +35020,34 @@ class _StringsIt extends _StringsEn {
   String get collection_merge_title => 'Merge collections';
   @override
   String get collection_merged => 'Collections merged.';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -37053,7 +37552,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_reader_lookup_at_cursor => '辞書を引く／カーソルを有効化';
   @override
-  String get shortcut_action_reader_shift_lookup => 'Shift 辞書引き';
+  String get shortcut_action_reader_shift_lookup => 'カーソル位置で辞書引き';
   @override
   String get shortcut_action_reader_create_card_from_popup => 'ポップアップからカード作成';
   @override
@@ -38010,10 +38509,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => '弾幕サーバーの URL';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) => '『${deck}』のカードを上書きしました。';
   @override
   String get video_bottom_seek_back_label => '−10s';
@@ -38837,7 +39332,7 @@ class _StringsJa extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -39381,9 +39876,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -39452,7 +39944,7 @@ class _StringsJa extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -39468,6 +39960,43 @@ class _StringsJa extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -39495,6 +40024,24 @@ class _StringsJa extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
@@ -39553,6 +40100,33 @@ class _StringsJa extends _StringsEn {
   String get collection_merge_title => 'Merge collections';
   @override
   String get collection_merged => 'Collections merged.';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      '${n} 本の動画を削除しますか？この操作は元に戻せません。';
+  @override
+  String batch_delete_success_video({required Object n}) => '${n} 本の動画を削除しました。';
+  @override
+  String batch_tag_added_video({required Object n, required Object name}) =>
+      '${n} 本の動画にタグ「${name}」を追加しました。';
+  @override
+  String batch_tag_removed_video({required Object n, required Object name}) =>
+      '${n} 本の動画からタグ「${name}」を削除しました。';
+  @override
+  String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -43020,10 +43594,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => '탄막 서버 주소';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) => '『${deck}』에 카드를 덮어썼습니다.';
   @override
   String get video_bottom_seek_back_label => '−10s';
@@ -43845,7 +44415,7 @@ class _StringsKo extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -44389,9 +44959,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -44460,7 +45027,7 @@ class _StringsKo extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -44476,6 +45043,43 @@ class _StringsKo extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -44503,6 +45107,24 @@ class _StringsKo extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
@@ -44561,6 +45183,34 @@ class _StringsKo extends _StringsEn {
   String get collection_merge_title => 'Merge collections';
   @override
   String get collection_merged => 'Collections merged.';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -48231,10 +48881,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL danmaku-server';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Kaart overschreven in 『${deck}』.';
   @override
@@ -49089,7 +49735,7 @@ class _StringsNl extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -49633,9 +50279,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -49704,7 +50347,7 @@ class _StringsNl extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -49720,6 +50363,43 @@ class _StringsNl extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -49747,6 +50427,24 @@ class _StringsNl extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
@@ -49805,6 +50503,34 @@ class _StringsNl extends _StringsEn {
   String get collection_merge_title => 'Merge collections';
   @override
   String get collection_merged => 'Collections merged.';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -53495,10 +54221,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL do servidor de danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Cartão sobrescrito em 『${deck}』.';
   @override
@@ -54356,7 +55078,7 @@ class _StringsPtBr extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -54900,9 +55622,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -54971,7 +55690,7 @@ class _StringsPtBr extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -54987,6 +55706,43 @@ class _StringsPtBr extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -55014,6 +55770,24 @@ class _StringsPtBr extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
@@ -55072,6 +55846,34 @@ class _StringsPtBr extends _StringsEn {
   String get collection_merge_title => 'Merge collections';
   @override
   String get collection_merged => 'Collections merged.';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -58734,10 +59536,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'Адрес сервера данмаку';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Карточка перезаписана в «${deck}».';
   @override
@@ -59598,7 +60396,7 @@ class _StringsRu extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -60142,9 +60940,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -60213,7 +61008,7 @@ class _StringsRu extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -60229,6 +61024,43 @@ class _StringsRu extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -60256,6 +61088,24 @@ class _StringsRu extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
@@ -60314,6 +61164,34 @@ class _StringsRu extends _StringsEn {
   String get collection_merge_title => 'Merge collections';
   @override
   String get collection_merged => 'Collections merged.';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -63903,10 +64781,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'URL เซิร์ฟเวอร์ดันมากุ';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'เขียนทับการ์ดใน『${deck}』แล้ว';
   @override
@@ -64755,7 +65629,7 @@ class _StringsTh extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -65299,9 +66173,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -65370,7 +66241,7 @@ class _StringsTh extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -65386,6 +66257,43 @@ class _StringsTh extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -65413,6 +66321,24 @@ class _StringsTh extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
@@ -65471,6 +66397,34 @@ class _StringsTh extends _StringsEn {
   String get collection_merge_title => 'Merge collections';
   @override
   String get collection_merged => 'Collections merged.';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -69109,10 +70063,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'Danmaku sunucu URL\'si';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Kart 『${deck}』 destesinde üzerine yazıldı.';
   @override
@@ -69965,7 +70915,7 @@ class _StringsTr extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -70509,9 +71459,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -70580,7 +71527,7 @@ class _StringsTr extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -70596,6 +71543,43 @@ class _StringsTr extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -70623,6 +71607,24 @@ class _StringsTr extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
@@ -70681,6 +71683,34 @@ class _StringsTr extends _StringsEn {
   String get collection_merge_title => 'Merge collections';
   @override
   String get collection_merged => 'Collections merged.';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -74296,10 +75326,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => 'Địa chỉ máy chủ danmaku';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) =>
       'Đã ghi đè thẻ trong 『${deck}』.';
   @override
@@ -75150,7 +76176,7 @@ class _StringsVi extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -75694,9 +76720,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -75765,7 +76788,7 @@ class _StringsVi extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -75781,6 +76804,43 @@ class _StringsVi extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -75808,6 +76868,24 @@ class _StringsVi extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
@@ -75866,6 +76944,34 @@ class _StringsVi extends _StringsEn {
   String get collection_merge_title => 'Merge collections';
   @override
   String get collection_merged => 'Collections merged.';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      'Delete ${n} video(s)? This cannot be undone.';
+  @override
+  String batch_delete_success_video({required Object n}) =>
+      'Deleted ${n} video(s).';
+  @override
+  String batch_tag_added_video({required Object name, required Object n}) =>
+      'Added tag "${name}" to ${n} video(s).';
+  @override
+  String batch_tag_removed_video({required Object name, required Object n}) =>
+      'Removed tag "${name}" from ${n} video(s).';
+  @override
+  String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -78326,7 +79432,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_reader_lookup_at_cursor => '查词/激活光标';
   @override
-  String get shortcut_action_reader_shift_lookup => 'Shift 查词';
+  String get shortcut_action_reader_shift_lookup => '光标处查词';
   @override
   String get shortcut_action_reader_create_card_from_popup => '从弹窗制卡';
   @override
@@ -79246,10 +80352,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => '弹幕服务器地址';
   @override
-  String get video_setting_danmaku_app_id => '弹弹play AppId';
-  @override
-  String get video_setting_danmaku_app_secret => '弹弹play AppSecret';
-  @override
   String card_overwritten({required Object deck}) => '卡片已覆盖到『${deck}』。';
   @override
   String get video_bottom_seek_back_label => '−10s';
@@ -80033,7 +81135,7 @@ class _StringsZhCn extends _StringsEn {
       '卡片已创建，但当前 Anki 卡片模板没有任何字段映射到句子。请用设置页『一键创建 Lapis 卡组』，或把某字段映射到 {sentence}。';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      '卡片已创建并含句子音频，但当前 Anki 卡片模板没有字段映射到它。请把某字段映射到 {sasayaki-audio}。';
+      '卡片已创建并含句子音频，但当前 Anki 卡片模板没有字段映射到它。请把某字段映射到 {sentence-audio}。';
   @override
   String get audiobook_export_clip_in_progress => '正在导出片段…';
   @override
@@ -80542,9 +81644,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_category_profiles_desc => '配置方案';
   @override
-  String get backup_import_contents_hint =>
-      '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
-  @override
   String get popup_font_size_decrease => '缩小查词字号';
   @override
   String get popup_font_size_increase => '放大查词字号';
@@ -80604,8 +81703,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get clipboard_panel_opacity => '面板不透明度';
   @override
-  String get clipboard_panel_opacity_hint =>
-      '悬浮查词面板的卡片背景不透明度（需要 Windows 11 背景材质支持）';
+  String get clipboard_panel_opacity_hint => '整个面板的不透明度——可透视底下的游戏/网页';
   @override
   String get sync_client_connected => '已连接';
   @override
@@ -80620,6 +81718,43 @@ class _StringsZhCn extends _StringsEn {
   String get rename_collection => '重命名合集';
   @override
   String get delete_collection => '删除合集';
+  @override
+  String get popup_ctx_adjust_button => '调整上下文';
+  @override
+  String get popup_ctx_modal_eyebrow => '制卡前调整';
+  @override
+  String get popup_ctx_modal_title => '选择句子上下文';
+  @override
+  String get popup_ctx_modal_count => '已选择 %d 句';
+  @override
+  String get popup_ctx_box_prev => '前文';
+  @override
+  String get popup_ctx_box_current => '当前句';
+  @override
+  String get popup_ctx_box_next => '后文';
+  @override
+  String get popup_ctx_box_empty => '（无）';
+  @override
+  String get popup_ctx_prev_minus => '前退一句';
+  @override
+  String get popup_ctx_prev_plus => '前加一句';
+  @override
+  String get popup_ctx_next_minus => '后退一句';
+  @override
+  String get popup_ctx_next_plus => '后加一句';
+  @override
+  String get popup_ctx_confirm => '确认制卡';
+  @override
+  String get popup_ctx_cancel => '取消';
+  @override
+  String get backup_export_choose_videos => '选择视频';
+  @override
+  String get backup_export_videos_all => '全部视频';
+  @override
+  String get backup_export_no_videos => '没有可选的视频';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '已选 ${count} 个视频';
   @override
   String get video_continue_watching => '继续观看';
   @override
@@ -80646,6 +81781,20 @@ class _StringsZhCn extends _StringsEn {
   String get collection_member_removed => '已移出合集';
   @override
   String get collection_default_name => '新合集';
+  @override
+  String get backup_import_contents_hint => '取消勾选某项即可跳过它。';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki 剪贴板查词';
+  @override
+  String get video_render_skia_fix_confirm_title => '切换到 Skia 并重启？';
+  @override
+  String get video_render_skia_fix_confirm_body => '将关闭 Impeller 渲染器并重启应用使其生效。';
+  @override
+  String get video_render_skia_fix_confirm_action => '重启';
+  @override
+  String get video_render_skia_fix_title => '画面全黑？切换渲染器（Skia）';
+  @override
+  String get video_render_skia_fix_hint => '有声音但画面全黑时用。关闭 Impeller，重启后生效。';
   @override
   String get book_continue_reading => '继续阅读';
   @override
@@ -80703,6 +81852,31 @@ class _StringsZhCn extends _StringsEn {
   String get collection_merge_title => '合并合集';
   @override
   String get collection_merged => '已合并合集。';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      '确定删除 ${n} 个视频？此操作不可撤销。';
+  @override
+  String batch_delete_success_video({required Object n}) => '已删除 ${n} 个视频。';
+  @override
+  String batch_tag_added_video({required Object n, required Object name}) =>
+      '已为 ${n} 个视频添加标签「${name}」。';
+  @override
+  String batch_tag_removed_video({required Object n, required Object name}) =>
+      '已从 ${n} 个视频移除标签「${name}」。';
+  @override
+  String get stat_daily_average => '日均';
+  @override
+  String get handlebar_sentence_audio => '句子音频';
+  @override
+  String get video_mining_image_mode => '视频卡片图片';
+  @override
+  String get video_mining_image_mode_hint => '视频制卡封面用动图还是截图';
+  @override
+  String get video_mining_image_mode_gif => '动图 GIF（字幕片段）';
+  @override
+  String get video_mining_image_mode_current_frame => '制卡时截图';
+  @override
+  String get video_mining_image_mode_subtitle_start => '字幕开头截图';
 }
 
 // Path: retrying_in
@@ -83160,7 +84334,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_reader_lookup_at_cursor => '查詞／啟用游標';
   @override
-  String get shortcut_action_reader_shift_lookup => 'Shift 查詞';
+  String get shortcut_action_reader_shift_lookup => '游標處查詞';
   @override
   String get shortcut_action_reader_create_card_from_popup => '由彈窗製卡';
   @override
@@ -84086,10 +85260,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_danmaku_server_url => '彈幕伺服器網址';
   @override
-  String get video_setting_danmaku_app_id => 'Dandanplay AppId';
-  @override
-  String get video_setting_danmaku_app_secret => 'Dandanplay AppSecret';
-  @override
   String card_overwritten({required Object deck}) => '卡片已覆寫至『${deck}』。';
   @override
   String get video_bottom_seek_back_label => '−10s';
@@ -84893,7 +86063,7 @@ class _StringsZhHk extends _StringsEn {
       'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
   @override
   String get card_mined_unmapped_sentence_audio_field =>
-      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+      'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
   @override
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   @override
@@ -85437,9 +86607,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_category_profiles_desc => 'Configuration profiles';
   @override
-  String get backup_import_contents_hint =>
-      'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
-  @override
   String get popup_font_size_decrease => 'Smaller dictionary text';
   @override
   String get popup_font_size_increase => 'Larger dictionary text';
@@ -85508,7 +86675,7 @@ class _StringsZhHk extends _StringsEn {
   String get clipboard_panel_opacity => 'Panel opacity';
   @override
   String get clipboard_panel_opacity_hint =>
-      'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+      'Whole-panel opacity — see through to the game or page beneath';
   @override
   String get sync_client_connected => 'Connected';
   @override
@@ -85524,6 +86691,43 @@ class _StringsZhHk extends _StringsEn {
   String get rename_collection => 'Rename collection';
   @override
   String get delete_collection => 'Delete collection';
+  @override
+  String get popup_ctx_adjust_button => 'Adjust context';
+  @override
+  String get popup_ctx_modal_eyebrow => 'Before mining';
+  @override
+  String get popup_ctx_modal_title => 'Select sentence context';
+  @override
+  String get popup_ctx_modal_count => 'Selected %d';
+  @override
+  String get popup_ctx_box_prev => 'Before';
+  @override
+  String get popup_ctx_box_current => 'Current';
+  @override
+  String get popup_ctx_box_next => 'After';
+  @override
+  String get popup_ctx_box_empty => '(none)';
+  @override
+  String get popup_ctx_prev_minus => 'Remove before';
+  @override
+  String get popup_ctx_prev_plus => 'Add before';
+  @override
+  String get popup_ctx_next_minus => 'Remove after';
+  @override
+  String get popup_ctx_next_plus => 'Add after';
+  @override
+  String get popup_ctx_confirm => 'Confirm';
+  @override
+  String get popup_ctx_cancel => 'Cancel';
+  @override
+  String get backup_export_choose_videos => 'Choose videos';
+  @override
+  String get backup_export_videos_all => 'All videos';
+  @override
+  String get backup_export_no_videos => 'No videos to choose from';
+  @override
+  String backup_export_videos_selected({required Object count}) =>
+      '${count} videos selected';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -85551,6 +86755,24 @@ class _StringsZhHk extends _StringsEn {
   String get collection_member_removed => 'Removed from collection';
   @override
   String get collection_default_name => 'New collection';
+  @override
+  String get backup_import_contents_hint => 'Untick an item to skip it.';
+  @override
+  String get clipboard_panel_window_title => 'Hibiki clipboard lookup';
+  @override
+  String get video_render_skia_fix_confirm_title =>
+      'Switch to Skia and restart?';
+  @override
+  String get video_render_skia_fix_confirm_body =>
+      'This disables the Impeller renderer and restarts the app to apply.';
+  @override
+  String get video_render_skia_fix_confirm_action => 'Restart';
+  @override
+  String get video_render_skia_fix_title =>
+      'Screen black? Switch renderer (Skia)';
+  @override
+  String get video_render_skia_fix_hint =>
+      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
@@ -85609,6 +86831,33 @@ class _StringsZhHk extends _StringsEn {
   String get collection_merge_title => 'Merge collections';
   @override
   String get collection_merged => 'Collections merged.';
+  @override
+  String batch_delete_confirm_video({required Object n}) =>
+      '確定刪除 ${n} 個影片？此操作不可撤銷。';
+  @override
+  String batch_delete_success_video({required Object n}) => '已刪除 ${n} 個影片。';
+  @override
+  String batch_tag_added_video({required Object n, required Object name}) =>
+      '已為 ${n} 個影片添加標籤「${name}」。';
+  @override
+  String batch_tag_removed_video({required Object n, required Object name}) =>
+      '已從 ${n} 個影片移除標籤「${name}」。';
+  @override
+  String get stat_daily_average => 'Daily avg';
+  @override
+  String get handlebar_sentence_audio => 'Sentence Audio';
+  @override
+  String get video_mining_image_mode => 'Video card image';
+  @override
+  String get video_mining_image_mode_hint =>
+      'How covers on video cards are captured';
+  @override
+  String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
+  @override
+  String get video_mining_image_mode_current_frame => 'Screenshot at mining';
+  @override
+  String get video_mining_image_mode_subtitle_start =>
+      'Screenshot at subtitle start';
 }
 
 // Path: retrying_in
@@ -88025,7 +89274,7 @@ extension on _StringsEn {
       case 'shortcut_action_reader_lookup_at_cursor':
         return 'Lookup / activate cursor';
       case 'shortcut_action_reader_shift_lookup':
-        return 'Shift lookup';
+        return 'Look up word at caret';
       case 'shortcut_action_reader_create_card_from_popup':
         return 'Create card from popup';
       case 'on_screen_keyboard':
@@ -88918,10 +90167,6 @@ extension on _StringsEn {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Danmaku server URL';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Card overwritten in 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -89668,7 +90913,7 @@ extension on _StringsEn {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -90151,8 +91396,6 @@ extension on _StringsEn {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -90210,7 +91453,7 @@ extension on _StringsEn {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -90225,6 +91468,42 @@ extension on _StringsEn {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -90251,6 +91530,20 @@ extension on _StringsEn {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -90306,6 +91599,31 @@ extension on _StringsEn {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -93573,10 +94891,6 @@ extension on _StringsAr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'عنوان خادم Danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) =>
             'تمت الكتابة فوق البطاقة في『${deck}』.';
@@ -94325,7 +95639,7 @@ extension on _StringsAr {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -94808,8 +96122,6 @@ extension on _StringsAr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -94867,7 +96179,7 @@ extension on _StringsAr {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -94882,6 +96194,42 @@ extension on _StringsAr {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -94908,6 +96256,20 @@ extension on _StringsAr {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -94963,6 +96325,31 @@ extension on _StringsAr {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -98251,10 +99638,6 @@ extension on _StringsDe {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Danmaku-Server-URL';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Karte in 『${deck}』 überschrieben.';
       case 'video_bottom_seek_back_label':
@@ -99004,7 +100387,7 @@ extension on _StringsDe {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -99487,8 +100870,6 @@ extension on _StringsDe {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -99546,7 +100927,7 @@ extension on _StringsDe {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -99561,6 +100942,42 @@ extension on _StringsDe {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -99587,6 +101004,20 @@ extension on _StringsDe {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -99642,6 +101073,31 @@ extension on _StringsDe {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -102927,10 +104383,6 @@ extension on _StringsEs {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL del servidor de danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Tarjeta sobrescrita en 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -103681,7 +105133,7 @@ extension on _StringsEs {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -104164,8 +105616,6 @@ extension on _StringsEs {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -104223,7 +105673,7 @@ extension on _StringsEs {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -104238,6 +105688,42 @@ extension on _StringsEs {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -104264,6 +105750,20 @@ extension on _StringsEs {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -104319,6 +105819,31 @@ extension on _StringsEs {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -107608,10 +109133,6 @@ extension on _StringsFr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL du serveur danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Carte remplacée dans « ${deck} ».';
       case 'video_bottom_seek_back_label':
@@ -108365,7 +109886,7 @@ extension on _StringsFr {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -108848,8 +110369,6 @@ extension on _StringsFr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -108907,7 +110426,7 @@ extension on _StringsFr {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -108922,6 +110441,42 @@ extension on _StringsFr {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -108948,6 +110503,20 @@ extension on _StringsFr {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -109003,6 +110572,31 @@ extension on _StringsFr {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -112277,10 +113871,6 @@ extension on _StringsId {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL server danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'AppId Dandanplay';
-      case 'video_setting_danmaku_app_secret':
-        return 'AppSecret Dandanplay';
       case 'card_overwritten':
         return ({required Object deck}) => 'Kartu ditimpa di 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -113029,7 +114619,7 @@ extension on _StringsId {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -113512,8 +115102,6 @@ extension on _StringsId {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -113571,7 +115159,7 @@ extension on _StringsId {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -113586,6 +115174,42 @@ extension on _StringsId {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -113612,6 +115236,20 @@ extension on _StringsId {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -113667,6 +115305,31 @@ extension on _StringsId {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -116952,10 +118615,6 @@ extension on _StringsIt {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL del server danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Carta sovrascritta in『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -117710,7 +119369,7 @@ extension on _StringsIt {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -118193,8 +119852,6 @@ extension on _StringsIt {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -118252,7 +119909,7 @@ extension on _StringsIt {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -118267,6 +119924,42 @@ extension on _StringsIt {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -118293,6 +119986,20 @@ extension on _StringsIt {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -118348,6 +120055,31 @@ extension on _StringsIt {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -120711,7 +122443,7 @@ extension on _StringsJa {
       case 'shortcut_action_reader_lookup_at_cursor':
         return '辞書を引く／カーソルを有効化';
       case 'shortcut_action_reader_shift_lookup':
-        return 'Shift 辞書引き';
+        return 'カーソル位置で辞書引き';
       case 'shortcut_action_reader_create_card_from_popup':
         return 'ポップアップからカード作成';
       case 'on_screen_keyboard':
@@ -121600,10 +123332,6 @@ extension on _StringsJa {
         return '弾幕';
       case 'video_setting_danmaku_server_url':
         return '弾幕サーバーの URL';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '『${deck}』のカードを上書きしました。';
       case 'video_bottom_seek_back_label':
@@ -122349,7 +124077,7 @@ extension on _StringsJa {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -122832,8 +124560,6 @@ extension on _StringsJa {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -122891,7 +124617,7 @@ extension on _StringsJa {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -122906,6 +124632,42 @@ extension on _StringsJa {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -122932,6 +124694,20 @@ extension on _StringsJa {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -122987,6 +124763,30 @@ extension on _StringsJa {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) => '${n} 本の動画を削除しますか？この操作は元に戻せません。';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => '${n} 本の動画を削除しました。';
+      case 'batch_tag_added_video':
+        return ({required Object n, required Object name}) =>
+            '${n} 本の動画にタグ「${name}」を追加しました。';
+      case 'batch_tag_removed_video':
+        return ({required Object n, required Object name}) =>
+            '${n} 本の動画からタグ「${name}」を削除しました。';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -126242,10 +128042,6 @@ extension on _StringsKo {
         return '탄막';
       case 'video_setting_danmaku_server_url':
         return '탄막 서버 주소';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '『${deck}』에 카드를 덮어썼습니다.';
       case 'video_bottom_seek_back_label':
@@ -126991,7 +128787,7 @@ extension on _StringsKo {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -127474,8 +129270,6 @@ extension on _StringsKo {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -127533,7 +129327,7 @@ extension on _StringsKo {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -127548,6 +129342,42 @@ extension on _StringsKo {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -127574,6 +129404,20 @@ extension on _StringsKo {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -127629,6 +129473,31 @@ extension on _StringsKo {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -130910,10 +132779,6 @@ extension on _StringsNl {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL danmaku-server';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Kaart overschreven in 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -131665,7 +133530,7 @@ extension on _StringsNl {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -132148,8 +134013,6 @@ extension on _StringsNl {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -132207,7 +134070,7 @@ extension on _StringsNl {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -132222,6 +134085,42 @@ extension on _StringsNl {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -132248,6 +134147,20 @@ extension on _StringsNl {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -132303,6 +134216,31 @@ extension on _StringsNl {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -135583,10 +137521,6 @@ extension on _StringsPtBr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'URL do servidor de danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Cartão sobrescrito em 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -136336,7 +138270,7 @@ extension on _StringsPtBr {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -136819,8 +138753,6 @@ extension on _StringsPtBr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -136878,7 +138810,7 @@ extension on _StringsPtBr {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -136893,6 +138825,42 @@ extension on _StringsPtBr {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -136919,6 +138887,20 @@ extension on _StringsPtBr {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -136974,6 +138956,31 @@ extension on _StringsPtBr {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -140256,10 +142263,6 @@ extension on _StringsRu {
         return 'Данмаку';
       case 'video_setting_danmaku_server_url':
         return 'Адрес сервера данмаку';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Карточка перезаписана в «${deck}».';
       case 'video_bottom_seek_back_label':
@@ -141011,7 +143014,7 @@ extension on _StringsRu {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -141494,8 +143497,6 @@ extension on _StringsRu {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -141553,7 +143554,7 @@ extension on _StringsRu {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -141568,6 +143569,42 @@ extension on _StringsRu {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -141594,6 +143631,20 @@ extension on _StringsRu {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -141649,6 +143700,31 @@ extension on _StringsRu {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -144916,10 +146992,6 @@ extension on _StringsTh {
         return 'ดันมากุ';
       case 'video_setting_danmaku_server_url':
         return 'URL เซิร์ฟเวอร์ดันมากุ';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'เขียนทับการ์ดใน『${deck}』แล้ว';
       case 'video_bottom_seek_back_label':
@@ -145668,7 +147740,7 @@ extension on _StringsTh {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -146151,8 +148223,6 @@ extension on _StringsTh {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -146210,7 +148280,7 @@ extension on _StringsTh {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -146225,6 +148295,42 @@ extension on _StringsTh {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -146251,6 +148357,20 @@ extension on _StringsTh {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -146306,6 +148426,31 @@ extension on _StringsTh {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -149578,10 +151723,6 @@ extension on _StringsTr {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Danmaku sunucu URL\'si';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) =>
             'Kart 『${deck}』 destesinde üzerine yazıldı.';
@@ -150334,7 +152475,7 @@ extension on _StringsTr {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -150817,8 +152958,6 @@ extension on _StringsTr {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -150876,7 +153015,7 @@ extension on _StringsTr {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -150891,6 +153030,42 @@ extension on _StringsTr {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -150917,6 +153092,20 @@ extension on _StringsTr {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -150972,6 +153161,31 @@ extension on _StringsTr {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -154241,10 +156455,6 @@ extension on _StringsVi {
         return 'Danmaku';
       case 'video_setting_danmaku_server_url':
         return 'Địa chỉ máy chủ danmaku';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => 'Đã ghi đè thẻ trong 『${deck}』.';
       case 'video_bottom_seek_back_label':
@@ -154994,7 +157204,7 @@ extension on _StringsVi {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -155477,8 +157687,6 @@ extension on _StringsVi {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -155536,7 +157744,7 @@ extension on _StringsVi {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -155551,6 +157759,42 @@ extension on _StringsVi {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -155577,6 +157821,20 @@ extension on _StringsVi {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -155632,6 +157890,31 @@ extension on _StringsVi {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) =>
+            'Delete ${n} video(s)? This cannot be undone.';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => 'Deleted ${n} video(s).';
+      case 'batch_tag_added_video':
+        return ({required Object name, required Object n}) =>
+            'Added tag "${name}" to ${n} video(s).';
+      case 'batch_tag_removed_video':
+        return ({required Object name, required Object n}) =>
+            'Removed tag "${name}" from ${n} video(s).';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
@@ -157991,7 +160274,7 @@ extension on _StringsZhCn {
       case 'shortcut_action_reader_lookup_at_cursor':
         return '查词/激活光标';
       case 'shortcut_action_reader_shift_lookup':
-        return 'Shift 查词';
+        return '光标处查词';
       case 'shortcut_action_reader_create_card_from_popup':
         return '从弹窗制卡';
       case 'on_screen_keyboard':
@@ -158878,10 +161161,6 @@ extension on _StringsZhCn {
         return '弹幕';
       case 'video_setting_danmaku_server_url':
         return '弹幕服务器地址';
-      case 'video_setting_danmaku_app_id':
-        return '弹弹play AppId';
-      case 'video_setting_danmaku_app_secret':
-        return '弹弹play AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '卡片已覆盖到『${deck}』。';
       case 'video_bottom_seek_back_label':
@@ -159622,7 +161901,7 @@ extension on _StringsZhCn {
       case 'card_mined_unmapped_sentence_field':
         return '卡片已创建，但当前 Anki 卡片模板没有任何字段映射到句子。请用设置页『一键创建 Lapis 卡组』，或把某字段映射到 {sentence}。';
       case 'card_mined_unmapped_sentence_audio_field':
-        return '卡片已创建并含句子音频，但当前 Anki 卡片模板没有字段映射到它。请把某字段映射到 {sasayaki-audio}。';
+        return '卡片已创建并含句子音频，但当前 Anki 卡片模板没有字段映射到它。请把某字段映射到 {sentence-audio}。';
       case 'audiobook_export_clip_in_progress':
         return '正在导出片段…';
       case 'audiobook_export_clip_saved':
@@ -160103,8 +162382,6 @@ extension on _StringsZhCn {
         return '应用与阅读器设置';
       case 'backup_category_profiles_desc':
         return '配置方案';
-      case 'backup_import_contents_hint':
-        return '取消勾选某项可在覆盖模式下跳过恢复它的文件；书籍与阅读数据始终会恢复。';
       case 'popup_font_size_decrease':
         return '缩小查词字号';
       case 'popup_font_size_increase':
@@ -160162,7 +162439,7 @@ extension on _StringsZhCn {
       case 'clipboard_panel_opacity':
         return '面板不透明度';
       case 'clipboard_panel_opacity_hint':
-        return '悬浮查词面板的卡片背景不透明度（需要 Windows 11 背景材质支持）';
+        return '整个面板的不透明度——可透视底下的游戏/网页';
       case 'sync_client_connected':
         return '已连接';
       case 'sync_client_token_manual':
@@ -160177,6 +162454,42 @@ extension on _StringsZhCn {
         return '重命名合集';
       case 'delete_collection':
         return '删除合集';
+      case 'popup_ctx_adjust_button':
+        return '调整上下文';
+      case 'popup_ctx_modal_eyebrow':
+        return '制卡前调整';
+      case 'popup_ctx_modal_title':
+        return '选择句子上下文';
+      case 'popup_ctx_modal_count':
+        return '已选择 %d 句';
+      case 'popup_ctx_box_prev':
+        return '前文';
+      case 'popup_ctx_box_current':
+        return '当前句';
+      case 'popup_ctx_box_next':
+        return '后文';
+      case 'popup_ctx_box_empty':
+        return '（无）';
+      case 'popup_ctx_prev_minus':
+        return '前退一句';
+      case 'popup_ctx_prev_plus':
+        return '前加一句';
+      case 'popup_ctx_next_minus':
+        return '后退一句';
+      case 'popup_ctx_next_plus':
+        return '后加一句';
+      case 'popup_ctx_confirm':
+        return '确认制卡';
+      case 'popup_ctx_cancel':
+        return '取消';
+      case 'backup_export_choose_videos':
+        return '选择视频';
+      case 'backup_export_videos_all':
+        return '全部视频';
+      case 'backup_export_no_videos':
+        return '没有可选的视频';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '已选 ${count} 个视频';
       case 'video_continue_watching':
         return '继续观看';
       case 'video_library_overview':
@@ -160203,6 +162516,20 @@ extension on _StringsZhCn {
         return '已移出合集';
       case 'collection_default_name':
         return '新合集';
+      case 'backup_import_contents_hint':
+        return '取消勾选某项即可跳过它。';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki 剪贴板查词';
+      case 'video_render_skia_fix_confirm_title':
+        return '切换到 Skia 并重启？';
+      case 'video_render_skia_fix_confirm_body':
+        return '将关闭 Impeller 渲染器并重启应用使其生效。';
+      case 'video_render_skia_fix_confirm_action':
+        return '重启';
+      case 'video_render_skia_fix_title':
+        return '画面全黑？切换渲染器（Skia）';
+      case 'video_render_skia_fix_hint':
+        return '有声音但画面全黑时用。关闭 Impeller，重启后生效。';
       case 'book_continue_reading':
         return '继续阅读';
       case 'book_library_overview':
@@ -160257,6 +162584,30 @@ extension on _StringsZhCn {
         return '合并合集';
       case 'collection_merged':
         return '已合并合集。';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) => '确定删除 ${n} 个视频？此操作不可撤销。';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => '已删除 ${n} 个视频。';
+      case 'batch_tag_added_video':
+        return ({required Object n, required Object name}) =>
+            '已为 ${n} 个视频添加标签「${name}」。';
+      case 'batch_tag_removed_video':
+        return ({required Object n, required Object name}) =>
+            '已从 ${n} 个视频移除标签「${name}」。';
+      case 'stat_daily_average':
+        return '日均';
+      case 'handlebar_sentence_audio':
+        return '句子音频';
+      case 'video_mining_image_mode':
+        return '视频卡片图片';
+      case 'video_mining_image_mode_hint':
+        return '视频制卡封面用动图还是截图';
+      case 'video_mining_image_mode_gif':
+        return '动图 GIF（字幕片段）';
+      case 'video_mining_image_mode_current_frame':
+        return '制卡时截图';
+      case 'video_mining_image_mode_subtitle_start':
+        return '字幕开头截图';
       default:
         return null;
     }
@@ -162616,7 +164967,7 @@ extension on _StringsZhHk {
       case 'shortcut_action_reader_lookup_at_cursor':
         return '查詞／啟用游標';
       case 'shortcut_action_reader_shift_lookup':
-        return 'Shift 查詞';
+        return '游標處查詞';
       case 'shortcut_action_reader_create_card_from_popup':
         return '由彈窗製卡';
       case 'on_screen_keyboard':
@@ -163504,10 +165855,6 @@ extension on _StringsZhHk {
         return '彈幕';
       case 'video_setting_danmaku_server_url':
         return '彈幕伺服器網址';
-      case 'video_setting_danmaku_app_id':
-        return 'Dandanplay AppId';
-      case 'video_setting_danmaku_app_secret':
-        return 'Dandanplay AppSecret';
       case 'card_overwritten':
         return ({required Object deck}) => '卡片已覆寫至『${deck}』。';
       case 'video_bottom_seek_back_label':
@@ -164250,7 +166597,7 @@ extension on _StringsZhHk {
       case 'card_mined_unmapped_sentence_field':
         return 'Card created, but your Anki note type has no field mapped to the sentence. Use Settings -> \'Create Lapis deck\' or map a field to {sentence}.';
       case 'card_mined_unmapped_sentence_audio_field':
-        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sasayaki-audio}.';
+        return 'Card created with sentence audio, but your Anki note type has no field mapped to it. Map a field to {sentence-audio}.';
       case 'audiobook_export_clip_in_progress':
         return 'Exporting clip…';
       case 'audiobook_export_clip_saved':
@@ -164733,8 +167080,6 @@ extension on _StringsZhHk {
         return 'App and reader settings';
       case 'backup_category_profiles_desc':
         return 'Configuration profiles';
-      case 'backup_import_contents_hint':
-        return 'Untick an item to skip restoring its files (overwrite only). Books and reading data always restore.';
       case 'popup_font_size_decrease':
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
@@ -164792,7 +167137,7 @@ extension on _StringsZhHk {
       case 'clipboard_panel_opacity':
         return 'Panel opacity';
       case 'clipboard_panel_opacity_hint':
-        return 'Card background opacity of the floating lookup panel (requires Windows 11 backdrop)';
+        return 'Whole-panel opacity — see through to the game or page beneath';
       case 'sync_client_connected':
         return 'Connected';
       case 'sync_client_token_manual':
@@ -164807,6 +167152,42 @@ extension on _StringsZhHk {
         return 'Rename collection';
       case 'delete_collection':
         return 'Delete collection';
+      case 'popup_ctx_adjust_button':
+        return 'Adjust context';
+      case 'popup_ctx_modal_eyebrow':
+        return 'Before mining';
+      case 'popup_ctx_modal_title':
+        return 'Select sentence context';
+      case 'popup_ctx_modal_count':
+        return 'Selected %d';
+      case 'popup_ctx_box_prev':
+        return 'Before';
+      case 'popup_ctx_box_current':
+        return 'Current';
+      case 'popup_ctx_box_next':
+        return 'After';
+      case 'popup_ctx_box_empty':
+        return '(none)';
+      case 'popup_ctx_prev_minus':
+        return 'Remove before';
+      case 'popup_ctx_prev_plus':
+        return 'Add before';
+      case 'popup_ctx_next_minus':
+        return 'Remove after';
+      case 'popup_ctx_next_plus':
+        return 'Add after';
+      case 'popup_ctx_confirm':
+        return 'Confirm';
+      case 'popup_ctx_cancel':
+        return 'Cancel';
+      case 'backup_export_choose_videos':
+        return 'Choose videos';
+      case 'backup_export_videos_all':
+        return 'All videos';
+      case 'backup_export_no_videos':
+        return 'No videos to choose from';
+      case 'backup_export_videos_selected':
+        return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
@@ -164833,6 +167214,20 @@ extension on _StringsZhHk {
         return 'Removed from collection';
       case 'collection_default_name':
         return 'New collection';
+      case 'backup_import_contents_hint':
+        return 'Untick an item to skip it.';
+      case 'clipboard_panel_window_title':
+        return 'Hibiki clipboard lookup';
+      case 'video_render_skia_fix_confirm_title':
+        return 'Switch to Skia and restart?';
+      case 'video_render_skia_fix_confirm_body':
+        return 'This disables the Impeller renderer and restarts the app to apply.';
+      case 'video_render_skia_fix_confirm_action':
+        return 'Restart';
+      case 'video_render_skia_fix_title':
+        return 'Screen black? Switch renderer (Skia)';
+      case 'video_render_skia_fix_hint':
+        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
@@ -164888,6 +167283,30 @@ extension on _StringsZhHk {
         return 'Merge collections';
       case 'collection_merged':
         return 'Collections merged.';
+      case 'batch_delete_confirm_video':
+        return ({required Object n}) => '確定刪除 ${n} 個影片？此操作不可撤銷。';
+      case 'batch_delete_success_video':
+        return ({required Object n}) => '已刪除 ${n} 個影片。';
+      case 'batch_tag_added_video':
+        return ({required Object n, required Object name}) =>
+            '已為 ${n} 個影片添加標籤「${name}」。';
+      case 'batch_tag_removed_video':
+        return ({required Object n, required Object name}) =>
+            '已從 ${n} 個影片移除標籤「${name}」。';
+      case 'stat_daily_average':
+        return 'Daily avg';
+      case 'handlebar_sentence_audio':
+        return 'Sentence Audio';
+      case 'video_mining_image_mode':
+        return 'Video card image';
+      case 'video_mining_image_mode_hint':
+        return 'How covers on video cards are captured';
+      case 'video_mining_image_mode_gif':
+        return 'Animated GIF (subtitle clip)';
+      case 'video_mining_image_mode_current_frame':
+        return 'Screenshot at mining';
+      case 'video_mining_image_mode_subtitle_start':
+        return 'Screenshot at subtitle start';
       default:
         return null;
     }
