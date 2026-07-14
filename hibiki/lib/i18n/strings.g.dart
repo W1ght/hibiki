@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 43775 (2575 per locale)
+/// Strings: 43826 (2578 per locale)
 ///
-/// Built on 2026-07-24 at 20:56 UTC
+/// Built on 2026-07-25 at 06:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3417,6 +3417,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_developer => 'Developer';
   String get game_site_score => 'Site rating';
   String get game_user_rating => 'My rating';
+  String get data_root_unavailable_title => 'Data location not responding';
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -9255,6 +9259,13 @@ class _StringsAr extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -15166,6 +15177,13 @@ class _StringsDe extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -21093,6 +21111,13 @@ class _StringsEs extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -27031,6 +27056,13 @@ class _StringsFr extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -32896,6 +32928,13 @@ class _StringsId extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -38809,6 +38848,13 @@ class _StringsIt extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -44527,6 +44573,13 @@ class _StringsJa extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -50248,6 +50301,13 @@ class _StringsKo extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -56139,6 +56199,13 @@ class _StringsNl extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -62045,6 +62112,13 @@ class _StringsPtBr extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -67934,6 +68008,13 @@ class _StringsRu extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -73768,6 +73849,13 @@ class _StringsTh extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -79634,6 +79722,13 @@ class _StringsTr extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -85487,6 +85582,13 @@ class _StringsVi extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -90932,6 +91034,13 @@ class _StringsZhCn extends _StringsEn {
   String get game_site_score => '站点评分';
   @override
   String get game_user_rating => '我的评分';
+  @override
+  String get data_root_unavailable_title => '数据位置未响应';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      '你设置的数据位置 ${path} 暂时读不到（盘可能在休眠、被占用或未连接）。你的数据是安全的、原封不动留在那里——没有丢失。请点「重试」,等盘就绪即可用回你的数据；或选择用默认位置临时启动（不会改动你原来的数据）。';
+  @override
+  String get data_root_use_default_button => '仍用默认位置启动';
 }
 
 // Path: <root>
@@ -96568,6 +96677,13 @@ class _StringsZhHk extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 /// Flat map(s) containing all translations.
@@ -101824,6 +101940,13 @@ extension on _StringsEn {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -107078,6 +107201,13 @@ extension on _StringsAr {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -112353,6 +112483,13 @@ extension on _StringsDe {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -117627,6 +117764,13 @@ extension on _StringsEs {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -122907,6 +123051,13 @@ extension on _StringsFr {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -128169,6 +128320,13 @@ extension on _StringsId {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -133446,6 +133604,13 @@ extension on _StringsIt {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -138685,6 +138850,13 @@ extension on _StringsJa {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -143928,6 +144100,13 @@ extension on _StringsKo {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -149198,6 +149377,13 @@ extension on _StringsNl {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -154465,6 +154651,13 @@ extension on _StringsPtBr {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -159737,6 +159930,13 @@ extension on _StringsRu {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -164993,6 +165193,13 @@ extension on _StringsTh {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -170258,6 +170465,13 @@ extension on _StringsTr {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -175518,6 +175732,13 @@ extension on _StringsVi {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -180739,6 +180960,13 @@ extension on _StringsZhCn {
         return '站点评分';
       case 'game_user_rating':
         return '我的评分';
+      case 'data_root_unavailable_title':
+        return '数据位置未响应';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            '你设置的数据位置 ${path} 暂时读不到（盘可能在休眠、被占用或未连接）。你的数据是安全的、原封不动留在那里——没有丢失。请点「重试」,等盘就绪即可用回你的数据；或选择用默认位置临时启动（不会改动你原来的数据）。';
+      case 'data_root_use_default_button':
+        return '仍用默认位置启动';
       default:
         return null;
     }
@@ -185973,6 +186201,13 @@ extension on _StringsZhHk {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
