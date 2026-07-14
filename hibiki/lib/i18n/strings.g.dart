@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39797 (2341 per locale)
+/// Strings: 39831 (2343 per locale)
 ///
-/// Built on 2026-07-14 at 12:20 UTC
+/// Built on 2026-07-14 at 12:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3106,6 +3106,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This item was not found in your library.';
   String get video_load_failed_retry => 'Retry';
   String get video_load_failed_back => 'Back';
+  String get video_quality_loading => 'Loading available qualities…';
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -8413,6 +8416,11 @@ class _StringsAr extends _StringsEn {
   String get video_load_failed_retry => 'Retry';
   @override
   String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -13843,6 +13851,11 @@ class _StringsDe extends _StringsEn {
   String get video_load_failed_retry => 'Retry';
   @override
   String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -19290,6 +19303,11 @@ class _StringsEs extends _StringsEn {
   String get video_load_failed_retry => 'Retry';
   @override
   String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -24756,6 +24774,11 @@ class _StringsFr extends _StringsEn {
   String get video_load_failed_retry => 'Retry';
   @override
   String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -30124,6 +30147,11 @@ class _StringsId extends _StringsEn {
   String get video_load_failed_retry => 'Retry';
   @override
   String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -35553,6 +35581,11 @@ class _StringsIt extends _StringsEn {
   String get video_load_failed_retry => 'Retry';
   @override
   String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -40707,6 +40740,11 @@ class _StringsJa extends _StringsEn {
   String get video_load_failed_retry => 'Retry';
   @override
   String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -45866,6 +45904,11 @@ class _StringsKo extends _StringsEn {
   String get video_load_failed_retry => 'Retry';
   @override
   String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -51263,6 +51306,11 @@ class _StringsNl extends _StringsEn {
   String get video_load_failed_retry => 'Retry';
   @override
   String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -56683,6 +56731,11 @@ class _StringsPtBr extends _StringsEn {
   String get video_load_failed_retry => 'Retry';
   @override
   String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -62078,6 +62131,11 @@ class _StringsRu extends _StringsEn {
   String get video_load_failed_retry => 'Retry';
   @override
   String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -67386,6 +67444,11 @@ class _StringsTh extends _StringsEn {
   String get video_load_failed_retry => 'Retry';
   @override
   String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -72749,6 +72812,11 @@ class _StringsTr extends _StringsEn {
   String get video_load_failed_retry => 'Retry';
   @override
   String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -78087,6 +78155,11 @@ class _StringsVi extends _StringsEn {
   String get video_load_failed_retry => 'Retry';
   @override
   String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -83057,6 +83130,10 @@ class _StringsZhCn extends _StringsEn {
   String get video_load_failed_retry => '重试';
   @override
   String get video_load_failed_back => '返回';
+  @override
+  String get video_quality_loading => '正在获取可选画质…';
+  @override
+  String get video_quality_load_failed => '无法获取该视频的画质档。';
 }
 
 // Path: retrying_in
@@ -88113,6 +88190,11 @@ class _StringsZhHk extends _StringsEn {
   String get video_load_failed_retry => 'Retry';
   @override
   String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -92940,6 +93022,10 @@ extension on _StringsEn {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -97727,6 +97813,10 @@ extension on _StringsAr {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -102536,6 +102626,10 @@ extension on _StringsDe {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -107343,6 +107437,10 @@ extension on _StringsEs {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -112157,6 +112255,10 @@ extension on _StringsFr {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -116951,6 +117053,10 @@ extension on _StringsId {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -121762,6 +121868,10 @@ extension on _StringsIt {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -126530,6 +126640,10 @@ extension on _StringsJa {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -131302,6 +131416,10 @@ extension on _StringsKo {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -136106,6 +136224,10 @@ extension on _StringsNl {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -140907,6 +141029,10 @@ extension on _StringsPtBr {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -145712,6 +145838,10 @@ extension on _StringsRu {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -150499,6 +150629,10 @@ extension on _StringsTh {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -155295,6 +155429,10 @@ extension on _StringsTr {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -160085,6 +160223,10 @@ extension on _StringsVi {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -164838,6 +164980,10 @@ extension on _StringsZhCn {
         return '重试';
       case 'video_load_failed_back':
         return '返回';
+      case 'video_quality_loading':
+        return '正在获取可选画质…';
+      case 'video_quality_load_failed':
+        return '无法获取该视频的画质档。';
       default:
         return null;
     }
@@ -169598,6 +169744,10 @@ extension on _StringsZhHk {
         return 'Retry';
       case 'video_load_failed_back':
         return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
