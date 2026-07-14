@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39644 (2332 per locale)
+/// Strings: 39814 (2342 per locale)
 ///
-/// Built on 2026-07-14 at 12:13 UTC
+/// Built on 2026-07-14 at 13:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3093,6 +3093,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get clipboard_text_window_bg_opacity => 'Text window background';
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  String get video_load_failed_title => 'Video failed to load';
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  String get video_load_failed_retry => 'Retry';
+  String get video_load_failed_back => 'Back';
+  String get video_quality_loading => 'Loading available qualities…';
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -8378,6 +8393,31 @@ class _StringsAr extends _StringsEn {
   @override
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -13786,6 +13826,31 @@ class _StringsDe extends _StringsEn {
   @override
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -19211,6 +19276,31 @@ class _StringsEs extends _StringsEn {
   @override
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -24655,6 +24745,31 @@ class _StringsFr extends _StringsEn {
   @override
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -30001,6 +30116,31 @@ class _StringsId extends _StringsEn {
   @override
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -35408,6 +35548,31 @@ class _StringsIt extends _StringsEn {
   @override
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -40540,6 +40705,31 @@ class _StringsJa extends _StringsEn {
   @override
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -45677,6 +45867,31 @@ class _StringsKo extends _StringsEn {
   @override
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -51052,6 +51267,31 @@ class _StringsNl extends _StringsEn {
   @override
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -56450,6 +56690,31 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -61823,6 +62088,31 @@ class _StringsRu extends _StringsEn {
   @override
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -67109,6 +67399,31 @@ class _StringsTh extends _StringsEn {
   @override
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -72450,6 +72765,31 @@ class _StringsTr extends _StringsEn {
   @override
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -77766,6 +78106,31 @@ class _StringsVi extends _StringsEn {
   @override
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -82716,6 +83081,27 @@ class _StringsZhCn extends _StringsEn {
   String get clipboard_text_window_bg_opacity => '文字窗背景不透明度';
   @override
   String get remote_video_list_failed => '无法加载远端视频，请确认对端设备在线并与本机处于同一网络后重试';
+  @override
+  String get video_load_failed_title => '视频加载失败';
+  @override
+  String get video_load_failed_timeout => '连接超时，网络较慢或视频源暂时限流，请稍后重试。';
+  @override
+  String get video_load_failed_network => '网络错误，请检查网络连接后重试。';
+  @override
+  String get video_load_failed_unavailable =>
+      '无法获取视频流，视频可能不可用、受地区或年龄限制，或来源已变更。';
+  @override
+  String get video_load_failed_generic => '无法加载该视频。';
+  @override
+  String get video_load_failed_not_found => '在书架中找不到该条目。';
+  @override
+  String get video_load_failed_retry => '重试';
+  @override
+  String get video_load_failed_back => '返回';
+  @override
+  String get video_quality_loading => '正在获取可选画质…';
+  @override
+  String get video_quality_load_failed => '无法获取该视频的画质档。';
 }
 
 // Path: retrying_in
@@ -87750,6 +88136,31 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get remote_video_list_failed =>
       'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
+  @override
+  String get video_quality_loading => 'Loading available qualities…';
+  @override
+  String get video_quality_load_failed =>
+      'Couldn\'t load qualities for this video.';
 }
 
 // Path: retrying_in
@@ -92558,6 +92969,26 @@ extension on _StringsEn {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -97326,6 +97757,26 @@ extension on _StringsAr {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -102116,6 +102567,26 @@ extension on _StringsDe {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -106904,6 +107375,26 @@ extension on _StringsEs {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -111699,6 +112190,26 @@ extension on _StringsFr {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -116474,6 +116985,26 @@ extension on _StringsId {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -121266,6 +121797,26 @@ extension on _StringsIt {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -126015,6 +126566,26 @@ extension on _StringsJa {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -130768,6 +131339,26 @@ extension on _StringsKo {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -135553,6 +136144,26 @@ extension on _StringsNl {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -140335,6 +140946,26 @@ extension on _StringsPtBr {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -145121,6 +145752,26 @@ extension on _StringsRu {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -149889,6 +150540,26 @@ extension on _StringsTh {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -154666,6 +155337,26 @@ extension on _StringsTr {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -159437,6 +160128,26 @@ extension on _StringsVi {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
@@ -164172,6 +164883,26 @@ extension on _StringsZhCn {
         return '文字窗背景不透明度';
       case 'remote_video_list_failed':
         return '无法加载远端视频，请确认对端设备在线并与本机处于同一网络后重试';
+      case 'video_load_failed_title':
+        return '视频加载失败';
+      case 'video_load_failed_timeout':
+        return '连接超时，网络较慢或视频源暂时限流，请稍后重试。';
+      case 'video_load_failed_network':
+        return '网络错误，请检查网络连接后重试。';
+      case 'video_load_failed_unavailable':
+        return '无法获取视频流，视频可能不可用、受地区或年龄限制，或来源已变更。';
+      case 'video_load_failed_generic':
+        return '无法加载该视频。';
+      case 'video_load_failed_not_found':
+        return '在书架中找不到该条目。';
+      case 'video_load_failed_retry':
+        return '重试';
+      case 'video_load_failed_back':
+        return '返回';
+      case 'video_quality_loading':
+        return '正在获取可选画质…';
+      case 'video_quality_load_failed':
+        return '无法获取该视频的画质档。';
       default:
         return null;
     }
@@ -168913,6 +169644,26 @@ extension on _StringsZhHk {
         return 'Text window background';
       case 'remote_video_list_failed':
         return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
+      case 'video_quality_loading':
+        return 'Loading available qualities…';
+      case 'video_quality_load_failed':
+        return 'Couldn\'t load qualities for this video.';
       default:
         return null;
     }
