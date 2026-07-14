@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39661 (2333 per locale)
+/// Strings: 39797 (2341 per locale)
 ///
-/// Built on 2026-07-14 at 09:36 UTC
+/// Built on 2026-07-14 at 12:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3094,6 +3094,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_destination_text_window =>
       'Transparent text window';
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  String get video_load_failed_title => 'Video failed to load';
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  String get video_load_failed_retry => 'Retry';
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -8381,6 +8393,26 @@ class _StringsAr extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -13791,6 +13823,26 @@ class _StringsDe extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -19218,6 +19270,26 @@ class _StringsEs extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -24664,6 +24736,26 @@ class _StringsFr extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -30012,6 +30104,26 @@ class _StringsId extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -35421,6 +35533,26 @@ class _StringsIt extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -40555,6 +40687,26 @@ class _StringsJa extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -45694,6 +45846,26 @@ class _StringsKo extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -51071,6 +51243,26 @@ class _StringsNl extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -56471,6 +56663,26 @@ class _StringsPtBr extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -61846,6 +62058,26 @@ class _StringsRu extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -67134,6 +67366,26 @@ class _StringsTh extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -72477,6 +72729,26 @@ class _StringsTr extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -77795,6 +78067,26 @@ class _StringsVi extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -82748,6 +83040,23 @@ class _StringsZhCn extends _StringsEn {
   String get desktop_clipboard_destination_text_window => '透明文字窗';
   @override
   String get clipboard_text_window_bg_opacity => '文字窗背景不透明度';
+  @override
+  String get video_load_failed_title => '视频加载失败';
+  @override
+  String get video_load_failed_timeout => '连接超时，网络较慢或视频源暂时限流，请稍后重试。';
+  @override
+  String get video_load_failed_network => '网络错误，请检查网络连接后重试。';
+  @override
+  String get video_load_failed_unavailable =>
+      '无法获取视频流，视频可能不可用、受地区或年龄限制，或来源已变更。';
+  @override
+  String get video_load_failed_generic => '无法加载该视频。';
+  @override
+  String get video_load_failed_not_found => '在书架中找不到该条目。';
+  @override
+  String get video_load_failed_retry => '重试';
+  @override
+  String get video_load_failed_back => '返回';
 }
 
 // Path: retrying_in
@@ -87784,6 +88093,26 @@ class _StringsZhHk extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get video_load_failed_title => 'Video failed to load';
+  @override
+  String get video_load_failed_timeout =>
+      'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+  @override
+  String get video_load_failed_network =>
+      'Network error - check your connection and try again.';
+  @override
+  String get video_load_failed_unavailable =>
+      'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+  @override
+  String get video_load_failed_generic => 'Couldn\'t load this video.';
+  @override
+  String get video_load_failed_not_found =>
+      'This item was not found in your library.';
+  @override
+  String get video_load_failed_retry => 'Retry';
+  @override
+  String get video_load_failed_back => 'Back';
 }
 
 // Path: retrying_in
@@ -92595,6 +92924,22 @@ extension on _StringsEn {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
@@ -97366,6 +97711,22 @@ extension on _StringsAr {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
@@ -102159,6 +102520,22 @@ extension on _StringsDe {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
@@ -106950,6 +107327,22 @@ extension on _StringsEs {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
@@ -111748,6 +112141,22 @@ extension on _StringsFr {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
@@ -116526,6 +116935,22 @@ extension on _StringsId {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
@@ -121321,6 +121746,22 @@ extension on _StringsIt {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
@@ -126073,6 +126514,22 @@ extension on _StringsJa {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
@@ -130829,6 +131286,22 @@ extension on _StringsKo {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
@@ -135617,6 +136090,22 @@ extension on _StringsNl {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
@@ -140402,6 +140891,22 @@ extension on _StringsPtBr {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
@@ -145191,6 +145696,22 @@ extension on _StringsRu {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
@@ -149962,6 +150483,22 @@ extension on _StringsTh {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
@@ -154742,6 +155279,22 @@ extension on _StringsTr {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
@@ -159516,6 +160069,22 @@ extension on _StringsVi {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
@@ -164253,6 +164822,22 @@ extension on _StringsZhCn {
         return '透明文字窗';
       case 'clipboard_text_window_bg_opacity':
         return '文字窗背景不透明度';
+      case 'video_load_failed_title':
+        return '视频加载失败';
+      case 'video_load_failed_timeout':
+        return '连接超时，网络较慢或视频源暂时限流，请稍后重试。';
+      case 'video_load_failed_network':
+        return '网络错误，请检查网络连接后重试。';
+      case 'video_load_failed_unavailable':
+        return '无法获取视频流，视频可能不可用、受地区或年龄限制，或来源已变更。';
+      case 'video_load_failed_generic':
+        return '无法加载该视频。';
+      case 'video_load_failed_not_found':
+        return '在书架中找不到该条目。';
+      case 'video_load_failed_retry':
+        return '重试';
+      case 'video_load_failed_back':
+        return '返回';
       default:
         return null;
     }
@@ -168997,6 +169582,22 @@ extension on _StringsZhHk {
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'video_load_failed_title':
+        return 'Video failed to load';
+      case 'video_load_failed_timeout':
+        return 'Connection timed out - the network is slow or the source is rate-limiting. Please try again.';
+      case 'video_load_failed_network':
+        return 'Network error - check your connection and try again.';
+      case 'video_load_failed_unavailable':
+        return 'Couldn\'t get the video stream - it may be unavailable, region or age restricted, or the source changed.';
+      case 'video_load_failed_generic':
+        return 'Couldn\'t load this video.';
+      case 'video_load_failed_not_found':
+        return 'This item was not found in your library.';
+      case 'video_load_failed_retry':
+        return 'Retry';
+      case 'video_load_failed_back':
+        return 'Back';
       default:
         return null;
     }
