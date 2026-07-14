@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39661 (2333 per locale)
+/// Strings: 39644 (2332 per locale)
 ///
-/// Built on 2026-07-14 at 09:36 UTC
+/// Built on 2026-07-14 at 11:40 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2750,7 +2750,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Black flickering on Windows?';
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-  String get video_resource_missing_relink => 'Choose file';
   String get video_resource_relink_success => 'Video relinked';
   String get ttu_merge_image_pages => 'Merge illustration pages into text';
   String get ttu_merge_image_pages_subtitle =>
@@ -7767,8 +7766,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-  @override
-  String get video_resource_missing_relink => 'Choose file';
   @override
   String get video_resource_relink_success => 'Video relinked';
   @override
@@ -13175,8 +13172,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-  @override
-  String get video_resource_missing_relink => 'Choose file';
   @override
   String get video_resource_relink_success => 'Video relinked';
   @override
@@ -18602,8 +18597,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-  @override
-  String get video_resource_missing_relink => 'Choose file';
   @override
   String get video_resource_relink_success => 'Video relinked';
   @override
@@ -24049,8 +24042,6 @@ class _StringsFr extends _StringsEn {
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
   @override
-  String get video_resource_missing_relink => 'Choose file';
-  @override
   String get video_resource_relink_success => 'Video relinked';
   @override
   String get ttu_merge_image_pages => 'Merge illustration pages into text';
@@ -29396,8 +29387,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-  @override
-  String get video_resource_missing_relink => 'Choose file';
   @override
   String get video_resource_relink_success => 'Video relinked';
   @override
@@ -34806,8 +34795,6 @@ class _StringsIt extends _StringsEn {
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
   @override
-  String get video_resource_missing_relink => 'Choose file';
-  @override
   String get video_resource_relink_success => 'Video relinked';
   @override
   String get ttu_merge_image_pages => 'Merge illustration pages into text';
@@ -39942,8 +39929,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-  @override
-  String get video_resource_missing_relink => 'Choose file';
   @override
   String get video_resource_relink_success => 'Video relinked';
   @override
@@ -45080,8 +45065,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-  @override
-  String get video_resource_missing_relink => 'Choose file';
   @override
   String get video_resource_relink_success => 'Video relinked';
   @override
@@ -50455,8 +50438,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-  @override
-  String get video_resource_missing_relink => 'Choose file';
   @override
   String get video_resource_relink_success => 'Video relinked';
   @override
@@ -55856,8 +55837,6 @@ class _StringsPtBr extends _StringsEn {
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
   @override
-  String get video_resource_missing_relink => 'Choose file';
-  @override
   String get video_resource_relink_success => 'Video relinked';
   @override
   String get ttu_merge_image_pages => 'Merge illustration pages into text';
@@ -61231,8 +61210,6 @@ class _StringsRu extends _StringsEn {
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
   @override
-  String get video_resource_missing_relink => 'Choose file';
-  @override
   String get video_resource_relink_success => 'Video relinked';
   @override
   String get ttu_merge_image_pages => 'Merge illustration pages into text';
@@ -66520,8 +66497,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-  @override
-  String get video_resource_missing_relink => 'Choose file';
   @override
   String get video_resource_relink_success => 'Video relinked';
   @override
@@ -71862,8 +71837,6 @@ class _StringsTr extends _StringsEn {
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
   @override
-  String get video_resource_missing_relink => 'Choose file';
-  @override
   String get video_resource_relink_success => 'Video relinked';
   @override
   String get ttu_merge_image_pages => 'Merge illustration pages into text';
@@ -77180,8 +77153,6 @@ class _StringsVi extends _StringsEn {
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
   @override
-  String get video_resource_missing_relink => 'Choose file';
-  @override
   String get video_resource_relink_success => 'Video relinked';
   @override
   String get ttu_merge_image_pages => 'Merge illustration pages into text';
@@ -82179,8 +82150,6 @@ class _StringsZhCn extends _StringsEn {
   String get video_windows_black_flash_notice_body =>
       '在 Windows 上，当显卡占用过高时视频画面可能出现黑屏闪烁。可尝试关闭上方的画质增强、S 形上采样和去色带，或把硬件解码切到「复制」以降低显卡负载。';
   @override
-  String get video_resource_missing_relink => '重新选择文件';
-  @override
   String get video_resource_relink_success => '已重新链接视频文件';
   @override
   String get ttu_merge_image_pages => '将插图页并入正文';
@@ -87172,8 +87141,6 @@ class _StringsZhHk extends _StringsEn {
   String get video_windows_black_flash_notice_body =>
       'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
   @override
-  String get video_resource_missing_relink => 'Choose file';
-  @override
   String get video_resource_relink_success => 'Video relinked';
   @override
   String get ttu_merge_image_pages => 'Merge illustration pages into text';
@@ -92047,8 +92014,6 @@ extension on _StringsEn {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
@@ -96818,8 +96783,6 @@ extension on _StringsAr {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
@@ -101611,8 +101574,6 @@ extension on _StringsDe {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
@@ -106402,8 +106363,6 @@ extension on _StringsEs {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
@@ -111200,8 +111159,6 @@ extension on _StringsFr {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
@@ -115978,8 +115935,6 @@ extension on _StringsId {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
@@ -120773,8 +120728,6 @@ extension on _StringsIt {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
@@ -125526,8 +125479,6 @@ extension on _StringsJa {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
@@ -130281,8 +130232,6 @@ extension on _StringsKo {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
@@ -135069,8 +135018,6 @@ extension on _StringsNl {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
@@ -139854,8 +139801,6 @@ extension on _StringsPtBr {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
@@ -144643,8 +144588,6 @@ extension on _StringsRu {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
@@ -149414,8 +149357,6 @@ extension on _StringsTh {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
@@ -154194,8 +154135,6 @@ extension on _StringsTr {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
@@ -158968,8 +158907,6 @@ extension on _StringsVi {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
@@ -163708,8 +163645,6 @@ extension on _StringsZhCn {
         return 'Windows 上黑屏闪烁？';
       case 'video_windows_black_flash_notice_body':
         return '在 Windows 上，当显卡占用过高时视频画面可能出现黑屏闪烁。可尝试关闭上方的画质增强、S 形上采样和去色带，或把硬件解码切到「复制」以降低显卡负载。';
-      case 'video_resource_missing_relink':
-        return '重新选择文件';
       case 'video_resource_relink_success':
         return '已重新链接视频文件';
       case 'ttu_merge_image_pages':
@@ -168450,8 +168385,6 @@ extension on _StringsZhHk {
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
         return 'On Windows, video may flash black under heavy GPU load. To reduce the load, try turning off Quality enhancement, Sigmoid upscaling and Debanding above, or switch Hardware decoding to Copy.';
-      case 'video_resource_missing_relink':
-        return 'Choose file';
       case 'video_resource_relink_success':
         return 'Video relinked';
       case 'ttu_merge_image_pages':
