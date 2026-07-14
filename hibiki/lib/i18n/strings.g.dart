@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39831 (2343 per locale)
+/// Strings: 39865 (2345 per locale)
 ///
-/// Built on 2026-07-14 at 15:02 UTC
+/// Built on 2026-07-14 at 16:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3110,6 +3110,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Couldn\'t load qualities for this video.';
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  String get delete_collection_also_books => 'Also delete the books in it';
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -8423,6 +8426,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  @override
+  String get delete_collection_also_books => 'Also delete the books in it';
+  @override
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -13859,6 +13867,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  @override
+  String get delete_collection_also_books => 'Also delete the books in it';
+  @override
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -19312,6 +19325,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  @override
+  String get delete_collection_also_books => 'Also delete the books in it';
+  @override
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -24784,6 +24802,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  @override
+  String get delete_collection_also_books => 'Also delete the books in it';
+  @override
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -30158,6 +30181,11 @@ class _StringsId extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  @override
+  String get delete_collection_also_books => 'Also delete the books in it';
+  @override
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -35593,6 +35621,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  @override
+  String get delete_collection_also_books => 'Also delete the books in it';
+  @override
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -40753,6 +40786,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  @override
+  String get delete_collection_also_books => 'Also delete the books in it';
+  @override
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -45918,6 +45956,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  @override
+  String get delete_collection_also_books => 'Also delete the books in it';
+  @override
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -51321,6 +51364,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  @override
+  String get delete_collection_also_books => 'Also delete the books in it';
+  @override
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -56747,6 +56795,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  @override
+  String get delete_collection_also_books => 'Also delete the books in it';
+  @override
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -62148,6 +62201,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  @override
+  String get delete_collection_also_books => 'Also delete the books in it';
+  @override
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -67462,6 +67520,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  @override
+  String get delete_collection_also_books => 'Also delete the books in it';
+  @override
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -72831,6 +72894,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  @override
+  String get delete_collection_also_books => 'Also delete the books in it';
+  @override
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -78175,6 +78243,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  @override
+  String get delete_collection_also_books => 'Also delete the books in it';
+  @override
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -83149,6 +83222,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       '启动比平常慢，可能在加载较大的书库或词典。请稍候，或点「重试」重新加载——你的数据是安全的，不会丢失。';
+  @override
+  String get delete_collection_also_books => '同时删除其中的书';
+  @override
+  String get delete_collection_also_videos => '同时删除其中的视频（保留你的原始视频文件）';
 }
 
 // Path: retrying_in
@@ -88211,6 +88288,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get loading_slow_message_mobile =>
       'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+  @override
+  String get delete_collection_also_books => 'Also delete the books in it';
+  @override
+  String get delete_collection_also_videos =>
+      'Also delete the videos (keeps your original video files)';
 }
 
 // Path: retrying_in
@@ -93041,6 +93123,10 @@ extension on _StringsEn {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
@@ -97831,6 +97917,10 @@ extension on _StringsAr {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
@@ -102643,6 +102733,10 @@ extension on _StringsDe {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
@@ -107453,6 +107547,10 @@ extension on _StringsEs {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
@@ -112270,6 +112368,10 @@ extension on _StringsFr {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
@@ -117067,6 +117169,10 @@ extension on _StringsId {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
@@ -121881,6 +121987,10 @@ extension on _StringsIt {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
@@ -126652,6 +126762,10 @@ extension on _StringsJa {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
@@ -131427,6 +131541,10 @@ extension on _StringsKo {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
@@ -136234,6 +136352,10 @@ extension on _StringsNl {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
@@ -141038,6 +141160,10 @@ extension on _StringsPtBr {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
@@ -145846,6 +145972,10 @@ extension on _StringsRu {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
@@ -150636,6 +150766,10 @@ extension on _StringsTh {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
@@ -155435,6 +155569,10 @@ extension on _StringsTr {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
@@ -160228,6 +160366,10 @@ extension on _StringsVi {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
@@ -164985,6 +165127,10 @@ extension on _StringsZhCn {
         return '无法获取该视频的画质档。';
       case 'loading_slow_message_mobile':
         return '启动比平常慢，可能在加载较大的书库或词典。请稍候，或点「重试」重新加载——你的数据是安全的，不会丢失。';
+      case 'delete_collection_also_books':
+        return '同时删除其中的书';
+      case 'delete_collection_also_videos':
+        return '同时删除其中的视频（保留你的原始视频文件）';
       default:
         return null;
     }
@@ -169748,6 +169894,10 @@ extension on _StringsZhHk {
         return 'Couldn\'t load qualities for this video.';
       case 'loading_slow_message_mobile':
         return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
+      case 'delete_collection_also_books':
+        return 'Also delete the books in it';
+      case 'delete_collection_also_videos':
+        return 'Also delete the videos (keeps your original video files)';
       default:
         return null;
     }
