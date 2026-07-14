@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39763 (2339 per locale)
+/// Strings: 39661 (2333 per locale)
 ///
-/// Built on 2026-07-14 at 05:18 UTC
+/// Built on 2026-07-14 at 05:56 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2618,10 +2618,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   String get audiobook_export_clip_saved => 'Clip saved';
   String get audiobook_export_clip_failed => 'Clip export failed';
-  String get folder_picker_title => 'Select a folder';
-  String get folder_picker_select => 'Select this folder';
-  String get folder_picker_up => 'Up';
-  String get folder_picker_empty => 'No subfolders';
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   String get word_favorite_added => 'Word saved to favorites';
@@ -2750,8 +2746,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get global_context_capture => 'Capture selection context';
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  String get file_picker_title => 'Select a file';
-  String get file_picker_empty => 'No files';
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
   String get video_windows_black_flash_notice_body =>
@@ -7543,14 +7537,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -7774,10 +7760,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -12962,14 +12944,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -13193,10 +13167,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -18400,14 +18370,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -18631,10 +18593,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -23857,14 +23815,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -24088,10 +24038,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -29216,14 +29162,6 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -29447,10 +29385,6 @@ class _StringsId extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -34636,14 +34570,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -34867,10 +34793,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -39784,14 +39706,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -40015,10 +39929,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -44933,14 +44843,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -45164,10 +45066,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -50319,14 +50217,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -50550,10 +50440,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -55730,14 +55616,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -55961,10 +55839,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -61116,14 +60990,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -61347,10 +61213,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -66417,14 +66279,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -66648,10 +66502,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -71769,14 +71619,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -72000,10 +71842,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -77098,14 +76936,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -77329,10 +77159,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -82125,14 +81951,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => '片段导出失败';
   @override
-  String get folder_picker_title => '选择文件夹';
-  @override
-  String get folder_picker_select => '选择此文件夹';
-  @override
-  String get folder_picker_up => '上一级';
-  @override
-  String get folder_picker_empty => '没有子文件夹';
-  @override
   String get folder_picker_permission_required => '浏览文件夹需要存储权限';
   @override
   String get word_favorite_added => '已收藏该词';
@@ -82340,10 +82158,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       '从前台应用读取选区周围文本，在查词弹窗显示当前句（仅 Windows）';
-  @override
-  String get file_picker_title => '选择一个文件';
-  @override
-  String get file_picker_empty => '没有文件';
   @override
   String get video_windows_black_flash_notice_title => 'Windows 上黑屏闪烁？';
   @override
@@ -87112,14 +86926,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -87343,10 +87149,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -92027,14 +91829,6 @@ extension on _StringsEn {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -92232,10 +92026,6 @@ extension on _StringsEn {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -96809,14 +96599,6 @@ extension on _StringsAr {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -97014,10 +96796,6 @@ extension on _StringsAr {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -101613,14 +101391,6 @@ extension on _StringsDe {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -101818,10 +101588,6 @@ extension on _StringsDe {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -106415,14 +106181,6 @@ extension on _StringsEs {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -106620,10 +106378,6 @@ extension on _StringsEs {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -111224,14 +110978,6 @@ extension on _StringsFr {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -111429,10 +111175,6 @@ extension on _StringsFr {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -116013,14 +115755,6 @@ extension on _StringsId {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -116218,10 +115952,6 @@ extension on _StringsId {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -120819,14 +120549,6 @@ extension on _StringsIt {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -121024,10 +120746,6 @@ extension on _StringsIt {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -125583,14 +125301,6 @@ extension on _StringsJa {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -125788,10 +125498,6 @@ extension on _StringsJa {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -130349,14 +130055,6 @@ extension on _StringsKo {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -130554,10 +130252,6 @@ extension on _StringsKo {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -135148,14 +134842,6 @@ extension on _StringsNl {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -135353,10 +135039,6 @@ extension on _StringsNl {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -139944,14 +139626,6 @@ extension on _StringsPtBr {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -140149,10 +139823,6 @@ extension on _StringsPtBr {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -144744,14 +144414,6 @@ extension on _StringsRu {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -144949,10 +144611,6 @@ extension on _StringsRu {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -149526,14 +149184,6 @@ extension on _StringsTh {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -149731,10 +149381,6 @@ extension on _StringsTh {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -154317,14 +153963,6 @@ extension on _StringsTr {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -154522,10 +154160,6 @@ extension on _StringsTr {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -159102,14 +158736,6 @@ extension on _StringsVi {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -159307,10 +158933,6 @@ extension on _StringsVi {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -163855,14 +163477,6 @@ extension on _StringsZhCn {
         return '片段已保存';
       case 'audiobook_export_clip_failed':
         return '片段导出失败';
-      case 'folder_picker_title':
-        return '选择文件夹';
-      case 'folder_picker_select':
-        return '选择此文件夹';
-      case 'folder_picker_up':
-        return '上一级';
-      case 'folder_picker_empty':
-        return '没有子文件夹';
       case 'folder_picker_permission_required':
         return '浏览文件夹需要存储权限';
       case 'word_favorite_added':
@@ -164058,10 +163672,6 @@ extension on _StringsZhCn {
         return '抓取选中文本上下文';
       case 'global_context_capture_hint':
         return '从前台应用读取选区周围文本，在查词弹窗显示当前句（仅 Windows）';
-      case 'file_picker_title':
-        return '选择一个文件';
-      case 'file_picker_empty':
-        return '没有文件';
       case 'video_windows_black_flash_notice_title':
         return 'Windows 上黑屏闪烁？';
       case 'video_windows_black_flash_notice_body':
@@ -168607,14 +168217,6 @@ extension on _StringsZhHk {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -168812,10 +168414,6 @@ extension on _StringsZhHk {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
