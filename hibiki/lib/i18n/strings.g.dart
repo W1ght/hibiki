@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39610 (2330 per locale)
+/// Strings: 39661 (2333 per locale)
 ///
-/// Built on 2026-07-14 at 08:45 UTC
+/// Built on 2026-07-14 at 09:36 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3089,6 +3089,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -8368,6 +8373,14 @@ class _StringsAr extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  @override
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  @override
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -13770,6 +13783,14 @@ class _StringsDe extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  @override
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  @override
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -19189,6 +19210,14 @@ class _StringsEs extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  @override
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  @override
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -24627,6 +24656,14 @@ class _StringsFr extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  @override
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  @override
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -29967,6 +30004,14 @@ class _StringsId extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  @override
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  @override
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -35368,6 +35413,14 @@ class _StringsIt extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  @override
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  @override
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -40494,6 +40547,14 @@ class _StringsJa extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  @override
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  @override
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -45625,6 +45686,14 @@ class _StringsKo extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  @override
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  @override
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -50994,6 +51063,14 @@ class _StringsNl extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  @override
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  @override
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -56386,6 +56463,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  @override
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  @override
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -61753,6 +61838,14 @@ class _StringsRu extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  @override
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  @override
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -67033,6 +67126,14 @@ class _StringsTh extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  @override
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  @override
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -72368,6 +72469,14 @@ class _StringsTr extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  @override
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  @override
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -77678,6 +77787,14 @@ class _StringsVi extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  @override
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  @override
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -82624,6 +82741,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       '无法加载远端视频：${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      '透明剪切板文字窗的背景不透明度——0% 时背景全透只露文字，透视底下的游戏';
+  @override
+  String get desktop_clipboard_destination_text_window => '透明文字窗';
+  @override
+  String get clipboard_text_window_bg_opacity => '文字窗背景不透明度';
 }
 
 // Path: retrying_in
@@ -87652,6 +87776,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String remote_video_list_failed({required Object error}) =>
       'Could not load remote videos: ${error}';
+  @override
+  String get clipboard_text_window_bg_opacity_hint =>
+      'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+  @override
+  String get desktop_clipboard_destination_text_window =>
+      'Transparent text window';
+  @override
+  String get clipboard_text_window_bg_opacity => 'Text window background';
 }
 
 // Path: retrying_in
@@ -92457,6 +92589,12 @@ extension on _StringsEn {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
@@ -97222,6 +97360,12 @@ extension on _StringsAr {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
@@ -102009,6 +102153,12 @@ extension on _StringsDe {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
@@ -106794,6 +106944,12 @@ extension on _StringsEs {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
@@ -111586,6 +111742,12 @@ extension on _StringsFr {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
@@ -116358,6 +116520,12 @@ extension on _StringsId {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
@@ -121147,6 +121315,12 @@ extension on _StringsIt {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
@@ -125893,6 +126067,12 @@ extension on _StringsJa {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
@@ -130643,6 +130823,12 @@ extension on _StringsKo {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
@@ -135425,6 +135611,12 @@ extension on _StringsNl {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
@@ -140204,6 +140396,12 @@ extension on _StringsPtBr {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
@@ -144987,6 +145185,12 @@ extension on _StringsRu {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
@@ -149752,6 +149956,12 @@ extension on _StringsTh {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
@@ -154526,6 +154736,12 @@ extension on _StringsTr {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
@@ -159294,6 +159510,12 @@ extension on _StringsVi {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
@@ -164025,6 +164247,12 @@ extension on _StringsZhCn {
         return '还未选择句子';
       case 'remote_video_list_failed':
         return ({required Object error}) => '无法加载远端视频：${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return '透明剪切板文字窗的背景不透明度——0% 时背景全透只露文字，透视底下的游戏';
+      case 'desktop_clipboard_destination_text_window':
+        return '透明文字窗';
+      case 'clipboard_text_window_bg_opacity':
+        return '文字窗背景不透明度';
       default:
         return null;
     }
@@ -168763,6 +168991,12 @@ extension on _StringsZhHk {
       case 'remote_video_list_failed':
         return ({required Object error}) =>
             'Could not load remote videos: ${error}';
+      case 'clipboard_text_window_bg_opacity_hint':
+        return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
+      case 'desktop_clipboard_destination_text_window':
+        return 'Transparent text window';
+      case 'clipboard_text_window_bg_opacity':
+        return 'Text window background';
       default:
         return null;
     }
