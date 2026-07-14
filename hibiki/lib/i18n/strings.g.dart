@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39729 (2337 per locale)
+/// Strings: 39661 (2333 per locale)
 ///
-/// Built on 2026-07-13 at 17:43 UTC
+/// Built on 2026-07-14 at 05:56 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1962,7 +1962,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_shader_tier_high_hint =>
       'Anime4K HQ. Sharper; best for animation, also usable on live-action (smaller gain). Needs an upper-mid GPU (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32 DS (denoise + sharpen). Best quality for HD animation and tuned for web-encoded sources (removes compression artifacts, light sharpening); also usable on live-action (smaller gain). Needs a flagship GPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Pick a lower tier if your GPU is weaker.';
+      'Anime4K Mode A (UL). Strongest Anime4K reconstruction — Ultra Large restore + upscale, deeper network than High on the same Anime4K family; also usable on live-action (smaller gain). Needs a flagship GPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Pick a lower tier if your GPU is weaker.';
   String get video_shader_tier_custom_hint =>
       'Custom shader selection. Pick a tier above to switch to a preset.';
   String get video_shader_section_advanced => 'Advanced (manual shaders)';
@@ -2618,10 +2618,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_export_clip_in_progress => 'Exporting clip…';
   String get audiobook_export_clip_saved => 'Clip saved';
   String get audiobook_export_clip_failed => 'Clip export failed';
-  String get folder_picker_title => 'Select a folder';
-  String get folder_picker_select => 'Select this folder';
-  String get folder_picker_up => 'Up';
-  String get folder_picker_empty => 'No subfolders';
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   String get word_favorite_added => 'Word saved to favorites';
@@ -2750,8 +2746,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get global_context_capture => 'Capture selection context';
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  String get file_picker_title => 'Select a file';
-  String get file_picker_empty => 'No files';
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
   String get video_windows_black_flash_notice_body =>
@@ -3091,6 +3085,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_auto_lookup => 'Auto-look-up on copy';
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   String get clipboard_panel_transparent => 'Transparent panel background';
   String get clipboard_panel_transparent_hint =>
       'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
@@ -6388,7 +6384,7 @@ class _StringsAr extends _StringsEn {
       'Anime4K HQ. أكثر حدة؛ الأفضل للأنمي، وقابل للاستخدام أيضًا مع المحتوى الحي (تحسّن أقل). يحتاج معالجًا رسوميًا متوسطًا عاليًا (NVIDIA RTX 4060 / RTX 3070 وAMD RX 6700 XT / RX 7700 XT).';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32. أفضل جودة لأنمي عالي الدقة؛ وقابل للاستخدام أيضًا مع المحتوى الحي (تحسّن أقل). يحتاج معالجًا رسوميًا رائدًا (NVIDIA RTX 4080 / RTX 5090 وAMD RX 7900 XTX). اختر مستوى أدنى إن كان معالجك الرسومي أضعف.';
+      'Anime4K Mode A (UL، شبكة فائقة الكبر). أقوى إعادة بناء من Anime4K؛ وقابل للاستخدام أيضًا مع المحتوى الحي (تحسّن أقل). يحتاج معالجًا رسوميًا رائدًا (NVIDIA RTX 4080 / RTX 5090 وAMD RX 7900 XTX). اختر مستوى أدنى إن كان معالجك الرسومي أضعف.';
   @override
   String get video_shader_tier_custom_hint =>
       'اختيار مظلِّل مخصص. اختر مستوى أعلى للتبديل إلى إعداد مسبق.';
@@ -7541,14 +7537,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -7772,10 +7760,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -8381,6 +8365,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
   String get clipboard_panel_transparent => 'Transparent panel background';
   @override
@@ -11779,7 +11767,7 @@ class _StringsDe extends _StringsEn {
       'Anime4K HQ. Schärfer; am besten für Anime, auch bei Realfilm nutzbar (geringerer Effekt). Benötigt eine obere Mittelklasse-GPU (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32. Beste Qualität für HD-Anime; auch bei Realfilm nutzbar (geringerer Effekt). Benötigt eine Spitzen-GPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Wähle eine niedrigere Stufe, wenn deine GPU schwächer ist.';
+      'Anime4K Mode A (UL, Ultra-Large-Netzwerk). Stärkste Anime4K-Rekonstruktion; auch bei Realfilm nutzbar (geringerer Effekt). Benötigt eine Spitzen-GPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Wähle eine niedrigere Stufe, wenn deine GPU schwächer ist.';
   @override
   String get video_shader_tier_custom_hint =>
       'Eigene Shader-Auswahl. Wähle oben eine Stufe, um zu einer Voreinstellung zu wechseln.';
@@ -12956,14 +12944,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -13187,10 +13167,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -13798,6 +13774,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
   String get clipboard_panel_transparent => 'Transparent panel background';
   @override
@@ -17213,7 +17193,7 @@ class _StringsEs extends _StringsEn {
       'Anime4K HQ. Más nítido; lo mejor para animación, también utilizable en acción real (mejora menor). Necesita una GPU de gama media-alta (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32. La mejor calidad para animación en HD; también utilizable en acción real (mejora menor). Necesita una GPU tope de gama (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Elige un nivel inferior si tu GPU es más débil.';
+      'Anime4K Mode A (UL, red ultra grande). La reconstrucción Anime4K más potente; también utilizable en acción real (mejora menor). Necesita una GPU tope de gama (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Elige un nivel inferior si tu GPU es más débil.';
   @override
   String get video_shader_tier_custom_hint =>
       'Selección de shaders personalizada. Elige un nivel arriba para volver a un preset.';
@@ -18390,14 +18370,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -18621,10 +18593,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -19232,6 +19200,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
   String get clipboard_panel_transparent => 'Transparent panel background';
   @override
@@ -22666,7 +22638,7 @@ class _StringsFr extends _StringsEn {
       'Anime4K HQ. Plus net ; idéal pour l\'animation, utilisable aussi en prise de vue réelle (gain plus faible). Nécessite un GPU haut milieu de gamme (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32. Meilleure qualité pour l\'animation HD ; utilisable aussi en prise de vue réelle (gain plus faible). Nécessite un GPU haut de gamme (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Choisissez un niveau inférieur si votre GPU est moins puissant.';
+      'Anime4K Mode A (UL, réseau ultra-large). Reconstruction Anime4K la plus puissante ; utilisable aussi en prise de vue réelle (gain plus faible). Nécessite un GPU haut de gamme (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Choisissez un niveau inférieur si votre GPU est moins puissant.';
   @override
   String get video_shader_tier_custom_hint =>
       'Sélection de shaders personnalisée. Choisissez un niveau ci-dessus pour revenir à un préréglage.';
@@ -23843,14 +23815,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -24074,10 +24038,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -24685,6 +24645,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
   String get clipboard_panel_transparent => 'Transparent panel background';
   @override
@@ -28032,7 +27996,7 @@ class _StringsId extends _StringsEn {
       'Anime4K HQ. Lebih tajam; terbaik untuk animasi, juga bisa untuk live-action (peningkatan lebih kecil). Butuh GPU menengah atas (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32. Kualitas terbaik untuk animasi HD; juga bisa untuk live-action (peningkatan lebih kecil). Butuh GPU flagship (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Pilih tingkat lebih rendah jika GPU-mu lebih lemah.';
+      'Anime4K Mode A (UL, jaringan ultra besar). Rekonstruksi Anime4K terkuat; juga bisa untuk live-action (peningkatan lebih kecil). Butuh GPU flagship (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Pilih tingkat lebih rendah jika GPU-mu lebih lemah.';
   @override
   String get video_shader_tier_custom_hint =>
       'Pilihan shader kustom. Pilih tingkat di atas untuk beralih ke preset.';
@@ -29198,14 +29162,6 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -29429,10 +29385,6 @@ class _StringsId extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -30040,6 +29992,10 @@ class _StringsId extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
   String get clipboard_panel_transparent => 'Transparent panel background';
   @override
@@ -33436,7 +33392,7 @@ class _StringsIt extends _StringsEn {
       'Anime4K HQ. Più nitido; ideale per l\'animazione, utilizzabile anche su live-action (guadagno minore). Richiede una GPU di fascia medio-alta (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32. La migliore qualità per l\'animazione HD; utilizzabile anche su live-action (guadagno minore). Richiede una GPU di punta (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Scegli un livello inferiore se la tua GPU è meno potente.';
+      'Anime4K Mode A (UL, rete ultra grande). La ricostruzione Anime4K più potente; utilizzabile anche su live-action (guadagno minore). Richiede una GPU di punta (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Scegli un livello inferiore se la tua GPU è meno potente.';
   @override
   String get video_shader_tier_custom_hint =>
       'Selezione personalizzata degli shader. Scegli un livello sopra per passare a un preset.';
@@ -34614,14 +34570,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -34845,10 +34793,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -35456,6 +35400,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
   String get clipboard_panel_transparent => 'Transparent panel background';
   @override
@@ -38644,7 +38592,7 @@ class _StringsJa extends _StringsEn {
       'Anime4K HQ。よりシャープ。アニメに最も効果的で、実写でも利用可（効果は控えめ）。アッパーミドル GPU が必要（NVIDIA RTX 4060 / RTX 3070、AMD RX 6700 XT / RX 7700 XT）。';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32。HD アニメで最高画質。実写でも利用可（効果は控えめ）。フラッグシップ GPU が必要（NVIDIA RTX 4080 / RTX 5090、AMD RX 7900 XTX）。GPU が弱い場合は下の段階を。';
+      'Anime4K Mode A（UL 超大型ネットワーク再構築）。Anime4K 系で最強の再構築。実写でも利用可（効果は控えめ）。フラッグシップ GPU が必要（NVIDIA RTX 4080 / RTX 5090、AMD RX 7900 XTX）。GPU が弱い場合は下の段階を。';
   @override
   String get video_shader_tier_custom_hint =>
       'シェーダーをカスタム選択しています。上の段階を選ぶとプリセットに戻ります。';
@@ -39758,14 +39706,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -39989,10 +39929,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -40597,6 +40533,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
   String get clipboard_panel_transparent => 'Transparent panel background';
   @override
@@ -43792,7 +43732,7 @@ class _StringsKo extends _StringsEn {
       'Anime4K HQ. 더 선명하며 애니메이션에 가장 좋고 실사에도 쓸 수 있습니다(개선 폭은 작음). 중상급 GPU(NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT)가 필요합니다.';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32. HD 애니메이션 최고 화질이며 실사에도 쓸 수 있습니다(개선 폭은 작음). 플래그십 GPU(NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX)가 필요합니다. GPU가 약하면 더 낮은 단계를 선택하세요.';
+      'Anime4K Mode A(UL 초대형 네트워크 복원). Anime4K 계열 최강 복원이며 실사에도 쓸 수 있습니다(개선 폭은 작음). 플래그십 GPU(NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX)가 필요합니다. GPU가 약하면 더 낮은 단계를 선택하세요.';
   @override
   String get video_shader_tier_custom_hint =>
       '사용자 지정 셰이더 조합. 위에서 단계를 선택하면 프리셋으로 전환됩니다.';
@@ -44903,14 +44843,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -45134,10 +45066,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -45743,6 +45671,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
   String get clipboard_panel_transparent => 'Transparent panel background';
   @override
@@ -49114,7 +49046,7 @@ class _StringsNl extends _StringsEn {
       'Anime4K HQ. Scherper; het beste voor animatie, ook bruikbaar voor live-action (kleinere winst). Vereist een hogere middenklasse-GPU (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32. Beste kwaliteit voor HD-animatie; ook bruikbaar voor live-action (kleinere winst). Vereist een topGPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Kies een lager niveau als je GPU zwakker is.';
+      'Anime4K Mode A (UL, ultragroot netwerk). De sterkste Anime4K-reconstructie; ook bruikbaar voor live-action (kleinere winst). Vereist een topGPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Kies een lager niveau als je GPU zwakker is.';
   @override
   String get video_shader_tier_custom_hint =>
       'Aangepaste shaderselectie. Kies een niveau hierboven om over te schakelen naar een preset.';
@@ -50285,14 +50217,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -50516,10 +50440,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -51127,6 +51047,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
   String get clipboard_panel_transparent => 'Transparent panel background';
   @override
@@ -54518,7 +54442,7 @@ class _StringsPtBr extends _StringsEn {
       'Anime4K HQ. Mais nítido; melhor para animação, também utilizável em ação ao vivo (ganho menor). Exige uma GPU intermediária-alta (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32. Melhor qualidade para animação em HD; também utilizável em ação ao vivo (ganho menor). Exige uma GPU de topo (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Escolha um nível mais baixo se sua GPU for mais fraca.';
+      'Anime4K Mode A (UL, rede ultragrande). A reconstrução Anime4K mais potente; também utilizável em ação ao vivo (ganho menor). Exige uma GPU de topo (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Escolha um nível mais baixo se sua GPU for mais fraca.';
   @override
   String get video_shader_tier_custom_hint =>
       'Seleção personalizada de shaders. Escolha um nível acima para voltar a uma predefinição.';
@@ -55692,14 +55616,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -55923,10 +55839,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -56534,6 +56446,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
   String get clipboard_panel_transparent => 'Transparent panel background';
   @override
@@ -59902,7 +59818,7 @@ class _StringsRu extends _StringsEn {
       'Anime4K HQ. Резче; лучше всего для анимации, также пригоден для реальной съёмки (меньший эффект). Нужен GPU выше среднего (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32. Лучшее качество для HD-анимации; также пригоден для реальной съёмки (меньший эффект). Нужен флагманский GPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Если GPU слабее, выберите уровень ниже.';
+      'Anime4K Mode A (UL, сверхбольшая сеть). Самая мощная реконструкция Anime4K; также пригоден для реальной съёмки (меньший эффект). Нужен флагманский GPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Если GPU слабее, выберите уровень ниже.';
   @override
   String get video_shader_tier_custom_hint =>
       'Произвольный набор шейдеров. Выберите уровень выше, чтобы переключиться на пресет.';
@@ -61074,14 +60990,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -61305,10 +61213,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -61916,6 +61820,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
   String get clipboard_panel_transparent => 'Transparent panel background';
   @override
@@ -65214,7 +65122,7 @@ class _StringsTh extends _StringsEn {
       'Anime4K HQ คมขึ้น เหมาะกับอนิเมะที่สุด ใช้กับคนแสดงได้ด้วย (ผลน้อยกว่า) ต้องใช้ GPU ระดับกลางค่อนสูง (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT)';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32 คุณภาพดีที่สุดสำหรับอนิเมะ HD ใช้กับคนแสดงได้ด้วย (ผลน้อยกว่า) ต้องใช้ GPU เรือธง (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX) เลือกระดับต่ำกว่าหาก GPU ของคุณอ่อนกว่า';
+      'Anime4K Mode A (UL เครือข่ายขนาดใหญ่พิเศษ) การสร้างใหม่ของ Anime4K ที่แรงที่สุด ใช้กับคนแสดงได้ด้วย (ผลน้อยกว่า) ต้องใช้ GPU เรือธง (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX) เลือกระดับต่ำกว่าหาก GPU ของคุณอ่อนกว่า';
   @override
   String get video_shader_tier_custom_hint =>
       'การเลือกเชเดอร์แบบกำหนดเอง เลือกระดับด้านบนเพื่อสลับไปใช้พรีเซ็ต';
@@ -66371,14 +66279,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -66602,10 +66502,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -67211,6 +67107,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
   String get clipboard_panel_transparent => 'Transparent panel background';
   @override
@@ -70555,7 +70455,7 @@ class _StringsTr extends _StringsEn {
       'Anime4K HQ. Daha keskin; anime için en iyi, gerçek çekimde de kullanılabilir (daha az kazanç). Üst-orta seviye bir GPU gerektirir (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32. HD anime için en iyi kalite; gerçek çekimde de kullanılabilir (daha az kazanç). Amiral gemisi bir GPU gerektirir (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). GPU\'nuz daha zayıfsa daha düşük bir seviye seçin.';
+      'Anime4K Mode A (UL, ultra büyük ağ). En güçlü Anime4K yeniden yapılandırması; gerçek çekimde de kullanılabilir (daha az kazanç). Amiral gemisi bir GPU gerektirir (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). GPU\'nuz daha zayıfsa daha düşük bir seviye seçin.';
   @override
   String get video_shader_tier_custom_hint =>
       'Özel shader seçimi. Bir hazır ayara geçmek için yukarıdan bir seviye seçin.';
@@ -71719,14 +71619,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -71950,10 +71842,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -72561,6 +72449,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
   String get clipboard_panel_transparent => 'Transparent panel background';
   @override
@@ -75886,7 +75778,7 @@ class _StringsVi extends _StringsEn {
       'Anime4K HQ. Sắc nét hơn; tốt nhất cho anime, cũng dùng được cho nội dung người thật (cải thiện ít hơn). Cần GPU tầm trung-cao (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32. Chất lượng tốt nhất cho anime HD; cũng dùng được cho nội dung người thật (cải thiện ít hơn). Cần GPU đầu bảng (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Chọn mức thấp hơn nếu GPU của bạn yếu hơn.';
+      'Anime4K Mode A (UL, mạng siêu lớn). Tái tạo Anime4K mạnh nhất; cũng dùng được cho nội dung người thật (cải thiện ít hơn). Cần GPU đầu bảng (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Chọn mức thấp hơn nếu GPU của bạn yếu hơn.';
   @override
   String get video_shader_tier_custom_hint =>
       'Lựa chọn shader tùy chỉnh. Chọn một mức ở trên để chuyển sang preset.';
@@ -77044,14 +76936,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -77275,10 +77159,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -77886,6 +77766,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
   String get clipboard_panel_transparent => 'Transparent panel background';
   @override
@@ -81002,7 +80886,7 @@ class _StringsZhCn extends _StringsEn {
       'Anime4K HQ。更锐利，对动画效果最佳，真人内容也可用（提升较小）。需要中高端 GPU（N卡 RTX 4060 / RTX 3070，A卡 RX 6700 XT / RX 7700 XT）。';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32 DS（去噪+锐化变体），HD 动画最佳画质，并针对 web 压制源调优（去压缩伪影、轻锐化）；真人内容也可用（提升较小）。需要旗舰 GPU（N卡 RTX 4080 / RTX 5090，A卡 RX 7900 XTX）。显卡较弱请往低档选。';
+      'Anime4K Mode A（UL 超大网络重建）。Anime4K 家族最强重建——比「高」网络更深，重建/上采样更强；真人内容也可用（提升较小）。需要旗舰 GPU（N卡 RTX 4080 / RTX 5090，A卡 RX 7900 XTX）。显卡较弱请往低档选。';
   @override
   String get video_shader_tier_custom_hint => '自定义着色器组合。点上方档位可切回预设。';
   @override
@@ -82067,14 +81951,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => '片段导出失败';
   @override
-  String get folder_picker_title => '选择文件夹';
-  @override
-  String get folder_picker_select => '选择此文件夹';
-  @override
-  String get folder_picker_up => '上一级';
-  @override
-  String get folder_picker_empty => '没有子文件夹';
-  @override
   String get folder_picker_permission_required => '浏览文件夹需要存储权限';
   @override
   String get word_favorite_added => '已收藏该词';
@@ -82282,10 +82158,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       '从前台应用读取选区周围文本，在查词弹窗显示当前句（仅 Windows）';
-  @override
-  String get file_picker_title => '选择一个文件';
-  @override
-  String get file_picker_empty => '没有文件';
   @override
   String get video_windows_black_flash_notice_title => 'Windows 上黑屏闪烁？';
   @override
@@ -82847,6 +82719,10 @@ class _StringsZhCn extends _StringsEn {
   String get desktop_clipboard_auto_lookup => '复制后自动查词';
   @override
   String get desktop_clipboard_auto_lookup_hint => '关闭后面板只显示复制到的文字，点词才查词。';
+  @override
+  String get video_subtitle_filter_favorites_empty => '暂无收藏的句子';
+  @override
+  String get video_subtitle_filter_selected_empty => '还未选择句子';
   @override
   String get clipboard_panel_transparent => '面板背景透明';
   @override
@@ -85963,7 +85839,7 @@ class _StringsZhHk extends _StringsEn {
       'Anime4K HQ。更銳利，對動畫效果最佳，真人內容也可用（提升較小）。需要中高端 GPU（N卡 RTX 4060 / RTX 3070，A卡 RX 6700 XT / RX 7700 XT）。';
   @override
   String get video_shader_tier_ultra_hint =>
-      'ArtCNN C4F32，HD 動畫最佳畫質，真人內容也可用（提升較小）。需要旗艦 GPU（N卡 RTX 4080 / RTX 5090，A卡 RX 7900 XTX）。顯卡較弱請往低檔選。';
+      'Anime4K Mode A（UL 超大網絡重建）。Anime4K 家族最強重建——比「高」網絡更深，重建/升頻更強；真人內容也可用（提升較小）。需要旗艦 GPU（N卡 RTX 4080 / RTX 5090，A卡 RX 7900 XTX）。顯卡較弱請往低檔選。';
   @override
   String get video_shader_tier_custom_hint => '自訂着色器組合。點按上方檔位可切回預設。';
   @override
@@ -87050,14 +86926,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_export_clip_failed => 'Clip export failed';
   @override
-  String get folder_picker_title => 'Select a folder';
-  @override
-  String get folder_picker_select => 'Select this folder';
-  @override
-  String get folder_picker_up => 'Up';
-  @override
-  String get folder_picker_empty => 'No subfolders';
-  @override
   String get folder_picker_permission_required =>
       'Storage permission is required to browse folders';
   @override
@@ -87281,10 +87149,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get global_context_capture_hint =>
       'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-  @override
-  String get file_picker_title => 'Select a file';
-  @override
-  String get file_picker_empty => 'No files';
   @override
   String get video_windows_black_flash_notice_title =>
       'Black flickering on Windows?';
@@ -87889,6 +87753,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get desktop_clipboard_auto_lookup_hint =>
       'When off, the panel shows only the copied text; tap a word to look it up.';
+  @override
+  String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
+  @override
+  String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
   String get clipboard_panel_transparent => 'Transparent panel background';
   @override
@@ -90940,7 +90808,7 @@ extension on _StringsEn {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ. Sharper; best for animation, also usable on live-action (smaller gain). Needs an upper-mid GPU (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32 DS (denoise + sharpen). Best quality for HD animation and tuned for web-encoded sources (removes compression artifacts, light sharpening); also usable on live-action (smaller gain). Needs a flagship GPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Pick a lower tier if your GPU is weaker.';
+        return 'Anime4K Mode A (UL). Strongest Anime4K reconstruction — Ultra Large restore + upscale, deeper network than High on the same Anime4K family; also usable on live-action (smaller gain). Needs a flagship GPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Pick a lower tier if your GPU is weaker.';
       case 'video_shader_tier_custom_hint':
         return 'Custom shader selection. Pick a tier above to switch to a preset.';
       case 'video_shader_section_advanced':
@@ -91961,14 +91829,6 @@ extension on _StringsEn {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -92166,10 +92026,6 @@ extension on _StringsEn {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -92709,6 +92565,10 @@ extension on _StringsEn {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
@@ -95716,7 +95576,7 @@ extension on _StringsAr {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ. أكثر حدة؛ الأفضل للأنمي، وقابل للاستخدام أيضًا مع المحتوى الحي (تحسّن أقل). يحتاج معالجًا رسوميًا متوسطًا عاليًا (NVIDIA RTX 4060 / RTX 3070 وAMD RX 6700 XT / RX 7700 XT).';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32. أفضل جودة لأنمي عالي الدقة؛ وقابل للاستخدام أيضًا مع المحتوى الحي (تحسّن أقل). يحتاج معالجًا رسوميًا رائدًا (NVIDIA RTX 4080 / RTX 5090 وAMD RX 7900 XTX). اختر مستوى أدنى إن كان معالجك الرسومي أضعف.';
+        return 'Anime4K Mode A (UL، شبكة فائقة الكبر). أقوى إعادة بناء من Anime4K؛ وقابل للاستخدام أيضًا مع المحتوى الحي (تحسّن أقل). يحتاج معالجًا رسوميًا رائدًا (NVIDIA RTX 4080 / RTX 5090 وAMD RX 7900 XTX). اختر مستوى أدنى إن كان معالجك الرسومي أضعف.';
       case 'video_shader_tier_custom_hint':
         return 'اختيار مظلِّل مخصص. اختر مستوى أعلى للتبديل إلى إعداد مسبق.';
       case 'video_shader_section_advanced':
@@ -96739,14 +96599,6 @@ extension on _StringsAr {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -96944,10 +96796,6 @@ extension on _StringsAr {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -97487,6 +97335,10 @@ extension on _StringsAr {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
@@ -100515,7 +100367,7 @@ extension on _StringsDe {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ. Schärfer; am besten für Anime, auch bei Realfilm nutzbar (geringerer Effekt). Benötigt eine obere Mittelklasse-GPU (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32. Beste Qualität für HD-Anime; auch bei Realfilm nutzbar (geringerer Effekt). Benötigt eine Spitzen-GPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Wähle eine niedrigere Stufe, wenn deine GPU schwächer ist.';
+        return 'Anime4K Mode A (UL, Ultra-Large-Netzwerk). Stärkste Anime4K-Rekonstruktion; auch bei Realfilm nutzbar (geringerer Effekt). Benötigt eine Spitzen-GPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Wähle eine niedrigere Stufe, wenn deine GPU schwächer ist.';
       case 'video_shader_tier_custom_hint':
         return 'Eigene Shader-Auswahl. Wähle oben eine Stufe, um zu einer Voreinstellung zu wechseln.';
       case 'video_shader_section_advanced':
@@ -101539,14 +101391,6 @@ extension on _StringsDe {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -101744,10 +101588,6 @@ extension on _StringsDe {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -102287,6 +102127,10 @@ extension on _StringsDe {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
@@ -105312,7 +105156,7 @@ extension on _StringsEs {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ. Más nítido; lo mejor para animación, también utilizable en acción real (mejora menor). Necesita una GPU de gama media-alta (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32. La mejor calidad para animación en HD; también utilizable en acción real (mejora menor). Necesita una GPU tope de gama (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Elige un nivel inferior si tu GPU es más débil.';
+        return 'Anime4K Mode A (UL, red ultra grande). La reconstrucción Anime4K más potente; también utilizable en acción real (mejora menor). Necesita una GPU tope de gama (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Elige un nivel inferior si tu GPU es más débil.';
       case 'video_shader_tier_custom_hint':
         return 'Selección de shaders personalizada. Elige un nivel arriba para volver a un preset.';
       case 'video_shader_section_advanced':
@@ -106337,14 +106181,6 @@ extension on _StringsEs {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -106542,10 +106378,6 @@ extension on _StringsEs {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -107085,6 +106917,10 @@ extension on _StringsEs {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
@@ -110114,7 +109950,7 @@ extension on _StringsFr {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ. Plus net ; idéal pour l\'animation, utilisable aussi en prise de vue réelle (gain plus faible). Nécessite un GPU haut milieu de gamme (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32. Meilleure qualité pour l\'animation HD ; utilisable aussi en prise de vue réelle (gain plus faible). Nécessite un GPU haut de gamme (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Choisissez un niveau inférieur si votre GPU est moins puissant.';
+        return 'Anime4K Mode A (UL, réseau ultra-large). Reconstruction Anime4K la plus puissante ; utilisable aussi en prise de vue réelle (gain plus faible). Nécessite un GPU haut de gamme (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Choisissez un niveau inférieur si votre GPU est moins puissant.';
       case 'video_shader_tier_custom_hint':
         return 'Sélection de shaders personnalisée. Choisissez un niveau ci-dessus pour revenir à un préréglage.';
       case 'video_shader_section_advanced':
@@ -111142,14 +110978,6 @@ extension on _StringsFr {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -111347,10 +111175,6 @@ extension on _StringsFr {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -111890,6 +111714,10 @@ extension on _StringsFr {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
@@ -114904,7 +114732,7 @@ extension on _StringsId {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ. Lebih tajam; terbaik untuk animasi, juga bisa untuk live-action (peningkatan lebih kecil). Butuh GPU menengah atas (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32. Kualitas terbaik untuk animasi HD; juga bisa untuk live-action (peningkatan lebih kecil). Butuh GPU flagship (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Pilih tingkat lebih rendah jika GPU-mu lebih lemah.';
+        return 'Anime4K Mode A (UL, jaringan ultra besar). Rekonstruksi Anime4K terkuat; juga bisa untuk live-action (peningkatan lebih kecil). Butuh GPU flagship (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Pilih tingkat lebih rendah jika GPU-mu lebih lemah.';
       case 'video_shader_tier_custom_hint':
         return 'Pilihan shader kustom. Pilih tingkat di atas untuk beralih ke preset.';
       case 'video_shader_section_advanced':
@@ -115927,14 +115755,6 @@ extension on _StringsId {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -116132,10 +115952,6 @@ extension on _StringsId {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -116675,6 +116491,10 @@ extension on _StringsId {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
@@ -119700,7 +119520,7 @@ extension on _StringsIt {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ. Più nitido; ideale per l\'animazione, utilizzabile anche su live-action (guadagno minore). Richiede una GPU di fascia medio-alta (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32. La migliore qualità per l\'animazione HD; utilizzabile anche su live-action (guadagno minore). Richiede una GPU di punta (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Scegli un livello inferiore se la tua GPU è meno potente.';
+        return 'Anime4K Mode A (UL, rete ultra grande). La ricostruzione Anime4K più potente; utilizzabile anche su live-action (guadagno minore). Richiede una GPU di punta (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Scegli un livello inferiore se la tua GPU è meno potente.';
       case 'video_shader_tier_custom_hint':
         return 'Selezione personalizzata degli shader. Scegli un livello sopra per passare a un preset.';
       case 'video_shader_section_advanced':
@@ -120729,14 +120549,6 @@ extension on _StringsIt {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -120934,10 +120746,6 @@ extension on _StringsIt {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -121477,6 +121285,10 @@ extension on _StringsIt {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
@@ -124469,7 +124281,7 @@ extension on _StringsJa {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ。よりシャープ。アニメに最も効果的で、実写でも利用可（効果は控えめ）。アッパーミドル GPU が必要（NVIDIA RTX 4060 / RTX 3070、AMD RX 6700 XT / RX 7700 XT）。';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32。HD アニメで最高画質。実写でも利用可（効果は控えめ）。フラッグシップ GPU が必要（NVIDIA RTX 4080 / RTX 5090、AMD RX 7900 XTX）。GPU が弱い場合は下の段階を。';
+        return 'Anime4K Mode A（UL 超大型ネットワーク再構築）。Anime4K 系で最強の再構築。実写でも利用可（効果は控えめ）。フラッグシップ GPU が必要（NVIDIA RTX 4080 / RTX 5090、AMD RX 7900 XTX）。GPU が弱い場合は下の段階を。';
       case 'video_shader_tier_custom_hint':
         return 'シェーダーをカスタム選択しています。上の段階を選ぶとプリセットに戻ります。';
       case 'video_shader_section_advanced':
@@ -125489,14 +125301,6 @@ extension on _StringsJa {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -125694,10 +125498,6 @@ extension on _StringsJa {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -126236,6 +126036,10 @@ extension on _StringsJa {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
@@ -129231,7 +129035,7 @@ extension on _StringsKo {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ. 더 선명하며 애니메이션에 가장 좋고 실사에도 쓸 수 있습니다(개선 폭은 작음). 중상급 GPU(NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT)가 필요합니다.';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32. HD 애니메이션 최고 화질이며 실사에도 쓸 수 있습니다(개선 폭은 작음). 플래그십 GPU(NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX)가 필요합니다. GPU가 약하면 더 낮은 단계를 선택하세요.';
+        return 'Anime4K Mode A(UL 초대형 네트워크 복원). Anime4K 계열 최강 복원이며 실사에도 쓸 수 있습니다(개선 폭은 작음). 플래그십 GPU(NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX)가 필요합니다. GPU가 약하면 더 낮은 단계를 선택하세요.';
       case 'video_shader_tier_custom_hint':
         return '사용자 지정 셰이더 조합. 위에서 단계를 선택하면 프리셋으로 전환됩니다.';
       case 'video_shader_section_advanced':
@@ -130251,14 +130055,6 @@ extension on _StringsKo {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -130456,10 +130252,6 @@ extension on _StringsKo {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -130999,6 +130791,10 @@ extension on _StringsKo {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
@@ -134020,7 +133816,7 @@ extension on _StringsNl {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ. Scherper; het beste voor animatie, ook bruikbaar voor live-action (kleinere winst). Vereist een hogere middenklasse-GPU (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32. Beste kwaliteit voor HD-animatie; ook bruikbaar voor live-action (kleinere winst). Vereist een topGPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Kies een lager niveau als je GPU zwakker is.';
+        return 'Anime4K Mode A (UL, ultragroot netwerk). De sterkste Anime4K-reconstructie; ook bruikbaar voor live-action (kleinere winst). Vereist een topGPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Kies een lager niveau als je GPU zwakker is.';
       case 'video_shader_tier_custom_hint':
         return 'Aangepaste shaderselectie. Kies een niveau hierboven om over te schakelen naar een preset.';
       case 'video_shader_section_advanced':
@@ -135046,14 +134842,6 @@ extension on _StringsNl {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -135251,10 +135039,6 @@ extension on _StringsNl {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -135794,6 +135578,10 @@ extension on _StringsNl {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
@@ -138814,7 +138602,7 @@ extension on _StringsPtBr {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ. Mais nítido; melhor para animação, também utilizável em ação ao vivo (ganho menor). Exige uma GPU intermediária-alta (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32. Melhor qualidade para animação em HD; também utilizável em ação ao vivo (ganho menor). Exige uma GPU de topo (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Escolha um nível mais baixo se sua GPU for mais fraca.';
+        return 'Anime4K Mode A (UL, rede ultragrande). A reconstrução Anime4K mais potente; também utilizável em ação ao vivo (ganho menor). Exige uma GPU de topo (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Escolha um nível mais baixo se sua GPU for mais fraca.';
       case 'video_shader_tier_custom_hint':
         return 'Seleção personalizada de shaders. Escolha um nível acima para voltar a uma predefinição.';
       case 'video_shader_section_advanced':
@@ -139838,14 +139626,6 @@ extension on _StringsPtBr {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -140043,10 +139823,6 @@ extension on _StringsPtBr {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -140586,6 +140362,10 @@ extension on _StringsPtBr {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
@@ -143608,7 +143388,7 @@ extension on _StringsRu {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ. Резче; лучше всего для анимации, также пригоден для реальной съёмки (меньший эффект). Нужен GPU выше среднего (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32. Лучшее качество для HD-анимации; также пригоден для реальной съёмки (меньший эффект). Нужен флагманский GPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Если GPU слабее, выберите уровень ниже.';
+        return 'Anime4K Mode A (UL, сверхбольшая сеть). Самая мощная реконструкция Anime4K; также пригоден для реальной съёмки (меньший эффект). Нужен флагманский GPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Если GPU слабее, выберите уровень ниже.';
       case 'video_shader_tier_custom_hint':
         return 'Произвольный набор шейдеров. Выберите уровень выше, чтобы переключиться на пресет.';
       case 'video_shader_section_advanced':
@@ -144634,14 +144414,6 @@ extension on _StringsRu {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -144839,10 +144611,6 @@ extension on _StringsRu {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -145382,6 +145150,10 @@ extension on _StringsRu {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
@@ -148389,7 +148161,7 @@ extension on _StringsTh {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ คมขึ้น เหมาะกับอนิเมะที่สุด ใช้กับคนแสดงได้ด้วย (ผลน้อยกว่า) ต้องใช้ GPU ระดับกลางค่อนสูง (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT)';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32 คุณภาพดีที่สุดสำหรับอนิเมะ HD ใช้กับคนแสดงได้ด้วย (ผลน้อยกว่า) ต้องใช้ GPU เรือธง (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX) เลือกระดับต่ำกว่าหาก GPU ของคุณอ่อนกว่า';
+        return 'Anime4K Mode A (UL เครือข่ายขนาดใหญ่พิเศษ) การสร้างใหม่ของ Anime4K ที่แรงที่สุด ใช้กับคนแสดงได้ด้วย (ผลน้อยกว่า) ต้องใช้ GPU เรือธง (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX) เลือกระดับต่ำกว่าหาก GPU ของคุณอ่อนกว่า';
       case 'video_shader_tier_custom_hint':
         return 'การเลือกเชเดอร์แบบกำหนดเอง เลือกระดับด้านบนเพื่อสลับไปใช้พรีเซ็ต';
       case 'video_shader_section_advanced':
@@ -149412,14 +149184,6 @@ extension on _StringsTh {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -149617,10 +149381,6 @@ extension on _StringsTh {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -150160,6 +149920,10 @@ extension on _StringsTh {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
@@ -153172,7 +152936,7 @@ extension on _StringsTr {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ. Daha keskin; anime için en iyi, gerçek çekimde de kullanılabilir (daha az kazanç). Üst-orta seviye bir GPU gerektirir (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32. HD anime için en iyi kalite; gerçek çekimde de kullanılabilir (daha az kazanç). Amiral gemisi bir GPU gerektirir (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). GPU\'nuz daha zayıfsa daha düşük bir seviye seçin.';
+        return 'Anime4K Mode A (UL, ultra büyük ağ). En güçlü Anime4K yeniden yapılandırması; gerçek çekimde de kullanılabilir (daha az kazanç). Amiral gemisi bir GPU gerektirir (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). GPU\'nuz daha zayıfsa daha düşük bir seviye seçin.';
       case 'video_shader_tier_custom_hint':
         return 'Özel shader seçimi. Bir hazır ayara geçmek için yukarıdan bir seviye seçin.';
       case 'video_shader_section_advanced':
@@ -154199,14 +153963,6 @@ extension on _StringsTr {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -154404,10 +154160,6 @@ extension on _StringsTr {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -154947,6 +154699,10 @@ extension on _StringsTr {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
@@ -157956,7 +157712,7 @@ extension on _StringsVi {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ. Sắc nét hơn; tốt nhất cho anime, cũng dùng được cho nội dung người thật (cải thiện ít hơn). Cần GPU tầm trung-cao (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32. Chất lượng tốt nhất cho anime HD; cũng dùng được cho nội dung người thật (cải thiện ít hơn). Cần GPU đầu bảng (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Chọn mức thấp hơn nếu GPU của bạn yếu hơn.';
+        return 'Anime4K Mode A (UL, mạng siêu lớn). Tái tạo Anime4K mạnh nhất; cũng dùng được cho nội dung người thật (cải thiện ít hơn). Cần GPU đầu bảng (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Chọn mức thấp hơn nếu GPU của bạn yếu hơn.';
       case 'video_shader_tier_custom_hint':
         return 'Lựa chọn shader tùy chỉnh. Chọn một mức ở trên để chuyển sang preset.';
       case 'video_shader_section_advanced':
@@ -158980,14 +158736,6 @@ extension on _StringsVi {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -159185,10 +158933,6 @@ extension on _StringsVi {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -159728,6 +159472,10 @@ extension on _StringsVi {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
@@ -162714,7 +162462,7 @@ extension on _StringsZhCn {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ。更锐利，对动画效果最佳，真人内容也可用（提升较小）。需要中高端 GPU（N卡 RTX 4060 / RTX 3070，A卡 RX 6700 XT / RX 7700 XT）。';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32 DS（去噪+锐化变体），HD 动画最佳画质，并针对 web 压制源调优（去压缩伪影、轻锐化）；真人内容也可用（提升较小）。需要旗舰 GPU（N卡 RTX 4080 / RTX 5090，A卡 RX 7900 XTX）。显卡较弱请往低档选。';
+        return 'Anime4K Mode A（UL 超大网络重建）。Anime4K 家族最强重建——比「高」网络更深，重建/上采样更强；真人内容也可用（提升较小）。需要旗舰 GPU（N卡 RTX 4080 / RTX 5090，A卡 RX 7900 XTX）。显卡较弱请往低档选。';
       case 'video_shader_tier_custom_hint':
         return '自定义着色器组合。点上方档位可切回预设。';
       case 'video_shader_section_advanced':
@@ -163729,14 +163477,6 @@ extension on _StringsZhCn {
         return '片段已保存';
       case 'audiobook_export_clip_failed':
         return '片段导出失败';
-      case 'folder_picker_title':
-        return '选择文件夹';
-      case 'folder_picker_select':
-        return '选择此文件夹';
-      case 'folder_picker_up':
-        return '上一级';
-      case 'folder_picker_empty':
-        return '没有子文件夹';
       case 'folder_picker_permission_required':
         return '浏览文件夹需要存储权限';
       case 'word_favorite_added':
@@ -163932,10 +163672,6 @@ extension on _StringsZhCn {
         return '抓取选中文本上下文';
       case 'global_context_capture_hint':
         return '从前台应用读取选区周围文本，在查词弹窗显示当前句（仅 Windows）';
-      case 'file_picker_title':
-        return '选择一个文件';
-      case 'file_picker_empty':
-        return '没有文件';
       case 'video_windows_black_flash_notice_title':
         return 'Windows 上黑屏闪烁？';
       case 'video_windows_black_flash_notice_body':
@@ -164473,6 +164209,10 @@ extension on _StringsZhCn {
         return '复制后自动查词';
       case 'desktop_clipboard_auto_lookup_hint':
         return '关闭后面板只显示复制到的文字，点词才查词。';
+      case 'video_subtitle_filter_favorites_empty':
+        return '暂无收藏的句子';
+      case 'video_subtitle_filter_selected_empty':
+        return '还未选择句子';
       case 'clipboard_panel_transparent':
         return '面板背景透明';
       case 'clipboard_panel_transparent_hint':
@@ -167460,7 +167200,7 @@ extension on _StringsZhHk {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ。更銳利，對動畫效果最佳，真人內容也可用（提升較小）。需要中高端 GPU（N卡 RTX 4060 / RTX 3070，A卡 RX 6700 XT / RX 7700 XT）。';
       case 'video_shader_tier_ultra_hint':
-        return 'ArtCNN C4F32，HD 動畫最佳畫質，真人內容也可用（提升較小）。需要旗艦 GPU（N卡 RTX 4080 / RTX 5090，A卡 RX 7900 XTX）。顯卡較弱請往低檔選。';
+        return 'Anime4K Mode A（UL 超大網絡重建）。Anime4K 家族最強重建——比「高」網絡更深，重建/升頻更強；真人內容也可用（提升較小）。需要旗艦 GPU（N卡 RTX 4080 / RTX 5090，A卡 RX 7900 XTX）。顯卡較弱請往低檔選。';
       case 'video_shader_tier_custom_hint':
         return '自訂着色器組合。點按上方檔位可切回預設。';
       case 'video_shader_section_advanced':
@@ -168477,14 +168217,6 @@ extension on _StringsZhHk {
         return 'Clip saved';
       case 'audiobook_export_clip_failed':
         return 'Clip export failed';
-      case 'folder_picker_title':
-        return 'Select a folder';
-      case 'folder_picker_select':
-        return 'Select this folder';
-      case 'folder_picker_up':
-        return 'Up';
-      case 'folder_picker_empty':
-        return 'No subfolders';
       case 'folder_picker_permission_required':
         return 'Storage permission is required to browse folders';
       case 'word_favorite_added':
@@ -168682,10 +168414,6 @@ extension on _StringsZhHk {
         return 'Capture selection context';
       case 'global_context_capture_hint':
         return 'Read surrounding text from the foreground app to show the current sentence (Windows only)';
-      case 'file_picker_title':
-        return 'Select a file';
-      case 'file_picker_empty':
-        return 'No files';
       case 'video_windows_black_flash_notice_title':
         return 'Black flickering on Windows?';
       case 'video_windows_black_flash_notice_body':
@@ -169224,6 +168952,10 @@ extension on _StringsZhHk {
         return 'Auto-look-up on copy';
       case 'desktop_clipboard_auto_lookup_hint':
         return 'When off, the panel shows only the copied text; tap a word to look it up.';
+      case 'video_subtitle_filter_favorites_empty':
+        return 'No favorited lines yet';
+      case 'video_subtitle_filter_selected_empty':
+        return 'No lines selected yet';
       case 'clipboard_panel_transparent':
         return 'Transparent panel background';
       case 'clipboard_panel_transparent_hint':
