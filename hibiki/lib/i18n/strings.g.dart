@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 39644 (2332 per locale)
 ///
-/// Built on 2026-07-14 at 11:40 UTC
+/// Built on 2026-07-14 at 12:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3086,13 +3086,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'When off, the panel shows only the copied text; tap a word to look it up.';
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   String get desktop_clipboard_destination_text_window =>
       'Transparent text window';
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -8368,9 +8368,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   @override
@@ -8378,6 +8375,9 @@ class _StringsAr extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -13776,9 +13776,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   @override
@@ -13786,6 +13783,9 @@ class _StringsDe extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -19201,9 +19201,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   @override
@@ -19211,6 +19208,9 @@ class _StringsEs extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -24645,9 +24645,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   @override
@@ -24655,6 +24652,9 @@ class _StringsFr extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -29991,9 +29991,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   @override
@@ -30001,6 +29998,9 @@ class _StringsId extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -35398,9 +35398,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   @override
@@ -35408,6 +35405,9 @@ class _StringsIt extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -40530,9 +40530,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   @override
@@ -40540,6 +40537,9 @@ class _StringsJa extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -45667,9 +45667,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   @override
@@ -45677,6 +45674,9 @@ class _StringsKo extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -51042,9 +51042,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   @override
@@ -51052,6 +51049,9 @@ class _StringsNl extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -56440,9 +56440,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   @override
@@ -56450,6 +56447,9 @@ class _StringsPtBr extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -61813,9 +61813,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   @override
@@ -61823,6 +61820,9 @@ class _StringsRu extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -67099,9 +67099,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   @override
@@ -67109,6 +67106,9 @@ class _StringsTh extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -72440,9 +72440,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   @override
@@ -72450,6 +72447,9 @@ class _StringsTr extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -77756,9 +77756,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   @override
@@ -77766,6 +77763,9 @@ class _StringsVi extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -82708,15 +82708,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => '还未选择句子';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      '无法加载远端视频：${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       '透明剪切板文字窗的背景不透明度——0% 时背景全透只露文字，透视底下的游戏';
   @override
   String get desktop_clipboard_destination_text_window => '透明文字窗';
   @override
   String get clipboard_text_window_bg_opacity => '文字窗背景不透明度';
+  @override
+  String get remote_video_list_failed => '无法加载远端视频，请确认对端设备在线并与本机处于同一网络后重试';
 }
 
 // Path: retrying_in
@@ -87741,9 +87740,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
   @override
-  String remote_video_list_failed({required Object error}) =>
-      'Could not load remote videos: ${error}';
-  @override
   String get clipboard_text_window_bg_opacity_hint =>
       'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
   @override
@@ -87751,6 +87747,9 @@ class _StringsZhHk extends _StringsEn {
       'Transparent text window';
   @override
   String get clipboard_text_window_bg_opacity => 'Text window background';
+  @override
+  String get remote_video_list_failed =>
+      'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
 }
 
 // Path: retrying_in
@@ -92551,15 +92550,14 @@ extension on _StringsEn {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
@@ -97320,15 +97318,14 @@ extension on _StringsAr {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
@@ -102111,15 +102108,14 @@ extension on _StringsDe {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
@@ -106900,15 +106896,14 @@ extension on _StringsEs {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
@@ -111696,15 +111691,14 @@ extension on _StringsFr {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
@@ -116472,15 +116466,14 @@ extension on _StringsId {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
@@ -121265,15 +121258,14 @@ extension on _StringsIt {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
@@ -126015,15 +126007,14 @@ extension on _StringsJa {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
@@ -130769,15 +130760,14 @@ extension on _StringsKo {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
@@ -135555,15 +135545,14 @@ extension on _StringsNl {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
@@ -140338,15 +140327,14 @@ extension on _StringsPtBr {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
@@ -145125,15 +145113,14 @@ extension on _StringsRu {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
@@ -149894,15 +149881,14 @@ extension on _StringsTh {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
@@ -154672,15 +154658,14 @@ extension on _StringsTr {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
@@ -159444,15 +159429,14 @@ extension on _StringsVi {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
@@ -164180,14 +164164,14 @@ extension on _StringsZhCn {
         return '暂无收藏的句子';
       case 'video_subtitle_filter_selected_empty':
         return '还未选择句子';
-      case 'remote_video_list_failed':
-        return ({required Object error}) => '无法加载远端视频：${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return '透明剪切板文字窗的背景不透明度——0% 时背景全透只露文字，透视底下的游戏';
       case 'desktop_clipboard_destination_text_window':
         return '透明文字窗';
       case 'clipboard_text_window_bg_opacity':
         return '文字窗背景不透明度';
+      case 'remote_video_list_failed':
+        return '无法加载远端视频，请确认对端设备在线并与本机处于同一网络后重试';
       default:
         return null;
     }
@@ -168921,15 +168905,14 @@ extension on _StringsZhHk {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'remote_video_list_failed':
-        return ({required Object error}) =>
-            'Could not load remote videos: ${error}';
       case 'clipboard_text_window_bg_opacity_hint':
         return 'Background opacity of the transparent clipboard text window — 0% shows only the text over the game beneath';
       case 'desktop_clipboard_destination_text_window':
         return 'Transparent text window';
       case 'clipboard_text_window_bg_opacity':
         return 'Text window background';
+      case 'remote_video_list_failed':
+        return 'Couldn\'t load remote videos. Make sure the other device is online and on the same network, then try again.';
       default:
         return null;
     }
