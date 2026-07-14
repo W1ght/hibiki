@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39661 (2333 per locale)
+/// Strings: 39593 (2329 per locale)
 ///
-/// Built on 2026-07-14 at 05:56 UTC
+/// Built on 2026-07-14 at 07:36 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3087,12 +3087,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'When off, the panel shows only the copied text; tap a word to look it up.';
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -8369,16 +8363,6 @@ class _StringsAr extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  @override
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  @override
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  @override
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -13778,16 +13762,6 @@ class _StringsDe extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  @override
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  @override
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  @override
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -19204,16 +19178,6 @@ class _StringsEs extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  @override
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  @override
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  @override
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -24649,16 +24613,6 @@ class _StringsFr extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  @override
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  @override
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  @override
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -29996,16 +29950,6 @@ class _StringsId extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  @override
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  @override
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  @override
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -35404,16 +35348,6 @@ class _StringsIt extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  @override
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  @override
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  @override
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -40537,16 +40471,6 @@ class _StringsJa extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  @override
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  @override
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  @override
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -45675,16 +45599,6 @@ class _StringsKo extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  @override
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  @override
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  @override
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -51051,16 +50965,6 @@ class _StringsNl extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  @override
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  @override
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  @override
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -56450,16 +56354,6 @@ class _StringsPtBr extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  @override
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  @override
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  @override
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -61824,16 +61718,6 @@ class _StringsRu extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  @override
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  @override
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  @override
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -67111,16 +66995,6 @@ class _StringsTh extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  @override
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  @override
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  @override
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -72453,16 +72327,6 @@ class _StringsTr extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  @override
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  @override
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  @override
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -77770,16 +77634,6 @@ class _StringsVi extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  @override
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  @override
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  @override
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -82723,15 +82577,6 @@ class _StringsZhCn extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => '暂无收藏的句子';
   @override
   String get video_subtitle_filter_selected_empty => '还未选择句子';
-  @override
-  String get clipboard_panel_transparent => '面板背景透明';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      '逐像素透明：只显示文字，背后的游戏画面透过来（Windows）。';
-  @override
-  String get clipboard_panel_peek => '面板栏悬停显示';
-  @override
-  String get clipboard_panel_peek_hint => '隐藏拖动/图钉/关闭栏；鼠标移到顶部才显示。';
 }
 
 // Path: retrying_in
@@ -87757,16 +87602,6 @@ class _StringsZhHk extends _StringsEn {
   String get video_subtitle_filter_favorites_empty => 'No favorited lines yet';
   @override
   String get video_subtitle_filter_selected_empty => 'No lines selected yet';
-  @override
-  String get clipboard_panel_transparent => 'Transparent panel background';
-  @override
-  String get clipboard_panel_transparent_hint =>
-      'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-  @override
-  String get clipboard_panel_peek => 'Auto-hide panel bar';
-  @override
-  String get clipboard_panel_peek_hint =>
-      'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
 }
 
 // Path: retrying_in
@@ -92569,14 +92404,6 @@ extension on _StringsEn {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -97339,14 +97166,6 @@ extension on _StringsAr {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -102131,14 +101950,6 @@ extension on _StringsDe {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -106921,14 +106732,6 @@ extension on _StringsEs {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -111718,14 +111521,6 @@ extension on _StringsFr {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -116495,14 +116290,6 @@ extension on _StringsId {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -121289,14 +121076,6 @@ extension on _StringsIt {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -126040,14 +125819,6 @@ extension on _StringsJa {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -130795,14 +130566,6 @@ extension on _StringsKo {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -135582,14 +135345,6 @@ extension on _StringsNl {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -140366,14 +140121,6 @@ extension on _StringsPtBr {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -145154,14 +144901,6 @@ extension on _StringsRu {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -149924,14 +149663,6 @@ extension on _StringsTh {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -154703,14 +154434,6 @@ extension on _StringsTr {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -159476,14 +159199,6 @@ extension on _StringsVi {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
@@ -164213,14 +163928,6 @@ extension on _StringsZhCn {
         return '暂无收藏的句子';
       case 'video_subtitle_filter_selected_empty':
         return '还未选择句子';
-      case 'clipboard_panel_transparent':
-        return '面板背景透明';
-      case 'clipboard_panel_transparent_hint':
-        return '逐像素透明：只显示文字，背后的游戏画面透过来（Windows）。';
-      case 'clipboard_panel_peek':
-        return '面板栏悬停显示';
-      case 'clipboard_panel_peek_hint':
-        return '隐藏拖动/图钉/关闭栏；鼠标移到顶部才显示。';
       default:
         return null;
     }
@@ -168956,14 +168663,6 @@ extension on _StringsZhHk {
         return 'No favorited lines yet';
       case 'video_subtitle_filter_selected_empty':
         return 'No lines selected yet';
-      case 'clipboard_panel_transparent':
-        return 'Transparent panel background';
-      case 'clipboard_panel_transparent_hint':
-        return 'Per-pixel transparency: only the text shows, the game behind stays visible (Windows).';
-      case 'clipboard_panel_peek':
-        return 'Auto-hide panel bar';
-      case 'clipboard_panel_peek_hint':
-        return 'Hide the drag/pin/close bar; move the mouse to the top edge to reveal it.';
       default:
         return null;
     }
