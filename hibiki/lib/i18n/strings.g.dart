@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39814 (2342 per locale)
+/// Strings: 39831 (2343 per locale)
 ///
-/// Built on 2026-07-14 at 13:08 UTC
+/// Built on 2026-07-14 at 15:02 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3108,6 +3108,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_quality_loading => 'Loading available qualities…';
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -8418,6 +8420,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  @override
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -13851,6 +13856,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  @override
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -19301,6 +19309,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  @override
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -24770,6 +24781,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  @override
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -30141,6 +30155,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  @override
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -35573,6 +35590,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  @override
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -40730,6 +40750,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  @override
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -45892,6 +45915,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  @override
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -51292,6 +51318,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  @override
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -56715,6 +56744,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  @override
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -62113,6 +62145,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  @override
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -67424,6 +67459,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  @override
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -72790,6 +72828,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  @override
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -78131,6 +78172,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  @override
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -83102,6 +83146,9 @@ class _StringsZhCn extends _StringsEn {
   String get video_quality_loading => '正在获取可选画质…';
   @override
   String get video_quality_load_failed => '无法获取该视频的画质档。';
+  @override
+  String get loading_slow_message_mobile =>
+      '启动比平常慢，可能在加载较大的书库或词典。请稍候，或点「重试」重新加载——你的数据是安全的，不会丢失。';
 }
 
 // Path: retrying_in
@@ -88161,6 +88208,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_quality_load_failed =>
       'Couldn\'t load qualities for this video.';
+  @override
+  String get loading_slow_message_mobile =>
+      'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
 }
 
 // Path: retrying_in
@@ -92989,6 +93039,8 @@ extension on _StringsEn {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
@@ -97777,6 +97829,8 @@ extension on _StringsAr {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
@@ -102587,6 +102641,8 @@ extension on _StringsDe {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
@@ -107395,6 +107451,8 @@ extension on _StringsEs {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
@@ -112210,6 +112268,8 @@ extension on _StringsFr {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
@@ -117005,6 +117065,8 @@ extension on _StringsId {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
@@ -121817,6 +121879,8 @@ extension on _StringsIt {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
@@ -126586,6 +126650,8 @@ extension on _StringsJa {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
@@ -131359,6 +131425,8 @@ extension on _StringsKo {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
@@ -136164,6 +136232,8 @@ extension on _StringsNl {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
@@ -140966,6 +141036,8 @@ extension on _StringsPtBr {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
@@ -145772,6 +145844,8 @@ extension on _StringsRu {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
@@ -150560,6 +150634,8 @@ extension on _StringsTh {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
@@ -155357,6 +155433,8 @@ extension on _StringsTr {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
@@ -160148,6 +160226,8 @@ extension on _StringsVi {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
@@ -164903,6 +164983,8 @@ extension on _StringsZhCn {
         return '正在获取可选画质…';
       case 'video_quality_load_failed':
         return '无法获取该视频的画质档。';
+      case 'loading_slow_message_mobile':
+        return '启动比平常慢，可能在加载较大的书库或词典。请稍候，或点「重试」重新加载——你的数据是安全的，不会丢失。';
       default:
         return null;
     }
@@ -169664,6 +169746,8 @@ extension on _StringsZhHk {
         return 'Loading available qualities…';
       case 'video_quality_load_failed':
         return 'Couldn\'t load qualities for this video.';
+      case 'loading_slow_message_mobile':
+        return 'Startup is taking longer than usual — Hibiki may be loading a large library or dictionaries. Please wait a moment, or tap Retry to reload. Your data is safe and won\'t be lost.';
       default:
         return null;
     }
