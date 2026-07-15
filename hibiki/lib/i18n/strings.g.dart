@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39899 (2347 per locale)
+/// Strings: 39967 (2351 per locale)
 ///
-/// Built on 2026-07-15 at 05:41 UTC
+/// Built on 2026-07-15 at 07:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3116,6 +3116,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  String get video_jimaku_series => 'Series';
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  String get video_jimaku_batch_download => 'Download all';
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -8439,6 +8445,16 @@ class _StringsAr extends _StringsEn {
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   @override
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -13885,6 +13901,16 @@ class _StringsDe extends _StringsEn {
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   @override
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -19348,6 +19374,16 @@ class _StringsEs extends _StringsEn {
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   @override
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -24830,6 +24866,16 @@ class _StringsFr extends _StringsEn {
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   @override
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -30214,6 +30260,16 @@ class _StringsId extends _StringsEn {
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   @override
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -35659,6 +35715,16 @@ class _StringsIt extends _StringsEn {
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   @override
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -40829,6 +40895,16 @@ class _StringsJa extends _StringsEn {
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   @override
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -46004,6 +46080,16 @@ class _StringsKo extends _StringsEn {
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   @override
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -51417,6 +51503,16 @@ class _StringsNl extends _StringsEn {
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   @override
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -56853,6 +56949,16 @@ class _StringsPtBr extends _StringsEn {
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   @override
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -62264,6 +62370,16 @@ class _StringsRu extends _StringsEn {
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   @override
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -67588,6 +67704,16 @@ class _StringsTh extends _StringsEn {
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   @override
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -72967,6 +73093,16 @@ class _StringsTr extends _StringsEn {
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   @override
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -78321,6 +78457,16 @@ class _StringsVi extends _StringsEn {
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   @override
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -83304,6 +83450,16 @@ class _StringsZhCn extends _StringsEn {
       'AnkiDroid 尚未授予卡片访问权限。请在刚弹出的系统授权对话框中允许，然后再次点击按钮制卡。';
   @override
   String get video_subtitle_waveform_cue_list => '字幕列表';
+  @override
+  String get video_jimaku_series => '系列';
+  @override
+  String get video_jimaku_batch_title => '为合集获取字幕';
+  @override
+  String get video_jimaku_batch_download => '下载全部';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      '字幕已获取：${done}/${total}';
 }
 
 // Path: retrying_in
@@ -88376,6 +88532,16 @@ class _StringsZhHk extends _StringsEn {
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
   @override
   String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -93214,6 +93380,15 @@ extension on _StringsEn {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -98012,6 +98187,15 @@ extension on _StringsAr {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -102832,6 +103016,15 @@ extension on _StringsDe {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -107650,6 +107843,15 @@ extension on _StringsEs {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -112475,6 +112677,15 @@ extension on _StringsFr {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -117280,6 +117491,15 @@ extension on _StringsId {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -122102,6 +122322,15 @@ extension on _StringsIt {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -126881,6 +127110,15 @@ extension on _StringsJa {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -131664,6 +131902,15 @@ extension on _StringsKo {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -136479,6 +136726,15 @@ extension on _StringsNl {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -141291,6 +141547,15 @@ extension on _StringsPtBr {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -146107,6 +146372,15 @@ extension on _StringsRu {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -150905,6 +151179,15 @@ extension on _StringsTh {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -155712,6 +155995,15 @@ extension on _StringsTr {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -160513,6 +160805,15 @@ extension on _StringsVi {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -165278,6 +165579,15 @@ extension on _StringsZhCn {
         return 'AnkiDroid 尚未授予卡片访问权限。请在刚弹出的系统授权对话框中允许，然后再次点击按钮制卡。';
       case 'video_subtitle_waveform_cue_list':
         return '字幕列表';
+      case 'video_jimaku_series':
+        return '系列';
+      case 'video_jimaku_batch_title':
+        return '为合集获取字幕';
+      case 'video_jimaku_batch_download':
+        return '下载全部';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            '字幕已获取：${done}/${total}';
       default:
         return null;
     }
@@ -170049,6 +170359,15 @@ extension on _StringsZhHk {
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
       case 'video_subtitle_waveform_cue_list':
         return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
