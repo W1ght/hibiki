@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39780 (2340 per locale)
+/// Strings: 39797 (2341 per locale)
 ///
-/// Built on 2026-07-15 at 15:07 UTC
+/// Built on 2026-07-15 at 15:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3111,6 +3111,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -8422,6 +8423,8 @@ class _StringsAr extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -13856,6 +13859,8 @@ class _StringsDe extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -19307,6 +19312,8 @@ class _StringsEs extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -24777,6 +24784,8 @@ class _StringsFr extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -30149,6 +30158,8 @@ class _StringsId extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -35582,6 +35593,8 @@ class _StringsIt extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -40740,6 +40753,8 @@ class _StringsJa extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -45903,6 +45918,8 @@ class _StringsKo extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -51304,6 +51321,8 @@ class _StringsNl extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -56728,6 +56747,8 @@ class _StringsPtBr extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -62127,6 +62148,8 @@ class _StringsRu extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -67439,6 +67462,8 @@ class _StringsTh extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -72806,6 +72831,8 @@ class _StringsTr extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -78148,6 +78175,8 @@ class _StringsVi extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -83119,6 +83148,8 @@ class _StringsZhCn extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       '字幕已获取：${done}/${total}';
+  @override
+  String get anki_open_no_card => '在 Anki 中没有找到这个词的卡片。';
 }
 
 // Path: retrying_in
@@ -88179,6 +88210,8 @@ class _StringsZhHk extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
 }
 
 // Path: retrying_in
@@ -93004,6 +93037,8 @@ extension on _StringsEn {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
@@ -97789,6 +97824,8 @@ extension on _StringsAr {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
@@ -102596,6 +102633,8 @@ extension on _StringsDe {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
@@ -107401,6 +107440,8 @@ extension on _StringsEs {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
@@ -112213,6 +112254,8 @@ extension on _StringsFr {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
@@ -117005,6 +117048,8 @@ extension on _StringsId {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
@@ -121814,6 +121859,8 @@ extension on _StringsIt {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
@@ -126580,6 +126627,8 @@ extension on _StringsJa {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
@@ -131350,6 +131399,8 @@ extension on _StringsKo {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
@@ -136152,6 +136203,8 @@ extension on _StringsNl {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
@@ -140951,6 +141004,8 @@ extension on _StringsPtBr {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
@@ -145754,6 +145809,8 @@ extension on _StringsRu {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
@@ -150539,6 +150596,8 @@ extension on _StringsTh {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
@@ -155333,6 +155392,8 @@ extension on _StringsTr {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
@@ -160121,6 +160182,8 @@ extension on _StringsVi {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
@@ -164873,6 +164936,8 @@ extension on _StringsZhCn {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             '字幕已获取：${done}/${total}';
+      case 'anki_open_no_card':
+        return '在 Anki 中没有找到这个词的卡片。';
       default:
         return null;
     }
@@ -169631,6 +169696,8 @@ extension on _StringsZhHk {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
       default:
         return null;
     }
