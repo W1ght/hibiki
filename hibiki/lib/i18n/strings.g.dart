@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37842 (2226 per locale)
+/// Strings: 37859 (2227 per locale)
 ///
-/// Built on 2026-07-21 at 17:27 UTC
+/// Built on 2026-07-21 at 18:40 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2966,6 +2966,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
   String get shortcut_action_reader_exit_book => 'Exit book';
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 // Path: <root>
@@ -8004,6 +8005,8 @@ class _StringsAr extends _StringsEn {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   @override
   String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 // Path: <root>
@@ -13115,6 +13118,8 @@ class _StringsDe extends _StringsEn {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   @override
   String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 // Path: <root>
@@ -18242,6 +18247,8 @@ class _StringsEs extends _StringsEn {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   @override
   String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 // Path: <root>
@@ -23380,6 +23387,8 @@ class _StringsFr extends _StringsEn {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   @override
   String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 // Path: <root>
@@ -28445,6 +28454,8 @@ class _StringsId extends _StringsEn {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   @override
   String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 // Path: <root>
@@ -33558,6 +33569,8 @@ class _StringsIt extends _StringsEn {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   @override
   String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 // Path: <root>
@@ -38476,6 +38489,8 @@ class _StringsJa extends _StringsEn {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   @override
   String get shortcut_action_reader_exit_book => '本を閉じる';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 // Path: <root>
@@ -43397,6 +43412,8 @@ class _StringsKo extends _StringsEn {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   @override
   String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 // Path: <root>
@@ -48488,6 +48505,8 @@ class _StringsNl extends _StringsEn {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   @override
   String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 // Path: <root>
@@ -53594,6 +53613,8 @@ class _StringsPtBr extends _StringsEn {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   @override
   String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 // Path: <root>
@@ -58683,6 +58704,8 @@ class _StringsRu extends _StringsEn {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   @override
   String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 // Path: <root>
@@ -63717,6 +63740,8 @@ class _StringsTh extends _StringsEn {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   @override
   String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 // Path: <root>
@@ -68783,6 +68808,8 @@ class _StringsTr extends _StringsEn {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   @override
   String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 // Path: <root>
@@ -73836,6 +73863,8 @@ class _StringsVi extends _StringsEn {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   @override
   String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 // Path: <root>
@@ -78537,6 +78566,8 @@ class _StringsZhCn extends _StringsEn {
       '把本设备的本地视频文件上传同步到互联对端（体积较大）。';
   @override
   String get shortcut_action_reader_exit_book => '退出书籍';
+  @override
+  String get clipboard_text_window_title => '剪贴板文字';
 }
 
 // Path: <root>
@@ -83374,6 +83405,8 @@ class _StringsZhHk extends _StringsEn {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   @override
   String get shortcut_action_reader_exit_book => '退出書籍';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
 }
 
 /// Flat map(s) containing all translations.
@@ -87918,6 +87951,8 @@ extension on _StringsEn {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
@@ -92460,6 +92495,8 @@ extension on _StringsAr {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
@@ -97023,6 +97060,8 @@ extension on _StringsDe {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
@@ -101585,6 +101624,8 @@ extension on _StringsEs {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
@@ -106153,6 +106194,8 @@ extension on _StringsFr {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
@@ -110703,6 +110746,8 @@ extension on _StringsId {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
@@ -115268,6 +115313,8 @@ extension on _StringsIt {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
@@ -119795,6 +119842,8 @@ extension on _StringsJa {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return '本を閉じる';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
@@ -124326,6 +124375,8 @@ extension on _StringsKo {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
@@ -128884,6 +128935,8 @@ extension on _StringsNl {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
@@ -133439,6 +133492,8 @@ extension on _StringsPtBr {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
@@ -137999,6 +138054,8 @@ extension on _StringsRu {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
@@ -142543,6 +142600,8 @@ extension on _StringsTh {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
@@ -147096,6 +147155,8 @@ extension on _StringsTr {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
@@ -151644,6 +151705,8 @@ extension on _StringsVi {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
@@ -156158,6 +156221,8 @@ extension on _StringsZhCn {
         return '把本设备的本地视频文件上传同步到互联对端（体积较大）。';
       case 'shortcut_action_reader_exit_book':
         return '退出书籍';
+      case 'clipboard_text_window_title':
+        return '剪贴板文字';
       default:
         return null;
     }
@@ -160680,6 +160745,8 @@ extension on _StringsZhHk {
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
       case 'shortcut_action_reader_exit_book':
         return '退出書籍';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
       default:
         return null;
     }
