@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 39780 (2340 per locale)
 ///
-/// Built on 2026-07-15 at 07:24 UTC
+/// Built on 2026-07-15 at 08:28 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2951,18 +2951,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get rename_collection => 'Rename collection';
   String get delete_collection => 'Delete collection';
   String get popup_ctx_adjust_button => 'Adjust context';
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  String get popup_ctx_modal_title => 'Select sentence context';
-  String get popup_ctx_modal_count => 'Selected %d';
-  String get popup_ctx_box_prev => 'Before';
-  String get popup_ctx_box_current => 'Current';
-  String get popup_ctx_box_next => 'After';
+  String get popup_ctx_modal_eyebrow => 'Adjust before mining';
+  String get popup_ctx_modal_title => 'Select Sentence Context';
+  String get popup_ctx_modal_count => 'Selected %d sentences';
+  String get popup_ctx_box_prev => 'Previous Context';
+  String get popup_ctx_box_current => 'Current Sentence';
+  String get popup_ctx_box_next => 'Next Context';
   String get popup_ctx_box_empty => '(none)';
-  String get popup_ctx_prev_minus => 'Remove before';
-  String get popup_ctx_prev_plus => 'Add before';
-  String get popup_ctx_next_minus => 'Remove after';
-  String get popup_ctx_next_plus => 'Add after';
-  String get popup_ctx_confirm => 'Confirm';
+  String get popup_ctx_prev_minus => 'Remove Previous';
+  String get popup_ctx_prev_plus => 'Add Previous';
+  String get popup_ctx_next_minus => 'Remove Next';
+  String get popup_ctx_next_plus => 'Add Next';
+  String get popup_ctx_confirm => 'Confirm Mining';
   String get popup_ctx_cancel => 'Cancel';
   String get backup_export_choose_videos => 'Choose videos';
   String get backup_export_videos_all => 'All videos';
@@ -92756,29 +92756,29 @@ extension on _StringsEn {
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
+        return 'Adjust before mining';
       case 'popup_ctx_modal_title':
-        return 'Select sentence context';
+        return 'Select Sentence Context';
       case 'popup_ctx_modal_count':
-        return 'Selected %d';
+        return 'Selected %d sentences';
       case 'popup_ctx_box_prev':
-        return 'Before';
+        return 'Previous Context';
       case 'popup_ctx_box_current':
-        return 'Current';
+        return 'Current Sentence';
       case 'popup_ctx_box_next':
-        return 'After';
+        return 'Next Context';
       case 'popup_ctx_box_empty':
         return '(none)';
       case 'popup_ctx_prev_minus':
-        return 'Remove before';
+        return 'Remove Previous';
       case 'popup_ctx_prev_plus':
-        return 'Add before';
+        return 'Add Previous';
       case 'popup_ctx_next_minus':
-        return 'Remove after';
+        return 'Remove Next';
       case 'popup_ctx_next_plus':
-        return 'Add after';
+        return 'Add Next';
       case 'popup_ctx_confirm':
-        return 'Confirm';
+        return 'Confirm Mining';
       case 'popup_ctx_cancel':
         return 'Cancel';
       case 'backup_export_choose_videos':
