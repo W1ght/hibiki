@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 39780 (2340 per locale)
 ///
-/// Built on 2026-07-15 at 11:41 UTC
+/// Built on 2026-07-15 at 14:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2970,7 +2970,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
   String get video_continue_watching => 'Continue Watching';
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   String get video_stat_total_videos => 'Total';
   String get video_stat_unfinished => 'Unfinished';
   String get video_stat_recent_imports => 'New in 7 days';
@@ -2995,7 +2995,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_render_skia_fix_hint =>
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   String get book_continue_reading => 'Continue Reading';
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   String get shelf_stat_reading => 'Reading';
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   String get sort_by => 'Sort';
@@ -8179,7 +8179,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -8224,7 +8224,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -13611,7 +13611,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -13656,7 +13656,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -19062,7 +19062,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -19107,7 +19107,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -24532,7 +24532,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -24577,7 +24577,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -29904,7 +29904,7 @@ class _StringsId extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -29949,7 +29949,7 @@ class _StringsId extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -35337,7 +35337,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -35382,7 +35382,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -40498,7 +40498,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -40543,7 +40543,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -45660,7 +45660,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -45705,7 +45705,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -51059,7 +51059,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -51104,7 +51104,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -56483,7 +56483,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -56528,7 +56528,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -61882,7 +61882,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -61927,7 +61927,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -67196,7 +67196,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -67241,7 +67241,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -72561,7 +72561,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -72606,7 +72606,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -77903,7 +77903,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -77948,7 +77948,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -82898,7 +82898,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_continue_watching => '继续观看';
   @override
-  String get video_library_overview => '媒体库概览';
+  String get video_library_overview => '统计';
   @override
   String get video_stat_total_videos => '总数';
   @override
@@ -82938,7 +82938,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get book_continue_reading => '继续阅读';
   @override
-  String get book_library_overview => '书库概览';
+  String get book_library_overview => '统计';
   @override
   String get shelf_stat_reading => '在读';
   @override
@@ -87937,7 +87937,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => '統計';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -87982,7 +87982,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => '統計';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -92792,7 +92792,7 @@ extension on _StringsEn {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -92832,7 +92832,7 @@ extension on _StringsEn {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -97577,7 +97577,7 @@ extension on _StringsAr {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -97617,7 +97617,7 @@ extension on _StringsAr {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -102384,7 +102384,7 @@ extension on _StringsDe {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -102424,7 +102424,7 @@ extension on _StringsDe {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -107189,7 +107189,7 @@ extension on _StringsEs {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -107229,7 +107229,7 @@ extension on _StringsEs {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -112001,7 +112001,7 @@ extension on _StringsFr {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -112041,7 +112041,7 @@ extension on _StringsFr {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -116793,7 +116793,7 @@ extension on _StringsId {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -116833,7 +116833,7 @@ extension on _StringsId {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -121602,7 +121602,7 @@ extension on _StringsIt {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -121642,7 +121642,7 @@ extension on _StringsIt {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -126369,7 +126369,7 @@ extension on _StringsJa {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -126409,7 +126409,7 @@ extension on _StringsJa {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -131138,7 +131138,7 @@ extension on _StringsKo {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -131178,7 +131178,7 @@ extension on _StringsKo {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -135940,7 +135940,7 @@ extension on _StringsNl {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -135980,7 +135980,7 @@ extension on _StringsNl {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -140739,7 +140739,7 @@ extension on _StringsPtBr {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -140779,7 +140779,7 @@ extension on _StringsPtBr {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -145542,7 +145542,7 @@ extension on _StringsRu {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -145582,7 +145582,7 @@ extension on _StringsRu {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -150327,7 +150327,7 @@ extension on _StringsTh {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -150367,7 +150367,7 @@ extension on _StringsTh {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -155121,7 +155121,7 @@ extension on _StringsTr {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -155161,7 +155161,7 @@ extension on _StringsTr {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -159909,7 +159909,7 @@ extension on _StringsVi {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -159949,7 +159949,7 @@ extension on _StringsVi {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -164663,7 +164663,7 @@ extension on _StringsZhCn {
       case 'video_continue_watching':
         return '继续观看';
       case 'video_library_overview':
-        return '媒体库概览';
+        return '统计';
       case 'video_stat_total_videos':
         return '总数';
       case 'video_stat_unfinished':
@@ -164703,7 +164703,7 @@ extension on _StringsZhCn {
       case 'book_continue_reading':
         return '继续阅读';
       case 'book_library_overview':
-        return '书库概览';
+        return '统计';
       case 'shelf_stat_reading':
         return '在读';
       case 'book_read_progress':
@@ -169420,7 +169420,7 @@ extension on _StringsZhHk {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return '統計';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -169460,7 +169460,7 @@ extension on _StringsZhHk {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return '統計';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
