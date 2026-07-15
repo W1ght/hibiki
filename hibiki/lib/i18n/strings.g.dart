@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39882 (2346 per locale)
+/// Strings: 39899 (2347 per locale)
 ///
-/// Built on 2026-07-15 at 05:20 UTC
+/// Built on 2026-07-15 at 05:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3115,6 +3115,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Also delete the videos (keeps your original video files)';
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -8436,6 +8437,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -13880,6 +13883,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -19341,6 +19346,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -24821,6 +24828,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -30203,6 +30212,8 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -35646,6 +35657,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -40814,6 +40827,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -45987,6 +46002,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -51398,6 +51415,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -56832,6 +56851,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -62241,6 +62262,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -67563,6 +67586,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -72940,6 +72965,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -78292,6 +78319,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -83273,6 +83302,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid 尚未授予卡片访问权限。请在刚弹出的系统授权对话框中允许，然后再次点击按钮制卡。';
+  @override
+  String get video_subtitle_waveform_cue_list => '字幕列表';
 }
 
 // Path: retrying_in
@@ -88343,6 +88374,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_error_permission_denied =>
       'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
 }
 
 // Path: retrying_in
@@ -93179,6 +93212,8 @@ extension on _StringsEn {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
@@ -97975,6 +98010,8 @@ extension on _StringsAr {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
@@ -102793,6 +102830,8 @@ extension on _StringsDe {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
@@ -107609,6 +107648,8 @@ extension on _StringsEs {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
@@ -112432,6 +112473,8 @@ extension on _StringsFr {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
@@ -117235,6 +117278,8 @@ extension on _StringsId {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
@@ -122055,6 +122100,8 @@ extension on _StringsIt {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
@@ -126832,6 +126879,8 @@ extension on _StringsJa {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
@@ -131613,6 +131662,8 @@ extension on _StringsKo {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
@@ -136426,6 +136477,8 @@ extension on _StringsNl {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
@@ -141236,6 +141289,8 @@ extension on _StringsPtBr {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
@@ -146050,6 +146105,8 @@ extension on _StringsRu {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
@@ -150846,6 +150903,8 @@ extension on _StringsTh {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
@@ -155651,6 +155710,8 @@ extension on _StringsTr {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
@@ -160450,6 +160511,8 @@ extension on _StringsVi {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
@@ -165213,6 +165276,8 @@ extension on _StringsZhCn {
         return '同时删除其中的视频（保留你的原始视频文件）';
       case 'anki_error_permission_denied':
         return 'AnkiDroid 尚未授予卡片访问权限。请在刚弹出的系统授权对话框中允许，然后再次点击按钮制卡。';
+      case 'video_subtitle_waveform_cue_list':
+        return '字幕列表';
       default:
         return null;
     }
@@ -169982,6 +170047,8 @@ extension on _StringsZhHk {
         return 'Also delete the videos (keeps your original video files)';
       case 'anki_error_permission_denied':
         return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
       default:
         return null;
     }
