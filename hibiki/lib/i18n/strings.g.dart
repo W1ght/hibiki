@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39882 (2346 per locale)
+/// Strings: 39933 (2349 per locale)
 ///
-/// Built on 2026-07-15 at 05:13 UTC
+/// Built on 2026-07-15 at 05:38 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2506,6 +2506,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get delete_collection_also_books => 'Also delete the books in it';
 	String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	String get video_jimaku_series => 'Series';
+	String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	String get video_jimaku_batch_download => 'Download all';
+	String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -4905,6 +4908,9 @@ class _StringsAr extends _StringsEn {
 	@override String get delete_collection_also_books => 'Also delete the books in it';
 	@override String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	@override String get video_jimaku_series => 'Series';
+	@override String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	@override String get video_jimaku_batch_download => 'Download all';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -7304,6 +7310,9 @@ class _StringsDe extends _StringsEn {
 	@override String get delete_collection_also_books => 'Also delete the books in it';
 	@override String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	@override String get video_jimaku_series => 'Series';
+	@override String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	@override String get video_jimaku_batch_download => 'Download all';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -9703,6 +9712,9 @@ class _StringsEs extends _StringsEn {
 	@override String get delete_collection_also_books => 'Also delete the books in it';
 	@override String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	@override String get video_jimaku_series => 'Series';
+	@override String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	@override String get video_jimaku_batch_download => 'Download all';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -12102,6 +12114,9 @@ class _StringsFr extends _StringsEn {
 	@override String get delete_collection_also_books => 'Also delete the books in it';
 	@override String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	@override String get video_jimaku_series => 'Series';
+	@override String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	@override String get video_jimaku_batch_download => 'Download all';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -14501,6 +14516,9 @@ class _StringsId extends _StringsEn {
 	@override String get delete_collection_also_books => 'Also delete the books in it';
 	@override String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	@override String get video_jimaku_series => 'Series';
+	@override String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	@override String get video_jimaku_batch_download => 'Download all';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -16900,6 +16918,9 @@ class _StringsIt extends _StringsEn {
 	@override String get delete_collection_also_books => 'Also delete the books in it';
 	@override String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	@override String get video_jimaku_series => 'Series';
+	@override String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	@override String get video_jimaku_batch_download => 'Download all';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -19299,6 +19320,9 @@ class _StringsJa extends _StringsEn {
 	@override String get delete_collection_also_books => 'Also delete the books in it';
 	@override String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	@override String get video_jimaku_series => 'Series';
+	@override String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	@override String get video_jimaku_batch_download => 'Download all';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -21698,6 +21722,9 @@ class _StringsKo extends _StringsEn {
 	@override String get delete_collection_also_books => 'Also delete the books in it';
 	@override String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	@override String get video_jimaku_series => 'Series';
+	@override String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	@override String get video_jimaku_batch_download => 'Download all';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -24097,6 +24124,9 @@ class _StringsNl extends _StringsEn {
 	@override String get delete_collection_also_books => 'Also delete the books in it';
 	@override String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	@override String get video_jimaku_series => 'Series';
+	@override String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	@override String get video_jimaku_batch_download => 'Download all';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -26496,6 +26526,9 @@ class _StringsPtBr extends _StringsEn {
 	@override String get delete_collection_also_books => 'Also delete the books in it';
 	@override String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	@override String get video_jimaku_series => 'Series';
+	@override String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	@override String get video_jimaku_batch_download => 'Download all';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -28895,6 +28928,9 @@ class _StringsRu extends _StringsEn {
 	@override String get delete_collection_also_books => 'Also delete the books in it';
 	@override String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	@override String get video_jimaku_series => 'Series';
+	@override String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	@override String get video_jimaku_batch_download => 'Download all';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -31294,6 +31330,9 @@ class _StringsTh extends _StringsEn {
 	@override String get delete_collection_also_books => 'Also delete the books in it';
 	@override String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	@override String get video_jimaku_series => 'Series';
+	@override String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	@override String get video_jimaku_batch_download => 'Download all';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -33693,6 +33732,9 @@ class _StringsTr extends _StringsEn {
 	@override String get delete_collection_also_books => 'Also delete the books in it';
 	@override String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	@override String get video_jimaku_series => 'Series';
+	@override String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	@override String get video_jimaku_batch_download => 'Download all';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -36092,6 +36134,9 @@ class _StringsVi extends _StringsEn {
 	@override String get delete_collection_also_books => 'Also delete the books in it';
 	@override String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	@override String get video_jimaku_series => 'Series';
+	@override String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	@override String get video_jimaku_batch_download => 'Download all';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -38491,6 +38536,9 @@ class _StringsZhCn extends _StringsEn {
 	@override String get delete_collection_also_books => '同时删除其中的书';
 	@override String get delete_collection_also_videos => '同时删除其中的视频（保留你的原始视频文件）';
 	@override String get video_jimaku_series => '系列';
+	@override String get video_jimaku_batch_title => '为合集获取字幕';
+	@override String get video_jimaku_batch_download => '下载全部';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => '字幕已获取：${done}/${total}';
 }
 
 // Path: retrying_in
@@ -40890,6 +40938,9 @@ class _StringsZhHk extends _StringsEn {
 	@override String get delete_collection_also_books => 'Also delete the books in it';
 	@override String get delete_collection_also_videos => 'Also delete the videos (keeps your original video files)';
 	@override String get video_jimaku_series => 'Series';
+	@override String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+	@override String get video_jimaku_batch_download => 'Download all';
+	@override String video_jimaku_batch_done({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -43274,6 +43325,9 @@ extension on _StringsEn {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
@@ -45632,6 +45686,9 @@ extension on _StringsAr {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
@@ -47990,6 +48047,9 @@ extension on _StringsDe {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
@@ -50348,6 +50408,9 @@ extension on _StringsEs {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
@@ -52706,6 +52769,9 @@ extension on _StringsFr {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
@@ -55064,6 +55130,9 @@ extension on _StringsId {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
@@ -57422,6 +57491,9 @@ extension on _StringsIt {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
@@ -59780,6 +59852,9 @@ extension on _StringsJa {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
@@ -62138,6 +62213,9 @@ extension on _StringsKo {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
@@ -64496,6 +64574,9 @@ extension on _StringsNl {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
@@ -66854,6 +66935,9 @@ extension on _StringsPtBr {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
@@ -69212,6 +69296,9 @@ extension on _StringsRu {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
@@ -71570,6 +71657,9 @@ extension on _StringsTh {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
@@ -73928,6 +74018,9 @@ extension on _StringsTr {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
@@ -76286,6 +76379,9 @@ extension on _StringsVi {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
@@ -78644,6 +78740,9 @@ extension on _StringsZhCn {
 			case 'delete_collection_also_books': return '同时删除其中的书';
 			case 'delete_collection_also_videos': return '同时删除其中的视频（保留你的原始视频文件）';
 			case 'video_jimaku_series': return '系列';
+			case 'video_jimaku_batch_title': return '为合集获取字幕';
+			case 'video_jimaku_batch_download': return '下载全部';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => '字幕已获取：${done}/${total}';
 			default: return null;
 		}
 	}
@@ -81002,6 +81101,9 @@ extension on _StringsZhHk {
 			case 'delete_collection_also_books': return 'Also delete the books in it';
 			case 'delete_collection_also_videos': return 'Also delete the videos (keeps your original video files)';
 			case 'video_jimaku_series': return 'Series';
+			case 'video_jimaku_batch_title': return 'Fetch subtitles for collection';
+			case 'video_jimaku_batch_download': return 'Download all';
+			case 'video_jimaku_batch_done': return ({required Object done, required Object total}) => 'Subtitles fetched: ${done}/${total}';
 			default: return null;
 		}
 	}
