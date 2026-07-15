@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 39780 (2340 per locale)
 ///
-/// Built on 2026-07-15 at 08:28 UTC
+/// Built on 2026-07-15 at 11:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1962,7 +1962,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_shader_tier_high_hint =>
       'Anime4K HQ. Sharper; best for animation, also usable on live-action (smaller gain). Needs an upper-mid GPU (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
   String get video_shader_tier_ultra_hint =>
-      'Anime4K Mode A (UL). Strongest Anime4K reconstruction — Ultra Large restore + upscale, deeper network than High on the same Anime4K family; also usable on live-action (smaller gain). Needs a flagship GPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Pick a lower tier if your GPU is weaker.';
+      'Anime4K Mode A, VL + an extra deblur/denoise restore pass — the strongest reconstruction the video renderer can actually run: the High-tier VL chain plus one more restore pass for compressed sources. Also usable on live-action (smaller gain). Best on a strong GPU (NVIDIA RTX 5090, AMD RX 7900 XTX); pick a lower tier if yours is weaker.';
   String get video_shader_tier_custom_hint =>
       'Custom shader selection. Pick a tier above to switch to a preset.';
   String get video_shader_section_advanced => 'Advanced (manual shaders)';
@@ -38760,7 +38760,7 @@ class _StringsJa extends _StringsEn {
       'Anime4K HQ。よりシャープ。アニメに最も効果的で、実写でも利用可（効果は控えめ）。アッパーミドル GPU が必要（NVIDIA RTX 4060 / RTX 3070、AMD RX 6700 XT / RX 7700 XT）。';
   @override
   String get video_shader_tier_ultra_hint =>
-      'Anime4K Mode A（UL 超大型ネットワーク再構築）。Anime4K 系で最強の再構築。実写でも利用可（効果は控えめ）。フラッグシップ GPU が必要（NVIDIA RTX 4080 / RTX 5090、AMD RX 7900 XTX）。GPU が弱い場合は下の段階を。';
+      'Anime4K Mode A（VL + 追加のディブラー/ノイズ除去復元）。レンダラーで実際に動作する最強の再構築——「高」の VL チェーンにもう一段の復元パスを追加。実写でも利用可（効果は控えめ）。強めの GPU 推奨（NVIDIA RTX 5090、AMD RX 7900 XTX）。弱い場合は下の段階を。';
   @override
   String get video_shader_tier_custom_hint =>
       'シェーダーをカスタム選択しています。上の段階を選ぶとプリセットに戻ります。';
@@ -81254,7 +81254,7 @@ class _StringsZhCn extends _StringsEn {
       'Anime4K HQ。更锐利，对动画效果最佳，真人内容也可用（提升较小）。需要中高端 GPU（N卡 RTX 4060 / RTX 3070，A卡 RX 6700 XT / RX 7700 XT）。';
   @override
   String get video_shader_tier_ultra_hint =>
-      'Anime4K Mode A（UL 超大网络重建）。Anime4K 家族最强重建——比「高」网络更深，重建/上采样更强；真人内容也可用（提升较小）。需要旗舰 GPU（N卡 RTX 4080 / RTX 5090，A卡 RX 7900 XTX）。显卡较弱请往低档选。';
+      'Anime4K Mode A（VL + 额外去模糊/降噪修复）。视频渲染器实际能跑的最强重建——在「高」档 VL 链之上再叠一个修复 pass，对压制源更狠；真人内容也可用（提升较小）。推荐较强 GPU（N卡 RTX 5090，A卡 RX 7900 XTX），显卡较弱请往低档选。';
   @override
   String get video_shader_tier_custom_hint => '自定义着色器组合。点上方档位可切回预设。';
   @override
@@ -86226,7 +86226,7 @@ class _StringsZhHk extends _StringsEn {
       'Anime4K HQ。更銳利，對動畫效果最佳，真人內容也可用（提升較小）。需要中高端 GPU（N卡 RTX 4060 / RTX 3070，A卡 RX 6700 XT / RX 7700 XT）。';
   @override
   String get video_shader_tier_ultra_hint =>
-      'Anime4K Mode A（UL 超大網絡重建）。Anime4K 家族最強重建——比「高」網絡更深，重建/升頻更強；真人內容也可用（提升較小）。需要旗艦 GPU（N卡 RTX 4080 / RTX 5090，A卡 RX 7900 XTX）。顯卡較弱請往低檔選。';
+      'Anime4K Mode A（VL + 額外去模糊/降噪修復）。影片渲染器實際能跑的最強重建——在「高」檔 VL 鏈之上再疊一個修復 pass，對壓制源更狠；真人內容也可用（提升較小）。推薦較強 GPU（N卡 RTX 5090，A卡 RX 7900 XTX），顯卡較弱請往低檔選。';
   @override
   String get video_shader_tier_custom_hint => '自訂着色器組合。點按上方檔位可切回預設。';
   @override
@@ -91220,7 +91220,7 @@ extension on _StringsEn {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ. Sharper; best for animation, also usable on live-action (smaller gain). Needs an upper-mid GPU (NVIDIA RTX 4060 / RTX 3070, AMD RX 6700 XT / RX 7700 XT).';
       case 'video_shader_tier_ultra_hint':
-        return 'Anime4K Mode A (UL). Strongest Anime4K reconstruction — Ultra Large restore + upscale, deeper network than High on the same Anime4K family; also usable on live-action (smaller gain). Needs a flagship GPU (NVIDIA RTX 4080 / RTX 5090, AMD RX 7900 XTX). Pick a lower tier if your GPU is weaker.';
+        return 'Anime4K Mode A, VL + an extra deblur/denoise restore pass — the strongest reconstruction the video renderer can actually run: the High-tier VL chain plus one more restore pass for compressed sources. Also usable on live-action (smaller gain). Best on a strong GPU (NVIDIA RTX 5090, AMD RX 7900 XTX); pick a lower tier if yours is weaker.';
       case 'video_shader_tier_custom_hint':
         return 'Custom shader selection. Pick a tier above to switch to a preset.';
       case 'video_shader_section_advanced':
@@ -124798,7 +124798,7 @@ extension on _StringsJa {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ。よりシャープ。アニメに最も効果的で、実写でも利用可（効果は控えめ）。アッパーミドル GPU が必要（NVIDIA RTX 4060 / RTX 3070、AMD RX 6700 XT / RX 7700 XT）。';
       case 'video_shader_tier_ultra_hint':
-        return 'Anime4K Mode A（UL 超大型ネットワーク再構築）。Anime4K 系で最強の再構築。実写でも利用可（効果は控えめ）。フラッグシップ GPU が必要（NVIDIA RTX 4080 / RTX 5090、AMD RX 7900 XTX）。GPU が弱い場合は下の段階を。';
+        return 'Anime4K Mode A（VL + 追加のディブラー/ノイズ除去復元）。レンダラーで実際に動作する最強の再構築——「高」の VL チェーンにもう一段の復元パスを追加。実写でも利用可（効果は控えめ）。強めの GPU 推奨（NVIDIA RTX 5090、AMD RX 7900 XTX）。弱い場合は下の段階を。';
       case 'video_shader_tier_custom_hint':
         return 'シェーダーをカスタム選択しています。上の段階を選ぶとプリセットに戻ります。';
       case 'video_shader_section_advanced':
@@ -163099,7 +163099,7 @@ extension on _StringsZhCn {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ。更锐利，对动画效果最佳，真人内容也可用（提升较小）。需要中高端 GPU（N卡 RTX 4060 / RTX 3070，A卡 RX 6700 XT / RX 7700 XT）。';
       case 'video_shader_tier_ultra_hint':
-        return 'Anime4K Mode A（UL 超大网络重建）。Anime4K 家族最强重建——比「高」网络更深，重建/上采样更强；真人内容也可用（提升较小）。需要旗舰 GPU（N卡 RTX 4080 / RTX 5090，A卡 RX 7900 XTX）。显卡较弱请往低档选。';
+        return 'Anime4K Mode A（VL + 额外去模糊/降噪修复）。视频渲染器实际能跑的最强重建——在「高」档 VL 链之上再叠一个修复 pass，对压制源更狠；真人内容也可用（提升较小）。推荐较强 GPU（N卡 RTX 5090，A卡 RX 7900 XTX），显卡较弱请往低档选。';
       case 'video_shader_tier_custom_hint':
         return '自定义着色器组合。点上方档位可切回预设。';
       case 'video_shader_section_advanced':
@@ -167852,7 +167852,7 @@ extension on _StringsZhHk {
       case 'video_shader_tier_high_hint':
         return 'Anime4K HQ。更銳利，對動畫效果最佳，真人內容也可用（提升較小）。需要中高端 GPU（N卡 RTX 4060 / RTX 3070，A卡 RX 6700 XT / RX 7700 XT）。';
       case 'video_shader_tier_ultra_hint':
-        return 'Anime4K Mode A（UL 超大網絡重建）。Anime4K 家族最強重建——比「高」網絡更深，重建/升頻更強；真人內容也可用（提升較小）。需要旗艦 GPU（N卡 RTX 4080 / RTX 5090，A卡 RX 7900 XTX）。顯卡較弱請往低檔選。';
+        return 'Anime4K Mode A（VL + 額外去模糊/降噪修復）。影片渲染器實際能跑的最強重建——在「高」檔 VL 鏈之上再疊一個修復 pass，對壓制源更狠；真人內容也可用（提升較小）。推薦較強 GPU（N卡 RTX 5090，A卡 RX 7900 XTX），顯卡較弱請往低檔選。';
       case 'video_shader_tier_custom_hint':
         return '自訂着色器組合。點按上方檔位可切回預設。';
       case 'video_shader_section_advanced':
