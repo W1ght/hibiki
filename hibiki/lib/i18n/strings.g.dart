@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39865 (2345 per locale)
+/// Strings: 39780 (2340 per locale)
 ///
-/// Built on 2026-07-14 at 16:18 UTC
+/// Built on 2026-07-15 at 08:28 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2689,12 +2689,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '0 shows only the current line (single-line, unchanged); set 1-3 to show that many lines before and after it';
   String get install_browser_extension => 'Install browser extension';
   String get video_setting_subtitle_bg_color => 'Background color';
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  String get video_setting_subtitle_bg_color_white => 'White';
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  String get video_setting_subtitle_bg_color_green => 'Green';
   String get profile_media_video => 'Video';
   String get shortcut_scope_global_external => 'Global (app-external)';
   String get shortcut_action_global_external_lookup =>
@@ -2867,11 +2861,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   String get video_setting_subtitle_text_color => 'Text color';
-  String get video_setting_subtitle_text_color_white => 'White';
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  String get video_setting_subtitle_text_color_green => 'Green';
-  String get video_setting_subtitle_text_color_red => 'Red';
   String get card_mining_pending => 'Adding card…';
   String get sync_pair_pin_waiting =>
       'Waiting for the other device to enter this PIN…';
@@ -2962,18 +2951,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get rename_collection => 'Rename collection';
   String get delete_collection => 'Delete collection';
   String get popup_ctx_adjust_button => 'Adjust context';
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  String get popup_ctx_modal_title => 'Select sentence context';
-  String get popup_ctx_modal_count => 'Selected %d';
-  String get popup_ctx_box_prev => 'Before';
-  String get popup_ctx_box_current => 'Current';
-  String get popup_ctx_box_next => 'After';
+  String get popup_ctx_modal_eyebrow => 'Adjust before mining';
+  String get popup_ctx_modal_title => 'Select Sentence Context';
+  String get popup_ctx_modal_count => 'Selected %d sentences';
+  String get popup_ctx_box_prev => 'Previous Context';
+  String get popup_ctx_box_current => 'Current Sentence';
+  String get popup_ctx_box_next => 'Next Context';
   String get popup_ctx_box_empty => '(none)';
-  String get popup_ctx_prev_minus => 'Remove before';
-  String get popup_ctx_prev_plus => 'Add before';
-  String get popup_ctx_next_minus => 'Remove after';
-  String get popup_ctx_next_plus => 'Add after';
-  String get popup_ctx_confirm => 'Confirm';
+  String get popup_ctx_prev_minus => 'Remove Previous';
+  String get popup_ctx_prev_plus => 'Add Previous';
+  String get popup_ctx_next_minus => 'Remove Next';
+  String get popup_ctx_next_plus => 'Add Next';
+  String get popup_ctx_confirm => 'Confirm Mining';
   String get popup_ctx_cancel => 'Cancel';
   String get backup_export_choose_videos => 'Choose videos';
   String get backup_export_videos_all => 'All videos';
@@ -3113,6 +3102,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get delete_collection_also_books => 'Also delete the books in it';
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  String get video_jimaku_series => 'Series';
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  String get video_jimaku_batch_download => 'Download all';
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -7680,18 +7678,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -7996,16 +7982,6 @@ class _StringsAr extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -8431,6 +8407,21 @@ class _StringsAr extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -13119,18 +13110,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -13435,16 +13414,6 @@ class _StringsDe extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -13872,6 +13841,21 @@ class _StringsDe extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -18577,18 +18561,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -18893,16 +18865,6 @@ class _StringsEs extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -19330,6 +19292,21 @@ class _StringsEs extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -24054,18 +24031,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -24370,16 +24335,6 @@ class _StringsFr extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -24807,6 +24762,21 @@ class _StringsFr extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -29433,18 +29403,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -29749,16 +29707,6 @@ class _StringsId extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -30186,6 +30134,21 @@ class _StringsId extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -34873,18 +34836,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -35189,16 +35140,6 @@ class _StringsIt extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -35626,6 +35567,21 @@ class _StringsIt extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -40041,18 +39997,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -40357,16 +40301,6 @@ class _StringsJa extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -40791,6 +40725,21 @@ class _StringsJa extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -45210,18 +45159,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -45526,16 +45463,6 @@ class _StringsKo extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -45961,6 +45888,21 @@ class _StringsKo extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -50616,18 +50558,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -50932,16 +50862,6 @@ class _StringsNl extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -51369,6 +51289,21 @@ class _StringsNl extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -56047,18 +55982,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -56363,16 +56286,6 @@ class _StringsPtBr extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -56800,6 +56713,21 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -61453,18 +61381,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -61769,16 +61685,6 @@ class _StringsRu extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -62206,6 +62112,21 @@ class _StringsRu extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -66774,18 +66695,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -67090,16 +66999,6 @@ class _StringsTh extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -67525,6 +67424,21 @@ class _StringsTh extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -72146,18 +72060,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -72462,16 +72364,6 @@ class _StringsTr extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -72899,6 +72791,21 @@ class _StringsTr extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -77495,18 +77402,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -77811,16 +77706,6 @@ class _StringsVi extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -78248,6 +78133,21 @@ class _StringsVi extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -82533,18 +82433,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => '背景颜色';
   @override
-  String get video_setting_subtitle_bg_color_default => '默认（黑）';
-  @override
-  String get video_setting_subtitle_bg_color_white => '白色';
-  @override
-  String get video_setting_subtitle_bg_color_gray => '灰色';
-  @override
-  String get video_setting_subtitle_bg_color_red => '红色';
-  @override
-  String get video_setting_subtitle_bg_color_blue => '蓝色';
-  @override
-  String get video_setting_subtitle_bg_color_green => '绿色';
-  @override
   String get profile_media_video => '视频';
   @override
   String get shortcut_scope_global_external => '全局（应用外）';
@@ -82830,16 +82718,6 @@ class _StringsZhCn extends _StringsEn {
       '确定清空全部视频统计吗？将删除所有观看时长、字幕字数以及查词 / 制卡计数。你收藏的词、句子和已制卡片不受影响。此操作不可撤销。';
   @override
   String get video_setting_subtitle_text_color => '文字颜色';
-  @override
-  String get video_setting_subtitle_text_color_white => '白色';
-  @override
-  String get video_setting_subtitle_text_color_yellow => '黄色';
-  @override
-  String get video_setting_subtitle_text_color_cyan => '青色';
-  @override
-  String get video_setting_subtitle_text_color_green => '绿色';
-  @override
-  String get video_setting_subtitle_text_color_red => '红色';
   @override
   String get card_mining_pending => '制卡中…';
   @override
@@ -83226,6 +83104,21 @@ class _StringsZhCn extends _StringsEn {
   String get delete_collection_also_books => '同时删除其中的书';
   @override
   String get delete_collection_also_videos => '同时删除其中的视频（保留你的原始视频文件）';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid 尚未授予卡片访问权限。请在刚弹出的系统授权对话框中允许，然后再次点击按钮制卡。';
+  @override
+  String get video_subtitle_waveform_cue_list => '字幕列表';
+  @override
+  String get video_jimaku_series => '系列';
+  @override
+  String get video_jimaku_batch_title => '为合集获取字幕';
+  @override
+  String get video_jimaku_batch_download => '下载全部';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      '字幕已获取：${done}/${total}';
 }
 
 // Path: retrying_in
@@ -87543,18 +87436,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -87859,16 +87740,6 @@ class _StringsZhHk extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -88293,6 +88164,21 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
+  @override
+  String get anki_error_permission_denied =>
+      'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+  @override
+  String get video_subtitle_waveform_cue_list => 'Subtitle list';
+  @override
+  String get video_jimaku_series => 'Series';
+  @override
+  String get video_jimaku_batch_title => 'Fetch subtitles for collection';
+  @override
+  String get video_jimaku_batch_download => 'Download all';
+  @override
+  String video_jimaku_batch_done(
+          {required Object done, required Object total}) =>
+      'Subtitles fetched: ${done}/${total}';
 }
 
 // Path: retrying_in
@@ -92464,18 +92350,6 @@ extension on _StringsEn {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -92743,16 +92617,6 @@ extension on _StringsEn {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -92892,29 +92756,29 @@ extension on _StringsEn {
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
+        return 'Adjust before mining';
       case 'popup_ctx_modal_title':
-        return 'Select sentence context';
+        return 'Select Sentence Context';
       case 'popup_ctx_modal_count':
-        return 'Selected %d';
+        return 'Selected %d sentences';
       case 'popup_ctx_box_prev':
-        return 'Before';
+        return 'Previous Context';
       case 'popup_ctx_box_current':
-        return 'Current';
+        return 'Current Sentence';
       case 'popup_ctx_box_next':
-        return 'After';
+        return 'Next Context';
       case 'popup_ctx_box_empty':
         return '(none)';
       case 'popup_ctx_prev_minus':
-        return 'Remove before';
+        return 'Remove Previous';
       case 'popup_ctx_prev_plus':
-        return 'Add before';
+        return 'Add Previous';
       case 'popup_ctx_next_minus':
-        return 'Remove after';
+        return 'Remove Next';
       case 'popup_ctx_next_plus':
-        return 'Add after';
+        return 'Add Next';
       case 'popup_ctx_confirm':
-        return 'Confirm';
+        return 'Confirm Mining';
       case 'popup_ctx_cancel':
         return 'Cancel';
       case 'backup_export_choose_videos':
@@ -93127,6 +92991,19 @@ extension on _StringsEn {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -97258,18 +97135,6 @@ extension on _StringsAr {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -97537,16 +97402,6 @@ extension on _StringsAr {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -97921,6 +97776,19 @@ extension on _StringsAr {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -102074,18 +101942,6 @@ extension on _StringsDe {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -102353,16 +102209,6 @@ extension on _StringsDe {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -102737,6 +102583,19 @@ extension on _StringsDe {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -106888,18 +106747,6 @@ extension on _StringsEs {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -107167,16 +107014,6 @@ extension on _StringsEs {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -107551,6 +107388,19 @@ extension on _StringsEs {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -111709,18 +111559,6 @@ extension on _StringsFr {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -111988,16 +111826,6 @@ extension on _StringsFr {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -112372,6 +112200,19 @@ extension on _StringsFr {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -116510,18 +116351,6 @@ extension on _StringsId {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -116789,16 +116618,6 @@ extension on _StringsId {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -117173,6 +116992,19 @@ extension on _StringsId {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -121328,18 +121160,6 @@ extension on _StringsIt {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -121607,16 +121427,6 @@ extension on _StringsIt {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -121991,6 +121801,19 @@ extension on _StringsIt {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -126104,18 +125927,6 @@ extension on _StringsJa {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -126383,16 +126194,6 @@ extension on _StringsJa {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -126766,6 +126567,19 @@ extension on _StringsJa {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -130882,18 +130696,6 @@ extension on _StringsKo {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -131161,16 +130963,6 @@ extension on _StringsKo {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -131545,6 +131337,19 @@ extension on _StringsKo {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -135693,18 +135498,6 @@ extension on _StringsNl {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -135972,16 +135765,6 @@ extension on _StringsNl {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -136356,6 +136139,19 @@ extension on _StringsNl {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -140501,18 +140297,6 @@ extension on _StringsPtBr {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -140780,16 +140564,6 @@ extension on _StringsPtBr {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -141164,6 +140938,19 @@ extension on _StringsPtBr {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -145313,18 +145100,6 @@ extension on _StringsRu {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -145592,16 +145367,6 @@ extension on _StringsRu {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -145976,6 +145741,19 @@ extension on _StringsRu {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -150107,18 +149885,6 @@ extension on _StringsTh {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -150386,16 +150152,6 @@ extension on _StringsTh {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -150770,6 +150526,19 @@ extension on _StringsTh {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -154910,18 +154679,6 @@ extension on _StringsTr {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -155189,16 +154946,6 @@ extension on _StringsTr {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -155573,6 +155320,19 @@ extension on _StringsTr {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -159707,18 +159467,6 @@ extension on _StringsVi {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -159986,16 +159734,6 @@ extension on _StringsVi {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -160370,6 +160108,19 @@ extension on _StringsVi {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
@@ -164470,18 +164221,6 @@ extension on _StringsZhCn {
         return '安装浏览器扩展';
       case 'video_setting_subtitle_bg_color':
         return '背景颜色';
-      case 'video_setting_subtitle_bg_color_default':
-        return '默认（黑）';
-      case 'video_setting_subtitle_bg_color_white':
-        return '白色';
-      case 'video_setting_subtitle_bg_color_gray':
-        return '灰色';
-      case 'video_setting_subtitle_bg_color_red':
-        return '红色';
-      case 'video_setting_subtitle_bg_color_blue':
-        return '蓝色';
-      case 'video_setting_subtitle_bg_color_green':
-        return '绿色';
       case 'profile_media_video':
         return '视频';
       case 'shortcut_scope_global_external':
@@ -164749,16 +164488,6 @@ extension on _StringsZhCn {
         return '确定清空全部视频统计吗？将删除所有观看时长、字幕字数以及查词 / 制卡计数。你收藏的词、句子和已制卡片不受影响。此操作不可撤销。';
       case 'video_setting_subtitle_text_color':
         return '文字颜色';
-      case 'video_setting_subtitle_text_color_white':
-        return '白色';
-      case 'video_setting_subtitle_text_color_yellow':
-        return '黄色';
-      case 'video_setting_subtitle_text_color_cyan':
-        return '青色';
-      case 'video_setting_subtitle_text_color_green':
-        return '绿色';
-      case 'video_setting_subtitle_text_color_red':
-        return '红色';
       case 'card_mining_pending':
         return '制卡中…';
       case 'sync_pair_pin_waiting':
@@ -165131,6 +164860,19 @@ extension on _StringsZhCn {
         return '同时删除其中的书';
       case 'delete_collection_also_videos':
         return '同时删除其中的视频（保留你的原始视频文件）';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid 尚未授予卡片访问权限。请在刚弹出的系统授权对话框中允许，然后再次点击按钮制卡。';
+      case 'video_subtitle_waveform_cue_list':
+        return '字幕列表';
+      case 'video_jimaku_series':
+        return '系列';
+      case 'video_jimaku_batch_title':
+        return '为合集获取字幕';
+      case 'video_jimaku_batch_download':
+        return '下载全部';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            '字幕已获取：${done}/${total}';
       default:
         return null;
     }
@@ -169236,18 +168978,6 @@ extension on _StringsZhHk {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -169515,16 +169245,6 @@ extension on _StringsZhHk {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -169898,6 +169618,19 @@ extension on _StringsZhHk {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
+      case 'anki_error_permission_denied':
+        return 'AnkiDroid hasn\'t granted card access permission. Approve the system permission dialog that just appeared, then tap the button again to export.';
+      case 'video_subtitle_waveform_cue_list':
+        return 'Subtitle list';
+      case 'video_jimaku_series':
+        return 'Series';
+      case 'video_jimaku_batch_title':
+        return 'Fetch subtitles for collection';
+      case 'video_jimaku_batch_download':
+        return 'Download all';
+      case 'video_jimaku_batch_done':
+        return ({required Object done, required Object total}) =>
+            'Subtitles fetched: ${done}/${total}';
       default:
         return null;
     }
