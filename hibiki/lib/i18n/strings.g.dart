@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39967 (2351 per locale)
+/// Strings: 39780 (2340 per locale)
 ///
-/// Built on 2026-07-15 at 07:10 UTC
+/// Built on 2026-07-15 at 07:24 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2689,12 +2689,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '0 shows only the current line (single-line, unchanged); set 1-3 to show that many lines before and after it';
   String get install_browser_extension => 'Install browser extension';
   String get video_setting_subtitle_bg_color => 'Background color';
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  String get video_setting_subtitle_bg_color_white => 'White';
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  String get video_setting_subtitle_bg_color_green => 'Green';
   String get profile_media_video => 'Video';
   String get shortcut_scope_global_external => 'Global (app-external)';
   String get shortcut_action_global_external_lookup =>
@@ -2867,11 +2861,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get stat_clear_all_video_message =>
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   String get video_setting_subtitle_text_color => 'Text color';
-  String get video_setting_subtitle_text_color_white => 'White';
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  String get video_setting_subtitle_text_color_green => 'Green';
-  String get video_setting_subtitle_text_color_red => 'Red';
   String get card_mining_pending => 'Adding card…';
   String get sync_pair_pin_waiting =>
       'Waiting for the other device to enter this PIN…';
@@ -7689,18 +7678,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -8005,16 +7982,6 @@ class _StringsAr extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -13143,18 +13110,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -13459,16 +13414,6 @@ class _StringsDe extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -18616,18 +18561,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -18932,16 +18865,6 @@ class _StringsEs extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -24108,18 +24031,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -24424,16 +24335,6 @@ class _StringsFr extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -29502,18 +29403,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -29818,16 +29707,6 @@ class _StringsId extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -34957,18 +34836,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -35273,16 +35140,6 @@ class _StringsIt extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -40140,18 +39997,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -40456,16 +40301,6 @@ class _StringsJa extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -45324,18 +45159,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -45640,16 +45463,6 @@ class _StringsKo extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -50745,18 +50558,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -51061,16 +50862,6 @@ class _StringsNl extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -56191,18 +55982,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -56507,16 +56286,6 @@ class _StringsPtBr extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -61612,18 +61381,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -61928,16 +61685,6 @@ class _StringsRu extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -66948,18 +66695,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -67264,16 +66999,6 @@ class _StringsTh extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -72335,18 +72060,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -72651,16 +72364,6 @@ class _StringsTr extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -77699,18 +77402,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -78015,16 +77706,6 @@ class _StringsVi extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -82752,18 +82433,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => '背景颜色';
   @override
-  String get video_setting_subtitle_bg_color_default => '默认（黑）';
-  @override
-  String get video_setting_subtitle_bg_color_white => '白色';
-  @override
-  String get video_setting_subtitle_bg_color_gray => '灰色';
-  @override
-  String get video_setting_subtitle_bg_color_red => '红色';
-  @override
-  String get video_setting_subtitle_bg_color_blue => '蓝色';
-  @override
-  String get video_setting_subtitle_bg_color_green => '绿色';
-  @override
   String get profile_media_video => '视频';
   @override
   String get shortcut_scope_global_external => '全局（应用外）';
@@ -83049,16 +82718,6 @@ class _StringsZhCn extends _StringsEn {
       '确定清空全部视频统计吗？将删除所有观看时长、字幕字数以及查词 / 制卡计数。你收藏的词、句子和已制卡片不受影响。此操作不可撤销。';
   @override
   String get video_setting_subtitle_text_color => '文字颜色';
-  @override
-  String get video_setting_subtitle_text_color_white => '白色';
-  @override
-  String get video_setting_subtitle_text_color_yellow => '黄色';
-  @override
-  String get video_setting_subtitle_text_color_cyan => '青色';
-  @override
-  String get video_setting_subtitle_text_color_green => '绿色';
-  @override
-  String get video_setting_subtitle_text_color_red => '红色';
   @override
   String get card_mining_pending => '制卡中…';
   @override
@@ -87777,18 +87436,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_subtitle_bg_color => 'Background color';
   @override
-  String get video_setting_subtitle_bg_color_default => 'Default (black)';
-  @override
-  String get video_setting_subtitle_bg_color_white => 'White';
-  @override
-  String get video_setting_subtitle_bg_color_gray => 'Gray';
-  @override
-  String get video_setting_subtitle_bg_color_red => 'Red';
-  @override
-  String get video_setting_subtitle_bg_color_blue => 'Blue';
-  @override
-  String get video_setting_subtitle_bg_color_green => 'Green';
-  @override
   String get profile_media_video => 'Video';
   @override
   String get shortcut_scope_global_external => 'Global (app-external)';
@@ -88093,16 +87740,6 @@ class _StringsZhHk extends _StringsEn {
       'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
   @override
   String get video_setting_subtitle_text_color => 'Text color';
-  @override
-  String get video_setting_subtitle_text_color_white => 'White';
-  @override
-  String get video_setting_subtitle_text_color_yellow => 'Yellow';
-  @override
-  String get video_setting_subtitle_text_color_cyan => 'Cyan';
-  @override
-  String get video_setting_subtitle_text_color_green => 'Green';
-  @override
-  String get video_setting_subtitle_text_color_red => 'Red';
   @override
   String get card_mining_pending => 'Adding card…';
   @override
@@ -92713,18 +92350,6 @@ extension on _StringsEn {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -92992,16 +92617,6 @@ extension on _StringsEn {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -97520,18 +97135,6 @@ extension on _StringsAr {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -97799,16 +97402,6 @@ extension on _StringsAr {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -102349,18 +101942,6 @@ extension on _StringsDe {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -102628,16 +102209,6 @@ extension on _StringsDe {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -107176,18 +106747,6 @@ extension on _StringsEs {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -107455,16 +107014,6 @@ extension on _StringsEs {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -112010,18 +111559,6 @@ extension on _StringsFr {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -112289,16 +111826,6 @@ extension on _StringsFr {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -116824,18 +116351,6 @@ extension on _StringsId {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -117103,16 +116618,6 @@ extension on _StringsId {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -121655,18 +121160,6 @@ extension on _StringsIt {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -121934,16 +121427,6 @@ extension on _StringsIt {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -126444,18 +125927,6 @@ extension on _StringsJa {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -126723,16 +126194,6 @@ extension on _StringsJa {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -131235,18 +130696,6 @@ extension on _StringsKo {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -131514,16 +130963,6 @@ extension on _StringsKo {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -136059,18 +135498,6 @@ extension on _StringsNl {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -136338,16 +135765,6 @@ extension on _StringsNl {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -140880,18 +140297,6 @@ extension on _StringsPtBr {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -141159,16 +140564,6 @@ extension on _StringsPtBr {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -145705,18 +145100,6 @@ extension on _StringsRu {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -145984,16 +145367,6 @@ extension on _StringsRu {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -150512,18 +149885,6 @@ extension on _StringsTh {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -150791,16 +150152,6 @@ extension on _StringsTh {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -155328,18 +154679,6 @@ extension on _StringsTr {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -155607,16 +154946,6 @@ extension on _StringsTr {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -160138,18 +159467,6 @@ extension on _StringsVi {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -160417,16 +159734,6 @@ extension on _StringsVi {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
@@ -164914,18 +164221,6 @@ extension on _StringsZhCn {
         return '安装浏览器扩展';
       case 'video_setting_subtitle_bg_color':
         return '背景颜色';
-      case 'video_setting_subtitle_bg_color_default':
-        return '默认（黑）';
-      case 'video_setting_subtitle_bg_color_white':
-        return '白色';
-      case 'video_setting_subtitle_bg_color_gray':
-        return '灰色';
-      case 'video_setting_subtitle_bg_color_red':
-        return '红色';
-      case 'video_setting_subtitle_bg_color_blue':
-        return '蓝色';
-      case 'video_setting_subtitle_bg_color_green':
-        return '绿色';
       case 'profile_media_video':
         return '视频';
       case 'shortcut_scope_global_external':
@@ -165193,16 +164488,6 @@ extension on _StringsZhCn {
         return '确定清空全部视频统计吗？将删除所有观看时长、字幕字数以及查词 / 制卡计数。你收藏的词、句子和已制卡片不受影响。此操作不可撤销。';
       case 'video_setting_subtitle_text_color':
         return '文字颜色';
-      case 'video_setting_subtitle_text_color_white':
-        return '白色';
-      case 'video_setting_subtitle_text_color_yellow':
-        return '黄色';
-      case 'video_setting_subtitle_text_color_cyan':
-        return '青色';
-      case 'video_setting_subtitle_text_color_green':
-        return '绿色';
-      case 'video_setting_subtitle_text_color_red':
-        return '红色';
       case 'card_mining_pending':
         return '制卡中…';
       case 'sync_pair_pin_waiting':
@@ -169693,18 +168978,6 @@ extension on _StringsZhHk {
         return 'Install browser extension';
       case 'video_setting_subtitle_bg_color':
         return 'Background color';
-      case 'video_setting_subtitle_bg_color_default':
-        return 'Default (black)';
-      case 'video_setting_subtitle_bg_color_white':
-        return 'White';
-      case 'video_setting_subtitle_bg_color_gray':
-        return 'Gray';
-      case 'video_setting_subtitle_bg_color_red':
-        return 'Red';
-      case 'video_setting_subtitle_bg_color_blue':
-        return 'Blue';
-      case 'video_setting_subtitle_bg_color_green':
-        return 'Green';
       case 'profile_media_video':
         return 'Video';
       case 'shortcut_scope_global_external':
@@ -169972,16 +169245,6 @@ extension on _StringsZhHk {
         return 'Clear all watch time, subtitle character counts, and lookup/mining counts? Your saved words, sentences, and mined cards are kept. This cannot be undone.';
       case 'video_setting_subtitle_text_color':
         return 'Text color';
-      case 'video_setting_subtitle_text_color_white':
-        return 'White';
-      case 'video_setting_subtitle_text_color_yellow':
-        return 'Yellow';
-      case 'video_setting_subtitle_text_color_cyan':
-        return 'Cyan';
-      case 'video_setting_subtitle_text_color_green':
-        return 'Green';
-      case 'video_setting_subtitle_text_color_red':
-        return 'Red';
       case 'card_mining_pending':
         return 'Adding card…';
       case 'sync_pair_pin_waiting':
