@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39780 (2340 per locale)
+/// Strings: 39865 (2345 per locale)
 ///
-/// Built on 2026-07-15 at 11:41 UTC
+/// Built on 2026-07-16 at 06:12 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2843,10 +2843,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_source_network_label_optional => 'Display name (optional)';
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   String get render_restart_required => 'Takes effect after restarting the app';
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   String get video_subtitle_youtube_captions => 'YouTube captions';
@@ -2970,7 +2966,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
   String get video_continue_watching => 'Continue Watching';
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   String get video_stat_total_videos => 'Total';
   String get video_stat_unfinished => 'Unfinished';
   String get video_stat_recent_imports => 'New in 7 days';
@@ -2995,7 +2991,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_render_skia_fix_hint =>
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   String get book_continue_reading => 'Continue Reading';
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   String get shelf_stat_reading => 'Reading';
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   String get sort_by => 'Sort';
@@ -3111,6 +3107,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  String get settings_view_changelog => 'View changelog';
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  String get changelog_open_releases => 'Open releases page';
+  String get changelog_prerelease => 'Prerelease';
+  String get collection_clear_scope => 'Clear scope';
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -7952,12 +7957,6 @@ class _StringsAr extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -8179,7 +8178,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -8224,7 +8223,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -8422,6 +8421,22 @@ class _StringsAr extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -13384,12 +13399,6 @@ class _StringsDe extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -13611,7 +13620,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -13656,7 +13665,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -13856,6 +13865,22 @@ class _StringsDe extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -18835,12 +18860,6 @@ class _StringsEs extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -19062,7 +19081,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -19107,7 +19126,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -19307,6 +19326,22 @@ class _StringsEs extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -24305,12 +24340,6 @@ class _StringsFr extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -24532,7 +24561,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -24577,7 +24606,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -24777,6 +24806,22 @@ class _StringsFr extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -29677,12 +29722,6 @@ class _StringsId extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -29904,7 +29943,7 @@ class _StringsId extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -29949,7 +29988,7 @@ class _StringsId extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -30149,6 +30188,22 @@ class _StringsId extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -35110,12 +35165,6 @@ class _StringsIt extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -35337,7 +35386,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -35382,7 +35431,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -35582,6 +35631,22 @@ class _StringsIt extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -40271,12 +40336,6 @@ class _StringsJa extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -40498,7 +40557,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -40543,7 +40602,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -40740,6 +40799,22 @@ class _StringsJa extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -45433,12 +45508,6 @@ class _StringsKo extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -45660,7 +45729,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -45705,7 +45774,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -45903,6 +45972,22 @@ class _StringsKo extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -50832,12 +50917,6 @@ class _StringsNl extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -51059,7 +51138,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -51104,7 +51183,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -51304,6 +51383,22 @@ class _StringsNl extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -56256,12 +56351,6 @@ class _StringsPtBr extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -56483,7 +56572,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -56528,7 +56617,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -56728,6 +56817,22 @@ class _StringsPtBr extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -61655,12 +61760,6 @@ class _StringsRu extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -61882,7 +61981,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -61927,7 +62026,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -62127,6 +62226,22 @@ class _StringsRu extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -66969,12 +67084,6 @@ class _StringsTh extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -67196,7 +67305,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -67241,7 +67350,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -67439,6 +67548,22 @@ class _StringsTh extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -72334,12 +72459,6 @@ class _StringsTr extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -72561,7 +72680,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -72606,7 +72725,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -72806,6 +72925,22 @@ class _StringsTr extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -77676,12 +77811,6 @@ class _StringsVi extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -77903,7 +78032,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => 'Statistics';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -77948,7 +78077,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => 'Statistics';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -78148,6 +78277,22 @@ class _StringsVi extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -82690,11 +82835,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_source_network_missing_fields => '请填写主机、用户名、远端路径，以及密码或私钥';
   @override
-  String get render_impeller_disable_toggle => '关闭 Impeller（改用 Skia 渲染）';
-  @override
-  String get render_impeller_disable_hint =>
-      '改用 Skia 渲染后端。视频能播放但画面恒黑时可尝试；重启 App 后生效。';
-  @override
   String get render_restart_required => '重启 App 后生效';
   @override
   String get handlebar_card_image => '卡片图片（封面 / 视频 GIF）';
@@ -82898,7 +83038,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_continue_watching => '继续观看';
   @override
-  String get video_library_overview => '媒体库概览';
+  String get video_library_overview => '统计';
   @override
   String get video_stat_total_videos => '总数';
   @override
@@ -82938,7 +83078,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get book_continue_reading => '继续阅读';
   @override
-  String get book_library_overview => '书库概览';
+  String get book_library_overview => '统计';
   @override
   String get shelf_stat_reading => '在读';
   @override
@@ -83119,6 +83259,20 @@ class _StringsZhCn extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       '字幕已获取：${done}/${total}';
+  @override
+  String get anki_open_no_card => '在 Anki 中没有找到这个词的卡片。';
+  @override
+  String get settings_view_changelog => '查看更新日志';
+  @override
+  String get changelog_empty => '未获取到更新日志，请检查网络或代理设置。';
+  @override
+  String get changelog_open_releases => '打开发布页';
+  @override
+  String get changelog_prerelease => '预发布';
+  @override
+  String get collection_clear_scope => '清空范围';
+  @override
+  String get collection_clear_confirm => '确定清空所选收藏？此操作不可撤销。';
 }
 
 // Path: retrying_in
@@ -87710,12 +87864,6 @@ class _StringsZhHk extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -87937,7 +88085,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Library Overview';
+  String get video_library_overview => '統計';
   @override
   String get video_stat_total_videos => 'Total';
   @override
@@ -87982,7 +88130,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get book_continue_reading => 'Continue Reading';
   @override
-  String get book_library_overview => 'Library Overview';
+  String get book_library_overview => '統計';
   @override
   String get shelf_stat_reading => 'Reading';
   @override
@@ -88179,6 +88327,22 @@ class _StringsZhHk extends _StringsEn {
   String video_jimaku_batch_done(
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
+  @override
+  String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -92591,10 +92755,6 @@ extension on _StringsEn {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -92792,7 +92952,7 @@ extension on _StringsEn {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -92832,7 +92992,7 @@ extension on _StringsEn {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -93004,6 +93164,20 @@ extension on _StringsEn {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -97376,10 +97550,6 @@ extension on _StringsAr {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -97577,7 +97747,7 @@ extension on _StringsAr {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -97617,7 +97787,7 @@ extension on _StringsAr {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -97789,6 +97959,20 @@ extension on _StringsAr {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -102183,10 +102367,6 @@ extension on _StringsDe {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -102384,7 +102564,7 @@ extension on _StringsDe {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -102424,7 +102604,7 @@ extension on _StringsDe {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -102596,6 +102776,20 @@ extension on _StringsDe {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -106988,10 +107182,6 @@ extension on _StringsEs {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -107189,7 +107379,7 @@ extension on _StringsEs {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -107229,7 +107419,7 @@ extension on _StringsEs {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -107401,6 +107591,20 @@ extension on _StringsEs {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -111800,10 +112004,6 @@ extension on _StringsFr {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -112001,7 +112201,7 @@ extension on _StringsFr {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -112041,7 +112241,7 @@ extension on _StringsFr {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -112213,6 +112413,20 @@ extension on _StringsFr {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -116592,10 +116806,6 @@ extension on _StringsId {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -116793,7 +117003,7 @@ extension on _StringsId {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -116833,7 +117043,7 @@ extension on _StringsId {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -117005,6 +117215,20 @@ extension on _StringsId {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -121401,10 +121625,6 @@ extension on _StringsIt {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -121602,7 +121822,7 @@ extension on _StringsIt {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -121642,7 +121862,7 @@ extension on _StringsIt {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -121814,6 +122034,20 @@ extension on _StringsIt {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -126168,10 +126402,6 @@ extension on _StringsJa {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -126369,7 +126599,7 @@ extension on _StringsJa {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -126409,7 +126639,7 @@ extension on _StringsJa {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -126580,6 +126810,20 @@ extension on _StringsJa {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -130937,10 +131181,6 @@ extension on _StringsKo {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -131138,7 +131378,7 @@ extension on _StringsKo {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -131178,7 +131418,7 @@ extension on _StringsKo {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -131350,6 +131590,20 @@ extension on _StringsKo {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -135739,10 +135993,6 @@ extension on _StringsNl {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -135940,7 +136190,7 @@ extension on _StringsNl {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -135980,7 +136230,7 @@ extension on _StringsNl {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -136152,6 +136402,20 @@ extension on _StringsNl {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -140538,10 +140802,6 @@ extension on _StringsPtBr {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -140739,7 +140999,7 @@ extension on _StringsPtBr {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -140779,7 +141039,7 @@ extension on _StringsPtBr {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -140951,6 +141211,20 @@ extension on _StringsPtBr {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -145341,10 +145615,6 @@ extension on _StringsRu {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -145542,7 +145812,7 @@ extension on _StringsRu {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -145582,7 +145852,7 @@ extension on _StringsRu {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -145754,6 +146024,20 @@ extension on _StringsRu {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -150126,10 +150410,6 @@ extension on _StringsTh {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -150327,7 +150607,7 @@ extension on _StringsTh {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -150367,7 +150647,7 @@ extension on _StringsTh {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -150539,6 +150819,20 @@ extension on _StringsTh {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -154920,10 +155214,6 @@ extension on _StringsTr {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -155121,7 +155411,7 @@ extension on _StringsTr {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -155161,7 +155451,7 @@ extension on _StringsTr {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -155333,6 +155623,20 @@ extension on _StringsTr {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -159708,10 +160012,6 @@ extension on _StringsVi {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -159909,7 +160209,7 @@ extension on _StringsVi {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -159949,7 +160249,7 @@ extension on _StringsVi {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return 'Statistics';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -160121,6 +160421,20 @@ extension on _StringsVi {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -164462,10 +164776,6 @@ extension on _StringsZhCn {
         return '显示名（可选）';
       case 'media_source_network_missing_fields':
         return '请填写主机、用户名、远端路径，以及密码或私钥';
-      case 'render_impeller_disable_toggle':
-        return '关闭 Impeller（改用 Skia 渲染）';
-      case 'render_impeller_disable_hint':
-        return '改用 Skia 渲染后端。视频能播放但画面恒黑时可尝试；重启 App 后生效。';
       case 'render_restart_required':
         return '重启 App 后生效';
       case 'handlebar_card_image':
@@ -164663,7 +164973,7 @@ extension on _StringsZhCn {
       case 'video_continue_watching':
         return '继续观看';
       case 'video_library_overview':
-        return '媒体库概览';
+        return '统计';
       case 'video_stat_total_videos':
         return '总数';
       case 'video_stat_unfinished':
@@ -164703,7 +165013,7 @@ extension on _StringsZhCn {
       case 'book_continue_reading':
         return '继续阅读';
       case 'book_library_overview':
-        return '书库概览';
+        return '统计';
       case 'shelf_stat_reading':
         return '在读';
       case 'book_read_progress':
@@ -164873,6 +165183,20 @@ extension on _StringsZhCn {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             '字幕已获取：${done}/${total}';
+      case 'anki_open_no_card':
+        return '在 Anki 中没有找到这个词的卡片。';
+      case 'settings_view_changelog':
+        return '查看更新日志';
+      case 'changelog_empty':
+        return '未获取到更新日志，请检查网络或代理设置。';
+      case 'changelog_open_releases':
+        return '打开发布页';
+      case 'changelog_prerelease':
+        return '预发布';
+      case 'collection_clear_scope':
+        return '清空范围';
+      case 'collection_clear_confirm':
+        return '确定清空所选收藏？此操作不可撤销。';
       default:
         return null;
     }
@@ -169219,10 +169543,6 @@ extension on _StringsZhHk {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -169420,7 +169740,7 @@ extension on _StringsZhHk {
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_library_overview':
-        return 'Library Overview';
+        return '統計';
       case 'video_stat_total_videos':
         return 'Total';
       case 'video_stat_unfinished':
@@ -169460,7 +169780,7 @@ extension on _StringsZhHk {
       case 'book_continue_reading':
         return 'Continue Reading';
       case 'book_library_overview':
-        return 'Library Overview';
+        return '統計';
       case 'shelf_stat_reading':
         return 'Reading';
       case 'book_read_progress':
@@ -169631,6 +169951,20 @@ extension on _StringsZhHk {
       case 'video_jimaku_batch_done':
         return ({required Object done, required Object total}) =>
             'Subtitles fetched: ${done}/${total}';
+      case 'anki_open_no_card':
+        return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
