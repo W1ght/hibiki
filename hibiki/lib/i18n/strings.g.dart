@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39865 (2345 per locale)
+/// Strings: 39831 (2343 per locale)
 ///
-/// Built on 2026-07-16 at 03:45 UTC
+/// Built on 2026-07-16 at 04:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2843,10 +2843,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_source_network_label_optional => 'Display name (optional)';
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   String get render_restart_required => 'Takes effect after restarting the app';
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
   String get video_subtitle_youtube_captions => 'YouTube captions';
@@ -7957,12 +7953,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
-  @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
@@ -13400,12 +13390,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
-  @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
@@ -18862,12 +18846,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
-  @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
@@ -24344,12 +24322,6 @@ class _StringsFr extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -29726,12 +29698,6 @@ class _StringsId extends _StringsEn {
   @override
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
-  @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
@@ -35171,12 +35137,6 @@ class _StringsIt extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -40342,12 +40302,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
-  @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
@@ -45515,12 +45469,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
-  @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
@@ -50925,12 +50873,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
-  @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
@@ -56361,12 +56303,6 @@ class _StringsPtBr extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -61771,12 +61707,6 @@ class _StringsRu extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -67095,12 +67025,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
-  @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
   @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
@@ -72472,12 +72396,6 @@ class _StringsTr extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -77825,12 +77743,6 @@ class _StringsVi extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -82849,11 +82761,6 @@ class _StringsZhCn extends _StringsEn {
   String get media_source_network_label_optional => '显示名（可选）';
   @override
   String get media_source_network_missing_fields => '请填写主机、用户名、远端路径，以及密码或私钥';
-  @override
-  String get render_impeller_disable_toggle => '关闭 Impeller（改用 Skia 渲染）';
-  @override
-  String get render_impeller_disable_hint =>
-      '改用 Skia 渲染后端。视频能播放但画面恒黑时可尝试；重启 App 后生效。';
   @override
   String get render_restart_required => '重启 App 后生效';
   @override
@@ -87880,12 +87787,6 @@ class _StringsZhHk extends _StringsEn {
   String get media_source_network_missing_fields =>
       'Enter host, username, remote path, and a password or key';
   @override
-  String get render_impeller_disable_toggle =>
-      'Disable Impeller (use Skia renderer)';
-  @override
-  String get render_impeller_disable_hint =>
-      'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
-  @override
   String get render_restart_required => 'Takes effect after restarting the app';
   @override
   String get handlebar_card_image => 'Card Image (Cover / GIF)';
@@ -92772,10 +92673,6 @@ extension on _StringsEn {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -97567,10 +97464,6 @@ extension on _StringsAr {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -102384,10 +102277,6 @@ extension on _StringsDe {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -107199,10 +107088,6 @@ extension on _StringsEs {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -112021,10 +111906,6 @@ extension on _StringsFr {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -116823,10 +116704,6 @@ extension on _StringsId {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -121642,10 +121519,6 @@ extension on _StringsIt {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -126419,10 +126292,6 @@ extension on _StringsJa {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -131198,10 +131067,6 @@ extension on _StringsKo {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -136010,10 +135875,6 @@ extension on _StringsNl {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -140819,10 +140680,6 @@ extension on _StringsPtBr {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -145632,10 +145489,6 @@ extension on _StringsRu {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -150427,10 +150280,6 @@ extension on _StringsTh {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -155231,10 +155080,6 @@ extension on _StringsTr {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -160029,10 +159874,6 @@ extension on _StringsVi {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
@@ -164793,10 +164634,6 @@ extension on _StringsZhCn {
         return '显示名（可选）';
       case 'media_source_network_missing_fields':
         return '请填写主机、用户名、远端路径，以及密码或私钥';
-      case 'render_impeller_disable_toggle':
-        return '关闭 Impeller（改用 Skia 渲染）';
-      case 'render_impeller_disable_hint':
-        return '改用 Skia 渲染后端。视频能播放但画面恒黑时可尝试；重启 App 后生效。';
       case 'render_restart_required':
         return '重启 App 后生效';
       case 'handlebar_card_image':
@@ -169560,10 +169397,6 @@ extension on _StringsZhHk {
         return 'Display name (optional)';
       case 'media_source_network_missing_fields':
         return 'Enter host, username, remote path, and a password or key';
-      case 'render_impeller_disable_toggle':
-        return 'Disable Impeller (use Skia renderer)';
-      case 'render_impeller_disable_hint':
-        return 'Falls back to the Skia renderer. Try this if a video plays but the screen stays black; takes effect after restarting the app.';
       case 'render_restart_required':
         return 'Takes effect after restarting the app';
       case 'handlebar_card_image':
