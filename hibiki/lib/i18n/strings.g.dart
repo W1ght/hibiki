@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39865 (2345 per locale)
+/// Strings: 39831 (2343 per locale)
 ///
-/// Built on 2026-07-16 at 06:12 UTC
+/// Built on 2026-07-16 at 06:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -574,7 +574,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get volume_button_page_turning => 'Volume button page turning';
   String get invert_volume_buttons => 'Invert volume buttons';
   String get invert_swipe_direction => 'Invert swipe page turn direction';
-  String get volume_button_turning_speed => 'Volume key page turning speed';
   String get extend_page_beyond_navbar => 'Extend page beyond navigation bar';
   String get keep_screen_awake => 'Keep screen awake';
   String get auto_read_on_lookup => 'Auto read word on lookup';
@@ -2449,7 +2448,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get top_progress_pos_left => 'Top-left';
   String get top_progress_pos_center => 'Center';
   String get top_progress_pos_right => 'Top-right';
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
   String get video_setting_subtitle_obscure_hint =>
@@ -3837,8 +3835,6 @@ class _StringsAr extends _StringsEn {
   String get invert_volume_buttons => 'عكس أزرار الصوت';
   @override
   String get invert_swipe_direction => 'عكس اتجاه التمرير لقلب الصفحات';
-  @override
-  String get volume_button_turning_speed => 'سرعة تقليب الصفحات';
   @override
   String get extend_page_beyond_navbar => 'تمديد الصفحة خلف شريط التنقل';
   @override
@@ -7256,8 +7252,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get top_progress_pos_right => 'Top-right';
   @override
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
-  @override
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   @override
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
@@ -9189,9 +9183,6 @@ class _StringsDe extends _StringsEn {
   String get invert_volume_buttons => 'Lautstärketasten invertieren';
   @override
   String get invert_swipe_direction => 'Wischrichtung zum Blättern umkehren';
-  @override
-  String get volume_button_turning_speed =>
-      'Kontinuierliche Scrollgeschwindigkeit';
   @override
   String get extend_page_beyond_navbar =>
       'Seite über Navigationsleiste hinaus erweitern';
@@ -12697,8 +12688,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get top_progress_pos_right => 'Top-right';
   @override
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
-  @override
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   @override
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
@@ -14636,9 +14625,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get invert_swipe_direction =>
       'Invertir dirección de deslizamiento para pasar páginas';
-  @override
-  String get volume_button_turning_speed =>
-      'Velocidad de desplazamiento continuo';
   @override
   String get extend_page_beyond_navbar =>
       'Extender página más allá de la barra de navegación';
@@ -18158,8 +18144,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get top_progress_pos_right => 'Top-right';
   @override
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
-  @override
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   @override
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
@@ -20105,8 +20089,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get invert_swipe_direction =>
       'Inverser la direction du balayage pour tourner les pages';
-  @override
-  String get volume_button_turning_speed => 'Vitesse de défilement continu';
   @override
   String get extend_page_beyond_navbar =>
       'étendre la page au-delà de la barre de navigation';
@@ -23638,8 +23620,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get top_progress_pos_right => 'Top-right';
   @override
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
-  @override
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   @override
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
@@ -25565,8 +25545,6 @@ class _StringsId extends _StringsEn {
   @override
   String get invert_swipe_direction =>
       'Balik arah geser untuk membalik halaman';
-  @override
-  String get volume_button_turning_speed => 'Kecepatan scroll berkelanjutan';
   @override
   String get extend_page_beyond_navbar =>
       'Perluas halaman melewati navigation bar';
@@ -29020,8 +28998,6 @@ class _StringsId extends _StringsEn {
   @override
   String get top_progress_pos_right => 'Top-right';
   @override
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
-  @override
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   @override
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
@@ -30957,8 +30933,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get invert_swipe_direction =>
       'Inverti direzione scorrimento per voltare pagina';
-  @override
-  String get volume_button_turning_speed => 'Velocità di scorrimento continuo';
   @override
   String get extend_page_beyond_navbar =>
       'Estendi pagina oltre la barra di navigazione';
@@ -34463,8 +34437,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get top_progress_pos_right => 'Top-right';
   @override
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
-  @override
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   @override
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
@@ -36355,8 +36327,6 @@ class _StringsJa extends _StringsEn {
   String get invert_volume_buttons => '音量ボタンの方向を反転';
   @override
   String get invert_swipe_direction => 'スワイプページ送り方向を反転';
-  @override
-  String get volume_button_turning_speed => '音量キーページ送り速度';
   @override
   String get extend_page_beyond_navbar => 'ナビゲーションバーの先までページを拡張';
   @override
@@ -39636,8 +39606,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get top_progress_pos_right => 'Top-right';
   @override
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
-  @override
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   @override
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
@@ -41525,8 +41493,6 @@ class _StringsKo extends _StringsEn {
   String get invert_volume_buttons => '볼륨 버튼 반전';
   @override
   String get invert_swipe_direction => '스와이프 페이지 넘김 방향 반전';
-  @override
-  String get volume_button_turning_speed => '볼륨 키 넘김 속도';
   @override
   String get extend_page_beyond_navbar => '내비게이션 바 너머로 페이지 확장';
   @override
@@ -44808,8 +44774,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get top_progress_pos_right => 'Top-right';
   @override
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
-  @override
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   @override
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
@@ -46733,8 +46697,6 @@ class _StringsNl extends _StringsEn {
   String get invert_volume_buttons => 'Volumeknoppen omkeren';
   @override
   String get invert_swipe_direction => 'Veegrichting voor bladeren omdraaien';
-  @override
-  String get volume_button_turning_speed => 'Continue scrollsnelheid';
   @override
   String get extend_page_beyond_navbar =>
       'Pagina voorbij navigatiebalk uitbreiden';
@@ -50215,8 +50177,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get top_progress_pos_right => 'Top-right';
   @override
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
-  @override
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   @override
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
@@ -52151,8 +52111,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get invert_swipe_direction =>
       'Inverter direção do deslizar para virar páginas';
-  @override
-  String get volume_button_turning_speed => 'Velocidade de rolagem contínua';
   @override
   String get extend_page_beyond_navbar =>
       'Estender página além da barra de navegação';
@@ -55649,8 +55607,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get top_progress_pos_right => 'Top-right';
   @override
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
-  @override
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   @override
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
@@ -57577,8 +57533,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get invert_swipe_direction =>
       'Инвертировать направление свайпа для перелистывания';
-  @override
-  String get volume_button_turning_speed => 'Скорость непрерывной прокрутки';
   @override
   String get extend_page_beyond_navbar =>
       'Расширить страницу за навигационную панель';
@@ -61058,8 +61012,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get top_progress_pos_right => 'Top-right';
   @override
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
-  @override
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   @override
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
@@ -62968,9 +62920,6 @@ class _StringsTh extends _StringsEn {
   String get invert_volume_buttons => 'กลับปุ่มเสียง';
   @override
   String get invert_swipe_direction => 'กลับทิศทางการปัดเปลี่ยนหน้า';
-  @override
-  String get volume_button_turning_speed =>
-      'ความเร็วการเปลี่ยนหน้าด้วยปุ่มเสียง';
   @override
   String get extend_page_beyond_navbar => 'ขยายหน้าเลยแถบนำทาง';
   @override
@@ -66383,8 +66332,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get top_progress_pos_right => 'Top-right';
   @override
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
-  @override
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   @override
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
@@ -68301,8 +68248,6 @@ class _StringsTr extends _StringsEn {
   String get invert_volume_buttons => 'Ses düğmelerini ters çevir';
   @override
   String get invert_swipe_direction => 'Kaydırma yönünü tersine çevir';
-  @override
-  String get volume_button_turning_speed => 'Sürekli kaydırma hızı';
   @override
   String get extend_page_beyond_navbar =>
       'Sayfayı gezinme çubuğunun ötesine genişlet';
@@ -71757,8 +71702,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get top_progress_pos_right => 'Top-right';
   @override
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
-  @override
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   @override
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
@@ -73670,8 +73613,6 @@ class _StringsVi extends _StringsEn {
   String get invert_volume_buttons => 'Đảo ngược nút âm lượng';
   @override
   String get invert_swipe_direction => 'Đảo ngược hướng vuốt lật trang';
-  @override
-  String get volume_button_turning_speed => 'Tốc độ cuộn liên tục';
   @override
   String get extend_page_beyond_navbar => 'Mở rộng trang qua thanh điều hướng';
   @override
@@ -77110,8 +77051,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get top_progress_pos_right => 'Top-right';
   @override
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
-  @override
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   @override
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
@@ -79022,8 +78961,6 @@ class _StringsZhCn extends _StringsEn {
   String get invert_volume_buttons => '反转音量键方向';
   @override
   String get invert_swipe_direction => '反转滑动翻页方向';
-  @override
-  String get volume_button_turning_speed => '音量键翻页速度';
   @override
   String get extend_page_beyond_navbar => '页面延伸至导航栏之外';
   @override
@@ -82180,8 +82117,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get top_progress_pos_right => '右上';
   @override
-  String get gamepad_auto_immersive => '连接手柄自动沉浸';
-  @override
   String get shortcut_action_reader_open_menu => '打开设置菜单';
   @override
   String get video_setting_subtitle_obscure => '字幕遮蔽';
@@ -83970,8 +83905,6 @@ class _StringsZhHk extends _StringsEn {
   String get invert_volume_buttons => '反轉音量鍵方向';
   @override
   String get invert_swipe_direction => '反轉滑動翻頁方向';
-  @override
-  String get volume_button_turning_speed => '音量鍵翻頁速度';
   @override
   String get extend_page_beyond_navbar => '頁面延伸至導覽列之外';
   @override
@@ -87164,8 +87097,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get top_progress_pos_right => 'Top-right';
   @override
-  String get gamepad_auto_immersive => 'Auto-immersive on gamepad';
-  @override
   String get shortcut_action_reader_open_menu => 'Open Settings Menu';
   @override
   String get video_setting_subtitle_obscure => 'Obscure subtitles';
@@ -89035,8 +88966,6 @@ extension on _StringsEn {
         return 'Invert volume buttons';
       case 'invert_swipe_direction':
         return 'Invert swipe page turn direction';
-      case 'volume_button_turning_speed':
-        return 'Volume key page turning speed';
       case 'extend_page_beyond_navbar':
         return 'Extend page beyond navigation bar';
       case 'keep_screen_awake':
@@ -92132,8 +92061,6 @@ extension on _StringsEn {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
@@ -93798,8 +93725,6 @@ extension on _StringsAr {
         return 'عكس أزرار الصوت';
       case 'invert_swipe_direction':
         return 'عكس اتجاه التمرير لقلب الصفحات';
-      case 'volume_button_turning_speed':
-        return 'سرعة تقليب الصفحات';
       case 'extend_page_beyond_navbar':
         return 'تمديد الصفحة خلف شريط التنقل';
       case 'keep_screen_awake':
@@ -96927,8 +96852,6 @@ extension on _StringsAr {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
@@ -98595,8 +98518,6 @@ extension on _StringsDe {
         return 'Lautstärketasten invertieren';
       case 'invert_swipe_direction':
         return 'Wischrichtung zum Blättern umkehren';
-      case 'volume_button_turning_speed':
-        return 'Kontinuierliche Scrollgeschwindigkeit';
       case 'extend_page_beyond_navbar':
         return 'Seite über Navigationsleiste hinaus erweitern';
       case 'keep_screen_awake':
@@ -101744,8 +101665,6 @@ extension on _StringsDe {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
@@ -103412,8 +103331,6 @@ extension on _StringsEs {
         return 'Invertir botones de volumen';
       case 'invert_swipe_direction':
         return 'Invertir dirección de deslizamiento para pasar páginas';
-      case 'volume_button_turning_speed':
-        return 'Velocidad de desplazamiento continuo';
       case 'extend_page_beyond_navbar':
         return 'Extender página más allá de la barra de navegación';
       case 'keep_screen_awake':
@@ -106559,8 +106476,6 @@ extension on _StringsEs {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
@@ -108226,8 +108141,6 @@ extension on _StringsFr {
         return 'Inverser les boutons de volume';
       case 'invert_swipe_direction':
         return 'Inverser la direction du balayage pour tourner les pages';
-      case 'volume_button_turning_speed':
-        return 'Vitesse de défilement continu';
       case 'extend_page_beyond_navbar':
         return 'étendre la page au-delà de la barre de navigation';
       case 'keep_screen_awake':
@@ -111381,8 +111294,6 @@ extension on _StringsFr {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
@@ -113049,8 +112960,6 @@ extension on _StringsId {
         return 'Balik tombol volume';
       case 'invert_swipe_direction':
         return 'Balik arah geser untuk membalik halaman';
-      case 'volume_button_turning_speed':
-        return 'Kecepatan scroll berkelanjutan';
       case 'extend_page_beyond_navbar':
         return 'Perluas halaman melewati navigation bar';
       case 'keep_screen_awake':
@@ -116183,8 +116092,6 @@ extension on _StringsId {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
@@ -117852,8 +117759,6 @@ extension on _StringsIt {
         return 'Inverti tasti volume';
       case 'invert_swipe_direction':
         return 'Inverti direzione scorrimento per voltare pagina';
-      case 'volume_button_turning_speed':
-        return 'Velocità di scorrimento continuo';
       case 'extend_page_beyond_navbar':
         return 'Estendi pagina oltre la barra di navigazione';
       case 'keep_screen_awake':
@@ -121002,8 +120907,6 @@ extension on _StringsIt {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
@@ -122665,8 +122568,6 @@ extension on _StringsJa {
         return '音量ボタンの方向を反転';
       case 'invert_swipe_direction':
         return 'スワイプページ送り方向を反転';
-      case 'volume_button_turning_speed':
-        return '音量キーページ送り速度';
       case 'extend_page_beyond_navbar':
         return 'ナビゲーションバーの先までページを拡張';
       case 'keep_screen_awake':
@@ -125779,8 +125680,6 @@ extension on _StringsJa {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
@@ -127442,8 +127341,6 @@ extension on _StringsKo {
         return '볼륨 버튼 반전';
       case 'invert_swipe_direction':
         return '스와이프 페이지 넘김 방향 반전';
-      case 'volume_button_turning_speed':
-        return '볼륨 키 넘김 속도';
       case 'extend_page_beyond_navbar':
         return '내비게이션 바 너머로 페이지 확장';
       case 'keep_screen_awake':
@@ -130558,8 +130455,6 @@ extension on _StringsKo {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
@@ -132227,8 +132122,6 @@ extension on _StringsNl {
         return 'Volumeknoppen omkeren';
       case 'invert_swipe_direction':
         return 'Veegrichting voor bladeren omdraaien';
-      case 'volume_button_turning_speed':
-        return 'Continue scrollsnelheid';
       case 'extend_page_beyond_navbar':
         return 'Pagina voorbij navigatiebalk uitbreiden';
       case 'keep_screen_awake':
@@ -135370,8 +135263,6 @@ extension on _StringsNl {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
@@ -137037,8 +136928,6 @@ extension on _StringsPtBr {
         return 'Inverter botões de volume';
       case 'invert_swipe_direction':
         return 'Inverter direção do deslizar para virar páginas';
-      case 'volume_button_turning_speed':
-        return 'Velocidade de rolagem contínua';
       case 'extend_page_beyond_navbar':
         return 'Estender página além da barra de navegação';
       case 'keep_screen_awake':
@@ -140179,8 +140068,6 @@ extension on _StringsPtBr {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
@@ -141846,8 +141733,6 @@ extension on _StringsRu {
         return 'Инвертировать кнопки громкости';
       case 'invert_swipe_direction':
         return 'Инвертировать направление свайпа для перелистывания';
-      case 'volume_button_turning_speed':
-        return 'Скорость непрерывной прокрутки';
       case 'extend_page_beyond_navbar':
         return 'Расширить страницу за навигационную панель';
       case 'keep_screen_awake':
@@ -144992,8 +144877,6 @@ extension on _StringsRu {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
@@ -146657,8 +146540,6 @@ extension on _StringsTh {
         return 'กลับปุ่มเสียง';
       case 'invert_swipe_direction':
         return 'กลับทิศทางการปัดเปลี่ยนหน้า';
-      case 'volume_button_turning_speed':
-        return 'ความเร็วการเปลี่ยนหน้าด้วยปุ่มเสียง';
       case 'extend_page_beyond_navbar':
         return 'ขยายหน้าเลยแถบนำทาง';
       case 'keep_screen_awake':
@@ -149787,8 +149668,6 @@ extension on _StringsTh {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
@@ -151453,8 +151332,6 @@ extension on _StringsTr {
         return 'Ses düğmelerini ters çevir';
       case 'invert_swipe_direction':
         return 'Kaydırma yönünü tersine çevir';
-      case 'volume_button_turning_speed':
-        return 'Sürekli kaydırma hızı';
       case 'extend_page_beyond_navbar':
         return 'Sayfayı gezinme çubuğunun ötesine genişlet';
       case 'keep_screen_awake':
@@ -154591,8 +154468,6 @@ extension on _StringsTr {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
@@ -156257,8 +156132,6 @@ extension on _StringsVi {
         return 'Đảo ngược nút âm lượng';
       case 'invert_swipe_direction':
         return 'Đảo ngược hướng vuốt lật trang';
-      case 'volume_button_turning_speed':
-        return 'Tốc độ cuộn liên tục';
       case 'extend_page_beyond_navbar':
         return 'Mở rộng trang qua thanh điều hướng';
       case 'keep_screen_awake':
@@ -159389,8 +159262,6 @@ extension on _StringsVi {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
@@ -161083,8 +160954,6 @@ extension on _StringsZhCn {
         return '反转音量键方向';
       case 'invert_swipe_direction':
         return '反转滑动翻页方向';
-      case 'volume_button_turning_speed':
-        return '音量键翻页速度';
       case 'extend_page_beyond_navbar':
         return '页面延伸至导航栏之外';
       case 'keep_screen_awake':
@@ -164156,8 +164025,6 @@ extension on _StringsZhCn {
         return '居中';
       case 'top_progress_pos_right':
         return '右上';
-      case 'gamepad_auto_immersive':
-        return '连接手柄自动沉浸';
       case 'shortcut_action_reader_open_menu':
         return '打开设置菜单';
       case 'video_setting_subtitle_obscure':
@@ -165813,8 +165680,6 @@ extension on _StringsZhHk {
         return '反轉音量鍵方向';
       case 'invert_swipe_direction':
         return '反轉滑動翻頁方向';
-      case 'volume_button_turning_speed':
-        return '音量鍵翻頁速度';
       case 'extend_page_beyond_navbar':
         return '頁面延伸至導覽列之外';
       case 'keep_screen_awake':
@@ -168920,8 +168785,6 @@ extension on _StringsZhHk {
         return 'Center';
       case 'top_progress_pos_right':
         return 'Top-right';
-      case 'gamepad_auto_immersive':
-        return 'Auto-immersive on gamepad';
       case 'shortcut_action_reader_open_menu':
         return 'Open Settings Menu';
       case 'video_setting_subtitle_obscure':
