@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39831 (2343 per locale)
+/// Strings: 39865 (2345 per locale)
 ///
-/// Built on 2026-07-16 at 04:22 UTC
+/// Built on 2026-07-16 at 06:12 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3113,6 +3113,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'No changelog found. Check your network or proxy settings.';
   String get changelog_open_releases => 'Open releases page';
   String get changelog_prerelease => 'Prerelease';
+  String get collection_clear_scope => 'Clear scope';
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -8429,6 +8432,11 @@ class _StringsAr extends _StringsEn {
   String get changelog_open_releases => 'Open releases page';
   @override
   String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -13868,6 +13876,11 @@ class _StringsDe extends _StringsEn {
   String get changelog_open_releases => 'Open releases page';
   @override
   String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -19324,6 +19337,11 @@ class _StringsEs extends _StringsEn {
   String get changelog_open_releases => 'Open releases page';
   @override
   String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -24799,6 +24817,11 @@ class _StringsFr extends _StringsEn {
   String get changelog_open_releases => 'Open releases page';
   @override
   String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -30176,6 +30199,11 @@ class _StringsId extends _StringsEn {
   String get changelog_open_releases => 'Open releases page';
   @override
   String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -35614,6 +35642,11 @@ class _StringsIt extends _StringsEn {
   String get changelog_open_releases => 'Open releases page';
   @override
   String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -40777,6 +40810,11 @@ class _StringsJa extends _StringsEn {
   String get changelog_open_releases => 'Open releases page';
   @override
   String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -45945,6 +45983,11 @@ class _StringsKo extends _StringsEn {
   String get changelog_open_releases => 'Open releases page';
   @override
   String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -51351,6 +51394,11 @@ class _StringsNl extends _StringsEn {
   String get changelog_open_releases => 'Open releases page';
   @override
   String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -56780,6 +56828,11 @@ class _StringsPtBr extends _StringsEn {
   String get changelog_open_releases => 'Open releases page';
   @override
   String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -62184,6 +62237,11 @@ class _StringsRu extends _StringsEn {
   String get changelog_open_releases => 'Open releases page';
   @override
   String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -67501,6 +67559,11 @@ class _StringsTh extends _StringsEn {
   String get changelog_open_releases => 'Open releases page';
   @override
   String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -72873,6 +72936,11 @@ class _StringsTr extends _StringsEn {
   String get changelog_open_releases => 'Open releases page';
   @override
   String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -78220,6 +78288,11 @@ class _StringsVi extends _StringsEn {
   String get changelog_open_releases => 'Open releases page';
   @override
   String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -83196,6 +83269,10 @@ class _StringsZhCn extends _StringsEn {
   String get changelog_open_releases => '打开发布页';
   @override
   String get changelog_prerelease => '预发布';
+  @override
+  String get collection_clear_scope => '清空范围';
+  @override
+  String get collection_clear_confirm => '确定清空所选收藏？此操作不可撤销。';
 }
 
 // Path: retrying_in
@@ -88261,6 +88338,11 @@ class _StringsZhHk extends _StringsEn {
   String get changelog_open_releases => 'Open releases page';
   @override
   String get changelog_prerelease => 'Prerelease';
+  @override
+  String get collection_clear_scope => 'Clear scope';
+  @override
+  String get collection_clear_confirm =>
+      'Permanently delete the selected collections? This can\'t be undone.';
 }
 
 // Path: retrying_in
@@ -93092,6 +93174,10 @@ extension on _StringsEn {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -97883,6 +97969,10 @@ extension on _StringsAr {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -102696,6 +102786,10 @@ extension on _StringsDe {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -107507,6 +107601,10 @@ extension on _StringsEs {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -112325,6 +112423,10 @@ extension on _StringsFr {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -117123,6 +117225,10 @@ extension on _StringsId {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -121938,6 +122044,10 @@ extension on _StringsIt {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -126710,6 +126820,10 @@ extension on _StringsJa {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -131486,6 +131600,10 @@ extension on _StringsKo {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -136294,6 +136412,10 @@ extension on _StringsNl {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -141099,6 +141221,10 @@ extension on _StringsPtBr {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -145908,6 +146034,10 @@ extension on _StringsRu {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -150699,6 +150829,10 @@ extension on _StringsTh {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -155499,6 +155633,10 @@ extension on _StringsTr {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -160293,6 +160431,10 @@ extension on _StringsVi {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
@@ -165051,6 +165193,10 @@ extension on _StringsZhCn {
         return '打开发布页';
       case 'changelog_prerelease':
         return '预发布';
+      case 'collection_clear_scope':
+        return '清空范围';
+      case 'collection_clear_confirm':
+        return '确定清空所选收藏？此操作不可撤销。';
       default:
         return null;
     }
@@ -169815,6 +169961,10 @@ extension on _StringsZhHk {
         return 'Open releases page';
       case 'changelog_prerelease':
         return 'Prerelease';
+      case 'collection_clear_scope':
+        return 'Clear scope';
+      case 'collection_clear_confirm':
+        return 'Permanently delete the selected collections? This can\'t be undone.';
       default:
         return null;
     }
