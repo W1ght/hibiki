@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39831 (2343 per locale)
+/// Strings: 39746 (2338 per locale)
 ///
-/// Built on 2026-07-16 at 06:41 UTC
+/// Built on 2026-07-16 at 07:24 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -722,8 +722,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get player_use_opensles => 'OpenSL ES audio';
   String get go_forward => 'Go Forward';
   String get browse => 'Browse';
-  String get bookmark => 'Bookmark';
-  String get add_bookmark => 'Add Bookmark';
   String get add_to_reading_list => 'Add To Reading List';
   String get reading_list_empty => 'Reading list is empty';
   String get reading_list_add_toast => 'Added to reading list.';
@@ -866,7 +864,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get source_description_epub => 'EPUB reading & dictionary lookup';
   String get follow_audio_paused =>
       'Follow audio paused (user turned page manually)';
-  String get bookmark_added => 'Bookmark added';
   String get follow_audio_jump_failed => 'Follow audio: chapter jump failed';
   String get reader_settings_label => 'Reader Settings';
   String go_to_chapter({required Object n}) => 'Chapter ${n}';
@@ -925,7 +922,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get section_layout => 'Layout & Display';
   String get section_interface => 'Interface';
   String get section_update => 'Update Settings';
-  String get action_bookmark => 'Bookmark';
   String get action_fullscreen_toggle => 'Toggle Fullscreen';
   String get action_exit => 'Exit';
   String get rematch_adjust_window => 'Adjust search window and re-match';
@@ -1511,7 +1507,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_reader_page_backward => 'Previous Page';
   String get shortcut_action_reader_toggle_chrome => 'Toggle Controls';
   String get shortcut_action_reader_dismiss_dict => 'Dismiss Dictionary';
-  String get shortcut_action_reader_toggle_bookmark => 'Toggle Bookmark';
   String get shortcut_action_home_tab_books => 'Books Tab';
   String get shortcut_action_home_tab_dict => 'Dictionary Tab';
   String get shortcut_action_home_tab_settings => 'Settings Tab';
@@ -4111,10 +4106,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get browse => 'تصفّح';
   @override
-  String get bookmark => 'علامة مرجعية';
-  @override
-  String get add_bookmark => 'إضافة علامة مرجعية';
-  @override
   String get add_to_reading_list => 'إضافة إلى قائمة القراءة';
   @override
   String get reading_list_empty => 'قائمة القراءة فارغة';
@@ -4376,8 +4367,6 @@ class _StringsAr extends _StringsEn {
   String get follow_audio_paused =>
       'تتبع الصوت متوقف (قلب المستخدم الصفحة يدوياً)';
   @override
-  String get bookmark_added => 'تمت إضافة علامة مرجعية';
-  @override
   String get follow_audio_jump_failed => 'تتبع الصوت: فشل الانتقال بين الفصول';
   @override
   String get reader_settings_label => 'إعدادات القارئ';
@@ -4476,8 +4465,6 @@ class _StringsAr extends _StringsEn {
   String get section_interface => 'الواجهة';
   @override
   String get section_update => 'إعدادات التحديث';
-  @override
-  String get action_bookmark => 'علامة مرجعية';
   @override
   String get action_fullscreen_toggle => 'تبديل ملء الشاشة';
   @override
@@ -5592,8 +5579,6 @@ class _StringsAr extends _StringsEn {
   String get shortcut_action_reader_toggle_chrome => 'إظهار/إخفاء الأدوات';
   @override
   String get shortcut_action_reader_dismiss_dict => 'إغلاق القاموس';
-  @override
-  String get shortcut_action_reader_toggle_bookmark => 'تبديل الإشارة المرجعية';
   @override
   String get shortcut_action_home_tab_books => 'تبويب الكتب';
   @override
@@ -9471,10 +9456,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get browse => 'Durchsuchen';
   @override
-  String get bookmark => 'Lesezeichen';
-  @override
-  String get add_bookmark => 'Lesezeichen hinzufügen';
-  @override
   String get add_to_reading_list => 'Zur Leseliste hinzufügen';
   @override
   String get reading_list_empty => 'Leseliste ist leer';
@@ -9742,8 +9723,6 @@ class _StringsDe extends _StringsEn {
   String get follow_audio_paused =>
       'Audio-Verfolgung pausiert (Seite manuell umgeblättert)';
   @override
-  String get bookmark_added => 'Lesezeichen hinzugefügt';
-  @override
   String get follow_audio_jump_failed =>
       'Audio-Verfolgung: Kapitelsprung fehlgeschlagen';
   @override
@@ -9847,8 +9826,6 @@ class _StringsDe extends _StringsEn {
   String get section_interface => 'Oberfläche';
   @override
   String get section_update => 'Update-Einstellungen';
-  @override
-  String get action_bookmark => 'Lesezeichen';
   @override
   String get action_fullscreen_toggle => 'Vollbild umschalten';
   @override
@@ -10983,8 +10960,6 @@ class _StringsDe extends _StringsEn {
   String get shortcut_action_reader_toggle_chrome => 'Steuerung umschalten';
   @override
   String get shortcut_action_reader_dismiss_dict => 'Wörterbuch schließen';
-  @override
-  String get shortcut_action_reader_toggle_bookmark => 'Lesezeichen umschalten';
   @override
   String get shortcut_action_home_tab_books => 'Tab „Bücher“';
   @override
@@ -14912,10 +14887,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get browse => 'Explorar';
   @override
-  String get bookmark => 'Marcador';
-  @override
-  String get add_bookmark => 'Añadir marcador';
-  @override
   String get add_to_reading_list => 'Añadir a la lista de lectura';
   @override
   String get reading_list_empty => 'La lista de lectura está vacía';
@@ -15183,8 +15154,6 @@ class _StringsEs extends _StringsEn {
   String get follow_audio_paused =>
       'Seguir audio pausado (el usuario pasó de página manualmente)';
   @override
-  String get bookmark_added => 'Marcador añadido';
-  @override
   String get follow_audio_jump_failed =>
       'Seguir audio: salto de capítulo fallido';
   @override
@@ -15288,8 +15257,6 @@ class _StringsEs extends _StringsEn {
   String get section_interface => 'Interfaz';
   @override
   String get section_update => 'Configuración de actualizaciones';
-  @override
-  String get action_bookmark => 'Marcador';
   @override
   String get action_fullscreen_toggle => 'Alternar pantalla completa';
   @override
@@ -16433,9 +16400,6 @@ class _StringsEs extends _StringsEn {
       'Mostrar/ocultar controles';
   @override
   String get shortcut_action_reader_dismiss_dict => 'Cerrar diccionario';
-  @override
-  String get shortcut_action_reader_toggle_bookmark =>
-      'Marcar/desmarcar página';
   @override
   String get shortcut_action_home_tab_books => 'Pestaña de libros';
   @override
@@ -20375,10 +20339,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get browse => 'Parcourir';
   @override
-  String get bookmark => 'Signet';
-  @override
-  String get add_bookmark => 'Ajouter un signet';
-  @override
   String get add_to_reading_list => 'Ajouter à la liste de lecture';
   @override
   String get reading_list_empty => 'La liste de lecture est vide';
@@ -20650,8 +20610,6 @@ class _StringsFr extends _StringsEn {
   String get follow_audio_paused =>
       'Suivi audio en pause (page tournée manuellement)';
   @override
-  String get bookmark_added => 'Signet ajouté';
-  @override
   String get follow_audio_jump_failed =>
       'Suivi audio : échec du changement de chapitre';
   @override
@@ -20755,8 +20713,6 @@ class _StringsFr extends _StringsEn {
   String get section_interface => 'Interface';
   @override
   String get section_update => 'Paramètres de mise à jour';
-  @override
-  String get action_bookmark => 'Signet';
   @override
   String get action_fullscreen_toggle => 'Plein écran';
   @override
@@ -21906,9 +21862,6 @@ class _StringsFr extends _StringsEn {
       'Afficher/masquer les commandes';
   @override
   String get shortcut_action_reader_dismiss_dict => 'Fermer le dictionnaire';
-  @override
-  String get shortcut_action_reader_toggle_bookmark =>
-      'Activer/désactiver le signet';
   @override
   String get shortcut_action_home_tab_books => 'Onglet Livres';
   @override
@@ -25827,10 +25780,6 @@ class _StringsId extends _StringsEn {
   @override
   String get browse => 'Jelajahi';
   @override
-  String get bookmark => 'Penanda';
-  @override
-  String get add_bookmark => 'Tambah Bookmark';
-  @override
   String get add_to_reading_list => 'Tambah ke Daftar Baca';
   @override
   String get reading_list_empty => 'Daftar baca kosong';
@@ -26093,8 +26042,6 @@ class _StringsId extends _StringsEn {
   String get follow_audio_paused =>
       'Ikuti audio dijeda (pengguna mengganti halaman secara manual)';
   @override
-  String get bookmark_added => 'Bookmark ditambahkan';
-  @override
   String get follow_audio_jump_failed => 'Ikuti audio: lompat bab gagal';
   @override
   String get reader_settings_label => 'Pengaturan Pembaca';
@@ -26197,8 +26144,6 @@ class _StringsId extends _StringsEn {
   String get section_interface => 'Antarmuka';
   @override
   String get section_update => 'Pengaturan Pembaruan';
-  @override
-  String get action_bookmark => 'Penanda';
   @override
   String get action_fullscreen_toggle => 'Alihkan Layar Penuh';
   @override
@@ -27319,8 +27264,6 @@ class _StringsId extends _StringsEn {
   String get shortcut_action_reader_toggle_chrome => 'Alihkan Kontrol';
   @override
   String get shortcut_action_reader_dismiss_dict => 'Tutup Kamus';
-  @override
-  String get shortcut_action_reader_toggle_bookmark => 'Alihkan Penanda';
   @override
   String get shortcut_action_home_tab_books => 'Tab Buku';
   @override
@@ -31219,10 +31162,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get browse => 'Sfoglia';
   @override
-  String get bookmark => 'Segnalibro';
-  @override
-  String get add_bookmark => 'Aggiungi segnalibro';
-  @override
   String get add_to_reading_list => 'Aggiungi alla lista di lettura';
   @override
   String get reading_list_empty => 'La lista di lettura è vuota';
@@ -31486,8 +31425,6 @@ class _StringsIt extends _StringsEn {
   String get follow_audio_paused =>
       'Segui audio in pausa (pagina cambiata manualmente)';
   @override
-  String get bookmark_added => 'Segnalibro aggiunto';
-  @override
   String get follow_audio_jump_failed => 'Segui audio: cambio capitolo fallito';
   @override
   String get reader_settings_label => 'Impostazioni del lettore';
@@ -31589,8 +31526,6 @@ class _StringsIt extends _StringsEn {
   String get section_interface => 'Interfaccia';
   @override
   String get section_update => 'Impostazioni aggiornamento';
-  @override
-  String get action_bookmark => 'Segnalibro';
   @override
   String get action_fullscreen_toggle => 'Schermo intero';
   @override
@@ -32732,9 +32667,6 @@ class _StringsIt extends _StringsEn {
       'Mostra/nascondi controlli';
   @override
   String get shortcut_action_reader_dismiss_dict => 'Chiudi dizionario';
-  @override
-  String get shortcut_action_reader_toggle_bookmark =>
-      'Attiva/disattiva segnalibro';
   @override
   String get shortcut_action_home_tab_books => 'Scheda Libri';
   @override
@@ -36595,10 +36527,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get browse => 'ブラウズ';
   @override
-  String get bookmark => 'ブックマーク';
-  @override
-  String get add_bookmark => 'ブックマークを追加';
-  @override
   String get add_to_reading_list => 'リーディングリストに追加';
   @override
   String get reading_list_empty => 'リーディングリストは空です';
@@ -36862,8 +36790,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get follow_audio_paused => '音声追従を一時停止（手動でページを移動しました）';
   @override
-  String get bookmark_added => 'ブックマークを追加しました';
-  @override
   String get follow_audio_jump_failed => '音声追従：チャプタージャンプに失敗しました';
   @override
   String get reader_settings_label => 'リーダー設定';
@@ -36958,8 +36884,6 @@ class _StringsJa extends _StringsEn {
   String get section_interface => 'インターフェース';
   @override
   String get section_update => '更新設定';
-  @override
-  String get action_bookmark => 'ブックマーク';
   @override
   String get action_fullscreen_toggle => '全画面表示の切替';
   @override
@@ -38017,8 +37941,6 @@ class _StringsJa extends _StringsEn {
   String get shortcut_action_reader_toggle_chrome => 'コントロールの表示切替';
   @override
   String get shortcut_action_reader_dismiss_dict => '辞書を閉じる';
-  @override
-  String get shortcut_action_reader_toggle_bookmark => 'ブックマークの切替';
   @override
   String get shortcut_action_home_tab_books => '書籍タブ';
   @override
@@ -41761,10 +41683,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get browse => '탐색';
   @override
-  String get bookmark => '북마크';
-  @override
-  String get add_bookmark => '북마크 추가';
-  @override
   String get add_to_reading_list => '읽기 목록에 추가';
   @override
   String get reading_list_empty => '읽기 목록이 비어 있습니다';
@@ -42018,8 +41936,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get follow_audio_paused => '오디오 따라가기 일시정지 (사용자가 직접 페이지를 넘김)';
   @override
-  String get bookmark_added => '북마크 추가됨';
-  @override
   String get follow_audio_jump_failed => '오디오 따라가기: 챕터 이동 실패';
   @override
   String get reader_settings_label => '리더 설정';
@@ -42115,8 +42031,6 @@ class _StringsKo extends _StringsEn {
   String get section_interface => '인터페이스';
   @override
   String get section_update => '업데이트 설정';
-  @override
-  String get action_bookmark => '북마크';
   @override
   String get action_fullscreen_toggle => '전체 화면 전환';
   @override
@@ -43186,8 +43100,6 @@ class _StringsKo extends _StringsEn {
   String get shortcut_action_reader_toggle_chrome => '컨트롤 전환';
   @override
   String get shortcut_action_reader_dismiss_dict => '사전 닫기';
-  @override
-  String get shortcut_action_reader_toggle_bookmark => '북마크 전환';
   @override
   String get shortcut_action_home_tab_books => '책 탭';
   @override
@@ -46980,10 +46892,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get browse => 'Bladeren';
   @override
-  String get bookmark => 'Bladwijzer';
-  @override
-  String get add_bookmark => 'Bladwijzer toevoegen';
-  @override
   String get add_to_reading_list => 'Aan leeslijst toevoegen';
   @override
   String get reading_list_empty => 'Leeslijst is leeg';
@@ -47248,8 +47156,6 @@ class _StringsNl extends _StringsEn {
   String get follow_audio_paused =>
       'Audio volgen gepauzeerd (pagina handmatig omgeslagen)';
   @override
-  String get bookmark_added => 'Bladwijzer toegevoegd';
-  @override
   String get follow_audio_jump_failed =>
       'Audio volgen: hoofdstuksprong mislukt';
   @override
@@ -47352,8 +47258,6 @@ class _StringsNl extends _StringsEn {
   String get section_interface => 'Interface';
   @override
   String get section_update => 'Update-instellingen';
-  @override
-  String get action_bookmark => 'Bladwijzer';
   @override
   String get action_fullscreen_toggle => 'Volledig scherm';
   @override
@@ -48485,8 +48389,6 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_reader_toggle_chrome => 'Bediening aan/uit';
   @override
   String get shortcut_action_reader_dismiss_dict => 'Woordenboek sluiten';
-  @override
-  String get shortcut_action_reader_toggle_bookmark => 'Bladwijzer aan/uit';
   @override
   String get shortcut_action_home_tab_books => 'Tabblad Boeken';
   @override
@@ -52397,10 +52299,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get browse => 'Navegar';
   @override
-  String get bookmark => 'Marcador';
-  @override
-  String get add_bookmark => 'Adicionar Marcador';
-  @override
   String get add_to_reading_list => 'Adicionar à Lista de Leitura';
   @override
   String get reading_list_empty => 'A lista de leitura está vazia';
@@ -52667,8 +52565,6 @@ class _StringsPtBr extends _StringsEn {
   String get follow_audio_paused =>
       'Acompanhar áudio pausado (usuário virou a página manualmente)';
   @override
-  String get bookmark_added => 'Marcador adicionado';
-  @override
   String get follow_audio_jump_failed =>
       'Acompanhar áudio: falha ao mudar de capítulo';
   @override
@@ -52771,8 +52667,6 @@ class _StringsPtBr extends _StringsEn {
   String get section_interface => 'Interface';
   @override
   String get section_update => 'Configurações de atualização';
-  @override
-  String get action_bookmark => 'Marcador';
   @override
   String get action_fullscreen_toggle => 'Alternar Tela Cheia';
   @override
@@ -53909,8 +53803,6 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_reader_toggle_chrome => 'Alternar controles';
   @override
   String get shortcut_action_reader_dismiss_dict => 'Fechar dicionário';
-  @override
-  String get shortcut_action_reader_toggle_bookmark => 'Alternar marcador';
   @override
   String get shortcut_action_home_tab_books => 'Aba Livros';
   @override
@@ -57817,10 +57709,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get browse => 'Обзор';
   @override
-  String get bookmark => 'Закладка';
-  @override
-  String get add_bookmark => 'Добавить закладку';
-  @override
   String get add_to_reading_list => 'Добавить в список чтения';
   @override
   String get reading_list_empty => 'Список чтения пуст';
@@ -58082,8 +57970,6 @@ class _StringsRu extends _StringsEn {
   String get follow_audio_paused =>
       'Следование за аудио приостановлено (страница перелистана вручную)';
   @override
-  String get bookmark_added => 'Закладка добавлена';
-  @override
   String get follow_audio_jump_failed =>
       'Следование за аудио: переход между главами не удался';
   @override
@@ -58187,8 +58073,6 @@ class _StringsRu extends _StringsEn {
   String get section_interface => 'Интерфейс';
   @override
   String get section_update => 'Настройки обновлений';
-  @override
-  String get action_bookmark => 'Закладка';
   @override
   String get action_fullscreen_toggle => 'Полноэкранный режим';
   @override
@@ -59321,8 +59205,6 @@ class _StringsRu extends _StringsEn {
       'Показать/скрыть элементы управления';
   @override
   String get shortcut_action_reader_dismiss_dict => 'Закрыть словарь';
-  @override
-  String get shortcut_action_reader_toggle_bookmark => 'Закладка вкл./выкл.';
   @override
   String get shortcut_action_home_tab_books => 'Вкладка «Книги»';
   @override
@@ -63196,10 +63078,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get browse => 'เรียกดู';
   @override
-  String get bookmark => 'บุ๊กมาร์ก';
-  @override
-  String get add_bookmark => 'เพิ่มบุ๊กมาร์ก';
-  @override
   String get add_to_reading_list => 'เพิ่มในรายการอ่าน';
   @override
   String get reading_list_empty => 'รายการอ่านว่างเปล่า';
@@ -63460,8 +63338,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get follow_audio_paused => 'ตามเสียงหยุดแล้ว (ผู้ใช้เปลี่ยนหน้าเอง)';
   @override
-  String get bookmark_added => 'เพิ่มบุ๊กมาร์กแล้ว';
-  @override
   String get follow_audio_jump_failed => 'ตามเสียง: ข้ามบทล้มเหลว';
   @override
   String get reader_settings_label => 'ตั้งค่าตัวอ่าน';
@@ -63561,8 +63437,6 @@ class _StringsTh extends _StringsEn {
   String get section_interface => 'อินเทอร์เฟซ';
   @override
   String get section_update => 'ตั้งค่าการอัปเดต';
-  @override
-  String get action_bookmark => 'บุ๊กมาร์ก';
   @override
   String get action_fullscreen_toggle => 'สลับเต็มจอ';
   @override
@@ -64671,8 +64545,6 @@ class _StringsTh extends _StringsEn {
   String get shortcut_action_reader_toggle_chrome => 'สลับแถบควบคุม';
   @override
   String get shortcut_action_reader_dismiss_dict => 'ปิดพจนานุกรม';
-  @override
-  String get shortcut_action_reader_toggle_bookmark => 'สลับบุ๊กมาร์ก';
   @override
   String get shortcut_action_home_tab_books => 'แท็บหนังสือ';
   @override
@@ -68528,10 +68400,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get browse => 'Göz at';
   @override
-  String get bookmark => 'Yer imi';
-  @override
-  String get add_bookmark => 'Yer imi ekle';
-  @override
   String get add_to_reading_list => 'Okuma listesine ekle';
   @override
   String get reading_list_empty => 'Okuma listesi boş';
@@ -68795,8 +68663,6 @@ class _StringsTr extends _StringsEn {
   String get follow_audio_paused =>
       'Ses takibi duraklatıldı (kullanıcı sayfayı elle çevirdi)';
   @override
-  String get bookmark_added => 'Yer imi eklendi';
-  @override
   String get follow_audio_jump_failed => 'Ses takibi: bölüm atlama başarısız';
   @override
   String get reader_settings_label => 'Okuyucu ayarları';
@@ -68898,8 +68764,6 @@ class _StringsTr extends _StringsEn {
   String get section_interface => 'Arayüz';
   @override
   String get section_update => 'Güncelleme Ayarları';
-  @override
-  String get action_bookmark => 'Yer imi';
   @override
   String get action_fullscreen_toggle => 'Tam ekran';
   @override
@@ -70027,8 +69891,6 @@ class _StringsTr extends _StringsEn {
   String get shortcut_action_reader_toggle_chrome => 'Denetimleri Aç/Kapat';
   @override
   String get shortcut_action_reader_dismiss_dict => 'Sözlüğü Kapat';
-  @override
-  String get shortcut_action_reader_toggle_bookmark => 'Yer İmini Aç/Kapat';
   @override
   String get shortcut_action_home_tab_books => 'Kitaplar Sekmesi';
   @override
@@ -73889,10 +73751,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get browse => 'Duyệt';
   @override
-  String get bookmark => 'Đánh dấu';
-  @override
-  String get add_bookmark => 'Thêm đánh dấu';
-  @override
   String get add_to_reading_list => 'Thêm vào danh sách đọc';
   @override
   String get reading_list_empty => 'Danh sách đọc trống';
@@ -74155,8 +74013,6 @@ class _StringsVi extends _StringsEn {
   String get follow_audio_paused =>
       'Theo dõi âm thanh tạm dừng (đã lật trang thủ công)';
   @override
-  String get bookmark_added => 'Đã thêm đánh dấu';
-  @override
   String get follow_audio_jump_failed =>
       'Theo dõi âm thanh: chuyển chương thất bại';
   @override
@@ -74258,8 +74114,6 @@ class _StringsVi extends _StringsEn {
   String get section_interface => 'Giao diện';
   @override
   String get section_update => 'Cài đặt cập nhật';
-  @override
-  String get action_bookmark => 'Đánh dấu';
   @override
   String get action_fullscreen_toggle => 'Bật/tắt toàn màn hình';
   @override
@@ -75381,8 +75235,6 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_reader_toggle_chrome => 'Bật/tắt điều khiển';
   @override
   String get shortcut_action_reader_dismiss_dict => 'Đóng từ điển';
-  @override
-  String get shortcut_action_reader_toggle_bookmark => 'Bật/tắt dấu trang';
   @override
   String get shortcut_action_home_tab_books => 'Tab Sách';
   @override
@@ -79226,10 +79078,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get browse => '浏览';
   @override
-  String get bookmark => '书签';
-  @override
-  String get add_bookmark => '添加书签';
-  @override
   String get add_to_reading_list => '加入阅读清单';
   @override
   String get reading_list_empty => '阅读清单为空';
@@ -79490,8 +79338,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get follow_audio_paused => '音频跟随已暂停（用户手动翻页）';
   @override
-  String get bookmark_added => '已添加书签';
-  @override
   String get follow_audio_jump_failed => '音频跟随：跳章失败';
   @override
   String get reader_settings_label => '阅读设置';
@@ -79586,8 +79432,6 @@ class _StringsZhCn extends _StringsEn {
   String get section_interface => '界面';
   @override
   String get section_update => '更新设置';
-  @override
-  String get action_bookmark => '书签';
   @override
   String get action_fullscreen_toggle => '全屏切换';
   @override
@@ -80592,8 +80436,6 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_action_reader_toggle_chrome => '显示/隐藏控制栏';
   @override
   String get shortcut_action_reader_dismiss_dict => '关闭词典';
-  @override
-  String get shortcut_action_reader_toggle_bookmark => '切换书签';
   @override
   String get shortcut_action_home_tab_books => '书架标签';
   @override
@@ -84170,10 +84012,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get browse => '瀏覽';
   @override
-  String get bookmark => '書籤';
-  @override
-  String get add_bookmark => '新增書籤';
-  @override
   String get add_to_reading_list => '加入閱讀清單';
   @override
   String get reading_list_empty => '閱讀清單為空';
@@ -84423,8 +84261,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get follow_audio_paused => '音頻跟隨已暫停（使用者手動翻頁）';
   @override
-  String get bookmark_added => '已新增書籤';
-  @override
   String get follow_audio_jump_failed => '音頻跟隨：跳章失敗';
   @override
   String get reader_settings_label => '閱讀設定';
@@ -84519,8 +84355,6 @@ class _StringsZhHk extends _StringsEn {
   String get section_interface => '介面';
   @override
   String get section_update => '更新設定';
-  @override
-  String get action_bookmark => '書籤';
   @override
   String get action_fullscreen_toggle => '全螢幕切換';
   @override
@@ -85565,8 +85399,6 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_action_reader_toggle_chrome => '顯示／隱藏控制欄';
   @override
   String get shortcut_action_reader_dismiss_dict => '關閉詞典';
-  @override
-  String get shortcut_action_reader_toggle_bookmark => '切換書籤';
   @override
   String get shortcut_action_home_tab_books => '書架分頁';
   @override
@@ -89237,10 +89069,6 @@ extension on _StringsEn {
         return 'Go Forward';
       case 'browse':
         return 'Browse';
-      case 'bookmark':
-        return 'Bookmark';
-      case 'add_bookmark':
-        return 'Add Bookmark';
       case 'add_to_reading_list':
         return 'Add To Reading List';
       case 'reading_list_empty':
@@ -89501,8 +89329,6 @@ extension on _StringsEn {
         return 'EPUB reading & dictionary lookup';
       case 'follow_audio_paused':
         return 'Follow audio paused (user turned page manually)';
-      case 'bookmark_added':
-        return 'Bookmark added';
       case 'follow_audio_jump_failed':
         return 'Follow audio: chapter jump failed';
       case 'reader_settings_label':
@@ -89598,8 +89424,6 @@ extension on _StringsEn {
         return 'Interface';
       case 'section_update':
         return 'Update Settings';
-      case 'action_bookmark':
-        return 'Bookmark';
       case 'action_fullscreen_toggle':
         return 'Toggle Fullscreen';
       case 'action_exit':
@@ -90590,8 +90414,6 @@ extension on _StringsEn {
         return 'Toggle Controls';
       case 'shortcut_action_reader_dismiss_dict':
         return 'Dismiss Dictionary';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return 'Toggle Bookmark';
       case 'shortcut_action_home_tab_books':
         return 'Books Tab';
       case 'shortcut_action_home_tab_dict':
@@ -93996,10 +93818,6 @@ extension on _StringsAr {
         return 'تقدّم';
       case 'browse':
         return 'تصفّح';
-      case 'bookmark':
-        return 'علامة مرجعية';
-      case 'add_bookmark':
-        return 'إضافة علامة مرجعية';
       case 'add_to_reading_list':
         return 'إضافة إلى قائمة القراءة';
       case 'reading_list_empty':
@@ -94249,8 +94067,6 @@ extension on _StringsAr {
         return 'قراءة EPUB والبحث في القاموس';
       case 'follow_audio_paused':
         return 'تتبع الصوت متوقف (قلب المستخدم الصفحة يدوياً)';
-      case 'bookmark_added':
-        return 'تمت إضافة علامة مرجعية';
       case 'follow_audio_jump_failed':
         return 'تتبع الصوت: فشل الانتقال بين الفصول';
       case 'reader_settings_label':
@@ -94346,8 +94162,6 @@ extension on _StringsAr {
         return 'الواجهة';
       case 'section_update':
         return 'إعدادات التحديث';
-      case 'action_bookmark':
-        return 'علامة مرجعية';
       case 'action_fullscreen_toggle':
         return 'تبديل ملء الشاشة';
       case 'action_exit':
@@ -95379,8 +95193,6 @@ extension on _StringsAr {
         return 'إظهار/إخفاء الأدوات';
       case 'shortcut_action_reader_dismiss_dict':
         return 'إغلاق القاموس';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return 'تبديل الإشارة المرجعية';
       case 'shortcut_action_home_tab_books':
         return 'تبويب الكتب';
       case 'shortcut_action_home_tab_dict':
@@ -98790,10 +98602,6 @@ extension on _StringsDe {
         return 'Vorwärts';
       case 'browse':
         return 'Durchsuchen';
-      case 'bookmark':
-        return 'Lesezeichen';
-      case 'add_bookmark':
-        return 'Lesezeichen hinzufügen';
       case 'add_to_reading_list':
         return 'Zur Leseliste hinzufügen';
       case 'reading_list_empty':
@@ -99044,8 +98852,6 @@ extension on _StringsDe {
         return 'EPUB lesen & Wörterbuch-Nachschlagen';
       case 'follow_audio_paused':
         return 'Audio-Verfolgung pausiert (Seite manuell umgeblättert)';
-      case 'bookmark_added':
-        return 'Lesezeichen hinzugefügt';
       case 'follow_audio_jump_failed':
         return 'Audio-Verfolgung: Kapitelsprung fehlgeschlagen';
       case 'reader_settings_label':
@@ -99141,8 +98947,6 @@ extension on _StringsDe {
         return 'Oberfläche';
       case 'section_update':
         return 'Update-Einstellungen';
-      case 'action_bookmark':
-        return 'Lesezeichen';
       case 'action_fullscreen_toggle':
         return 'Vollbild umschalten';
       case 'action_exit':
@@ -100186,8 +99990,6 @@ extension on _StringsDe {
         return 'Steuerung umschalten';
       case 'shortcut_action_reader_dismiss_dict':
         return 'Wörterbuch schließen';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return 'Lesezeichen umschalten';
       case 'shortcut_action_home_tab_books':
         return 'Tab „Bücher“';
       case 'shortcut_action_home_tab_dict':
@@ -103603,10 +103405,6 @@ extension on _StringsEs {
         return 'Avanzar';
       case 'browse':
         return 'Explorar';
-      case 'bookmark':
-        return 'Marcador';
-      case 'add_bookmark':
-        return 'Añadir marcador';
       case 'add_to_reading_list':
         return 'Añadir a la lista de lectura';
       case 'reading_list_empty':
@@ -103857,8 +103655,6 @@ extension on _StringsEs {
         return 'Lectura de EPUB y búsqueda en diccionario';
       case 'follow_audio_paused':
         return 'Seguir audio pausado (el usuario pasó de página manualmente)';
-      case 'bookmark_added':
-        return 'Marcador añadido';
       case 'follow_audio_jump_failed':
         return 'Seguir audio: salto de capítulo fallido';
       case 'reader_settings_label':
@@ -103954,8 +103750,6 @@ extension on _StringsEs {
         return 'Interfaz';
       case 'section_update':
         return 'Configuración de actualizaciones';
-      case 'action_bookmark':
-        return 'Marcador';
       case 'action_fullscreen_toggle':
         return 'Alternar pantalla completa';
       case 'action_exit':
@@ -104997,8 +104791,6 @@ extension on _StringsEs {
         return 'Mostrar/ocultar controles';
       case 'shortcut_action_reader_dismiss_dict':
         return 'Cerrar diccionario';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return 'Marcar/desmarcar página';
       case 'shortcut_action_home_tab_books':
         return 'Pestaña de libros';
       case 'shortcut_action_home_tab_dict':
@@ -108413,10 +108205,6 @@ extension on _StringsFr {
         return 'Avancer';
       case 'browse':
         return 'Parcourir';
-      case 'bookmark':
-        return 'Signet';
-      case 'add_bookmark':
-        return 'Ajouter un signet';
       case 'add_to_reading_list':
         return 'Ajouter à la liste de lecture';
       case 'reading_list_empty':
@@ -108667,8 +108455,6 @@ extension on _StringsFr {
         return 'Lecture EPUB et recherche dans le dictionnaire';
       case 'follow_audio_paused':
         return 'Suivi audio en pause (page tournée manuellement)';
-      case 'bookmark_added':
-        return 'Signet ajouté';
       case 'follow_audio_jump_failed':
         return 'Suivi audio : échec du changement de chapitre';
       case 'reader_settings_label':
@@ -108764,8 +108550,6 @@ extension on _StringsFr {
         return 'Interface';
       case 'section_update':
         return 'Paramètres de mise à jour';
-      case 'action_bookmark':
-        return 'Signet';
       case 'action_fullscreen_toggle':
         return 'Plein écran';
       case 'action_exit':
@@ -109811,8 +109595,6 @@ extension on _StringsFr {
         return 'Afficher/masquer les commandes';
       case 'shortcut_action_reader_dismiss_dict':
         return 'Fermer le dictionnaire';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return 'Activer/désactiver le signet';
       case 'shortcut_action_home_tab_books':
         return 'Onglet Livres';
       case 'shortcut_action_home_tab_dict':
@@ -113231,10 +113013,6 @@ extension on _StringsId {
         return 'Maju';
       case 'browse':
         return 'Jelajahi';
-      case 'bookmark':
-        return 'Penanda';
-      case 'add_bookmark':
-        return 'Tambah Bookmark';
       case 'add_to_reading_list':
         return 'Tambah ke Daftar Baca';
       case 'reading_list_empty':
@@ -113484,8 +113262,6 @@ extension on _StringsId {
         return 'Baca EPUB & pencarian kamus';
       case 'follow_audio_paused':
         return 'Ikuti audio dijeda (pengguna mengganti halaman secara manual)';
-      case 'bookmark_added':
-        return 'Bookmark ditambahkan';
       case 'follow_audio_jump_failed':
         return 'Ikuti audio: lompat bab gagal';
       case 'reader_settings_label':
@@ -113581,8 +113357,6 @@ extension on _StringsId {
         return 'Antarmuka';
       case 'section_update':
         return 'Pengaturan Pembaruan';
-      case 'action_bookmark':
-        return 'Penanda';
       case 'action_fullscreen_toggle':
         return 'Alihkan Layar Penuh';
       case 'action_exit':
@@ -114617,8 +114391,6 @@ extension on _StringsId {
         return 'Alihkan Kontrol';
       case 'shortcut_action_reader_dismiss_dict':
         return 'Tutup Kamus';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return 'Alihkan Penanda';
       case 'shortcut_action_home_tab_books':
         return 'Tab Buku';
       case 'shortcut_action_home_tab_dict':
@@ -118031,10 +117803,6 @@ extension on _StringsIt {
         return 'Avanti';
       case 'browse':
         return 'Sfoglia';
-      case 'bookmark':
-        return 'Segnalibro';
-      case 'add_bookmark':
-        return 'Aggiungi segnalibro';
       case 'add_to_reading_list':
         return 'Aggiungi alla lista di lettura';
       case 'reading_list_empty':
@@ -118285,8 +118053,6 @@ extension on _StringsIt {
         return 'Lettura EPUB e ricerca nel dizionario';
       case 'follow_audio_paused':
         return 'Segui audio in pausa (pagina cambiata manualmente)';
-      case 'bookmark_added':
-        return 'Segnalibro aggiunto';
       case 'follow_audio_jump_failed':
         return 'Segui audio: cambio capitolo fallito';
       case 'reader_settings_label':
@@ -118382,8 +118148,6 @@ extension on _StringsIt {
         return 'Interfaccia';
       case 'section_update':
         return 'Impostazioni aggiornamento';
-      case 'action_bookmark':
-        return 'Segnalibro';
       case 'action_fullscreen_toggle':
         return 'Schermo intero';
       case 'action_exit':
@@ -119423,8 +119187,6 @@ extension on _StringsIt {
         return 'Mostra/nascondi controlli';
       case 'shortcut_action_reader_dismiss_dict':
         return 'Chiudi dizionario';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return 'Attiva/disattiva segnalibro';
       case 'shortcut_action_home_tab_books':
         return 'Scheda Libri';
       case 'shortcut_action_home_tab_dict':
@@ -122838,10 +122600,6 @@ extension on _StringsJa {
         return '進む';
       case 'browse':
         return 'ブラウズ';
-      case 'bookmark':
-        return 'ブックマーク';
-      case 'add_bookmark':
-        return 'ブックマークを追加';
       case 'add_to_reading_list':
         return 'リーディングリストに追加';
       case 'reading_list_empty':
@@ -123100,8 +122858,6 @@ extension on _StringsJa {
         return 'EPUBの閲覧と辞書検索';
       case 'follow_audio_paused':
         return '音声追従を一時停止（手動でページを移動しました）';
-      case 'bookmark_added':
-        return 'ブックマークを追加しました';
       case 'follow_audio_jump_failed':
         return '音声追従：チャプタージャンプに失敗しました';
       case 'reader_settings_label':
@@ -123197,8 +122953,6 @@ extension on _StringsJa {
         return 'インターフェース';
       case 'section_update':
         return '更新設定';
-      case 'action_bookmark':
-        return 'ブックマーク';
       case 'action_fullscreen_toggle':
         return '全画面表示の切替';
       case 'action_exit':
@@ -124214,8 +123968,6 @@ extension on _StringsJa {
         return 'コントロールの表示切替';
       case 'shortcut_action_reader_dismiss_dict':
         return '辞書を閉じる';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return 'ブックマークの切替';
       case 'shortcut_action_home_tab_books':
         return '書籍タブ';
       case 'shortcut_action_home_tab_dict':
@@ -127611,10 +127363,6 @@ extension on _StringsKo {
         return '앞으로 가기';
       case 'browse':
         return '탐색';
-      case 'bookmark':
-        return '북마크';
-      case 'add_bookmark':
-        return '북마크 추가';
       case 'add_to_reading_list':
         return '읽기 목록에 추가';
       case 'reading_list_empty':
@@ -127864,8 +127612,6 @@ extension on _StringsKo {
         return 'EPUB 읽기 및 사전 검색';
       case 'follow_audio_paused':
         return '오디오 따라가기 일시정지 (사용자가 직접 페이지를 넘김)';
-      case 'bookmark_added':
-        return '북마크 추가됨';
       case 'follow_audio_jump_failed':
         return '오디오 따라가기: 챕터 이동 실패';
       case 'reader_settings_label':
@@ -127961,8 +127707,6 @@ extension on _StringsKo {
         return '인터페이스';
       case 'section_update':
         return '업데이트 설정';
-      case 'action_bookmark':
-        return '북마크';
       case 'action_fullscreen_toggle':
         return '전체 화면 전환';
       case 'action_exit':
@@ -128988,8 +128732,6 @@ extension on _StringsKo {
         return '컨트롤 전환';
       case 'shortcut_action_reader_dismiss_dict':
         return '사전 닫기';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return '북마크 전환';
       case 'shortcut_action_home_tab_books':
         return '책 탭';
       case 'shortcut_action_home_tab_dict':
@@ -132394,10 +132136,6 @@ extension on _StringsNl {
         return 'Vooruit';
       case 'browse':
         return 'Bladeren';
-      case 'bookmark':
-        return 'Bladwijzer';
-      case 'add_bookmark':
-        return 'Bladwijzer toevoegen';
       case 'add_to_reading_list':
         return 'Aan leeslijst toevoegen';
       case 'reading_list_empty':
@@ -132648,8 +132386,6 @@ extension on _StringsNl {
         return 'EPUB lezen en woordenboek opzoeken';
       case 'follow_audio_paused':
         return 'Audio volgen gepauzeerd (pagina handmatig omgeslagen)';
-      case 'bookmark_added':
-        return 'Bladwijzer toegevoegd';
       case 'follow_audio_jump_failed':
         return 'Audio volgen: hoofdstuksprong mislukt';
       case 'reader_settings_label':
@@ -132745,8 +132481,6 @@ extension on _StringsNl {
         return 'Interface';
       case 'section_update':
         return 'Update-instellingen';
-      case 'action_bookmark':
-        return 'Bladwijzer';
       case 'action_fullscreen_toggle':
         return 'Volledig scherm';
       case 'action_exit':
@@ -133783,8 +133517,6 @@ extension on _StringsNl {
         return 'Bediening aan/uit';
       case 'shortcut_action_reader_dismiss_dict':
         return 'Woordenboek sluiten';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return 'Bladwijzer aan/uit';
       case 'shortcut_action_home_tab_books':
         return 'Tabblad Boeken';
       case 'shortcut_action_home_tab_dict':
@@ -137200,10 +136932,6 @@ extension on _StringsPtBr {
         return 'Avançar';
       case 'browse':
         return 'Navegar';
-      case 'bookmark':
-        return 'Marcador';
-      case 'add_bookmark':
-        return 'Adicionar Marcador';
       case 'add_to_reading_list':
         return 'Adicionar à Lista de Leitura';
       case 'reading_list_empty':
@@ -137454,8 +137182,6 @@ extension on _StringsPtBr {
         return 'Leitura de EPUB e consulta de dicionário';
       case 'follow_audio_paused':
         return 'Acompanhar áudio pausado (usuário virou a página manualmente)';
-      case 'bookmark_added':
-        return 'Marcador adicionado';
       case 'follow_audio_jump_failed':
         return 'Acompanhar áudio: falha ao mudar de capítulo';
       case 'reader_settings_label':
@@ -137551,8 +137277,6 @@ extension on _StringsPtBr {
         return 'Interface';
       case 'section_update':
         return 'Configurações de atualização';
-      case 'action_bookmark':
-        return 'Marcador';
       case 'action_fullscreen_toggle':
         return 'Alternar Tela Cheia';
       case 'action_exit':
@@ -138590,8 +138314,6 @@ extension on _StringsPtBr {
         return 'Alternar controles';
       case 'shortcut_action_reader_dismiss_dict':
         return 'Fechar dicionário';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return 'Alternar marcador';
       case 'shortcut_action_home_tab_books':
         return 'Aba Livros';
       case 'shortcut_action_home_tab_dict':
@@ -142005,10 +141727,6 @@ extension on _StringsRu {
         return 'Вперёд';
       case 'browse':
         return 'Обзор';
-      case 'bookmark':
-        return 'Закладка';
-      case 'add_bookmark':
-        return 'Добавить закладку';
       case 'add_to_reading_list':
         return 'Добавить в список чтения';
       case 'reading_list_empty':
@@ -142258,8 +141976,6 @@ extension on _StringsRu {
         return 'Чтение EPUB и поиск в словаре';
       case 'follow_audio_paused':
         return 'Следование за аудио приостановлено (страница перелистана вручную)';
-      case 'bookmark_added':
-        return 'Закладка добавлена';
       case 'follow_audio_jump_failed':
         return 'Следование за аудио: переход между главами не удался';
       case 'reader_settings_label':
@@ -142355,8 +142071,6 @@ extension on _StringsRu {
         return 'Интерфейс';
       case 'section_update':
         return 'Настройки обновлений';
-      case 'action_bookmark':
-        return 'Закладка';
       case 'action_fullscreen_toggle':
         return 'Полноэкранный режим';
       case 'action_exit':
@@ -143397,8 +143111,6 @@ extension on _StringsRu {
         return 'Показать/скрыть элементы управления';
       case 'shortcut_action_reader_dismiss_dict':
         return 'Закрыть словарь';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return 'Закладка вкл./выкл.';
       case 'shortcut_action_home_tab_books':
         return 'Вкладка «Книги»';
       case 'shortcut_action_home_tab_dict':
@@ -146812,10 +146524,6 @@ extension on _StringsTh {
         return 'ไปข้างหน้า';
       case 'browse':
         return 'เรียกดู';
-      case 'bookmark':
-        return 'บุ๊กมาร์ก';
-      case 'add_bookmark':
-        return 'เพิ่มบุ๊กมาร์ก';
       case 'add_to_reading_list':
         return 'เพิ่มในรายการอ่าน';
       case 'reading_list_empty':
@@ -147065,8 +146773,6 @@ extension on _StringsTh {
         return 'อ่าน EPUB และค้นหาพจนานุกรม';
       case 'follow_audio_paused':
         return 'ตามเสียงหยุดแล้ว (ผู้ใช้เปลี่ยนหน้าเอง)';
-      case 'bookmark_added':
-        return 'เพิ่มบุ๊กมาร์กแล้ว';
       case 'follow_audio_jump_failed':
         return 'ตามเสียง: ข้ามบทล้มเหลว';
       case 'reader_settings_label':
@@ -147162,8 +146868,6 @@ extension on _StringsTh {
         return 'อินเทอร์เฟซ';
       case 'section_update':
         return 'ตั้งค่าการอัปเดต';
-      case 'action_bookmark':
-        return 'บุ๊กมาร์ก';
       case 'action_fullscreen_toggle':
         return 'สลับเต็มจอ';
       case 'action_exit':
@@ -148196,8 +147900,6 @@ extension on _StringsTh {
         return 'สลับแถบควบคุม';
       case 'shortcut_action_reader_dismiss_dict':
         return 'ปิดพจนานุกรม';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return 'สลับบุ๊กมาร์ก';
       case 'shortcut_action_home_tab_books':
         return 'แท็บหนังสือ';
       case 'shortcut_action_home_tab_dict':
@@ -151603,10 +151305,6 @@ extension on _StringsTr {
         return 'İleri';
       case 'browse':
         return 'Göz at';
-      case 'bookmark':
-        return 'Yer imi';
-      case 'add_bookmark':
-        return 'Yer imi ekle';
       case 'add_to_reading_list':
         return 'Okuma listesine ekle';
       case 'reading_list_empty':
@@ -151856,8 +151554,6 @@ extension on _StringsTr {
         return 'EPUB okuma ve sözlük arama';
       case 'follow_audio_paused':
         return 'Ses takibi duraklatıldı (kullanıcı sayfayı elle çevirdi)';
-      case 'bookmark_added':
-        return 'Yer imi eklendi';
       case 'follow_audio_jump_failed':
         return 'Ses takibi: bölüm atlama başarısız';
       case 'reader_settings_label':
@@ -151953,8 +151649,6 @@ extension on _StringsTr {
         return 'Arayüz';
       case 'section_update':
         return 'Güncelleme Ayarları';
-      case 'action_bookmark':
-        return 'Yer imi';
       case 'action_fullscreen_toggle':
         return 'Tam ekran';
       case 'action_exit':
@@ -152990,8 +152684,6 @@ extension on _StringsTr {
         return 'Denetimleri Aç/Kapat';
       case 'shortcut_action_reader_dismiss_dict':
         return 'Sözlüğü Kapat';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return 'Yer İmini Aç/Kapat';
       case 'shortcut_action_home_tab_books':
         return 'Kitaplar Sekmesi';
       case 'shortcut_action_home_tab_dict':
@@ -156403,10 +156095,6 @@ extension on _StringsVi {
         return 'Tiến';
       case 'browse':
         return 'Duyệt';
-      case 'bookmark':
-        return 'Đánh dấu';
-      case 'add_bookmark':
-        return 'Thêm đánh dấu';
       case 'add_to_reading_list':
         return 'Thêm vào danh sách đọc';
       case 'reading_list_empty':
@@ -156656,8 +156344,6 @@ extension on _StringsVi {
         return 'Đọc EPUB & tra từ điển';
       case 'follow_audio_paused':
         return 'Theo dõi âm thanh tạm dừng (đã lật trang thủ công)';
-      case 'bookmark_added':
-        return 'Đã thêm đánh dấu';
       case 'follow_audio_jump_failed':
         return 'Theo dõi âm thanh: chuyển chương thất bại';
       case 'reader_settings_label':
@@ -156753,8 +156439,6 @@ extension on _StringsVi {
         return 'Giao diện';
       case 'section_update':
         return 'Cài đặt cập nhật';
-      case 'action_bookmark':
-        return 'Đánh dấu';
       case 'action_fullscreen_toggle':
         return 'Bật/tắt toàn màn hình';
       case 'action_exit':
@@ -157787,8 +157471,6 @@ extension on _StringsVi {
         return 'Bật/tắt điều khiển';
       case 'shortcut_action_reader_dismiss_dict':
         return 'Đóng từ điển';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return 'Bật/tắt dấu trang';
       case 'shortcut_action_home_tab_books':
         return 'Tab Sách';
       case 'shortcut_action_home_tab_dict':
@@ -161222,10 +160904,6 @@ extension on _StringsZhCn {
         return '前进';
       case 'browse':
         return '浏览';
-      case 'bookmark':
-        return '书签';
-      case 'add_bookmark':
-        return '添加书签';
       case 'add_to_reading_list':
         return '加入阅读清单';
       case 'reading_list_empty':
@@ -161484,8 +161162,6 @@ extension on _StringsZhCn {
         return 'EPUB 阅读与词典查询';
       case 'follow_audio_paused':
         return '音频跟随已暂停（用户手动翻页）';
-      case 'bookmark_added':
-        return '已添加书签';
       case 'follow_audio_jump_failed':
         return '音频跟随：跳章失败';
       case 'reader_settings_label':
@@ -161581,8 +161257,6 @@ extension on _StringsZhCn {
         return '界面';
       case 'section_update':
         return '更新设置';
-      case 'action_bookmark':
-        return '书签';
       case 'action_fullscreen_toggle':
         return '全屏切换';
       case 'action_exit':
@@ -162566,8 +162240,6 @@ extension on _StringsZhCn {
         return '显示/隐藏控制栏';
       case 'shortcut_action_reader_dismiss_dict':
         return '关闭词典';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return '切换书签';
       case 'shortcut_action_home_tab_books':
         return '书架标签';
       case 'shortcut_action_home_tab_dict':
@@ -165948,10 +165620,6 @@ extension on _StringsZhHk {
         return '前進';
       case 'browse':
         return '瀏覽';
-      case 'bookmark':
-        return '書籤';
-      case 'add_bookmark':
-        return '新增書籤';
       case 'add_to_reading_list':
         return '加入閱讀清單';
       case 'reading_list_empty':
@@ -166200,8 +165868,6 @@ extension on _StringsZhHk {
         return 'EPUB 閱讀與辭典查詢';
       case 'follow_audio_paused':
         return '音頻跟隨已暫停（使用者手動翻頁）';
-      case 'bookmark_added':
-        return '已新增書籤';
       case 'follow_audio_jump_failed':
         return '音頻跟隨：跳章失敗';
       case 'reader_settings_label':
@@ -166297,8 +165963,6 @@ extension on _StringsZhHk {
         return '介面';
       case 'section_update':
         return '更新設定';
-      case 'action_bookmark':
-        return '書籤';
       case 'action_fullscreen_toggle':
         return '全螢幕切換';
       case 'action_exit':
@@ -167324,8 +166988,6 @@ extension on _StringsZhHk {
         return '顯示／隱藏控制欄';
       case 'shortcut_action_reader_dismiss_dict':
         return '關閉詞典';
-      case 'shortcut_action_reader_toggle_bookmark':
-        return '切換書籤';
       case 'shortcut_action_home_tab_books':
         return '書架分頁';
       case 'shortcut_action_home_tab_dict':
