@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39797 (2341 per locale)
+/// Strings: 39865 (2345 per locale)
 ///
-/// Built on 2026-07-15 at 15:20 UTC
+/// Built on 2026-07-16 at 03:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3112,6 +3112,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
           {required Object done, required Object total}) =>
       'Subtitles fetched: ${done}/${total}';
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  String get settings_view_changelog => 'View changelog';
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  String get changelog_open_releases => 'Open releases page';
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -8425,6 +8430,15 @@ class _StringsAr extends _StringsEn {
       'Subtitles fetched: ${done}/${total}';
   @override
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -13861,6 +13875,15 @@ class _StringsDe extends _StringsEn {
       'Subtitles fetched: ${done}/${total}';
   @override
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -19314,6 +19337,15 @@ class _StringsEs extends _StringsEn {
       'Subtitles fetched: ${done}/${total}';
   @override
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -24786,6 +24818,15 @@ class _StringsFr extends _StringsEn {
       'Subtitles fetched: ${done}/${total}';
   @override
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -30160,6 +30201,15 @@ class _StringsId extends _StringsEn {
       'Subtitles fetched: ${done}/${total}';
   @override
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -35595,6 +35645,15 @@ class _StringsIt extends _StringsEn {
       'Subtitles fetched: ${done}/${total}';
   @override
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -40755,6 +40814,15 @@ class _StringsJa extends _StringsEn {
       'Subtitles fetched: ${done}/${total}';
   @override
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -45920,6 +45988,15 @@ class _StringsKo extends _StringsEn {
       'Subtitles fetched: ${done}/${total}';
   @override
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -51323,6 +51400,15 @@ class _StringsNl extends _StringsEn {
       'Subtitles fetched: ${done}/${total}';
   @override
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -56749,6 +56835,15 @@ class _StringsPtBr extends _StringsEn {
       'Subtitles fetched: ${done}/${total}';
   @override
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -62150,6 +62245,15 @@ class _StringsRu extends _StringsEn {
       'Subtitles fetched: ${done}/${total}';
   @override
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -67464,6 +67568,15 @@ class _StringsTh extends _StringsEn {
       'Subtitles fetched: ${done}/${total}';
   @override
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -72833,6 +72946,15 @@ class _StringsTr extends _StringsEn {
       'Subtitles fetched: ${done}/${total}';
   @override
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -78177,6 +78299,15 @@ class _StringsVi extends _StringsEn {
       'Subtitles fetched: ${done}/${total}';
   @override
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -83150,6 +83281,14 @@ class _StringsZhCn extends _StringsEn {
       '字幕已获取：${done}/${total}';
   @override
   String get anki_open_no_card => '在 Anki 中没有找到这个词的卡片。';
+  @override
+  String get settings_view_changelog => '查看更新日志';
+  @override
+  String get changelog_empty => '未获取到更新日志，请检查网络或代理设置。';
+  @override
+  String get changelog_open_releases => '打开发布页';
+  @override
+  String get changelog_prerelease => '预发布';
 }
 
 // Path: retrying_in
@@ -88212,6 +88351,15 @@ class _StringsZhHk extends _StringsEn {
       'Subtitles fetched: ${done}/${total}';
   @override
   String get anki_open_no_card => 'No card found for this word in Anki.';
+  @override
+  String get settings_view_changelog => 'View changelog';
+  @override
+  String get changelog_empty =>
+      'No changelog found. Check your network or proxy settings.';
+  @override
+  String get changelog_open_releases => 'Open releases page';
+  @override
+  String get changelog_prerelease => 'Prerelease';
 }
 
 // Path: retrying_in
@@ -93039,6 +93187,14 @@ extension on _StringsEn {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
@@ -97826,6 +97982,14 @@ extension on _StringsAr {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
@@ -102635,6 +102799,14 @@ extension on _StringsDe {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
@@ -107442,6 +107614,14 @@ extension on _StringsEs {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
@@ -112256,6 +112436,14 @@ extension on _StringsFr {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
@@ -117050,6 +117238,14 @@ extension on _StringsId {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
@@ -121861,6 +122057,14 @@ extension on _StringsIt {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
@@ -126629,6 +126833,14 @@ extension on _StringsJa {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
@@ -131401,6 +131613,14 @@ extension on _StringsKo {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
@@ -136205,6 +136425,14 @@ extension on _StringsNl {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
@@ -141006,6 +141234,14 @@ extension on _StringsPtBr {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
@@ -145811,6 +146047,14 @@ extension on _StringsRu {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
@@ -150598,6 +150842,14 @@ extension on _StringsTh {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
@@ -155394,6 +155646,14 @@ extension on _StringsTr {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
@@ -160184,6 +160444,14 @@ extension on _StringsVi {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
@@ -164938,6 +165206,14 @@ extension on _StringsZhCn {
             '字幕已获取：${done}/${total}';
       case 'anki_open_no_card':
         return '在 Anki 中没有找到这个词的卡片。';
+      case 'settings_view_changelog':
+        return '查看更新日志';
+      case 'changelog_empty':
+        return '未获取到更新日志，请检查网络或代理设置。';
+      case 'changelog_open_releases':
+        return '打开发布页';
+      case 'changelog_prerelease':
+        return '预发布';
       default:
         return null;
     }
@@ -169698,6 +169974,14 @@ extension on _StringsZhHk {
             'Subtitles fetched: ${done}/${total}';
       case 'anki_open_no_card':
         return 'No card found for this word in Anki.';
+      case 'settings_view_changelog':
+        return 'View changelog';
+      case 'changelog_empty':
+        return 'No changelog found. Check your network or proxy settings.';
+      case 'changelog_open_releases':
+        return 'Open releases page';
+      case 'changelog_prerelease':
+        return 'Prerelease';
       default:
         return null;
     }
