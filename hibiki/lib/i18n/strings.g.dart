@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 32759 (1927 per locale)
+/// Strings: 32861 (1933 per locale)
 ///
-/// Built on 2026-07-17 at 10:43 UTC
+/// Built on 2026-07-17 at 10:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2600,6 +2600,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_section_page_turn_input => 'Page turning & interaction';
   String get section_floating_lyric => 'Floating lyric';
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  String get interconnect_section_client => 'Connect to other devices';
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 // Path: <root>
@@ -6973,6 +6983,22 @@ class _StringsAr extends _StringsEn {
   String get section_floating_lyric => 'Floating lyric';
   @override
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 // Path: <root>
@@ -11419,6 +11445,22 @@ class _StringsDe extends _StringsEn {
   String get section_floating_lyric => 'Floating lyric';
   @override
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 // Path: <root>
@@ -15881,6 +15923,22 @@ class _StringsEs extends _StringsEn {
   String get section_floating_lyric => 'Floating lyric';
   @override
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 // Path: <root>
@@ -20354,6 +20412,22 @@ class _StringsFr extends _StringsEn {
   String get section_floating_lyric => 'Floating lyric';
   @override
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 // Path: <root>
@@ -24754,6 +24828,22 @@ class _StringsId extends _StringsEn {
   String get section_floating_lyric => 'Floating lyric';
   @override
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 // Path: <root>
@@ -29202,6 +29292,22 @@ class _StringsIt extends _StringsEn {
   String get section_floating_lyric => 'Floating lyric';
   @override
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 // Path: <root>
@@ -33455,6 +33561,22 @@ class _StringsJa extends _StringsEn {
   String get section_floating_lyric => 'Floating lyric';
   @override
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 // Path: <root>
@@ -37711,6 +37833,22 @@ class _StringsKo extends _StringsEn {
   String get section_floating_lyric => 'Floating lyric';
   @override
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 // Path: <root>
@@ -42137,6 +42275,22 @@ class _StringsNl extends _StringsEn {
   String get section_floating_lyric => 'Floating lyric';
   @override
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 // Path: <root>
@@ -46578,6 +46732,22 @@ class _StringsPtBr extends _StringsEn {
   String get section_floating_lyric => 'Floating lyric';
   @override
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 // Path: <root>
@@ -51002,6 +51172,22 @@ class _StringsRu extends _StringsEn {
   String get section_floating_lyric => 'Floating lyric';
   @override
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 // Path: <root>
@@ -55371,6 +55557,22 @@ class _StringsTh extends _StringsEn {
   String get section_floating_lyric => 'Floating lyric';
   @override
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 // Path: <root>
@@ -59772,6 +59974,22 @@ class _StringsTr extends _StringsEn {
   String get section_floating_lyric => 'Floating lyric';
   @override
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 // Path: <root>
@@ -64160,6 +64378,22 @@ class _StringsVi extends _StringsEn {
   String get section_floating_lyric => 'Floating lyric';
   @override
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 // Path: <root>
@@ -68244,6 +68478,19 @@ class _StringsZhCn extends _StringsEn {
   String get section_floating_lyric => '悬浮歌词';
   @override
   String get settings_section_lookup_trigger => '查词触发';
+  @override
+  String get settings_destination_interconnect => 'Hibiki 互联';
+  @override
+  String get interconnect_summary => '设备间直连同步与本机作为服务器';
+  @override
+  String get interconnect_inactive_note => 'Hibiki 互联未启用为同步方式';
+  @override
+  String get interconnect_inactive_note_hint =>
+      '在「同步与备份 → 同步方式」中选择 Hibiki 互联后，这里的配置才会生效';
+  @override
+  String get interconnect_section_client => '连接到其他设备';
+  @override
+  String get interconnect_moved_note => '互联连接与本机服务器设置在「Hibiki 互联」分类';
 }
 
 // Path: <root>
@@ -72416,6 +72663,22 @@ class _StringsZhHk extends _StringsEn {
   String get section_floating_lyric => 'Floating lyric';
   @override
   String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
 }
 
 /// Flat map(s) containing all translations.
@@ -76358,6 +76621,18 @@ extension on _StringsEn {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
@@ -80298,6 +80573,18 @@ extension on _StringsAr {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
@@ -84259,6 +84546,18 @@ extension on _StringsDe {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
@@ -88219,6 +88518,18 @@ extension on _StringsEs {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
@@ -92185,6 +92496,18 @@ extension on _StringsFr {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
@@ -96133,6 +96456,18 @@ extension on _StringsId {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
@@ -100096,6 +100431,18 @@ extension on _StringsIt {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
@@ -104021,6 +104368,18 @@ extension on _StringsJa {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
@@ -107950,6 +108309,18 @@ extension on _StringsKo {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
@@ -111906,6 +112277,18 @@ extension on _StringsNl {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
@@ -115859,6 +116242,18 @@ extension on _StringsPtBr {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
@@ -119817,6 +120212,18 @@ extension on _StringsRu {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
@@ -123759,6 +124166,18 @@ extension on _StringsTh {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
@@ -127710,6 +128129,18 @@ extension on _StringsTr {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
@@ -131656,6 +132087,18 @@ extension on _StringsVi {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
@@ -135570,6 +136013,18 @@ extension on _StringsZhCn {
         return '悬浮歌词';
       case 'settings_section_lookup_trigger':
         return '查词触发';
+      case 'settings_destination_interconnect':
+        return 'Hibiki 互联';
+      case 'interconnect_summary':
+        return '设备间直连同步与本机作为服务器';
+      case 'interconnect_inactive_note':
+        return 'Hibiki 互联未启用为同步方式';
+      case 'interconnect_inactive_note_hint':
+        return '在「同步与备份 → 同步方式」中选择 Hibiki 互联后，这里的配置才会生效';
+      case 'interconnect_section_client':
+        return '连接到其他设备';
+      case 'interconnect_moved_note':
+        return '互联连接与本机服务器设置在「Hibiki 互联」分类';
       default:
         return null;
     }
@@ -139490,6 +139945,18 @@ extension on _StringsZhHk {
         return 'Floating lyric';
       case 'settings_section_lookup_trigger':
         return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       default:
         return null;
     }
