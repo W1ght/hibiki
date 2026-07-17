@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 32861 (1933 per locale)
+/// Strings: 32895 (1935 per locale)
 ///
-/// Built on 2026-07-17 at 10:47 UTC
+/// Built on 2026-07-17 at 10:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2610,6 +2610,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_section_client => 'Connect to other devices';
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  String get settings_search_hint => 'Search settings';
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -6999,6 +7001,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -11461,6 +11467,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -15939,6 +15949,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -20428,6 +20442,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -24844,6 +24862,10 @@ class _StringsId extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -29308,6 +29330,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -33577,6 +33603,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -37849,6 +37879,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -42291,6 +42325,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -46748,6 +46786,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -51188,6 +51230,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -55573,6 +55619,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -59990,6 +60040,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -64394,6 +64448,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -68491,6 +68549,10 @@ class _StringsZhCn extends _StringsEn {
   String get interconnect_section_client => '连接到其他设备';
   @override
   String get interconnect_moved_note => '互联连接与本机服务器设置在「Hibiki 互联」分类';
+  @override
+  String get settings_search_hint => '搜索设置';
+  @override
+  String get settings_search_no_results => '没有匹配的设置项';
 }
 
 // Path: <root>
@@ -72679,6 +72741,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 /// Flat map(s) containing all translations.
@@ -76633,6 +76699,10 @@ extension on _StringsEn {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -80585,6 +80655,10 @@ extension on _StringsAr {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -84558,6 +84632,10 @@ extension on _StringsDe {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -88530,6 +88608,10 @@ extension on _StringsEs {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -92508,6 +92590,10 @@ extension on _StringsFr {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -96468,6 +96554,10 @@ extension on _StringsId {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -100443,6 +100533,10 @@ extension on _StringsIt {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -104380,6 +104474,10 @@ extension on _StringsJa {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -108321,6 +108419,10 @@ extension on _StringsKo {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -112289,6 +112391,10 @@ extension on _StringsNl {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -116254,6 +116360,10 @@ extension on _StringsPtBr {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -120224,6 +120334,10 @@ extension on _StringsRu {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -124178,6 +124292,10 @@ extension on _StringsTh {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -128141,6 +128259,10 @@ extension on _StringsTr {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -132099,6 +132221,10 @@ extension on _StringsVi {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -136025,6 +136151,10 @@ extension on _StringsZhCn {
         return '连接到其他设备';
       case 'interconnect_moved_note':
         return '互联连接与本机服务器设置在「Hibiki 互联」分类';
+      case 'settings_search_hint':
+        return '搜索设置';
+      case 'settings_search_no_results':
+        return '没有匹配的设置项';
       default:
         return null;
     }
@@ -139957,6 +140087,10 @@ extension on _StringsZhHk {
         return 'Connect to other devices';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
