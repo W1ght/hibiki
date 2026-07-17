@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 32895 (1935 per locale)
 ///
-/// Built on 2026-07-17 at 10:58 UTC
+/// Built on 2026-07-17 at 16:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2206,7 +2206,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get browser_extension_step_pick_folder =>
       'Select the extension folder below (its path is already copied to your clipboard).';
   String get browser_extension_step_done_auto =>
-      'Done. Hibiki\'s Yomitan API server is now on and the extension is auto-configured to connect to it — no host/port/token to fill in.';
+      'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
   String get copied => 'Copied';
@@ -6289,7 +6289,7 @@ class _StringsAr extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -10755,7 +10755,7 @@ class _StringsDe extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -15237,7 +15237,7 @@ class _StringsEs extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -19730,7 +19730,7 @@ class _StringsFr extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -24150,7 +24150,7 @@ class _StringsId extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -28618,7 +28618,7 @@ class _StringsIt extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -32892,7 +32892,7 @@ class _StringsJa extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -37167,7 +37167,7 @@ class _StringsKo extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -41613,7 +41613,7 @@ class _StringsNl extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -46074,7 +46074,7 @@ class _StringsPtBr extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -50518,7 +50518,7 @@ class _StringsRu extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -54907,7 +54907,7 @@ class _StringsTh extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -59328,7 +59328,7 @@ class _StringsTr extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -63736,7 +63736,7 @@ class _StringsVi extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+      'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -67893,7 +67893,7 @@ class _StringsZhCn extends _StringsEn {
   String get browser_extension_step_pick_folder => '选择下方的扩展文件夹（其路径已复制到剪贴板）。';
   @override
   String get browser_extension_step_done_auto =>
-      '完成。已自动开启 Yomitan API 服务器，扩展已配置好连接本应用（查词 API，与设备互联/同步无关）——无需填写 host/端口/token。';
+      '完成。扩展已自动配置好，装好后会直接连上本应用查词，你不用手动填写任何设置。';
   @override
   String get browser_extension_enable_server_first =>
       '提示：请先在上方开启「Yomitan API 服务器」并设置 API 密钥，扩展才能被自动配置为可用连接。';
@@ -72030,7 +72030,7 @@ class _StringsZhHk extends _StringsEn {
       'Select the extension folder below (its path is already copied to your clipboard).';
   @override
   String get browser_extension_step_done_auto =>
-      'Done. Hibiki\'s Yomitan API server is now on and the extension is auto-configured to connect to it — no host/port/token to fill in.';
+      '完成。擴充功能已自動設定好，裝好後會直接連上本應用查詞，你無需手動填寫任何設定。';
   @override
   String get browser_extension_enable_server_first =>
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
@@ -76074,7 +76074,7 @@ extension on _StringsEn {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. Hibiki\'s Yomitan API server is now on and the extension is auto-configured to connect to it — no host/port/token to fill in.';
+        return 'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -80030,7 +80030,7 @@ extension on _StringsAr {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -84007,7 +84007,7 @@ extension on _StringsDe {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -87983,7 +87983,7 @@ extension on _StringsEs {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -91965,7 +91965,7 @@ extension on _StringsFr {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -95929,7 +95929,7 @@ extension on _StringsId {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -99908,7 +99908,7 @@ extension on _StringsIt {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -103850,7 +103850,7 @@ extension on _StringsJa {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -107794,7 +107794,7 @@ extension on _StringsKo {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -111766,7 +111766,7 @@ extension on _StringsNl {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -115735,7 +115735,7 @@ extension on _StringsPtBr {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -119709,7 +119709,7 @@ extension on _StringsRu {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -123667,7 +123667,7 @@ extension on _StringsTh {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -127634,7 +127634,7 @@ extension on _StringsTr {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -131596,7 +131596,7 @@ extension on _StringsVi {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. The extension is auto-configured to connect to this app — no host/port/token to fill in.';
+        return 'Done. The extension is already set up to connect to Hibiki for lookups — nothing to fill in by hand.';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
@@ -135528,7 +135528,7 @@ extension on _StringsZhCn {
       case 'browser_extension_step_pick_folder':
         return '选择下方的扩展文件夹（其路径已复制到剪贴板）。';
       case 'browser_extension_step_done_auto':
-        return '完成。已自动开启 Yomitan API 服务器，扩展已配置好连接本应用（查词 API，与设备互联/同步无关）——无需填写 host/端口/token。';
+        return '完成。扩展已自动配置好，装好后会直接连上本应用查词，你不用手动填写任何设置。';
       case 'browser_extension_enable_server_first':
         return '提示：请先在上方开启「Yomitan API 服务器」并设置 API 密钥，扩展才能被自动配置为可用连接。';
       case 'copied':
@@ -139463,7 +139463,7 @@ extension on _StringsZhHk {
       case 'browser_extension_step_pick_folder':
         return 'Select the extension folder below (its path is already copied to your clipboard).';
       case 'browser_extension_step_done_auto':
-        return 'Done. Hibiki\'s Yomitan API server is now on and the extension is auto-configured to connect to it — no host/port/token to fill in.';
+        return '完成。擴充功能已自動設定好，裝好後會直接連上本應用查詞，你無需手動填寫任何設定。';
       case 'browser_extension_enable_server_first':
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'copied':
