@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 32895 (1935 per locale)
+/// Strings: 33473 (1969 per locale)
 ///
-/// Built on 2026-07-17 at 16:32 UTC
+/// Built on 2026-07-17 at 17:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2612,6 +2612,47 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Connection & server settings are in the Hibiki Interconnect category';
   String get settings_search_hint => 'Search settings';
   String get settings_search_no_results => 'No matching settings';
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  String get video_setting_qb_username => 'WebUI username';
+  String get video_setting_qb_password => 'WebUI password';
+  String get video_setting_qb_category => 'qBittorrent category';
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  String get anime_download_title => 'Anime download';
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  String get anime_download_search_hint => 'Anime title';
+  String get anime_download_search => 'Search';
+  String get anime_download_no_results => 'No results';
+  String get anime_download_category_all => 'All';
+  String get anime_download_category_raw => 'Raw';
+  String get anime_download_category_english => 'English-translated';
+  String get anime_download_category_non_english => 'Non-English';
+  String get anime_download_trusted_only => 'Trusted only';
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  String get anime_download_subs_badge => 'Subs';
+  String get anime_download_no_subs => 'No subs';
+  String get anime_download_batch => 'Batch';
+  String get anime_download_include_subs => 'Include subtitles';
+  String get anime_download_push => 'Push download';
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  String get anime_download_tasks => 'Download tasks';
+  String get anime_download_no_tasks => 'No download tasks yet';
+  String get anime_download_back => 'Back';
+  String get anime_download_refresh => 'Refresh';
+  String get anime_download_delete => 'Delete';
+  String get anime_download_play_now => 'Play while downloading';
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 // Path: <root>
@@ -7005,6 +7046,81 @@ class _StringsAr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 // Path: <root>
@@ -11471,6 +11587,81 @@ class _StringsDe extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 // Path: <root>
@@ -15953,6 +16144,81 @@ class _StringsEs extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 // Path: <root>
@@ -20446,6 +20712,81 @@ class _StringsFr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 // Path: <root>
@@ -24866,6 +25207,81 @@ class _StringsId extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 // Path: <root>
@@ -29334,6 +29750,81 @@ class _StringsIt extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 // Path: <root>
@@ -33607,6 +34098,81 @@ class _StringsJa extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 // Path: <root>
@@ -37883,6 +38449,81 @@ class _StringsKo extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 // Path: <root>
@@ -42329,6 +42970,81 @@ class _StringsNl extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 // Path: <root>
@@ -46790,6 +47506,81 @@ class _StringsPtBr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 // Path: <root>
@@ -51234,6 +52025,81 @@ class _StringsRu extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 // Path: <root>
@@ -55623,6 +56489,81 @@ class _StringsTh extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 // Path: <root>
@@ -60044,6 +60985,81 @@ class _StringsTr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 // Path: <root>
@@ -64452,6 +65468,81 @@ class _StringsVi extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 // Path: <root>
@@ -68553,6 +69644,75 @@ class _StringsZhCn extends _StringsEn {
   String get settings_search_hint => '搜索设置';
   @override
   String get settings_search_no_results => '没有匹配的设置项';
+  @override
+  String get section_video_anime_download => '番剧下载（qBittorrent）';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI 地址';
+  @override
+  String get video_setting_qb_url_hint =>
+      '例如 http://127.0.0.1:8080，留空表示不启用番剧下载。';
+  @override
+  String get video_setting_qb_username => 'WebUI 用户名';
+  @override
+  String get video_setting_qb_password => 'WebUI 密码';
+  @override
+  String get video_setting_qb_category => 'qBittorrent 分类';
+  @override
+  String get video_setting_qb_category_hint => 'Hibiki 推送的下载会打上此分类，完成监听只关注该分类。';
+  @override
+  String get anime_download_title => '番剧下载';
+  @override
+  String get anime_download_qb_hint => '请先在 设置→视频 配置 qBittorrent';
+  @override
+  String get anime_download_search_hint => '番剧名';
+  @override
+  String get anime_download_search => '搜索';
+  @override
+  String get anime_download_no_results => '无结果';
+  @override
+  String get anime_download_category_all => '全部';
+  @override
+  String get anime_download_category_raw => '生肉';
+  @override
+  String get anime_download_category_english => '英译';
+  @override
+  String get anime_download_category_non_english => '非英译';
+  @override
+  String get anime_download_trusted_only => '仅 Trusted';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa 查询词';
+  @override
+  String get anime_download_subs_badge => '字幕';
+  @override
+  String get anime_download_no_subs => '无字幕';
+  @override
+  String get anime_download_batch => '合集';
+  @override
+  String get anime_download_include_subs => '附带字幕';
+  @override
+  String get anime_download_push => '推送下载';
+  @override
+  String get anime_download_pushed => '已推送，下载完成后自动入库';
+  @override
+  String get anime_download_push_failed => '推送到 qBittorrent 失败';
+  @override
+  String get anime_download_store_unavailable => '下载计划存储不可用';
+  @override
+  String get anime_download_tasks => '下载任务';
+  @override
+  String get anime_download_no_tasks => '暂无下载任务';
+  @override
+  String get anime_download_back => '返回';
+  @override
+  String get anime_download_refresh => '刷新';
+  @override
+  String get anime_download_delete => '删除';
+  @override
+  String get anime_download_play_now => '边下边播';
+  @override
+  String get anime_download_play_now_ok => '已入库，可从视频库打开边下边播';
+  @override
+  String get anime_download_play_now_fail => '暂不可提前入库（元数据未就绪或连接失败），稍后再试';
 }
 
 // Path: <root>
@@ -72745,6 +73905,81 @@ class _StringsZhHk extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
 }
 
 /// Flat map(s) containing all translations.
@@ -76703,6 +77938,74 @@ extension on _StringsEn {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
@@ -80659,6 +81962,74 @@ extension on _StringsAr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
@@ -84636,6 +86007,74 @@ extension on _StringsDe {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
@@ -88612,6 +90051,74 @@ extension on _StringsEs {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
@@ -92594,6 +94101,74 @@ extension on _StringsFr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
@@ -96558,6 +98133,74 @@ extension on _StringsId {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
@@ -100537,6 +102180,74 @@ extension on _StringsIt {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
@@ -104478,6 +106189,74 @@ extension on _StringsJa {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
@@ -108423,6 +110202,74 @@ extension on _StringsKo {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
@@ -112395,6 +114242,74 @@ extension on _StringsNl {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
@@ -116364,6 +118279,74 @@ extension on _StringsPtBr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
@@ -120338,6 +122321,74 @@ extension on _StringsRu {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
@@ -124296,6 +126347,74 @@ extension on _StringsTh {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
@@ -128263,6 +130382,74 @@ extension on _StringsTr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
@@ -132225,6 +134412,74 @@ extension on _StringsVi {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
@@ -136155,6 +138410,74 @@ extension on _StringsZhCn {
         return '搜索设置';
       case 'settings_search_no_results':
         return '没有匹配的设置项';
+      case 'section_video_anime_download':
+        return '番剧下载（qBittorrent）';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI 地址';
+      case 'video_setting_qb_url_hint':
+        return '例如 http://127.0.0.1:8080，留空表示不启用番剧下载。';
+      case 'video_setting_qb_username':
+        return 'WebUI 用户名';
+      case 'video_setting_qb_password':
+        return 'WebUI 密码';
+      case 'video_setting_qb_category':
+        return 'qBittorrent 分类';
+      case 'video_setting_qb_category_hint':
+        return 'Hibiki 推送的下载会打上此分类，完成监听只关注该分类。';
+      case 'anime_download_title':
+        return '番剧下载';
+      case 'anime_download_qb_hint':
+        return '请先在 设置→视频 配置 qBittorrent';
+      case 'anime_download_search_hint':
+        return '番剧名';
+      case 'anime_download_search':
+        return '搜索';
+      case 'anime_download_no_results':
+        return '无结果';
+      case 'anime_download_category_all':
+        return '全部';
+      case 'anime_download_category_raw':
+        return '生肉';
+      case 'anime_download_category_english':
+        return '英译';
+      case 'anime_download_category_non_english':
+        return '非英译';
+      case 'anime_download_trusted_only':
+        return '仅 Trusted';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa 查询词';
+      case 'anime_download_subs_badge':
+        return '字幕';
+      case 'anime_download_no_subs':
+        return '无字幕';
+      case 'anime_download_batch':
+        return '合集';
+      case 'anime_download_include_subs':
+        return '附带字幕';
+      case 'anime_download_push':
+        return '推送下载';
+      case 'anime_download_pushed':
+        return '已推送，下载完成后自动入库';
+      case 'anime_download_push_failed':
+        return '推送到 qBittorrent 失败';
+      case 'anime_download_store_unavailable':
+        return '下载计划存储不可用';
+      case 'anime_download_tasks':
+        return '下载任务';
+      case 'anime_download_no_tasks':
+        return '暂无下载任务';
+      case 'anime_download_back':
+        return '返回';
+      case 'anime_download_refresh':
+        return '刷新';
+      case 'anime_download_delete':
+        return '删除';
+      case 'anime_download_play_now':
+        return '边下边播';
+      case 'anime_download_play_now_ok':
+        return '已入库，可从视频库打开边下边播';
+      case 'anime_download_play_now_fail':
+        return '暂不可提前入库（元数据未就绪或连接失败），稍后再试';
       default:
         return null;
     }
@@ -140091,6 +142414,74 @@ extension on _StringsZhHk {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
       default:
         return null;
     }
