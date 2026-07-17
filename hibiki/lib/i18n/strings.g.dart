@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 32895 (1935 per locale)
+/// Strings: 32929 (1937 per locale)
 ///
-/// Built on 2026-07-17 at 10:58 UTC
+/// Built on 2026-07-17 at 17:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2612,6 +2612,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Connection & server settings are in the Hibiki Interconnect category';
   String get settings_search_hint => 'Search settings';
   String get settings_search_no_results => 'No matching settings';
+  String get reading_activity => 'Reading activity';
+  String get video_watch_activity => 'Watch activity';
 }
 
 // Path: <root>
@@ -7005,6 +7007,10 @@ class _StringsAr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
 }
 
 // Path: <root>
@@ -11471,6 +11477,10 @@ class _StringsDe extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
 }
 
 // Path: <root>
@@ -15953,6 +15963,10 @@ class _StringsEs extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
 }
 
 // Path: <root>
@@ -20446,6 +20460,10 @@ class _StringsFr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
 }
 
 // Path: <root>
@@ -24866,6 +24884,10 @@ class _StringsId extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
 }
 
 // Path: <root>
@@ -29334,6 +29356,10 @@ class _StringsIt extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
 }
 
 // Path: <root>
@@ -33607,6 +33633,10 @@ class _StringsJa extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
 }
 
 // Path: <root>
@@ -37883,6 +37913,10 @@ class _StringsKo extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
 }
 
 // Path: <root>
@@ -42329,6 +42363,10 @@ class _StringsNl extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
 }
 
 // Path: <root>
@@ -46790,6 +46828,10 @@ class _StringsPtBr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
 }
 
 // Path: <root>
@@ -51234,6 +51276,10 @@ class _StringsRu extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
 }
 
 // Path: <root>
@@ -55623,6 +55669,10 @@ class _StringsTh extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
 }
 
 // Path: <root>
@@ -60044,6 +60094,10 @@ class _StringsTr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
 }
 
 // Path: <root>
@@ -64452,6 +64506,10 @@ class _StringsVi extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
 }
 
 // Path: <root>
@@ -68553,6 +68611,10 @@ class _StringsZhCn extends _StringsEn {
   String get settings_search_hint => '搜索设置';
   @override
   String get settings_search_no_results => '没有匹配的设置项';
+  @override
+  String get reading_activity => '阅读活动';
+  @override
+  String get video_watch_activity => '观看活动';
 }
 
 // Path: <root>
@@ -72745,6 +72807,10 @@ class _StringsZhHk extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
 }
 
 /// Flat map(s) containing all translations.
@@ -76703,6 +76769,10 @@ extension on _StringsEn {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
@@ -80659,6 +80729,10 @@ extension on _StringsAr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
@@ -84636,6 +84710,10 @@ extension on _StringsDe {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
@@ -88612,6 +88690,10 @@ extension on _StringsEs {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
@@ -92594,6 +92676,10 @@ extension on _StringsFr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
@@ -96558,6 +96644,10 @@ extension on _StringsId {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
@@ -100537,6 +100627,10 @@ extension on _StringsIt {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
@@ -104478,6 +104572,10 @@ extension on _StringsJa {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
@@ -108423,6 +108521,10 @@ extension on _StringsKo {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
@@ -112395,6 +112497,10 @@ extension on _StringsNl {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
@@ -116364,6 +116470,10 @@ extension on _StringsPtBr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
@@ -120338,6 +120448,10 @@ extension on _StringsRu {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
@@ -124296,6 +124410,10 @@ extension on _StringsTh {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
@@ -128263,6 +128381,10 @@ extension on _StringsTr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
@@ -132225,6 +132347,10 @@ extension on _StringsVi {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
@@ -136155,6 +136281,10 @@ extension on _StringsZhCn {
         return '搜索设置';
       case 'settings_search_no_results':
         return '没有匹配的设置项';
+      case 'reading_activity':
+        return '阅读活动';
+      case 'video_watch_activity':
+        return '观看活动';
       default:
         return null;
     }
@@ -140091,6 +140221,10 @@ extension on _StringsZhHk {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
       default:
         return null;
     }
