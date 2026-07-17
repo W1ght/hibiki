@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 32640 (1920 per locale)
+/// Strings: 32895 (1935 per locale)
 ///
-/// Built on 2026-07-16 at 12:21 UTC
+/// Built on 2026-07-17 at 10:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -208,8 +208,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_destination_system => 'System';
   String get settings_destination_diagnostics => 'Diagnostics';
   String get settings_section_app_shell => 'App';
-  String get settings_section_lookup_behavior => 'Lookup Behavior';
-  String get settings_section_lookup_display => 'Result Display';
   String get settings_section_update_channel => 'Update Channel';
   String get update_channel_stable => 'Stable';
   String get update_channel_beta => 'Beta';
@@ -2593,6 +2591,27 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_clear_scope => 'Clear scope';
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  String get settings_section_lookup_integrations => 'External integrations';
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  String get settings_section_lookup_content => 'Entry content';
+  String get settings_section_lookup_popup_window => 'Popup window';
+  String get settings_section_reader_chrome => 'Reader interface';
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  String get section_floating_lyric => 'Floating lyric';
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  String get interconnect_section_client => 'Connect to other devices';
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  String get settings_search_hint => 'Search settings';
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -4020,10 +4039,6 @@ class _StringsAr extends _StringsEn {
   String get settings_destination_system => 'النظام';
   @override
   String get settings_section_app_shell => 'التطبيق';
-  @override
-  String get settings_section_lookup_behavior => 'سلوك البحث';
-  @override
-  String get settings_section_lookup_display => 'عرض النتائج';
   @override
   String get settings_section_update_channel => 'قناة التحديث';
   @override
@@ -6952,6 +6967,44 @@ class _StringsAr extends _StringsEn {
   @override
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  @override
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  @override
+  String get settings_section_lookup_integrations => 'External integrations';
+  @override
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  @override
+  String get settings_section_lookup_content => 'Entry content';
+  @override
+  String get settings_section_lookup_popup_window => 'Popup window';
+  @override
+  String get settings_section_reader_chrome => 'Reader interface';
+  @override
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  @override
+  String get section_floating_lyric => 'Floating lyric';
+  @override
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -8407,10 +8460,6 @@ class _StringsDe extends _StringsEn {
   String get settings_destination_system => 'System';
   @override
   String get settings_section_app_shell => 'App';
-  @override
-  String get settings_section_lookup_behavior => 'Nachschlageverhalten';
-  @override
-  String get settings_section_lookup_display => 'Ergebnisanzeige';
   @override
   String get settings_section_update_channel => 'Update-Kanal';
   @override
@@ -11384,6 +11433,44 @@ class _StringsDe extends _StringsEn {
   @override
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  @override
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  @override
+  String get settings_section_lookup_integrations => 'External integrations';
+  @override
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  @override
+  String get settings_section_lookup_content => 'Entry content';
+  @override
+  String get settings_section_lookup_popup_window => 'Popup window';
+  @override
+  String get settings_section_reader_chrome => 'Reader interface';
+  @override
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  @override
+  String get section_floating_lyric => 'Floating lyric';
+  @override
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -12847,10 +12934,6 @@ class _StringsEs extends _StringsEn {
   String get settings_destination_system => 'Sistema';
   @override
   String get settings_section_app_shell => 'Aplicación';
-  @override
-  String get settings_section_lookup_behavior => 'Comportamiento de búsqueda';
-  @override
-  String get settings_section_lookup_display => 'Visualización de resultados';
   @override
   String get settings_section_update_channel => 'Canal de actualización';
   @override
@@ -15832,6 +15915,44 @@ class _StringsEs extends _StringsEn {
   @override
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  @override
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  @override
+  String get settings_section_lookup_integrations => 'External integrations';
+  @override
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  @override
+  String get settings_section_lookup_content => 'Entry content';
+  @override
+  String get settings_section_lookup_popup_window => 'Popup window';
+  @override
+  String get settings_section_reader_chrome => 'Reader interface';
+  @override
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  @override
+  String get section_floating_lyric => 'Floating lyric';
+  @override
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -17305,10 +17426,6 @@ class _StringsFr extends _StringsEn {
   String get settings_destination_system => 'Système';
   @override
   String get settings_section_app_shell => 'Application';
-  @override
-  String get settings_section_lookup_behavior => 'Comportement de recherche';
-  @override
-  String get settings_section_lookup_display => 'Affichage des résultats';
   @override
   String get settings_section_update_channel => 'Canal de mise à jour';
   @override
@@ -20291,6 +20408,44 @@ class _StringsFr extends _StringsEn {
   @override
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  @override
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  @override
+  String get settings_section_lookup_integrations => 'External integrations';
+  @override
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  @override
+  String get settings_section_lookup_content => 'Entry content';
+  @override
+  String get settings_section_lookup_popup_window => 'Popup window';
+  @override
+  String get settings_section_reader_chrome => 'Reader interface';
+  @override
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  @override
+  String get section_floating_lyric => 'Floating lyric';
+  @override
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -21727,10 +21882,6 @@ class _StringsId extends _StringsEn {
   String get settings_destination_system => 'Sistem';
   @override
   String get settings_section_app_shell => 'Aplikasi';
-  @override
-  String get settings_section_lookup_behavior => 'Perilaku Pencarian';
-  @override
-  String get settings_section_lookup_display => 'Tampilan Hasil';
   @override
   String get settings_section_update_channel => 'Saluran Pembaruan';
   @override
@@ -24677,6 +24828,44 @@ class _StringsId extends _StringsEn {
   @override
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  @override
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  @override
+  String get settings_section_lookup_integrations => 'External integrations';
+  @override
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  @override
+  String get settings_section_lookup_content => 'Entry content';
+  @override
+  String get settings_section_lookup_popup_window => 'Popup window';
+  @override
+  String get settings_section_reader_chrome => 'Reader interface';
+  @override
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  @override
+  String get section_floating_lyric => 'Floating lyric';
+  @override
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -26134,10 +26323,6 @@ class _StringsIt extends _StringsEn {
   String get settings_destination_system => 'Sistema';
   @override
   String get settings_section_app_shell => 'App';
-  @override
-  String get settings_section_lookup_behavior => 'Comportamento ricerca';
-  @override
-  String get settings_section_lookup_display => 'Visualizzazione risultati';
   @override
   String get settings_section_update_channel => 'Canale di aggiornamento';
   @override
@@ -29111,6 +29296,44 @@ class _StringsIt extends _StringsEn {
   @override
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  @override
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  @override
+  String get settings_section_lookup_integrations => 'External integrations';
+  @override
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  @override
+  String get settings_section_lookup_content => 'Entry content';
+  @override
+  String get settings_section_lookup_popup_window => 'Popup window';
+  @override
+  String get settings_section_reader_chrome => 'Reader interface';
+  @override
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  @override
+  String get section_floating_lyric => 'Floating lyric';
+  @override
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -30507,10 +30730,6 @@ class _StringsJa extends _StringsEn {
   String get settings_destination_system => 'システム';
   @override
   String get settings_section_app_shell => 'アプリ';
-  @override
-  String get settings_section_lookup_behavior => '検索動作';
-  @override
-  String get settings_section_lookup_display => '結果表示';
   @override
   String get settings_section_update_channel => '更新チャンネル';
   @override
@@ -33350,6 +33569,44 @@ class _StringsJa extends _StringsEn {
   @override
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  @override
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  @override
+  String get settings_section_lookup_integrations => 'External integrations';
+  @override
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  @override
+  String get settings_section_lookup_content => 'Entry content';
+  @override
+  String get settings_section_lookup_popup_window => 'Popup window';
+  @override
+  String get settings_section_reader_chrome => 'Reader interface';
+  @override
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  @override
+  String get section_floating_lyric => 'Floating lyric';
+  @override
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -34740,10 +34997,6 @@ class _StringsKo extends _StringsEn {
   String get settings_destination_system => '시스템';
   @override
   String get settings_section_app_shell => '앱';
-  @override
-  String get settings_section_lookup_behavior => '검색 동작';
-  @override
-  String get settings_section_lookup_display => '결과 표시';
   @override
   String get settings_section_update_channel => '업데이트 채널';
   @override
@@ -37592,6 +37845,44 @@ class _StringsKo extends _StringsEn {
   @override
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  @override
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  @override
+  String get settings_section_lookup_integrations => 'External integrations';
+  @override
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  @override
+  String get settings_section_lookup_content => 'Entry content';
+  @override
+  String get settings_section_lookup_popup_window => 'Popup window';
+  @override
+  String get settings_section_reader_chrome => 'Reader interface';
+  @override
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  @override
+  String get section_floating_lyric => 'Floating lyric';
+  @override
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -39041,10 +39332,6 @@ class _StringsNl extends _StringsEn {
   String get settings_destination_system => 'Systeem';
   @override
   String get settings_section_app_shell => 'App';
-  @override
-  String get settings_section_lookup_behavior => 'Zoekgedrag';
-  @override
-  String get settings_section_lookup_display => 'Resultaatweergave';
   @override
   String get settings_section_update_channel => 'Updatekanaal';
   @override
@@ -42004,6 +42291,44 @@ class _StringsNl extends _StringsEn {
   @override
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  @override
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  @override
+  String get settings_section_lookup_integrations => 'External integrations';
+  @override
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  @override
+  String get settings_section_lookup_content => 'Entry content';
+  @override
+  String get settings_section_lookup_popup_window => 'Popup window';
+  @override
+  String get settings_section_reader_chrome => 'Reader interface';
+  @override
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  @override
+  String get section_floating_lyric => 'Floating lyric';
+  @override
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -43461,10 +43786,6 @@ class _StringsPtBr extends _StringsEn {
   String get settings_destination_system => 'Sistema';
   @override
   String get settings_section_app_shell => 'Aplicativo';
-  @override
-  String get settings_section_lookup_behavior => 'Comportamento da consulta';
-  @override
-  String get settings_section_lookup_display => 'Exibição de resultados';
   @override
   String get settings_section_update_channel => 'Canal de atualização';
   @override
@@ -46431,6 +46752,44 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  @override
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  @override
+  String get settings_section_lookup_integrations => 'External integrations';
+  @override
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  @override
+  String get settings_section_lookup_content => 'Entry content';
+  @override
+  String get settings_section_lookup_popup_window => 'Popup window';
+  @override
+  String get settings_section_reader_chrome => 'Reader interface';
+  @override
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  @override
+  String get section_floating_lyric => 'Floating lyric';
+  @override
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -47878,10 +48237,6 @@ class _StringsRu extends _StringsEn {
   String get settings_destination_system => 'Система';
   @override
   String get settings_section_app_shell => 'Приложение';
-  @override
-  String get settings_section_lookup_behavior => 'Поведение поиска';
-  @override
-  String get settings_section_lookup_display => 'Отображение результатов';
   @override
   String get settings_section_update_channel => 'Канал обновлений';
   @override
@@ -50841,6 +51196,44 @@ class _StringsRu extends _StringsEn {
   @override
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  @override
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  @override
+  String get settings_section_lookup_integrations => 'External integrations';
+  @override
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  @override
+  String get settings_section_lookup_content => 'Entry content';
+  @override
+  String get settings_section_lookup_popup_window => 'Popup window';
+  @override
+  String get settings_section_reader_chrome => 'Reader interface';
+  @override
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  @override
+  String get section_floating_lyric => 'Floating lyric';
+  @override
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -52266,10 +52659,6 @@ class _StringsTh extends _StringsEn {
   String get settings_destination_system => 'ระบบ';
   @override
   String get settings_section_app_shell => 'แอป';
-  @override
-  String get settings_section_lookup_behavior => 'พฤติกรรมการค้นหา';
-  @override
-  String get settings_section_lookup_display => 'การแสดงผลลัพธ์';
   @override
   String get settings_section_update_channel => 'ช่องทางอัปเดต';
   @override
@@ -55196,6 +55585,44 @@ class _StringsTh extends _StringsEn {
   @override
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  @override
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  @override
+  String get settings_section_lookup_integrations => 'External integrations';
+  @override
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  @override
+  String get settings_section_lookup_content => 'Entry content';
+  @override
+  String get settings_section_lookup_popup_window => 'Popup window';
+  @override
+  String get settings_section_reader_chrome => 'Reader interface';
+  @override
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  @override
+  String get section_floating_lyric => 'Floating lyric';
+  @override
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -56635,10 +57062,6 @@ class _StringsTr extends _StringsEn {
   String get settings_destination_system => 'Sistem';
   @override
   String get settings_section_app_shell => 'Uygulama';
-  @override
-  String get settings_section_lookup_behavior => 'Arama Davranışı';
-  @override
-  String get settings_section_lookup_display => 'Sonuç Görünümü';
   @override
   String get settings_section_update_channel => 'Güncelleme Kanalı';
   @override
@@ -59583,6 +60006,44 @@ class _StringsTr extends _StringsEn {
   @override
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  @override
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  @override
+  String get settings_section_lookup_integrations => 'External integrations';
+  @override
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  @override
+  String get settings_section_lookup_content => 'Entry content';
+  @override
+  String get settings_section_lookup_popup_window => 'Popup window';
+  @override
+  String get settings_section_reader_chrome => 'Reader interface';
+  @override
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  @override
+  String get section_floating_lyric => 'Floating lyric';
+  @override
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -61016,10 +61477,6 @@ class _StringsVi extends _StringsEn {
   String get settings_destination_system => 'Hệ thống';
   @override
   String get settings_section_app_shell => 'Ứng dụng';
-  @override
-  String get settings_section_lookup_behavior => 'Hành vi tra cứu';
-  @override
-  String get settings_section_lookup_display => 'Hiển thị kết quả';
   @override
   String get settings_section_update_channel => 'Kênh cập nhật';
   @override
@@ -63957,6 +64414,44 @@ class _StringsVi extends _StringsEn {
   @override
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  @override
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  @override
+  String get settings_section_lookup_integrations => 'External integrations';
+  @override
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  @override
+  String get settings_section_lookup_content => 'Entry content';
+  @override
+  String get settings_section_lookup_popup_window => 'Popup window';
+  @override
+  String get settings_section_reader_chrome => 'Reader interface';
+  @override
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  @override
+  String get section_floating_lyric => 'Floating lyric';
+  @override
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 // Path: <root>
@@ -64016,10 +64511,6 @@ class _StringsZhCn extends _StringsEn {
   String get settings_destination_diagnostics => '诊断';
   @override
   String get settings_section_app_shell => '应用';
-  @override
-  String get settings_section_lookup_behavior => '查词行为';
-  @override
-  String get settings_section_lookup_display => '结果显示';
   @override
   String get settings_section_update_channel => '更新通道';
   @override
@@ -68027,6 +68518,41 @@ class _StringsZhCn extends _StringsEn {
   String get collection_clear_scope => '清空范围';
   @override
   String get collection_clear_confirm => '确定清空所选收藏？此操作不可撤销。';
+  @override
+  String get settings_section_lookup_audio => '朗读与反馈';
+  @override
+  String get settings_section_lookup_integrations => '外部集成';
+  @override
+  String get settings_section_lookup_clipboard => '剪贴板与全局查词';
+  @override
+  String get settings_section_lookup_content => '词条内容';
+  @override
+  String get settings_section_lookup_popup_window => '弹窗窗口';
+  @override
+  String get settings_section_reader_chrome => '阅读界面';
+  @override
+  String get settings_section_page_turn_input => '翻页与交互';
+  @override
+  String get section_floating_lyric => '悬浮歌词';
+  @override
+  String get settings_section_lookup_trigger => '查词触发';
+  @override
+  String get settings_destination_interconnect => 'Hibiki 互联';
+  @override
+  String get interconnect_summary => '设备间直连同步与本机作为服务器';
+  @override
+  String get interconnect_inactive_note => 'Hibiki 互联未启用为同步方式';
+  @override
+  String get interconnect_inactive_note_hint =>
+      '在「同步与备份 → 同步方式」中选择 Hibiki 互联后，这里的配置才会生效';
+  @override
+  String get interconnect_section_client => '连接到其他设备';
+  @override
+  String get interconnect_moved_note => '互联连接与本机服务器设置在「Hibiki 互联」分类';
+  @override
+  String get settings_search_hint => '搜索设置';
+  @override
+  String get settings_search_no_results => '没有匹配的设置项';
 }
 
 // Path: <root>
@@ -69392,10 +69918,6 @@ class _StringsZhHk extends _StringsEn {
   String get settings_destination_system => '系統';
   @override
   String get settings_section_app_shell => '應用';
-  @override
-  String get settings_section_lookup_behavior => '查詞行為';
-  @override
-  String get settings_section_lookup_display => '結果顯示';
   @override
   String get settings_section_update_channel => '更新頻道';
   @override
@@ -72185,6 +72707,44 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get collection_clear_confirm =>
       'Permanently delete the selected collections? This can\'t be undone.';
+  @override
+  String get settings_section_lookup_audio => 'Pronunciation & feedback';
+  @override
+  String get settings_section_lookup_integrations => 'External integrations';
+  @override
+  String get settings_section_lookup_clipboard => 'Clipboard & global lookup';
+  @override
+  String get settings_section_lookup_content => 'Entry content';
+  @override
+  String get settings_section_lookup_popup_window => 'Popup window';
+  @override
+  String get settings_section_reader_chrome => 'Reader interface';
+  @override
+  String get settings_section_page_turn_input => 'Page turning & interaction';
+  @override
+  String get section_floating_lyric => 'Floating lyric';
+  @override
+  String get settings_section_lookup_trigger => 'Lookup trigger';
+  @override
+  String get settings_destination_interconnect => 'Hibiki Interconnect';
+  @override
+  String get interconnect_summary =>
+      'Direct device-to-device sync & host this device as a server';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
 }
 
 /// Flat map(s) containing all translations.
@@ -72213,10 +72773,6 @@ extension on _StringsEn {
         return 'Diagnostics';
       case 'settings_section_app_shell':
         return 'App';
-      case 'settings_section_lookup_behavior':
-        return 'Lookup Behavior';
-      case 'settings_section_lookup_display':
-        return 'Result Display';
       case 'settings_section_update_channel':
         return 'Update Channel';
       case 'update_channel_stable':
@@ -76113,6 +76669,40 @@ extension on _StringsEn {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -77433,10 +78023,6 @@ extension on _StringsAr {
         return 'النظام';
       case 'settings_section_app_shell':
         return 'التطبيق';
-      case 'settings_section_lookup_behavior':
-        return 'سلوك البحث';
-      case 'settings_section_lookup_display':
-        return 'عرض النتائج';
       case 'settings_section_update_channel':
         return 'قناة التحديث';
       case 'spread_auto':
@@ -80039,6 +80625,40 @@ extension on _StringsAr {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -81370,10 +81990,6 @@ extension on _StringsDe {
         return 'System';
       case 'settings_section_app_shell':
         return 'App';
-      case 'settings_section_lookup_behavior':
-        return 'Nachschlageverhalten';
-      case 'settings_section_lookup_display':
-        return 'Ergebnisanzeige';
       case 'settings_section_update_channel':
         return 'Update-Kanal';
       case 'spread_auto':
@@ -83986,6 +84602,40 @@ extension on _StringsDe {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -85317,10 +85967,6 @@ extension on _StringsEs {
         return 'Sistema';
       case 'settings_section_app_shell':
         return 'Aplicación';
-      case 'settings_section_lookup_behavior':
-        return 'Comportamiento de búsqueda';
-      case 'settings_section_lookup_display':
-        return 'Visualización de resultados';
       case 'settings_section_update_channel':
         return 'Canal de actualización';
       case 'spread_auto':
@@ -87932,6 +88578,40 @@ extension on _StringsEs {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -89263,10 +89943,6 @@ extension on _StringsFr {
         return 'Système';
       case 'settings_section_app_shell':
         return 'Application';
-      case 'settings_section_lookup_behavior':
-        return 'Comportement de recherche';
-      case 'settings_section_lookup_display':
-        return 'Affichage des résultats';
       case 'settings_section_update_channel':
         return 'Canal de mise à jour';
       case 'spread_auto':
@@ -91884,6 +92560,40 @@ extension on _StringsFr {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -93209,10 +93919,6 @@ extension on _StringsId {
         return 'Sistem';
       case 'settings_section_app_shell':
         return 'Aplikasi';
-      case 'settings_section_lookup_behavior':
-        return 'Perilaku Pencarian';
-      case 'settings_section_lookup_display':
-        return 'Tampilan Hasil';
       case 'settings_section_update_channel':
         return 'Saluran Pembaruan';
       case 'spread_auto':
@@ -95818,6 +96524,40 @@ extension on _StringsId {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -97146,10 +97886,6 @@ extension on _StringsIt {
         return 'Sistema';
       case 'settings_section_app_shell':
         return 'App';
-      case 'settings_section_lookup_behavior':
-        return 'Comportamento ricerca';
-      case 'settings_section_lookup_display':
-        return 'Visualizzazione risultati';
       case 'settings_section_update_channel':
         return 'Canale di aggiornamento';
       case 'spread_auto':
@@ -99767,6 +100503,40 @@ extension on _StringsIt {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -101092,10 +101862,6 @@ extension on _StringsJa {
         return 'システム';
       case 'settings_section_app_shell':
         return 'アプリ';
-      case 'settings_section_lookup_behavior':
-        return '検索動作';
-      case 'settings_section_lookup_display':
-        return '結果表示';
       case 'settings_section_update_channel':
         return '更新チャンネル';
       case 'sync_account':
@@ -103678,6 +104444,40 @@ extension on _StringsJa {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -104995,10 +105795,6 @@ extension on _StringsKo {
         return '시스템';
       case 'settings_section_app_shell':
         return '앱';
-      case 'settings_section_lookup_behavior':
-        return '검색 동작';
-      case 'settings_section_lookup_display':
-        return '결과 표시';
       case 'settings_section_update_channel':
         return '업데이트 채널';
       case 'spread_auto':
@@ -107593,6 +108389,40 @@ extension on _StringsKo {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -108920,10 +109750,6 @@ extension on _StringsNl {
         return 'Systeem';
       case 'settings_section_app_shell':
         return 'App';
-      case 'settings_section_lookup_behavior':
-        return 'Zoekgedrag';
-      case 'settings_section_lookup_display':
-        return 'Resultaatweergave';
       case 'settings_section_update_channel':
         return 'Updatekanaal';
       case 'spread_auto':
@@ -111535,6 +112361,40 @@ extension on _StringsNl {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -112861,10 +113721,6 @@ extension on _StringsPtBr {
         return 'Sistema';
       case 'settings_section_app_shell':
         return 'Aplicativo';
-      case 'settings_section_lookup_behavior':
-        return 'Comportamento da consulta';
-      case 'settings_section_lookup_display':
-        return 'Exibição de resultados';
       case 'settings_section_update_channel':
         return 'Canal de atualização';
       case 'spread_auto':
@@ -115474,6 +116330,40 @@ extension on _StringsPtBr {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -116801,10 +117691,6 @@ extension on _StringsRu {
         return 'Система';
       case 'settings_section_app_shell':
         return 'Приложение';
-      case 'settings_section_lookup_behavior':
-        return 'Поведение поиска';
-      case 'settings_section_lookup_display':
-        return 'Отображение результатов';
       case 'settings_section_update_channel':
         return 'Канал обновлений';
       case 'spread_auto':
@@ -119418,6 +120304,40 @@ extension on _StringsRu {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -120740,10 +121660,6 @@ extension on _StringsTh {
         return 'ระบบ';
       case 'settings_section_app_shell':
         return 'แอป';
-      case 'settings_section_lookup_behavior':
-        return 'พฤติกรรมการค้นหา';
-      case 'settings_section_lookup_display':
-        return 'การแสดงผลลัพธ์';
       case 'settings_section_update_channel':
         return 'ช่องทางอัปเดต';
       case 'spread_auto':
@@ -123346,6 +124262,40 @@ extension on _StringsTh {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -124670,10 +125620,6 @@ extension on _StringsTr {
         return 'Sistem';
       case 'settings_section_app_shell':
         return 'Uygulama';
-      case 'settings_section_lookup_behavior':
-        return 'Arama Davranışı';
-      case 'settings_section_lookup_display':
-        return 'Sonuç Görünümü';
       case 'settings_section_update_channel':
         return 'Güncelleme Kanalı';
       case 'spread_auto':
@@ -127283,6 +128229,40 @@ extension on _StringsTr {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -128607,10 +129587,6 @@ extension on _StringsVi {
         return 'Hệ thống';
       case 'settings_section_app_shell':
         return 'Ứng dụng';
-      case 'settings_section_lookup_behavior':
-        return 'Hành vi tra cứu';
-      case 'settings_section_lookup_display':
-        return 'Hiển thị kết quả';
       case 'settings_section_update_channel':
         return 'Kênh cập nhật';
       case 'spread_auto':
@@ -131215,6 +132191,40 @@ extension on _StringsVi {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
@@ -131244,10 +132254,6 @@ extension on _StringsZhCn {
         return '诊断';
       case 'settings_section_app_shell':
         return '应用';
-      case 'settings_section_lookup_behavior':
-        return '查词行为';
-      case 'settings_section_lookup_display':
-        return '结果显示';
       case 'settings_section_update_channel':
         return '更新通道';
       case 'update_channel_stable':
@@ -135115,6 +136121,40 @@ extension on _StringsZhCn {
         return '清空范围';
       case 'collection_clear_confirm':
         return '确定清空所选收藏？此操作不可撤销。';
+      case 'settings_section_lookup_audio':
+        return '朗读与反馈';
+      case 'settings_section_lookup_integrations':
+        return '外部集成';
+      case 'settings_section_lookup_clipboard':
+        return '剪贴板与全局查词';
+      case 'settings_section_lookup_content':
+        return '词条内容';
+      case 'settings_section_lookup_popup_window':
+        return '弹窗窗口';
+      case 'settings_section_reader_chrome':
+        return '阅读界面';
+      case 'settings_section_page_turn_input':
+        return '翻页与交互';
+      case 'section_floating_lyric':
+        return '悬浮歌词';
+      case 'settings_section_lookup_trigger':
+        return '查词触发';
+      case 'settings_destination_interconnect':
+        return 'Hibiki 互联';
+      case 'interconnect_summary':
+        return '设备间直连同步与本机作为服务器';
+      case 'interconnect_inactive_note':
+        return 'Hibiki 互联未启用为同步方式';
+      case 'interconnect_inactive_note_hint':
+        return '在「同步与备份 → 同步方式」中选择 Hibiki 互联后，这里的配置才会生效';
+      case 'interconnect_section_client':
+        return '连接到其他设备';
+      case 'interconnect_moved_note':
+        return '互联连接与本机服务器设置在「Hibiki 互联」分类';
+      case 'settings_search_hint':
+        return '搜索设置';
+      case 'settings_search_no_results':
+        return '没有匹配的设置项';
       default:
         return null;
     }
@@ -136430,10 +137470,6 @@ extension on _StringsZhHk {
         return '系統';
       case 'settings_section_app_shell':
         return '應用';
-      case 'settings_section_lookup_behavior':
-        return '查詞行為';
-      case 'settings_section_lookup_display':
-        return '結果顯示';
       case 'settings_section_update_channel':
         return '更新頻道';
       case 'spread_auto':
@@ -139021,6 +140057,40 @@ extension on _StringsZhHk {
         return 'Clear scope';
       case 'collection_clear_confirm':
         return 'Permanently delete the selected collections? This can\'t be undone.';
+      case 'settings_section_lookup_audio':
+        return 'Pronunciation & feedback';
+      case 'settings_section_lookup_integrations':
+        return 'External integrations';
+      case 'settings_section_lookup_clipboard':
+        return 'Clipboard & global lookup';
+      case 'settings_section_lookup_content':
+        return 'Entry content';
+      case 'settings_section_lookup_popup_window':
+        return 'Popup window';
+      case 'settings_section_reader_chrome':
+        return 'Reader interface';
+      case 'settings_section_page_turn_input':
+        return 'Page turning & interaction';
+      case 'section_floating_lyric':
+        return 'Floating lyric';
+      case 'settings_section_lookup_trigger':
+        return 'Lookup trigger';
+      case 'settings_destination_interconnect':
+        return 'Hibiki Interconnect';
+      case 'interconnect_summary':
+        return 'Direct device-to-device sync & host this device as a server';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_section_client':
+        return 'Connect to other devices';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'settings_search_hint':
+        return 'Search settings';
+      case 'settings_search_no_results':
+        return 'No matching settings';
       default:
         return null;
     }
