@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 33422 (1966 per locale)
+/// Strings: 33575 (1975 per locale)
 ///
-/// Built on 2026-07-18 at 04:25 UTC
+/// Built on 2026-07-18 at 16:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1899,9 +1899,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not export to Anki: an HTTP error occurred while contacting AnkiConnect.';
   String get anki_error_connection_unknown =>
       'Could not export to Anki: an unexpected connection error occurred. See the error log for details.';
-  String get compress_mining_media => 'Compress card media';
-  String get compress_mining_media_hint =>
-      'Off keeps card media sharper but larger';
   String get log_copy_all => 'Copy All';
   String get hover_auto_lookup => 'Look up on hover';
   String get hover_auto_lookup_hint =>
@@ -2646,6 +2643,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Controls whether Hibiki stays above other windows';
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  String get mining_image_quality => 'Image / GIF quality';
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  String get mining_image_quality_thrift => 'Data saver';
+  String get mining_image_quality_standard => 'Standard';
+  String get mining_image_quality_hd => 'HD';
+  String get mining_image_quality_native => 'Native';
+  String get mining_audio_quality => 'Audio quality';
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  String get mining_audio_quality_standard => 'Standard';
+  String get mining_audio_quality_high => 'High';
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -5780,11 +5790,6 @@ class _StringsAr extends _StringsEn {
   String get anki_error_connection_unknown =>
       'تعذّر التصدير إلى Anki: حدث خطأ اتصال غير متوقع. راجع سجل الأخطاء لمزيد من التفاصيل.';
   @override
-  String get compress_mining_media => 'ضغط وسائط البطاقات';
-  @override
-  String get compress_mining_media_hint =>
-      'إيقافه يبقي وسائط البطاقات أوضح لكن أكبر حجمًا';
-  @override
   String get log_copy_all => 'نسخ الكل';
   @override
   String get hover_auto_lookup => 'البحث عند التمرير';
@@ -7104,6 +7109,30 @@ class _StringsAr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -10310,11 +10339,6 @@ class _StringsDe extends _StringsEn {
   String get anki_error_connection_unknown =>
       'Export zu Anki fehlgeschlagen: ein unerwarteter Verbindungsfehler ist aufgetreten. Einzelheiten im Fehlerprotokoll.';
   @override
-  String get compress_mining_media => 'Kartenmedien komprimieren';
-  @override
-  String get compress_mining_media_hint =>
-      'Deaktiviert bleiben Kartenmedien schärfer, aber größer';
-  @override
   String get log_copy_all => 'Alles kopieren';
   @override
   String get hover_auto_lookup => 'Beim Überfahren nachschlagen';
@@ -11635,6 +11659,30 @@ class _StringsDe extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -14857,11 +14905,6 @@ class _StringsEs extends _StringsEn {
   String get anki_error_connection_unknown =>
       'No se pudo exportar a Anki: error de conexión inesperado. Consulta el registro de errores.';
   @override
-  String get compress_mining_media => 'Comprimir medios de tarjetas';
-  @override
-  String get compress_mining_media_hint =>
-      'Desactivado mantiene los medios más nítidos pero más grandes';
-  @override
   String get log_copy_all => 'Copiar todo';
   @override
   String get hover_auto_lookup => 'Buscar al pasar el cursor';
@@ -16182,6 +16225,30 @@ class _StringsEs extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -19415,11 +19482,6 @@ class _StringsFr extends _StringsEn {
   String get anki_error_connection_unknown =>
       'Export vers Anki impossible : une erreur de connexion inattendue est survenue. Consultez le journal d\'erreurs.';
   @override
-  String get compress_mining_media => 'Compresser les médias des cartes';
-  @override
-  String get compress_mining_media_hint =>
-      'Désactivé, les médias restent plus nets mais plus volumineux';
-  @override
   String get log_copy_all => 'Tout copier';
   @override
   String get hover_auto_lookup => 'Rechercher au survol';
@@ -20740,6 +20802,30 @@ class _StringsFr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -23900,11 +23986,6 @@ class _StringsId extends _StringsEn {
   String get anki_error_connection_unknown =>
       'Tidak dapat mengekspor ke Anki: terjadi kesalahan koneksi yang tidak terduga. Lihat log kesalahan untuk detailnya.';
   @override
-  String get compress_mining_media => 'Kompres media kartu';
-  @override
-  String get compress_mining_media_hint =>
-      'Jika nonaktif, media kartu lebih tajam tetapi lebih besar';
-  @override
   String get log_copy_all => 'Salin Semua';
   @override
   String get hover_auto_lookup => 'Cari saat hover';
@@ -25225,6 +25306,30 @@ class _StringsId extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -28433,11 +28538,6 @@ class _StringsIt extends _StringsEn {
   String get anki_error_connection_unknown =>
       'Impossibile esportare in Anki: errore di connessione imprevisto. Vedi il log degli errori.';
   @override
-  String get compress_mining_media => 'Comprimi media delle carte';
-  @override
-  String get compress_mining_media_hint =>
-      'Disattivato mantiene i media più nitidi ma più pesanti';
-  @override
   String get log_copy_all => 'Copia tutto';
   @override
   String get hover_auto_lookup => 'Cerca al passaggio';
@@ -29758,6 +29858,30 @@ class _StringsIt extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -32776,10 +32900,6 @@ class _StringsJa extends _StringsEn {
   String get anki_error_connection_unknown =>
       'Anki に書き出せません：予期しない接続エラーが発生しました。詳細はエラーログを確認してください。';
   @override
-  String get compress_mining_media => 'カードのメディアを圧縮';
-  @override
-  String get compress_mining_media_hint => 'オフにするとメディアはより鮮明ですが容量が大きくなります';
-  @override
   String get log_copy_all => 'すべてコピー';
   @override
   String get hover_auto_lookup => 'ホバーで辞書を引く';
@@ -34097,6 +34217,30 @@ class _StringsJa extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -37117,10 +37261,6 @@ class _StringsKo extends _StringsEn {
   String get anki_error_connection_unknown =>
       'Anki로 내보낼 수 없습니다: 알 수 없는 연결 오류가 발생했습니다. 자세한 내용은 오류 로그를 확인하세요.';
   @override
-  String get compress_mining_media => '카드 미디어 압축';
-  @override
-  String get compress_mining_media_hint => '끄면 미디어가 더 선명하지만 용량이 커집니다';
-  @override
   String get log_copy_all => '모두 복사';
   @override
   String get hover_auto_lookup => '마우스를 올리면 사전 찾기';
@@ -38439,6 +38579,30 @@ class _StringsKo extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -41625,11 +41789,6 @@ class _StringsNl extends _StringsEn {
   String get anki_error_connection_unknown =>
       'Kon niet exporteren naar Anki: er is een onverwachte verbindingsfout opgetreden. Zie het foutenlogboek voor details.';
   @override
-  String get compress_mining_media => 'Kaartmedia comprimeren';
-  @override
-  String get compress_mining_media_hint =>
-      'Uit houdt kaartmedia scherper maar groter';
-  @override
   String get log_copy_all => 'Alles kopiëren';
   @override
   String get hover_auto_lookup => 'Opzoeken bij hover';
@@ -42950,6 +43109,30 @@ class _StringsNl extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -46151,11 +46334,6 @@ class _StringsPtBr extends _StringsEn {
   String get anki_error_connection_unknown =>
       'Não foi possível exportar para o Anki: erro de conexão inesperado. Consulte o log de erros.';
   @override
-  String get compress_mining_media => 'Comprimir mídia dos cartões';
-  @override
-  String get compress_mining_media_hint =>
-      'Desativado mantém a mídia mais nítida, porém maior';
-  @override
   String get log_copy_all => 'Copiar tudo';
   @override
   String get hover_auto_lookup => 'Pesquisar ao passar o cursor';
@@ -47476,6 +47654,30 @@ class _StringsPtBr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -50660,11 +50862,6 @@ class _StringsRu extends _StringsEn {
   String get anki_error_connection_unknown =>
       'Не удалось экспортировать в Anki: произошла непредвиденная ошибка соединения. Подробности см. в журнале ошибок.';
   @override
-  String get compress_mining_media => 'Сжимать медиа карточек';
-  @override
-  String get compress_mining_media_hint =>
-      'При выключении медиа карточек чётче, но больше по размеру';
-  @override
   String get log_copy_all => 'Копировать всё';
   @override
   String get hover_auto_lookup => 'Поиск при наведении';
@@ -51985,6 +52182,30 @@ class _StringsRu extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -55115,11 +55336,6 @@ class _StringsTh extends _StringsEn {
   String get anki_error_connection_unknown =>
       'ไม่สามารถส่งออกไปยัง Anki: เกิดข้อผิดพลาดในการเชื่อมต่อที่ไม่คาดคิด ดูรายละเอียดในบันทึกข้อผิดพลาด';
   @override
-  String get compress_mining_media => 'บีบอัดสื่อของการ์ด';
-  @override
-  String get compress_mining_media_hint =>
-      'การปิดจะทำให้สื่อของการ์ดคมชัดขึ้นแต่มีขนาดใหญ่ขึ้น';
-  @override
   String get log_copy_all => 'คัดลอกทั้งหมด';
   @override
   String get hover_auto_lookup => 'ค้นหาเมื่อชี้เมาส์';
@@ -56439,6 +56655,30 @@ class _StringsTh extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -59600,11 +59840,6 @@ class _StringsTr extends _StringsEn {
   String get anki_error_connection_unknown =>
       'Anki\'ye aktarılamadı: beklenmeyen bir bağlantı hatası oluştu. Ayrıntılar için hata günlüğüne bakın.';
   @override
-  String get compress_mining_media => 'Kart medyasını sıkıştır';
-  @override
-  String get compress_mining_media_hint =>
-      'Kapalıyken kart medyası daha net ama daha büyük olur';
-  @override
   String get log_copy_all => 'Tümünü Kopyala';
   @override
   String get hover_auto_lookup => 'Üzerine gelince ara';
@@ -60925,6 +61160,30 @@ class _StringsTr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -64074,11 +64333,6 @@ class _StringsVi extends _StringsEn {
   String get anki_error_connection_unknown =>
       'Không thể xuất sang Anki: đã xảy ra lỗi kết nối không xác định. Xem nhật ký lỗi để biết chi tiết.';
   @override
-  String get compress_mining_media => 'Nén media của thẻ';
-  @override
-  String get compress_mining_media_hint =>
-      'Khi tắt, media của thẻ sắc nét hơn nhưng dung lượng lớn hơn';
-  @override
   String get log_copy_all => 'Sao chép tất cả';
   @override
   String get hover_auto_lookup => 'Tra cứu khi di chuột';
@@ -65398,6 +65652,30 @@ class _StringsVi extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -68336,10 +68614,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_error_connection_unknown => '无法导出到 Anki：发生未知的连接错误。详情见错误日志。';
   @override
-  String get compress_mining_media => '压缩制卡媒体';
-  @override
-  String get compress_mining_media_hint => '关闭后媒体更清晰但体积更大';
-  @override
   String get log_copy_all => '复制全部';
   @override
   String get hover_auto_lookup => '悬停即查词';
@@ -69563,6 +69837,28 @@ class _StringsZhCn extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
+  @override
+  String get mining_image_quality => '图片 / GIF 清晰度';
+  @override
+  String get mining_image_quality_hint => '越高越清晰，卡片体积也越大。原片档保留源分辨率与帧率。';
+  @override
+  String get mining_image_quality_thrift => '省流';
+  @override
+  String get mining_image_quality_standard => '标准';
+  @override
+  String get mining_image_quality_hd => '高清';
+  @override
+  String get mining_image_quality_native => '原片';
+  @override
+  String get mining_audio_quality => '音频质量';
+  @override
+  String get mining_audio_quality_hint => '比特率越高越清晰，卡片体积也越大。';
+  @override
+  String get mining_audio_quality_standard => '标准';
+  @override
+  String get mining_audio_quality_high => '高音质';
+  @override
+  String get mining_audio_quality_native => '原片';
 }
 
 // Path: <root>
@@ -72504,10 +72800,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_error_connection_unknown => '無法匯出到 Anki：發生未知的連接錯誤。詳情見錯誤記錄檔。';
   @override
-  String get compress_mining_media => '壓縮製卡媒體';
-  @override
-  String get compress_mining_media_hint => '關閉後媒體更清晰但體積更大';
-  @override
   String get log_copy_all => '全部複製';
   @override
   String get hover_auto_lookup => '停留即查詞';
@@ -73824,6 +74116,30 @@ class _StringsZhHk extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 /// Flat map(s) containing all translations.
@@ -76670,10 +76986,6 @@ extension on _StringsEn {
         return 'Could not export to Anki: an HTTP error occurred while contacting AnkiConnect.';
       case 'anki_error_connection_unknown':
         return 'Could not export to Anki: an unexpected connection error occurred. See the error log for details.';
-      case 'compress_mining_media':
-        return 'Compress card media';
-      case 'compress_mining_media_hint':
-        return 'Off keeps card media sharper but larger';
       case 'log_copy_all':
         return 'Copy All';
       case 'hover_auto_lookup':
@@ -77845,6 +78157,28 @@ extension on _StringsEn {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -80689,10 +81023,6 @@ extension on _StringsAr {
         return 'تعذّر التصدير إلى Anki: حدث خطأ HTTP أثناء الاتصال بـ AnkiConnect.';
       case 'anki_error_connection_unknown':
         return 'تعذّر التصدير إلى Anki: حدث خطأ اتصال غير متوقع. راجع سجل الأخطاء لمزيد من التفاصيل.';
-      case 'compress_mining_media':
-        return 'ضغط وسائط البطاقات';
-      case 'compress_mining_media_hint':
-        return 'إيقافه يبقي وسائط البطاقات أوضح لكن أكبر حجمًا';
       case 'log_copy_all':
         return 'نسخ الكل';
       case 'hover_auto_lookup':
@@ -81864,6 +82194,28 @@ extension on _StringsAr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -84729,10 +85081,6 @@ extension on _StringsDe {
         return 'Export zu Anki fehlgeschlagen: beim Verbinden mit AnkiConnect ist ein HTTP-Fehler aufgetreten.';
       case 'anki_error_connection_unknown':
         return 'Export zu Anki fehlgeschlagen: ein unerwarteter Verbindungsfehler ist aufgetreten. Einzelheiten im Fehlerprotokoll.';
-      case 'compress_mining_media':
-        return 'Kartenmedien komprimieren';
-      case 'compress_mining_media_hint':
-        return 'Deaktiviert bleiben Kartenmedien schärfer, aber größer';
       case 'log_copy_all':
         return 'Alles kopieren';
       case 'hover_auto_lookup':
@@ -85904,6 +86252,28 @@ extension on _StringsDe {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -88768,10 +89138,6 @@ extension on _StringsEs {
         return 'No se pudo exportar a Anki: ocurrió un error HTTP al contactar con AnkiConnect.';
       case 'anki_error_connection_unknown':
         return 'No se pudo exportar a Anki: error de conexión inesperado. Consulta el registro de errores.';
-      case 'compress_mining_media':
-        return 'Comprimir medios de tarjetas';
-      case 'compress_mining_media_hint':
-        return 'Desactivado mantiene los medios más nítidos pero más grandes';
       case 'log_copy_all':
         return 'Copiar todo';
       case 'hover_auto_lookup':
@@ -89943,6 +90309,28 @@ extension on _StringsEs {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -92813,10 +93201,6 @@ extension on _StringsFr {
         return 'Export vers Anki impossible : une erreur HTTP est survenue lors de la communication avec AnkiConnect.';
       case 'anki_error_connection_unknown':
         return 'Export vers Anki impossible : une erreur de connexion inattendue est survenue. Consultez le journal d\'erreurs.';
-      case 'compress_mining_media':
-        return 'Compresser les médias des cartes';
-      case 'compress_mining_media_hint':
-        return 'Désactivé, les médias restent plus nets mais plus volumineux';
       case 'log_copy_all':
         return 'Tout copier';
       case 'hover_auto_lookup':
@@ -93988,6 +94372,28 @@ extension on _StringsFr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -96840,10 +97246,6 @@ extension on _StringsId {
         return 'Tidak dapat mengekspor ke Anki: terjadi kesalahan HTTP saat menghubungi AnkiConnect.';
       case 'anki_error_connection_unknown':
         return 'Tidak dapat mengekspor ke Anki: terjadi kesalahan koneksi yang tidak terduga. Lihat log kesalahan untuk detailnya.';
-      case 'compress_mining_media':
-        return 'Kompres media kartu';
-      case 'compress_mining_media_hint':
-        return 'Jika nonaktif, media kartu lebih tajam tetapi lebih besar';
       case 'log_copy_all':
         return 'Salin Semua';
       case 'hover_auto_lookup':
@@ -98015,6 +98417,28 @@ extension on _StringsId {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -100882,10 +101306,6 @@ extension on _StringsIt {
         return 'Impossibile esportare in Anki: errore HTTP durante la connessione ad AnkiConnect.';
       case 'anki_error_connection_unknown':
         return 'Impossibile esportare in Anki: errore di connessione imprevisto. Vedi il log degli errori.';
-      case 'compress_mining_media':
-        return 'Comprimi media delle carte';
-      case 'compress_mining_media_hint':
-        return 'Disattivato mantiene i media più nitidi ma più pesanti';
       case 'log_copy_all':
         return 'Copia tutto';
       case 'hover_auto_lookup':
@@ -102057,6 +102477,28 @@ extension on _StringsIt {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -104887,10 +105329,6 @@ extension on _StringsJa {
         return 'Anki に書き出せません：AnkiConnect への接続中に HTTP エラーが発生しました。';
       case 'anki_error_connection_unknown':
         return 'Anki に書き出せません：予期しない接続エラーが発生しました。詳細はエラーログを確認してください。';
-      case 'compress_mining_media':
-        return 'カードのメディアを圧縮';
-      case 'compress_mining_media_hint':
-        return 'オフにするとメディアはより鮮明ですが容量が大きくなります';
       case 'log_copy_all':
         return 'すべてコピー';
       case 'hover_auto_lookup':
@@ -106061,6 +106499,28 @@ extension on _StringsJa {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -108894,10 +109354,6 @@ extension on _StringsKo {
         return 'Anki로 내보낼 수 없습니다: AnkiConnect에 연결하는 중 HTTP 오류가 발생했습니다.';
       case 'anki_error_connection_unknown':
         return 'Anki로 내보낼 수 없습니다: 알 수 없는 연결 오류가 발생했습니다. 자세한 내용은 오류 로그를 확인하세요.';
-      case 'compress_mining_media':
-        return '카드 미디어 압축';
-      case 'compress_mining_media_hint':
-        return '끄면 미디어가 더 선명하지만 용량이 커집니다';
       case 'log_copy_all':
         return '모두 복사';
       case 'hover_auto_lookup':
@@ -110069,6 +110525,28 @@ extension on _StringsKo {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -112929,10 +113407,6 @@ extension on _StringsNl {
         return 'Kon niet exporteren naar Anki: er is een HTTP-fout opgetreden tijdens het contact met AnkiConnect.';
       case 'anki_error_connection_unknown':
         return 'Kon niet exporteren naar Anki: er is een onverwachte verbindingsfout opgetreden. Zie het foutenlogboek voor details.';
-      case 'compress_mining_media':
-        return 'Kaartmedia comprimeren';
-      case 'compress_mining_media_hint':
-        return 'Uit houdt kaartmedia scherper maar groter';
       case 'log_copy_all':
         return 'Alles kopiëren';
       case 'hover_auto_lookup':
@@ -114104,6 +114578,28 @@ extension on _StringsNl {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -116961,10 +117457,6 @@ extension on _StringsPtBr {
         return 'Não foi possível exportar para o Anki: ocorreu um erro HTTP ao contatar o AnkiConnect.';
       case 'anki_error_connection_unknown':
         return 'Não foi possível exportar para o Anki: erro de conexão inesperado. Consulte o log de erros.';
-      case 'compress_mining_media':
-        return 'Comprimir mídia dos cartões';
-      case 'compress_mining_media_hint':
-        return 'Desativado mantém a mídia mais nítida, porém maior';
       case 'log_copy_all':
         return 'Copiar tudo';
       case 'hover_auto_lookup':
@@ -118136,6 +118628,28 @@ extension on _StringsPtBr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -120998,10 +121512,6 @@ extension on _StringsRu {
         return 'Не удалось экспортировать в Anki: при обращении к AnkiConnect произошла ошибка HTTP.';
       case 'anki_error_connection_unknown':
         return 'Не удалось экспортировать в Anki: произошла непредвиденная ошибка соединения. Подробности см. в журнале ошибок.';
-      case 'compress_mining_media':
-        return 'Сжимать медиа карточек';
-      case 'compress_mining_media_hint':
-        return 'При выключении медиа карточек чётче, но больше по размеру';
       case 'log_copy_all':
         return 'Копировать всё';
       case 'hover_auto_lookup':
@@ -122173,6 +122683,28 @@ extension on _StringsRu {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -125019,10 +125551,6 @@ extension on _StringsTh {
         return 'ไม่สามารถส่งออกไปยัง Anki: เกิดข้อผิดพลาด HTTP ขณะติดต่อ AnkiConnect';
       case 'anki_error_connection_unknown':
         return 'ไม่สามารถส่งออกไปยัง Anki: เกิดข้อผิดพลาดในการเชื่อมต่อที่ไม่คาดคิด ดูรายละเอียดในบันทึกข้อผิดพลาด';
-      case 'compress_mining_media':
-        return 'บีบอัดสื่อของการ์ด';
-      case 'compress_mining_media_hint':
-        return 'การปิดจะทำให้สื่อของการ์ดคมชัดขึ้นแต่มีขนาดใหญ่ขึ้น';
       case 'log_copy_all':
         return 'คัดลอกทั้งหมด';
       case 'hover_auto_lookup':
@@ -126194,6 +126722,28 @@ extension on _StringsTh {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -129049,10 +129599,6 @@ extension on _StringsTr {
         return 'Anki\'ye aktarılamadı: AnkiConnect ile iletişim kurulurken bir HTTP hatası oluştu.';
       case 'anki_error_connection_unknown':
         return 'Anki\'ye aktarılamadı: beklenmeyen bir bağlantı hatası oluştu. Ayrıntılar için hata günlüğüne bakın.';
-      case 'compress_mining_media':
-        return 'Kart medyasını sıkıştır';
-      case 'compress_mining_media_hint':
-        return 'Kapalıyken kart medyası daha net ama daha büyük olur';
       case 'log_copy_all':
         return 'Tümünü Kopyala';
       case 'hover_auto_lookup':
@@ -130224,6 +130770,28 @@ extension on _StringsTr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -133074,10 +133642,6 @@ extension on _StringsVi {
         return 'Không thể xuất sang Anki: đã xảy ra lỗi HTTP khi liên hệ với AnkiConnect.';
       case 'anki_error_connection_unknown':
         return 'Không thể xuất sang Anki: đã xảy ra lỗi kết nối không xác định. Xem nhật ký lỗi để biết chi tiết.';
-      case 'compress_mining_media':
-        return 'Nén media của thẻ';
-      case 'compress_mining_media_hint':
-        return 'Khi tắt, media của thẻ sắc nét hơn nhưng dung lượng lớn hơn';
       case 'log_copy_all':
         return 'Sao chép tất cả';
       case 'hover_auto_lookup':
@@ -134249,6 +134813,28 @@ extension on _StringsVi {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -137074,10 +137660,6 @@ extension on _StringsZhCn {
         return '无法导出到 Anki：连接 AnkiConnect 时发生 HTTP 错误。';
       case 'anki_error_connection_unknown':
         return '无法导出到 Anki：发生未知的连接错误。详情见错误日志。';
-      case 'compress_mining_media':
-        return '压缩制卡媒体';
-      case 'compress_mining_media_hint':
-        return '关闭后媒体更清晰但体积更大';
       case 'log_copy_all':
         return '复制全部';
       case 'hover_auto_lookup':
@@ -138242,6 +138824,28 @@ extension on _StringsZhCn {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
+      case 'mining_image_quality':
+        return '图片 / GIF 清晰度';
+      case 'mining_image_quality_hint':
+        return '越高越清晰，卡片体积也越大。原片档保留源分辨率与帧率。';
+      case 'mining_image_quality_thrift':
+        return '省流';
+      case 'mining_image_quality_standard':
+        return '标准';
+      case 'mining_image_quality_hd':
+        return '高清';
+      case 'mining_image_quality_native':
+        return '原片';
+      case 'mining_audio_quality':
+        return '音频质量';
+      case 'mining_audio_quality_hint':
+        return '比特率越高越清晰，卡片体积也越大。';
+      case 'mining_audio_quality_standard':
+        return '标准';
+      case 'mining_audio_quality_high':
+        return '高音质';
+      case 'mining_audio_quality_native':
+        return '原片';
       default:
         return null;
     }
@@ -141068,10 +141672,6 @@ extension on _StringsZhHk {
         return '無法匯出到 Anki：連接 AnkiConnect 時發生 HTTP 錯誤。';
       case 'anki_error_connection_unknown':
         return '無法匯出到 Anki：發生未知的連接錯誤。詳情見錯誤記錄檔。';
-      case 'compress_mining_media':
-        return '壓縮製卡媒體';
-      case 'compress_mining_media_hint':
-        return '關閉後媒體更清晰但體積更大';
       case 'log_copy_all':
         return '全部複製';
       case 'hover_auto_lookup':
@@ -142241,6 +142841,28 @@ extension on _StringsZhHk {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
