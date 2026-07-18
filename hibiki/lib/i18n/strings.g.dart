@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 33541 (1973 per locale)
+/// Strings: 33728 (1984 per locale)
 ///
-/// Built on 2026-07-18 at 18:04 UTC
+/// Built on 2026-07-18 at 18:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2653,6 +2653,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Tag ${name} added to collection.';
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  String get mining_image_quality => 'Image / GIF quality';
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  String get mining_image_quality_thrift => 'Data saver';
+  String get mining_image_quality_standard => 'Standard';
+  String get mining_image_quality_hd => 'HD';
+  String get mining_image_quality_native => 'Native';
+  String get mining_audio_quality => 'Audio quality';
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  String get mining_audio_quality_standard => 'Standard';
+  String get mining_audio_quality_high => 'High';
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -7125,6 +7138,30 @@ class _StringsAr extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -11670,6 +11707,30 @@ class _StringsDe extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -16231,6 +16292,30 @@ class _StringsEs extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -20803,6 +20888,30 @@ class _StringsFr extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -25302,6 +25411,30 @@ class _StringsId extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -29849,6 +29982,30 @@ class _StringsIt extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -34202,6 +34359,30 @@ class _StringsJa extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -38558,6 +38739,30 @@ class _StringsKo extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -43083,6 +43288,30 @@ class _StringsNl extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -47623,6 +47852,30 @@ class _StringsPtBr extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -52146,6 +52399,30 @@ class _StringsRu extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -56614,6 +56891,30 @@ class _StringsTh extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -61114,6 +61415,30 @@ class _StringsTr extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -65601,6 +65926,30 @@ class _StringsVi extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 // Path: <root>
@@ -69781,6 +70130,28 @@ class _StringsZhCn extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       '标签「${name}」已在此合集上。';
+  @override
+  String get mining_image_quality => '图片 / GIF 清晰度';
+  @override
+  String get mining_image_quality_hint => '越高越清晰，卡片体积也越大。原片档保留源分辨率与帧率。';
+  @override
+  String get mining_image_quality_thrift => '省流';
+  @override
+  String get mining_image_quality_standard => '标准';
+  @override
+  String get mining_image_quality_hd => '高清';
+  @override
+  String get mining_image_quality_native => '原片';
+  @override
+  String get mining_audio_quality => '音频质量';
+  @override
+  String get mining_audio_quality_hint => '比特率越高越清晰，卡片体积也越大。';
+  @override
+  String get mining_audio_quality_standard => '标准';
+  @override
+  String get mining_audio_quality_high => '高音质';
+  @override
+  String get mining_audio_quality_native => '原片';
 }
 
 // Path: <root>
@@ -74056,6 +74427,30 @@ class _StringsZhHk extends _StringsEn {
   @override
   String tag_already_on_collection({required Object name}) =>
       'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
 }
 
 /// Flat map(s) containing all translations.
@@ -78092,6 +78487,28 @@ extension on _StringsEn {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -82126,6 +82543,28 @@ extension on _StringsAr {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -86181,6 +86620,28 @@ extension on _StringsDe {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -90235,6 +90696,28 @@ extension on _StringsEs {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -94295,6 +94778,28 @@ extension on _StringsFr {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -98337,6 +98842,28 @@ extension on _StringsId {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -102394,6 +102921,28 @@ extension on _StringsIt {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -106413,6 +106962,28 @@ extension on _StringsJa {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -110436,6 +111007,28 @@ extension on _StringsKo {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -114486,6 +115079,28 @@ extension on _StringsNl {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -118533,6 +119148,28 @@ extension on _StringsPtBr {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -122585,6 +123222,28 @@ extension on _StringsRu {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -126621,6 +127280,28 @@ extension on _StringsTh {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -130666,6 +131347,28 @@ extension on _StringsTr {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -134706,6 +135409,28 @@ extension on _StringsVi {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
@@ -138713,6 +139438,28 @@ extension on _StringsZhCn {
         return ({required Object name}) => '标签「${name}」已添加到合集。';
       case 'tag_already_on_collection':
         return ({required Object name}) => '标签「${name}」已在此合集上。';
+      case 'mining_image_quality':
+        return '图片 / GIF 清晰度';
+      case 'mining_image_quality_hint':
+        return '越高越清晰，卡片体积也越大。原片档保留源分辨率与帧率。';
+      case 'mining_image_quality_thrift':
+        return '省流';
+      case 'mining_image_quality_standard':
+        return '标准';
+      case 'mining_image_quality_hd':
+        return '高清';
+      case 'mining_image_quality_native':
+        return '原片';
+      case 'mining_audio_quality':
+        return '音频质量';
+      case 'mining_audio_quality_hint':
+        return '比特率越高越清晰，卡片体积也越大。';
+      case 'mining_audio_quality_standard':
+        return '标准';
+      case 'mining_audio_quality_high':
+        return '高音质';
+      case 'mining_audio_quality_native':
+        return '原片';
       default:
         return null;
     }
@@ -142727,6 +143474,28 @@ extension on _StringsZhHk {
       case 'tag_already_on_collection':
         return ({required Object name}) =>
             'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
       default:
         return null;
     }
