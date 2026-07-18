@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 33473 (1969 per locale)
+/// Strings: 33490 (1970 per locale)
 ///
-/// Built on 2026-07-17 at 17:34 UTC
+/// Built on 2026-07-18 at 03:56 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2653,6 +2653,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Imported — open it from the video library to play while downloading';
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -7121,6 +7123,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -11662,6 +11667,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -16219,6 +16227,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -20787,6 +20798,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -25282,6 +25296,9 @@ class _StringsId extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -29825,6 +29842,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -34173,6 +34193,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -38524,6 +38547,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -43045,6 +43071,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -47581,6 +47610,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -52100,6 +52132,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -56564,6 +56599,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -61060,6 +61098,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -65543,6 +65584,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -69713,6 +69757,9 @@ class _StringsZhCn extends _StringsEn {
   String get anime_download_play_now_ok => '已入库，可从视频库打开边下边播';
   @override
   String get anime_download_play_now_fail => '暂不可提前入库（元数据未就绪或连接失败），稍后再试';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
 }
 
 // Path: <root>
@@ -73980,6 +74027,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 /// Flat map(s) containing all translations.
@@ -78006,6 +78056,9 @@ extension on _StringsEn {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -82030,6 +82083,9 @@ extension on _StringsAr {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -86075,6 +86131,9 @@ extension on _StringsDe {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -90119,6 +90178,9 @@ extension on _StringsEs {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -94169,6 +94231,9 @@ extension on _StringsFr {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -98201,6 +98266,9 @@ extension on _StringsId {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -102248,6 +102316,9 @@ extension on _StringsIt {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -106257,6 +106328,9 @@ extension on _StringsJa {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -110270,6 +110344,9 @@ extension on _StringsKo {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -114310,6 +114387,9 @@ extension on _StringsNl {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -118347,6 +118427,9 @@ extension on _StringsPtBr {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -122389,6 +122472,9 @@ extension on _StringsRu {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -126415,6 +126501,9 @@ extension on _StringsTh {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -130450,6 +130539,9 @@ extension on _StringsTr {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -134480,6 +134572,9 @@ extension on _StringsVi {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -138478,6 +138573,9 @@ extension on _StringsZhCn {
         return '已入库，可从视频库打开边下边播';
       case 'anime_download_play_now_fail':
         return '暂不可提前入库（元数据未就绪或连接失败），稍后再试';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
       default:
         return null;
     }
@@ -142482,6 +142580,9 @@ extension on _StringsZhHk {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
