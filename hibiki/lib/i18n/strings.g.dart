@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 33405 (1965 per locale)
+/// Strings: 33422 (1966 per locale)
 ///
-/// Built on 2026-07-18 at 03:43 UTC
+/// Built on 2026-07-18 at 04:25 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2644,6 +2644,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_section_related => 'Remote content & lookup';
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -7099,6 +7101,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -11627,6 +11632,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -16171,6 +16179,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -20726,6 +20737,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -25208,6 +25222,9 @@ class _StringsId extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -29738,6 +29755,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -34074,6 +34094,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -38413,6 +38436,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -42921,6 +42947,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -47444,6 +47473,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -51950,6 +51982,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -56401,6 +56436,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -60884,6 +60922,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -65354,6 +65395,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 // Path: <root>
@@ -69516,6 +69560,9 @@ class _StringsZhCn extends _StringsEn {
   String get interconnect_section_related => '远端内容与查词';
   @override
   String get desktop_clipboard_window_mode_hint => '控制 Hibiki 是否保持在其他窗口上方';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
 }
 
 // Path: <root>
@@ -73774,6 +73821,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
 }
 
 /// Flat map(s) containing all translations.
@@ -77792,6 +77842,9 @@ extension on _StringsEn {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -81808,6 +81861,9 @@ extension on _StringsAr {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -85845,6 +85901,9 @@ extension on _StringsDe {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -89881,6 +89940,9 @@ extension on _StringsEs {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -93923,6 +93985,9 @@ extension on _StringsFr {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -97947,6 +98012,9 @@ extension on _StringsId {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -101986,6 +102054,9 @@ extension on _StringsIt {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -105987,6 +106058,9 @@ extension on _StringsJa {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -109992,6 +110066,9 @@ extension on _StringsKo {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -114024,6 +114101,9 @@ extension on _StringsNl {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -118053,6 +118133,9 @@ extension on _StringsPtBr {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -122087,6 +122170,9 @@ extension on _StringsRu {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -126105,6 +126191,9 @@ extension on _StringsTh {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -130132,6 +130221,9 @@ extension on _StringsTr {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -134154,6 +134246,9 @@ extension on _StringsVi {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
@@ -138144,6 +138239,9 @@ extension on _StringsZhCn {
         return '远端内容与查词';
       case 'desktop_clipboard_window_mode_hint':
         return '控制 Hibiki 是否保持在其他窗口上方';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
       default:
         return null;
     }
@@ -142140,6 +142238,9 @@ extension on _StringsZhHk {
         return 'Remote content & lookup';
       case 'desktop_clipboard_window_mode_hint':
         return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
       default:
         return null;
     }
