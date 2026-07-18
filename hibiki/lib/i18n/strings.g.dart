@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 33422 (1966 per locale)
+/// Strings: 33456 (1968 per locale)
 ///
-/// Built on 2026-07-18 at 04:25 UTC
+/// Built on 2026-07-18 at 16:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2646,6 +2646,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Controls whether Hibiki stays above other windows';
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -7104,6 +7108,12 @@ class _StringsAr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -11635,6 +11645,12 @@ class _StringsDe extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -16182,6 +16198,12 @@ class _StringsEs extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -20740,6 +20762,12 @@ class _StringsFr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -25225,6 +25253,12 @@ class _StringsId extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -29758,6 +29792,12 @@ class _StringsIt extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -34097,6 +34137,12 @@ class _StringsJa extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -38439,6 +38485,12 @@ class _StringsKo extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -42950,6 +43002,12 @@ class _StringsNl extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -47476,6 +47534,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -51985,6 +52049,12 @@ class _StringsRu extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -56439,6 +56509,12 @@ class _StringsTh extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -60925,6 +61001,12 @@ class _StringsTr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -65398,6 +65480,12 @@ class _StringsVi extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -69563,6 +69651,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      '标签「${name}」已添加到合集。';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      '标签「${name}」已在此合集上。';
 }
 
 // Path: <root>
@@ -73824,6 +73918,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 /// Flat map(s) containing all translations.
@@ -77845,6 +77945,11 @@ extension on _StringsEn {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -81864,6 +81969,11 @@ extension on _StringsAr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -85904,6 +86014,11 @@ extension on _StringsDe {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -89943,6 +90058,11 @@ extension on _StringsEs {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -93988,6 +94108,11 @@ extension on _StringsFr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -98015,6 +98140,11 @@ extension on _StringsId {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -102057,6 +102187,11 @@ extension on _StringsIt {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -106061,6 +106196,11 @@ extension on _StringsJa {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -110069,6 +110209,11 @@ extension on _StringsKo {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -114104,6 +114249,11 @@ extension on _StringsNl {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -118136,6 +118286,11 @@ extension on _StringsPtBr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -122173,6 +122328,11 @@ extension on _StringsRu {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -126194,6 +126354,11 @@ extension on _StringsTh {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -130224,6 +130389,11 @@ extension on _StringsTr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -134249,6 +134419,11 @@ extension on _StringsVi {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -138242,6 +138417,10 @@ extension on _StringsZhCn {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => '标签「${name}」已添加到合集。';
+      case 'tag_already_on_collection':
+        return ({required Object name}) => '标签「${name}」已在此合集上。';
       default:
         return null;
     }
@@ -142241,6 +142420,11 @@ extension on _StringsZhHk {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
