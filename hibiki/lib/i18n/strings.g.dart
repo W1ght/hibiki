@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 33473 (1969 per locale)
+/// Strings: 33405 (1965 per locale)
 ///
-/// Built on 2026-07-17 at 17:34 UTC
+/// Built on 2026-07-18 at 03:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1437,8 +1437,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_window_mode => 'Window pinning';
   String get desktop_clipboard_window_mode_normal => 'Off';
   String get desktop_clipboard_window_mode_lookup => 'Lookup only';
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
   String get desktop_clipboard_window_mode_always => 'Always';
   String get popup_instant_scroll => 'Instant popup scroll';
   String get popup_instant_scroll_hint =>
@@ -1666,12 +1664,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get lyrics_text_color_hint =>
       'Use a custom color for lyrics text instead of following the theme';
   String get floating_lyric_text_opacity => 'Floating subtitle text opacity';
-  String get floating_lyric_text_opacity_hint =>
-      'Lower this to make the floating subtitle text more transparent';
   String get floating_lyric_button_bg_opacity =>
       'Floating subtitle button background opacity';
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Adjust how transparent the floating subtitle control buttons are';
   String get video_control_customize_hint =>
       'Choose where each button sits on the player, or move it out.';
   String get video_control_slot_bottom_left => 'Bottom bar (left)';
@@ -1828,8 +1822,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Restore moved and removed buttons to the default player layout.';
   String get floating_lyric_bg_opacity =>
       'Floating subtitle background opacity';
-  String get floating_lyric_bg_opacity_hint =>
-      'Lower this to make the floating subtitle bar more transparent so it blocks less of your view';
   String get dict_update_check => 'Check for Updates';
   String get dict_update_tooltip => 'Update dictionary';
   String get dict_update_checking => 'Checking for updates…';
@@ -1859,8 +1851,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_overwrite_scope_all => 'All matching cards';
   String video_favorite_count({required Object count}) => '${count} favorites';
   String get video_setting_auto_play_next => 'Auto-play next episode';
-  String get video_setting_auto_play_next_hint =>
-      'Automatically play the next episode in a playlist when one finishes';
   String get video_auto_play_next_cancel => 'Cancel';
   String video_auto_play_next_countdown({required Object seconds}) =>
       'Next episode in ${seconds}s';
@@ -2416,8 +2406,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
   String get desktop_clipboard_destination_main => 'Main window';
   String get desktop_clipboard_destination_panel => 'Floating panel';
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
@@ -2653,6 +2641,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Imported — open it from the video library to play while downloading';
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  String get interconnect_section_related => 'Remote content & lookup';
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: <root>
@@ -4987,9 +4978,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'أثناء البحث فقط';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_always => 'دائمًا';
   @override
   String get popup_instant_scroll => 'تمرير فوري للنافذة المنبثقة';
@@ -5395,14 +5383,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => 'تعتيم نص الترجمة العائمة';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'اخفض هذا لجعل نص الترجمة العائمة أكثر شفافية';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'تعتيم خلفية زر الترجمة العائمة';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'اضبط مدى شفافية خلفية أزرار التحكم في الترجمة العائمة';
   @override
   String get video_control_customize_hint =>
       'اختر موضع كل زر على المشغّل، أو انقله خارجه.';
@@ -5659,9 +5641,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => 'تعتيم خلفية الترجمة العائمة';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'اخفض هذا لجعل شريط الترجمة العائمة أكثر شفافية فيحجب رؤيتك أقل';
-  @override
   String get dict_update_check => 'التحقق من التحديثات';
   @override
   String get dict_update_tooltip => 'تحديث القاموس';
@@ -5711,9 +5690,6 @@ class _StringsAr extends _StringsEn {
   String video_favorite_count({required Object count}) => '${count} مفضّلة';
   @override
   String get video_setting_auto_play_next => 'التشغيل التلقائي للحلقة التالية';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'تشغيل الحلقة التالية في قائمة التشغيل تلقائيًا عند انتهاء واحدة';
   @override
   String get video_auto_play_next_cancel => 'إلغاء';
   @override
@@ -6703,9 +6679,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -7121,6 +7094,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: <root>
@@ -9503,9 +9481,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Nur beim Nachschlagen';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_always => 'Immer';
   @override
   String get popup_instant_scroll => 'Sofortiges Popup-Scrollen';
@@ -9923,14 +9898,8 @@ class _StringsDe extends _StringsEn {
   String get floating_lyric_text_opacity =>
       'Deckkraft des schwebenden Untertiteltexts';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Verringern, um den schwebenden Untertiteltext transparenter zu machen';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Deckkraft des Hintergrunds der schwebenden Untertitel-Tasten';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Stellt ein, wie transparent die Hintergründe der schwebenden Untertitel-Bedienknöpfe sind';
   @override
   String get video_control_customize_hint =>
       'Wähle für jede Taste die Position auf dem Player oder entferne sie.';
@@ -10195,9 +10164,6 @@ class _StringsDe extends _StringsEn {
   String get floating_lyric_bg_opacity =>
       'Hintergrund-Deckkraft des schwebenden Untertitels';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Verringern, um die schwebende Untertitelleiste transparenter zu machen, damit sie weniger Sicht verdeckt';
-  @override
   String get dict_update_check => 'Nach Updates suchen';
   @override
   String get dict_update_tooltip => 'Wörterbuch aktualisieren';
@@ -10250,9 +10216,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Nächste Folge automatisch abspielen';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Spielt nach dem Ende einer Folge automatisch die nächste Folge der Playlist ab';
   @override
   String get video_auto_play_next_cancel => 'Abbrechen';
   @override
@@ -11244,9 +11207,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -11662,6 +11622,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: <root>
@@ -14058,9 +14023,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_always => 'Siempre';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_lookup => 'Solo al consultar';
   @override
   String get popup_instant_scroll => 'Desplazamiento instantáneo de la ventana';
@@ -14481,14 +14443,8 @@ class _StringsEs extends _StringsEn {
   String get floating_lyric_text_opacity =>
       'Opacidad del texto del subtítulo flotante';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Bájala para que el texto del subtítulo flotante sea más transparente';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Opacidad del fondo de los botones del subtítulo flotante';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Ajusta la transparencia del fondo de los botones de control del subtítulo flotante';
   @override
   String get video_control_customize_hint =>
       'Elige dónde se coloca cada botón en el reproductor, o quítalo.';
@@ -14754,9 +14710,6 @@ class _StringsEs extends _StringsEn {
   String get floating_lyric_bg_opacity =>
       'Opacidad del fondo del subtítulo flotante';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Bájala para que la barra de subtítulo flotante sea más transparente y tape menos la vista';
-  @override
   String get dict_update_check => 'Buscar actualizaciones';
   @override
   String get dict_update_tooltip => 'Actualizar diccionario';
@@ -14809,9 +14762,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Reproducir automáticamente el siguiente episodio';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Reproduce automáticamente el siguiente episodio de una lista cuando termina uno';
   @override
   String get video_auto_play_next_cancel => 'Cancelar';
   @override
@@ -15801,9 +15751,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -16219,6 +16166,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: <root>
@@ -18627,9 +18579,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Recherche uniquement';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_always => 'Toujours';
   @override
   String get popup_instant_scroll => 'Défilement instantané de la fenêtre';
@@ -19048,14 +18997,8 @@ class _StringsFr extends _StringsEn {
   String get floating_lyric_text_opacity =>
       'Opacité du texte du sous-titre flottant';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Baissez cette valeur pour rendre le texte du sous-titre flottant plus transparent';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Opacité du fond des boutons du sous-titre flottant';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Réglez la transparence du fond des boutons de contrôle du sous-titre flottant';
   @override
   String get video_control_customize_hint =>
       'Choisissez l\'emplacement de chaque bouton sur le lecteur, ou retirez-le.';
@@ -19320,9 +19263,6 @@ class _StringsFr extends _StringsEn {
   String get floating_lyric_bg_opacity =>
       'Opacité du fond du sous-titre flottant';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Baissez cette valeur pour rendre la barre de sous-titre flottant plus transparente et moins gênante';
-  @override
   String get dict_update_check => 'Vérifier les mises à jour';
   @override
   String get dict_update_tooltip => 'Mettre à jour le dictionnaire';
@@ -19376,9 +19316,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Lecture auto de l\'épisode suivant';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Lit automatiquement l\'épisode suivant d\'une playlist à la fin du précédent';
   @override
   String get video_auto_play_next_cancel => 'Annuler';
   @override
@@ -20369,9 +20306,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -20787,6 +20721,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: <root>
@@ -23134,9 +23073,6 @@ class _StringsId extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Hanya saat mencari';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_always => 'Selalu';
   @override
   String get popup_instant_scroll => 'Gulir popup seketika';
@@ -23546,14 +23482,8 @@ class _StringsId extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => 'Opasitas teks subtitle melayang';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Turunkan untuk membuat teks subtitle melayang lebih transparan';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Opasitas latar tombol subtitle melayang';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Atur seberapa transparan tombol kontrol subtitle melayang';
   @override
   String get video_control_customize_hint =>
       'Pilih posisi tiap tombol di pemutar, atau pindahkan keluar.';
@@ -23817,9 +23747,6 @@ class _StringsId extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => 'Opasitas latar subtitle melayang';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Turunkan untuk membuat bilah subtitle melayang lebih transparan agar tidak terlalu menghalangi pandangan';
-  @override
   String get dict_update_check => 'Cek Pembaruan';
   @override
   String get dict_update_tooltip => 'Perbarui kamus';
@@ -23871,9 +23798,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Putar otomatis episode berikutnya';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Otomatis putar episode berikutnya dalam playlist ketika satu episode selesai';
   @override
   String get video_auto_play_next_cancel => 'Batal';
   @override
@@ -24864,9 +24788,6 @@ class _StringsId extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -25282,6 +25203,11 @@ class _StringsId extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: <root>
@@ -27659,9 +27585,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Fissaggio finestra';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_lookup => 'Solo durante la ricerca';
   @override
   String get desktop_clipboard_window_mode_normal => 'Disattivato';
@@ -28087,14 +28010,8 @@ class _StringsIt extends _StringsEn {
   String get floating_lyric_text_opacity =>
       'Opacità del testo del sottotitolo fluttuante';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Abbassa questo valore per rendere più trasparente il testo del sottotitolo fluttuante';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Opacità sfondo dei pulsanti del sottotitolo fluttuante';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Regola la trasparenza dello sfondo dei pulsanti di controllo del sottotitolo fluttuante';
   @override
   String get video_control_customize_hint =>
       'Scegli dove collocare ogni pulsante sul lettore, oppure rimuovilo.';
@@ -28360,9 +28277,6 @@ class _StringsIt extends _StringsEn {
   String get floating_lyric_bg_opacity =>
       'Opacità sfondo del sottotitolo fluttuante';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Abbassa questo valore per rendere più trasparente la barra del sottotitolo fluttuante, così da ostacolare meno la visuale';
-  @override
   String get dict_update_check => 'Controlla aggiornamenti';
   @override
   String get dict_update_tooltip => 'Aggiorna dizionario';
@@ -28415,9 +28329,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Riproduci automaticamente l\'episodio successivo';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Riproduce automaticamente l\'episodio successivo di una playlist quando uno finisce';
   @override
   String get video_auto_play_next_cancel => 'Annulla';
   @override
@@ -29407,9 +29318,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -29825,6 +29733,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: <root>
@@ -32078,9 +31991,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'ウィンドウの最前面固定';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_lookup => '辞書引き中のみ';
   @override
   String get desktop_clipboard_window_mode_normal => '固定しない';
@@ -32467,12 +32377,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => 'フローティング字幕の文字の不透明度';
   @override
-  String get floating_lyric_text_opacity_hint => '下げるとフローティング字幕の文字がより透明になります';
-  @override
   String get floating_lyric_button_bg_opacity => 'フローティング字幕ボタンの背景の不透明度';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'フローティング字幕の操作ボタンの背景の透明度を調整します';
   @override
   String get video_control_customize_hint => '各ボタンをプレーヤー上のどこに置くかを選ぶか、外します。';
   @override
@@ -32717,9 +32622,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => 'フローティング字幕の背景の不透明度';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      '下げるとフローティング字幕バーがより透明になり、視界を遮りにくくなります';
-  @override
   String get dict_update_check => '更新を確認';
   @override
   String get dict_update_tooltip => '辞書を更新';
@@ -32768,9 +32670,6 @@ class _StringsJa extends _StringsEn {
   String video_favorite_count({required Object count}) => 'お気に入り ${count} 句';
   @override
   String get video_setting_auto_play_next => '次のエピソードを自動再生';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'プレイリスト内の 1 話が終わると、自動的に次のエピソードを再生します';
   @override
   String get video_auto_play_next_cancel => 'キャンセル';
   @override
@@ -33756,9 +33655,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -34173,6 +34069,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: <root>
@@ -36428,9 +36329,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => '창 고정';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_lookup => '단어 찾기 중에만';
   @override
   String get desktop_clipboard_window_mode_normal => '끄기';
@@ -36819,12 +36717,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => '플로팅 자막 텍스트 불투명도';
   @override
-  String get floating_lyric_text_opacity_hint => '낮추면 플로팅 자막 텍스트가 더 투명해집니다';
-  @override
   String get floating_lyric_button_bg_opacity => '플로팅 자막 버튼 배경 불투명도';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      '플로팅 자막 조작 버튼의 배경 투명도를 조절합니다';
   @override
   String get video_control_customize_hint =>
       '각 버튼이 플레이어의 어디에 놓일지 선택하거나 빼낼 수 있습니다.';
@@ -37068,9 +36961,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => '플로팅 자막 배경 불투명도';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      '낮추면 플로팅 자막 바가 더 투명해져 시야를 덜 가립니다';
-  @override
   String get dict_update_check => '업데이트 확인';
   @override
   String get dict_update_tooltip => '사전 업데이트';
@@ -37119,9 +37009,6 @@ class _StringsKo extends _StringsEn {
   String video_favorite_count({required Object count}) => '즐겨찾기 ${count}개';
   @override
   String get video_setting_auto_play_next => '다음 에피소드 자동 재생';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      '재생목록에서 한 에피소드가 끝나면 다음 에피소드를 자동으로 재생합니다';
   @override
   String get video_auto_play_next_cancel => '취소';
   @override
@@ -38106,9 +37993,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -38524,6 +38408,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: <root>
@@ -40888,9 +40777,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Venster vastzetten';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_always => 'Altijd';
   @override
   String get desktop_clipboard_window_mode_lookup => 'Alleen tijdens opzoeken';
@@ -41311,14 +41197,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => 'Tekstdekking zwevende ondertitel';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Verlaag dit om de tekst van de zwevende ondertitel transparanter te maken';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Dekking knopachtergrond zwevende ondertitel';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Pas aan hoe transparant de bedieningsknoppen van de zwevende ondertitel zijn';
   @override
   String get video_control_customize_hint =>
       'Kies waar elke knop op de speler staat, of verwijder hem.';
@@ -41580,9 +41460,6 @@ class _StringsNl extends _StringsEn {
   String get floating_lyric_bg_opacity =>
       'Achtergronddekking zwevende ondertitel';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Verlaag dit om de zwevende ondertitelbalk transparanter te maken, zodat hij minder van je zicht blokkeert';
-  @override
   String get dict_update_check => 'Controleren op updates';
   @override
   String get dict_update_tooltip => 'Woordenboek bijwerken';
@@ -41634,9 +41511,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Volgende aflevering automatisch afspelen';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Speel automatisch de volgende aflevering in een afspeellijst af wanneer er een eindigt';
   @override
   String get video_auto_play_next_cancel => 'Annuleren';
   @override
@@ -42627,9 +42501,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -43045,6 +42916,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: <root>
@@ -45419,9 +45295,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Fixação da janela';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_lookup =>
       'Apenas durante a consulta';
   @override
@@ -45844,14 +45717,8 @@ class _StringsPtBr extends _StringsEn {
   String get floating_lyric_text_opacity =>
       'Opacidade do texto da legenda flutuante';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Reduza para deixar o texto da legenda flutuante mais transparente';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Opacidade do fundo dos botões da legenda flutuante';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Ajuste a transparência do fundo dos botões de controle da legenda flutuante';
   @override
   String get video_control_customize_hint =>
       'Escolha onde cada botão fica no player ou remova-o.';
@@ -46117,9 +45984,6 @@ class _StringsPtBr extends _StringsEn {
   String get floating_lyric_bg_opacity =>
       'Opacidade do fundo da legenda flutuante';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Reduza para deixar a barra de legenda flutuante mais transparente e bloquear menos a visão';
-  @override
   String get dict_update_check => 'Verificar atualizações';
   @override
   String get dict_update_tooltip => 'Atualizar dicionário';
@@ -46171,9 +46035,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Reproduzir o próximo episódio automaticamente';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Reproduz automaticamente o próximo episódio de uma playlist quando um termina';
   @override
   String get video_auto_play_next_cancel => 'Cancelar';
   @override
@@ -47163,9 +47024,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -47581,6 +47439,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: <root>
@@ -49942,9 +49805,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Закрепление окна';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_lookup => 'Только при поиске';
   @override
   String get desktop_clipboard_window_mode_normal => 'Выкл.';
@@ -50361,14 +50221,8 @@ class _StringsRu extends _StringsEn {
   String get floating_lyric_text_opacity =>
       'Непрозрачность текста плавающих субтитров';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Уменьшите, чтобы текст плавающих субтитров стал прозрачнее';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Непрозрачность фона кнопок плавающих субтитров';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Настройте прозрачность фона кнопок управления плавающими субтитрами';
   @override
   String get video_control_customize_hint =>
       'Выберите место каждой кнопки на плеере или уберите её.';
@@ -50632,9 +50486,6 @@ class _StringsRu extends _StringsEn {
   String get floating_lyric_bg_opacity =>
       'Непрозрачность фона плавающих субтитров';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Уменьшите, чтобы панель плавающих субтитров стала прозрачнее и меньше закрывала обзор';
-  @override
   String get dict_update_check => 'Проверить обновления';
   @override
   String get dict_update_tooltip => 'Обновить словарь';
@@ -50687,9 +50538,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Автовоспроизведение следующей серии';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Автоматически воспроизводить следующую серию в плейлисте после завершения текущей';
   @override
   String get video_auto_play_next_cancel => 'Отмена';
   @override
@@ -51682,9 +51530,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -52100,6 +51945,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: <root>
@@ -54429,9 +54279,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'เฉพาะตอนค้นคำ';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get popup_instant_scroll => 'เลื่อนหน้าต่างค้นคำแบบทันที';
   @override
   String get popup_instant_scroll_hint =>
@@ -54835,14 +54682,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => 'ความทึบของตัวอักษรคำบรรยายลอย';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'ลดค่านี้เพื่อให้ตัวอักษรคำบรรยายลอยโปร่งใสขึ้น';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'ความทึบของพื้นหลังปุ่มคำบรรยายลอย';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'ปรับความโปร่งใสของพื้นหลังปุ่มควบคุมคำบรรยายลอย';
   @override
   String get video_control_customize_hint =>
       'เลือกตำแหน่งของแต่ละปุ่มบนโปรแกรมเล่น หรือนำออก';
@@ -55101,9 +54942,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => 'ความทึบของพื้นหลังคำบรรยายลอย';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'ลดค่านี้เพื่อให้แถบคำบรรยายลอยโปร่งใสขึ้นและบังมุมมองน้อยลง';
-  @override
   String get dict_update_check => 'ตรวจสอบอัปเดต';
   @override
   String get dict_update_tooltip => 'อัปเดตพจนานุกรม';
@@ -55154,9 +54992,6 @@ class _StringsTh extends _StringsEn {
   String video_favorite_count({required Object count}) => '${count} รายการโปรด';
   @override
   String get video_setting_auto_play_next => 'เล่นตอนถัดไปอัตโนมัติ';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'เมื่อตอนหนึ่งจบ ให้เล่นตอนถัดไปในเพลย์ลิสต์โดยอัตโนมัติ';
   @override
   String get video_auto_play_next_cancel => 'ยกเลิก';
   @override
@@ -56146,9 +55981,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -56564,6 +56396,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: <root>
@@ -58918,9 +58755,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Yalnızca arama sırasında';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get popup_instant_scroll => 'Anında açılır pencere kaydırma';
   @override
   String get popup_instant_scroll_hint =>
@@ -59327,14 +59161,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => 'Kayan altyazı metni saydamlığı';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Kayan altyazı metnini daha saydam yapmak için bunu azaltın';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Kayan altyazı düğmesi arka plan saydamlığı';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Kayan altyazı denetim düğmelerinin ne kadar saydam olacağını ayarlayın';
   @override
   String get video_control_customize_hint =>
       'Her düğmenin oynatıcıda nerede duracağını seçin ya da dışarı taşıyın.';
@@ -59594,9 +59422,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => 'Kayan altyazı arka plan matlığı';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Kayan altyazı çubuğunu daha saydam yapıp görüşünüzü daha az engellemesi için bunu azaltın';
-  @override
   String get dict_update_check => 'Güncellemeleri Denetle';
   @override
   String get dict_update_tooltip => 'Sözlüğü güncelle';
@@ -59649,9 +59474,6 @@ class _StringsTr extends _StringsEn {
       '${count} sık kullanılan';
   @override
   String get video_setting_auto_play_next => 'Sonraki bölümü otomatik oynat';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Bir oynatma listesinde biri bittiğinde sonraki bölümü otomatik olarak oynat';
   @override
   String get video_auto_play_next_cancel => 'İptal';
   @override
@@ -60642,9 +60464,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -61060,6 +60879,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: <root>
@@ -63399,9 +63223,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Ghim cửa sổ';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_always => 'Luôn luôn';
   @override
   String get desktop_clipboard_window_mode_lookup => 'Chỉ khi tra từ';
@@ -63813,13 +63634,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => 'Độ mờ chữ phụ đề nổi';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Giảm xuống để chữ phụ đề nổi trong suốt hơn';
-  @override
   String get floating_lyric_button_bg_opacity => 'Độ mờ nền nút phụ đề nổi';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Điều chỉnh mức trong suốt của nền các nút điều khiển phụ đề nổi';
   @override
   String get video_control_customize_hint =>
       'Chọn vị trí đặt mỗi nút trên trình phát, hoặc gỡ nó ra.';
@@ -64078,9 +63893,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => 'Độ mờ nền phụ đề nổi';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Giảm xuống để thanh phụ đề nổi trong suốt hơn, ít che tầm nhìn hơn';
-  @override
   String get dict_update_check => 'Kiểm tra cập nhật';
   @override
   String get dict_update_tooltip => 'Cập nhật từ điển';
@@ -64133,9 +63945,6 @@ class _StringsVi extends _StringsEn {
       '${count} câu yêu thích';
   @override
   String get video_setting_auto_play_next => 'Tự phát tập tiếp theo';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Tự động phát tập tiếp theo trong danh sách phát khi một tập kết thúc';
   @override
   String get video_auto_play_next_cancel => 'Hủy';
   @override
@@ -65125,9 +64934,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -65543,6 +65349,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 // Path: <root>
@@ -67743,8 +67554,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => '窗口置顶策略';
   @override
-  String get desktop_clipboard_window_mode_hint => '控制 Hibiki 是否保持在其他窗口上方';
-  @override
   String get desktop_clipboard_window_mode_always => '始终置顶';
   @override
   String get desktop_clipboard_window_mode_lookup => '仅查词期间';
@@ -68119,11 +67928,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => '悬浮字幕文字透明度';
   @override
-  String get floating_lyric_text_opacity_hint => '调低让悬浮字幕文字更透明';
-  @override
   String get floating_lyric_button_bg_opacity => '悬浮字幕按钮底色透明度';
-  @override
-  String get floating_lyric_button_bg_opacity_hint => '调整悬浮字幕控制按钮底色的透明度';
   @override
   String get video_control_customize_hint => '为每个按钮选择在播放器上的位置，或将其移出。';
   @override
@@ -68358,8 +68163,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => '悬浮字幕背景不透明度';
   @override
-  String get floating_lyric_bg_opacity_hint => '调低让悬浮字幕条更透明、更不挡视野';
-  @override
   String get dict_update_check => '检查更新';
   @override
   String get dict_update_tooltip => '更新词典';
@@ -68411,8 +68214,6 @@ class _StringsZhCn extends _StringsEn {
       '${seconds} 秒后播放下一集';
   @override
   String get video_setting_auto_play_next => '自动连播下一集';
-  @override
-  String get video_setting_auto_play_next_hint => '播放列表里一集播完后自动播放下一集';
   @override
   String get video_auto_play_next_cancel => '取消';
   @override
@@ -69331,8 +69132,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get desktop_clipboard_destination => '剪贴板查词显示位置';
   @override
-  String get desktop_clipboard_destination_hint => '剪贴板查词结果显示在哪里';
-  @override
   String get desktop_clipboard_destination_main => '主窗口';
   @override
   String get desktop_clipboard_destination_panel => '悬浮面板';
@@ -69713,6 +69512,10 @@ class _StringsZhCn extends _StringsEn {
   String get anime_download_play_now_ok => '已入库，可从视频库打开边下边播';
   @override
   String get anime_download_play_now_fail => '暂不可提前入库（元数据未就绪或连接失败），稍后再试';
+  @override
+  String get interconnect_section_related => '远端内容与查词';
+  @override
+  String get desktop_clipboard_window_mode_hint => '控制 Hibiki 是否保持在其他窗口上方';
 }
 
 // Path: <root>
@@ -71914,9 +71717,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => '視窗置頂策略';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_always => '永遠置頂';
   @override
   String get desktop_clipboard_window_mode_lookup => '僅查詞期間';
@@ -72293,11 +72093,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => '懸浮字幕文字不透明度';
   @override
-  String get floating_lyric_text_opacity_hint => '調低可讓懸浮字幕文字更透明';
-  @override
   String get floating_lyric_button_bg_opacity => '懸浮字幕按鈕底色不透明度';
-  @override
-  String get floating_lyric_button_bg_opacity_hint => '調整懸浮字幕控制按鈕底色的透明度';
   @override
   String get video_control_customize_hint => '為每個按鈕選擇在播放器上的位置，或將其移出。';
   @override
@@ -72532,8 +72328,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => '懸浮字幕背景不透明度';
   @override
-  String get floating_lyric_bg_opacity_hint => '調低可讓懸浮字幕條更透明、更少遮擋視野';
-  @override
   String get dict_update_check => '檢查更新';
   @override
   String get dict_update_tooltip => '更新詞典';
@@ -72582,8 +72376,6 @@ class _StringsZhHk extends _StringsEn {
   String video_favorite_count({required Object count}) => '收藏 ${count} 句';
   @override
   String get video_setting_auto_play_next => '自動連播下一集';
-  @override
-  String get video_setting_auto_play_next_hint => '播放清單中一集播完後，自動播放下一集';
   @override
   String get video_auto_play_next_cancel => '取消';
   @override
@@ -73563,9 +73355,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -73980,6 +73769,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
 }
 
 /// Flat map(s) containing all translations.
@@ -76129,8 +75923,6 @@ extension on _StringsEn {
         return 'Off';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Lookup only';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Always';
       case 'popup_instant_scroll':
@@ -76488,12 +76280,8 @@ extension on _StringsEn {
         return 'Use a custom color for lyrics text instead of following the theme';
       case 'floating_lyric_text_opacity':
         return 'Floating subtitle text opacity';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Lower this to make the floating subtitle text more transparent';
       case 'floating_lyric_button_bg_opacity':
         return 'Floating subtitle button background opacity';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Adjust how transparent the floating subtitle control buttons are';
       case 'video_control_customize_hint':
         return 'Choose where each button sits on the player, or move it out.';
       case 'video_control_slot_bottom_left':
@@ -76708,8 +76496,6 @@ extension on _StringsEn {
         return 'Restore moved and removed buttons to the default player layout.';
       case 'floating_lyric_bg_opacity':
         return 'Floating subtitle background opacity';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Lower this to make the floating subtitle bar more transparent so it blocks less of your view';
       case 'dict_update_check':
         return 'Check for Updates';
       case 'dict_update_tooltip':
@@ -76758,8 +76544,6 @@ extension on _StringsEn {
         return ({required Object count}) => '${count} favorites';
       case 'video_setting_auto_play_next':
         return 'Auto-play next episode';
-      case 'video_setting_auto_play_next_hint':
-        return 'Automatically play the next episode in a playlist when one finishes';
       case 'video_auto_play_next_cancel':
         return 'Cancel';
       case 'video_auto_play_next_countdown':
@@ -77635,8 +77419,6 @@ extension on _StringsEn {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -78006,6 +77788,10 @@ extension on _StringsEn {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -80151,8 +79937,6 @@ extension on _StringsAr {
         return 'إيقاف';
       case 'desktop_clipboard_window_mode_lookup':
         return 'أثناء البحث فقط';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'دائمًا';
       case 'popup_instant_scroll':
@@ -80511,12 +80295,8 @@ extension on _StringsAr {
         return 'استخدم لونًا مخصصًا لنص الكلمات بدلًا من اتباع السمة';
       case 'floating_lyric_text_opacity':
         return 'تعتيم نص الترجمة العائمة';
-      case 'floating_lyric_text_opacity_hint':
-        return 'اخفض هذا لجعل نص الترجمة العائمة أكثر شفافية';
       case 'floating_lyric_button_bg_opacity':
         return 'تعتيم خلفية زر الترجمة العائمة';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'اضبط مدى شفافية خلفية أزرار التحكم في الترجمة العائمة';
       case 'video_control_customize_hint':
         return 'اختر موضع كل زر على المشغّل، أو انقله خارجه.';
       case 'video_control_slot_bottom_left':
@@ -80731,8 +80511,6 @@ extension on _StringsAr {
         return 'أعد الأزرار المنقولة والمُزالة إلى تخطيط المشغّل الافتراضي.';
       case 'floating_lyric_bg_opacity':
         return 'تعتيم خلفية الترجمة العائمة';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'اخفض هذا لجعل شريط الترجمة العائمة أكثر شفافية فيحجب رؤيتك أقل';
       case 'dict_update_check':
         return 'التحقق من التحديثات';
       case 'dict_update_tooltip':
@@ -80781,8 +80559,6 @@ extension on _StringsAr {
         return ({required Object count}) => '${count} مفضّلة';
       case 'video_setting_auto_play_next':
         return 'التشغيل التلقائي للحلقة التالية';
-      case 'video_setting_auto_play_next_hint':
-        return 'تشغيل الحلقة التالية في قائمة التشغيل تلقائيًا عند انتهاء واحدة';
       case 'video_auto_play_next_cancel':
         return 'إلغاء';
       case 'video_auto_play_next_countdown':
@@ -81659,8 +81435,6 @@ extension on _StringsAr {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -82030,6 +81804,10 @@ extension on _StringsAr {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -84192,8 +83970,6 @@ extension on _StringsDe {
         return 'Aus';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Nur beim Nachschlagen';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Immer';
       case 'popup_instant_scroll':
@@ -84554,12 +84330,8 @@ extension on _StringsDe {
         return 'Für den Liedtext eine eigene Farbe verwenden, statt dem Theme zu folgen';
       case 'floating_lyric_text_opacity':
         return 'Deckkraft des schwebenden Untertiteltexts';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Verringern, um den schwebenden Untertiteltext transparenter zu machen';
       case 'floating_lyric_button_bg_opacity':
         return 'Deckkraft des Hintergrunds der schwebenden Untertitel-Tasten';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Stellt ein, wie transparent die Hintergründe der schwebenden Untertitel-Bedienknöpfe sind';
       case 'video_control_customize_hint':
         return 'Wähle für jede Taste die Position auf dem Player oder entferne sie.';
       case 'video_control_slot_bottom_left':
@@ -84776,8 +84548,6 @@ extension on _StringsDe {
         return 'Setzt verschobene und entfernte Tasten auf das Standard-Player-Layout zurück.';
       case 'floating_lyric_bg_opacity':
         return 'Hintergrund-Deckkraft des schwebenden Untertitels';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Verringern, um die schwebende Untertitelleiste transparenter zu machen, damit sie weniger Sicht verdeckt';
       case 'dict_update_check':
         return 'Nach Updates suchen';
       case 'dict_update_tooltip':
@@ -84826,8 +84596,6 @@ extension on _StringsDe {
         return ({required Object count}) => '${count} Favoriten';
       case 'video_setting_auto_play_next':
         return 'Nächste Folge automatisch abspielen';
-      case 'video_setting_auto_play_next_hint':
-        return 'Spielt nach dem Ende einer Folge automatisch die nächste Folge der Playlist ab';
       case 'video_auto_play_next_cancel':
         return 'Abbrechen';
       case 'video_auto_play_next_countdown':
@@ -85704,8 +85472,6 @@ extension on _StringsDe {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -86075,6 +85841,10 @@ extension on _StringsDe {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -88236,8 +88006,6 @@ extension on _StringsEs {
         return 'Desactivado';
       case 'desktop_clipboard_window_mode_always':
         return 'Siempre';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Solo al consultar';
       case 'popup_instant_scroll':
@@ -88597,12 +88365,8 @@ extension on _StringsEs {
         return 'Usa un color personalizado para el texto de las letras en lugar de seguir el tema';
       case 'floating_lyric_text_opacity':
         return 'Opacidad del texto del subtítulo flotante';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Bájala para que el texto del subtítulo flotante sea más transparente';
       case 'floating_lyric_button_bg_opacity':
         return 'Opacidad del fondo de los botones del subtítulo flotante';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Ajusta la transparencia del fondo de los botones de control del subtítulo flotante';
       case 'video_control_customize_hint':
         return 'Elige dónde se coloca cada botón en el reproductor, o quítalo.';
       case 'video_control_slot_bottom_left':
@@ -88820,8 +88584,6 @@ extension on _StringsEs {
         return 'Restaura los botones movidos y quitados a la disposición predeterminada del reproductor.';
       case 'floating_lyric_bg_opacity':
         return 'Opacidad del fondo del subtítulo flotante';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Bájala para que la barra de subtítulo flotante sea más transparente y tape menos la vista';
       case 'dict_update_check':
         return 'Buscar actualizaciones';
       case 'dict_update_tooltip':
@@ -88870,8 +88632,6 @@ extension on _StringsEs {
         return ({required Object count}) => '${count} favoritos';
       case 'video_setting_auto_play_next':
         return 'Reproducir automáticamente el siguiente episodio';
-      case 'video_setting_auto_play_next_hint':
-        return 'Reproduce automáticamente el siguiente episodio de una lista cuando termina uno';
       case 'video_auto_play_next_cancel':
         return 'Cancelar';
       case 'video_auto_play_next_countdown':
@@ -89748,8 +89508,6 @@ extension on _StringsEs {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -90119,6 +89877,10 @@ extension on _StringsEs {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -92282,8 +92044,6 @@ extension on _StringsFr {
         return 'Désactivé';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Recherche uniquement';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Toujours';
       case 'popup_instant_scroll':
@@ -92644,12 +92404,8 @@ extension on _StringsFr {
         return 'Utiliser une couleur personnalisée pour les paroles au lieu de suivre le thème';
       case 'floating_lyric_text_opacity':
         return 'Opacité du texte du sous-titre flottant';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Baissez cette valeur pour rendre le texte du sous-titre flottant plus transparent';
       case 'floating_lyric_button_bg_opacity':
         return 'Opacité du fond des boutons du sous-titre flottant';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Réglez la transparence du fond des boutons de contrôle du sous-titre flottant';
       case 'video_control_customize_hint':
         return 'Choisissez l\'emplacement de chaque bouton sur le lecteur, ou retirez-le.';
       case 'video_control_slot_bottom_left':
@@ -92869,8 +92625,6 @@ extension on _StringsFr {
         return 'Rétablit les boutons déplacés et retirés selon la disposition par défaut du lecteur.';
       case 'floating_lyric_bg_opacity':
         return 'Opacité du fond du sous-titre flottant';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Baissez cette valeur pour rendre la barre de sous-titre flottant plus transparente et moins gênante';
       case 'dict_update_check':
         return 'Vérifier les mises à jour';
       case 'dict_update_tooltip':
@@ -92920,8 +92674,6 @@ extension on _StringsFr {
         return ({required Object count}) => '${count} favoris';
       case 'video_setting_auto_play_next':
         return 'Lecture auto de l\'épisode suivant';
-      case 'video_setting_auto_play_next_hint':
-        return 'Lit automatiquement l\'épisode suivant d\'une playlist à la fin du précédent';
       case 'video_auto_play_next_cancel':
         return 'Annuler';
       case 'video_auto_play_next_countdown':
@@ -93798,8 +93550,6 @@ extension on _StringsFr {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -94169,6 +93919,10 @@ extension on _StringsFr {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -96322,8 +96076,6 @@ extension on _StringsId {
         return 'Mati';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Hanya saat mencari';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Selalu';
       case 'popup_instant_scroll':
@@ -96681,12 +96433,8 @@ extension on _StringsId {
         return 'Gunakan warna kustom untuk teks lirik alih-alih mengikuti tema';
       case 'floating_lyric_text_opacity':
         return 'Opasitas teks subtitle melayang';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Turunkan untuk membuat teks subtitle melayang lebih transparan';
       case 'floating_lyric_button_bg_opacity':
         return 'Opasitas latar tombol subtitle melayang';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Atur seberapa transparan tombol kontrol subtitle melayang';
       case 'video_control_customize_hint':
         return 'Pilih posisi tiap tombol di pemutar, atau pindahkan keluar.';
       case 'video_control_slot_bottom_left':
@@ -96901,8 +96649,6 @@ extension on _StringsId {
         return 'Kembalikan tombol yang dipindahkan dan dihapus ke tata letak pemutar default.';
       case 'floating_lyric_bg_opacity':
         return 'Opasitas latar subtitle melayang';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Turunkan untuk membuat bilah subtitle melayang lebih transparan agar tidak terlalu menghalangi pandangan';
       case 'dict_update_check':
         return 'Cek Pembaruan';
       case 'dict_update_tooltip':
@@ -96951,8 +96697,6 @@ extension on _StringsId {
         return ({required Object count}) => '${count} favorit';
       case 'video_setting_auto_play_next':
         return 'Putar otomatis episode berikutnya';
-      case 'video_setting_auto_play_next_hint':
-        return 'Otomatis putar episode berikutnya dalam playlist ketika satu episode selesai';
       case 'video_auto_play_next_cancel':
         return 'Batal';
       case 'video_auto_play_next_countdown':
@@ -97830,8 +97574,6 @@ extension on _StringsId {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -98201,6 +97943,10 @@ extension on _StringsId {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -100356,8 +100102,6 @@ extension on _StringsIt {
         return 'Tienilo attivo con il blocco posizione se vuoi comunque la ricerca parole.';
       case 'desktop_clipboard_window_mode':
         return 'Fissaggio finestra';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Solo durante la ricerca';
       case 'desktop_clipboard_window_mode_normal':
@@ -100722,12 +100466,8 @@ extension on _StringsIt {
         return 'Usa un colore personalizzato per il testo dei testi invece di seguire il tema';
       case 'floating_lyric_text_opacity':
         return 'Opacità del testo del sottotitolo fluttuante';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Abbassa questo valore per rendere più trasparente il testo del sottotitolo fluttuante';
       case 'floating_lyric_button_bg_opacity':
         return 'Opacità sfondo dei pulsanti del sottotitolo fluttuante';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Regola la trasparenza dello sfondo dei pulsanti di controllo del sottotitolo fluttuante';
       case 'video_control_customize_hint':
         return 'Scegli dove collocare ogni pulsante sul lettore, oppure rimuovilo.';
       case 'video_control_slot_bottom_left':
@@ -100947,8 +100687,6 @@ extension on _StringsIt {
         return 'Riporta i pulsanti spostati e rimossi al layout predefinito del lettore.';
       case 'floating_lyric_bg_opacity':
         return 'Opacità sfondo del sottotitolo fluttuante';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Abbassa questo valore per rendere più trasparente la barra del sottotitolo fluttuante, così da ostacolare meno la visuale';
       case 'dict_update_check':
         return 'Controlla aggiornamenti';
       case 'dict_update_tooltip':
@@ -100998,8 +100736,6 @@ extension on _StringsIt {
         return ({required Object count}) => '${count} preferiti';
       case 'video_setting_auto_play_next':
         return 'Riproduci automaticamente l\'episodio successivo';
-      case 'video_setting_auto_play_next_hint':
-        return 'Riproduce automaticamente l\'episodio successivo di una playlist quando uno finisce';
       case 'video_auto_play_next_cancel':
         return 'Annulla';
       case 'video_auto_play_next_countdown':
@@ -101877,8 +101613,6 @@ extension on _StringsIt {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -102248,6 +101982,10 @@ extension on _StringsIt {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -104378,8 +104116,6 @@ extension on _StringsJa {
         return '位置を固定したままでも辞書引きを使いたい場合はオンにしてください。';
       case 'desktop_clipboard_window_mode':
         return 'ウィンドウの最前面固定';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return '辞書引き中のみ';
       case 'desktop_clipboard_window_mode_normal':
@@ -104741,12 +104477,8 @@ extension on _StringsJa {
         return '歌詞字幕にテーマに従わないカスタムの色を使います';
       case 'floating_lyric_text_opacity':
         return 'フローティング字幕の文字の不透明度';
-      case 'floating_lyric_text_opacity_hint':
-        return '下げるとフローティング字幕の文字がより透明になります';
       case 'floating_lyric_button_bg_opacity':
         return 'フローティング字幕ボタンの背景の不透明度';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'フローティング字幕の操作ボタンの背景の透明度を調整します';
       case 'video_control_customize_hint':
         return '各ボタンをプレーヤー上のどこに置くかを選ぶか、外します。';
       case 'video_control_slot_bottom_left':
@@ -104960,8 +104692,6 @@ extension on _StringsJa {
         return '移動・削除したボタンを、デフォルトのプレーヤー配置に戻します。';
       case 'floating_lyric_bg_opacity':
         return 'フローティング字幕の背景の不透明度';
-      case 'floating_lyric_bg_opacity_hint':
-        return '下げるとフローティング字幕バーがより透明になり、視界を遮りにくくなります';
       case 'dict_update_check':
         return '更新を確認';
       case 'dict_update_tooltip':
@@ -105010,8 +104740,6 @@ extension on _StringsJa {
         return ({required Object count}) => 'お気に入り ${count} 句';
       case 'video_setting_auto_play_next':
         return '次のエピソードを自動再生';
-      case 'video_setting_auto_play_next_hint':
-        return 'プレイリスト内の 1 話が終わると、自動的に次のエピソードを再生します';
       case 'video_auto_play_next_cancel':
         return 'キャンセル';
       case 'video_auto_play_next_countdown':
@@ -105887,8 +105615,6 @@ extension on _StringsJa {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -106257,6 +105983,10 @@ extension on _StringsJa {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -108390,8 +108120,6 @@ extension on _StringsKo {
         return '위치를 고정해도 단어 찾기를 쓰려면 이 옵션을 켜 두세요.';
       case 'desktop_clipboard_window_mode':
         return '창 고정';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return '단어 찾기 중에만';
       case 'desktop_clipboard_window_mode_normal':
@@ -108753,12 +108481,8 @@ extension on _StringsKo {
         return '테마를 따르지 않고 가사 텍스트에 사용자 지정 색상을 사용합니다';
       case 'floating_lyric_text_opacity':
         return '플로팅 자막 텍스트 불투명도';
-      case 'floating_lyric_text_opacity_hint':
-        return '낮추면 플로팅 자막 텍스트가 더 투명해집니다';
       case 'floating_lyric_button_bg_opacity':
         return '플로팅 자막 버튼 배경 불투명도';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return '플로팅 자막 조작 버튼의 배경 투명도를 조절합니다';
       case 'video_control_customize_hint':
         return '각 버튼이 플레이어의 어디에 놓일지 선택하거나 빼낼 수 있습니다.';
       case 'video_control_slot_bottom_left':
@@ -108972,8 +108696,6 @@ extension on _StringsKo {
         return '옮기거나 제거한 버튼을 기본 플레이어 배치로 되돌립니다.';
       case 'floating_lyric_bg_opacity':
         return '플로팅 자막 배경 불투명도';
-      case 'floating_lyric_bg_opacity_hint':
-        return '낮추면 플로팅 자막 바가 더 투명해져 시야를 덜 가립니다';
       case 'dict_update_check':
         return '업데이트 확인';
       case 'dict_update_tooltip':
@@ -109022,8 +108744,6 @@ extension on _StringsKo {
         return ({required Object count}) => '즐겨찾기 ${count}개';
       case 'video_setting_auto_play_next':
         return '다음 에피소드 자동 재생';
-      case 'video_setting_auto_play_next_hint':
-        return '재생목록에서 한 에피소드가 끝나면 다음 에피소드를 자동으로 재생합니다';
       case 'video_auto_play_next_cancel':
         return '취소';
       case 'video_auto_play_next_countdown':
@@ -109899,8 +109619,6 @@ extension on _StringsKo {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -110270,6 +109988,10 @@ extension on _StringsKo {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -112422,8 +112144,6 @@ extension on _StringsNl {
         return 'Houd dit aan met positievergrendeling als je nog steeds woorden wilt opzoeken.';
       case 'desktop_clipboard_window_mode':
         return 'Venster vastzetten';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Altijd';
       case 'desktop_clipboard_window_mode_lookup':
@@ -112787,12 +112507,8 @@ extension on _StringsNl {
         return 'Gebruik een aangepaste kleur voor songteksten in plaats van het thema te volgen';
       case 'floating_lyric_text_opacity':
         return 'Tekstdekking zwevende ondertitel';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Verlaag dit om de tekst van de zwevende ondertitel transparanter te maken';
       case 'floating_lyric_button_bg_opacity':
         return 'Dekking knopachtergrond zwevende ondertitel';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Pas aan hoe transparant de bedieningsknoppen van de zwevende ondertitel zijn';
       case 'video_control_customize_hint':
         return 'Kies waar elke knop op de speler staat, of verwijder hem.';
       case 'video_control_slot_bottom_left':
@@ -113010,8 +112726,6 @@ extension on _StringsNl {
         return 'Herstel verplaatste en verwijderde knoppen naar de standaard spelerindeling.';
       case 'floating_lyric_bg_opacity':
         return 'Achtergronddekking zwevende ondertitel';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Verlaag dit om de zwevende ondertitelbalk transparanter te maken, zodat hij minder van je zicht blokkeert';
       case 'dict_update_check':
         return 'Controleren op updates';
       case 'dict_update_tooltip':
@@ -113060,8 +112774,6 @@ extension on _StringsNl {
         return ({required Object count}) => '${count} favorieten';
       case 'video_setting_auto_play_next':
         return 'Volgende aflevering automatisch afspelen';
-      case 'video_setting_auto_play_next_hint':
-        return 'Speel automatisch de volgende aflevering in een afspeellijst af wanneer er een eindigt';
       case 'video_auto_play_next_cancel':
         return 'Annuleren';
       case 'video_auto_play_next_countdown':
@@ -113939,8 +113651,6 @@ extension on _StringsNl {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -114310,6 +114020,10 @@ extension on _StringsNl {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -116461,8 +116175,6 @@ extension on _StringsPtBr {
         return 'Mantenha isto ativado com a posição travada se ainda quiser consultar palavras.';
       case 'desktop_clipboard_window_mode':
         return 'Fixação da janela';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Apenas durante a consulta';
       case 'desktop_clipboard_window_mode_normal':
@@ -116826,12 +116538,8 @@ extension on _StringsPtBr {
         return 'Use uma cor personalizada para o texto das letras em vez de seguir o tema';
       case 'floating_lyric_text_opacity':
         return 'Opacidade do texto da legenda flutuante';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Reduza para deixar o texto da legenda flutuante mais transparente';
       case 'floating_lyric_button_bg_opacity':
         return 'Opacidade do fundo dos botões da legenda flutuante';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Ajuste a transparência do fundo dos botões de controle da legenda flutuante';
       case 'video_control_customize_hint':
         return 'Escolha onde cada botão fica no player ou remova-o.';
       case 'video_control_slot_bottom_left':
@@ -117049,8 +116757,6 @@ extension on _StringsPtBr {
         return 'Restaura os botões movidos e removidos para o layout padrão do player.';
       case 'floating_lyric_bg_opacity':
         return 'Opacidade do fundo da legenda flutuante';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Reduza para deixar a barra de legenda flutuante mais transparente e bloquear menos a visão';
       case 'dict_update_check':
         return 'Verificar atualizações';
       case 'dict_update_tooltip':
@@ -117099,8 +116805,6 @@ extension on _StringsPtBr {
         return ({required Object count}) => '${count} favoritas';
       case 'video_setting_auto_play_next':
         return 'Reproduzir o próximo episódio automaticamente';
-      case 'video_setting_auto_play_next_hint':
-        return 'Reproduz automaticamente o próximo episódio de uma playlist quando um termina';
       case 'video_auto_play_next_cancel':
         return 'Cancelar';
       case 'video_auto_play_next_countdown':
@@ -117976,8 +117680,6 @@ extension on _StringsPtBr {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -118347,6 +118049,10 @@ extension on _StringsPtBr {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -120501,8 +120207,6 @@ extension on _StringsRu {
         return 'Оставьте включённым с фиксацией положения, если хотите сохранить поиск слов.';
       case 'desktop_clipboard_window_mode':
         return 'Закрепление окна';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Только при поиске';
       case 'desktop_clipboard_window_mode_normal':
@@ -120866,12 +120570,8 @@ extension on _StringsRu {
         return 'Использовать свой цвет для текста песен вместо следования теме';
       case 'floating_lyric_text_opacity':
         return 'Непрозрачность текста плавающих субтитров';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Уменьшите, чтобы текст плавающих субтитров стал прозрачнее';
       case 'floating_lyric_button_bg_opacity':
         return 'Непрозрачность фона кнопок плавающих субтитров';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Настройте прозрачность фона кнопок управления плавающими субтитрами';
       case 'video_control_customize_hint':
         return 'Выберите место каждой кнопки на плеере или уберите её.';
       case 'video_control_slot_bottom_left':
@@ -121090,8 +120790,6 @@ extension on _StringsRu {
         return 'Вернуть перемещённые и убранные кнопки к стандартному расположению плеера.';
       case 'floating_lyric_bg_opacity':
         return 'Непрозрачность фона плавающих субтитров';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Уменьшите, чтобы панель плавающих субтитров стала прозрачнее и меньше закрывала обзор';
       case 'dict_update_check':
         return 'Проверить обновления';
       case 'dict_update_tooltip':
@@ -121140,8 +120838,6 @@ extension on _StringsRu {
         return ({required Object count}) => 'В избранном: ${count}';
       case 'video_setting_auto_play_next':
         return 'Автовоспроизведение следующей серии';
-      case 'video_setting_auto_play_next_hint':
-        return 'Автоматически воспроизводить следующую серию в плейлисте после завершения текущей';
       case 'video_auto_play_next_cancel':
         return 'Отмена';
       case 'video_auto_play_next_countdown':
@@ -122018,8 +121714,6 @@ extension on _StringsRu {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -122389,6 +122083,10 @@ extension on _StringsRu {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -124538,8 +124236,6 @@ extension on _StringsTh {
         return 'เสมอ';
       case 'desktop_clipboard_window_mode_lookup':
         return 'เฉพาะตอนค้นคำ';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'popup_instant_scroll':
         return 'เลื่อนหน้าต่างค้นคำแบบทันที';
       case 'popup_instant_scroll_hint':
@@ -124895,12 +124591,8 @@ extension on _StringsTh {
         return 'ใช้สีที่กำหนดเองสำหรับตัวอักษรเนื้อร้องแทนการตามธีม';
       case 'floating_lyric_text_opacity':
         return 'ความทึบของตัวอักษรคำบรรยายลอย';
-      case 'floating_lyric_text_opacity_hint':
-        return 'ลดค่านี้เพื่อให้ตัวอักษรคำบรรยายลอยโปร่งใสขึ้น';
       case 'floating_lyric_button_bg_opacity':
         return 'ความทึบของพื้นหลังปุ่มคำบรรยายลอย';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'ปรับความโปร่งใสของพื้นหลังปุ่มควบคุมคำบรรยายลอย';
       case 'video_control_customize_hint':
         return 'เลือกตำแหน่งของแต่ละปุ่มบนโปรแกรมเล่น หรือนำออก';
       case 'video_control_slot_bottom_left':
@@ -125115,8 +124807,6 @@ extension on _StringsTh {
         return 'คืนปุ่มที่ย้ายและนำออกกลับสู่เลย์เอาต์โปรแกรมเล่นเริ่มต้น';
       case 'floating_lyric_bg_opacity':
         return 'ความทึบของพื้นหลังคำบรรยายลอย';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'ลดค่านี้เพื่อให้แถบคำบรรยายลอยโปร่งใสขึ้นและบังมุมมองน้อยลง';
       case 'dict_update_check':
         return 'ตรวจสอบอัปเดต';
       case 'dict_update_tooltip':
@@ -125165,8 +124855,6 @@ extension on _StringsTh {
         return ({required Object count}) => '${count} รายการโปรด';
       case 'video_setting_auto_play_next':
         return 'เล่นตอนถัดไปอัตโนมัติ';
-      case 'video_setting_auto_play_next_hint':
-        return 'เมื่อตอนหนึ่งจบ ให้เล่นตอนถัดไปในเพลย์ลิสต์โดยอัตโนมัติ';
       case 'video_auto_play_next_cancel':
         return 'ยกเลิก';
       case 'video_auto_play_next_countdown':
@@ -126044,8 +125732,6 @@ extension on _StringsTh {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -126415,6 +126101,10 @@ extension on _StringsTh {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -128569,8 +128259,6 @@ extension on _StringsTr {
         return 'Her zaman';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Yalnızca arama sırasında';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'popup_instant_scroll':
         return 'Anında açılır pencere kaydırma';
       case 'popup_instant_scroll_hint':
@@ -128927,12 +128615,8 @@ extension on _StringsTr {
         return 'Şarkı sözü metni için temayı izlemek yerine özel bir renk kullan';
       case 'floating_lyric_text_opacity':
         return 'Kayan altyazı metni saydamlığı';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Kayan altyazı metnini daha saydam yapmak için bunu azaltın';
       case 'floating_lyric_button_bg_opacity':
         return 'Kayan altyazı düğmesi arka plan saydamlığı';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Kayan altyazı denetim düğmelerinin ne kadar saydam olacağını ayarlayın';
       case 'video_control_customize_hint':
         return 'Her düğmenin oynatıcıda nerede duracağını seçin ya da dışarı taşıyın.';
       case 'video_control_slot_bottom_left':
@@ -129151,8 +128835,6 @@ extension on _StringsTr {
         return 'Taşınan ve kaldırılan düğmeleri varsayılan oynatıcı düzenine geri yükleyin.';
       case 'floating_lyric_bg_opacity':
         return 'Kayan altyazı arka plan matlığı';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Kayan altyazı çubuğunu daha saydam yapıp görüşünüzü daha az engellemesi için bunu azaltın';
       case 'dict_update_check':
         return 'Güncellemeleri Denetle';
       case 'dict_update_tooltip':
@@ -129201,8 +128883,6 @@ extension on _StringsTr {
         return ({required Object count}) => '${count} sık kullanılan';
       case 'video_setting_auto_play_next':
         return 'Sonraki bölümü otomatik oynat';
-      case 'video_setting_auto_play_next_hint':
-        return 'Bir oynatma listesinde biri bittiğinde sonraki bölümü otomatik olarak oynat';
       case 'video_auto_play_next_cancel':
         return 'İptal';
       case 'video_auto_play_next_countdown':
@@ -130079,8 +129759,6 @@ extension on _StringsTr {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -130450,6 +130128,10 @@ extension on _StringsTr {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -132594,8 +132276,6 @@ extension on _StringsVi {
         return 'Bật mục này cùng với khóa vị trí nếu bạn vẫn muốn tra từ.';
       case 'desktop_clipboard_window_mode':
         return 'Ghim cửa sổ';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Luôn luôn';
       case 'desktop_clipboard_window_mode_lookup':
@@ -132959,12 +132639,8 @@ extension on _StringsVi {
         return 'Dùng màu tùy chỉnh cho chữ lời thay vì theo chủ đề';
       case 'floating_lyric_text_opacity':
         return 'Độ mờ chữ phụ đề nổi';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Giảm xuống để chữ phụ đề nổi trong suốt hơn';
       case 'floating_lyric_button_bg_opacity':
         return 'Độ mờ nền nút phụ đề nổi';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Điều chỉnh mức trong suốt của nền các nút điều khiển phụ đề nổi';
       case 'video_control_customize_hint':
         return 'Chọn vị trí đặt mỗi nút trên trình phát, hoặc gỡ nó ra.';
       case 'video_control_slot_bottom_left':
@@ -133181,8 +132857,6 @@ extension on _StringsVi {
         return 'Khôi phục các nút đã di chuyển và gỡ bỏ về bố cục trình phát mặc định.';
       case 'floating_lyric_bg_opacity':
         return 'Độ mờ nền phụ đề nổi';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Giảm xuống để thanh phụ đề nổi trong suốt hơn, ít che tầm nhìn hơn';
       case 'dict_update_check':
         return 'Kiểm tra cập nhật';
       case 'dict_update_tooltip':
@@ -133231,8 +132905,6 @@ extension on _StringsVi {
         return ({required Object count}) => '${count} câu yêu thích';
       case 'video_setting_auto_play_next':
         return 'Tự phát tập tiếp theo';
-      case 'video_setting_auto_play_next_hint':
-        return 'Tự động phát tập tiếp theo trong danh sách phát khi một tập kết thúc';
       case 'video_auto_play_next_cancel':
         return 'Hủy';
       case 'video_auto_play_next_countdown':
@@ -134109,8 +133781,6 @@ extension on _StringsVi {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -134480,6 +134150,10 @@ extension on _StringsVi {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
@@ -136607,8 +136281,6 @@ extension on _StringsZhCn {
         return '锁定悬浮字幕位置时仍可保留点击查词。';
       case 'desktop_clipboard_window_mode':
         return '窗口置顶策略';
-      case 'desktop_clipboard_window_mode_hint':
-        return '控制 Hibiki 是否保持在其他窗口上方';
       case 'desktop_clipboard_window_mode_always':
         return '始终置顶';
       case 'desktop_clipboard_window_mode_lookup':
@@ -136970,12 +136642,8 @@ extension on _StringsZhCn {
         return '歌词字幕用自定义颜色（不跟随主题）';
       case 'floating_lyric_text_opacity':
         return '悬浮字幕文字透明度';
-      case 'floating_lyric_text_opacity_hint':
-        return '调低让悬浮字幕文字更透明';
       case 'floating_lyric_button_bg_opacity':
         return '悬浮字幕按钮底色透明度';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return '调整悬浮字幕控制按钮底色的透明度';
       case 'video_control_customize_hint':
         return '为每个按钮选择在播放器上的位置，或将其移出。';
       case 'video_control_slot_bottom_left':
@@ -137187,8 +136855,6 @@ extension on _StringsZhCn {
         return '把移动和移出的按钮恢复为默认播放器布局。';
       case 'floating_lyric_bg_opacity':
         return '悬浮字幕背景不透明度';
-      case 'floating_lyric_bg_opacity_hint':
-        return '调低让悬浮字幕条更透明、更不挡视野';
       case 'dict_update_check':
         return '检查更新';
       case 'dict_update_tooltip':
@@ -137239,8 +136905,6 @@ extension on _StringsZhCn {
         return ({required Object seconds}) => '${seconds} 秒后播放下一集';
       case 'video_setting_auto_play_next':
         return '自动连播下一集';
-      case 'video_setting_auto_play_next_hint':
-        return '播放列表里一集播完后自动播放下一集';
       case 'video_auto_play_next_cancel':
         return '取消';
       case 'video_episode_list_empty':
@@ -138109,8 +137773,6 @@ extension on _StringsZhCn {
         return '搜索失败，请稍后重试。';
       case 'desktop_clipboard_destination':
         return '剪贴板查词显示位置';
-      case 'desktop_clipboard_destination_hint':
-        return '剪贴板查词结果显示在哪里';
       case 'desktop_clipboard_destination_main':
         return '主窗口';
       case 'desktop_clipboard_destination_panel':
@@ -138478,6 +138140,10 @@ extension on _StringsZhCn {
         return '已入库，可从视频库打开边下边播';
       case 'anime_download_play_now_fail':
         return '暂不可提前入库（元数据未就绪或连接失败），稍后再试';
+      case 'interconnect_section_related':
+        return '远端内容与查词';
+      case 'desktop_clipboard_window_mode_hint':
+        return '控制 Hibiki 是否保持在其他窗口上方';
       default:
         return null;
     }
@@ -140606,8 +140272,6 @@ extension on _StringsZhHk {
         return '鎖定懸浮字幕位置時若仍想查詞，請保持開啟。';
       case 'desktop_clipboard_window_mode':
         return '視窗置頂策略';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return '永遠置頂';
       case 'desktop_clipboard_window_mode_lookup':
@@ -140969,12 +140633,8 @@ extension on _StringsZhHk {
         return '歌詞字幕使用自訂顏色（不跟隨主題）';
       case 'floating_lyric_text_opacity':
         return '懸浮字幕文字不透明度';
-      case 'floating_lyric_text_opacity_hint':
-        return '調低可讓懸浮字幕文字更透明';
       case 'floating_lyric_button_bg_opacity':
         return '懸浮字幕按鈕底色不透明度';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return '調整懸浮字幕控制按鈕底色的透明度';
       case 'video_control_customize_hint':
         return '為每個按鈕選擇在播放器上的位置，或將其移出。';
       case 'video_control_slot_bottom_left':
@@ -141186,8 +140846,6 @@ extension on _StringsZhHk {
         return '把已移動及移出的按鈕還原為預設的播放器版面。';
       case 'floating_lyric_bg_opacity':
         return '懸浮字幕背景不透明度';
-      case 'floating_lyric_bg_opacity_hint':
-        return '調低可讓懸浮字幕條更透明、更少遮擋視野';
       case 'dict_update_check':
         return '檢查更新';
       case 'dict_update_tooltip':
@@ -141236,8 +140894,6 @@ extension on _StringsZhHk {
         return ({required Object count}) => '收藏 ${count} 句';
       case 'video_setting_auto_play_next':
         return '自動連播下一集';
-      case 'video_setting_auto_play_next_hint':
-        return '播放清單中一集播完後，自動播放下一集';
       case 'video_auto_play_next_cancel':
         return '取消';
       case 'video_auto_play_next_countdown':
@@ -142112,8 +141768,6 @@ extension on _StringsZhHk {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -142482,6 +142136,10 @@ extension on _StringsZhHk {
         return 'Imported — open it from the video library to play while downloading';
       case 'anime_download_play_now_fail':
         return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
       default:
         return null;
     }
