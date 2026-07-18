@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 33439 (1967 per locale)
+/// Strings: 33507 (1971 per locale)
 ///
-/// Built on 2026-07-18 at 16:17 UTC
+/// Built on 2026-07-18 at 16:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2645,6 +2645,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   String get reading_activity => 'Reading activity';
   String get video_watch_activity => 'Watch activity';
+  String get book_mark_completed_action => 'Mark as completed';
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  String get book_marked_completed => 'Marked as completed';
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 // Path: <root>
@@ -7103,6 +7107,14 @@ class _StringsAr extends _StringsEn {
   String get reading_activity => 'Reading activity';
   @override
   String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 // Path: <root>
@@ -11634,6 +11646,14 @@ class _StringsDe extends _StringsEn {
   String get reading_activity => 'Reading activity';
   @override
   String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 // Path: <root>
@@ -16181,6 +16201,14 @@ class _StringsEs extends _StringsEn {
   String get reading_activity => 'Reading activity';
   @override
   String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 // Path: <root>
@@ -20739,6 +20767,14 @@ class _StringsFr extends _StringsEn {
   String get reading_activity => 'Reading activity';
   @override
   String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 // Path: <root>
@@ -25224,6 +25260,14 @@ class _StringsId extends _StringsEn {
   String get reading_activity => 'Reading activity';
   @override
   String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 // Path: <root>
@@ -29757,6 +29801,14 @@ class _StringsIt extends _StringsEn {
   String get reading_activity => 'Reading activity';
   @override
   String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 // Path: <root>
@@ -34096,6 +34148,14 @@ class _StringsJa extends _StringsEn {
   String get reading_activity => 'Reading activity';
   @override
   String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 // Path: <root>
@@ -38438,6 +38498,14 @@ class _StringsKo extends _StringsEn {
   String get reading_activity => 'Reading activity';
   @override
   String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 // Path: <root>
@@ -42949,6 +43017,14 @@ class _StringsNl extends _StringsEn {
   String get reading_activity => 'Reading activity';
   @override
   String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 // Path: <root>
@@ -47475,6 +47551,14 @@ class _StringsPtBr extends _StringsEn {
   String get reading_activity => 'Reading activity';
   @override
   String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 // Path: <root>
@@ -51984,6 +52068,14 @@ class _StringsRu extends _StringsEn {
   String get reading_activity => 'Reading activity';
   @override
   String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 // Path: <root>
@@ -56438,6 +56530,14 @@ class _StringsTh extends _StringsEn {
   String get reading_activity => 'Reading activity';
   @override
   String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 // Path: <root>
@@ -60924,6 +61024,14 @@ class _StringsTr extends _StringsEn {
   String get reading_activity => 'Reading activity';
   @override
   String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 // Path: <root>
@@ -65397,6 +65505,14 @@ class _StringsVi extends _StringsEn {
   String get reading_activity => 'Reading activity';
   @override
   String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 // Path: <root>
@@ -69563,6 +69679,14 @@ class _StringsZhCn extends _StringsEn {
   String get reading_activity => '阅读活动';
   @override
   String get video_watch_activity => '观看活动';
+  @override
+  String get book_mark_completed_action => '标记为已读完';
+  @override
+  String get book_mark_uncompleted_action => '取消已读完';
+  @override
+  String get book_marked_completed => '已标记为读完';
+  @override
+  String get book_marked_uncompleted => '已取消完成标记';
 }
 
 // Path: <root>
@@ -73824,6 +73948,14 @@ class _StringsZhHk extends _StringsEn {
   String get reading_activity => 'Reading activity';
   @override
   String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
 }
 
 /// Flat map(s) containing all translations.
@@ -77847,6 +77979,14 @@ extension on _StringsEn {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
@@ -81868,6 +82008,14 @@ extension on _StringsAr {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
@@ -85910,6 +86058,14 @@ extension on _StringsDe {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
@@ -89951,6 +90107,14 @@ extension on _StringsEs {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
@@ -93998,6 +94162,14 @@ extension on _StringsFr {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
@@ -98027,6 +98199,14 @@ extension on _StringsId {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
@@ -102071,6 +102251,14 @@ extension on _StringsIt {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
@@ -106077,6 +106265,14 @@ extension on _StringsJa {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
@@ -110087,6 +110283,14 @@ extension on _StringsKo {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
@@ -114124,6 +114328,14 @@ extension on _StringsNl {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
@@ -118158,6 +118370,14 @@ extension on _StringsPtBr {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
@@ -122197,6 +122417,14 @@ extension on _StringsRu {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
@@ -126220,6 +126448,14 @@ extension on _StringsTh {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
@@ -130252,6 +130488,14 @@ extension on _StringsTr {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
@@ -134279,6 +134523,14 @@ extension on _StringsVi {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
@@ -138274,6 +138526,14 @@ extension on _StringsZhCn {
         return '阅读活动';
       case 'video_watch_activity':
         return '观看活动';
+      case 'book_mark_completed_action':
+        return '标记为已读完';
+      case 'book_mark_uncompleted_action':
+        return '取消已读完';
+      case 'book_marked_completed':
+        return '已标记为读完';
+      case 'book_marked_uncompleted':
+        return '已取消完成标记';
       default:
         return null;
     }
@@ -142275,6 +142535,14 @@ extension on _StringsZhHk {
         return 'Reading activity';
       case 'video_watch_activity':
         return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
       default:
         return null;
     }
