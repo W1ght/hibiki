@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 33507 (1971 per locale)
+/// Strings: 33541 (1973 per locale)
 ///
-/// Built on 2026-07-18 at 16:34 UTC
+/// Built on 2026-07-18 at 18:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2649,6 +2649,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get book_mark_uncompleted_action => 'Mark as not completed';
   String get book_marked_completed => 'Marked as completed';
   String get book_marked_uncompleted => 'Marked as not completed';
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -7115,6 +7119,12 @@ class _StringsAr extends _StringsEn {
   String get book_marked_completed => 'Marked as completed';
   @override
   String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -11654,6 +11664,12 @@ class _StringsDe extends _StringsEn {
   String get book_marked_completed => 'Marked as completed';
   @override
   String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -16209,6 +16225,12 @@ class _StringsEs extends _StringsEn {
   String get book_marked_completed => 'Marked as completed';
   @override
   String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -20775,6 +20797,12 @@ class _StringsFr extends _StringsEn {
   String get book_marked_completed => 'Marked as completed';
   @override
   String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -25268,6 +25296,12 @@ class _StringsId extends _StringsEn {
   String get book_marked_completed => 'Marked as completed';
   @override
   String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -29809,6 +29843,12 @@ class _StringsIt extends _StringsEn {
   String get book_marked_completed => 'Marked as completed';
   @override
   String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -34156,6 +34196,12 @@ class _StringsJa extends _StringsEn {
   String get book_marked_completed => 'Marked as completed';
   @override
   String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -38506,6 +38552,12 @@ class _StringsKo extends _StringsEn {
   String get book_marked_completed => 'Marked as completed';
   @override
   String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -43025,6 +43077,12 @@ class _StringsNl extends _StringsEn {
   String get book_marked_completed => 'Marked as completed';
   @override
   String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -47559,6 +47617,12 @@ class _StringsPtBr extends _StringsEn {
   String get book_marked_completed => 'Marked as completed';
   @override
   String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -52076,6 +52140,12 @@ class _StringsRu extends _StringsEn {
   String get book_marked_completed => 'Marked as completed';
   @override
   String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -56538,6 +56608,12 @@ class _StringsTh extends _StringsEn {
   String get book_marked_completed => 'Marked as completed';
   @override
   String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -61032,6 +61108,12 @@ class _StringsTr extends _StringsEn {
   String get book_marked_completed => 'Marked as completed';
   @override
   String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -65513,6 +65595,12 @@ class _StringsVi extends _StringsEn {
   String get book_marked_completed => 'Marked as completed';
   @override
   String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 // Path: <root>
@@ -69687,6 +69775,12 @@ class _StringsZhCn extends _StringsEn {
   String get book_marked_completed => '已标记为读完';
   @override
   String get book_marked_uncompleted => '已取消完成标记';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      '标签「${name}」已添加到合集。';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      '标签「${name}」已在此合集上。';
 }
 
 // Path: <root>
@@ -73956,6 +74050,12 @@ class _StringsZhHk extends _StringsEn {
   String get book_marked_completed => 'Marked as completed';
   @override
   String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
 }
 
 /// Flat map(s) containing all translations.
@@ -77987,6 +78087,11 @@ extension on _StringsEn {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -82016,6 +82121,11 @@ extension on _StringsAr {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -86066,6 +86176,11 @@ extension on _StringsDe {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -90115,6 +90230,11 @@ extension on _StringsEs {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -94170,6 +94290,11 @@ extension on _StringsFr {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -98207,6 +98332,11 @@ extension on _StringsId {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -102259,6 +102389,11 @@ extension on _StringsIt {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -106273,6 +106408,11 @@ extension on _StringsJa {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -110291,6 +110431,11 @@ extension on _StringsKo {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -114336,6 +114481,11 @@ extension on _StringsNl {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -118378,6 +118528,11 @@ extension on _StringsPtBr {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -122425,6 +122580,11 @@ extension on _StringsRu {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -126456,6 +126616,11 @@ extension on _StringsTh {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -130496,6 +130661,11 @@ extension on _StringsTr {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -134531,6 +134701,11 @@ extension on _StringsVi {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
@@ -138534,6 +138709,10 @@ extension on _StringsZhCn {
         return '已标记为读完';
       case 'book_marked_uncompleted':
         return '已取消完成标记';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => '标签「${name}」已添加到合集。';
+      case 'tag_already_on_collection':
+        return ({required Object name}) => '标签「${name}」已在此合集上。';
       default:
         return null;
     }
@@ -142543,6 +142722,11 @@ extension on _StringsZhHk {
         return 'Marked as completed';
       case 'book_marked_uncompleted':
         return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
       default:
         return null;
     }
