@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 32895 (1935 per locale)
+/// Strings: 33014 (1942 per locale)
 ///
-/// Built on 2026-07-17 at 16:32 UTC
+/// Built on 2026-07-19 at 12:54 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2612,6 +2612,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Connection & server settings are in the Hibiki Interconnect category';
   String get settings_search_hint => 'Search settings';
   String get settings_search_no_results => 'No matching settings';
+  String get games => 'Games';
+  String get games_add => 'Add game';
+  String get games_empty => 'No games added yet';
+  String get games_rename => 'Rename';
+  String get games_remove => 'Remove';
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -7005,6 +7013,21 @@ class _StringsAr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -11471,6 +11494,21 @@ class _StringsDe extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -15953,6 +15991,21 @@ class _StringsEs extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -20446,6 +20499,21 @@ class _StringsFr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -24866,6 +24934,21 @@ class _StringsId extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -29334,6 +29417,21 @@ class _StringsIt extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -33607,6 +33705,21 @@ class _StringsJa extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -37883,6 +37996,21 @@ class _StringsKo extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -42329,6 +42457,21 @@ class _StringsNl extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -46790,6 +46933,21 @@ class _StringsPtBr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -51234,6 +51392,21 @@ class _StringsRu extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -55623,6 +55796,21 @@ class _StringsTh extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -60044,6 +60232,21 @@ class _StringsTr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -64452,6 +64655,21 @@ class _StringsVi extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -68553,6 +68771,20 @@ class _StringsZhCn extends _StringsEn {
   String get settings_search_hint => '搜索设置';
   @override
   String get settings_search_no_results => '没有匹配的设置项';
+  @override
+  String get games => '游戏';
+  @override
+  String get games_add => '添加游戏';
+  @override
+  String get games_empty => '还没有添加游戏';
+  @override
+  String get games_rename => '重命名';
+  @override
+  String get games_remove => '移除';
+  @override
+  String get games_launch_unsupported => '启动游戏仅支持 Windows 桌面';
+  @override
+  String get games_exe_missing => '找不到游戏可执行文件';
 }
 
 // Path: <root>
@@ -72745,6 +72977,21 @@ class _StringsZhHk extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 /// Flat map(s) containing all translations.
@@ -76703,6 +76950,20 @@ extension on _StringsEn {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -80659,6 +80920,20 @@ extension on _StringsAr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -84636,6 +84911,20 @@ extension on _StringsDe {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -88612,6 +88901,20 @@ extension on _StringsEs {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -92594,6 +92897,20 @@ extension on _StringsFr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -96558,6 +96875,20 @@ extension on _StringsId {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -100537,6 +100868,20 @@ extension on _StringsIt {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -104478,6 +104823,20 @@ extension on _StringsJa {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -108423,6 +108782,20 @@ extension on _StringsKo {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -112395,6 +112768,20 @@ extension on _StringsNl {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -116364,6 +116751,20 @@ extension on _StringsPtBr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -120338,6 +120739,20 @@ extension on _StringsRu {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -124296,6 +124711,20 @@ extension on _StringsTh {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -128263,6 +128692,20 @@ extension on _StringsTr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -132225,6 +132668,20 @@ extension on _StringsVi {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -136155,6 +136612,20 @@ extension on _StringsZhCn {
         return '搜索设置';
       case 'settings_search_no_results':
         return '没有匹配的设置项';
+      case 'games':
+        return '游戏';
+      case 'games_add':
+        return '添加游戏';
+      case 'games_empty':
+        return '还没有添加游戏';
+      case 'games_rename':
+        return '重命名';
+      case 'games_remove':
+        return '移除';
+      case 'games_launch_unsupported':
+        return '启动游戏仅支持 Windows 桌面';
+      case 'games_exe_missing':
+        return '找不到游戏可执行文件';
       default:
         return null;
     }
@@ -140091,6 +140562,20 @@ extension on _StringsZhHk {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
