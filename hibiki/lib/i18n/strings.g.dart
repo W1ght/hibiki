@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 34187 (2011 per locale)
+/// Strings: 34595 (2035 per locale)
 ///
-/// Built on 2026-07-19 at 14:06 UTC
+/// Built on 2026-07-19 at 15:19 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2705,6 +2705,30 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get games_launch_unsupported =>
       'Launching games is only supported on Windows';
   String get games_exe_missing => 'Game executable not found';
+  String get nav_home => 'Home';
+  String get home_activity => 'Activity';
+  String get home_continue => 'Continue';
+  String get home_filter_all => 'All';
+  String get home_filter_read => 'Read';
+  String get home_filter_watch => 'Watch';
+  String get home_filter_game => 'Game';
+  String get home_filter_added => 'Added';
+  String get home_stat_library => 'Library';
+  String get home_stat_total_time => 'Total Time';
+  String get home_stat_today => 'Today';
+  String get home_stat_this_week => 'This Week';
+  String get home_stat_this_month => 'This Month';
+  String get home_range_week => 'Week';
+  String get home_range_month => 'Month';
+  String get home_activity_empty => 'No activity yet';
+  String get home_today => 'Today';
+  String get home_yesterday => 'Yesterday';
+  String get activity_just_now => 'Just now';
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  String home_session_count({required Object n}) => '${n} sessions';
+  String get home_dashboard_title => 'Home';
 }
 
 // Path: <root>
@@ -7267,6 +7291,54 @@ class _StringsAr extends _StringsEn {
       'Launching games is only supported on Windows';
   @override
   String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
 }
 
 // Path: <root>
@@ -11902,6 +11974,54 @@ class _StringsDe extends _StringsEn {
       'Launching games is only supported on Windows';
   @override
   String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
 }
 
 // Path: <root>
@@ -16553,6 +16673,54 @@ class _StringsEs extends _StringsEn {
       'Launching games is only supported on Windows';
   @override
   String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
 }
 
 // Path: <root>
@@ -21215,6 +21383,54 @@ class _StringsFr extends _StringsEn {
       'Launching games is only supported on Windows';
   @override
   String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
 }
 
 // Path: <root>
@@ -25804,6 +26020,54 @@ class _StringsId extends _StringsEn {
       'Launching games is only supported on Windows';
   @override
   String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
 }
 
 // Path: <root>
@@ -30441,6 +30705,54 @@ class _StringsIt extends _StringsEn {
       'Launching games is only supported on Windows';
   @override
   String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
 }
 
 // Path: <root>
@@ -34884,6 +35196,54 @@ class _StringsJa extends _StringsEn {
       'Launching games is only supported on Windows';
   @override
   String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
 }
 
 // Path: <root>
@@ -39330,6 +39690,54 @@ class _StringsKo extends _StringsEn {
       'Launching games is only supported on Windows';
   @override
   String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
 }
 
 // Path: <root>
@@ -43945,6 +44353,54 @@ class _StringsNl extends _StringsEn {
       'Launching games is only supported on Windows';
   @override
   String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
 }
 
 // Path: <root>
@@ -48575,6 +49031,54 @@ class _StringsPtBr extends _StringsEn {
       'Launching games is only supported on Windows';
   @override
   String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
 }
 
 // Path: <root>
@@ -53188,6 +53692,54 @@ class _StringsRu extends _StringsEn {
       'Launching games is only supported on Windows';
   @override
   String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
 }
 
 // Path: <root>
@@ -57746,6 +58298,54 @@ class _StringsTh extends _StringsEn {
       'Launching games is only supported on Windows';
   @override
   String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
 }
 
 // Path: <root>
@@ -62336,6 +62936,54 @@ class _StringsTr extends _StringsEn {
       'Launching games is only supported on Windows';
   @override
   String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
 }
 
 // Path: <root>
@@ -66913,6 +67561,54 @@ class _StringsVi extends _StringsEn {
       'Launching games is only supported on Windows';
   @override
   String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
 }
 
 // Path: <root>
@@ -71170,6 +71866,54 @@ class _StringsZhCn extends _StringsEn {
   String get games_launch_unsupported => '启动游戏仅支持 Windows 桌面';
   @override
   String get games_exe_missing => '找不到游戏可执行文件';
+  @override
+  String get nav_home => '首页';
+  @override
+  String get home_activity => '活动';
+  @override
+  String get home_continue => '继续';
+  @override
+  String get home_filter_all => '全部';
+  @override
+  String get home_filter_read => '阅读';
+  @override
+  String get home_filter_watch => '观看';
+  @override
+  String get home_filter_game => '游戏';
+  @override
+  String get home_filter_added => '导入';
+  @override
+  String get home_stat_library => '媒体库';
+  @override
+  String get home_stat_total_time => '总时长';
+  @override
+  String get home_stat_today => '今日';
+  @override
+  String get home_stat_this_week => '本周';
+  @override
+  String get home_stat_this_month => '本月';
+  @override
+  String get home_range_week => '周';
+  @override
+  String get home_range_month => '月';
+  @override
+  String get home_activity_empty => '暂无活动记录';
+  @override
+  String get home_today => '今天';
+  @override
+  String get home_yesterday => '昨天';
+  @override
+  String get activity_just_now => '刚刚';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} 分钟前';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} 小时前';
+  @override
+  String activity_days_ago({required Object n}) => '${n} 天前';
+  @override
+  String home_session_count({required Object n}) => '${n} 次';
+  @override
+  String get home_dashboard_title => '首页';
 }
 
 // Path: <root>
@@ -75535,6 +76279,54 @@ class _StringsZhHk extends _StringsEn {
       'Launching games is only supported on Windows';
   @override
   String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
 }
 
 /// Flat map(s) containing all translations.
@@ -79647,6 +80439,54 @@ extension on _StringsEn {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
@@ -83757,6 +84597,54 @@ extension on _StringsAr {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
@@ -87888,6 +88776,54 @@ extension on _StringsDe {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
@@ -92018,6 +92954,54 @@ extension on _StringsEs {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
@@ -96154,6 +97138,54 @@ extension on _StringsFr {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
@@ -100272,6 +101304,54 @@ extension on _StringsId {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
@@ -104405,6 +105485,54 @@ extension on _StringsIt {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
@@ -108500,6 +109628,54 @@ extension on _StringsJa {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
@@ -112599,6 +113775,54 @@ extension on _StringsKo {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
@@ -116725,6 +117949,54 @@ extension on _StringsNl {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
@@ -120848,6 +122120,54 @@ extension on _StringsPtBr {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
@@ -124976,6 +126296,54 @@ extension on _StringsRu {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
@@ -129088,6 +130456,54 @@ extension on _StringsTh {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
@@ -133209,6 +134625,54 @@ extension on _StringsTr {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
@@ -137325,6 +138789,54 @@ extension on _StringsVi {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
@@ -141408,6 +142920,54 @@ extension on _StringsZhCn {
         return '启动游戏仅支持 Windows 桌面';
       case 'games_exe_missing':
         return '找不到游戏可执行文件';
+      case 'nav_home':
+        return '首页';
+      case 'home_activity':
+        return '活动';
+      case 'home_continue':
+        return '继续';
+      case 'home_filter_all':
+        return '全部';
+      case 'home_filter_read':
+        return '阅读';
+      case 'home_filter_watch':
+        return '观看';
+      case 'home_filter_game':
+        return '游戏';
+      case 'home_filter_added':
+        return '导入';
+      case 'home_stat_library':
+        return '媒体库';
+      case 'home_stat_total_time':
+        return '总时长';
+      case 'home_stat_today':
+        return '今日';
+      case 'home_stat_this_week':
+        return '本周';
+      case 'home_stat_this_month':
+        return '本月';
+      case 'home_range_week':
+        return '周';
+      case 'home_range_month':
+        return '月';
+      case 'home_activity_empty':
+        return '暂无活动记录';
+      case 'home_today':
+        return '今天';
+      case 'home_yesterday':
+        return '昨天';
+      case 'activity_just_now':
+        return '刚刚';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} 分钟前';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} 小时前';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} 天前';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} 次';
+      case 'home_dashboard_title':
+        return '首页';
       default:
         return null;
     }
@@ -145498,6 +147058,54 @@ extension on _StringsZhHk {
         return 'Launching games is only supported on Windows';
       case 'games_exe_missing':
         return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
       default:
         return null;
     }
