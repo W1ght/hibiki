@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 33728 (1984 per locale)
+/// Strings: 33864 (1992 per locale)
 ///
-/// Built on 2026-07-18 at 18:37 UTC
+/// Built on 2026-07-19 at 04:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2666,6 +2666,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mining_audio_quality_standard => 'Standard';
   String get mining_audio_quality_high => 'High';
   String get mining_audio_quality_native => 'Native';
+  String get video_setting_torrent_backend => 'Download backend';
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  String get video_setting_torrent_max_connections => 'Max connections';
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 // Path: <root>
@@ -7162,6 +7171,23 @@ class _StringsAr extends _StringsEn {
   String get mining_audio_quality_high => 'High';
   @override
   String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 // Path: <root>
@@ -11731,6 +11757,23 @@ class _StringsDe extends _StringsEn {
   String get mining_audio_quality_high => 'High';
   @override
   String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 // Path: <root>
@@ -16316,6 +16359,23 @@ class _StringsEs extends _StringsEn {
   String get mining_audio_quality_high => 'High';
   @override
   String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 // Path: <root>
@@ -20912,6 +20972,23 @@ class _StringsFr extends _StringsEn {
   String get mining_audio_quality_high => 'High';
   @override
   String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 // Path: <root>
@@ -25435,6 +25512,23 @@ class _StringsId extends _StringsEn {
   String get mining_audio_quality_high => 'High';
   @override
   String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 // Path: <root>
@@ -30006,6 +30100,23 @@ class _StringsIt extends _StringsEn {
   String get mining_audio_quality_high => 'High';
   @override
   String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 // Path: <root>
@@ -34383,6 +34494,23 @@ class _StringsJa extends _StringsEn {
   String get mining_audio_quality_high => 'High';
   @override
   String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 // Path: <root>
@@ -38763,6 +38891,23 @@ class _StringsKo extends _StringsEn {
   String get mining_audio_quality_high => 'High';
   @override
   String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 // Path: <root>
@@ -43312,6 +43457,23 @@ class _StringsNl extends _StringsEn {
   String get mining_audio_quality_high => 'High';
   @override
   String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 // Path: <root>
@@ -47876,6 +48038,23 @@ class _StringsPtBr extends _StringsEn {
   String get mining_audio_quality_high => 'High';
   @override
   String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 // Path: <root>
@@ -52423,6 +52602,23 @@ class _StringsRu extends _StringsEn {
   String get mining_audio_quality_high => 'High';
   @override
   String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 // Path: <root>
@@ -56915,6 +57111,23 @@ class _StringsTh extends _StringsEn {
   String get mining_audio_quality_high => 'High';
   @override
   String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 // Path: <root>
@@ -61439,6 +61652,23 @@ class _StringsTr extends _StringsEn {
   String get mining_audio_quality_high => 'High';
   @override
   String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 // Path: <root>
@@ -65950,6 +66180,23 @@ class _StringsVi extends _StringsEn {
   String get mining_audio_quality_high => 'High';
   @override
   String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 // Path: <root>
@@ -70152,6 +70399,22 @@ class _StringsZhCn extends _StringsEn {
   String get mining_audio_quality_high => '高音质';
   @override
   String get mining_audio_quality_native => '原片';
+  @override
+  String get video_setting_torrent_backend => '下载后端';
+  @override
+  String get video_setting_torrent_backend_qb => '外接 qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded => '内置引擎（桌面）';
+  @override
+  String get video_setting_torrent_download_limit => '下载限速 (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => '上传限速 (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => '最大连接数';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = 不限';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = 引擎默认';
 }
 
 // Path: <root>
@@ -74451,6 +74714,23 @@ class _StringsZhHk extends _StringsEn {
   String get mining_audio_quality_high => 'High';
   @override
   String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
 }
 
 /// Flat map(s) containing all translations.
@@ -78509,6 +78789,22 @@ extension on _StringsEn {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
@@ -82565,6 +82861,22 @@ extension on _StringsAr {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
@@ -86642,6 +86954,22 @@ extension on _StringsDe {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
@@ -90718,6 +91046,22 @@ extension on _StringsEs {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
@@ -94800,6 +95144,22 @@ extension on _StringsFr {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
@@ -98864,6 +99224,22 @@ extension on _StringsId {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
@@ -102943,6 +103319,22 @@ extension on _StringsIt {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
@@ -106984,6 +107376,22 @@ extension on _StringsJa {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
@@ -111029,6 +111437,22 @@ extension on _StringsKo {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
@@ -115101,6 +115525,22 @@ extension on _StringsNl {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
@@ -119170,6 +119610,22 @@ extension on _StringsPtBr {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
@@ -123244,6 +123700,22 @@ extension on _StringsRu {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
@@ -127302,6 +127774,22 @@ extension on _StringsTh {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
@@ -131369,6 +131857,22 @@ extension on _StringsTr {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
@@ -135431,6 +135935,22 @@ extension on _StringsVi {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
@@ -139460,6 +139980,22 @@ extension on _StringsZhCn {
         return '高音质';
       case 'mining_audio_quality_native':
         return '原片';
+      case 'video_setting_torrent_backend':
+        return '下载后端';
+      case 'video_setting_torrent_backend_qb':
+        return '外接 qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return '内置引擎（桌面）';
+      case 'video_setting_torrent_download_limit':
+        return '下载限速 (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return '上传限速 (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return '最大连接数';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = 不限';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = 引擎默认';
       default:
         return null;
     }
@@ -143496,6 +144032,22 @@ extension on _StringsZhHk {
         return 'High';
       case 'mining_audio_quality_native':
         return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
       default:
         return null;
     }
