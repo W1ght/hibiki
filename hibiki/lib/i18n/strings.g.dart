@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 34833 (2049 per locale)
+/// Strings: 34952 (2056 per locale)
 ///
-/// Built on 2026-07-20 at 10:30 UTC
+/// Built on 2026-07-20 at 10:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2748,6 +2748,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get torrent_upload_intro_enable => 'Enable upload / seeding';
   String get torrent_upload_intro_keep_off => 'Keep off';
   String get torrent_upload_intro_confirm => 'Save';
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  String get anime_download_generic_hint => 'Magnet link';
+  String get anime_download_generic_download => 'Download';
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  String get anime_download_kind_auto => 'Auto';
+  String get anime_download_kind_video => 'Video';
+  String get anime_download_kind_book => 'Book';
 }
 
 // Path: <root>
@@ -7391,6 +7399,21 @@ class _StringsAr extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Keep off';
   @override
   String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
 }
 
 // Path: <root>
@@ -12107,6 +12130,21 @@ class _StringsDe extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Keep off';
   @override
   String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
 }
 
 // Path: <root>
@@ -16839,6 +16877,21 @@ class _StringsEs extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Keep off';
   @override
   String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
 }
 
 // Path: <root>
@@ -21582,6 +21635,21 @@ class _StringsFr extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Keep off';
   @override
   String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
 }
 
 // Path: <root>
@@ -26252,6 +26320,21 @@ class _StringsId extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Keep off';
   @override
   String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
 }
 
 // Path: <root>
@@ -30970,6 +31053,21 @@ class _StringsIt extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Keep off';
   @override
   String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
 }
 
 // Path: <root>
@@ -35494,6 +35592,21 @@ class _StringsJa extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Keep off';
   @override
   String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
 }
 
 // Path: <root>
@@ -40021,6 +40134,21 @@ class _StringsKo extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Keep off';
   @override
   String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
 }
 
 // Path: <root>
@@ -44717,6 +44845,21 @@ class _StringsNl extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Keep off';
   @override
   String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
 }
 
 // Path: <root>
@@ -49428,6 +49571,21 @@ class _StringsPtBr extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Keep off';
   @override
   String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
 }
 
 // Path: <root>
@@ -54122,6 +54280,21 @@ class _StringsRu extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Keep off';
   @override
   String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
 }
 
 // Path: <root>
@@ -58761,6 +58934,21 @@ class _StringsTh extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Keep off';
   @override
   String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
 }
 
 // Path: <root>
@@ -63432,6 +63620,21 @@ class _StringsTr extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Keep off';
   @override
   String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
 }
 
 // Path: <root>
@@ -68090,6 +68293,21 @@ class _StringsVi extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Keep off';
   @override
   String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
 }
 
 // Path: <root>
@@ -72425,6 +72643,20 @@ class _StringsZhCn extends _StringsEn {
   String get torrent_upload_intro_keep_off => '保持关闭';
   @override
   String get torrent_upload_intro_confirm => '保存';
+  @override
+  String get anime_download_generic_title => '粘贴链接下载（书、视频等）';
+  @override
+  String get anime_download_generic_hint => '磁力链接';
+  @override
+  String get anime_download_generic_download => '下载';
+  @override
+  String get anime_download_magnet_invalid => '磁力链接无效';
+  @override
+  String get anime_download_kind_auto => '自动';
+  @override
+  String get anime_download_kind_video => '视频';
+  @override
+  String get anime_download_kind_book => '书';
 }
 
 // Path: <root>
@@ -76871,6 +77103,21 @@ class _StringsZhHk extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Keep off';
   @override
   String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
 }
 
 /// Flat map(s) containing all translations.
@@ -81059,6 +81306,20 @@ extension on _StringsEn {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
@@ -85245,6 +85506,20 @@ extension on _StringsAr {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
@@ -89452,6 +89727,20 @@ extension on _StringsDe {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
@@ -93658,6 +93947,20 @@ extension on _StringsEs {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
@@ -97870,6 +98173,20 @@ extension on _StringsFr {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
@@ -102064,6 +102381,20 @@ extension on _StringsId {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
@@ -106273,6 +106604,20 @@ extension on _StringsIt {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
@@ -110444,6 +110789,20 @@ extension on _StringsJa {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
@@ -114619,6 +114978,20 @@ extension on _StringsKo {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
@@ -118821,6 +119194,20 @@ extension on _StringsNl {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
@@ -123020,6 +123407,20 @@ extension on _StringsPtBr {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
@@ -127224,6 +127625,20 @@ extension on _StringsRu {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
@@ -131412,6 +131827,20 @@ extension on _StringsTh {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
@@ -135609,6 +136038,20 @@ extension on _StringsTr {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
@@ -139801,6 +140244,20 @@ extension on _StringsVi {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
@@ -143960,6 +144417,20 @@ extension on _StringsZhCn {
         return '保持关闭';
       case 'torrent_upload_intro_confirm':
         return '保存';
+      case 'anime_download_generic_title':
+        return '粘贴链接下载（书、视频等）';
+      case 'anime_download_generic_hint':
+        return '磁力链接';
+      case 'anime_download_generic_download':
+        return '下载';
+      case 'anime_download_magnet_invalid':
+        return '磁力链接无效';
+      case 'anime_download_kind_auto':
+        return '自动';
+      case 'anime_download_kind_video':
+        return '视频';
+      case 'anime_download_kind_book':
+        return '书';
       default:
         return null;
     }
@@ -148126,6 +148597,20 @@ extension on _StringsZhHk {
         return 'Keep off';
       case 'torrent_upload_intro_confirm':
         return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
       default:
         return null;
     }
