@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 34272 (2016 per locale)
+/// Strings: 34289 (2017 per locale)
 ///
-/// Built on 2026-07-19 at 14:54 UTC
+/// Built on 2026-07-19 at 20:19 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2700,6 +2700,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_text_thread_all => 'All text threads';
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 // Path: <root>
@@ -7262,6 +7263,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 // Path: <root>
@@ -11897,6 +11900,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 // Path: <root>
@@ -16548,6 +16553,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 // Path: <root>
@@ -21210,6 +21217,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 // Path: <root>
@@ -25799,6 +25808,8 @@ class _StringsId extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 // Path: <root>
@@ -30436,6 +30447,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 // Path: <root>
@@ -34878,6 +34891,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 // Path: <root>
@@ -39323,6 +39338,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 // Path: <root>
@@ -43938,6 +43955,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 // Path: <root>
@@ -48568,6 +48587,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 // Path: <root>
@@ -53181,6 +53202,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 // Path: <root>
@@ -57739,6 +57762,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 // Path: <root>
@@ -62329,6 +62354,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 // Path: <root>
@@ -66906,6 +66933,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 // Path: <root>
@@ -71169,6 +71198,8 @@ class _StringsZhCn extends _StringsEn {
   String get game_text_thread_all => '全部文本线程';
   @override
   String get game_text_thread_hint => '像 Luna Translator 一样选择干净的台词线程';
+  @override
+  String get game_audio_backend_resource => '游戏资源音频';
 }
 
 // Path: <root>
@@ -75530,6 +75561,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
 }
 
 /// Flat map(s) containing all translations.
@@ -79650,6 +79683,8 @@ extension on _StringsEn {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
@@ -83768,6 +83803,8 @@ extension on _StringsAr {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
@@ -87907,6 +87944,8 @@ extension on _StringsDe {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
@@ -92045,6 +92084,8 @@ extension on _StringsEs {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
@@ -96189,6 +96230,8 @@ extension on _StringsFr {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
@@ -100315,6 +100358,8 @@ extension on _StringsId {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
@@ -104456,6 +104501,8 @@ extension on _StringsIt {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
@@ -108559,6 +108606,8 @@ extension on _StringsJa {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
@@ -112666,6 +112715,8 @@ extension on _StringsKo {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
@@ -116800,6 +116851,8 @@ extension on _StringsNl {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
@@ -120931,6 +120984,8 @@ extension on _StringsPtBr {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
@@ -125067,6 +125122,8 @@ extension on _StringsRu {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
@@ -129187,6 +129244,8 @@ extension on _StringsTh {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
@@ -133316,6 +133375,8 @@ extension on _StringsTr {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
@@ -137440,6 +137501,8 @@ extension on _StringsVi {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
@@ -141532,6 +141595,8 @@ extension on _StringsZhCn {
         return '全部文本线程';
       case 'game_text_thread_hint':
         return '像 Luna Translator 一样选择干净的台词线程';
+      case 'game_audio_backend_resource':
+        return '游戏资源音频';
       default:
         return null;
     }
@@ -145630,6 +145695,8 @@ extension on _StringsZhHk {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
       default:
         return null;
     }
