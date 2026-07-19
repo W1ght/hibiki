@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 33915 (1995 per locale)
+/// Strings: 33949 (1997 per locale)
 ///
-/// Built on 2026-07-19 at 05:13 UTC
+/// Built on 2026-07-19 at 05:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2681,6 +2681,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Subtitle delay −';
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 // Path: <root>
@@ -7203,6 +7206,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 // Path: <root>
@@ -11798,6 +11806,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 // Path: <root>
@@ -16409,6 +16422,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 // Path: <root>
@@ -21031,6 +21049,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 // Path: <root>
@@ -25580,6 +25603,11 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 // Path: <root>
@@ -30177,6 +30205,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 // Path: <root>
@@ -34580,6 +34613,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 // Path: <root>
@@ -38986,6 +39024,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 // Path: <root>
@@ -43561,6 +43604,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 // Path: <root>
@@ -48151,6 +48199,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 // Path: <root>
@@ -52724,6 +52777,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 // Path: <root>
@@ -57242,6 +57300,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 // Path: <root>
@@ -61792,6 +61855,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 // Path: <root>
@@ -66329,6 +66397,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 // Path: <root>
@@ -70553,6 +70626,10 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_action_video_subtitle_delay_decrease => '字幕延迟减小';
   @override
   String get shortcut_action_video_open_subtitle_align => '打开字幕波形对轴';
+  @override
+  String get font_desc_noto_serif_tc => 'Google/Adobe 宋体 · 繁中字形优先 · 适合竖排阅读';
+  @override
+  String get custom_fonts_font_roles => '字体用途';
 }
 
 // Path: <root>
@@ -74878,6 +74955,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
 }
 
 /// Flat map(s) containing all translations.
@@ -78958,6 +79040,10 @@ extension on _StringsEn {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
@@ -83036,6 +83122,10 @@ extension on _StringsAr {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
@@ -87135,6 +87225,10 @@ extension on _StringsDe {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
@@ -91233,6 +91327,10 @@ extension on _StringsEs {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
@@ -95337,6 +95435,10 @@ extension on _StringsFr {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
@@ -99423,6 +99525,10 @@ extension on _StringsId {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
@@ -103524,6 +103630,10 @@ extension on _StringsIt {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
@@ -107587,6 +107697,10 @@ extension on _StringsJa {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
@@ -111654,6 +111768,10 @@ extension on _StringsKo {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
@@ -115748,6 +115866,10 @@ extension on _StringsNl {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
@@ -119839,6 +119961,10 @@ extension on _StringsPtBr {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
@@ -123935,6 +124061,10 @@ extension on _StringsRu {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
@@ -128015,6 +128145,10 @@ extension on _StringsTh {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
@@ -132104,6 +132238,10 @@ extension on _StringsTr {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
@@ -136188,6 +136326,10 @@ extension on _StringsVi {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
@@ -140239,6 +140381,10 @@ extension on _StringsZhCn {
         return '字幕延迟减小';
       case 'shortcut_action_video_open_subtitle_align':
         return '打开字幕波形对轴';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe 宋体 · 繁中字形优先 · 适合竖排阅读';
+      case 'custom_fonts_font_roles':
+        return '字体用途';
       default:
         return null;
     }
@@ -144297,6 +144443,10 @@ extension on _StringsZhHk {
         return 'Subtitle delay −';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
       default:
         return null;
     }
