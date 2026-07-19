@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 34068 (2004 per locale)
+/// Strings: 34187 (2011 per locale)
 ///
-/// Built on 2026-07-19 at 12:07 UTC
+/// Built on 2026-07-19 at 14:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2697,6 +2697,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Obscure secondary subtitle';
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  String get games => 'Games';
+  String get games_add => 'Add game';
+  String get games_empty => 'No games added yet';
+  String get games_rename => 'Rename';
+  String get games_remove => 'Remove';
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -7244,6 +7252,21 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -11864,6 +11887,21 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -16500,6 +16538,21 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -21147,6 +21200,21 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -25721,6 +25789,21 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -30343,6 +30426,21 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -34771,6 +34869,21 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -39202,6 +39315,21 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -43802,6 +43930,21 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -48417,6 +48560,21 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -53015,6 +53173,21 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -57558,6 +57731,21 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -62133,6 +62321,21 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -66695,6 +66898,21 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 // Path: <root>
@@ -70938,6 +71156,20 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_secondary_subtitle_obscure => '副字幕遮蔽';
   @override
   String get video_setting_secondary_subtitle_obscure_hint => '模糊或隐藏副字幕（翻译参考轨）';
+  @override
+  String get games => '游戏';
+  @override
+  String get games_add => '添加游戏';
+  @override
+  String get games_empty => '还没有添加游戏';
+  @override
+  String get games_rename => '重命名';
+  @override
+  String get games_remove => '移除';
+  @override
+  String get games_launch_unsupported => '启动游戏仅支持 Windows 桌面';
+  @override
+  String get games_exe_missing => '找不到游戏可执行文件';
 }
 
 // Path: <root>
@@ -75288,6 +75520,21 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
 }
 
 /// Flat map(s) containing all translations.
@@ -79386,6 +79633,20 @@ extension on _StringsEn {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -83482,6 +83743,20 @@ extension on _StringsAr {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -87599,6 +87874,20 @@ extension on _StringsDe {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -91715,6 +92004,20 @@ extension on _StringsEs {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -95837,6 +96140,20 @@ extension on _StringsFr {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -99941,6 +100258,20 @@ extension on _StringsId {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -104060,6 +104391,20 @@ extension on _StringsIt {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -108141,6 +108486,20 @@ extension on _StringsJa {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -112226,6 +112585,20 @@ extension on _StringsKo {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -116338,6 +116711,20 @@ extension on _StringsNl {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -120447,6 +120834,20 @@ extension on _StringsPtBr {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -124561,6 +124962,20 @@ extension on _StringsRu {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -128659,6 +129074,20 @@ extension on _StringsTh {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -132766,6 +133195,20 @@ extension on _StringsTr {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -136868,6 +137311,20 @@ extension on _StringsVi {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
@@ -140937,6 +141394,20 @@ extension on _StringsZhCn {
         return '副字幕遮蔽';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return '模糊或隐藏副字幕（翻译参考轨）';
+      case 'games':
+        return '游戏';
+      case 'games_add':
+        return '添加游戏';
+      case 'games_empty':
+        return '还没有添加游戏';
+      case 'games_rename':
+        return '重命名';
+      case 'games_remove':
+        return '移除';
+      case 'games_launch_unsupported':
+        return '启动游戏仅支持 Windows 桌面';
+      case 'games_exe_missing':
+        return '找不到游戏可执行文件';
       default:
         return null;
     }
@@ -145013,6 +145484,20 @@ extension on _StringsZhHk {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
       default:
         return null;
     }
