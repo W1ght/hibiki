@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 34221 (2013 per locale)
+/// Strings: 34272 (2016 per locale)
 ///
-/// Built on 2026-07-19 at 12:37 UTC
+/// Built on 2026-07-19 at 14:54 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2696,6 +2696,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_latest_line => 'Latest line';
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  String get game_text_thread => 'Text thread';
+  String get game_text_thread_all => 'All text threads';
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 // Path: <root>
@@ -7251,6 +7255,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 // Path: <root>
@@ -11879,6 +11890,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 // Path: <root>
@@ -16523,6 +16541,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 // Path: <root>
@@ -21178,6 +21203,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 // Path: <root>
@@ -25760,6 +25792,13 @@ class _StringsId extends _StringsEn {
   @override
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 // Path: <root>
@@ -30390,6 +30429,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 // Path: <root>
@@ -34825,6 +34871,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 // Path: <root>
@@ -39263,6 +39316,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 // Path: <root>
@@ -43871,6 +43931,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 // Path: <root>
@@ -48494,6 +48561,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 // Path: <root>
@@ -53100,6 +53174,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 // Path: <root>
@@ -57651,6 +57732,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 // Path: <root>
@@ -62234,6 +62322,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 // Path: <root>
@@ -66804,6 +66899,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 // Path: <root>
@@ -71061,6 +71163,12 @@ class _StringsZhCn extends _StringsEn {
   String get game_latest_line => '最新台词';
   @override
   String get game_no_active_line => '选择一条台词查看句音状态。';
+  @override
+  String get game_text_thread => '文本线程';
+  @override
+  String get game_text_thread_all => '全部文本线程';
+  @override
+  String get game_text_thread_hint => '像 Luna Translator 一样选择干净的台词线程';
 }
 
 // Path: <root>
@@ -75415,6 +75523,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_no_active_line =>
       'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
 }
 
 /// Flat map(s) containing all translations.
@@ -79529,6 +79644,12 @@ extension on _StringsEn {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
@@ -83641,6 +83762,12 @@ extension on _StringsAr {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
@@ -87774,6 +87901,12 @@ extension on _StringsDe {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
@@ -91906,6 +92039,12 @@ extension on _StringsEs {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
@@ -96044,6 +96183,12 @@ extension on _StringsFr {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
@@ -100164,6 +100309,12 @@ extension on _StringsId {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
@@ -104299,6 +104450,12 @@ extension on _StringsIt {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
@@ -108396,6 +108553,12 @@ extension on _StringsJa {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
@@ -112497,6 +112660,12 @@ extension on _StringsKo {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
@@ -116625,6 +116794,12 @@ extension on _StringsNl {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
@@ -120750,6 +120925,12 @@ extension on _StringsPtBr {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
@@ -124880,6 +125061,12 @@ extension on _StringsRu {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
@@ -128994,6 +129181,12 @@ extension on _StringsTh {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
@@ -133117,6 +133310,12 @@ extension on _StringsTr {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
@@ -137235,6 +137434,12 @@ extension on _StringsVi {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
@@ -141321,6 +141526,12 @@ extension on _StringsZhCn {
         return '最新台词';
       case 'game_no_active_line':
         return '选择一条台词查看句音状态。';
+      case 'game_text_thread':
+        return '文本线程';
+      case 'game_text_thread_all':
+        return '全部文本线程';
+      case 'game_text_thread_hint':
+        return '像 Luna Translator 一样选择干净的台词线程';
       default:
         return null;
     }
@@ -145413,6 +145624,12 @@ extension on _StringsZhHk {
         return 'Latest line';
       case 'game_no_active_line':
         return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
       default:
         return null;
     }
