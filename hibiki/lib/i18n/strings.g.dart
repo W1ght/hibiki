@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 34119 (2007 per locale)
 ///
-/// Built on 2026-07-19 at 13:34 UTC
+/// Built on 2026-07-19 at 15:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2405,7 +2405,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Network error. Check your connection and try again.';
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
-  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  String get desktop_clipboard_destination => 'Lookup popup position';
   String get desktop_clipboard_destination_main => 'Main window';
   String get desktop_clipboard_destination_panel => 'Floating panel';
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
@@ -70513,7 +70513,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error => '搜索失败，请稍后重试。';
   @override
-  String get desktop_clipboard_destination => '剪贴板查词显示位置';
+  String get desktop_clipboard_destination => '查词弹窗位置';
   @override
   String get desktop_clipboard_destination_main => '主窗口';
   @override
@@ -74822,7 +74822,7 @@ class _StringsZhHk extends _StringsEn {
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
   @override
-  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  String get desktop_clipboard_destination => '查詞彈窗位置';
   @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
@@ -78982,7 +78982,7 @@ extension on _StringsEn {
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
-        return 'Clipboard lookup destination';
+        return 'Lookup popup position';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -140626,7 +140626,7 @@ extension on _StringsZhCn {
       case 'video_danmaku_manual_server_error':
         return '搜索失败，请稍后重试。';
       case 'desktop_clipboard_destination':
-        return '剪贴板查词显示位置';
+        return '查词弹窗位置';
       case 'desktop_clipboard_destination_main':
         return '主窗口';
       case 'desktop_clipboard_destination_panel':
@@ -144706,7 +144706,7 @@ extension on _StringsZhHk {
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
-        return 'Clipboard lookup destination';
+        return '查詞彈窗位置';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
