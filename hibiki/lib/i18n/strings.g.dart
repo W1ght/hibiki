@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 34952 (2056 per locale)
+/// Strings: 34969 (2057 per locale)
 ///
-/// Built on 2026-07-20 at 10:31 UTC
+/// Built on 2026-07-20 at 10:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2756,6 +2756,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anime_download_kind_auto => 'Auto';
   String get anime_download_kind_video => 'Video';
   String get anime_download_kind_book => 'Book';
+  String get nav_downloads => 'Downloads';
 }
 
 // Path: <root>
@@ -7414,6 +7415,8 @@ class _StringsAr extends _StringsEn {
   String get anime_download_kind_video => 'Video';
   @override
   String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
 }
 
 // Path: <root>
@@ -12145,6 +12148,8 @@ class _StringsDe extends _StringsEn {
   String get anime_download_kind_video => 'Video';
   @override
   String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
 }
 
 // Path: <root>
@@ -16892,6 +16897,8 @@ class _StringsEs extends _StringsEn {
   String get anime_download_kind_video => 'Video';
   @override
   String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
 }
 
 // Path: <root>
@@ -21650,6 +21657,8 @@ class _StringsFr extends _StringsEn {
   String get anime_download_kind_video => 'Video';
   @override
   String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
 }
 
 // Path: <root>
@@ -26335,6 +26344,8 @@ class _StringsId extends _StringsEn {
   String get anime_download_kind_video => 'Video';
   @override
   String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
 }
 
 // Path: <root>
@@ -31068,6 +31079,8 @@ class _StringsIt extends _StringsEn {
   String get anime_download_kind_video => 'Video';
   @override
   String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
 }
 
 // Path: <root>
@@ -35607,6 +35620,8 @@ class _StringsJa extends _StringsEn {
   String get anime_download_kind_video => 'Video';
   @override
   String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
 }
 
 // Path: <root>
@@ -40149,6 +40164,8 @@ class _StringsKo extends _StringsEn {
   String get anime_download_kind_video => 'Video';
   @override
   String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
 }
 
 // Path: <root>
@@ -44860,6 +44877,8 @@ class _StringsNl extends _StringsEn {
   String get anime_download_kind_video => 'Video';
   @override
   String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
 }
 
 // Path: <root>
@@ -49586,6 +49605,8 @@ class _StringsPtBr extends _StringsEn {
   String get anime_download_kind_video => 'Video';
   @override
   String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
 }
 
 // Path: <root>
@@ -54295,6 +54316,8 @@ class _StringsRu extends _StringsEn {
   String get anime_download_kind_video => 'Video';
   @override
   String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
 }
 
 // Path: <root>
@@ -58949,6 +58972,8 @@ class _StringsTh extends _StringsEn {
   String get anime_download_kind_video => 'Video';
   @override
   String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
 }
 
 // Path: <root>
@@ -63635,6 +63660,8 @@ class _StringsTr extends _StringsEn {
   String get anime_download_kind_video => 'Video';
   @override
   String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
 }
 
 // Path: <root>
@@ -68308,6 +68335,8 @@ class _StringsVi extends _StringsEn {
   String get anime_download_kind_video => 'Video';
   @override
   String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
 }
 
 // Path: <root>
@@ -72657,6 +72686,8 @@ class _StringsZhCn extends _StringsEn {
   String get anime_download_kind_video => '视频';
   @override
   String get anime_download_kind_book => '书';
+  @override
+  String get nav_downloads => '下载';
 }
 
 // Path: <root>
@@ -77118,6 +77149,8 @@ class _StringsZhHk extends _StringsEn {
   String get anime_download_kind_video => 'Video';
   @override
   String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
 }
 
 /// Flat map(s) containing all translations.
@@ -81320,6 +81353,8 @@ extension on _StringsEn {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
@@ -85520,6 +85555,8 @@ extension on _StringsAr {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
@@ -89741,6 +89778,8 @@ extension on _StringsDe {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
@@ -93961,6 +94000,8 @@ extension on _StringsEs {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
@@ -98187,6 +98228,8 @@ extension on _StringsFr {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
@@ -102395,6 +102438,8 @@ extension on _StringsId {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
@@ -106618,6 +106663,8 @@ extension on _StringsIt {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
@@ -110803,6 +110850,8 @@ extension on _StringsJa {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
@@ -114992,6 +115041,8 @@ extension on _StringsKo {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
@@ -119208,6 +119259,8 @@ extension on _StringsNl {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
@@ -123421,6 +123474,8 @@ extension on _StringsPtBr {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
@@ -127639,6 +127694,8 @@ extension on _StringsRu {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
@@ -131841,6 +131898,8 @@ extension on _StringsTh {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
@@ -136052,6 +136111,8 @@ extension on _StringsTr {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
@@ -140258,6 +140319,8 @@ extension on _StringsVi {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
@@ -144431,6 +144494,8 @@ extension on _StringsZhCn {
         return '视频';
       case 'anime_download_kind_book':
         return '书';
+      case 'nav_downloads':
+        return '下载';
       default:
         return null;
     }
@@ -148611,6 +148676,8 @@ extension on _StringsZhHk {
         return 'Video';
       case 'anime_download_kind_book':
         return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
       default:
         return null;
     }
