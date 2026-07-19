@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 33949 (1997 per locale)
+/// Strings: 33966 (1998 per locale)
 ///
-/// Built on 2026-07-19 at 05:47 UTC
+/// Built on 2026-07-19 at 06:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2684,6 +2684,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get font_desc_noto_serif_tc =>
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   String get custom_fonts_font_roles => 'Font roles';
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 // Path: <root>
@@ -7211,6 +7212,8 @@ class _StringsAr extends _StringsEn {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   @override
   String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 // Path: <root>
@@ -11811,6 +11814,8 @@ class _StringsDe extends _StringsEn {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   @override
   String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 // Path: <root>
@@ -16427,6 +16432,8 @@ class _StringsEs extends _StringsEn {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   @override
   String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 // Path: <root>
@@ -21054,6 +21061,8 @@ class _StringsFr extends _StringsEn {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   @override
   String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 // Path: <root>
@@ -25608,6 +25617,8 @@ class _StringsId extends _StringsEn {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   @override
   String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 // Path: <root>
@@ -30210,6 +30221,8 @@ class _StringsIt extends _StringsEn {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   @override
   String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 // Path: <root>
@@ -34618,6 +34631,8 @@ class _StringsJa extends _StringsEn {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   @override
   String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 // Path: <root>
@@ -39029,6 +39044,8 @@ class _StringsKo extends _StringsEn {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   @override
   String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 // Path: <root>
@@ -43609,6 +43626,8 @@ class _StringsNl extends _StringsEn {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   @override
   String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 // Path: <root>
@@ -48204,6 +48223,8 @@ class _StringsPtBr extends _StringsEn {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   @override
   String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 // Path: <root>
@@ -52782,6 +52803,8 @@ class _StringsRu extends _StringsEn {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   @override
   String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 // Path: <root>
@@ -57305,6 +57328,8 @@ class _StringsTh extends _StringsEn {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   @override
   String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 // Path: <root>
@@ -61860,6 +61885,8 @@ class _StringsTr extends _StringsEn {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   @override
   String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 // Path: <root>
@@ -66402,6 +66429,8 @@ class _StringsVi extends _StringsEn {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   @override
   String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 // Path: <root>
@@ -70630,6 +70659,8 @@ class _StringsZhCn extends _StringsEn {
   String get font_desc_noto_serif_tc => 'Google/Adobe 宋体 · 繁中字形优先 · 适合竖排阅读';
   @override
   String get custom_fonts_font_roles => '字体用途';
+  @override
+  String get video_clip_export_cancelled => '已取消片段导出';
 }
 
 // Path: <root>
@@ -74960,6 +74991,8 @@ class _StringsZhHk extends _StringsEn {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   @override
   String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
 }
 
 /// Flat map(s) containing all translations.
@@ -79044,6 +79077,8 @@ extension on _StringsEn {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
@@ -83126,6 +83161,8 @@ extension on _StringsAr {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
@@ -87229,6 +87266,8 @@ extension on _StringsDe {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
@@ -91331,6 +91370,8 @@ extension on _StringsEs {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
@@ -95439,6 +95480,8 @@ extension on _StringsFr {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
@@ -99529,6 +99572,8 @@ extension on _StringsId {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
@@ -103634,6 +103679,8 @@ extension on _StringsIt {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
@@ -107701,6 +107748,8 @@ extension on _StringsJa {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
@@ -111772,6 +111821,8 @@ extension on _StringsKo {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
@@ -115870,6 +115921,8 @@ extension on _StringsNl {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
@@ -119965,6 +120018,8 @@ extension on _StringsPtBr {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
@@ -124065,6 +124120,8 @@ extension on _StringsRu {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
@@ -128149,6 +128206,8 @@ extension on _StringsTh {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
@@ -132242,6 +132301,8 @@ extension on _StringsTr {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
@@ -136330,6 +136391,8 @@ extension on _StringsVi {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
@@ -140385,6 +140448,8 @@ extension on _StringsZhCn {
         return 'Google/Adobe 宋体 · 繁中字形优先 · 适合竖排阅读';
       case 'custom_fonts_font_roles':
         return '字体用途';
+      case 'video_clip_export_cancelled':
+        return '已取消片段导出';
       default:
         return null;
     }
@@ -144447,6 +144512,8 @@ extension on _StringsZhHk {
         return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
       case 'custom_fonts_font_roles':
         return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
       default:
         return null;
     }
