@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 34000 (2000 per locale)
+/// Strings: 34051 (2003 per locale)
 ///
-/// Built on 2026-07-19 at 09:31 UTC
+/// Built on 2026-07-19 at 14:24 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2162,6 +2162,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get video_clip_export_cancelled => 'Clip export cancelled';
 	String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	String get clipboard_history_title => 'Clipboard history';
+	String get clipboard_history_clear => 'Clear';
+	String get clipboard_history_empty => 'No copy history yet';
 }
 
 // Path: <root>
@@ -4191,6 +4194,9 @@ class _StringsAr extends _StringsEn {
 	@override String get video_clip_export_cancelled => 'Clip export cancelled';
 	@override String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	@override String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	@override String get clipboard_history_title => 'Clipboard history';
+	@override String get clipboard_history_clear => 'Clear';
+	@override String get clipboard_history_empty => 'No copy history yet';
 }
 
 // Path: <root>
@@ -6220,6 +6226,9 @@ class _StringsDe extends _StringsEn {
 	@override String get video_clip_export_cancelled => 'Clip export cancelled';
 	@override String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	@override String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	@override String get clipboard_history_title => 'Clipboard history';
+	@override String get clipboard_history_clear => 'Clear';
+	@override String get clipboard_history_empty => 'No copy history yet';
 }
 
 // Path: <root>
@@ -8249,6 +8258,9 @@ class _StringsEs extends _StringsEn {
 	@override String get video_clip_export_cancelled => 'Clip export cancelled';
 	@override String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	@override String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	@override String get clipboard_history_title => 'Clipboard history';
+	@override String get clipboard_history_clear => 'Clear';
+	@override String get clipboard_history_empty => 'No copy history yet';
 }
 
 // Path: <root>
@@ -10278,6 +10290,9 @@ class _StringsFr extends _StringsEn {
 	@override String get video_clip_export_cancelled => 'Clip export cancelled';
 	@override String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	@override String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	@override String get clipboard_history_title => 'Clipboard history';
+	@override String get clipboard_history_clear => 'Clear';
+	@override String get clipboard_history_empty => 'No copy history yet';
 }
 
 // Path: <root>
@@ -12307,6 +12322,9 @@ class _StringsId extends _StringsEn {
 	@override String get video_clip_export_cancelled => 'Clip export cancelled';
 	@override String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	@override String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	@override String get clipboard_history_title => 'Clipboard history';
+	@override String get clipboard_history_clear => 'Clear';
+	@override String get clipboard_history_empty => 'No copy history yet';
 }
 
 // Path: <root>
@@ -14336,6 +14354,9 @@ class _StringsIt extends _StringsEn {
 	@override String get video_clip_export_cancelled => 'Clip export cancelled';
 	@override String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	@override String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	@override String get clipboard_history_title => 'Clipboard history';
+	@override String get clipboard_history_clear => 'Clear';
+	@override String get clipboard_history_empty => 'No copy history yet';
 }
 
 // Path: <root>
@@ -16365,6 +16386,9 @@ class _StringsJa extends _StringsEn {
 	@override String get video_clip_export_cancelled => 'Clip export cancelled';
 	@override String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	@override String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	@override String get clipboard_history_title => 'Clipboard history';
+	@override String get clipboard_history_clear => 'Clear';
+	@override String get clipboard_history_empty => 'No copy history yet';
 }
 
 // Path: <root>
@@ -18394,6 +18418,9 @@ class _StringsKo extends _StringsEn {
 	@override String get video_clip_export_cancelled => 'Clip export cancelled';
 	@override String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	@override String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	@override String get clipboard_history_title => 'Clipboard history';
+	@override String get clipboard_history_clear => 'Clear';
+	@override String get clipboard_history_empty => 'No copy history yet';
 }
 
 // Path: <root>
@@ -20423,6 +20450,9 @@ class _StringsNl extends _StringsEn {
 	@override String get video_clip_export_cancelled => 'Clip export cancelled';
 	@override String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	@override String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	@override String get clipboard_history_title => 'Clipboard history';
+	@override String get clipboard_history_clear => 'Clear';
+	@override String get clipboard_history_empty => 'No copy history yet';
 }
 
 // Path: <root>
@@ -22452,6 +22482,9 @@ class _StringsPtBr extends _StringsEn {
 	@override String get video_clip_export_cancelled => 'Clip export cancelled';
 	@override String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	@override String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	@override String get clipboard_history_title => 'Clipboard history';
+	@override String get clipboard_history_clear => 'Clear';
+	@override String get clipboard_history_empty => 'No copy history yet';
 }
 
 // Path: <root>
@@ -24481,6 +24514,9 @@ class _StringsRu extends _StringsEn {
 	@override String get video_clip_export_cancelled => 'Clip export cancelled';
 	@override String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	@override String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	@override String get clipboard_history_title => 'Clipboard history';
+	@override String get clipboard_history_clear => 'Clear';
+	@override String get clipboard_history_empty => 'No copy history yet';
 }
 
 // Path: <root>
@@ -26510,6 +26546,9 @@ class _StringsTh extends _StringsEn {
 	@override String get video_clip_export_cancelled => 'Clip export cancelled';
 	@override String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	@override String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	@override String get clipboard_history_title => 'Clipboard history';
+	@override String get clipboard_history_clear => 'Clear';
+	@override String get clipboard_history_empty => 'No copy history yet';
 }
 
 // Path: <root>
@@ -28539,6 +28578,9 @@ class _StringsTr extends _StringsEn {
 	@override String get video_clip_export_cancelled => 'Clip export cancelled';
 	@override String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	@override String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	@override String get clipboard_history_title => 'Clipboard history';
+	@override String get clipboard_history_clear => 'Clear';
+	@override String get clipboard_history_empty => 'No copy history yet';
 }
 
 // Path: <root>
@@ -30568,6 +30610,9 @@ class _StringsVi extends _StringsEn {
 	@override String get video_clip_export_cancelled => 'Clip export cancelled';
 	@override String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	@override String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	@override String get clipboard_history_title => 'Clipboard history';
+	@override String get clipboard_history_clear => 'Clear';
+	@override String get clipboard_history_empty => 'No copy history yet';
 }
 
 // Path: <root>
@@ -32597,6 +32642,9 @@ class _StringsZhCn extends _StringsEn {
 	@override String get video_clip_export_cancelled => '已取消片段导出';
 	@override String get shortcut_action_video_align_subtitle_to_prev => '上一句字幕对齐到当前时间';
 	@override String get shortcut_action_video_align_subtitle_to_next => '下一句字幕对齐到当前时间';
+	@override String get clipboard_history_title => '复制历史';
+	@override String get clipboard_history_clear => '清空';
+	@override String get clipboard_history_empty => '暂无复制记录';
 }
 
 // Path: <root>
@@ -34626,6 +34674,9 @@ class _StringsZhHk extends _StringsEn {
 	@override String get video_clip_export_cancelled => 'Clip export cancelled';
 	@override String get shortcut_action_video_align_subtitle_to_prev => 'Align previous subtitle to now';
 	@override String get shortcut_action_video_align_subtitle_to_next => 'Align next subtitle to now';
+	@override String get clipboard_history_title => 'Clipboard history';
+	@override String get clipboard_history_clear => 'Clear';
+	@override String get clipboard_history_empty => 'No copy history yet';
 }
 
 /// Flat map(s) containing all translations.
@@ -36634,6 +36685,9 @@ extension on _StringsEn {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
@@ -38642,6 +38696,9 @@ extension on _StringsAr {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
@@ -40650,6 +40707,9 @@ extension on _StringsDe {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
@@ -42658,6 +42718,9 @@ extension on _StringsEs {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
@@ -44666,6 +44729,9 @@ extension on _StringsFr {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
@@ -46674,6 +46740,9 @@ extension on _StringsId {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
@@ -48682,6 +48751,9 @@ extension on _StringsIt {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
@@ -50690,6 +50762,9 @@ extension on _StringsJa {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
@@ -52698,6 +52773,9 @@ extension on _StringsKo {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
@@ -54706,6 +54784,9 @@ extension on _StringsNl {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
@@ -56714,6 +56795,9 @@ extension on _StringsPtBr {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
@@ -58722,6 +58806,9 @@ extension on _StringsRu {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
@@ -60730,6 +60817,9 @@ extension on _StringsTh {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
@@ -62738,6 +62828,9 @@ extension on _StringsTr {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
@@ -64746,6 +64839,9 @@ extension on _StringsVi {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
@@ -66754,6 +66850,9 @@ extension on _StringsZhCn {
 			case 'video_clip_export_cancelled': return '已取消片段导出';
 			case 'shortcut_action_video_align_subtitle_to_prev': return '上一句字幕对齐到当前时间';
 			case 'shortcut_action_video_align_subtitle_to_next': return '下一句字幕对齐到当前时间';
+			case 'clipboard_history_title': return '复制历史';
+			case 'clipboard_history_clear': return '清空';
+			case 'clipboard_history_empty': return '暂无复制记录';
 			default: return null;
 		}
 	}
@@ -68762,6 +68861,9 @@ extension on _StringsZhHk {
 			case 'video_clip_export_cancelled': return 'Clip export cancelled';
 			case 'shortcut_action_video_align_subtitle_to_prev': return 'Align previous subtitle to now';
 			case 'shortcut_action_video_align_subtitle_to_next': return 'Align next subtitle to now';
+			case 'clipboard_history_title': return 'Clipboard history';
+			case 'clipboard_history_clear': return 'Clear';
+			case 'clipboard_history_empty': return 'No copy history yet';
 			default: return null;
 		}
 	}
