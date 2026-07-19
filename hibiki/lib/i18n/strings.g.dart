@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 33864 (1992 per locale)
+/// Strings: 33915 (1995 per locale)
 ///
-/// Built on 2026-07-19 at 04:11 UTC
+/// Built on 2026-07-19 at 05:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2675,6 +2675,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_torrent_max_connections => 'Max connections';
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 // Path: <root>
@@ -7188,6 +7194,15 @@ class _StringsAr extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   @override
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 // Path: <root>
@@ -11774,6 +11789,15 @@ class _StringsDe extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   @override
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 // Path: <root>
@@ -16376,6 +16400,15 @@ class _StringsEs extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   @override
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 // Path: <root>
@@ -20989,6 +21022,15 @@ class _StringsFr extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   @override
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 // Path: <root>
@@ -25529,6 +25571,15 @@ class _StringsId extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   @override
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 // Path: <root>
@@ -30117,6 +30168,15 @@ class _StringsIt extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   @override
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 // Path: <root>
@@ -34511,6 +34571,15 @@ class _StringsJa extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   @override
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 // Path: <root>
@@ -38908,6 +38977,15 @@ class _StringsKo extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   @override
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 // Path: <root>
@@ -43474,6 +43552,15 @@ class _StringsNl extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   @override
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 // Path: <root>
@@ -48055,6 +48142,15 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   @override
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 // Path: <root>
@@ -52619,6 +52715,15 @@ class _StringsRu extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   @override
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 // Path: <root>
@@ -57128,6 +57233,15 @@ class _StringsTh extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   @override
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 // Path: <root>
@@ -61669,6 +61783,15 @@ class _StringsTr extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   @override
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 // Path: <root>
@@ -66197,6 +66320,15 @@ class _StringsVi extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   @override
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 // Path: <root>
@@ -70415,6 +70547,12 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = 不限';
   @override
   String get video_setting_torrent_connections_hint => '0 = 引擎默认';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase => '字幕延迟增大';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease => '字幕延迟减小';
+  @override
+  String get shortcut_action_video_open_subtitle_align => '打开字幕波形对轴';
 }
 
 // Path: <root>
@@ -74731,6 +74869,15 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_torrent_limit_hint => '0 = unlimited';
   @override
   String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
 }
 
 /// Flat map(s) containing all translations.
@@ -78805,6 +78952,12 @@ extension on _StringsEn {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
@@ -82877,6 +83030,12 @@ extension on _StringsAr {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
@@ -86970,6 +87129,12 @@ extension on _StringsDe {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
@@ -91062,6 +91227,12 @@ extension on _StringsEs {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
@@ -95160,6 +95331,12 @@ extension on _StringsFr {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
@@ -99240,6 +99417,12 @@ extension on _StringsId {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
@@ -103335,6 +103518,12 @@ extension on _StringsIt {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
@@ -107392,6 +107581,12 @@ extension on _StringsJa {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
@@ -111453,6 +111648,12 @@ extension on _StringsKo {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
@@ -115541,6 +115742,12 @@ extension on _StringsNl {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
@@ -119626,6 +119833,12 @@ extension on _StringsPtBr {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
@@ -123716,6 +123929,12 @@ extension on _StringsRu {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
@@ -127790,6 +128009,12 @@ extension on _StringsTh {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
@@ -131873,6 +132098,12 @@ extension on _StringsTr {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
@@ -135951,6 +136182,12 @@ extension on _StringsVi {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
@@ -139996,6 +140233,12 @@ extension on _StringsZhCn {
         return '0 = 不限';
       case 'video_setting_torrent_connections_hint':
         return '0 = 引擎默认';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return '字幕延迟增大';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return '字幕延迟减小';
+      case 'shortcut_action_video_open_subtitle_align':
+        return '打开字幕波形对轴';
       default:
         return null;
     }
@@ -144048,6 +144291,12 @@ extension on _StringsZhHk {
         return '0 = unlimited';
       case 'video_setting_torrent_connections_hint':
         return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
       default:
         return null;
     }
