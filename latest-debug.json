@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "version": "1.2.0-debug.8036",
+  "tag": "v1.2.0-debug.8036+051bee6",
+  "channel": "debug",
+  "prerelease": true,
+  "releaseSequence": 8036,
+  "notes": "Automated desktop debug-channel build from main @ 051bee6. Push releases are always prerelease and never Latest.",
+  "assets": [
+    {
+      "name": "hibiki-1.2.0-debug.8036-windows-setup.exe",
+      "browser_download_url": "https://github.com/W1ght/hibiki/releases/download/debug-rolling/hibiki-1.2.0-debug.8036-windows-setup.exe",
+      "releaseSequence": 8036,
+      "tag": "v1.2.0-debug.8036+051bee6",
+      "version": "1.2.0-debug.8036"
+    }
+  ]
+}
