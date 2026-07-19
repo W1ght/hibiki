@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 33133 (1949 per locale)
+/// Strings: 34221 (2013 per locale)
 ///
-/// Built on 2026-07-19 at 11:43 UTC
+/// Built on 2026-07-19 at 12:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2628,6 +2628,74 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_open_capture_workspace => 'Open capture workspace';
   String get game_back_to_library => 'Back to game library';
   String get game_launch_and_capture => 'Launch and capture';
+  String get game_capture_launching => 'Launching game and starting capture...';
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  String get game_capture_running => 'Capture session is running';
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  String get game_text_source_engine => 'Engine hook';
+  String get game_text_source_websocket => 'WebSocket';
+  String get game_text_source_unknown => 'Unknown source';
+  String get game_line_audio_pending => 'Matching';
+  String get game_line_audio_matched => 'Audio ready';
+  String get game_line_audio_encoded => 'Encoded';
+  String get game_line_audio_fallback => 'Fallback';
+  String get game_line_audio_missing => 'No audio';
+  String get game_line_audio_unavailable => 'Text only';
+  String get game_live_lines => 'Live lines';
+  String get game_follow_live => 'Follow live';
+  String get game_unread_lines => 'Unread';
+  String get game_session_overview => 'Session overview';
+  String get game_session_idle => 'Capture has not started';
+  String get game_session_listening => 'Listening';
+  String get game_stop_listening => 'Stop listeners';
+  String get game_health => 'Health status';
+  String get game_health_process => 'Game process';
+  String get game_health_window => 'Game window';
+  String get game_health_text => 'Text source';
+  String get game_health_audio => 'Audio source';
+  String get game_health_helper => 'Hook helper';
+  String get game_health_anki => 'Anki output';
+  String get game_status_ready => 'Ready';
+  String get game_status_waiting => 'Waiting';
+  String get game_status_unavailable => 'Unavailable';
+  String get game_status_not_configured => 'Not verified';
+  String get game_audio_backend_none => 'No audio source';
+  String get game_audio_backend_paired => 'Original voice OGG';
+  String get game_audio_backend_engine => 'Engine PCM';
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  String get game_open_diagnostics => 'Open diagnostics';
+  String get game_capture_empty_title => 'No lines received yet';
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  String get game_window_bound => 'Bound';
+  String get game_window_missing => 'Not bound';
+  String get game_text_endpoints => 'Text endpoints';
+  String get game_text_gaps => 'Sequence gaps';
+  String get game_audio_format => 'Audio format';
+  String get game_diagnostics => 'Compatibility diagnostics';
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  String get game_back_to_capture => 'Back to capture workspace';
+  String get game_clear_events => 'Clear events';
+  String get game_pipeline => 'Session pipeline';
+  String get game_metrics => 'Live metrics';
+  String get game_audio_tracks => 'Active audio tracks';
+  String get game_refresh_tracks => 'Refresh tracks';
+  String get game_track_auto => 'Automatic selection';
+  String get game_track_voice => 'Voice';
+  String get game_track_bgm => 'BGM / excluded';
+  String get game_track_select_as_voice => 'Use as voice track';
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  String get game_track_restore => 'Restore track';
+  String get game_no_tracks => 'No audio-track data yet';
+  String get game_no_events => 'No session events yet';
+  String get game_event_all => 'All events';
+  String get game_event_warnings => 'Warnings and errors';
+  String get game_session_events => 'Session events';
+  String get game_latest_line => 'Latest line';
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 // Path: <root>
@@ -7051,6 +7119,138 @@ class _StringsAr extends _StringsEn {
   String get game_back_to_library => 'Back to game library';
   @override
   String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 // Path: <root>
@@ -11547,6 +11747,138 @@ class _StringsDe extends _StringsEn {
   String get game_back_to_library => 'Back to game library';
   @override
   String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 // Path: <root>
@@ -16059,6 +16391,138 @@ class _StringsEs extends _StringsEn {
   String get game_back_to_library => 'Back to game library';
   @override
   String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 // Path: <root>
@@ -20582,6 +21046,138 @@ class _StringsFr extends _StringsEn {
   String get game_back_to_library => 'Back to game library';
   @override
   String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 // Path: <root>
@@ -25032,6 +25628,138 @@ class _StringsId extends _StringsEn {
   String get game_back_to_library => 'Back to game library';
   @override
   String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 // Path: <root>
@@ -29530,6 +30258,138 @@ class _StringsIt extends _StringsEn {
   String get game_back_to_library => 'Back to game library';
   @override
   String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 // Path: <root>
@@ -33833,6 +34693,138 @@ class _StringsJa extends _StringsEn {
   String get game_back_to_library => 'Back to game library';
   @override
   String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 // Path: <root>
@@ -38139,6 +39131,138 @@ class _StringsKo extends _StringsEn {
   String get game_back_to_library => 'Back to game library';
   @override
   String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 // Path: <root>
@@ -42615,6 +43739,138 @@ class _StringsNl extends _StringsEn {
   String get game_back_to_library => 'Back to game library';
   @override
   String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 // Path: <root>
@@ -47106,6 +48362,138 @@ class _StringsPtBr extends _StringsEn {
   String get game_back_to_library => 'Back to game library';
   @override
   String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 // Path: <root>
@@ -51580,6 +52968,138 @@ class _StringsRu extends _StringsEn {
   String get game_back_to_library => 'Back to game library';
   @override
   String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 // Path: <root>
@@ -55999,6 +57519,138 @@ class _StringsTh extends _StringsEn {
   String get game_back_to_library => 'Back to game library';
   @override
   String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 // Path: <root>
@@ -60450,6 +62102,138 @@ class _StringsTr extends _StringsEn {
   String get game_back_to_library => 'Back to game library';
   @override
   String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 // Path: <root>
@@ -64888,6 +66672,138 @@ class _StringsVi extends _StringsEn {
   String get game_back_to_library => 'Back to game library';
   @override
   String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 // Path: <root>
@@ -69017,6 +70933,134 @@ class _StringsZhCn extends _StringsEn {
   String get game_back_to_library => '返回游戏库';
   @override
   String get game_launch_and_capture => '启动并捕获';
+  @override
+  String get game_capture_launching => '正在启动游戏并开始捕获…';
+  @override
+  String get game_capture_launch_failed => '游戏启动或捕获失败';
+  @override
+  String get game_capture_running => '捕获会话已运行';
+  @override
+  String get game_capture_running_no_window => '捕获已运行；尚未找到游戏窗口';
+  @override
+  String get game_text_source_engine => '引擎 Hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => '未知来源';
+  @override
+  String get game_line_audio_pending => '匹配中';
+  @override
+  String get game_line_audio_matched => '音频就绪';
+  @override
+  String get game_line_audio_encoded => '已编码';
+  @override
+  String get game_line_audio_fallback => '已降级';
+  @override
+  String get game_line_audio_missing => '无音频';
+  @override
+  String get game_line_audio_unavailable => '仅文本';
+  @override
+  String get game_live_lines => '实时台词';
+  @override
+  String get game_follow_live => '跟随实时';
+  @override
+  String get game_unread_lines => '未读';
+  @override
+  String get game_session_overview => '会话概览';
+  @override
+  String get game_session_idle => '尚未开始捕获';
+  @override
+  String get game_session_listening => '正在监听';
+  @override
+  String get game_stop_listening => '停止监听';
+  @override
+  String get game_health => '健康状态';
+  @override
+  String get game_health_process => '游戏进程';
+  @override
+  String get game_health_window => '游戏窗口';
+  @override
+  String get game_health_text => '文本来源';
+  @override
+  String get game_health_audio => '音频来源';
+  @override
+  String get game_health_helper => 'Hook Helper';
+  @override
+  String get game_health_anki => 'Anki 出卡';
+  @override
+  String get game_status_ready => '可用';
+  @override
+  String get game_status_waiting => '等待';
+  @override
+  String get game_status_unavailable => '不可用';
+  @override
+  String get game_status_not_configured => '待验证';
+  @override
+  String get game_audio_backend_none => '无音频源';
+  @override
+  String get game_audio_backend_paired => '纯人声 OGG';
+  @override
+  String get game_audio_backend_engine => '引擎 PCM';
+  @override
+  String get game_audio_backend_loopback => '系统 Loopback（混音）';
+  @override
+  String get game_open_diagnostics => '打开诊断';
+  @override
+  String get game_capture_empty_title => '尚未收到台词';
+  @override
+  String get game_capture_empty_body => '启动或绑定游戏后，文本与句音状态会显示在这里。';
+  @override
+  String get game_window_bound => '已绑定';
+  @override
+  String get game_window_missing => '未绑定';
+  @override
+  String get game_text_endpoints => '文本端点';
+  @override
+  String get game_text_gaps => '序号缺口';
+  @override
+  String get game_audio_format => '音频格式';
+  @override
+  String get game_diagnostics => '兼容性诊断';
+  @override
+  String get game_diagnostics_subtitle => '会话阶段、端点、音轨与结构化事件';
+  @override
+  String get game_back_to_capture => '返回捕获工作台';
+  @override
+  String get game_clear_events => '清空事件';
+  @override
+  String get game_pipeline => '会话管线';
+  @override
+  String get game_metrics => '实时指标';
+  @override
+  String get game_audio_tracks => '活跃音轨';
+  @override
+  String get game_refresh_tracks => '刷新音轨';
+  @override
+  String get game_track_auto => '自动选择';
+  @override
+  String get game_track_voice => '语音';
+  @override
+  String get game_track_bgm => 'BGM / 已排除';
+  @override
+  String get game_track_select_as_voice => '设为语音轨';
+  @override
+  String get game_track_exclude_bgm => '标记为 BGM';
+  @override
+  String get game_track_restore => '恢复音轨';
+  @override
+  String get game_no_tracks => '尚无音轨数据';
+  @override
+  String get game_no_events => '尚无会话事件';
+  @override
+  String get game_event_all => '全部事件';
+  @override
+  String get game_event_warnings => '警告及错误';
+  @override
+  String get game_session_events => '会话事件';
+  @override
+  String get game_latest_line => '最新台词';
+  @override
+  String get game_no_active_line => '选择一条台词查看句音状态。';
 }
 
 // Path: <root>
@@ -73239,6 +75283,138 @@ class _StringsZhHk extends _StringsEn {
   String get game_back_to_library => 'Back to game library';
   @override
   String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
 }
 
 /// Flat map(s) containing all translations.
@@ -77225,6 +79401,134 @@ extension on _StringsEn {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
@@ -81209,6 +83513,134 @@ extension on _StringsAr {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
@@ -85214,6 +87646,134 @@ extension on _StringsDe {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
@@ -89218,6 +91778,134 @@ extension on _StringsEs {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
@@ -93228,6 +95916,134 @@ extension on _StringsFr {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
@@ -97220,6 +100036,134 @@ extension on _StringsId {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
@@ -101227,6 +104171,134 @@ extension on _StringsIt {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
@@ -105196,6 +108268,134 @@ extension on _StringsJa {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
@@ -109169,6 +112369,134 @@ extension on _StringsKo {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
@@ -113169,6 +116497,134 @@ extension on _StringsNl {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
@@ -117166,6 +120622,134 @@ extension on _StringsPtBr {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
@@ -121168,6 +124752,134 @@ extension on _StringsRu {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
@@ -125154,6 +128866,134 @@ extension on _StringsTh {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
@@ -129149,6 +132989,134 @@ extension on _StringsTr {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
@@ -133139,6 +137107,134 @@ extension on _StringsVi {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
@@ -137097,6 +141193,134 @@ extension on _StringsZhCn {
         return '返回游戏库';
       case 'game_launch_and_capture':
         return '启动并捕获';
+      case 'game_capture_launching':
+        return '正在启动游戏并开始捕获…';
+      case 'game_capture_launch_failed':
+        return '游戏启动或捕获失败';
+      case 'game_capture_running':
+        return '捕获会话已运行';
+      case 'game_capture_running_no_window':
+        return '捕获已运行；尚未找到游戏窗口';
+      case 'game_text_source_engine':
+        return '引擎 Hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return '未知来源';
+      case 'game_line_audio_pending':
+        return '匹配中';
+      case 'game_line_audio_matched':
+        return '音频就绪';
+      case 'game_line_audio_encoded':
+        return '已编码';
+      case 'game_line_audio_fallback':
+        return '已降级';
+      case 'game_line_audio_missing':
+        return '无音频';
+      case 'game_line_audio_unavailable':
+        return '仅文本';
+      case 'game_live_lines':
+        return '实时台词';
+      case 'game_follow_live':
+        return '跟随实时';
+      case 'game_unread_lines':
+        return '未读';
+      case 'game_session_overview':
+        return '会话概览';
+      case 'game_session_idle':
+        return '尚未开始捕获';
+      case 'game_session_listening':
+        return '正在监听';
+      case 'game_stop_listening':
+        return '停止监听';
+      case 'game_health':
+        return '健康状态';
+      case 'game_health_process':
+        return '游戏进程';
+      case 'game_health_window':
+        return '游戏窗口';
+      case 'game_health_text':
+        return '文本来源';
+      case 'game_health_audio':
+        return '音频来源';
+      case 'game_health_helper':
+        return 'Hook Helper';
+      case 'game_health_anki':
+        return 'Anki 出卡';
+      case 'game_status_ready':
+        return '可用';
+      case 'game_status_waiting':
+        return '等待';
+      case 'game_status_unavailable':
+        return '不可用';
+      case 'game_status_not_configured':
+        return '待验证';
+      case 'game_audio_backend_none':
+        return '无音频源';
+      case 'game_audio_backend_paired':
+        return '纯人声 OGG';
+      case 'game_audio_backend_engine':
+        return '引擎 PCM';
+      case 'game_audio_backend_loopback':
+        return '系统 Loopback（混音）';
+      case 'game_open_diagnostics':
+        return '打开诊断';
+      case 'game_capture_empty_title':
+        return '尚未收到台词';
+      case 'game_capture_empty_body':
+        return '启动或绑定游戏后，文本与句音状态会显示在这里。';
+      case 'game_window_bound':
+        return '已绑定';
+      case 'game_window_missing':
+        return '未绑定';
+      case 'game_text_endpoints':
+        return '文本端点';
+      case 'game_text_gaps':
+        return '序号缺口';
+      case 'game_audio_format':
+        return '音频格式';
+      case 'game_diagnostics':
+        return '兼容性诊断';
+      case 'game_diagnostics_subtitle':
+        return '会话阶段、端点、音轨与结构化事件';
+      case 'game_back_to_capture':
+        return '返回捕获工作台';
+      case 'game_clear_events':
+        return '清空事件';
+      case 'game_pipeline':
+        return '会话管线';
+      case 'game_metrics':
+        return '实时指标';
+      case 'game_audio_tracks':
+        return '活跃音轨';
+      case 'game_refresh_tracks':
+        return '刷新音轨';
+      case 'game_track_auto':
+        return '自动选择';
+      case 'game_track_voice':
+        return '语音';
+      case 'game_track_bgm':
+        return 'BGM / 已排除';
+      case 'game_track_select_as_voice':
+        return '设为语音轨';
+      case 'game_track_exclude_bgm':
+        return '标记为 BGM';
+      case 'game_track_restore':
+        return '恢复音轨';
+      case 'game_no_tracks':
+        return '尚无音轨数据';
+      case 'game_no_events':
+        return '尚无会话事件';
+      case 'game_event_all':
+        return '全部事件';
+      case 'game_event_warnings':
+        return '警告及错误';
+      case 'game_session_events':
+        return '会话事件';
+      case 'game_latest_line':
+        return '最新台词';
+      case 'game_no_active_line':
+        return '选择一条台词查看句音状态。';
       default:
         return null;
     }
@@ -141061,6 +145285,134 @@ extension on _StringsZhHk {
         return 'Back to game library';
       case 'game_launch_and_capture':
         return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
       default:
         return null;
     }
