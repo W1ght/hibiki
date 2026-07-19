@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 32895 (1935 per locale)
+/// Strings: 33133 (1949 per locale)
 ///
-/// Built on 2026-07-17 at 16:32 UTC
+/// Built on 2026-07-19 at 11:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2612,6 +2612,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Connection & server settings are in the Hibiki Interconnect category';
   String get settings_search_hint => 'Search settings';
   String get settings_search_no_results => 'No matching settings';
+  String get nav_game => 'Game';
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  String get game_library => 'Game library';
+  String get game_capture_workbench => 'Capture workspace';
+  String get game_capture_ready => 'Capture tools ready';
+  String get game_capture_active => 'Capture is active';
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  String get game_captured_lines => 'Captured lines';
+  String get game_waiting_for_text => 'Waiting for text';
+  String get game_library_empty_title => 'No games added yet';
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  String get game_open_capture_workspace => 'Open capture workspace';
+  String get game_back_to_library => 'Back to game library';
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 // Path: <root>
@@ -7005,6 +7021,36 @@ class _StringsAr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 // Path: <root>
@@ -11471,6 +11517,36 @@ class _StringsDe extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 // Path: <root>
@@ -15953,6 +16029,36 @@ class _StringsEs extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 // Path: <root>
@@ -20446,6 +20552,36 @@ class _StringsFr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 // Path: <root>
@@ -24866,6 +25002,36 @@ class _StringsId extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 // Path: <root>
@@ -29334,6 +29500,36 @@ class _StringsIt extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 // Path: <root>
@@ -33607,6 +33803,36 @@ class _StringsJa extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 // Path: <root>
@@ -37883,6 +38109,36 @@ class _StringsKo extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 // Path: <root>
@@ -42329,6 +42585,36 @@ class _StringsNl extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 // Path: <root>
@@ -46790,6 +47076,36 @@ class _StringsPtBr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 // Path: <root>
@@ -51234,6 +51550,36 @@ class _StringsRu extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 // Path: <root>
@@ -55623,6 +55969,36 @@ class _StringsTh extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 // Path: <root>
@@ -60044,6 +60420,36 @@ class _StringsTr extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 // Path: <root>
@@ -64452,6 +64858,36 @@ class _StringsVi extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 // Path: <root>
@@ -68553,6 +68989,34 @@ class _StringsZhCn extends _StringsEn {
   String get settings_search_hint => '搜索设置';
   @override
   String get settings_search_no_results => '没有匹配的设置项';
+  @override
+  String get nav_game => '游戏';
+  @override
+  String get game_home_subtitle => '游戏库与捕获监控';
+  @override
+  String get game_library => '游戏库';
+  @override
+  String get game_capture_workbench => '捕获工作台';
+  @override
+  String get game_capture_ready => '捕获工具已就绪';
+  @override
+  String get game_capture_active => '正在捕获';
+  @override
+  String get game_capture_description => '启动或绑定游戏，并监控文本、语音、画面与 Anki 出卡。';
+  @override
+  String get game_captured_lines => '已捕获台词';
+  @override
+  String get game_waiting_for_text => '等待文本';
+  @override
+  String get game_library_empty_title => '尚未添加游戏';
+  @override
+  String get game_library_empty_body => '游戏配置与兼容性记录会显示在这里；当前可先使用捕获工作台。';
+  @override
+  String get game_open_capture_workspace => '打开捕获工作台';
+  @override
+  String get game_back_to_library => '返回游戏库';
+  @override
+  String get game_launch_and_capture => '启动并捕获';
 }
 
 // Path: <root>
@@ -72745,6 +73209,36 @@ class _StringsZhHk extends _StringsEn {
   String get settings_search_hint => 'Search settings';
   @override
   String get settings_search_no_results => 'No matching settings';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
 }
 
 /// Flat map(s) containing all translations.
@@ -76703,6 +77197,34 @@ extension on _StringsEn {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
@@ -80659,6 +81181,34 @@ extension on _StringsAr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
@@ -84636,6 +85186,34 @@ extension on _StringsDe {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
@@ -88612,6 +89190,34 @@ extension on _StringsEs {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
@@ -92594,6 +93200,34 @@ extension on _StringsFr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
@@ -96558,6 +97192,34 @@ extension on _StringsId {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
@@ -100537,6 +101199,34 @@ extension on _StringsIt {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
@@ -104478,6 +105168,34 @@ extension on _StringsJa {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
@@ -108423,6 +109141,34 @@ extension on _StringsKo {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
@@ -112395,6 +113141,34 @@ extension on _StringsNl {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
@@ -116364,6 +117138,34 @@ extension on _StringsPtBr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
@@ -120338,6 +121140,34 @@ extension on _StringsRu {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
@@ -124296,6 +125126,34 @@ extension on _StringsTh {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
@@ -128263,6 +129121,34 @@ extension on _StringsTr {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
@@ -132225,6 +133111,34 @@ extension on _StringsVi {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
@@ -136155,6 +137069,34 @@ extension on _StringsZhCn {
         return '搜索设置';
       case 'settings_search_no_results':
         return '没有匹配的设置项';
+      case 'nav_game':
+        return '游戏';
+      case 'game_home_subtitle':
+        return '游戏库与捕获监控';
+      case 'game_library':
+        return '游戏库';
+      case 'game_capture_workbench':
+        return '捕获工作台';
+      case 'game_capture_ready':
+        return '捕获工具已就绪';
+      case 'game_capture_active':
+        return '正在捕获';
+      case 'game_capture_description':
+        return '启动或绑定游戏，并监控文本、语音、画面与 Anki 出卡。';
+      case 'game_captured_lines':
+        return '已捕获台词';
+      case 'game_waiting_for_text':
+        return '等待文本';
+      case 'game_library_empty_title':
+        return '尚未添加游戏';
+      case 'game_library_empty_body':
+        return '游戏配置与兼容性记录会显示在这里；当前可先使用捕获工作台。';
+      case 'game_open_capture_workspace':
+        return '打开捕获工作台';
+      case 'game_back_to_library':
+        return '返回游戏库';
+      case 'game_launch_and_capture':
+        return '启动并捕获';
       default:
         return null;
     }
@@ -140091,6 +141033,34 @@ extension on _StringsZhHk {
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
       default:
         return null;
     }
