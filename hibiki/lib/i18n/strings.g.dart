@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36839 (2167 per locale)
+/// Strings: 36856 (2168 per locale)
 ///
-/// Built on 2026-07-20 at 19:24 UTC
+/// Built on 2026-07-20 at 20:55 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2890,6 +2890,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'No matching game resource audio; fallback is disabled';
   String get game_audio_resource_id => 'Audio resource ID';
   String get home_remote_source => 'Remote';
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 // Path: <root>
@@ -7792,6 +7794,10 @@ class _StringsAr extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 // Path: <root>
@@ -12767,6 +12773,10 @@ class _StringsDe extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 // Path: <root>
@@ -17758,6 +17768,10 @@ class _StringsEs extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 // Path: <root>
@@ -22760,6 +22774,10 @@ class _StringsFr extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 // Path: <root>
@@ -27689,6 +27707,10 @@ class _StringsId extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 // Path: <root>
@@ -32666,6 +32688,10 @@ class _StringsIt extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 // Path: <root>
@@ -37448,6 +37474,10 @@ class _StringsJa extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 // Path: <root>
@@ -42233,6 +42263,10 @@ class _StringsKo extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 // Path: <root>
@@ -47188,6 +47222,10 @@ class _StringsNl extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 // Path: <root>
@@ -52158,6 +52196,10 @@ class _StringsPtBr extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 // Path: <root>
@@ -57111,6 +57153,10 @@ class _StringsRu extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 // Path: <root>
@@ -62009,6 +62055,10 @@ class _StringsTh extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 // Path: <root>
@@ -66939,6 +66989,10 @@ class _StringsTr extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 // Path: <root>
@@ -71856,6 +71910,10 @@ class _StringsVi extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 // Path: <root>
@@ -76429,6 +76487,10 @@ class _StringsZhCn extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => '远端';
+  @override
+  String get shortcut_press_gamepad => '按下手柄按钮…';
+  @override
+  String get shortcut_gamepad_pick_list => '从列表选择';
 }
 
 // Path: <root>
@@ -81130,6 +81192,10 @@ class _StringsZhHk extends _StringsEn {
   String get game_audio_resource_id => '音频资源 ID';
   @override
   String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
 }
 
 /// Flat map(s) containing all translations.
@@ -85554,6 +85620,10 @@ extension on _StringsEn {
         return 'Audio resource ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
@@ -89976,6 +90046,10 @@ extension on _StringsAr {
         return '音频资源 ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
@@ -94419,6 +94493,10 @@ extension on _StringsDe {
         return '音频资源 ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
@@ -98861,6 +98939,10 @@ extension on _StringsEs {
         return '音频资源 ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
@@ -103309,6 +103391,10 @@ extension on _StringsFr {
         return '音频资源 ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
@@ -107739,6 +107825,10 @@ extension on _StringsId {
         return '音频资源 ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
@@ -112184,6 +112274,10 @@ extension on _StringsIt {
         return '音频资源 ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
@@ -116591,6 +116685,10 @@ extension on _StringsJa {
         return '音频资源 ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
@@ -121002,6 +121100,10 @@ extension on _StringsKo {
         return '音频资源 ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
@@ -125440,6 +125542,10 @@ extension on _StringsNl {
         return '音频资源 ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
@@ -129875,6 +129981,10 @@ extension on _StringsPtBr {
         return '音频资源 ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
@@ -134315,6 +134425,10 @@ extension on _StringsRu {
         return '音频资源 ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
@@ -138739,6 +138853,10 @@ extension on _StringsTh {
         return '音频资源 ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
@@ -143172,6 +143290,10 @@ extension on _StringsTr {
         return '音频资源 ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
@@ -147600,6 +147722,10 @@ extension on _StringsVi {
         return '音频资源 ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
@@ -151994,6 +152120,10 @@ extension on _StringsZhCn {
         return '音频资源 ID';
       case 'home_remote_source':
         return '远端';
+      case 'shortcut_press_gamepad':
+        return '按下手柄按钮…';
+      case 'shortcut_gamepad_pick_list':
+        return '从列表选择';
       default:
         return null;
     }
@@ -156396,6 +156526,10 @@ extension on _StringsZhHk {
         return '音频资源 ID';
       case 'home_remote_source':
         return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
       default:
         return null;
     }
