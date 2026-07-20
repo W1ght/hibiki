@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 34289 (2017 per locale)
+/// Strings: 34297 (2017 per locale)
 ///
-/// Built on 2026-07-19 at 20:19 UTC
+/// Built on 2026-07-20 at 03:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2701,6 +2701,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
   String get game_audio_backend_resource => 'Game resource audio';
+  String get game_audio_fallback_allow => 'Allow audio fallback';
+  String get game_audio_fallback_resource_only => 'Game resource audio only';
+  String get game_audio_fallback_disabled_missing =>
+      'No matching game resource audio; fallback is disabled';
+  String get game_audio_resource_id => 'Audio resource ID';
 }
 
 // Path: <root>
@@ -71200,6 +71205,15 @@ class _StringsZhCn extends _StringsEn {
   String get game_text_thread_hint => '像 Luna Translator 一样选择干净的台词线程';
   @override
   String get game_audio_backend_resource => '游戏资源音频';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -79685,6 +79699,14 @@ extension on _StringsEn {
         return 'Choose the clean dialogue thread, like Luna Translator';
       case 'game_audio_backend_resource':
         return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return 'Allow audio fallback';
+      case 'game_audio_fallback_resource_only':
+        return 'Game resource audio only';
+      case 'game_audio_fallback_disabled_missing':
+        return 'No matching game resource audio; fallback is disabled';
+      case 'game_audio_resource_id':
+        return 'Audio resource ID';
       default:
         return null;
     }
@@ -141597,6 +141619,14 @@ extension on _StringsZhCn {
         return '像 Luna Translator 一样选择干净的台词线程';
       case 'game_audio_backend_resource':
         return '游戏资源音频';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
