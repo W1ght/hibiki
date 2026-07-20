@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 34272 (2016 per locale)
+/// Strings: 36822 (2166 per locale)
 ///
-/// Built on 2026-07-19 at 14:54 UTC
+/// Built on 2026-07-20 at 17:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -676,7 +676,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String stat_format_hours_minutes({required Object h, required Object m}) =>
       '${h} hr ${m} min';
   String stat_format_chars({required Object n}) => '${n} characters';
-  String stat_format_chars_wan({required Object n}) => '${n} characters';
+  String stat_format_chars_wan({required Object n}) => '${n}万 characters';
   String get error_log_share_subject => 'hibiki Error Log';
   String get update_never_remind => 'Don\'t remind me about updates';
   String get update_auto_install => 'Auto-install updates';
@@ -1437,8 +1437,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_window_mode => 'Window pinning';
   String get desktop_clipboard_window_mode_normal => 'Off';
   String get desktop_clipboard_window_mode_lookup => 'Lookup only';
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
   String get desktop_clipboard_window_mode_always => 'Always';
   String get popup_instant_scroll => 'Instant popup scroll';
   String get popup_instant_scroll_hint =>
@@ -1605,7 +1603,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Controls what remains available after pressing the side lock button';
   String get video_immersive_mode_lookup_only => 'Lookup only';
   String get video_immersive_mode_full => 'Full controls';
-  String get video_immersive_mode_seek_lookup => 'Seek + lookup';
+  String get video_immersive_mode_seek_lookup => 'Shortcut + lookup';
   String get video_immersive_mode_unlock_only => 'Unlock only';
   String get custom_fonts_catalog_title => 'Font library';
   String get startup_default_dictionary_tab => 'Open lookup on startup';
@@ -1666,12 +1664,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get lyrics_text_color_hint =>
       'Use a custom color for lyrics text instead of following the theme';
   String get floating_lyric_text_opacity => 'Floating subtitle text opacity';
-  String get floating_lyric_text_opacity_hint =>
-      'Lower this to make the floating subtitle text more transparent';
   String get floating_lyric_button_bg_opacity =>
       'Floating subtitle button background opacity';
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Adjust how transparent the floating subtitle control buttons are';
   String get video_control_customize_hint =>
       'Choose where each button sits on the player, or move it out.';
   String get video_control_slot_bottom_left => 'Bottom bar (left)';
@@ -1828,8 +1822,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Restore moved and removed buttons to the default player layout.';
   String get floating_lyric_bg_opacity =>
       'Floating subtitle background opacity';
-  String get floating_lyric_bg_opacity_hint =>
-      'Lower this to make the floating subtitle bar more transparent so it blocks less of your view';
   String get dict_update_check => 'Check for Updates';
   String get dict_update_tooltip => 'Update dictionary';
   String get dict_update_checking => 'Checking for updates…';
@@ -1859,8 +1851,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_overwrite_scope_all => 'All matching cards';
   String video_favorite_count({required Object count}) => '${count} favorites';
   String get video_setting_auto_play_next => 'Auto-play next episode';
-  String get video_setting_auto_play_next_hint =>
-      'Automatically play the next episode in a playlist when one finishes';
   String get video_auto_play_next_cancel => 'Cancel';
   String video_auto_play_next_countdown({required Object seconds}) =>
       'Next episode in ${seconds}s';
@@ -2415,9 +2405,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Network error. Check your connection and try again.';
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
-  String get desktop_clipboard_destination => 'Clipboard lookup destination';
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
+  String get desktop_clipboard_destination => 'Lookup popup position';
   String get desktop_clipboard_destination_main => 'Main window';
   String get desktop_clipboard_destination_panel => 'Floating panel';
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
@@ -2603,15 +2591,204 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_destination_interconnect => 'Hibiki Interconnect';
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
+  String get interconnect_section_client => 'Connect to other devices';
+  String get settings_search_hint => 'Search settings';
+  String get settings_search_no_results => 'No matching settings';
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  String get video_setting_qb_username => 'WebUI username';
+  String get video_setting_qb_password => 'WebUI password';
+  String get video_setting_qb_category => 'qBittorrent category';
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  String get anime_download_title => 'Anime download';
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  String get anime_download_search_hint => 'Anime title';
+  String get anime_download_search => 'Search';
+  String get anime_download_no_results => 'No results';
+  String get anime_download_category_all => 'All';
+  String get anime_download_category_raw => 'Raw';
+  String get anime_download_category_english => 'English-translated';
+  String get anime_download_category_non_english => 'Non-English';
+  String get anime_download_trusted_only => 'Trusted only';
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  String get anime_download_subs_badge => 'Subs';
+  String get anime_download_no_subs => 'No subs';
+  String get anime_download_batch => 'Batch';
+  String get anime_download_include_subs => 'Include subtitles';
+  String get anime_download_push => 'Push download';
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  String get anime_download_tasks => 'Download tasks';
+  String get anime_download_no_tasks => 'No download tasks yet';
+  String get anime_download_back => 'Back';
+  String get anime_download_refresh => 'Refresh';
+  String get anime_download_delete => 'Delete';
+  String get anime_download_play_now => 'Play while downloading';
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  String get interconnect_section_related => 'Remote content & lookup';
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  String get interconnect_enable => 'Enable interconnect';
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  String get reading_activity => 'Reading activity';
+  String get video_watch_activity => 'Watch activity';
+  String get book_mark_completed_action => 'Mark as completed';
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  String get book_marked_completed => 'Marked as completed';
+  String get book_marked_uncompleted => 'Marked as not completed';
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  String get mining_image_quality => 'Image / GIF quality';
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  String get mining_image_quality_thrift => 'Data saver';
+  String get mining_image_quality_standard => 'Standard';
+  String get mining_image_quality_hd => 'HD';
+  String get mining_image_quality_native => 'Native';
+  String get mining_audio_quality => 'Audio quality';
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  String get mining_audio_quality_standard => 'Standard';
+  String get mining_audio_quality_high => 'High';
+  String get mining_audio_quality_native => 'Native';
+  String get video_setting_torrent_backend => 'Download backend';
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  String get video_setting_torrent_max_connections => 'Max connections';
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  String get custom_fonts_font_roles => 'Font roles';
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  String get games => 'Games';
+  String get games_add => 'Add game';
+  String get games_empty => 'No games added yet';
+  String get games_rename => 'Rename';
+  String get games_remove => 'Remove';
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  String get games_exe_missing => 'Game executable not found';
+  String get nav_home => 'Home';
+  String get home_activity => 'Activity';
+  String get home_continue => 'Continue';
+  String get home_filter_all => 'All';
+  String get home_filter_read => 'Read';
+  String get home_filter_watch => 'Watch';
+  String get home_filter_game => 'Game';
+  String get home_filter_added => 'Added';
+  String get home_stat_library => 'Library';
+  String get home_stat_total_time => 'Total Time';
+  String get home_stat_today => 'Today';
+  String get home_stat_this_week => 'This Week';
+  String get home_stat_this_month => 'This Month';
+  String get home_range_week => 'Week';
+  String get home_range_month => 'Month';
+  String get home_activity_empty => 'No activity yet';
+  String get home_today => 'Today';
+  String get home_yesterday => 'Yesterday';
+  String get activity_just_now => 'Just now';
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  String home_session_count({required Object n}) => '${n} sessions';
+  String get home_dashboard_title => 'Home';
+  String get clipboard_history_title => 'Clipboard history';
+  String get clipboard_history_clear => 'Clear';
+  String get clipboard_history_empty => 'No copy history yet';
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  String get torrent_upload_intro_confirm => 'Save';
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  String get anime_download_generic_hint => 'Magnet link';
+  String get anime_download_generic_download => 'Download';
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  String get anime_download_kind_auto => 'Auto';
+  String get anime_download_kind_video => 'Video';
+  String get anime_download_kind_book => 'Book';
+  String get nav_downloads => 'Downloads';
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  String get galgame_helper_size_unknown => 'unknown size';
+  String get galgame_helper_download => 'Download';
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  String get download_settings => 'Download settings';
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  String get floating_lyric_text_opacity_hint =>
+      'Lower this to make the floating subtitle text more transparent';
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Adjust how transparent the floating subtitle control buttons are';
+  String get floating_lyric_bg_opacity_hint =>
+      'Lower this to make the floating subtitle bar more transparent so it blocks less of your view';
+  String get video_setting_auto_play_next_hint =>
+      'Automatically play the next episode in a playlist when one finishes';
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
-  String get interconnect_section_client => 'Connect to other devices';
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  String get settings_search_hint => 'Search settings';
-  String get settings_search_no_results => 'No matching settings';
   String get nav_game => 'Game';
   String get game_home_subtitle => 'Game library and capture monitoring';
   String get game_library => 'Game library';
@@ -2700,6 +2877,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_text_thread_all => 'All text threads';
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  String get game_show_hook_text_window => 'Show Hook text window';
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  String get game_audio_backend_resource => 'Game resource audio';
+  String get game_audio_fallback_allow => 'Allow audio fallback';
+  String get game_audio_fallback_resource_only => 'Game resource audio only';
+  String get game_audio_fallback_disabled_missing =>
+      'No matching game resource audio; fallback is disabled';
+  String get game_audio_resource_id => 'Audio resource ID';
 }
 
 // Path: <root>
@@ -3590,7 +3780,7 @@ class _StringsAr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} حرف';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} حرف';
+  String stat_format_chars_wan({required Object n}) => '${n}万 حرف';
   @override
   String get error_log_share_subject => 'سجل أخطاء hibiki';
   @override
@@ -5034,9 +5224,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'أثناء البحث فقط';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_always => 'دائمًا';
   @override
   String get popup_instant_scroll => 'تمرير فوري للنافذة المنبثقة';
@@ -5333,7 +5520,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'كامل عناصر التحكم';
   @override
-  String get video_immersive_mode_seek_lookup => 'الانتقال + البحث';
+  String get video_immersive_mode_seek_lookup => 'اختصار + بحث';
   @override
   String get video_immersive_mode_unlock_only => 'إلغاء القفل فقط';
   @override
@@ -5442,14 +5629,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => 'تعتيم نص الترجمة العائمة';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'اخفض هذا لجعل نص الترجمة العائمة أكثر شفافية';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'تعتيم خلفية زر الترجمة العائمة';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'اضبط مدى شفافية خلفية أزرار التحكم في الترجمة العائمة';
   @override
   String get video_control_customize_hint =>
       'اختر موضع كل زر على المشغّل، أو انقله خارجه.';
@@ -5706,9 +5887,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => 'تعتيم خلفية الترجمة العائمة';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'اخفض هذا لجعل شريط الترجمة العائمة أكثر شفافية فيحجب رؤيتك أقل';
-  @override
   String get dict_update_check => 'التحقق من التحديثات';
   @override
   String get dict_update_tooltip => 'تحديث القاموس';
@@ -5758,9 +5936,6 @@ class _StringsAr extends _StringsEn {
   String video_favorite_count({required Object count}) => '${count} مفضّلة';
   @override
   String get video_setting_auto_play_next => 'التشغيل التلقائي للحلقة التالية';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'تشغيل الحلقة التالية في قائمة التشغيل تلقائيًا عند انتهاء واحدة';
   @override
   String get video_auto_play_next_cancel => 'إلغاء';
   @override
@@ -6750,9 +6925,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -7079,20 +7251,356 @@ class _StringsAr extends _StringsEn {
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
   @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get interconnect_enable => 'Enable interconnect';
+  @override
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'اخفض هذا لجعل نص الترجمة العائمة أكثر شفافية';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'اضبط مدى شفافية خلفية أزرار التحكم في الترجمة العائمة';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'اخفض هذا لجعل شريط الترجمة العائمة أكثر شفافية فيحجب رؤيتك أقل';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'تشغيل الحلقة التالية في قائمة التشغيل تلقائيًا عند انتهاء واحدة';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   @override
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
   @override
-  String get interconnect_section_client => 'Connect to other devices';
-  @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  @override
-  String get settings_search_hint => 'Search settings';
-  @override
-  String get settings_search_no_results => 'No matching settings';
   @override
   String get nav_game => 'Game';
   @override
@@ -7262,6 +7770,28 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -8170,7 +8700,7 @@ class _StringsDe extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} Zeichen';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} Zeichen';
+  String stat_format_chars_wan({required Object n}) => '${n}万 Zeichen';
   @override
   String get error_log_share_subject => 'hibiki Fehlerprotokoll';
   @override
@@ -9644,9 +10174,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Nur beim Nachschlagen';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_always => 'Immer';
   @override
   String get popup_instant_scroll => 'Sofortiges Popup-Scrollen';
@@ -9951,7 +10478,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Alle Bedienelemente';
   @override
-  String get video_immersive_mode_seek_lookup => 'Spulen + Nachschlagen';
+  String get video_immersive_mode_seek_lookup => 'Tastenkürzel + Nachschlagen';
   @override
   String get video_immersive_mode_unlock_only => 'Nur Entsperren';
   @override
@@ -10064,14 +10591,8 @@ class _StringsDe extends _StringsEn {
   String get floating_lyric_text_opacity =>
       'Deckkraft des schwebenden Untertiteltexts';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Verringern, um den schwebenden Untertiteltext transparenter zu machen';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Deckkraft des Hintergrunds der schwebenden Untertitel-Tasten';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Stellt ein, wie transparent die Hintergründe der schwebenden Untertitel-Bedienknöpfe sind';
   @override
   String get video_control_customize_hint =>
       'Wähle für jede Taste die Position auf dem Player oder entferne sie.';
@@ -10336,9 +10857,6 @@ class _StringsDe extends _StringsEn {
   String get floating_lyric_bg_opacity =>
       'Hintergrund-Deckkraft des schwebenden Untertitels';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Verringern, um die schwebende Untertitelleiste transparenter zu machen, damit sie weniger Sicht verdeckt';
-  @override
   String get dict_update_check => 'Nach Updates suchen';
   @override
   String get dict_update_tooltip => 'Wörterbuch aktualisieren';
@@ -10391,9 +10909,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Nächste Folge automatisch abspielen';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Spielt nach dem Ende einer Folge automatisch die nächste Folge der Playlist ab';
   @override
   String get video_auto_play_next_cancel => 'Abbrechen';
   @override
@@ -11385,9 +11900,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -11714,20 +12226,356 @@ class _StringsDe extends _StringsEn {
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
   @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get interconnect_enable => 'Enable interconnect';
+  @override
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Verringern, um den schwebenden Untertiteltext transparenter zu machen';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Stellt ein, wie transparent die Hintergründe der schwebenden Untertitel-Bedienknöpfe sind';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Verringern, um die schwebende Untertitelleiste transparenter zu machen, damit sie weniger Sicht verdeckt';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Spielt nach dem Ende einer Folge automatisch die nächste Folge der Playlist ab';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   @override
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
   @override
-  String get interconnect_section_client => 'Connect to other devices';
-  @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  @override
-  String get settings_search_hint => 'Search settings';
-  @override
-  String get settings_search_no_results => 'No matching settings';
   @override
   String get nav_game => 'Game';
   @override
@@ -11897,6 +12745,28 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -12811,7 +13681,7 @@ class _StringsEs extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caracteres';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} caracteres';
+  String stat_format_chars_wan({required Object n}) => '${n}万 caracteres';
   @override
   String get error_log_share_subject => 'Registro de errores de hibiki';
   @override
@@ -14293,9 +15163,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_always => 'Siempre';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_lookup => 'Solo al consultar';
   @override
   String get popup_instant_scroll => 'Desplazamiento instantáneo de la ventana';
@@ -14602,7 +15469,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Todos los controles';
   @override
-  String get video_immersive_mode_seek_lookup => 'Saltar + consultar';
+  String get video_immersive_mode_seek_lookup => 'Atajo + consulta';
   @override
   String get video_immersive_mode_unlock_only => 'Solo desbloquear';
   @override
@@ -14716,14 +15583,8 @@ class _StringsEs extends _StringsEn {
   String get floating_lyric_text_opacity =>
       'Opacidad del texto del subtítulo flotante';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Bájala para que el texto del subtítulo flotante sea más transparente';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Opacidad del fondo de los botones del subtítulo flotante';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Ajusta la transparencia del fondo de los botones de control del subtítulo flotante';
   @override
   String get video_control_customize_hint =>
       'Elige dónde se coloca cada botón en el reproductor, o quítalo.';
@@ -14989,9 +15850,6 @@ class _StringsEs extends _StringsEn {
   String get floating_lyric_bg_opacity =>
       'Opacidad del fondo del subtítulo flotante';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Bájala para que la barra de subtítulo flotante sea más transparente y tape menos la vista';
-  @override
   String get dict_update_check => 'Buscar actualizaciones';
   @override
   String get dict_update_tooltip => 'Actualizar diccionario';
@@ -15044,9 +15902,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Reproducir automáticamente el siguiente episodio';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Reproduce automáticamente el siguiente episodio de una lista cuando termina uno';
   @override
   String get video_auto_play_next_cancel => 'Cancelar';
   @override
@@ -16036,9 +16891,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -16365,20 +17217,356 @@ class _StringsEs extends _StringsEn {
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
   @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get interconnect_enable => 'Enable interconnect';
+  @override
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Bájala para que el texto del subtítulo flotante sea más transparente';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Ajusta la transparencia del fondo de los botones de control del subtítulo flotante';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Bájala para que la barra de subtítulo flotante sea más transparente y tape menos la vista';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Reproduce automáticamente el siguiente episodio de una lista cuando termina uno';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   @override
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
   @override
-  String get interconnect_section_client => 'Connect to other devices';
-  @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  @override
-  String get settings_search_hint => 'Search settings';
-  @override
-  String get settings_search_no_results => 'No matching settings';
   @override
   String get nav_game => 'Game';
   @override
@@ -16548,6 +17736,28 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -17466,7 +18676,7 @@ class _StringsFr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caractères';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} caractères';
+  String stat_format_chars_wan({required Object n}) => '${n}万 caractères';
   @override
   String get error_log_share_subject => 'Journal d\'erreurs hibiki';
   @override
@@ -18956,9 +20166,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Recherche uniquement';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_always => 'Toujours';
   @override
   String get popup_instant_scroll => 'Défilement instantané de la fenêtre';
@@ -19264,7 +20471,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Tous les contrôles';
   @override
-  String get video_immersive_mode_seek_lookup => 'Navigation + recherche';
+  String get video_immersive_mode_seek_lookup => 'Raccourci + recherche';
   @override
   String get video_immersive_mode_unlock_only => 'Déverrouillage uniquement';
   @override
@@ -19377,14 +20584,8 @@ class _StringsFr extends _StringsEn {
   String get floating_lyric_text_opacity =>
       'Opacité du texte du sous-titre flottant';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Baissez cette valeur pour rendre le texte du sous-titre flottant plus transparent';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Opacité du fond des boutons du sous-titre flottant';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Réglez la transparence du fond des boutons de contrôle du sous-titre flottant';
   @override
   String get video_control_customize_hint =>
       'Choisissez l\'emplacement de chaque bouton sur le lecteur, ou retirez-le.';
@@ -19649,9 +20850,6 @@ class _StringsFr extends _StringsEn {
   String get floating_lyric_bg_opacity =>
       'Opacité du fond du sous-titre flottant';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Baissez cette valeur pour rendre la barre de sous-titre flottant plus transparente et moins gênante';
-  @override
   String get dict_update_check => 'Vérifier les mises à jour';
   @override
   String get dict_update_tooltip => 'Mettre à jour le dictionnaire';
@@ -19705,9 +20903,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Lecture auto de l\'épisode suivant';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Lit automatiquement l\'épisode suivant d\'une playlist à la fin du précédent';
   @override
   String get video_auto_play_next_cancel => 'Annuler';
   @override
@@ -20698,9 +21893,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -21027,20 +22219,356 @@ class _StringsFr extends _StringsEn {
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
   @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get interconnect_enable => 'Enable interconnect';
+  @override
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Baissez cette valeur pour rendre le texte du sous-titre flottant plus transparent';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Réglez la transparence du fond des boutons de contrôle du sous-titre flottant';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Baissez cette valeur pour rendre la barre de sous-titre flottant plus transparente et moins gênante';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Lit automatiquement l\'épisode suivant d\'une playlist à la fin du précédent';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   @override
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
   @override
-  String get interconnect_section_client => 'Connect to other devices';
-  @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  @override
-  String get settings_search_hint => 'Search settings';
-  @override
-  String get settings_search_no_results => 'No matching settings';
   @override
   String get nav_game => 'Game';
   @override
@@ -21210,6 +22738,28 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -22108,7 +23658,7 @@ class _StringsId extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} karakter';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} karakter';
+  String stat_format_chars_wan({required Object n}) => '${n}万 karakter';
   @override
   String get error_log_share_subject => 'Log Error hibiki';
   @override
@@ -23557,9 +25107,6 @@ class _StringsId extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Hanya saat mencari';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_always => 'Selalu';
   @override
   String get popup_instant_scroll => 'Gulir popup seketika';
@@ -23859,7 +25406,7 @@ class _StringsId extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Kontrol penuh';
   @override
-  String get video_immersive_mode_seek_lookup => 'Lompat + pencarian kata';
+  String get video_immersive_mode_seek_lookup => 'Pintasan + pencarian kata';
   @override
   String get video_immersive_mode_unlock_only => 'Hanya buka kunci';
   @override
@@ -23969,14 +25516,8 @@ class _StringsId extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => 'Opasitas teks subtitle melayang';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Turunkan untuk membuat teks subtitle melayang lebih transparan';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Opasitas latar tombol subtitle melayang';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Atur seberapa transparan tombol kontrol subtitle melayang';
   @override
   String get video_control_customize_hint =>
       'Pilih posisi tiap tombol di pemutar, atau pindahkan keluar.';
@@ -24240,9 +25781,6 @@ class _StringsId extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => 'Opasitas latar subtitle melayang';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Turunkan untuk membuat bilah subtitle melayang lebih transparan agar tidak terlalu menghalangi pandangan';
-  @override
   String get dict_update_check => 'Cek Pembaruan';
   @override
   String get dict_update_tooltip => 'Perbarui kamus';
@@ -24294,9 +25832,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Putar otomatis episode berikutnya';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Otomatis putar episode berikutnya dalam playlist ketika satu episode selesai';
   @override
   String get video_auto_play_next_cancel => 'Batal';
   @override
@@ -25287,9 +26822,6 @@ class _StringsId extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -25616,20 +27148,356 @@ class _StringsId extends _StringsEn {
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
   @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get interconnect_enable => 'Enable interconnect';
+  @override
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Turunkan untuk membuat teks subtitle melayang lebih transparan';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Atur seberapa transparan tombol kontrol subtitle melayang';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Turunkan untuk membuat bilah subtitle melayang lebih transparan agar tidak terlalu menghalangi pandangan';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Otomatis putar episode berikutnya dalam playlist ketika satu episode selesai';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   @override
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
   @override
-  String get interconnect_section_client => 'Connect to other devices';
-  @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  @override
-  String get settings_search_hint => 'Search settings';
-  @override
-  String get settings_search_no_results => 'No matching settings';
   @override
   String get nav_game => 'Game';
   @override
@@ -25799,6 +27667,28 @@ class _StringsId extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -26710,7 +28600,7 @@ class _StringsIt extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caratteri';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} caratteri';
+  String stat_format_chars_wan({required Object n}) => '${n}万 caratteri';
   @override
   String get error_log_share_subject => 'Registro errori hibiki';
   @override
@@ -28176,9 +30066,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Fissaggio finestra';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_lookup => 'Solo durante la ricerca';
   @override
   String get desktop_clipboard_window_mode_normal => 'Disattivato';
@@ -28490,7 +30377,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Tutti i controlli';
   @override
-  String get video_immersive_mode_seek_lookup => 'Spostamento + ricerca';
+  String get video_immersive_mode_seek_lookup => 'Scorciatoia + ricerca';
   @override
   String get video_immersive_mode_unlock_only => 'Solo sblocco';
   @override
@@ -28604,14 +30491,8 @@ class _StringsIt extends _StringsEn {
   String get floating_lyric_text_opacity =>
       'Opacità del testo del sottotitolo fluttuante';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Abbassa questo valore per rendere più trasparente il testo del sottotitolo fluttuante';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Opacità sfondo dei pulsanti del sottotitolo fluttuante';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Regola la trasparenza dello sfondo dei pulsanti di controllo del sottotitolo fluttuante';
   @override
   String get video_control_customize_hint =>
       'Scegli dove collocare ogni pulsante sul lettore, oppure rimuovilo.';
@@ -28877,9 +30758,6 @@ class _StringsIt extends _StringsEn {
   String get floating_lyric_bg_opacity =>
       'Opacità sfondo del sottotitolo fluttuante';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Abbassa questo valore per rendere più trasparente la barra del sottotitolo fluttuante, così da ostacolare meno la visuale';
-  @override
   String get dict_update_check => 'Controlla aggiornamenti';
   @override
   String get dict_update_tooltip => 'Aggiorna dizionario';
@@ -28932,9 +30810,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Riproduci automaticamente l\'episodio successivo';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Riproduce automaticamente l\'episodio successivo di una playlist quando uno finisce';
   @override
   String get video_auto_play_next_cancel => 'Annulla';
   @override
@@ -29924,9 +31799,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -30253,20 +32125,356 @@ class _StringsIt extends _StringsEn {
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
   @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get interconnect_enable => 'Enable interconnect';
+  @override
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Abbassa questo valore per rendere più trasparente il testo del sottotitolo fluttuante';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Regola la trasparenza dello sfondo dei pulsanti di controllo del sottotitolo fluttuante';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Abbassa questo valore per rendere più trasparente la barra del sottotitolo fluttuante, così da ostacolare meno la visuale';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Riproduce automaticamente l\'episodio successivo di una playlist quando uno finisce';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   @override
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
   @override
-  String get interconnect_section_client => 'Connect to other devices';
-  @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  @override
-  String get settings_search_hint => 'Search settings';
-  @override
-  String get settings_search_no_results => 'No matching settings';
   @override
   String get nav_game => 'Game';
   @override
@@ -30436,6 +32644,28 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -32689,9 +34919,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'ウィンドウの最前面固定';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_lookup => '辞書引き中のみ';
   @override
   String get desktop_clipboard_window_mode_normal => '固定しない';
@@ -32975,7 +35202,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'すべての操作';
   @override
-  String get video_immersive_mode_seek_lookup => 'シーク＋辞書引き';
+  String get video_immersive_mode_seek_lookup => 'ショートカット＋辞書引き';
   @override
   String get video_immersive_mode_unlock_only => 'ロック解除のみ';
   @override
@@ -33078,12 +35305,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => 'フローティング字幕の文字の不透明度';
   @override
-  String get floating_lyric_text_opacity_hint => '下げるとフローティング字幕の文字がより透明になります';
-  @override
   String get floating_lyric_button_bg_opacity => 'フローティング字幕ボタンの背景の不透明度';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'フローティング字幕の操作ボタンの背景の透明度を調整します';
   @override
   String get video_control_customize_hint => '各ボタンをプレーヤー上のどこに置くかを選ぶか、外します。';
   @override
@@ -33328,9 +35550,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => 'フローティング字幕の背景の不透明度';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      '下げるとフローティング字幕バーがより透明になり、視界を遮りにくくなります';
-  @override
   String get dict_update_check => '更新を確認';
   @override
   String get dict_update_tooltip => '辞書を更新';
@@ -33379,9 +35598,6 @@ class _StringsJa extends _StringsEn {
   String video_favorite_count({required Object count}) => 'お気に入り ${count} 句';
   @override
   String get video_setting_auto_play_next => '次のエピソードを自動再生';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'プレイリスト内の 1 話が終わると、自動的に次のエピソードを再生します';
   @override
   String get video_auto_play_next_cancel => 'キャンセル';
   @override
@@ -34367,9 +36583,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -34695,20 +36908,355 @@ class _StringsJa extends _StringsEn {
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
   @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get interconnect_enable => 'Enable interconnect';
+  @override
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint => '下げるとフローティング字幕の文字がより透明になります';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'フローティング字幕の操作ボタンの背景の透明度を調整します';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      '下げるとフローティング字幕バーがより透明になり、視界を遮りにくくなります';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'プレイリスト内の 1 話が終わると、自動的に次のエピソードを再生します';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   @override
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
   @override
-  String get interconnect_section_client => 'Connect to other devices';
-  @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  @override
-  String get settings_search_hint => 'Search settings';
-  @override
-  String get settings_search_no_results => 'No matching settings';
   @override
   String get nav_game => 'Game';
   @override
@@ -34878,6 +37426,28 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -37133,9 +39703,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => '창 고정';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_lookup => '단어 찾기 중에만';
   @override
   String get desktop_clipboard_window_mode_normal => '끄기';
@@ -37421,7 +39988,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_immersive_mode_full => '전체 조작';
   @override
-  String get video_immersive_mode_seek_lookup => '이동 + 단어 찾기';
+  String get video_immersive_mode_seek_lookup => '단축키 + 단어 찾기';
   @override
   String get video_immersive_mode_unlock_only => '잠금 해제만';
   @override
@@ -37524,12 +40091,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => '플로팅 자막 텍스트 불투명도';
   @override
-  String get floating_lyric_text_opacity_hint => '낮추면 플로팅 자막 텍스트가 더 투명해집니다';
-  @override
   String get floating_lyric_button_bg_opacity => '플로팅 자막 버튼 배경 불투명도';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      '플로팅 자막 조작 버튼의 배경 투명도를 조절합니다';
   @override
   String get video_control_customize_hint =>
       '각 버튼이 플레이어의 어디에 놓일지 선택하거나 빼낼 수 있습니다.';
@@ -37773,9 +40335,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => '플로팅 자막 배경 불투명도';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      '낮추면 플로팅 자막 바가 더 투명해져 시야를 덜 가립니다';
-  @override
   String get dict_update_check => '업데이트 확인';
   @override
   String get dict_update_tooltip => '사전 업데이트';
@@ -37824,9 +40383,6 @@ class _StringsKo extends _StringsEn {
   String video_favorite_count({required Object count}) => '즐겨찾기 ${count}개';
   @override
   String get video_setting_auto_play_next => '다음 에피소드 자동 재생';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      '재생목록에서 한 에피소드가 끝나면 다음 에피소드를 자동으로 재생합니다';
   @override
   String get video_auto_play_next_cancel => '취소';
   @override
@@ -38811,9 +41367,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -39140,20 +41693,355 @@ class _StringsKo extends _StringsEn {
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
   @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get interconnect_enable => 'Enable interconnect';
+  @override
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint => '낮추면 플로팅 자막 텍스트가 더 투명해집니다';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      '플로팅 자막 조작 버튼의 배경 투명도를 조절합니다';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      '낮추면 플로팅 자막 바가 더 투명해져 시야를 덜 가립니다';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      '재생목록에서 한 에피소드가 끝나면 다음 에피소드를 자동으로 재생합니다';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   @override
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
   @override
-  String get interconnect_section_client => 'Connect to other devices';
-  @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  @override
-  String get settings_search_hint => 'Search settings';
-  @override
-  String get settings_search_no_results => 'No matching settings';
   @override
   String get nav_game => 'Game';
   @override
@@ -39323,6 +42211,28 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -40225,7 +43135,7 @@ class _StringsNl extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} tekens';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} tekens';
+  String stat_format_chars_wan({required Object n}) => '${n}万 tekens';
   @override
   String get error_log_share_subject => 'hibiki foutenlogboek';
   @override
@@ -41687,9 +44597,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Venster vastzetten';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_always => 'Altijd';
   @override
   String get desktop_clipboard_window_mode_lookup => 'Alleen tijdens opzoeken';
@@ -41998,7 +44905,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Alle bediening';
   @override
-  String get video_immersive_mode_seek_lookup => 'Spoelen + opzoeken';
+  String get video_immersive_mode_seek_lookup => 'Sneltoets + opzoeken';
   @override
   String get video_immersive_mode_unlock_only => 'Alleen ontgrendelen';
   @override
@@ -42110,14 +45017,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => 'Tekstdekking zwevende ondertitel';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Verlaag dit om de tekst van de zwevende ondertitel transparanter te maken';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Dekking knopachtergrond zwevende ondertitel';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Pas aan hoe transparant de bedieningsknoppen van de zwevende ondertitel zijn';
   @override
   String get video_control_customize_hint =>
       'Kies waar elke knop op de speler staat, of verwijder hem.';
@@ -42379,9 +45280,6 @@ class _StringsNl extends _StringsEn {
   String get floating_lyric_bg_opacity =>
       'Achtergronddekking zwevende ondertitel';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Verlaag dit om de zwevende ondertitelbalk transparanter te maken, zodat hij minder van je zicht blokkeert';
-  @override
   String get dict_update_check => 'Controleren op updates';
   @override
   String get dict_update_tooltip => 'Woordenboek bijwerken';
@@ -42433,9 +45331,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Volgende aflevering automatisch afspelen';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Speel automatisch de volgende aflevering in een afspeellijst af wanneer er een eindigt';
   @override
   String get video_auto_play_next_cancel => 'Annuleren';
   @override
@@ -43426,9 +46321,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -43755,20 +46647,356 @@ class _StringsNl extends _StringsEn {
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
   @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get interconnect_enable => 'Enable interconnect';
+  @override
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Verlaag dit om de tekst van de zwevende ondertitel transparanter te maken';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Pas aan hoe transparant de bedieningsknoppen van de zwevende ondertitel zijn';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Verlaag dit om de zwevende ondertitelbalk transparanter te maken, zodat hij minder van je zicht blokkeert';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Speel automatisch de volgende aflevering in een afspeellijst af wanneer er een eindigt';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   @override
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
   @override
-  String get interconnect_section_client => 'Connect to other devices';
-  @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  @override
-  String get settings_search_hint => 'Search settings';
-  @override
-  String get settings_search_no_results => 'No matching settings';
   @override
   String get nav_game => 'Game';
   @override
@@ -43938,6 +47166,28 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -44848,7 +48098,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caracteres';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} caracteres';
+  String stat_format_chars_wan({required Object n}) => '${n}万 caracteres';
   @override
   String get error_log_share_subject => 'Log de Erros do hibiki';
   @override
@@ -46312,9 +49562,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Fixação da janela';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_lookup =>
       'Apenas durante a consulta';
   @override
@@ -46624,7 +49871,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Todos os controles';
   @override
-  String get video_immersive_mode_seek_lookup => 'Avançar + consultar';
+  String get video_immersive_mode_seek_lookup => 'Atalho + consulta';
   @override
   String get video_immersive_mode_unlock_only => 'Apenas desbloquear';
   @override
@@ -46737,14 +49984,8 @@ class _StringsPtBr extends _StringsEn {
   String get floating_lyric_text_opacity =>
       'Opacidade do texto da legenda flutuante';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Reduza para deixar o texto da legenda flutuante mais transparente';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Opacidade do fundo dos botões da legenda flutuante';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Ajuste a transparência do fundo dos botões de controle da legenda flutuante';
   @override
   String get video_control_customize_hint =>
       'Escolha onde cada botão fica no player ou remova-o.';
@@ -47010,9 +50251,6 @@ class _StringsPtBr extends _StringsEn {
   String get floating_lyric_bg_opacity =>
       'Opacidade do fundo da legenda flutuante';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Reduza para deixar a barra de legenda flutuante mais transparente e bloquear menos a visão';
-  @override
   String get dict_update_check => 'Verificar atualizações';
   @override
   String get dict_update_tooltip => 'Atualizar dicionário';
@@ -47064,9 +50302,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Reproduzir o próximo episódio automaticamente';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Reproduz automaticamente o próximo episódio de uma playlist quando um termina';
   @override
   String get video_auto_play_next_cancel => 'Cancelar';
   @override
@@ -48056,9 +51291,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -48385,20 +51617,356 @@ class _StringsPtBr extends _StringsEn {
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
   @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get interconnect_enable => 'Enable interconnect';
+  @override
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Reduza para deixar o texto da legenda flutuante mais transparente';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Ajuste a transparência do fundo dos botões de controle da legenda flutuante';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Reduza para deixar a barra de legenda flutuante mais transparente e bloquear menos a visão';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Reproduz automaticamente o próximo episódio de uma playlist quando um termina';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   @override
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
   @override
-  String get interconnect_section_client => 'Connect to other devices';
-  @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  @override
-  String get settings_search_hint => 'Search settings';
-  @override
-  String get settings_search_no_results => 'No matching settings';
   @override
   String get nav_game => 'Game';
   @override
@@ -48568,6 +52136,28 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -49471,7 +53061,7 @@ class _StringsRu extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} символов';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} символов';
+  String stat_format_chars_wan({required Object n}) => '${n}万 символов';
   @override
   String get error_log_share_subject => 'Журнал ошибок hibiki';
   @override
@@ -50929,9 +54519,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Закрепление окна';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_lookup => 'Только при поиске';
   @override
   String get desktop_clipboard_window_mode_normal => 'Выкл.';
@@ -51235,7 +54822,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Все элементы управления';
   @override
-  String get video_immersive_mode_seek_lookup => 'Перемотка + поиск слов';
+  String get video_immersive_mode_seek_lookup => 'Горячая клавиша + поиск слов';
   @override
   String get video_immersive_mode_unlock_only => 'Только разблокировка';
   @override
@@ -51348,14 +54935,8 @@ class _StringsRu extends _StringsEn {
   String get floating_lyric_text_opacity =>
       'Непрозрачность текста плавающих субтитров';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Уменьшите, чтобы текст плавающих субтитров стал прозрачнее';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Непрозрачность фона кнопок плавающих субтитров';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Настройте прозрачность фона кнопок управления плавающими субтитрами';
   @override
   String get video_control_customize_hint =>
       'Выберите место каждой кнопки на плеере или уберите её.';
@@ -51619,9 +55200,6 @@ class _StringsRu extends _StringsEn {
   String get floating_lyric_bg_opacity =>
       'Непрозрачность фона плавающих субтитров';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Уменьшите, чтобы панель плавающих субтитров стала прозрачнее и меньше закрывала обзор';
-  @override
   String get dict_update_check => 'Проверить обновления';
   @override
   String get dict_update_tooltip => 'Обновить словарь';
@@ -51674,9 +55252,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_auto_play_next =>
       'Автовоспроизведение следующей серии';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Автоматически воспроизводить следующую серию в плейлисте после завершения текущей';
   @override
   String get video_auto_play_next_cancel => 'Отмена';
   @override
@@ -52669,9 +56244,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -52998,20 +56570,356 @@ class _StringsRu extends _StringsEn {
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
   @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get interconnect_enable => 'Enable interconnect';
+  @override
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Уменьшите, чтобы текст плавающих субтитров стал прозрачнее';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Настройте прозрачность фона кнопок управления плавающими субтитрами';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Уменьшите, чтобы панель плавающих субтитров стала прозрачнее и меньше закрывала обзор';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Автоматически воспроизводить следующую серию в плейлисте после завершения текущей';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   @override
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
   @override
-  String get interconnect_section_client => 'Connect to other devices';
-  @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  @override
-  String get settings_search_hint => 'Search settings';
-  @override
-  String get settings_search_no_results => 'No matching settings';
   @override
   String get nav_game => 'Game';
   @override
@@ -53181,6 +57089,28 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -54070,7 +58000,7 @@ class _StringsTh extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} ตัวอักษร';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} ตัวอักษร';
+  String stat_format_chars_wan({required Object n}) => '${n}万 ตัวอักษร';
   @override
   String get error_log_share_subject => 'บันทึกข้อผิดพลาด hibiki';
   @override
@@ -55510,9 +59440,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'เฉพาะตอนค้นคำ';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get popup_instant_scroll => 'เลื่อนหน้าต่างค้นคำแบบทันที';
   @override
   String get popup_instant_scroll_hint =>
@@ -55806,7 +59733,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'ควบคุมทั้งหมด';
   @override
-  String get video_immersive_mode_seek_lookup => 'เลื่อนเวลา + ค้นคำ';
+  String get video_immersive_mode_seek_lookup => 'ทางลัด + ค้นคำ';
   @override
   String get video_immersive_mode_unlock_only => 'เฉพาะปลดล็อก';
   @override
@@ -55916,14 +59843,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => 'ความทึบของตัวอักษรคำบรรยายลอย';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'ลดค่านี้เพื่อให้ตัวอักษรคำบรรยายลอยโปร่งใสขึ้น';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'ความทึบของพื้นหลังปุ่มคำบรรยายลอย';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'ปรับความโปร่งใสของพื้นหลังปุ่มควบคุมคำบรรยายลอย';
   @override
   String get video_control_customize_hint =>
       'เลือกตำแหน่งของแต่ละปุ่มบนโปรแกรมเล่น หรือนำออก';
@@ -56182,9 +60103,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => 'ความทึบของพื้นหลังคำบรรยายลอย';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'ลดค่านี้เพื่อให้แถบคำบรรยายลอยโปร่งใสขึ้นและบังมุมมองน้อยลง';
-  @override
   String get dict_update_check => 'ตรวจสอบอัปเดต';
   @override
   String get dict_update_tooltip => 'อัปเดตพจนานุกรม';
@@ -56235,9 +60153,6 @@ class _StringsTh extends _StringsEn {
   String video_favorite_count({required Object count}) => '${count} รายการโปรด';
   @override
   String get video_setting_auto_play_next => 'เล่นตอนถัดไปอัตโนมัติ';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'เมื่อตอนหนึ่งจบ ให้เล่นตอนถัดไปในเพลย์ลิสต์โดยอัตโนมัติ';
   @override
   String get video_auto_play_next_cancel => 'ยกเลิก';
   @override
@@ -57227,9 +61142,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -57556,20 +61468,356 @@ class _StringsTh extends _StringsEn {
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
   @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get interconnect_enable => 'Enable interconnect';
+  @override
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'ลดค่านี้เพื่อให้ตัวอักษรคำบรรยายลอยโปร่งใสขึ้น';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'ปรับความโปร่งใสของพื้นหลังปุ่มควบคุมคำบรรยายลอย';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'ลดค่านี้เพื่อให้แถบคำบรรยายลอยโปร่งใสขึ้นและบังมุมมองน้อยลง';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'เมื่อตอนหนึ่งจบ ให้เล่นตอนถัดไปในเพลย์ลิสต์โดยอัตโนมัติ';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   @override
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
   @override
-  String get interconnect_section_client => 'Connect to other devices';
-  @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  @override
-  String get settings_search_hint => 'Search settings';
-  @override
-  String get settings_search_no_results => 'No matching settings';
   @override
   String get nav_game => 'Game';
   @override
@@ -57739,6 +61987,28 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -58637,7 +62907,7 @@ class _StringsTr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} karakter';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} karakter';
+  String stat_format_chars_wan({required Object n}) => '${n}万 karakter';
   @override
   String get error_log_share_subject => 'hibiki Hata Günlüğü';
   @override
@@ -60093,9 +64363,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode_lookup => 'Yalnızca arama sırasında';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get popup_instant_scroll => 'Anında açılır pencere kaydırma';
   @override
   String get popup_instant_scroll_hint =>
@@ -60394,7 +64661,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Tüm denetimler';
   @override
-  String get video_immersive_mode_seek_lookup => 'Sarma + arama';
+  String get video_immersive_mode_seek_lookup => 'Kısayol + arama';
   @override
   String get video_immersive_mode_unlock_only => 'Yalnızca kilit açma';
   @override
@@ -60502,14 +64769,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => 'Kayan altyazı metni saydamlığı';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Kayan altyazı metnini daha saydam yapmak için bunu azaltın';
-  @override
   String get floating_lyric_button_bg_opacity =>
       'Kayan altyazı düğmesi arka plan saydamlığı';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Kayan altyazı denetim düğmelerinin ne kadar saydam olacağını ayarlayın';
   @override
   String get video_control_customize_hint =>
       'Her düğmenin oynatıcıda nerede duracağını seçin ya da dışarı taşıyın.';
@@ -60769,9 +65030,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => 'Kayan altyazı arka plan matlığı';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Kayan altyazı çubuğunu daha saydam yapıp görüşünüzü daha az engellemesi için bunu azaltın';
-  @override
   String get dict_update_check => 'Güncellemeleri Denetle';
   @override
   String get dict_update_tooltip => 'Sözlüğü güncelle';
@@ -60824,9 +65082,6 @@ class _StringsTr extends _StringsEn {
       '${count} sık kullanılan';
   @override
   String get video_setting_auto_play_next => 'Sonraki bölümü otomatik oynat';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Bir oynatma listesinde biri bittiğinde sonraki bölümü otomatik olarak oynat';
   @override
   String get video_auto_play_next_cancel => 'İptal';
   @override
@@ -61817,9 +66072,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -62146,20 +66398,356 @@ class _StringsTr extends _StringsEn {
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
   @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get interconnect_enable => 'Enable interconnect';
+  @override
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Kayan altyazı metnini daha saydam yapmak için bunu azaltın';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Kayan altyazı denetim düğmelerinin ne kadar saydam olacağını ayarlayın';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Kayan altyazı çubuğunu daha saydam yapıp görüşünüzü daha az engellemesi için bunu azaltın';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Bir oynatma listesinde biri bittiğinde sonraki bölümü otomatik olarak oynat';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   @override
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
   @override
-  String get interconnect_section_client => 'Connect to other devices';
-  @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  @override
-  String get settings_search_hint => 'Search settings';
-  @override
-  String get settings_search_no_results => 'No matching settings';
   @override
   String get nav_game => 'Game';
   @override
@@ -62329,6 +66917,28 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -63221,7 +67831,7 @@ class _StringsVi extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} ký tự';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} ký tự';
+  String stat_format_chars_wan({required Object n}) => '${n}万 ký tự';
   @override
   String get error_log_share_subject => 'Nhật ký lỗi hibiki';
   @override
@@ -64668,9 +69278,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => 'Ghim cửa sổ';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_always => 'Luôn luôn';
   @override
   String get desktop_clipboard_window_mode_lookup => 'Chỉ khi tra từ';
@@ -64972,7 +69579,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Toàn bộ điều khiển';
   @override
-  String get video_immersive_mode_seek_lookup => 'Tua + tra từ';
+  String get video_immersive_mode_seek_lookup => 'Phím tắt + tra từ';
   @override
   String get video_immersive_mode_unlock_only => 'Chỉ mở khóa';
   @override
@@ -65082,13 +69689,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => 'Độ mờ chữ phụ đề nổi';
   @override
-  String get floating_lyric_text_opacity_hint =>
-      'Giảm xuống để chữ phụ đề nổi trong suốt hơn';
-  @override
   String get floating_lyric_button_bg_opacity => 'Độ mờ nền nút phụ đề nổi';
-  @override
-  String get floating_lyric_button_bg_opacity_hint =>
-      'Điều chỉnh mức trong suốt của nền các nút điều khiển phụ đề nổi';
   @override
   String get video_control_customize_hint =>
       'Chọn vị trí đặt mỗi nút trên trình phát, hoặc gỡ nó ra.';
@@ -65347,9 +69948,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => 'Độ mờ nền phụ đề nổi';
   @override
-  String get floating_lyric_bg_opacity_hint =>
-      'Giảm xuống để thanh phụ đề nổi trong suốt hơn, ít che tầm nhìn hơn';
-  @override
   String get dict_update_check => 'Kiểm tra cập nhật';
   @override
   String get dict_update_tooltip => 'Cập nhật từ điển';
@@ -65402,9 +70000,6 @@ class _StringsVi extends _StringsEn {
       '${count} câu yêu thích';
   @override
   String get video_setting_auto_play_next => 'Tự phát tập tiếp theo';
-  @override
-  String get video_setting_auto_play_next_hint =>
-      'Tự động phát tập tiếp theo trong danh sách phát khi một tập kết thúc';
   @override
   String get video_auto_play_next_cancel => 'Hủy';
   @override
@@ -66394,9 +70989,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get desktop_clipboard_destination => 'Clipboard lookup destination';
   @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
-  @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
   String get desktop_clipboard_destination_panel => 'Floating panel';
@@ -66723,20 +71315,356 @@ class _StringsVi extends _StringsEn {
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
   @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get interconnect_enable => 'Enable interconnect';
+  @override
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Giảm xuống để chữ phụ đề nổi trong suốt hơn';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Điều chỉnh mức trong suốt của nền các nút điều khiển phụ đề nổi';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Giảm xuống để thanh phụ đề nổi trong suốt hơn, ít che tầm nhìn hơn';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Tự động phát tập tiếp theo trong danh sách phát khi một tập kết thúc';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   @override
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
   @override
-  String get interconnect_section_client => 'Connect to other devices';
-  @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  @override
-  String get settings_search_hint => 'Search settings';
-  @override
-  String get settings_search_no_results => 'No matching settings';
   @override
   String get nav_game => 'Game';
   @override
@@ -66906,6 +71834,28 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -69106,8 +74056,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => '窗口置顶策略';
   @override
-  String get desktop_clipboard_window_mode_hint => '控制 Hibiki 是否保持在其他窗口上方';
-  @override
   String get desktop_clipboard_window_mode_always => '始终置顶';
   @override
   String get desktop_clipboard_window_mode_lookup => '仅查词期间';
@@ -69384,7 +74332,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_immersive_mode_full => '全部功能';
   @override
-  String get video_immersive_mode_seek_lookup => '跳转 + 查词';
+  String get video_immersive_mode_seek_lookup => '快捷键 + 查词';
   @override
   String get video_immersive_mode_unlock_only => '仅解锁';
   @override
@@ -69482,11 +74430,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => '悬浮字幕文字透明度';
   @override
-  String get floating_lyric_text_opacity_hint => '调低让悬浮字幕文字更透明';
-  @override
   String get floating_lyric_button_bg_opacity => '悬浮字幕按钮底色透明度';
-  @override
-  String get floating_lyric_button_bg_opacity_hint => '调整悬浮字幕控制按钮底色的透明度';
   @override
   String get video_control_customize_hint => '为每个按钮选择在播放器上的位置，或将其移出。';
   @override
@@ -69721,8 +74665,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => '悬浮字幕背景不透明度';
   @override
-  String get floating_lyric_bg_opacity_hint => '调低让悬浮字幕条更透明、更不挡视野';
-  @override
   String get dict_update_check => '检查更新';
   @override
   String get dict_update_tooltip => '更新词典';
@@ -69774,8 +74716,6 @@ class _StringsZhCn extends _StringsEn {
       '${seconds} 秒后播放下一集';
   @override
   String get video_setting_auto_play_next => '自动连播下一集';
-  @override
-  String get video_setting_auto_play_next_hint => '播放列表里一集播完后自动播放下一集';
   @override
   String get video_auto_play_next_cancel => '取消';
   @override
@@ -70692,9 +75632,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error => '搜索失败，请稍后重试。';
   @override
-  String get desktop_clipboard_destination => '剪贴板查词显示位置';
-  @override
-  String get desktop_clipboard_destination_hint => '剪贴板查词结果显示在哪里';
+  String get desktop_clipboard_destination => '查词弹窗位置';
   @override
   String get desktop_clipboard_destination_main => '主窗口';
   @override
@@ -70995,18 +75933,321 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get interconnect_summary => '设备间直连同步与本机作为服务器';
   @override
+  String get interconnect_section_client => '连接到其他设备';
+  @override
+  String get settings_search_hint => '搜索设置';
+  @override
+  String get settings_search_no_results => '没有匹配的设置项';
+  @override
+  String get section_video_anime_download => '番剧下载（qBittorrent）';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI 地址';
+  @override
+  String get video_setting_qb_url_hint =>
+      '例如 http://127.0.0.1:8080，留空表示不启用番剧下载。';
+  @override
+  String get video_setting_qb_username => 'WebUI 用户名';
+  @override
+  String get video_setting_qb_password => 'WebUI 密码';
+  @override
+  String get video_setting_qb_category => 'qBittorrent 分类';
+  @override
+  String get video_setting_qb_category_hint => 'Hibiki 推送的下载会打上此分类，完成监听只关注该分类。';
+  @override
+  String get anime_download_title => '番剧下载';
+  @override
+  String get anime_download_qb_hint => '请先在 设置→视频 配置 qBittorrent';
+  @override
+  String get anime_download_search_hint => '番剧名';
+  @override
+  String get anime_download_search => '搜索';
+  @override
+  String get anime_download_no_results => '无结果';
+  @override
+  String get anime_download_category_all => '全部';
+  @override
+  String get anime_download_category_raw => '生肉';
+  @override
+  String get anime_download_category_english => '英译';
+  @override
+  String get anime_download_category_non_english => '非英译';
+  @override
+  String get anime_download_trusted_only => '仅 Trusted';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa 查询词';
+  @override
+  String get anime_download_subs_badge => '字幕';
+  @override
+  String get anime_download_no_subs => '无字幕';
+  @override
+  String get anime_download_batch => '合集';
+  @override
+  String get anime_download_include_subs => '附带字幕';
+  @override
+  String get anime_download_push => '推送下载';
+  @override
+  String get anime_download_pushed => '已推送，下载完成后自动入库';
+  @override
+  String get anime_download_push_failed => '推送到 qBittorrent 失败';
+  @override
+  String get anime_download_store_unavailable => '下载计划存储不可用';
+  @override
+  String get anime_download_tasks => '下载任务';
+  @override
+  String get anime_download_no_tasks => '暂无下载任务';
+  @override
+  String get anime_download_back => '返回';
+  @override
+  String get anime_download_refresh => '刷新';
+  @override
+  String get anime_download_delete => '删除';
+  @override
+  String get anime_download_play_now => '边下边播';
+  @override
+  String get anime_download_play_now_ok => '已入库，可从视频库打开边下边播';
+  @override
+  String get anime_download_play_now_fail => '暂不可提前入库（元数据未就绪或连接失败），稍后再试';
+  @override
+  String get interconnect_section_related => '远端内容与查词';
+  @override
+  String get desktop_clipboard_window_mode_hint => '控制 Hibiki 是否保持在其他窗口上方';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
+  @override
+  String get interconnect_enable => '启用互联';
+  @override
+  String get interconnect_enable_hint => '通过局域网连接你的其他设备。与云备份后端并存，互不冲突。';
+  @override
+  String get reading_activity => '阅读活动';
+  @override
+  String get video_watch_activity => '观看活动';
+  @override
+  String get book_mark_completed_action => '标记为已读完';
+  @override
+  String get book_mark_uncompleted_action => '取消已读完';
+  @override
+  String get book_marked_completed => '已标记为读完';
+  @override
+  String get book_marked_uncompleted => '已取消完成标记';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      '标签「${name}」已添加到合集。';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      '标签「${name}」已在此合集上。';
+  @override
+  String get mining_image_quality => '图片 / GIF 清晰度';
+  @override
+  String get mining_image_quality_hint => '越高越清晰，卡片体积也越大。原片档保留源分辨率与帧率。';
+  @override
+  String get mining_image_quality_thrift => '省流';
+  @override
+  String get mining_image_quality_standard => '标准';
+  @override
+  String get mining_image_quality_hd => '高清';
+  @override
+  String get mining_image_quality_native => '原片';
+  @override
+  String get mining_audio_quality => '音频质量';
+  @override
+  String get mining_audio_quality_hint => '比特率越高越清晰，卡片体积也越大。';
+  @override
+  String get mining_audio_quality_standard => '标准';
+  @override
+  String get mining_audio_quality_high => '高音质';
+  @override
+  String get mining_audio_quality_native => '原片';
+  @override
+  String get video_setting_torrent_backend => '下载后端';
+  @override
+  String get video_setting_torrent_backend_qb => '外接 qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded => '内置引擎（桌面）';
+  @override
+  String get video_setting_torrent_download_limit => '下载限速 (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => '上传限速 (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => '最大连接数';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = 不限';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = 引擎默认';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase => '字幕延迟增大';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease => '字幕延迟减小';
+  @override
+  String get shortcut_action_video_open_subtitle_align => '打开字幕波形对轴';
+  @override
+  String get font_desc_noto_serif_tc => 'Google/Adobe 宋体 · 繁中字形优先 · 适合竖排阅读';
+  @override
+  String get custom_fonts_font_roles => '字体用途';
+  @override
+  String get video_clip_export_cancelled => '已取消片段导出';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev => '上一句字幕对齐到当前时间';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next => '下一句字幕对齐到当前时间';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      '循环副字幕遮蔽';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide => '隐藏副字幕';
+  @override
+  String get video_setting_secondary_subtitle_obscure => '副字幕遮蔽';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint => '模糊或隐藏副字幕（翻译参考轨）';
+  @override
+  String get games => '游戏';
+  @override
+  String get games_add => '添加游戏';
+  @override
+  String get games_empty => '还没有添加游戏';
+  @override
+  String get games_rename => '重命名';
+  @override
+  String get games_remove => '移除';
+  @override
+  String get games_launch_unsupported => '启动游戏仅支持 Windows 桌面';
+  @override
+  String get games_exe_missing => '找不到游戏可执行文件';
+  @override
+  String get nav_home => '首页';
+  @override
+  String get home_activity => '活动';
+  @override
+  String get home_continue => '继续';
+  @override
+  String get home_filter_all => '全部';
+  @override
+  String get home_filter_read => '阅读';
+  @override
+  String get home_filter_watch => '观看';
+  @override
+  String get home_filter_game => '游戏';
+  @override
+  String get home_filter_added => '导入';
+  @override
+  String get home_stat_library => '媒体库';
+  @override
+  String get home_stat_total_time => '总时长';
+  @override
+  String get home_stat_today => '今日';
+  @override
+  String get home_stat_this_week => '本周';
+  @override
+  String get home_stat_this_month => '本月';
+  @override
+  String get home_range_week => '周';
+  @override
+  String get home_range_month => '月';
+  @override
+  String get home_activity_empty => '暂无活动记录';
+  @override
+  String get home_today => '今天';
+  @override
+  String get home_yesterday => '昨天';
+  @override
+  String get activity_just_now => '刚刚';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} 分钟前';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} 小时前';
+  @override
+  String activity_days_ago({required Object n}) => '${n} 天前';
+  @override
+  String home_session_count({required Object n}) => '${n} 次';
+  @override
+  String get home_dashboard_title => '首页';
+  @override
+  String get clipboard_history_title => '复制历史';
+  @override
+  String get clipboard_history_clear => '清空';
+  @override
+  String get clipboard_history_empty => '暂无复制记录';
+  @override
+  String get video_setting_torrent_upload_enabled => '启用上传 / 做种';
+  @override
+  String get video_setting_torrent_upload_enabled_hint => '默认关闭。下载完成后向网络回传做种。';
+  @override
+  String get video_setting_torrent_seed_time_limit => '做种时长上限（分钟）';
+  @override
+  String get video_setting_torrent_seed_time_hint => '做种超过此时长后停止上传。0 = 不限。';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => '做种分享率上限';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      '上传/下载比值达到此值后停止上传。0 = 不限。';
+  @override
+  String get torrent_upload_intro_title => '上传 / 做种';
+  @override
+  String get torrent_upload_intro_body =>
+      '上传（做种）默认关闭。开启后会把下载内容回传给网络，会占用你的上传带宽。可随时在「设置」里修改。';
+  @override
+  String get torrent_upload_intro_enable => '启用上传 / 做种';
+  @override
+  String get torrent_upload_intro_keep_off => '保持关闭';
+  @override
+  String get torrent_upload_intro_confirm => '保存';
+  @override
+  String get anime_download_generic_title => '粘贴链接下载（书、视频等）';
+  @override
+  String get anime_download_generic_hint => '磁力链接';
+  @override
+  String get anime_download_generic_download => '下载';
+  @override
+  String get anime_download_magnet_invalid => '磁力链接无效';
+  @override
+  String get anime_download_kind_auto => '自动';
+  @override
+  String get anime_download_kind_video => '视频';
+  @override
+  String get anime_download_kind_book => '书';
+  @override
+  String get nav_downloads => '下载';
+  @override
+  String get video_setting_torrent_memory_limit => '内存占用上限（MB）';
+  @override
+  String get video_setting_torrent_memory_hint => '限制引擎内存占用。0 = 自动（按设备内存推导）。';
+  @override
+  String get galgame_helper_needed_title => '需要下载 galgame 引擎组件';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      '启动 galgame 需要引擎-hook 注入器组件（约 ${size}）。它含进程注入代码，与主程序分离分发以避免杀软误报。现在下载吗？';
+  @override
+  String get galgame_helper_size_unknown => '大小未知';
+  @override
+  String get galgame_helper_download => '下载';
+  @override
+  String get galgame_helper_downloading => '正在下载引擎组件…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      '引擎组件下载失败：${error}';
+  @override
+  String get galgame_helper_install_incomplete => '引擎组件安装不完整，请重试';
+  @override
+  String get download_settings => '下载设置';
+  @override
+  String get download_backend_not_configured => '请在下方「下载设置」里配置下载后端';
+  @override
+  String get floating_lyric_text_opacity_hint => '调低让悬浮字幕文字更透明';
+  @override
+  String get floating_lyric_button_bg_opacity_hint => '调整悬浮字幕控制按钮底色的透明度';
+  @override
+  String get floating_lyric_bg_opacity_hint => '调低让悬浮字幕条更透明、更不挡视野';
+  @override
+  String get video_setting_auto_play_next_hint => '播放列表里一集播完后自动播放下一集';
+  @override
+  String get desktop_clipboard_destination_hint => '剪贴板查词结果显示在哪里';
+  @override
   String get interconnect_inactive_note => 'Hibiki 互联未启用为同步方式';
   @override
   String get interconnect_inactive_note_hint =>
       '在「同步与备份 → 同步方式」中选择 Hibiki 互联后，这里的配置才会生效';
   @override
-  String get interconnect_section_client => '连接到其他设备';
-  @override
   String get interconnect_moved_note => '互联连接与本机服务器设置在「Hibiki 互联」分类';
-  @override
-  String get settings_search_hint => '搜索设置';
-  @override
-  String get settings_search_no_results => '没有匹配的设置项';
   @override
   String get nav_game => '游戏';
   @override
@@ -71169,6 +76410,25 @@ class _StringsZhCn extends _StringsEn {
   String get game_text_thread_all => '全部文本线程';
   @override
   String get game_text_thread_hint => '像 Luna Translator 一样选择干净的台词线程';
+  @override
+  String get game_show_hook_text_window => '显示 Hook 文本浮窗';
+  @override
+  String get game_hook_line_unavailable => '这条捕获台词已不可用，未使用其他台词替代。';
+  @override
+  String get game_card_sentence_audio_missing => '卡片已创建，但没有句子音频；未借用其他台词的音频。';
+  @override
+  String get game_card_mapping_missing => 'Anki 字段映射缺少游戏卡片字段';
+  @override
+  String get game_audio_backend_resource => '游戏资源音频';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -73370,9 +78630,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get desktop_clipboard_window_mode => '視窗置頂策略';
   @override
-  String get desktop_clipboard_window_mode_hint =>
-      'Controls whether Hibiki stays above other windows';
-  @override
   String get desktop_clipboard_window_mode_always => '永遠置頂';
   @override
   String get desktop_clipboard_window_mode_lookup => '僅查詞期間';
@@ -73649,7 +78906,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_immersive_mode_full => '全部功能';
   @override
-  String get video_immersive_mode_seek_lookup => '跳轉＋查詞';
+  String get video_immersive_mode_seek_lookup => '快捷鍵＋查詞';
   @override
   String get video_immersive_mode_unlock_only => '僅解鎖';
   @override
@@ -73749,11 +79006,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get floating_lyric_text_opacity => '懸浮字幕文字不透明度';
   @override
-  String get floating_lyric_text_opacity_hint => '調低可讓懸浮字幕文字更透明';
-  @override
   String get floating_lyric_button_bg_opacity => '懸浮字幕按鈕底色不透明度';
-  @override
-  String get floating_lyric_button_bg_opacity_hint => '調整懸浮字幕控制按鈕底色的透明度';
   @override
   String get video_control_customize_hint => '為每個按鈕選擇在播放器上的位置，或將其移出。';
   @override
@@ -73988,8 +79241,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get floating_lyric_bg_opacity => '懸浮字幕背景不透明度';
   @override
-  String get floating_lyric_bg_opacity_hint => '調低可讓懸浮字幕條更透明、更少遮擋視野';
-  @override
   String get dict_update_check => '檢查更新';
   @override
   String get dict_update_tooltip => '更新詞典';
@@ -74038,8 +79289,6 @@ class _StringsZhHk extends _StringsEn {
   String video_favorite_count({required Object count}) => '收藏 ${count} 句';
   @override
   String get video_setting_auto_play_next => '自動連播下一集';
-  @override
-  String get video_setting_auto_play_next_hint => '播放清單中一集播完後，自動播放下一集';
   @override
   String get video_auto_play_next_cancel => '取消';
   @override
@@ -75017,10 +80266,7 @@ class _StringsZhHk extends _StringsEn {
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
   @override
-  String get desktop_clipboard_destination => 'Clipboard lookup destination';
-  @override
-  String get desktop_clipboard_destination_hint =>
-      'Where clipboard lookups appear';
+  String get desktop_clipboard_destination => '查詞彈窗位置';
   @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
@@ -75347,20 +80593,352 @@ class _StringsZhHk extends _StringsEn {
   String get interconnect_summary =>
       'Direct device-to-device sync & host this device as a server';
   @override
+  String get interconnect_section_client => 'Connect to other devices';
+  @override
+  String get settings_search_hint => 'Search settings';
+  @override
+  String get settings_search_no_results => 'No matching settings';
+  @override
+  String get section_video_anime_download => 'Anime download (qBittorrent)';
+  @override
+  String get video_setting_qb_url => 'qBittorrent WebUI URL';
+  @override
+  String get video_setting_qb_url_hint =>
+      'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+  @override
+  String get video_setting_qb_username => 'WebUI username';
+  @override
+  String get video_setting_qb_password => 'WebUI password';
+  @override
+  String get video_setting_qb_category => 'qBittorrent category';
+  @override
+  String get video_setting_qb_category_hint =>
+      'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+  @override
+  String get anime_download_title => 'Anime download';
+  @override
+  String get anime_download_qb_hint =>
+      'Configure qBittorrent in Settings → Video first';
+  @override
+  String get anime_download_search_hint => 'Anime title';
+  @override
+  String get anime_download_search => 'Search';
+  @override
+  String get anime_download_no_results => 'No results';
+  @override
+  String get anime_download_category_all => 'All';
+  @override
+  String get anime_download_category_raw => 'Raw';
+  @override
+  String get anime_download_category_english => 'English-translated';
+  @override
+  String get anime_download_category_non_english => 'Non-English';
+  @override
+  String get anime_download_trusted_only => 'Trusted only';
+  @override
+  String get anime_download_nyaa_query => 'Nyaa search terms';
+  @override
+  String get anime_download_subs_badge => 'Subs';
+  @override
+  String get anime_download_no_subs => 'No subs';
+  @override
+  String get anime_download_batch => 'Batch';
+  @override
+  String get anime_download_include_subs => 'Include subtitles';
+  @override
+  String get anime_download_push => 'Push download';
+  @override
+  String get anime_download_pushed =>
+      'Pushed — it will be imported automatically once finished';
+  @override
+  String get anime_download_push_failed => 'Failed to push to qBittorrent';
+  @override
+  String get anime_download_store_unavailable =>
+      'Download plan storage is unavailable';
+  @override
+  String get anime_download_tasks => 'Download tasks';
+  @override
+  String get anime_download_no_tasks => 'No download tasks yet';
+  @override
+  String get anime_download_back => 'Back';
+  @override
+  String get anime_download_refresh => 'Refresh';
+  @override
+  String get anime_download_delete => 'Delete';
+  @override
+  String get anime_download_play_now => 'Play while downloading';
+  @override
+  String get anime_download_play_now_ok =>
+      'Imported — open it from the video library to play while downloading';
+  @override
+  String get anime_download_play_now_fail =>
+      'Not ready yet (metadata pending or connection failed) — try again later';
+  @override
+  String get interconnect_section_related => 'Remote content & lookup';
+  @override
+  String get desktop_clipboard_window_mode_hint =>
+      'Controls whether Hibiki stays above other windows';
+  @override
+  String browser_extension_yomitan_port_conflict({required Object port}) =>
+      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+  @override
+  String get interconnect_enable => 'Enable interconnect';
+  @override
+  String get interconnect_enable_hint =>
+      'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+  @override
+  String get reading_activity => 'Reading activity';
+  @override
+  String get video_watch_activity => 'Watch activity';
+  @override
+  String get book_mark_completed_action => 'Mark as completed';
+  @override
+  String get book_mark_uncompleted_action => 'Mark as not completed';
+  @override
+  String get book_marked_completed => 'Marked as completed';
+  @override
+  String get book_marked_uncompleted => 'Marked as not completed';
+  @override
+  String tag_added_to_collection({required Object name}) =>
+      'Tag ${name} added to collection.';
+  @override
+  String tag_already_on_collection({required Object name}) =>
+      'Tag ${name} is already on this collection.';
+  @override
+  String get mining_image_quality => 'Image / GIF quality';
+  @override
+  String get mining_image_quality_hint =>
+      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+  @override
+  String get mining_image_quality_thrift => 'Data saver';
+  @override
+  String get mining_image_quality_standard => 'Standard';
+  @override
+  String get mining_image_quality_hd => 'HD';
+  @override
+  String get mining_image_quality_native => 'Native';
+  @override
+  String get mining_audio_quality => 'Audio quality';
+  @override
+  String get mining_audio_quality_hint =>
+      'Higher bitrate is clearer but makes larger cards.';
+  @override
+  String get mining_audio_quality_standard => 'Standard';
+  @override
+  String get mining_audio_quality_high => 'High';
+  @override
+  String get mining_audio_quality_native => 'Native';
+  @override
+  String get video_setting_torrent_backend => 'Download backend';
+  @override
+  String get video_setting_torrent_backend_qb => 'External qBittorrent';
+  @override
+  String get video_setting_torrent_backend_embedded =>
+      'Built-in engine (desktop)';
+  @override
+  String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
+  @override
+  String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
+  @override
+  String get video_setting_torrent_max_connections => 'Max connections';
+  @override
+  String get video_setting_torrent_limit_hint => '0 = unlimited';
+  @override
+  String get video_setting_torrent_connections_hint => '0 = engine default';
+  @override
+  String get shortcut_action_video_subtitle_delay_increase =>
+      'Subtitle delay +';
+  @override
+  String get shortcut_action_video_subtitle_delay_decrease =>
+      'Subtitle delay −';
+  @override
+  String get shortcut_action_video_open_subtitle_align =>
+      'Open subtitle waveform align';
+  @override
+  String get font_desc_noto_serif_tc =>
+      'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+  @override
+  String get custom_fonts_font_roles => 'Font roles';
+  @override
+  String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint => '調低可讓懸浮字幕文字更透明';
+  @override
+  String get floating_lyric_button_bg_opacity_hint => '調整懸浮字幕控制按鈕底色的透明度';
+  @override
+  String get floating_lyric_bg_opacity_hint => '調低可讓懸浮字幕條更透明、更少遮擋視野';
+  @override
+  String get video_setting_auto_play_next_hint => '播放清單中一集播完後，自動播放下一集';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
   String get interconnect_inactive_note =>
       'Hibiki Interconnect is not the active sync method';
   @override
   String get interconnect_inactive_note_hint =>
       'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
   @override
-  String get interconnect_section_client => 'Connect to other devices';
-  @override
   String get interconnect_moved_note =>
       'Connection & server settings are in the Hibiki Interconnect category';
-  @override
-  String get settings_search_hint => 'Search settings';
-  @override
-  String get settings_search_no_results => 'No matching settings';
   @override
   String get nav_game => 'Game';
   @override
@@ -75530,6 +81108,28 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 /// Flat map(s) containing all translations.
@@ -76407,7 +82007,7 @@ extension on _StringsEn {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} characters';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} characters';
+        return ({required Object n}) => '${n}万 characters';
       case 'error_log_share_subject':
         return 'hibiki Error Log';
       case 'update_never_remind':
@@ -77679,8 +83279,6 @@ extension on _StringsEn {
         return 'Off';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Lookup only';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Always';
       case 'popup_instant_scroll':
@@ -77943,7 +83541,7 @@ extension on _StringsEn {
       case 'video_immersive_mode_full':
         return 'Full controls';
       case 'video_immersive_mode_seek_lookup':
-        return 'Seek + lookup';
+        return 'Shortcut + lookup';
       case 'video_immersive_mode_unlock_only':
         return 'Unlock only';
       case 'custom_fonts_catalog_title':
@@ -78038,12 +83636,8 @@ extension on _StringsEn {
         return 'Use a custom color for lyrics text instead of following the theme';
       case 'floating_lyric_text_opacity':
         return 'Floating subtitle text opacity';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Lower this to make the floating subtitle text more transparent';
       case 'floating_lyric_button_bg_opacity':
         return 'Floating subtitle button background opacity';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Adjust how transparent the floating subtitle control buttons are';
       case 'video_control_customize_hint':
         return 'Choose where each button sits on the player, or move it out.';
       case 'video_control_slot_bottom_left':
@@ -78258,8 +83852,6 @@ extension on _StringsEn {
         return 'Restore moved and removed buttons to the default player layout.';
       case 'floating_lyric_bg_opacity':
         return 'Floating subtitle background opacity';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Lower this to make the floating subtitle bar more transparent so it blocks less of your view';
       case 'dict_update_check':
         return 'Check for Updates';
       case 'dict_update_tooltip':
@@ -78308,8 +83900,6 @@ extension on _StringsEn {
         return ({required Object count}) => '${count} favorites';
       case 'video_setting_auto_play_next':
         return 'Auto-play next episode';
-      case 'video_setting_auto_play_next_hint':
-        return 'Automatically play the next episode in a playlist when one finishes';
       case 'video_auto_play_next_cancel':
         return 'Cancel';
       case 'video_auto_play_next_countdown':
@@ -79184,9 +84774,7 @@ extension on _StringsEn {
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
-        return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
+        return 'Lookup popup position';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -79476,18 +85064,316 @@ extension on _StringsEn {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Lower this to make the floating subtitle text more transparent';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Adjust how transparent the floating subtitle control buttons are';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Lower this to make the floating subtitle bar more transparent so it blocks less of your view';
+      case 'video_setting_auto_play_next_hint':
+        return 'Automatically play the next episode in a playlist when one finishes';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -79650,6 +85536,24 @@ extension on _StringsEn {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return 'Allow audio fallback';
+      case 'game_audio_fallback_resource_only':
+        return 'Game resource audio only';
+      case 'game_audio_fallback_disabled_missing':
+        return 'No matching game resource audio; fallback is disabled';
+      case 'game_audio_resource_id':
+        return 'Audio resource ID';
       default:
         return null;
     }
@@ -80475,7 +86379,7 @@ extension on _StringsAr {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} حرف';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} حرف';
+        return ({required Object n}) => '${n}万 حرف';
       case 'error_log_share_subject':
         return 'سجل أخطاء hibiki';
       case 'update_never_remind':
@@ -81795,8 +87699,6 @@ extension on _StringsAr {
         return 'إيقاف';
       case 'desktop_clipboard_window_mode_lookup':
         return 'أثناء البحث فقط';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'دائمًا';
       case 'popup_instant_scroll':
@@ -82059,7 +87961,7 @@ extension on _StringsAr {
       case 'video_immersive_mode_full':
         return 'كامل عناصر التحكم';
       case 'video_immersive_mode_seek_lookup':
-        return 'الانتقال + البحث';
+        return 'اختصار + بحث';
       case 'video_immersive_mode_unlock_only':
         return 'إلغاء القفل فقط';
       case 'custom_fonts_catalog_title':
@@ -82155,12 +88057,8 @@ extension on _StringsAr {
         return 'استخدم لونًا مخصصًا لنص الكلمات بدلًا من اتباع السمة';
       case 'floating_lyric_text_opacity':
         return 'تعتيم نص الترجمة العائمة';
-      case 'floating_lyric_text_opacity_hint':
-        return 'اخفض هذا لجعل نص الترجمة العائمة أكثر شفافية';
       case 'floating_lyric_button_bg_opacity':
         return 'تعتيم خلفية زر الترجمة العائمة';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'اضبط مدى شفافية خلفية أزرار التحكم في الترجمة العائمة';
       case 'video_control_customize_hint':
         return 'اختر موضع كل زر على المشغّل، أو انقله خارجه.';
       case 'video_control_slot_bottom_left':
@@ -82375,8 +88273,6 @@ extension on _StringsAr {
         return 'أعد الأزرار المنقولة والمُزالة إلى تخطيط المشغّل الافتراضي.';
       case 'floating_lyric_bg_opacity':
         return 'تعتيم خلفية الترجمة العائمة';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'اخفض هذا لجعل شريط الترجمة العائمة أكثر شفافية فيحجب رؤيتك أقل';
       case 'dict_update_check':
         return 'التحقق من التحديثات';
       case 'dict_update_tooltip':
@@ -82425,8 +88321,6 @@ extension on _StringsAr {
         return ({required Object count}) => '${count} مفضّلة';
       case 'video_setting_auto_play_next':
         return 'التشغيل التلقائي للحلقة التالية';
-      case 'video_setting_auto_play_next_hint':
-        return 'تشغيل الحلقة التالية في قائمة التشغيل تلقائيًا عند انتهاء واحدة';
       case 'video_auto_play_next_cancel':
         return 'إلغاء';
       case 'video_auto_play_next_countdown':
@@ -83303,8 +89197,6 @@ extension on _StringsAr {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -83594,18 +89486,316 @@ extension on _StringsAr {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'اخفض هذا لجعل نص الترجمة العائمة أكثر شفافية';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'اضبط مدى شفافية خلفية أزرار التحكم في الترجمة العائمة';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'اخفض هذا لجعل شريط الترجمة العائمة أكثر شفافية فيحجب رؤيتك أقل';
+      case 'video_setting_auto_play_next_hint':
+        return 'تشغيل الحلقة التالية في قائمة التشغيل تلقائيًا عند انتهاء واحدة';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -83768,6 +89958,24 @@ extension on _StringsAr {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -84600,7 +90808,7 @@ extension on _StringsDe {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} Zeichen';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} Zeichen';
+        return ({required Object n}) => '${n}万 Zeichen';
       case 'error_log_share_subject':
         return 'hibiki Fehlerprotokoll';
       case 'update_never_remind':
@@ -85930,8 +92138,6 @@ extension on _StringsDe {
         return 'Aus';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Nur beim Nachschlagen';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Immer';
       case 'popup_instant_scroll':
@@ -86197,7 +92403,7 @@ extension on _StringsDe {
       case 'video_immersive_mode_full':
         return 'Alle Bedienelemente';
       case 'video_immersive_mode_seek_lookup':
-        return 'Spulen + Nachschlagen';
+        return 'Tastenkürzel + Nachschlagen';
       case 'video_immersive_mode_unlock_only':
         return 'Nur Entsperren';
       case 'custom_fonts_catalog_title':
@@ -86292,12 +92498,8 @@ extension on _StringsDe {
         return 'Für den Liedtext eine eigene Farbe verwenden, statt dem Theme zu folgen';
       case 'floating_lyric_text_opacity':
         return 'Deckkraft des schwebenden Untertiteltexts';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Verringern, um den schwebenden Untertiteltext transparenter zu machen';
       case 'floating_lyric_button_bg_opacity':
         return 'Deckkraft des Hintergrunds der schwebenden Untertitel-Tasten';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Stellt ein, wie transparent die Hintergründe der schwebenden Untertitel-Bedienknöpfe sind';
       case 'video_control_customize_hint':
         return 'Wähle für jede Taste die Position auf dem Player oder entferne sie.';
       case 'video_control_slot_bottom_left':
@@ -86514,8 +92716,6 @@ extension on _StringsDe {
         return 'Setzt verschobene und entfernte Tasten auf das Standard-Player-Layout zurück.';
       case 'floating_lyric_bg_opacity':
         return 'Hintergrund-Deckkraft des schwebenden Untertitels';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Verringern, um die schwebende Untertitelleiste transparenter zu machen, damit sie weniger Sicht verdeckt';
       case 'dict_update_check':
         return 'Nach Updates suchen';
       case 'dict_update_tooltip':
@@ -86564,8 +92764,6 @@ extension on _StringsDe {
         return ({required Object count}) => '${count} Favoriten';
       case 'video_setting_auto_play_next':
         return 'Nächste Folge automatisch abspielen';
-      case 'video_setting_auto_play_next_hint':
-        return 'Spielt nach dem Ende einer Folge automatisch die nächste Folge der Playlist ab';
       case 'video_auto_play_next_cancel':
         return 'Abbrechen';
       case 'video_auto_play_next_countdown':
@@ -87442,8 +93640,6 @@ extension on _StringsDe {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -87733,18 +93929,316 @@ extension on _StringsDe {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Verringern, um den schwebenden Untertiteltext transparenter zu machen';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Stellt ein, wie transparent die Hintergründe der schwebenden Untertitel-Bedienknöpfe sind';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Verringern, um die schwebende Untertitelleiste transparenter zu machen, damit sie weniger Sicht verdeckt';
+      case 'video_setting_auto_play_next_hint':
+        return 'Spielt nach dem Ende einer Folge automatisch die nächste Folge der Playlist ab';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -87907,6 +94401,24 @@ extension on _StringsDe {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -88738,7 +95250,7 @@ extension on _StringsEs {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caracteres';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} caracteres';
+        return ({required Object n}) => '${n}万 caracteres';
       case 'error_log_share_subject':
         return 'Registro de errores de hibiki';
       case 'update_never_remind':
@@ -90068,8 +96580,6 @@ extension on _StringsEs {
         return 'Desactivado';
       case 'desktop_clipboard_window_mode_always':
         return 'Siempre';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Solo al consultar';
       case 'popup_instant_scroll':
@@ -90334,7 +96844,7 @@ extension on _StringsEs {
       case 'video_immersive_mode_full':
         return 'Todos los controles';
       case 'video_immersive_mode_seek_lookup':
-        return 'Saltar + consultar';
+        return 'Atajo + consulta';
       case 'video_immersive_mode_unlock_only':
         return 'Solo desbloquear';
       case 'custom_fonts_catalog_title':
@@ -90429,12 +96939,8 @@ extension on _StringsEs {
         return 'Usa un color personalizado para el texto de las letras en lugar de seguir el tema';
       case 'floating_lyric_text_opacity':
         return 'Opacidad del texto del subtítulo flotante';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Bájala para que el texto del subtítulo flotante sea más transparente';
       case 'floating_lyric_button_bg_opacity':
         return 'Opacidad del fondo de los botones del subtítulo flotante';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Ajusta la transparencia del fondo de los botones de control del subtítulo flotante';
       case 'video_control_customize_hint':
         return 'Elige dónde se coloca cada botón en el reproductor, o quítalo.';
       case 'video_control_slot_bottom_left':
@@ -90652,8 +97158,6 @@ extension on _StringsEs {
         return 'Restaura los botones movidos y quitados a la disposición predeterminada del reproductor.';
       case 'floating_lyric_bg_opacity':
         return 'Opacidad del fondo del subtítulo flotante';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Bájala para que la barra de subtítulo flotante sea más transparente y tape menos la vista';
       case 'dict_update_check':
         return 'Buscar actualizaciones';
       case 'dict_update_tooltip':
@@ -90702,8 +97206,6 @@ extension on _StringsEs {
         return ({required Object count}) => '${count} favoritos';
       case 'video_setting_auto_play_next':
         return 'Reproducir automáticamente el siguiente episodio';
-      case 'video_setting_auto_play_next_hint':
-        return 'Reproduce automáticamente el siguiente episodio de una lista cuando termina uno';
       case 'video_auto_play_next_cancel':
         return 'Cancelar';
       case 'video_auto_play_next_countdown':
@@ -91580,8 +98082,6 @@ extension on _StringsEs {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -91871,18 +98371,316 @@ extension on _StringsEs {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Bájala para que el texto del subtítulo flotante sea más transparente';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Ajusta la transparencia del fondo de los botones de control del subtítulo flotante';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Bájala para que la barra de subtítulo flotante sea más transparente y tape menos la vista';
+      case 'video_setting_auto_play_next_hint':
+        return 'Reproduce automáticamente el siguiente episodio de una lista cuando termina uno';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -92045,6 +98843,24 @@ extension on _StringsEs {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -92874,7 +99690,7 @@ extension on _StringsFr {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caractères';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} caractères';
+        return ({required Object n}) => '${n}万 caractères';
       case 'error_log_share_subject':
         return 'Journal d\'erreurs hibiki';
       case 'update_never_remind':
@@ -94208,8 +101024,6 @@ extension on _StringsFr {
         return 'Désactivé';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Recherche uniquement';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Toujours';
       case 'popup_instant_scroll':
@@ -94475,7 +101289,7 @@ extension on _StringsFr {
       case 'video_immersive_mode_full':
         return 'Tous les contrôles';
       case 'video_immersive_mode_seek_lookup':
-        return 'Navigation + recherche';
+        return 'Raccourci + recherche';
       case 'video_immersive_mode_unlock_only':
         return 'Déverrouillage uniquement';
       case 'custom_fonts_catalog_title':
@@ -94570,12 +101384,8 @@ extension on _StringsFr {
         return 'Utiliser une couleur personnalisée pour les paroles au lieu de suivre le thème';
       case 'floating_lyric_text_opacity':
         return 'Opacité du texte du sous-titre flottant';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Baissez cette valeur pour rendre le texte du sous-titre flottant plus transparent';
       case 'floating_lyric_button_bg_opacity':
         return 'Opacité du fond des boutons du sous-titre flottant';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Réglez la transparence du fond des boutons de contrôle du sous-titre flottant';
       case 'video_control_customize_hint':
         return 'Choisissez l\'emplacement de chaque bouton sur le lecteur, ou retirez-le.';
       case 'video_control_slot_bottom_left':
@@ -94795,8 +101605,6 @@ extension on _StringsFr {
         return 'Rétablit les boutons déplacés et retirés selon la disposition par défaut du lecteur.';
       case 'floating_lyric_bg_opacity':
         return 'Opacité du fond du sous-titre flottant';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Baissez cette valeur pour rendre la barre de sous-titre flottant plus transparente et moins gênante';
       case 'dict_update_check':
         return 'Vérifier les mises à jour';
       case 'dict_update_tooltip':
@@ -94846,8 +101654,6 @@ extension on _StringsFr {
         return ({required Object count}) => '${count} favoris';
       case 'video_setting_auto_play_next':
         return 'Lecture auto de l\'épisode suivant';
-      case 'video_setting_auto_play_next_hint':
-        return 'Lit automatiquement l\'épisode suivant d\'une playlist à la fin du précédent';
       case 'video_auto_play_next_cancel':
         return 'Annuler';
       case 'video_auto_play_next_countdown':
@@ -95724,8 +102530,6 @@ extension on _StringsFr {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -96015,18 +102819,316 @@ extension on _StringsFr {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Baissez cette valeur pour rendre le texte du sous-titre flottant plus transparent';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Réglez la transparence du fond des boutons de contrôle du sous-titre flottant';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Baissez cette valeur pour rendre la barre de sous-titre flottant plus transparente et moins gênante';
+      case 'video_setting_auto_play_next_hint':
+        return 'Lit automatiquement l\'épisode suivant d\'une playlist à la fin du précédent';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -96189,6 +103291,24 @@ extension on _StringsFr {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -97018,7 +104138,7 @@ extension on _StringsId {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} karakter';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} karakter';
+        return ({required Object n}) => '${n}万 karakter';
       case 'error_log_share_subject':
         return 'Log Error hibiki';
       case 'update_never_remind':
@@ -98342,8 +105462,6 @@ extension on _StringsId {
         return 'Mati';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Hanya saat mencari';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Selalu';
       case 'popup_instant_scroll':
@@ -98606,7 +105724,7 @@ extension on _StringsId {
       case 'video_immersive_mode_full':
         return 'Kontrol penuh';
       case 'video_immersive_mode_seek_lookup':
-        return 'Lompat + pencarian kata';
+        return 'Pintasan + pencarian kata';
       case 'video_immersive_mode_unlock_only':
         return 'Hanya buka kunci';
       case 'custom_fonts_catalog_title':
@@ -98701,12 +105819,8 @@ extension on _StringsId {
         return 'Gunakan warna kustom untuk teks lirik alih-alih mengikuti tema';
       case 'floating_lyric_text_opacity':
         return 'Opasitas teks subtitle melayang';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Turunkan untuk membuat teks subtitle melayang lebih transparan';
       case 'floating_lyric_button_bg_opacity':
         return 'Opasitas latar tombol subtitle melayang';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Atur seberapa transparan tombol kontrol subtitle melayang';
       case 'video_control_customize_hint':
         return 'Pilih posisi tiap tombol di pemutar, atau pindahkan keluar.';
       case 'video_control_slot_bottom_left':
@@ -98921,8 +106035,6 @@ extension on _StringsId {
         return 'Kembalikan tombol yang dipindahkan dan dihapus ke tata letak pemutar default.';
       case 'floating_lyric_bg_opacity':
         return 'Opasitas latar subtitle melayang';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Turunkan untuk membuat bilah subtitle melayang lebih transparan agar tidak terlalu menghalangi pandangan';
       case 'dict_update_check':
         return 'Cek Pembaruan';
       case 'dict_update_tooltip':
@@ -98971,8 +106083,6 @@ extension on _StringsId {
         return ({required Object count}) => '${count} favorit';
       case 'video_setting_auto_play_next':
         return 'Putar otomatis episode berikutnya';
-      case 'video_setting_auto_play_next_hint':
-        return 'Otomatis putar episode berikutnya dalam playlist ketika satu episode selesai';
       case 'video_auto_play_next_cancel':
         return 'Batal';
       case 'video_auto_play_next_countdown':
@@ -99850,8 +106960,6 @@ extension on _StringsId {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -100141,18 +107249,316 @@ extension on _StringsId {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Turunkan untuk membuat teks subtitle melayang lebih transparan';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Atur seberapa transparan tombol kontrol subtitle melayang';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Turunkan untuk membuat bilah subtitle melayang lebih transparan agar tidak terlalu menghalangi pandangan';
+      case 'video_setting_auto_play_next_hint':
+        return 'Otomatis putar episode berikutnya dalam playlist ketika satu episode selesai';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -100315,6 +107721,24 @@ extension on _StringsId {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -101145,7 +108569,7 @@ extension on _StringsIt {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caratteri';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} caratteri';
+        return ({required Object n}) => '${n}万 caratteri';
       case 'error_log_share_subject':
         return 'Registro errori hibiki';
       case 'update_never_remind':
@@ -102470,8 +109894,6 @@ extension on _StringsIt {
         return 'Tienilo attivo con il blocco posizione se vuoi comunque la ricerca parole.';
       case 'desktop_clipboard_window_mode':
         return 'Fissaggio finestra';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Solo durante la ricerca';
       case 'desktop_clipboard_window_mode_normal':
@@ -102741,7 +110163,7 @@ extension on _StringsIt {
       case 'video_immersive_mode_full':
         return 'Tutti i controlli';
       case 'video_immersive_mode_seek_lookup':
-        return 'Spostamento + ricerca';
+        return 'Scorciatoia + ricerca';
       case 'video_immersive_mode_unlock_only':
         return 'Solo sblocco';
       case 'custom_fonts_catalog_title':
@@ -102836,12 +110258,8 @@ extension on _StringsIt {
         return 'Usa un colore personalizzato per il testo dei testi invece di seguire il tema';
       case 'floating_lyric_text_opacity':
         return 'Opacità del testo del sottotitolo fluttuante';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Abbassa questo valore per rendere più trasparente il testo del sottotitolo fluttuante';
       case 'floating_lyric_button_bg_opacity':
         return 'Opacità sfondo dei pulsanti del sottotitolo fluttuante';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Regola la trasparenza dello sfondo dei pulsanti di controllo del sottotitolo fluttuante';
       case 'video_control_customize_hint':
         return 'Scegli dove collocare ogni pulsante sul lettore, oppure rimuovilo.';
       case 'video_control_slot_bottom_left':
@@ -103061,8 +110479,6 @@ extension on _StringsIt {
         return 'Riporta i pulsanti spostati e rimossi al layout predefinito del lettore.';
       case 'floating_lyric_bg_opacity':
         return 'Opacità sfondo del sottotitolo fluttuante';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Abbassa questo valore per rendere più trasparente la barra del sottotitolo fluttuante, così da ostacolare meno la visuale';
       case 'dict_update_check':
         return 'Controlla aggiornamenti';
       case 'dict_update_tooltip':
@@ -103112,8 +110528,6 @@ extension on _StringsIt {
         return ({required Object count}) => '${count} preferiti';
       case 'video_setting_auto_play_next':
         return 'Riproduci automaticamente l\'episodio successivo';
-      case 'video_setting_auto_play_next_hint':
-        return 'Riproduce automaticamente l\'episodio successivo di una playlist quando uno finisce';
       case 'video_auto_play_next_cancel':
         return 'Annulla';
       case 'video_auto_play_next_countdown':
@@ -103991,8 +111405,6 @@ extension on _StringsIt {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -104282,18 +111694,316 @@ extension on _StringsIt {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Abbassa questo valore per rendere più trasparente il testo del sottotitolo fluttuante';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Regola la trasparenza dello sfondo dei pulsanti di controllo del sottotitolo fluttuante';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Abbassa questo valore per rendere più trasparente la barra del sottotitolo fluttuante, così da ostacolare meno la visuale';
+      case 'video_setting_auto_play_next_hint':
+        return 'Riproduce automaticamente l\'episodio successivo di una playlist quando uno finisce';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -104456,6 +112166,24 @@ extension on _StringsIt {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -106586,8 +114314,6 @@ extension on _StringsJa {
         return '位置を固定したままでも辞書引きを使いたい場合はオンにしてください。';
       case 'desktop_clipboard_window_mode':
         return 'ウィンドウの最前面固定';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return '辞書引き中のみ';
       case 'desktop_clipboard_window_mode_normal':
@@ -106854,7 +114580,7 @@ extension on _StringsJa {
       case 'video_immersive_mode_full':
         return 'すべての操作';
       case 'video_immersive_mode_seek_lookup':
-        return 'シーク＋辞書引き';
+        return 'ショートカット＋辞書引き';
       case 'video_immersive_mode_unlock_only':
         return 'ロック解除のみ';
       case 'custom_fonts_catalog_title':
@@ -106949,12 +114675,8 @@ extension on _StringsJa {
         return '歌詞字幕にテーマに従わないカスタムの色を使います';
       case 'floating_lyric_text_opacity':
         return 'フローティング字幕の文字の不透明度';
-      case 'floating_lyric_text_opacity_hint':
-        return '下げるとフローティング字幕の文字がより透明になります';
       case 'floating_lyric_button_bg_opacity':
         return 'フローティング字幕ボタンの背景の不透明度';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'フローティング字幕の操作ボタンの背景の透明度を調整します';
       case 'video_control_customize_hint':
         return '各ボタンをプレーヤー上のどこに置くかを選ぶか、外します。';
       case 'video_control_slot_bottom_left':
@@ -107168,8 +114890,6 @@ extension on _StringsJa {
         return '移動・削除したボタンを、デフォルトのプレーヤー配置に戻します。';
       case 'floating_lyric_bg_opacity':
         return 'フローティング字幕の背景の不透明度';
-      case 'floating_lyric_bg_opacity_hint':
-        return '下げるとフローティング字幕バーがより透明になり、視界を遮りにくくなります';
       case 'dict_update_check':
         return '更新を確認';
       case 'dict_update_tooltip':
@@ -107218,8 +114938,6 @@ extension on _StringsJa {
         return ({required Object count}) => 'お気に入り ${count} 句';
       case 'video_setting_auto_play_next':
         return '次のエピソードを自動再生';
-      case 'video_setting_auto_play_next_hint':
-        return 'プレイリスト内の 1 話が終わると、自動的に次のエピソードを再生します';
       case 'video_auto_play_next_cancel':
         return 'キャンセル';
       case 'video_auto_play_next_countdown':
@@ -108095,8 +115813,6 @@ extension on _StringsJa {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -108385,18 +116101,316 @@ extension on _StringsJa {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return '下げるとフローティング字幕の文字がより透明になります';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'フローティング字幕の操作ボタンの背景の透明度を調整します';
+      case 'floating_lyric_bg_opacity_hint':
+        return '下げるとフローティング字幕バーがより透明になり、視界を遮りにくくなります';
+      case 'video_setting_auto_play_next_hint':
+        return 'プレイリスト内の 1 話が終わると、自動的に次のエピソードを再生します';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -108559,6 +116573,24 @@ extension on _StringsJa {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -110692,8 +118724,6 @@ extension on _StringsKo {
         return '위치를 고정해도 단어 찾기를 쓰려면 이 옵션을 켜 두세요.';
       case 'desktop_clipboard_window_mode':
         return '창 고정';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return '단어 찾기 중에만';
       case 'desktop_clipboard_window_mode_normal':
@@ -110960,7 +118990,7 @@ extension on _StringsKo {
       case 'video_immersive_mode_full':
         return '전체 조작';
       case 'video_immersive_mode_seek_lookup':
-        return '이동 + 단어 찾기';
+        return '단축키 + 단어 찾기';
       case 'video_immersive_mode_unlock_only':
         return '잠금 해제만';
       case 'custom_fonts_catalog_title':
@@ -111055,12 +119085,8 @@ extension on _StringsKo {
         return '테마를 따르지 않고 가사 텍스트에 사용자 지정 색상을 사용합니다';
       case 'floating_lyric_text_opacity':
         return '플로팅 자막 텍스트 불투명도';
-      case 'floating_lyric_text_opacity_hint':
-        return '낮추면 플로팅 자막 텍스트가 더 투명해집니다';
       case 'floating_lyric_button_bg_opacity':
         return '플로팅 자막 버튼 배경 불투명도';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return '플로팅 자막 조작 버튼의 배경 투명도를 조절합니다';
       case 'video_control_customize_hint':
         return '각 버튼이 플레이어의 어디에 놓일지 선택하거나 빼낼 수 있습니다.';
       case 'video_control_slot_bottom_left':
@@ -111274,8 +119300,6 @@ extension on _StringsKo {
         return '옮기거나 제거한 버튼을 기본 플레이어 배치로 되돌립니다.';
       case 'floating_lyric_bg_opacity':
         return '플로팅 자막 배경 불투명도';
-      case 'floating_lyric_bg_opacity_hint':
-        return '낮추면 플로팅 자막 바가 더 투명해져 시야를 덜 가립니다';
       case 'dict_update_check':
         return '업데이트 확인';
       case 'dict_update_tooltip':
@@ -111324,8 +119348,6 @@ extension on _StringsKo {
         return ({required Object count}) => '즐겨찾기 ${count}개';
       case 'video_setting_auto_play_next':
         return '다음 에피소드 자동 재생';
-      case 'video_setting_auto_play_next_hint':
-        return '재생목록에서 한 에피소드가 끝나면 다음 에피소드를 자동으로 재생합니다';
       case 'video_auto_play_next_cancel':
         return '취소';
       case 'video_auto_play_next_countdown':
@@ -112201,8 +120223,6 @@ extension on _StringsKo {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -112492,18 +120512,316 @@ extension on _StringsKo {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return '낮추면 플로팅 자막 텍스트가 더 투명해집니다';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return '플로팅 자막 조작 버튼의 배경 투명도를 조절합니다';
+      case 'floating_lyric_bg_opacity_hint':
+        return '낮추면 플로팅 자막 바가 더 투명해져 시야를 덜 가립니다';
+      case 'video_setting_auto_play_next_hint':
+        return '재생목록에서 한 에피소드가 끝나면 다음 에피소드를 자동으로 재생합니다';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -112666,6 +120984,24 @@ extension on _StringsKo {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -113497,7 +121833,7 @@ extension on _StringsNl {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} tekens';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} tekens';
+        return ({required Object n}) => '${n}万 tekens';
       case 'error_log_share_subject':
         return 'hibiki foutenlogboek';
       case 'update_never_remind':
@@ -114818,8 +123154,6 @@ extension on _StringsNl {
         return 'Houd dit aan met positievergrendeling als je nog steeds woorden wilt opzoeken.';
       case 'desktop_clipboard_window_mode':
         return 'Venster vastzetten';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Altijd';
       case 'desktop_clipboard_window_mode_lookup':
@@ -115088,7 +123422,7 @@ extension on _StringsNl {
       case 'video_immersive_mode_full':
         return 'Alle bediening';
       case 'video_immersive_mode_seek_lookup':
-        return 'Spoelen + opzoeken';
+        return 'Sneltoets + opzoeken';
       case 'video_immersive_mode_unlock_only':
         return 'Alleen ontgrendelen';
       case 'custom_fonts_catalog_title':
@@ -115183,12 +123517,8 @@ extension on _StringsNl {
         return 'Gebruik een aangepaste kleur voor songteksten in plaats van het thema te volgen';
       case 'floating_lyric_text_opacity':
         return 'Tekstdekking zwevende ondertitel';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Verlaag dit om de tekst van de zwevende ondertitel transparanter te maken';
       case 'floating_lyric_button_bg_opacity':
         return 'Dekking knopachtergrond zwevende ondertitel';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Pas aan hoe transparant de bedieningsknoppen van de zwevende ondertitel zijn';
       case 'video_control_customize_hint':
         return 'Kies waar elke knop op de speler staat, of verwijder hem.';
       case 'video_control_slot_bottom_left':
@@ -115406,8 +123736,6 @@ extension on _StringsNl {
         return 'Herstel verplaatste en verwijderde knoppen naar de standaard spelerindeling.';
       case 'floating_lyric_bg_opacity':
         return 'Achtergronddekking zwevende ondertitel';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Verlaag dit om de zwevende ondertitelbalk transparanter te maken, zodat hij minder van je zicht blokkeert';
       case 'dict_update_check':
         return 'Controleren op updates';
       case 'dict_update_tooltip':
@@ -115456,8 +123784,6 @@ extension on _StringsNl {
         return ({required Object count}) => '${count} favorieten';
       case 'video_setting_auto_play_next':
         return 'Volgende aflevering automatisch afspelen';
-      case 'video_setting_auto_play_next_hint':
-        return 'Speel automatisch de volgende aflevering in een afspeellijst af wanneer er een eindigt';
       case 'video_auto_play_next_cancel':
         return 'Annuleren';
       case 'video_auto_play_next_countdown':
@@ -116335,8 +124661,6 @@ extension on _StringsNl {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -116626,18 +124950,316 @@ extension on _StringsNl {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Verlaag dit om de tekst van de zwevende ondertitel transparanter te maken';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Pas aan hoe transparant de bedieningsknoppen van de zwevende ondertitel zijn';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Verlaag dit om de zwevende ondertitelbalk transparanter te maken, zodat hij minder van je zicht blokkeert';
+      case 'video_setting_auto_play_next_hint':
+        return 'Speel automatisch de volgende aflevering in een afspeellijst af wanneer er een eindigt';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -116800,6 +125422,24 @@ extension on _StringsNl {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -117629,7 +126269,7 @@ extension on _StringsPtBr {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caracteres';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} caracteres';
+        return ({required Object n}) => '${n}万 caracteres';
       case 'error_log_share_subject':
         return 'Log de Erros do hibiki';
       case 'update_never_remind':
@@ -118951,8 +127591,6 @@ extension on _StringsPtBr {
         return 'Mantenha isto ativado com a posição travada se ainda quiser consultar palavras.';
       case 'desktop_clipboard_window_mode':
         return 'Fixação da janela';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Apenas durante a consulta';
       case 'desktop_clipboard_window_mode_normal':
@@ -119221,7 +127859,7 @@ extension on _StringsPtBr {
       case 'video_immersive_mode_full':
         return 'Todos os controles';
       case 'video_immersive_mode_seek_lookup':
-        return 'Avançar + consultar';
+        return 'Atalho + consulta';
       case 'video_immersive_mode_unlock_only':
         return 'Apenas desbloquear';
       case 'custom_fonts_catalog_title':
@@ -119316,12 +127954,8 @@ extension on _StringsPtBr {
         return 'Use uma cor personalizada para o texto das letras em vez de seguir o tema';
       case 'floating_lyric_text_opacity':
         return 'Opacidade do texto da legenda flutuante';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Reduza para deixar o texto da legenda flutuante mais transparente';
       case 'floating_lyric_button_bg_opacity':
         return 'Opacidade do fundo dos botões da legenda flutuante';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Ajuste a transparência do fundo dos botões de controle da legenda flutuante';
       case 'video_control_customize_hint':
         return 'Escolha onde cada botão fica no player ou remova-o.';
       case 'video_control_slot_bottom_left':
@@ -119539,8 +128173,6 @@ extension on _StringsPtBr {
         return 'Restaura os botões movidos e removidos para o layout padrão do player.';
       case 'floating_lyric_bg_opacity':
         return 'Opacidade do fundo da legenda flutuante';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Reduza para deixar a barra de legenda flutuante mais transparente e bloquear menos a visão';
       case 'dict_update_check':
         return 'Verificar atualizações';
       case 'dict_update_tooltip':
@@ -119589,8 +128221,6 @@ extension on _StringsPtBr {
         return ({required Object count}) => '${count} favoritas';
       case 'video_setting_auto_play_next':
         return 'Reproduzir o próximo episódio automaticamente';
-      case 'video_setting_auto_play_next_hint':
-        return 'Reproduz automaticamente o próximo episódio de uma playlist quando um termina';
       case 'video_auto_play_next_cancel':
         return 'Cancelar';
       case 'video_auto_play_next_countdown':
@@ -120466,8 +129096,6 @@ extension on _StringsPtBr {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -120757,18 +129385,316 @@ extension on _StringsPtBr {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Reduza para deixar o texto da legenda flutuante mais transparente';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Ajuste a transparência do fundo dos botões de controle da legenda flutuante';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Reduza para deixar a barra de legenda flutuante mais transparente e bloquear menos a visão';
+      case 'video_setting_auto_play_next_hint':
+        return 'Reproduz automaticamente o próximo episódio de uma playlist quando um termina';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -120931,6 +129857,24 @@ extension on _StringsPtBr {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -121760,7 +130704,7 @@ extension on _StringsRu {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} символов';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} символов';
+        return ({required Object n}) => '${n}万 символов';
       case 'error_log_share_subject':
         return 'Журнал ошибок hibiki';
       case 'update_never_remind':
@@ -123085,8 +132029,6 @@ extension on _StringsRu {
         return 'Оставьте включённым с фиксацией положения, если хотите сохранить поиск слов.';
       case 'desktop_clipboard_window_mode':
         return 'Закрепление окна';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Только при поиске';
       case 'desktop_clipboard_window_mode_normal':
@@ -123355,7 +132297,7 @@ extension on _StringsRu {
       case 'video_immersive_mode_full':
         return 'Все элементы управления';
       case 'video_immersive_mode_seek_lookup':
-        return 'Перемотка + поиск слов';
+        return 'Горячая клавиша + поиск слов';
       case 'video_immersive_mode_unlock_only':
         return 'Только разблокировка';
       case 'custom_fonts_catalog_title':
@@ -123450,12 +132392,8 @@ extension on _StringsRu {
         return 'Использовать свой цвет для текста песен вместо следования теме';
       case 'floating_lyric_text_opacity':
         return 'Непрозрачность текста плавающих субтитров';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Уменьшите, чтобы текст плавающих субтитров стал прозрачнее';
       case 'floating_lyric_button_bg_opacity':
         return 'Непрозрачность фона кнопок плавающих субтитров';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Настройте прозрачность фона кнопок управления плавающими субтитрами';
       case 'video_control_customize_hint':
         return 'Выберите место каждой кнопки на плеере или уберите её.';
       case 'video_control_slot_bottom_left':
@@ -123674,8 +132612,6 @@ extension on _StringsRu {
         return 'Вернуть перемещённые и убранные кнопки к стандартному расположению плеера.';
       case 'floating_lyric_bg_opacity':
         return 'Непрозрачность фона плавающих субтитров';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Уменьшите, чтобы панель плавающих субтитров стала прозрачнее и меньше закрывала обзор';
       case 'dict_update_check':
         return 'Проверить обновления';
       case 'dict_update_tooltip':
@@ -123724,8 +132660,6 @@ extension on _StringsRu {
         return ({required Object count}) => 'В избранном: ${count}';
       case 'video_setting_auto_play_next':
         return 'Автовоспроизведение следующей серии';
-      case 'video_setting_auto_play_next_hint':
-        return 'Автоматически воспроизводить следующую серию в плейлисте после завершения текущей';
       case 'video_auto_play_next_cancel':
         return 'Отмена';
       case 'video_auto_play_next_countdown':
@@ -124602,8 +133536,6 @@ extension on _StringsRu {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -124893,18 +133825,316 @@ extension on _StringsRu {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Уменьшите, чтобы текст плавающих субтитров стал прозрачнее';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Настройте прозрачность фона кнопок управления плавающими субтитрами';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Уменьшите, чтобы панель плавающих субтитров стала прозрачнее и меньше закрывала обзор';
+      case 'video_setting_auto_play_next_hint':
+        return 'Автоматически воспроизводить следующую серию в плейлисте после завершения текущей';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -125067,6 +134297,24 @@ extension on _StringsRu {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -125895,7 +135143,7 @@ extension on _StringsTh {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} ตัวอักษร';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} ตัวอักษร';
+        return ({required Object n}) => '${n}万 ตัวอักษร';
       case 'error_log_share_subject':
         return 'บันทึกข้อผิดพลาด hibiki';
       case 'update_never_remind':
@@ -127216,8 +136464,6 @@ extension on _StringsTh {
         return 'เสมอ';
       case 'desktop_clipboard_window_mode_lookup':
         return 'เฉพาะตอนค้นคำ';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'popup_instant_scroll':
         return 'เลื่อนหน้าต่างค้นคำแบบทันที';
       case 'popup_instant_scroll_hint':
@@ -127478,7 +136724,7 @@ extension on _StringsTh {
       case 'video_immersive_mode_full':
         return 'ควบคุมทั้งหมด';
       case 'video_immersive_mode_seek_lookup':
-        return 'เลื่อนเวลา + ค้นคำ';
+        return 'ทางลัด + ค้นคำ';
       case 'video_immersive_mode_unlock_only':
         return 'เฉพาะปลดล็อก';
       case 'custom_fonts_catalog_title':
@@ -127573,12 +136819,8 @@ extension on _StringsTh {
         return 'ใช้สีที่กำหนดเองสำหรับตัวอักษรเนื้อร้องแทนการตามธีม';
       case 'floating_lyric_text_opacity':
         return 'ความทึบของตัวอักษรคำบรรยายลอย';
-      case 'floating_lyric_text_opacity_hint':
-        return 'ลดค่านี้เพื่อให้ตัวอักษรคำบรรยายลอยโปร่งใสขึ้น';
       case 'floating_lyric_button_bg_opacity':
         return 'ความทึบของพื้นหลังปุ่มคำบรรยายลอย';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'ปรับความโปร่งใสของพื้นหลังปุ่มควบคุมคำบรรยายลอย';
       case 'video_control_customize_hint':
         return 'เลือกตำแหน่งของแต่ละปุ่มบนโปรแกรมเล่น หรือนำออก';
       case 'video_control_slot_bottom_left':
@@ -127793,8 +137035,6 @@ extension on _StringsTh {
         return 'คืนปุ่มที่ย้ายและนำออกกลับสู่เลย์เอาต์โปรแกรมเล่นเริ่มต้น';
       case 'floating_lyric_bg_opacity':
         return 'ความทึบของพื้นหลังคำบรรยายลอย';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'ลดค่านี้เพื่อให้แถบคำบรรยายลอยโปร่งใสขึ้นและบังมุมมองน้อยลง';
       case 'dict_update_check':
         return 'ตรวจสอบอัปเดต';
       case 'dict_update_tooltip':
@@ -127843,8 +137083,6 @@ extension on _StringsTh {
         return ({required Object count}) => '${count} รายการโปรด';
       case 'video_setting_auto_play_next':
         return 'เล่นตอนถัดไปอัตโนมัติ';
-      case 'video_setting_auto_play_next_hint':
-        return 'เมื่อตอนหนึ่งจบ ให้เล่นตอนถัดไปในเพลย์ลิสต์โดยอัตโนมัติ';
       case 'video_auto_play_next_cancel':
         return 'ยกเลิก';
       case 'video_auto_play_next_countdown':
@@ -128722,8 +137960,6 @@ extension on _StringsTh {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -129013,18 +138249,316 @@ extension on _StringsTh {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'ลดค่านี้เพื่อให้ตัวอักษรคำบรรยายลอยโปร่งใสขึ้น';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'ปรับความโปร่งใสของพื้นหลังปุ่มควบคุมคำบรรยายลอย';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'ลดค่านี้เพื่อให้แถบคำบรรยายลอยโปร่งใสขึ้นและบังมุมมองน้อยลง';
+      case 'video_setting_auto_play_next_hint':
+        return 'เมื่อตอนหนึ่งจบ ให้เล่นตอนถัดไปในเพลย์ลิสต์โดยอัตโนมัติ';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -129187,6 +138721,24 @@ extension on _StringsTh {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -130016,7 +139568,7 @@ extension on _StringsTr {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} karakter';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} karakter';
+        return ({required Object n}) => '${n}万 karakter';
       case 'error_log_share_subject':
         return 'hibiki Hata Günlüğü';
       case 'update_never_remind':
@@ -131341,8 +140893,6 @@ extension on _StringsTr {
         return 'Her zaman';
       case 'desktop_clipboard_window_mode_lookup':
         return 'Yalnızca arama sırasında';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'popup_instant_scroll':
         return 'Anında açılır pencere kaydırma';
       case 'popup_instant_scroll_hint':
@@ -131603,7 +141153,7 @@ extension on _StringsTr {
       case 'video_immersive_mode_full':
         return 'Tüm denetimler';
       case 'video_immersive_mode_seek_lookup':
-        return 'Sarma + arama';
+        return 'Kısayol + arama';
       case 'video_immersive_mode_unlock_only':
         return 'Yalnızca kilit açma';
       case 'custom_fonts_catalog_title':
@@ -131699,12 +141249,8 @@ extension on _StringsTr {
         return 'Şarkı sözü metni için temayı izlemek yerine özel bir renk kullan';
       case 'floating_lyric_text_opacity':
         return 'Kayan altyazı metni saydamlığı';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Kayan altyazı metnini daha saydam yapmak için bunu azaltın';
       case 'floating_lyric_button_bg_opacity':
         return 'Kayan altyazı düğmesi arka plan saydamlığı';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Kayan altyazı denetim düğmelerinin ne kadar saydam olacağını ayarlayın';
       case 'video_control_customize_hint':
         return 'Her düğmenin oynatıcıda nerede duracağını seçin ya da dışarı taşıyın.';
       case 'video_control_slot_bottom_left':
@@ -131923,8 +141469,6 @@ extension on _StringsTr {
         return 'Taşınan ve kaldırılan düğmeleri varsayılan oynatıcı düzenine geri yükleyin.';
       case 'floating_lyric_bg_opacity':
         return 'Kayan altyazı arka plan matlığı';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Kayan altyazı çubuğunu daha saydam yapıp görüşünüzü daha az engellemesi için bunu azaltın';
       case 'dict_update_check':
         return 'Güncellemeleri Denetle';
       case 'dict_update_tooltip':
@@ -131973,8 +141517,6 @@ extension on _StringsTr {
         return ({required Object count}) => '${count} sık kullanılan';
       case 'video_setting_auto_play_next':
         return 'Sonraki bölümü otomatik oynat';
-      case 'video_setting_auto_play_next_hint':
-        return 'Bir oynatma listesinde biri bittiğinde sonraki bölümü otomatik olarak oynat';
       case 'video_auto_play_next_cancel':
         return 'İptal';
       case 'video_auto_play_next_countdown':
@@ -132851,8 +142393,6 @@ extension on _StringsTr {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -133142,18 +142682,316 @@ extension on _StringsTr {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Kayan altyazı metnini daha saydam yapmak için bunu azaltın';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Kayan altyazı denetim düğmelerinin ne kadar saydam olacağını ayarlayın';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Kayan altyazı çubuğunu daha saydam yapıp görüşünüzü daha az engellemesi için bunu azaltın';
+      case 'video_setting_auto_play_next_hint':
+        return 'Bir oynatma listesinde biri bittiğinde sonraki bölümü otomatik olarak oynat';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -133316,6 +143154,24 @@ extension on _StringsTr {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -134144,7 +144000,7 @@ extension on _StringsVi {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} ký tự';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} ký tự';
+        return ({required Object n}) => '${n}万 ký tự';
       case 'error_log_share_subject':
         return 'Nhật ký lỗi hibiki';
       case 'update_never_remind':
@@ -135460,8 +145316,6 @@ extension on _StringsVi {
         return 'Bật mục này cùng với khóa vị trí nếu bạn vẫn muốn tra từ.';
       case 'desktop_clipboard_window_mode':
         return 'Ghim cửa sổ';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return 'Luôn luôn';
       case 'desktop_clipboard_window_mode_lookup':
@@ -135730,7 +145584,7 @@ extension on _StringsVi {
       case 'video_immersive_mode_full':
         return 'Toàn bộ điều khiển';
       case 'video_immersive_mode_seek_lookup':
-        return 'Tua + tra từ';
+        return 'Phím tắt + tra từ';
       case 'video_immersive_mode_unlock_only':
         return 'Chỉ mở khóa';
       case 'custom_fonts_catalog_title':
@@ -135825,12 +145679,8 @@ extension on _StringsVi {
         return 'Dùng màu tùy chỉnh cho chữ lời thay vì theo chủ đề';
       case 'floating_lyric_text_opacity':
         return 'Độ mờ chữ phụ đề nổi';
-      case 'floating_lyric_text_opacity_hint':
-        return 'Giảm xuống để chữ phụ đề nổi trong suốt hơn';
       case 'floating_lyric_button_bg_opacity':
         return 'Độ mờ nền nút phụ đề nổi';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return 'Điều chỉnh mức trong suốt của nền các nút điều khiển phụ đề nổi';
       case 'video_control_customize_hint':
         return 'Chọn vị trí đặt mỗi nút trên trình phát, hoặc gỡ nó ra.';
       case 'video_control_slot_bottom_left':
@@ -136047,8 +145897,6 @@ extension on _StringsVi {
         return 'Khôi phục các nút đã di chuyển và gỡ bỏ về bố cục trình phát mặc định.';
       case 'floating_lyric_bg_opacity':
         return 'Độ mờ nền phụ đề nổi';
-      case 'floating_lyric_bg_opacity_hint':
-        return 'Giảm xuống để thanh phụ đề nổi trong suốt hơn, ít che tầm nhìn hơn';
       case 'dict_update_check':
         return 'Kiểm tra cập nhật';
       case 'dict_update_tooltip':
@@ -136097,8 +145945,6 @@ extension on _StringsVi {
         return ({required Object count}) => '${count} câu yêu thích';
       case 'video_setting_auto_play_next':
         return 'Tự phát tập tiếp theo';
-      case 'video_setting_auto_play_next_hint':
-        return 'Tự động phát tập tiếp theo trong danh sách phát khi một tập kết thúc';
       case 'video_auto_play_next_cancel':
         return 'Hủy';
       case 'video_auto_play_next_countdown':
@@ -136975,8 +146821,6 @@ extension on _StringsVi {
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
         return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -137266,18 +147110,316 @@ extension on _StringsVi {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Giảm xuống để chữ phụ đề nổi trong suốt hơn';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Điều chỉnh mức trong suốt của nền các nút điều khiển phụ đề nổi';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Giảm xuống để thanh phụ đề nổi trong suốt hơn, ít che tầm nhìn hơn';
+      case 'video_setting_auto_play_next_hint':
+        return 'Tự động phát tập tiếp theo trong danh sách phát khi một tập kết thúc';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -137440,6 +147582,24 @@ extension on _StringsVi {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -139567,8 +149727,6 @@ extension on _StringsZhCn {
         return '锁定悬浮字幕位置时仍可保留点击查词。';
       case 'desktop_clipboard_window_mode':
         return '窗口置顶策略';
-      case 'desktop_clipboard_window_mode_hint':
-        return '控制 Hibiki 是否保持在其他窗口上方';
       case 'desktop_clipboard_window_mode_always':
         return '始终置顶';
       case 'desktop_clipboard_window_mode_lookup':
@@ -139835,7 +149993,7 @@ extension on _StringsZhCn {
       case 'video_immersive_mode_full':
         return '全部功能';
       case 'video_immersive_mode_seek_lookup':
-        return '跳转 + 查词';
+        return '快捷键 + 查词';
       case 'video_immersive_mode_unlock_only':
         return '仅解锁';
       case 'custom_fonts_catalog_title':
@@ -139930,12 +150088,8 @@ extension on _StringsZhCn {
         return '歌词字幕用自定义颜色（不跟随主题）';
       case 'floating_lyric_text_opacity':
         return '悬浮字幕文字透明度';
-      case 'floating_lyric_text_opacity_hint':
-        return '调低让悬浮字幕文字更透明';
       case 'floating_lyric_button_bg_opacity':
         return '悬浮字幕按钮底色透明度';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return '调整悬浮字幕控制按钮底色的透明度';
       case 'video_control_customize_hint':
         return '为每个按钮选择在播放器上的位置，或将其移出。';
       case 'video_control_slot_bottom_left':
@@ -140147,8 +150301,6 @@ extension on _StringsZhCn {
         return '把移动和移出的按钮恢复为默认播放器布局。';
       case 'floating_lyric_bg_opacity':
         return '悬浮字幕背景不透明度';
-      case 'floating_lyric_bg_opacity_hint':
-        return '调低让悬浮字幕条更透明、更不挡视野';
       case 'dict_update_check':
         return '检查更新';
       case 'dict_update_tooltip':
@@ -140199,8 +150351,6 @@ extension on _StringsZhCn {
         return ({required Object seconds}) => '${seconds} 秒后播放下一集';
       case 'video_setting_auto_play_next':
         return '自动连播下一集';
-      case 'video_setting_auto_play_next_hint':
-        return '播放列表里一集播完后自动播放下一集';
       case 'video_auto_play_next_cancel':
         return '取消';
       case 'video_episode_list_empty':
@@ -141068,9 +151218,7 @@ extension on _StringsZhCn {
       case 'video_danmaku_manual_server_error':
         return '搜索失败，请稍后重试。';
       case 'desktop_clipboard_destination':
-        return '剪贴板查词显示位置';
-      case 'desktop_clipboard_destination_hint':
-        return '剪贴板查词结果显示在哪里';
+        return '查词弹窗位置';
       case 'desktop_clipboard_destination_main':
         return '主窗口';
       case 'desktop_clipboard_destination_panel':
@@ -141358,18 +151506,314 @@ extension on _StringsZhCn {
         return 'Hibiki 互联';
       case 'interconnect_summary':
         return '设备间直连同步与本机作为服务器';
-      case 'interconnect_inactive_note':
-        return 'Hibiki 互联未启用为同步方式';
-      case 'interconnect_inactive_note_hint':
-        return '在「同步与备份 → 同步方式」中选择 Hibiki 互联后，这里的配置才会生效';
       case 'interconnect_section_client':
         return '连接到其他设备';
-      case 'interconnect_moved_note':
-        return '互联连接与本机服务器设置在「Hibiki 互联」分类';
       case 'settings_search_hint':
         return '搜索设置';
       case 'settings_search_no_results':
         return '没有匹配的设置项';
+      case 'section_video_anime_download':
+        return '番剧下载（qBittorrent）';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI 地址';
+      case 'video_setting_qb_url_hint':
+        return '例如 http://127.0.0.1:8080，留空表示不启用番剧下载。';
+      case 'video_setting_qb_username':
+        return 'WebUI 用户名';
+      case 'video_setting_qb_password':
+        return 'WebUI 密码';
+      case 'video_setting_qb_category':
+        return 'qBittorrent 分类';
+      case 'video_setting_qb_category_hint':
+        return 'Hibiki 推送的下载会打上此分类，完成监听只关注该分类。';
+      case 'anime_download_title':
+        return '番剧下载';
+      case 'anime_download_qb_hint':
+        return '请先在 设置→视频 配置 qBittorrent';
+      case 'anime_download_search_hint':
+        return '番剧名';
+      case 'anime_download_search':
+        return '搜索';
+      case 'anime_download_no_results':
+        return '无结果';
+      case 'anime_download_category_all':
+        return '全部';
+      case 'anime_download_category_raw':
+        return '生肉';
+      case 'anime_download_category_english':
+        return '英译';
+      case 'anime_download_category_non_english':
+        return '非英译';
+      case 'anime_download_trusted_only':
+        return '仅 Trusted';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa 查询词';
+      case 'anime_download_subs_badge':
+        return '字幕';
+      case 'anime_download_no_subs':
+        return '无字幕';
+      case 'anime_download_batch':
+        return '合集';
+      case 'anime_download_include_subs':
+        return '附带字幕';
+      case 'anime_download_push':
+        return '推送下载';
+      case 'anime_download_pushed':
+        return '已推送，下载完成后自动入库';
+      case 'anime_download_push_failed':
+        return '推送到 qBittorrent 失败';
+      case 'anime_download_store_unavailable':
+        return '下载计划存储不可用';
+      case 'anime_download_tasks':
+        return '下载任务';
+      case 'anime_download_no_tasks':
+        return '暂无下载任务';
+      case 'anime_download_back':
+        return '返回';
+      case 'anime_download_refresh':
+        return '刷新';
+      case 'anime_download_delete':
+        return '删除';
+      case 'anime_download_play_now':
+        return '边下边播';
+      case 'anime_download_play_now_ok':
+        return '已入库，可从视频库打开边下边播';
+      case 'anime_download_play_now_fail':
+        return '暂不可提前入库（元数据未就绪或连接失败），稍后再试';
+      case 'interconnect_section_related':
+        return '远端内容与查词';
+      case 'desktop_clipboard_window_mode_hint':
+        return '控制 Hibiki 是否保持在其他窗口上方';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
+      case 'interconnect_enable':
+        return '启用互联';
+      case 'interconnect_enable_hint':
+        return '通过局域网连接你的其他设备。与云备份后端并存，互不冲突。';
+      case 'reading_activity':
+        return '阅读活动';
+      case 'video_watch_activity':
+        return '观看活动';
+      case 'book_mark_completed_action':
+        return '标记为已读完';
+      case 'book_mark_uncompleted_action':
+        return '取消已读完';
+      case 'book_marked_completed':
+        return '已标记为读完';
+      case 'book_marked_uncompleted':
+        return '已取消完成标记';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => '标签「${name}」已添加到合集。';
+      case 'tag_already_on_collection':
+        return ({required Object name}) => '标签「${name}」已在此合集上。';
+      case 'mining_image_quality':
+        return '图片 / GIF 清晰度';
+      case 'mining_image_quality_hint':
+        return '越高越清晰，卡片体积也越大。原片档保留源分辨率与帧率。';
+      case 'mining_image_quality_thrift':
+        return '省流';
+      case 'mining_image_quality_standard':
+        return '标准';
+      case 'mining_image_quality_hd':
+        return '高清';
+      case 'mining_image_quality_native':
+        return '原片';
+      case 'mining_audio_quality':
+        return '音频质量';
+      case 'mining_audio_quality_hint':
+        return '比特率越高越清晰，卡片体积也越大。';
+      case 'mining_audio_quality_standard':
+        return '标准';
+      case 'mining_audio_quality_high':
+        return '高音质';
+      case 'mining_audio_quality_native':
+        return '原片';
+      case 'video_setting_torrent_backend':
+        return '下载后端';
+      case 'video_setting_torrent_backend_qb':
+        return '外接 qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return '内置引擎（桌面）';
+      case 'video_setting_torrent_download_limit':
+        return '下载限速 (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return '上传限速 (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return '最大连接数';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = 不限';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = 引擎默认';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return '字幕延迟增大';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return '字幕延迟减小';
+      case 'shortcut_action_video_open_subtitle_align':
+        return '打开字幕波形对轴';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe 宋体 · 繁中字形优先 · 适合竖排阅读';
+      case 'custom_fonts_font_roles':
+        return '字体用途';
+      case 'video_clip_export_cancelled':
+        return '已取消片段导出';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return '上一句字幕对齐到当前时间';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return '下一句字幕对齐到当前时间';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return '循环副字幕遮蔽';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return '隐藏副字幕';
+      case 'video_setting_secondary_subtitle_obscure':
+        return '副字幕遮蔽';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return '模糊或隐藏副字幕（翻译参考轨）';
+      case 'games':
+        return '游戏';
+      case 'games_add':
+        return '添加游戏';
+      case 'games_empty':
+        return '还没有添加游戏';
+      case 'games_rename':
+        return '重命名';
+      case 'games_remove':
+        return '移除';
+      case 'games_launch_unsupported':
+        return '启动游戏仅支持 Windows 桌面';
+      case 'games_exe_missing':
+        return '找不到游戏可执行文件';
+      case 'nav_home':
+        return '首页';
+      case 'home_activity':
+        return '活动';
+      case 'home_continue':
+        return '继续';
+      case 'home_filter_all':
+        return '全部';
+      case 'home_filter_read':
+        return '阅读';
+      case 'home_filter_watch':
+        return '观看';
+      case 'home_filter_game':
+        return '游戏';
+      case 'home_filter_added':
+        return '导入';
+      case 'home_stat_library':
+        return '媒体库';
+      case 'home_stat_total_time':
+        return '总时长';
+      case 'home_stat_today':
+        return '今日';
+      case 'home_stat_this_week':
+        return '本周';
+      case 'home_stat_this_month':
+        return '本月';
+      case 'home_range_week':
+        return '周';
+      case 'home_range_month':
+        return '月';
+      case 'home_activity_empty':
+        return '暂无活动记录';
+      case 'home_today':
+        return '今天';
+      case 'home_yesterday':
+        return '昨天';
+      case 'activity_just_now':
+        return '刚刚';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} 分钟前';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} 小时前';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} 天前';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} 次';
+      case 'home_dashboard_title':
+        return '首页';
+      case 'clipboard_history_title':
+        return '复制历史';
+      case 'clipboard_history_clear':
+        return '清空';
+      case 'clipboard_history_empty':
+        return '暂无复制记录';
+      case 'video_setting_torrent_upload_enabled':
+        return '启用上传 / 做种';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return '默认关闭。下载完成后向网络回传做种。';
+      case 'video_setting_torrent_seed_time_limit':
+        return '做种时长上限（分钟）';
+      case 'video_setting_torrent_seed_time_hint':
+        return '做种超过此时长后停止上传。0 = 不限。';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return '做种分享率上限';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return '上传/下载比值达到此值后停止上传。0 = 不限。';
+      case 'torrent_upload_intro_title':
+        return '上传 / 做种';
+      case 'torrent_upload_intro_body':
+        return '上传（做种）默认关闭。开启后会把下载内容回传给网络，会占用你的上传带宽。可随时在「设置」里修改。';
+      case 'torrent_upload_intro_enable':
+        return '启用上传 / 做种';
+      case 'torrent_upload_intro_keep_off':
+        return '保持关闭';
+      case 'torrent_upload_intro_confirm':
+        return '保存';
+      case 'anime_download_generic_title':
+        return '粘贴链接下载（书、视频等）';
+      case 'anime_download_generic_hint':
+        return '磁力链接';
+      case 'anime_download_generic_download':
+        return '下载';
+      case 'anime_download_magnet_invalid':
+        return '磁力链接无效';
+      case 'anime_download_kind_auto':
+        return '自动';
+      case 'anime_download_kind_video':
+        return '视频';
+      case 'anime_download_kind_book':
+        return '书';
+      case 'nav_downloads':
+        return '下载';
+      case 'video_setting_torrent_memory_limit':
+        return '内存占用上限（MB）';
+      case 'video_setting_torrent_memory_hint':
+        return '限制引擎内存占用。0 = 自动（按设备内存推导）。';
+      case 'galgame_helper_needed_title':
+        return '需要下载 galgame 引擎组件';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            '启动 galgame 需要引擎-hook 注入器组件（约 ${size}）。它含进程注入代码，与主程序分离分发以避免杀软误报。现在下载吗？';
+      case 'galgame_helper_size_unknown':
+        return '大小未知';
+      case 'galgame_helper_download':
+        return '下载';
+      case 'galgame_helper_downloading':
+        return '正在下载引擎组件…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) => '引擎组件下载失败：${error}';
+      case 'galgame_helper_install_incomplete':
+        return '引擎组件安装不完整，请重试';
+      case 'download_settings':
+        return '下载设置';
+      case 'download_backend_not_configured':
+        return '请在下方「下载设置」里配置下载后端';
+      case 'floating_lyric_text_opacity_hint':
+        return '调低让悬浮字幕文字更透明';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return '调整悬浮字幕控制按钮底色的透明度';
+      case 'floating_lyric_bg_opacity_hint':
+        return '调低让悬浮字幕条更透明、更不挡视野';
+      case 'video_setting_auto_play_next_hint':
+        return '播放列表里一集播完后自动播放下一集';
+      case 'desktop_clipboard_destination_hint':
+        return '剪贴板查词结果显示在哪里';
+      case 'interconnect_inactive_note':
+        return 'Hibiki 互联未启用为同步方式';
+      case 'interconnect_inactive_note_hint':
+        return '在「同步与备份 → 同步方式」中选择 Hibiki 互联后，这里的配置才会生效';
+      case 'interconnect_moved_note':
+        return '互联连接与本机服务器设置在「Hibiki 互联」分类';
       case 'nav_game':
         return '游戏';
       case 'game_home_subtitle':
@@ -141532,6 +151976,24 @@ extension on _StringsZhCn {
         return '全部文本线程';
       case 'game_text_thread_hint':
         return '像 Luna Translator 一样选择干净的台词线程';
+      case 'game_show_hook_text_window':
+        return '显示 Hook 文本浮窗';
+      case 'game_hook_line_unavailable':
+        return '这条捕获台词已不可用，未使用其他台词替代。';
+      case 'game_card_sentence_audio_missing':
+        return '卡片已创建，但没有句子音频；未借用其他台词的音频。';
+      case 'game_card_mapping_missing':
+        return 'Anki 字段映射缺少游戏卡片字段';
+      case 'game_audio_backend_resource':
+        return '游戏资源音频';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -143660,8 +154122,6 @@ extension on _StringsZhHk {
         return '鎖定懸浮字幕位置時若仍想查詞，請保持開啟。';
       case 'desktop_clipboard_window_mode':
         return '視窗置頂策略';
-      case 'desktop_clipboard_window_mode_hint':
-        return 'Controls whether Hibiki stays above other windows';
       case 'desktop_clipboard_window_mode_always':
         return '永遠置頂';
       case 'desktop_clipboard_window_mode_lookup':
@@ -143928,7 +154388,7 @@ extension on _StringsZhHk {
       case 'video_immersive_mode_full':
         return '全部功能';
       case 'video_immersive_mode_seek_lookup':
-        return '跳轉＋查詞';
+        return '快捷鍵＋查詞';
       case 'video_immersive_mode_unlock_only':
         return '僅解鎖';
       case 'custom_fonts_catalog_title':
@@ -144023,12 +154483,8 @@ extension on _StringsZhHk {
         return '歌詞字幕使用自訂顏色（不跟隨主題）';
       case 'floating_lyric_text_opacity':
         return '懸浮字幕文字不透明度';
-      case 'floating_lyric_text_opacity_hint':
-        return '調低可讓懸浮字幕文字更透明';
       case 'floating_lyric_button_bg_opacity':
         return '懸浮字幕按鈕底色不透明度';
-      case 'floating_lyric_button_bg_opacity_hint':
-        return '調整懸浮字幕控制按鈕底色的透明度';
       case 'video_control_customize_hint':
         return '為每個按鈕選擇在播放器上的位置，或將其移出。';
       case 'video_control_slot_bottom_left':
@@ -144240,8 +154696,6 @@ extension on _StringsZhHk {
         return '把已移動及移出的按鈕還原為預設的播放器版面。';
       case 'floating_lyric_bg_opacity':
         return '懸浮字幕背景不透明度';
-      case 'floating_lyric_bg_opacity_hint':
-        return '調低可讓懸浮字幕條更透明、更少遮擋視野';
       case 'dict_update_check':
         return '檢查更新';
       case 'dict_update_tooltip':
@@ -144290,8 +154744,6 @@ extension on _StringsZhHk {
         return ({required Object count}) => '收藏 ${count} 句';
       case 'video_setting_auto_play_next':
         return '自動連播下一集';
-      case 'video_setting_auto_play_next_hint':
-        return '播放清單中一集播完後，自動播放下一集';
       case 'video_auto_play_next_cancel':
         return '取消';
       case 'video_auto_play_next_countdown':
@@ -145165,9 +155617,7 @@ extension on _StringsZhHk {
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
-        return 'Clipboard lookup destination';
-      case 'desktop_clipboard_destination_hint':
-        return 'Where clipboard lookups appear';
+        return '查詞彈窗位置';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -145456,18 +155906,316 @@ extension on _StringsZhHk {
         return 'Hibiki Interconnect';
       case 'interconnect_summary':
         return 'Direct device-to-device sync & host this device as a server';
-      case 'interconnect_inactive_note':
-        return 'Hibiki Interconnect is not the active sync method';
-      case 'interconnect_inactive_note_hint':
-        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
       case 'interconnect_section_client':
         return 'Connect to other devices';
-      case 'interconnect_moved_note':
-        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'settings_search_hint':
         return 'Search settings';
       case 'settings_search_no_results':
         return 'No matching settings';
+      case 'section_video_anime_download':
+        return 'Anime download (qBittorrent)';
+      case 'video_setting_qb_url':
+        return 'qBittorrent WebUI URL';
+      case 'video_setting_qb_url_hint':
+        return 'e.g. http://127.0.0.1:8080. Leave empty to disable anime downloading.';
+      case 'video_setting_qb_username':
+        return 'WebUI username';
+      case 'video_setting_qb_password':
+        return 'WebUI password';
+      case 'video_setting_qb_category':
+        return 'qBittorrent category';
+      case 'video_setting_qb_category_hint':
+        return 'Downloads pushed by Hibiki get this category; completion tracking only watches it.';
+      case 'anime_download_title':
+        return 'Anime download';
+      case 'anime_download_qb_hint':
+        return 'Configure qBittorrent in Settings → Video first';
+      case 'anime_download_search_hint':
+        return 'Anime title';
+      case 'anime_download_search':
+        return 'Search';
+      case 'anime_download_no_results':
+        return 'No results';
+      case 'anime_download_category_all':
+        return 'All';
+      case 'anime_download_category_raw':
+        return 'Raw';
+      case 'anime_download_category_english':
+        return 'English-translated';
+      case 'anime_download_category_non_english':
+        return 'Non-English';
+      case 'anime_download_trusted_only':
+        return 'Trusted only';
+      case 'anime_download_nyaa_query':
+        return 'Nyaa search terms';
+      case 'anime_download_subs_badge':
+        return 'Subs';
+      case 'anime_download_no_subs':
+        return 'No subs';
+      case 'anime_download_batch':
+        return 'Batch';
+      case 'anime_download_include_subs':
+        return 'Include subtitles';
+      case 'anime_download_push':
+        return 'Push download';
+      case 'anime_download_pushed':
+        return 'Pushed — it will be imported automatically once finished';
+      case 'anime_download_push_failed':
+        return 'Failed to push to qBittorrent';
+      case 'anime_download_store_unavailable':
+        return 'Download plan storage is unavailable';
+      case 'anime_download_tasks':
+        return 'Download tasks';
+      case 'anime_download_no_tasks':
+        return 'No download tasks yet';
+      case 'anime_download_back':
+        return 'Back';
+      case 'anime_download_refresh':
+        return 'Refresh';
+      case 'anime_download_delete':
+        return 'Delete';
+      case 'anime_download_play_now':
+        return 'Play while downloading';
+      case 'anime_download_play_now_ok':
+        return 'Imported — open it from the video library to play while downloading';
+      case 'anime_download_play_now_fail':
+        return 'Not ready yet (metadata pending or connection failed) — try again later';
+      case 'interconnect_section_related':
+        return 'Remote content & lookup';
+      case 'desktop_clipboard_window_mode_hint':
+        return 'Controls whether Hibiki stays above other windows';
+      case 'browser_extension_yomitan_port_conflict':
+        return ({required Object port}) =>
+            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      case 'interconnect_enable':
+        return 'Enable interconnect';
+      case 'interconnect_enable_hint':
+        return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
+      case 'reading_activity':
+        return 'Reading activity';
+      case 'video_watch_activity':
+        return 'Watch activity';
+      case 'book_mark_completed_action':
+        return 'Mark as completed';
+      case 'book_mark_uncompleted_action':
+        return 'Mark as not completed';
+      case 'book_marked_completed':
+        return 'Marked as completed';
+      case 'book_marked_uncompleted':
+        return 'Marked as not completed';
+      case 'tag_added_to_collection':
+        return ({required Object name}) => 'Tag ${name} added to collection.';
+      case 'tag_already_on_collection':
+        return ({required Object name}) =>
+            'Tag ${name} is already on this collection.';
+      case 'mining_image_quality':
+        return 'Image / GIF quality';
+      case 'mining_image_quality_hint':
+        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      case 'mining_image_quality_thrift':
+        return 'Data saver';
+      case 'mining_image_quality_standard':
+        return 'Standard';
+      case 'mining_image_quality_hd':
+        return 'HD';
+      case 'mining_image_quality_native':
+        return 'Native';
+      case 'mining_audio_quality':
+        return 'Audio quality';
+      case 'mining_audio_quality_hint':
+        return 'Higher bitrate is clearer but makes larger cards.';
+      case 'mining_audio_quality_standard':
+        return 'Standard';
+      case 'mining_audio_quality_high':
+        return 'High';
+      case 'mining_audio_quality_native':
+        return 'Native';
+      case 'video_setting_torrent_backend':
+        return 'Download backend';
+      case 'video_setting_torrent_backend_qb':
+        return 'External qBittorrent';
+      case 'video_setting_torrent_backend_embedded':
+        return 'Built-in engine (desktop)';
+      case 'video_setting_torrent_download_limit':
+        return 'Download limit (KB/s)';
+      case 'video_setting_torrent_upload_limit':
+        return 'Upload limit (KB/s)';
+      case 'video_setting_torrent_max_connections':
+        return 'Max connections';
+      case 'video_setting_torrent_limit_hint':
+        return '0 = unlimited';
+      case 'video_setting_torrent_connections_hint':
+        return '0 = engine default';
+      case 'shortcut_action_video_subtitle_delay_increase':
+        return 'Subtitle delay +';
+      case 'shortcut_action_video_subtitle_delay_decrease':
+        return 'Subtitle delay −';
+      case 'shortcut_action_video_open_subtitle_align':
+        return 'Open subtitle waveform align';
+      case 'font_desc_noto_serif_tc':
+        return 'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
+      case 'custom_fonts_font_roles':
+        return 'Font roles';
+      case 'video_clip_export_cancelled':
+        return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return '調低可讓懸浮字幕文字更透明';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return '調整懸浮字幕控制按鈕底色的透明度';
+      case 'floating_lyric_bg_opacity_hint':
+        return '調低可讓懸浮字幕條更透明、更少遮擋視野';
+      case 'video_setting_auto_play_next_hint':
+        return '播放清單中一集播完後，自動播放下一集';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
       case 'nav_game':
         return 'Game';
       case 'game_home_subtitle':
@@ -145630,6 +156378,24 @@ extension on _StringsZhHk {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
