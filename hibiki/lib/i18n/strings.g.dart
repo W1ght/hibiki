@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36856 (2168 per locale)
+/// Strings: 37247 (2191 per locale)
 ///
-/// Built on 2026-07-21 at 04:20 UTC
+/// Built on 2026-07-21 at 04:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2892,6 +2892,30 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get home_remote_source => 'Remote';
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  String get video_setting_torrent_section_session => 'Session';
+  String get video_setting_torrent_listen_port => 'Listen port';
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  String get video_setting_torrent_dht => 'DHT';
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  String get video_setting_torrent_encryption_forced => 'Force';
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  String get video_setting_torrent_zero_default => '0 = default';
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  String get video_setting_torrent_zero_off => '0 = off';
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 // Path: <root>
@@ -7798,6 +7822,53 @@ class _StringsAr extends _StringsEn {
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   @override
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 // Path: <root>
@@ -12777,6 +12848,53 @@ class _StringsDe extends _StringsEn {
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   @override
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 // Path: <root>
@@ -17772,6 +17890,53 @@ class _StringsEs extends _StringsEn {
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   @override
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 // Path: <root>
@@ -22778,6 +22943,53 @@ class _StringsFr extends _StringsEn {
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   @override
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 // Path: <root>
@@ -27711,6 +27923,53 @@ class _StringsId extends _StringsEn {
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   @override
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 // Path: <root>
@@ -32692,6 +32951,53 @@ class _StringsIt extends _StringsEn {
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   @override
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 // Path: <root>
@@ -37478,6 +37784,53 @@ class _StringsJa extends _StringsEn {
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   @override
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 // Path: <root>
@@ -42267,6 +42620,53 @@ class _StringsKo extends _StringsEn {
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   @override
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 // Path: <root>
@@ -47226,6 +47626,53 @@ class _StringsNl extends _StringsEn {
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   @override
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 // Path: <root>
@@ -52200,6 +52647,53 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   @override
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 // Path: <root>
@@ -57157,6 +57651,53 @@ class _StringsRu extends _StringsEn {
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   @override
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 // Path: <root>
@@ -62059,6 +62600,53 @@ class _StringsTh extends _StringsEn {
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   @override
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 // Path: <root>
@@ -66993,6 +67581,53 @@ class _StringsTr extends _StringsEn {
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   @override
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 // Path: <root>
@@ -71914,6 +72549,53 @@ class _StringsVi extends _StringsEn {
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   @override
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 // Path: <root>
@@ -76491,6 +77173,52 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_press_gamepad => '按下手柄按钮…';
   @override
   String get shortcut_gamepad_pick_list => '从列表选择';
+  @override
+  String get video_setting_torrent_section_session => '会话设置';
+  @override
+  String get video_setting_torrent_listen_port => '监听端口';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = 默认（6881）';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => '本地节点发现 (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP 端口映射';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP 端口映射';
+  @override
+  String get video_setting_torrent_anonymous => '匿名模式';
+  @override
+  String get video_setting_torrent_encryption_prefer => '首选';
+  @override
+  String get video_setting_torrent_encryption_forced => '强制';
+  @override
+  String get video_setting_torrent_encryption_disabled => '禁用';
+  @override
+  String get video_setting_torrent_active_downloads => '最大活跃下载数';
+  @override
+  String get video_setting_torrent_active_seeds => '最大活跃做种数';
+  @override
+  String get video_setting_torrent_upload_slots => '最大上传槽位';
+  @override
+  String get video_setting_torrent_zero_default => '0 = 默认';
+  @override
+  String get video_setting_torrent_section_antileech => '反吸血';
+  @override
+  String get video_setting_torrent_antileech => '启用反吸血';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => '封禁进度作弊';
+  @override
+  String get video_setting_torrent_ban_relative_cheat => '封禁相对进度作弊';
+  @override
+  String get video_setting_torrent_max_ip_ports => '同 IP 最大端口数';
+  @override
+  String get video_setting_torrent_zero_off => '0 = 关闭';
+  @override
+  String get video_setting_torrent_ban_time => '封禁时长（分钟）';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = 永久';
 }
 
 // Path: <root>
@@ -81196,6 +81924,53 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_press_gamepad => 'Press a gamepad button...';
   @override
   String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
 }
 
 /// Flat map(s) containing all translations.
@@ -85624,6 +86399,52 @@ extension on _StringsEn {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
@@ -90050,6 +90871,52 @@ extension on _StringsAr {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
@@ -94497,6 +95364,52 @@ extension on _StringsDe {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
@@ -98943,6 +99856,52 @@ extension on _StringsEs {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
@@ -103395,6 +104354,52 @@ extension on _StringsFr {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
@@ -107829,6 +108834,52 @@ extension on _StringsId {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
@@ -112278,6 +113329,52 @@ extension on _StringsIt {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
@@ -116689,6 +117786,52 @@ extension on _StringsJa {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
@@ -121104,6 +122247,52 @@ extension on _StringsKo {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
@@ -125546,6 +126735,52 @@ extension on _StringsNl {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
@@ -129985,6 +131220,52 @@ extension on _StringsPtBr {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
@@ -134429,6 +135710,52 @@ extension on _StringsRu {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
@@ -138857,6 +140184,52 @@ extension on _StringsTh {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
@@ -143294,6 +144667,52 @@ extension on _StringsTr {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
@@ -147726,6 +149145,52 @@ extension on _StringsVi {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
@@ -152124,6 +153589,52 @@ extension on _StringsZhCn {
         return '按下手柄按钮…';
       case 'shortcut_gamepad_pick_list':
         return '从列表选择';
+      case 'video_setting_torrent_section_session':
+        return '会话设置';
+      case 'video_setting_torrent_listen_port':
+        return '监听端口';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = 默认（6881）';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return '本地节点发现 (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP 端口映射';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP 端口映射';
+      case 'video_setting_torrent_anonymous':
+        return '匿名模式';
+      case 'video_setting_torrent_encryption_prefer':
+        return '首选';
+      case 'video_setting_torrent_encryption_forced':
+        return '强制';
+      case 'video_setting_torrent_encryption_disabled':
+        return '禁用';
+      case 'video_setting_torrent_active_downloads':
+        return '最大活跃下载数';
+      case 'video_setting_torrent_active_seeds':
+        return '最大活跃做种数';
+      case 'video_setting_torrent_upload_slots':
+        return '最大上传槽位';
+      case 'video_setting_torrent_zero_default':
+        return '0 = 默认';
+      case 'video_setting_torrent_section_antileech':
+        return '反吸血';
+      case 'video_setting_torrent_antileech':
+        return '启用反吸血';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return '封禁进度作弊';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return '封禁相对进度作弊';
+      case 'video_setting_torrent_max_ip_ports':
+        return '同 IP 最大端口数';
+      case 'video_setting_torrent_zero_off':
+        return '0 = 关闭';
+      case 'video_setting_torrent_ban_time':
+        return '封禁时长（分钟）';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = 永久';
       default:
         return null;
     }
@@ -156530,6 +158041,52 @@ extension on _StringsZhHk {
         return 'Press a gamepad button...';
       case 'shortcut_gamepad_pick_list':
         return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
       default:
         return null;
     }
