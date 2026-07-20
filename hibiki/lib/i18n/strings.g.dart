@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36822 (2166 per locale)
+/// Strings: 36839 (2167 per locale)
 ///
-/// Built on 2026-07-20 at 17:44 UTC
+/// Built on 2026-07-20 at 19:24 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2890,6 +2890,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_audio_fallback_disabled_missing =>
       'No matching game resource audio; fallback is disabled';
   String get game_audio_resource_id => 'Audio resource ID';
+  String get home_remote_source => 'Remote';
 }
 
 // Path: <root>
@@ -7792,6 +7793,8 @@ class _StringsAr extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
 }
 
 // Path: <root>
@@ -12767,6 +12770,8 @@ class _StringsDe extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
 }
 
 // Path: <root>
@@ -17758,6 +17763,8 @@ class _StringsEs extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
 }
 
 // Path: <root>
@@ -22760,6 +22767,8 @@ class _StringsFr extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
 }
 
 // Path: <root>
@@ -27689,6 +27698,8 @@ class _StringsId extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
 }
 
 // Path: <root>
@@ -32666,6 +32677,8 @@ class _StringsIt extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
 }
 
 // Path: <root>
@@ -37448,6 +37461,8 @@ class _StringsJa extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
 }
 
 // Path: <root>
@@ -42233,6 +42248,8 @@ class _StringsKo extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
 }
 
 // Path: <root>
@@ -47188,6 +47205,8 @@ class _StringsNl extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
 }
 
 // Path: <root>
@@ -52158,6 +52177,8 @@ class _StringsPtBr extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
 }
 
 // Path: <root>
@@ -57111,6 +57132,8 @@ class _StringsRu extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
 }
 
 // Path: <root>
@@ -62009,6 +62032,8 @@ class _StringsTh extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
 }
 
 // Path: <root>
@@ -66939,6 +66964,8 @@ class _StringsTr extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
 }
 
 // Path: <root>
@@ -71856,6 +71883,8 @@ class _StringsVi extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
 }
 
 // Path: <root>
@@ -76429,6 +76458,8 @@ class _StringsZhCn extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => '远端';
 }
 
 // Path: <root>
@@ -81130,6 +81161,8 @@ class _StringsZhHk extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
 }
 
 /// Flat map(s) containing all translations.
@@ -85554,6 +85587,8 @@ extension on _StringsEn {
         return 'No matching game resource audio; fallback is disabled';
       case 'game_audio_resource_id':
         return 'Audio resource ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
@@ -89976,6 +90011,8 @@ extension on _StringsAr {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
@@ -94419,6 +94456,8 @@ extension on _StringsDe {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
@@ -98861,6 +98900,8 @@ extension on _StringsEs {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
@@ -103309,6 +103350,8 @@ extension on _StringsFr {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
@@ -107739,6 +107782,8 @@ extension on _StringsId {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
@@ -112184,6 +112229,8 @@ extension on _StringsIt {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
@@ -116591,6 +116638,8 @@ extension on _StringsJa {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
@@ -121002,6 +121051,8 @@ extension on _StringsKo {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
@@ -125440,6 +125491,8 @@ extension on _StringsNl {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
@@ -129875,6 +129928,8 @@ extension on _StringsPtBr {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
@@ -134315,6 +134370,8 @@ extension on _StringsRu {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
@@ -138739,6 +138796,8 @@ extension on _StringsTh {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
@@ -143172,6 +143231,8 @@ extension on _StringsTr {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
@@ -147600,6 +147661,8 @@ extension on _StringsVi {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
@@ -151994,6 +152057,8 @@ extension on _StringsZhCn {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return '远端';
       default:
         return null;
     }
@@ -156396,6 +156461,8 @@ extension on _StringsZhHk {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
       default:
         return null;
     }
