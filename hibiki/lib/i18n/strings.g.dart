@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35122 (2066 per locale)
+/// Strings: 35156 (2068 per locale)
 ///
-/// Built on 2026-07-20 at 15:43 UTC
+/// Built on 2026-07-20 at 17:02 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2770,6 +2770,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Engine component download failed: ${error}';
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  String get download_settings => 'Download settings';
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 // Path: <root>
@@ -7452,6 +7455,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 // Path: <root>
@@ -12207,6 +12215,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 // Path: <root>
@@ -16978,6 +16991,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 // Path: <root>
@@ -21760,6 +21778,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 // Path: <root>
@@ -26469,6 +26492,11 @@ class _StringsId extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 // Path: <root>
@@ -31226,6 +31254,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 // Path: <root>
@@ -35789,6 +35822,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 // Path: <root>
@@ -40355,6 +40393,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 // Path: <root>
@@ -45090,6 +45133,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 // Path: <root>
@@ -49840,6 +49888,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 // Path: <root>
@@ -54573,6 +54626,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 // Path: <root>
@@ -59251,6 +59309,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 // Path: <root>
@@ -63961,6 +64024,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 // Path: <root>
@@ -68658,6 +68726,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 // Path: <root>
@@ -73029,6 +73102,10 @@ class _StringsZhCn extends _StringsEn {
       '引擎组件下载失败：${error}';
   @override
   String get galgame_helper_install_incomplete => '引擎组件安装不完整，请重试';
+  @override
+  String get download_settings => '下载设置';
+  @override
+  String get download_backend_not_configured => '请在下方「下载设置」里配置下载后端';
 }
 
 // Path: <root>
@@ -77514,6 +77591,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
 }
 
 /// Flat map(s) containing all translations.
@@ -81738,6 +81820,10 @@ extension on _StringsEn {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
@@ -85960,6 +86046,10 @@ extension on _StringsAr {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
@@ -90203,6 +90293,10 @@ extension on _StringsDe {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
@@ -94445,6 +94539,10 @@ extension on _StringsEs {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
@@ -98693,6 +98791,10 @@ extension on _StringsFr {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
@@ -102923,6 +103025,10 @@ extension on _StringsId {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
@@ -107168,6 +107274,10 @@ extension on _StringsIt {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
@@ -111375,6 +111485,10 @@ extension on _StringsJa {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
@@ -115586,6 +115700,10 @@ extension on _StringsKo {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
@@ -119824,6 +119942,10 @@ extension on _StringsNl {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
@@ -124059,6 +124181,10 @@ extension on _StringsPtBr {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
@@ -128299,6 +128425,10 @@ extension on _StringsRu {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
@@ -132523,6 +132653,10 @@ extension on _StringsTh {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
@@ -136756,6 +136890,10 @@ extension on _StringsTr {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
@@ -140984,6 +141122,10 @@ extension on _StringsVi {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
@@ -145178,6 +145320,10 @@ extension on _StringsZhCn {
         return ({required Object error}) => '引擎组件下载失败：${error}';
       case 'galgame_helper_install_incomplete':
         return '引擎组件安装不完整，请重试';
+      case 'download_settings':
+        return '下载设置';
+      case 'download_backend_not_configured':
+        return '请在下方「下载设置」里配置下载后端';
       default:
         return null;
     }
@@ -149380,6 +149526,10 @@ extension on _StringsZhHk {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       default:
         return null;
     }
