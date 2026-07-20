@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 36856 (2168 per locale)
 ///
-/// Built on 2026-07-20 at 20:55 UTC
+/// Built on 2026-07-21 at 04:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2771,7 +2771,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Engine component install incomplete, please retry';
   String get download_settings => 'Download settings';
   String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
+      'Configure the download backend first (settings, top-right).';
   String get floating_lyric_text_opacity_hint =>
       'Lower this to make the floating subtitle text more transparent';
   String get floating_lyric_button_bg_opacity_hint =>
@@ -76286,7 +76286,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_settings => '下载设置';
   @override
-  String get download_backend_not_configured => '请在下方「下载设置」里配置下载后端';
+  String get download_backend_not_configured => '请先配置下载后端（右上角设置）';
   @override
   String get floating_lyric_text_opacity_hint => '调低让悬浮字幕文字更透明';
   @override
@@ -85421,7 +85421,7 @@ extension on _StringsEn {
       case 'download_settings':
         return 'Download settings';
       case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
+        return 'Configure the download backend first (settings, top-right).';
       case 'floating_lyric_text_opacity_hint':
         return 'Lower this to make the floating subtitle text more transparent';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -151921,7 +151921,7 @@ extension on _StringsZhCn {
       case 'download_settings':
         return '下载设置';
       case 'download_backend_not_configured':
-        return '请在下方「下载设置」里配置下载后端';
+        return '请先配置下载后端（右上角设置）';
       case 'floating_lyric_text_opacity_hint':
         return '调低让悬浮字幕文字更透明';
       case 'floating_lyric_button_bg_opacity_hint':
