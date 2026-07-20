@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 34340 (2020 per locale)
+/// Strings: 34425 (2025 per locale)
 ///
-/// Built on 2026-07-20 at 12:50 UTC
+/// Built on 2026-07-20 at 14:53 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2707,6 +2707,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The card was created without sentence audio; no other line\'s audio was substituted.';
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  String get game_audio_backend_resource => 'Game resource audio';
+  String get game_audio_fallback_allow => 'Allow audio fallback';
+  String get game_audio_fallback_resource_only => 'Game resource audio only';
+  String get game_audio_fallback_disabled_missing =>
+      'No matching game resource audio; fallback is disabled';
+  String get game_audio_resource_id => 'Audio resource ID';
 }
 
 // Path: <root>
@@ -7280,6 +7286,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -11926,6 +11943,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -16588,6 +16616,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -21261,6 +21300,17 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -25861,6 +25911,17 @@ class _StringsId extends _StringsEn {
   @override
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -30509,6 +30570,17 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -34962,6 +35034,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -39418,6 +39501,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -44044,6 +44138,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -48685,6 +48790,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -53309,6 +53425,17 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -57878,6 +58005,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -62479,6 +62617,17 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -67067,6 +67216,17 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -71338,6 +71498,17 @@ class _StringsZhCn extends _StringsEn {
   String get game_card_sentence_audio_missing => '卡片已创建，但没有句子音频；未借用其他台词的音频。';
   @override
   String get game_card_mapping_missing => 'Anki 字段映射缺少游戏卡片字段';
+  @override
+  String get game_audio_backend_resource => '游戏资源音频';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -75710,6 +75881,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_card_mapping_missing =>
       'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 /// Flat map(s) containing all translations.
@@ -79838,6 +80020,16 @@ extension on _StringsEn {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return 'Allow audio fallback';
+      case 'game_audio_fallback_resource_only':
+        return 'Game resource audio only';
+      case 'game_audio_fallback_disabled_missing':
+        return 'No matching game resource audio; fallback is disabled';
+      case 'game_audio_resource_id':
+        return 'Audio resource ID';
       default:
         return null;
     }
@@ -83964,6 +84156,16 @@ extension on _StringsAr {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -88111,6 +88313,16 @@ extension on _StringsDe {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -92257,6 +92469,16 @@ extension on _StringsEs {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -96409,6 +96631,16 @@ extension on _StringsFr {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -100543,6 +100775,16 @@ extension on _StringsId {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -104692,6 +104934,16 @@ extension on _StringsIt {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -108803,6 +109055,16 @@ extension on _StringsJa {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -112918,6 +113180,16 @@ extension on _StringsKo {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -117060,6 +117332,16 @@ extension on _StringsNl {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -121199,6 +121481,16 @@ extension on _StringsPtBr {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -125343,6 +125635,16 @@ extension on _StringsRu {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -129471,6 +129773,16 @@ extension on _StringsTh {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -133608,6 +133920,16 @@ extension on _StringsTr {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -137740,6 +138062,16 @@ extension on _StringsVi {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -141840,6 +142172,16 @@ extension on _StringsZhCn {
         return '卡片已创建，但没有句子音频；未借用其他台词的音频。';
       case 'game_card_mapping_missing':
         return 'Anki 字段映射缺少游戏卡片字段';
+      case 'game_audio_backend_resource':
+        return '游戏资源音频';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -145946,6 +146288,16 @@ extension on _StringsZhHk {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_card_mapping_missing':
         return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
