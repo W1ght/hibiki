@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 33966 (1998 per locale)
+/// Strings: 36822 (2166 per locale)
 ///
-/// Built on 2026-07-19 at 06:22 UTC
+/// Built on 2026-07-20 at 17:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -676,7 +676,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String stat_format_hours_minutes({required Object h, required Object m}) =>
       '${h} hr ${m} min';
   String stat_format_chars({required Object n}) => '${n} characters';
-  String stat_format_chars_wan({required Object n}) => '${n} characters';
+  String stat_format_chars_wan({required Object n}) => '${n}万 characters';
   String get error_log_share_subject => 'hibiki Error Log';
   String get update_never_remind => 'Don\'t remind me about updates';
   String get update_auto_install => 'Auto-install updates';
@@ -1603,7 +1603,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Controls what remains available after pressing the side lock button';
   String get video_immersive_mode_lookup_only => 'Lookup only';
   String get video_immersive_mode_full => 'Full controls';
-  String get video_immersive_mode_seek_lookup => 'Seek + lookup';
+  String get video_immersive_mode_seek_lookup => 'Shortcut + lookup';
   String get video_immersive_mode_unlock_only => 'Unlock only';
   String get custom_fonts_catalog_title => 'Font library';
   String get startup_default_dictionary_tab => 'Open lookup on startup';
@@ -2405,7 +2405,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Network error. Check your connection and try again.';
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
-  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  String get desktop_clipboard_destination => 'Lookup popup position';
   String get desktop_clipboard_destination_main => 'Main window';
   String get desktop_clipboard_destination_panel => 'Floating panel';
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
@@ -2685,6 +2685,211 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   String get custom_fonts_font_roles => 'Font roles';
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  String get games => 'Games';
+  String get games_add => 'Add game';
+  String get games_empty => 'No games added yet';
+  String get games_rename => 'Rename';
+  String get games_remove => 'Remove';
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  String get games_exe_missing => 'Game executable not found';
+  String get nav_home => 'Home';
+  String get home_activity => 'Activity';
+  String get home_continue => 'Continue';
+  String get home_filter_all => 'All';
+  String get home_filter_read => 'Read';
+  String get home_filter_watch => 'Watch';
+  String get home_filter_game => 'Game';
+  String get home_filter_added => 'Added';
+  String get home_stat_library => 'Library';
+  String get home_stat_total_time => 'Total Time';
+  String get home_stat_today => 'Today';
+  String get home_stat_this_week => 'This Week';
+  String get home_stat_this_month => 'This Month';
+  String get home_range_week => 'Week';
+  String get home_range_month => 'Month';
+  String get home_activity_empty => 'No activity yet';
+  String get home_today => 'Today';
+  String get home_yesterday => 'Yesterday';
+  String get activity_just_now => 'Just now';
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  String home_session_count({required Object n}) => '${n} sessions';
+  String get home_dashboard_title => 'Home';
+  String get clipboard_history_title => 'Clipboard history';
+  String get clipboard_history_clear => 'Clear';
+  String get clipboard_history_empty => 'No copy history yet';
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  String get torrent_upload_intro_confirm => 'Save';
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  String get anime_download_generic_hint => 'Magnet link';
+  String get anime_download_generic_download => 'Download';
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  String get anime_download_kind_auto => 'Auto';
+  String get anime_download_kind_video => 'Video';
+  String get anime_download_kind_book => 'Book';
+  String get nav_downloads => 'Downloads';
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  String get galgame_helper_size_unknown => 'unknown size';
+  String get galgame_helper_download => 'Download';
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  String get download_settings => 'Download settings';
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  String get floating_lyric_text_opacity_hint =>
+      'Lower this to make the floating subtitle text more transparent';
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Adjust how transparent the floating subtitle control buttons are';
+  String get floating_lyric_bg_opacity_hint =>
+      'Lower this to make the floating subtitle bar more transparent so it blocks less of your view';
+  String get video_setting_auto_play_next_hint =>
+      'Automatically play the next episode in a playlist when one finishes';
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  String get nav_game => 'Game';
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  String get game_library => 'Game library';
+  String get game_capture_workbench => 'Capture workspace';
+  String get game_capture_ready => 'Capture tools ready';
+  String get game_capture_active => 'Capture is active';
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  String get game_captured_lines => 'Captured lines';
+  String get game_waiting_for_text => 'Waiting for text';
+  String get game_library_empty_title => 'No games added yet';
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  String get game_open_capture_workspace => 'Open capture workspace';
+  String get game_back_to_library => 'Back to game library';
+  String get game_launch_and_capture => 'Launch and capture';
+  String get game_capture_launching => 'Launching game and starting capture...';
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  String get game_capture_running => 'Capture session is running';
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  String get game_text_source_engine => 'Engine hook';
+  String get game_text_source_websocket => 'WebSocket';
+  String get game_text_source_unknown => 'Unknown source';
+  String get game_line_audio_pending => 'Matching';
+  String get game_line_audio_matched => 'Audio ready';
+  String get game_line_audio_encoded => 'Encoded';
+  String get game_line_audio_fallback => 'Fallback';
+  String get game_line_audio_missing => 'No audio';
+  String get game_line_audio_unavailable => 'Text only';
+  String get game_live_lines => 'Live lines';
+  String get game_follow_live => 'Follow live';
+  String get game_unread_lines => 'Unread';
+  String get game_session_overview => 'Session overview';
+  String get game_session_idle => 'Capture has not started';
+  String get game_session_listening => 'Listening';
+  String get game_stop_listening => 'Stop listeners';
+  String get game_health => 'Health status';
+  String get game_health_process => 'Game process';
+  String get game_health_window => 'Game window';
+  String get game_health_text => 'Text source';
+  String get game_health_audio => 'Audio source';
+  String get game_health_helper => 'Hook helper';
+  String get game_health_anki => 'Anki output';
+  String get game_status_ready => 'Ready';
+  String get game_status_waiting => 'Waiting';
+  String get game_status_unavailable => 'Unavailable';
+  String get game_status_not_configured => 'Not verified';
+  String get game_audio_backend_none => 'No audio source';
+  String get game_audio_backend_paired => 'Original voice OGG';
+  String get game_audio_backend_engine => 'Engine PCM';
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  String get game_open_diagnostics => 'Open diagnostics';
+  String get game_capture_empty_title => 'No lines received yet';
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  String get game_window_bound => 'Bound';
+  String get game_window_missing => 'Not bound';
+  String get game_text_endpoints => 'Text endpoints';
+  String get game_text_gaps => 'Sequence gaps';
+  String get game_audio_format => 'Audio format';
+  String get game_diagnostics => 'Compatibility diagnostics';
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  String get game_back_to_capture => 'Back to capture workspace';
+  String get game_clear_events => 'Clear events';
+  String get game_pipeline => 'Session pipeline';
+  String get game_metrics => 'Live metrics';
+  String get game_audio_tracks => 'Active audio tracks';
+  String get game_refresh_tracks => 'Refresh tracks';
+  String get game_track_auto => 'Automatic selection';
+  String get game_track_voice => 'Voice';
+  String get game_track_bgm => 'BGM / excluded';
+  String get game_track_select_as_voice => 'Use as voice track';
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  String get game_track_restore => 'Restore track';
+  String get game_no_tracks => 'No audio-track data yet';
+  String get game_no_events => 'No session events yet';
+  String get game_event_all => 'All events';
+  String get game_event_warnings => 'Warnings and errors';
+  String get game_session_events => 'Session events';
+  String get game_latest_line => 'Latest line';
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  String get game_text_thread => 'Text thread';
+  String get game_text_thread_all => 'All text threads';
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  String get game_show_hook_text_window => 'Show Hook text window';
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  String get game_audio_backend_resource => 'Game resource audio';
+  String get game_audio_fallback_allow => 'Allow audio fallback';
+  String get game_audio_fallback_resource_only => 'Game resource audio only';
+  String get game_audio_fallback_disabled_missing =>
+      'No matching game resource audio; fallback is disabled';
+  String get game_audio_resource_id => 'Audio resource ID';
 }
 
 // Path: <root>
@@ -3575,7 +3780,7 @@ class _StringsAr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} حرف';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} حرف';
+  String stat_format_chars_wan({required Object n}) => '${n}万 حرف';
   @override
   String get error_log_share_subject => 'سجل أخطاء hibiki';
   @override
@@ -5315,7 +5520,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'كامل عناصر التحكم';
   @override
-  String get video_immersive_mode_seek_lookup => 'الانتقال + البحث';
+  String get video_immersive_mode_seek_lookup => 'اختصار + بحث';
   @override
   String get video_immersive_mode_unlock_only => 'إلغاء القفل فقط';
   @override
@@ -7214,6 +7419,379 @@ class _StringsAr extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'اخفض هذا لجعل نص الترجمة العائمة أكثر شفافية';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'اضبط مدى شفافية خلفية أزرار التحكم في الترجمة العائمة';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'اخفض هذا لجعل شريط الترجمة العائمة أكثر شفافية فيحجب رؤيتك أقل';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'تشغيل الحلقة التالية في قائمة التشغيل تلقائيًا عند انتهاء واحدة';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -8122,7 +8700,7 @@ class _StringsDe extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} Zeichen';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} Zeichen';
+  String stat_format_chars_wan({required Object n}) => '${n}万 Zeichen';
   @override
   String get error_log_share_subject => 'hibiki Fehlerprotokoll';
   @override
@@ -9900,7 +10478,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Alle Bedienelemente';
   @override
-  String get video_immersive_mode_seek_lookup => 'Spulen + Nachschlagen';
+  String get video_immersive_mode_seek_lookup => 'Tastenkürzel + Nachschlagen';
   @override
   String get video_immersive_mode_unlock_only => 'Nur Entsperren';
   @override
@@ -11816,6 +12394,379 @@ class _StringsDe extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Verringern, um den schwebenden Untertiteltext transparenter zu machen';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Stellt ein, wie transparent die Hintergründe der schwebenden Untertitel-Bedienknöpfe sind';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Verringern, um die schwebende Untertitelleiste transparenter zu machen, damit sie weniger Sicht verdeckt';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Spielt nach dem Ende einer Folge automatisch die nächste Folge der Playlist ab';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -12730,7 +13681,7 @@ class _StringsEs extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caracteres';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} caracteres';
+  String stat_format_chars_wan({required Object n}) => '${n}万 caracteres';
   @override
   String get error_log_share_subject => 'Registro de errores de hibiki';
   @override
@@ -14518,7 +15469,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Todos los controles';
   @override
-  String get video_immersive_mode_seek_lookup => 'Saltar + consultar';
+  String get video_immersive_mode_seek_lookup => 'Atajo + consulta';
   @override
   String get video_immersive_mode_unlock_only => 'Solo desbloquear';
   @override
@@ -16434,6 +17385,379 @@ class _StringsEs extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Bájala para que el texto del subtítulo flotante sea más transparente';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Ajusta la transparencia del fondo de los botones de control del subtítulo flotante';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Bájala para que la barra de subtítulo flotante sea más transparente y tape menos la vista';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Reproduce automáticamente el siguiente episodio de una lista cuando termina uno';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -17352,7 +18676,7 @@ class _StringsFr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caractères';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} caractères';
+  String stat_format_chars_wan({required Object n}) => '${n}万 caractères';
   @override
   String get error_log_share_subject => 'Journal d\'erreurs hibiki';
   @override
@@ -19147,7 +20471,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Tous les contrôles';
   @override
-  String get video_immersive_mode_seek_lookup => 'Navigation + recherche';
+  String get video_immersive_mode_seek_lookup => 'Raccourci + recherche';
   @override
   String get video_immersive_mode_unlock_only => 'Déverrouillage uniquement';
   @override
@@ -21063,6 +22387,379 @@ class _StringsFr extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Baissez cette valeur pour rendre le texte du sous-titre flottant plus transparent';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Réglez la transparence du fond des boutons de contrôle du sous-titre flottant';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Baissez cette valeur pour rendre la barre de sous-titre flottant plus transparente et moins gênante';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Lit automatiquement l\'épisode suivant d\'une playlist à la fin du précédent';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -21961,7 +23658,7 @@ class _StringsId extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} karakter';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} karakter';
+  String stat_format_chars_wan({required Object n}) => '${n}万 karakter';
   @override
   String get error_log_share_subject => 'Log Error hibiki';
   @override
@@ -23709,7 +25406,7 @@ class _StringsId extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Kontrol penuh';
   @override
-  String get video_immersive_mode_seek_lookup => 'Lompat + pencarian kata';
+  String get video_immersive_mode_seek_lookup => 'Pintasan + pencarian kata';
   @override
   String get video_immersive_mode_unlock_only => 'Hanya buka kunci';
   @override
@@ -25619,6 +27316,379 @@ class _StringsId extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Turunkan untuk membuat teks subtitle melayang lebih transparan';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Atur seberapa transparan tombol kontrol subtitle melayang';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Turunkan untuk membuat bilah subtitle melayang lebih transparan agar tidak terlalu menghalangi pandangan';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Otomatis putar episode berikutnya dalam playlist ketika satu episode selesai';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -26530,7 +28600,7 @@ class _StringsIt extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caratteri';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} caratteri';
+  String stat_format_chars_wan({required Object n}) => '${n}万 caratteri';
   @override
   String get error_log_share_subject => 'Registro errori hibiki';
   @override
@@ -28307,7 +30377,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Tutti i controlli';
   @override
-  String get video_immersive_mode_seek_lookup => 'Spostamento + ricerca';
+  String get video_immersive_mode_seek_lookup => 'Scorciatoia + ricerca';
   @override
   String get video_immersive_mode_unlock_only => 'Solo sblocco';
   @override
@@ -30223,6 +32293,379 @@ class _StringsIt extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Abbassa questo valore per rendere più trasparente il testo del sottotitolo fluttuante';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Regola la trasparenza dello sfondo dei pulsanti di controllo del sottotitolo fluttuante';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Abbassa questo valore per rendere più trasparente la barra del sottotitolo fluttuante, così da ostacolare meno la visuale';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Riproduce automaticamente l\'episodio successivo di una playlist quando uno finisce';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -32759,7 +35202,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'すべての操作';
   @override
-  String get video_immersive_mode_seek_lookup => 'シーク＋辞書引き';
+  String get video_immersive_mode_seek_lookup => 'ショートカット＋辞書引き';
   @override
   String get video_immersive_mode_unlock_only => 'ロック解除のみ';
   @override
@@ -34633,6 +37076,378 @@ class _StringsJa extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint => '下げるとフローティング字幕の文字がより透明になります';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'フローティング字幕の操作ボタンの背景の透明度を調整します';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      '下げるとフローティング字幕バーがより透明になり、視界を遮りにくくなります';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'プレイリスト内の 1 話が終わると、自動的に次のエピソードを再生します';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -37173,7 +39988,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_immersive_mode_full => '전체 조작';
   @override
-  String get video_immersive_mode_seek_lookup => '이동 + 단어 찾기';
+  String get video_immersive_mode_seek_lookup => '단축키 + 단어 찾기';
   @override
   String get video_immersive_mode_unlock_only => '잠금 해제만';
   @override
@@ -39046,6 +41861,378 @@ class _StringsKo extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint => '낮추면 플로팅 자막 텍스트가 더 투명해집니다';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      '플로팅 자막 조작 버튼의 배경 투명도를 조절합니다';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      '낮추면 플로팅 자막 바가 더 투명해져 시야를 덜 가립니다';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      '재생목록에서 한 에피소드가 끝나면 다음 에피소드를 자동으로 재생합니다';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -39948,7 +43135,7 @@ class _StringsNl extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} tekens';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} tekens';
+  String stat_format_chars_wan({required Object n}) => '${n}万 tekens';
   @override
   String get error_log_share_subject => 'hibiki foutenlogboek';
   @override
@@ -41718,7 +44905,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Alle bediening';
   @override
-  String get video_immersive_mode_seek_lookup => 'Spoelen + opzoeken';
+  String get video_immersive_mode_seek_lookup => 'Sneltoets + opzoeken';
   @override
   String get video_immersive_mode_unlock_only => 'Alleen ontgrendelen';
   @override
@@ -43628,6 +46815,379 @@ class _StringsNl extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Verlaag dit om de tekst van de zwevende ondertitel transparanter te maken';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Pas aan hoe transparant de bedieningsknoppen van de zwevende ondertitel zijn';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Verlaag dit om de zwevende ondertitelbalk transparanter te maken, zodat hij minder van je zicht blokkeert';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Speel automatisch de volgende aflevering in een afspeellijst af wanneer er een eindigt';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -44538,7 +48098,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caracteres';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} caracteres';
+  String stat_format_chars_wan({required Object n}) => '${n}万 caracteres';
   @override
   String get error_log_share_subject => 'Log de Erros do hibiki';
   @override
@@ -46311,7 +49871,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Todos os controles';
   @override
-  String get video_immersive_mode_seek_lookup => 'Avançar + consultar';
+  String get video_immersive_mode_seek_lookup => 'Atalho + consulta';
   @override
   String get video_immersive_mode_unlock_only => 'Apenas desbloquear';
   @override
@@ -48225,6 +51785,379 @@ class _StringsPtBr extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Reduza para deixar o texto da legenda flutuante mais transparente';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Ajuste a transparência do fundo dos botões de controle da legenda flutuante';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Reduza para deixar a barra de legenda flutuante mais transparente e bloquear menos a visão';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Reproduz automaticamente o próximo episódio de uma playlist quando um termina';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -49128,7 +53061,7 @@ class _StringsRu extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} символов';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} символов';
+  String stat_format_chars_wan({required Object n}) => '${n}万 символов';
   @override
   String get error_log_share_subject => 'Журнал ошибок hibiki';
   @override
@@ -50889,7 +54822,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Все элементы управления';
   @override
-  String get video_immersive_mode_seek_lookup => 'Перемотка + поиск слов';
+  String get video_immersive_mode_seek_lookup => 'Горячая клавиша + поиск слов';
   @override
   String get video_immersive_mode_unlock_only => 'Только разблокировка';
   @override
@@ -52805,6 +56738,379 @@ class _StringsRu extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Уменьшите, чтобы текст плавающих субтитров стал прозрачнее';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Настройте прозрачность фона кнопок управления плавающими субтитрами';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Уменьшите, чтобы панель плавающих субтитров стала прозрачнее и меньше закрывала обзор';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Автоматически воспроизводить следующую серию в плейлисте после завершения текущей';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -53694,7 +58000,7 @@ class _StringsTh extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} ตัวอักษร';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} ตัวอักษร';
+  String stat_format_chars_wan({required Object n}) => '${n}万 ตัวอักษร';
   @override
   String get error_log_share_subject => 'บันทึกข้อผิดพลาด hibiki';
   @override
@@ -55427,7 +59733,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'ควบคุมทั้งหมด';
   @override
-  String get video_immersive_mode_seek_lookup => 'เลื่อนเวลา + ค้นคำ';
+  String get video_immersive_mode_seek_lookup => 'ทางลัด + ค้นคำ';
   @override
   String get video_immersive_mode_unlock_only => 'เฉพาะปลดล็อก';
   @override
@@ -57330,6 +61636,379 @@ class _StringsTh extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'ลดค่านี้เพื่อให้ตัวอักษรคำบรรยายลอยโปร่งใสขึ้น';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'ปรับความโปร่งใสของพื้นหลังปุ่มควบคุมคำบรรยายลอย';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'ลดค่านี้เพื่อให้แถบคำบรรยายลอยโปร่งใสขึ้นและบังมุมมองน้อยลง';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'เมื่อตอนหนึ่งจบ ให้เล่นตอนถัดไปในเพลย์ลิสต์โดยอัตโนมัติ';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -58228,7 +62907,7 @@ class _StringsTr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} karakter';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} karakter';
+  String stat_format_chars_wan({required Object n}) => '${n}万 karakter';
   @override
   String get error_log_share_subject => 'hibiki Hata Günlüğü';
   @override
@@ -59982,7 +64661,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Tüm denetimler';
   @override
-  String get video_immersive_mode_seek_lookup => 'Sarma + arama';
+  String get video_immersive_mode_seek_lookup => 'Kısayol + arama';
   @override
   String get video_immersive_mode_unlock_only => 'Yalnızca kilit açma';
   @override
@@ -61887,6 +66566,379 @@ class _StringsTr extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Kayan altyazı metnini daha saydam yapmak için bunu azaltın';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Kayan altyazı denetim düğmelerinin ne kadar saydam olacağını ayarlayın';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Kayan altyazı çubuğunu daha saydam yapıp görüşünüzü daha az engellemesi için bunu azaltın';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Bir oynatma listesinde biri bittiğinde sonraki bölümü otomatik olarak oynat';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -62779,7 +67831,7 @@ class _StringsVi extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} ký tự';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} ký tự';
+  String stat_format_chars_wan({required Object n}) => '${n}万 ký tự';
   @override
   String get error_log_share_subject => 'Nhật ký lỗi hibiki';
   @override
@@ -64527,7 +69579,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Toàn bộ điều khiển';
   @override
-  String get video_immersive_mode_seek_lookup => 'Tua + tra từ';
+  String get video_immersive_mode_seek_lookup => 'Phím tắt + tra từ';
   @override
   String get video_immersive_mode_unlock_only => 'Chỉ mở khóa';
   @override
@@ -66431,6 +71483,379 @@ class _StringsVi extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint =>
+      'Giảm xuống để chữ phụ đề nổi trong suốt hơn';
+  @override
+  String get floating_lyric_button_bg_opacity_hint =>
+      'Điều chỉnh mức trong suốt của nền các nút điều khiển phụ đề nổi';
+  @override
+  String get floating_lyric_bg_opacity_hint =>
+      'Giảm xuống để thanh phụ đề nổi trong suốt hơn, ít che tầm nhìn hơn';
+  @override
+  String get video_setting_auto_play_next_hint =>
+      'Tự động phát tập tiếp theo trong danh sách phát khi một tập kết thúc';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -68907,7 +74332,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_immersive_mode_full => '全部功能';
   @override
-  String get video_immersive_mode_seek_lookup => '跳转 + 查词';
+  String get video_immersive_mode_seek_lookup => '快捷键 + 查词';
   @override
   String get video_immersive_mode_unlock_only => '仅解锁';
   @override
@@ -70207,7 +75632,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error => '搜索失败，请稍后重试。';
   @override
-  String get desktop_clipboard_destination => '剪贴板查词显示位置';
+  String get desktop_clipboard_destination => '查词弹窗位置';
   @override
   String get desktop_clipboard_destination_main => '主窗口';
   @override
@@ -70661,6 +76086,349 @@ class _StringsZhCn extends _StringsEn {
   String get custom_fonts_font_roles => '字体用途';
   @override
   String get video_clip_export_cancelled => '已取消片段导出';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev => '上一句字幕对齐到当前时间';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next => '下一句字幕对齐到当前时间';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      '循环副字幕遮蔽';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide => '隐藏副字幕';
+  @override
+  String get video_setting_secondary_subtitle_obscure => '副字幕遮蔽';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint => '模糊或隐藏副字幕（翻译参考轨）';
+  @override
+  String get games => '游戏';
+  @override
+  String get games_add => '添加游戏';
+  @override
+  String get games_empty => '还没有添加游戏';
+  @override
+  String get games_rename => '重命名';
+  @override
+  String get games_remove => '移除';
+  @override
+  String get games_launch_unsupported => '启动游戏仅支持 Windows 桌面';
+  @override
+  String get games_exe_missing => '找不到游戏可执行文件';
+  @override
+  String get nav_home => '首页';
+  @override
+  String get home_activity => '活动';
+  @override
+  String get home_continue => '继续';
+  @override
+  String get home_filter_all => '全部';
+  @override
+  String get home_filter_read => '阅读';
+  @override
+  String get home_filter_watch => '观看';
+  @override
+  String get home_filter_game => '游戏';
+  @override
+  String get home_filter_added => '导入';
+  @override
+  String get home_stat_library => '媒体库';
+  @override
+  String get home_stat_total_time => '总时长';
+  @override
+  String get home_stat_today => '今日';
+  @override
+  String get home_stat_this_week => '本周';
+  @override
+  String get home_stat_this_month => '本月';
+  @override
+  String get home_range_week => '周';
+  @override
+  String get home_range_month => '月';
+  @override
+  String get home_activity_empty => '暂无活动记录';
+  @override
+  String get home_today => '今天';
+  @override
+  String get home_yesterday => '昨天';
+  @override
+  String get activity_just_now => '刚刚';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} 分钟前';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} 小时前';
+  @override
+  String activity_days_ago({required Object n}) => '${n} 天前';
+  @override
+  String home_session_count({required Object n}) => '${n} 次';
+  @override
+  String get home_dashboard_title => '首页';
+  @override
+  String get clipboard_history_title => '复制历史';
+  @override
+  String get clipboard_history_clear => '清空';
+  @override
+  String get clipboard_history_empty => '暂无复制记录';
+  @override
+  String get video_setting_torrent_upload_enabled => '启用上传 / 做种';
+  @override
+  String get video_setting_torrent_upload_enabled_hint => '默认关闭。下载完成后向网络回传做种。';
+  @override
+  String get video_setting_torrent_seed_time_limit => '做种时长上限（分钟）';
+  @override
+  String get video_setting_torrent_seed_time_hint => '做种超过此时长后停止上传。0 = 不限。';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => '做种分享率上限';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      '上传/下载比值达到此值后停止上传。0 = 不限。';
+  @override
+  String get torrent_upload_intro_title => '上传 / 做种';
+  @override
+  String get torrent_upload_intro_body =>
+      '上传（做种）默认关闭。开启后会把下载内容回传给网络，会占用你的上传带宽。可随时在「设置」里修改。';
+  @override
+  String get torrent_upload_intro_enable => '启用上传 / 做种';
+  @override
+  String get torrent_upload_intro_keep_off => '保持关闭';
+  @override
+  String get torrent_upload_intro_confirm => '保存';
+  @override
+  String get anime_download_generic_title => '粘贴链接下载（书、视频等）';
+  @override
+  String get anime_download_generic_hint => '磁力链接';
+  @override
+  String get anime_download_generic_download => '下载';
+  @override
+  String get anime_download_magnet_invalid => '磁力链接无效';
+  @override
+  String get anime_download_kind_auto => '自动';
+  @override
+  String get anime_download_kind_video => '视频';
+  @override
+  String get anime_download_kind_book => '书';
+  @override
+  String get nav_downloads => '下载';
+  @override
+  String get video_setting_torrent_memory_limit => '内存占用上限（MB）';
+  @override
+  String get video_setting_torrent_memory_hint => '限制引擎内存占用。0 = 自动（按设备内存推导）。';
+  @override
+  String get galgame_helper_needed_title => '需要下载 galgame 引擎组件';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      '启动 galgame 需要引擎-hook 注入器组件（约 ${size}）。它含进程注入代码，与主程序分离分发以避免杀软误报。现在下载吗？';
+  @override
+  String get galgame_helper_size_unknown => '大小未知';
+  @override
+  String get galgame_helper_download => '下载';
+  @override
+  String get galgame_helper_downloading => '正在下载引擎组件…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      '引擎组件下载失败：${error}';
+  @override
+  String get galgame_helper_install_incomplete => '引擎组件安装不完整，请重试';
+  @override
+  String get download_settings => '下载设置';
+  @override
+  String get download_backend_not_configured => '请在下方「下载设置」里配置下载后端';
+  @override
+  String get floating_lyric_text_opacity_hint => '调低让悬浮字幕文字更透明';
+  @override
+  String get floating_lyric_button_bg_opacity_hint => '调整悬浮字幕控制按钮底色的透明度';
+  @override
+  String get floating_lyric_bg_opacity_hint => '调低让悬浮字幕条更透明、更不挡视野';
+  @override
+  String get video_setting_auto_play_next_hint => '播放列表里一集播完后自动播放下一集';
+  @override
+  String get desktop_clipboard_destination_hint => '剪贴板查词结果显示在哪里';
+  @override
+  String get interconnect_inactive_note => 'Hibiki 互联未启用为同步方式';
+  @override
+  String get interconnect_inactive_note_hint =>
+      '在「同步与备份 → 同步方式」中选择 Hibiki 互联后，这里的配置才会生效';
+  @override
+  String get interconnect_moved_note => '互联连接与本机服务器设置在「Hibiki 互联」分类';
+  @override
+  String get nav_game => '游戏';
+  @override
+  String get game_home_subtitle => '游戏库与捕获监控';
+  @override
+  String get game_library => '游戏库';
+  @override
+  String get game_capture_workbench => '捕获工作台';
+  @override
+  String get game_capture_ready => '捕获工具已就绪';
+  @override
+  String get game_capture_active => '正在捕获';
+  @override
+  String get game_capture_description => '启动或绑定游戏，并监控文本、语音、画面与 Anki 出卡。';
+  @override
+  String get game_captured_lines => '已捕获台词';
+  @override
+  String get game_waiting_for_text => '等待文本';
+  @override
+  String get game_library_empty_title => '尚未添加游戏';
+  @override
+  String get game_library_empty_body => '游戏配置与兼容性记录会显示在这里；当前可先使用捕获工作台。';
+  @override
+  String get game_open_capture_workspace => '打开捕获工作台';
+  @override
+  String get game_back_to_library => '返回游戏库';
+  @override
+  String get game_launch_and_capture => '启动并捕获';
+  @override
+  String get game_capture_launching => '正在启动游戏并开始捕获…';
+  @override
+  String get game_capture_launch_failed => '游戏启动或捕获失败';
+  @override
+  String get game_capture_running => '捕获会话已运行';
+  @override
+  String get game_capture_running_no_window => '捕获已运行；尚未找到游戏窗口';
+  @override
+  String get game_text_source_engine => '引擎 Hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => '未知来源';
+  @override
+  String get game_line_audio_pending => '匹配中';
+  @override
+  String get game_line_audio_matched => '音频就绪';
+  @override
+  String get game_line_audio_encoded => '已编码';
+  @override
+  String get game_line_audio_fallback => '已降级';
+  @override
+  String get game_line_audio_missing => '无音频';
+  @override
+  String get game_line_audio_unavailable => '仅文本';
+  @override
+  String get game_live_lines => '实时台词';
+  @override
+  String get game_follow_live => '跟随实时';
+  @override
+  String get game_unread_lines => '未读';
+  @override
+  String get game_session_overview => '会话概览';
+  @override
+  String get game_session_idle => '尚未开始捕获';
+  @override
+  String get game_session_listening => '正在监听';
+  @override
+  String get game_stop_listening => '停止监听';
+  @override
+  String get game_health => '健康状态';
+  @override
+  String get game_health_process => '游戏进程';
+  @override
+  String get game_health_window => '游戏窗口';
+  @override
+  String get game_health_text => '文本来源';
+  @override
+  String get game_health_audio => '音频来源';
+  @override
+  String get game_health_helper => 'Hook Helper';
+  @override
+  String get game_health_anki => 'Anki 出卡';
+  @override
+  String get game_status_ready => '可用';
+  @override
+  String get game_status_waiting => '等待';
+  @override
+  String get game_status_unavailable => '不可用';
+  @override
+  String get game_status_not_configured => '待验证';
+  @override
+  String get game_audio_backend_none => '无音频源';
+  @override
+  String get game_audio_backend_paired => '纯人声 OGG';
+  @override
+  String get game_audio_backend_engine => '引擎 PCM';
+  @override
+  String get game_audio_backend_loopback => '系统 Loopback（混音）';
+  @override
+  String get game_open_diagnostics => '打开诊断';
+  @override
+  String get game_capture_empty_title => '尚未收到台词';
+  @override
+  String get game_capture_empty_body => '启动或绑定游戏后，文本与句音状态会显示在这里。';
+  @override
+  String get game_window_bound => '已绑定';
+  @override
+  String get game_window_missing => '未绑定';
+  @override
+  String get game_text_endpoints => '文本端点';
+  @override
+  String get game_text_gaps => '序号缺口';
+  @override
+  String get game_audio_format => '音频格式';
+  @override
+  String get game_diagnostics => '兼容性诊断';
+  @override
+  String get game_diagnostics_subtitle => '会话阶段、端点、音轨与结构化事件';
+  @override
+  String get game_back_to_capture => '返回捕获工作台';
+  @override
+  String get game_clear_events => '清空事件';
+  @override
+  String get game_pipeline => '会话管线';
+  @override
+  String get game_metrics => '实时指标';
+  @override
+  String get game_audio_tracks => '活跃音轨';
+  @override
+  String get game_refresh_tracks => '刷新音轨';
+  @override
+  String get game_track_auto => '自动选择';
+  @override
+  String get game_track_voice => '语音';
+  @override
+  String get game_track_bgm => 'BGM / 已排除';
+  @override
+  String get game_track_select_as_voice => '设为语音轨';
+  @override
+  String get game_track_exclude_bgm => '标记为 BGM';
+  @override
+  String get game_track_restore => '恢复音轨';
+  @override
+  String get game_no_tracks => '尚无音轨数据';
+  @override
+  String get game_no_events => '尚无会话事件';
+  @override
+  String get game_event_all => '全部事件';
+  @override
+  String get game_event_warnings => '警告及错误';
+  @override
+  String get game_session_events => '会话事件';
+  @override
+  String get game_latest_line => '最新台词';
+  @override
+  String get game_no_active_line => '选择一条台词查看句音状态。';
+  @override
+  String get game_text_thread => '文本线程';
+  @override
+  String get game_text_thread_all => '全部文本线程';
+  @override
+  String get game_text_thread_hint => '像 Luna Translator 一样选择干净的台词线程';
+  @override
+  String get game_show_hook_text_window => '显示 Hook 文本浮窗';
+  @override
+  String get game_hook_line_unavailable => '这条捕获台词已不可用，未使用其他台词替代。';
+  @override
+  String get game_card_sentence_audio_missing => '卡片已创建，但没有句子音频；未借用其他台词的音频。';
+  @override
+  String get game_card_mapping_missing => 'Anki 字段映射缺少游戏卡片字段';
+  @override
+  String get game_audio_backend_resource => '游戏资源音频';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 // Path: <root>
@@ -73138,7 +78906,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_immersive_mode_full => '全部功能';
   @override
-  String get video_immersive_mode_seek_lookup => '跳轉＋查詞';
+  String get video_immersive_mode_seek_lookup => '快捷鍵＋查詞';
   @override
   String get video_immersive_mode_unlock_only => '僅解鎖';
   @override
@@ -74498,7 +80266,7 @@ class _StringsZhHk extends _StringsEn {
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
   @override
-  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  String get desktop_clipboard_destination => '查詞彈窗位置';
   @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
@@ -74993,6 +80761,375 @@ class _StringsZhHk extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
+  String get floating_lyric_text_opacity_hint => '調低可讓懸浮字幕文字更透明';
+  @override
+  String get floating_lyric_button_bg_opacity_hint => '調整懸浮字幕控制按鈕底色的透明度';
+  @override
+  String get floating_lyric_bg_opacity_hint => '調低可讓懸浮字幕條更透明、更少遮擋視野';
+  @override
+  String get video_setting_auto_play_next_hint => '播放清單中一集播完後，自動播放下一集';
+  @override
+  String get desktop_clipboard_destination_hint =>
+      'Where clipboard lookups appear';
+  @override
+  String get interconnect_inactive_note =>
+      'Hibiki Interconnect is not the active sync method';
+  @override
+  String get interconnect_inactive_note_hint =>
+      'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+  @override
+  String get interconnect_moved_note =>
+      'Connection & server settings are in the Hibiki Interconnect category';
+  @override
+  String get nav_game => 'Game';
+  @override
+  String get game_home_subtitle => 'Game library and capture monitoring';
+  @override
+  String get game_library => 'Game library';
+  @override
+  String get game_capture_workbench => 'Capture workspace';
+  @override
+  String get game_capture_ready => 'Capture tools ready';
+  @override
+  String get game_capture_active => 'Capture is active';
+  @override
+  String get game_capture_description =>
+      'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+  @override
+  String get game_captured_lines => 'Captured lines';
+  @override
+  String get game_waiting_for_text => 'Waiting for text';
+  @override
+  String get game_library_empty_title => 'No games added yet';
+  @override
+  String get game_library_empty_body =>
+      'Game profiles and compatibility history will appear here. Capture tools are already available.';
+  @override
+  String get game_open_capture_workspace => 'Open capture workspace';
+  @override
+  String get game_back_to_library => 'Back to game library';
+  @override
+  String get game_launch_and_capture => 'Launch and capture';
+  @override
+  String get game_capture_launching => 'Launching game and starting capture...';
+  @override
+  String get game_capture_launch_failed => 'Game launch or capture failed';
+  @override
+  String get game_capture_running => 'Capture session is running';
+  @override
+  String get game_capture_running_no_window =>
+      'Capture is running; the game window was not found yet';
+  @override
+  String get game_text_source_engine => 'Engine hook';
+  @override
+  String get game_text_source_websocket => 'WebSocket';
+  @override
+  String get game_text_source_unknown => 'Unknown source';
+  @override
+  String get game_line_audio_pending => 'Matching';
+  @override
+  String get game_line_audio_matched => 'Audio ready';
+  @override
+  String get game_line_audio_encoded => 'Encoded';
+  @override
+  String get game_line_audio_fallback => 'Fallback';
+  @override
+  String get game_line_audio_missing => 'No audio';
+  @override
+  String get game_line_audio_unavailable => 'Text only';
+  @override
+  String get game_live_lines => 'Live lines';
+  @override
+  String get game_follow_live => 'Follow live';
+  @override
+  String get game_unread_lines => 'Unread';
+  @override
+  String get game_session_overview => 'Session overview';
+  @override
+  String get game_session_idle => 'Capture has not started';
+  @override
+  String get game_session_listening => 'Listening';
+  @override
+  String get game_stop_listening => 'Stop listeners';
+  @override
+  String get game_health => 'Health status';
+  @override
+  String get game_health_process => 'Game process';
+  @override
+  String get game_health_window => 'Game window';
+  @override
+  String get game_health_text => 'Text source';
+  @override
+  String get game_health_audio => 'Audio source';
+  @override
+  String get game_health_helper => 'Hook helper';
+  @override
+  String get game_health_anki => 'Anki output';
+  @override
+  String get game_status_ready => 'Ready';
+  @override
+  String get game_status_waiting => 'Waiting';
+  @override
+  String get game_status_unavailable => 'Unavailable';
+  @override
+  String get game_status_not_configured => 'Not verified';
+  @override
+  String get game_audio_backend_none => 'No audio source';
+  @override
+  String get game_audio_backend_paired => 'Original voice OGG';
+  @override
+  String get game_audio_backend_engine => 'Engine PCM';
+  @override
+  String get game_audio_backend_loopback => 'System loopback (mixed)';
+  @override
+  String get game_open_diagnostics => 'Open diagnostics';
+  @override
+  String get game_capture_empty_title => 'No lines received yet';
+  @override
+  String get game_capture_empty_body =>
+      'Launch or bind a game; text and sentence-audio status will appear here.';
+  @override
+  String get game_window_bound => 'Bound';
+  @override
+  String get game_window_missing => 'Not bound';
+  @override
+  String get game_text_endpoints => 'Text endpoints';
+  @override
+  String get game_text_gaps => 'Sequence gaps';
+  @override
+  String get game_audio_format => 'Audio format';
+  @override
+  String get game_diagnostics => 'Compatibility diagnostics';
+  @override
+  String get game_diagnostics_subtitle =>
+      'Session stages, endpoints, audio tracks and structured events';
+  @override
+  String get game_back_to_capture => 'Back to capture workspace';
+  @override
+  String get game_clear_events => 'Clear events';
+  @override
+  String get game_pipeline => 'Session pipeline';
+  @override
+  String get game_metrics => 'Live metrics';
+  @override
+  String get game_audio_tracks => 'Active audio tracks';
+  @override
+  String get game_refresh_tracks => 'Refresh tracks';
+  @override
+  String get game_track_auto => 'Automatic selection';
+  @override
+  String get game_track_voice => 'Voice';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_track_select_as_voice => 'Use as voice track';
+  @override
+  String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_restore => 'Restore track';
+  @override
+  String get game_no_tracks => 'No audio-track data yet';
+  @override
+  String get game_no_events => 'No session events yet';
+  @override
+  String get game_event_all => 'All events';
+  @override
+  String get game_event_warnings => 'Warnings and errors';
+  @override
+  String get game_session_events => 'Session events';
+  @override
+  String get game_latest_line => 'Latest line';
+  @override
+  String get game_no_active_line =>
+      'Select a line to inspect its sentence-audio state.';
+  @override
+  String get game_text_thread => 'Text thread';
+  @override
+  String get game_text_thread_all => 'All text threads';
+  @override
+  String get game_text_thread_hint =>
+      'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
+  @override
+  String get game_audio_backend_resource => 'Game resource audio';
+  @override
+  String get game_audio_fallback_allow => '允许音频降级';
+  @override
+  String get game_audio_fallback_resource_only => '仅游戏资源音频';
+  @override
+  String get game_audio_fallback_disabled_missing =>
+      '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+  @override
+  String get game_audio_resource_id => '音频资源 ID';
 }
 
 /// Flat map(s) containing all translations.
@@ -75870,7 +82007,7 @@ extension on _StringsEn {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} characters';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} characters';
+        return ({required Object n}) => '${n}万 characters';
       case 'error_log_share_subject':
         return 'hibiki Error Log';
       case 'update_never_remind':
@@ -77404,7 +83541,7 @@ extension on _StringsEn {
       case 'video_immersive_mode_full':
         return 'Full controls';
       case 'video_immersive_mode_seek_lookup':
-        return 'Seek + lookup';
+        return 'Shortcut + lookup';
       case 'video_immersive_mode_unlock_only':
         return 'Unlock only';
       case 'custom_fonts_catalog_title':
@@ -78637,7 +84774,7 @@ extension on _StringsEn {
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
-        return 'Clipboard lookup destination';
+        return 'Lookup popup position';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -79079,6 +85216,344 @@ extension on _StringsEn {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Lower this to make the floating subtitle text more transparent';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Adjust how transparent the floating subtitle control buttons are';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Lower this to make the floating subtitle bar more transparent so it blocks less of your view';
+      case 'video_setting_auto_play_next_hint':
+        return 'Automatically play the next episode in a playlist when one finishes';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return 'Allow audio fallback';
+      case 'game_audio_fallback_resource_only':
+        return 'Game resource audio only';
+      case 'game_audio_fallback_disabled_missing':
+        return 'No matching game resource audio; fallback is disabled';
+      case 'game_audio_resource_id':
+        return 'Audio resource ID';
       default:
         return null;
     }
@@ -79904,7 +86379,7 @@ extension on _StringsAr {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} حرف';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} حرف';
+        return ({required Object n}) => '${n}万 حرف';
       case 'error_log_share_subject':
         return 'سجل أخطاء hibiki';
       case 'update_never_remind':
@@ -81486,7 +87961,7 @@ extension on _StringsAr {
       case 'video_immersive_mode_full':
         return 'كامل عناصر التحكم';
       case 'video_immersive_mode_seek_lookup':
-        return 'الانتقال + البحث';
+        return 'اختصار + بحث';
       case 'video_immersive_mode_unlock_only':
         return 'إلغاء القفل فقط';
       case 'custom_fonts_catalog_title':
@@ -83163,6 +89638,344 @@ extension on _StringsAr {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'اخفض هذا لجعل نص الترجمة العائمة أكثر شفافية';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'اضبط مدى شفافية خلفية أزرار التحكم في الترجمة العائمة';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'اخفض هذا لجعل شريط الترجمة العائمة أكثر شفافية فيحجب رؤيتك أقل';
+      case 'video_setting_auto_play_next_hint':
+        return 'تشغيل الحلقة التالية في قائمة التشغيل تلقائيًا عند انتهاء واحدة';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -83995,7 +90808,7 @@ extension on _StringsDe {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} Zeichen';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} Zeichen';
+        return ({required Object n}) => '${n}万 Zeichen';
       case 'error_log_share_subject':
         return 'hibiki Fehlerprotokoll';
       case 'update_never_remind':
@@ -85590,7 +92403,7 @@ extension on _StringsDe {
       case 'video_immersive_mode_full':
         return 'Alle Bedienelemente';
       case 'video_immersive_mode_seek_lookup':
-        return 'Spulen + Nachschlagen';
+        return 'Tastenkürzel + Nachschlagen';
       case 'video_immersive_mode_unlock_only':
         return 'Nur Entsperren';
       case 'custom_fonts_catalog_title':
@@ -87268,6 +94081,344 @@ extension on _StringsDe {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Verringern, um den schwebenden Untertiteltext transparenter zu machen';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Stellt ein, wie transparent die Hintergründe der schwebenden Untertitel-Bedienknöpfe sind';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Verringern, um die schwebende Untertitelleiste transparenter zu machen, damit sie weniger Sicht verdeckt';
+      case 'video_setting_auto_play_next_hint':
+        return 'Spielt nach dem Ende einer Folge automatisch die nächste Folge der Playlist ab';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -88099,7 +95250,7 @@ extension on _StringsEs {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caracteres';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} caracteres';
+        return ({required Object n}) => '${n}万 caracteres';
       case 'error_log_share_subject':
         return 'Registro de errores de hibiki';
       case 'update_never_remind':
@@ -89693,7 +96844,7 @@ extension on _StringsEs {
       case 'video_immersive_mode_full':
         return 'Todos los controles';
       case 'video_immersive_mode_seek_lookup':
-        return 'Saltar + consultar';
+        return 'Atajo + consulta';
       case 'video_immersive_mode_unlock_only':
         return 'Solo desbloquear';
       case 'custom_fonts_catalog_title':
@@ -91372,6 +98523,344 @@ extension on _StringsEs {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Bájala para que el texto del subtítulo flotante sea más transparente';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Ajusta la transparencia del fondo de los botones de control del subtítulo flotante';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Bájala para que la barra de subtítulo flotante sea más transparente y tape menos la vista';
+      case 'video_setting_auto_play_next_hint':
+        return 'Reproduce automáticamente el siguiente episodio de una lista cuando termina uno';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -92201,7 +99690,7 @@ extension on _StringsFr {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caractères';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} caractères';
+        return ({required Object n}) => '${n}万 caractères';
       case 'error_log_share_subject':
         return 'Journal d\'erreurs hibiki';
       case 'update_never_remind':
@@ -93800,7 +101289,7 @@ extension on _StringsFr {
       case 'video_immersive_mode_full':
         return 'Tous les contrôles';
       case 'video_immersive_mode_seek_lookup':
-        return 'Navigation + recherche';
+        return 'Raccourci + recherche';
       case 'video_immersive_mode_unlock_only':
         return 'Déverrouillage uniquement';
       case 'custom_fonts_catalog_title':
@@ -95482,6 +102971,344 @@ extension on _StringsFr {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Baissez cette valeur pour rendre le texte du sous-titre flottant plus transparent';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Réglez la transparence du fond des boutons de contrôle du sous-titre flottant';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Baissez cette valeur pour rendre la barre de sous-titre flottant plus transparente et moins gênante';
+      case 'video_setting_auto_play_next_hint':
+        return 'Lit automatiquement l\'épisode suivant d\'une playlist à la fin du précédent';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -96311,7 +104138,7 @@ extension on _StringsId {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} karakter';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} karakter';
+        return ({required Object n}) => '${n}万 karakter';
       case 'error_log_share_subject':
         return 'Log Error hibiki';
       case 'update_never_remind':
@@ -97897,7 +105724,7 @@ extension on _StringsId {
       case 'video_immersive_mode_full':
         return 'Kontrol penuh';
       case 'video_immersive_mode_seek_lookup':
-        return 'Lompat + pencarian kata';
+        return 'Pintasan + pencarian kata';
       case 'video_immersive_mode_unlock_only':
         return 'Hanya buka kunci';
       case 'custom_fonts_catalog_title':
@@ -99574,6 +107401,344 @@ extension on _StringsId {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Turunkan untuk membuat teks subtitle melayang lebih transparan';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Atur seberapa transparan tombol kontrol subtitle melayang';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Turunkan untuk membuat bilah subtitle melayang lebih transparan agar tidak terlalu menghalangi pandangan';
+      case 'video_setting_auto_play_next_hint':
+        return 'Otomatis putar episode berikutnya dalam playlist ketika satu episode selesai';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -100404,7 +108569,7 @@ extension on _StringsIt {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caratteri';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} caratteri';
+        return ({required Object n}) => '${n}万 caratteri';
       case 'error_log_share_subject':
         return 'Registro errori hibiki';
       case 'update_never_remind':
@@ -101998,7 +110163,7 @@ extension on _StringsIt {
       case 'video_immersive_mode_full':
         return 'Tutti i controlli';
       case 'video_immersive_mode_seek_lookup':
-        return 'Spostamento + ricerca';
+        return 'Scorciatoia + ricerca';
       case 'video_immersive_mode_unlock_only':
         return 'Solo sblocco';
       case 'custom_fonts_catalog_title':
@@ -103681,6 +111846,344 @@ extension on _StringsIt {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Abbassa questo valore per rendere più trasparente il testo del sottotitolo fluttuante';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Regola la trasparenza dello sfondo dei pulsanti di controllo del sottotitolo fluttuante';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Abbassa questo valore per rendere più trasparente la barra del sottotitolo fluttuante, così da ostacolare meno la visuale';
+      case 'video_setting_auto_play_next_hint':
+        return 'Riproduce automaticamente l\'episodio successivo di una playlist quando uno finisce';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -106077,7 +114580,7 @@ extension on _StringsJa {
       case 'video_immersive_mode_full':
         return 'すべての操作';
       case 'video_immersive_mode_seek_lookup':
-        return 'シーク＋辞書引き';
+        return 'ショートカット＋辞書引き';
       case 'video_immersive_mode_unlock_only':
         return 'ロック解除のみ';
       case 'custom_fonts_catalog_title':
@@ -107750,6 +116253,344 @@ extension on _StringsJa {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return '下げるとフローティング字幕の文字がより透明になります';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'フローティング字幕の操作ボタンの背景の透明度を調整します';
+      case 'floating_lyric_bg_opacity_hint':
+        return '下げるとフローティング字幕バーがより透明になり、視界を遮りにくくなります';
+      case 'video_setting_auto_play_next_hint':
+        return 'プレイリスト内の 1 話が終わると、自動的に次のエピソードを再生します';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -110149,7 +118990,7 @@ extension on _StringsKo {
       case 'video_immersive_mode_full':
         return '전체 조작';
       case 'video_immersive_mode_seek_lookup':
-        return '이동 + 단어 찾기';
+        return '단축키 + 단어 찾기';
       case 'video_immersive_mode_unlock_only':
         return '잠금 해제만';
       case 'custom_fonts_catalog_title':
@@ -111823,6 +120664,344 @@ extension on _StringsKo {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return '낮추면 플로팅 자막 텍스트가 더 투명해집니다';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return '플로팅 자막 조작 버튼의 배경 투명도를 조절합니다';
+      case 'floating_lyric_bg_opacity_hint':
+        return '낮추면 플로팅 자막 바가 더 투명해져 시야를 덜 가립니다';
+      case 'video_setting_auto_play_next_hint':
+        return '재생목록에서 한 에피소드가 끝나면 다음 에피소드를 자동으로 재생합니다';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -112654,7 +121833,7 @@ extension on _StringsNl {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} tekens';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} tekens';
+        return ({required Object n}) => '${n}万 tekens';
       case 'error_log_share_subject':
         return 'hibiki foutenlogboek';
       case 'update_never_remind':
@@ -114243,7 +123422,7 @@ extension on _StringsNl {
       case 'video_immersive_mode_full':
         return 'Alle bediening';
       case 'video_immersive_mode_seek_lookup':
-        return 'Spoelen + opzoeken';
+        return 'Sneltoets + opzoeken';
       case 'video_immersive_mode_unlock_only':
         return 'Alleen ontgrendelen';
       case 'custom_fonts_catalog_title':
@@ -115923,6 +125102,344 @@ extension on _StringsNl {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Verlaag dit om de tekst van de zwevende ondertitel transparanter te maken';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Pas aan hoe transparant de bedieningsknoppen van de zwevende ondertitel zijn';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Verlaag dit om de zwevende ondertitelbalk transparanter te maken, zodat hij minder van je zicht blokkeert';
+      case 'video_setting_auto_play_next_hint':
+        return 'Speel automatisch de volgende aflevering in een afspeellijst af wanneer er een eindigt';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -116752,7 +126269,7 @@ extension on _StringsPtBr {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caracteres';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} caracteres';
+        return ({required Object n}) => '${n}万 caracteres';
       case 'error_log_share_subject':
         return 'Log de Erros do hibiki';
       case 'update_never_remind':
@@ -118342,7 +127859,7 @@ extension on _StringsPtBr {
       case 'video_immersive_mode_full':
         return 'Todos os controles';
       case 'video_immersive_mode_seek_lookup':
-        return 'Avançar + consultar';
+        return 'Atalho + consulta';
       case 'video_immersive_mode_unlock_only':
         return 'Apenas desbloquear';
       case 'custom_fonts_catalog_title':
@@ -120020,6 +129537,344 @@ extension on _StringsPtBr {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Reduza para deixar o texto da legenda flutuante mais transparente';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Ajuste a transparência do fundo dos botões de controle da legenda flutuante';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Reduza para deixar a barra de legenda flutuante mais transparente e bloquear menos a visão';
+      case 'video_setting_auto_play_next_hint':
+        return 'Reproduz automaticamente o próximo episódio de uma playlist quando um termina';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -120849,7 +130704,7 @@ extension on _StringsRu {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} символов';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} символов';
+        return ({required Object n}) => '${n}万 символов';
       case 'error_log_share_subject':
         return 'Журнал ошибок hibiki';
       case 'update_never_remind':
@@ -122442,7 +132297,7 @@ extension on _StringsRu {
       case 'video_immersive_mode_full':
         return 'Все элементы управления';
       case 'video_immersive_mode_seek_lookup':
-        return 'Перемотка + поиск слов';
+        return 'Горячая клавиша + поиск слов';
       case 'video_immersive_mode_unlock_only':
         return 'Только разблокировка';
       case 'custom_fonts_catalog_title':
@@ -124122,6 +133977,344 @@ extension on _StringsRu {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Уменьшите, чтобы текст плавающих субтитров стал прозрачнее';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Настройте прозрачность фона кнопок управления плавающими субтитрами';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Уменьшите, чтобы панель плавающих субтитров стала прозрачнее и меньше закрывала обзор';
+      case 'video_setting_auto_play_next_hint':
+        return 'Автоматически воспроизводить следующую серию в плейлисте после завершения текущей';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -124950,7 +135143,7 @@ extension on _StringsTh {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} ตัวอักษร';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} ตัวอักษร';
+        return ({required Object n}) => '${n}万 ตัวอักษร';
       case 'error_log_share_subject':
         return 'บันทึกข้อผิดพลาด hibiki';
       case 'update_never_remind':
@@ -126531,7 +136724,7 @@ extension on _StringsTh {
       case 'video_immersive_mode_full':
         return 'ควบคุมทั้งหมด';
       case 'video_immersive_mode_seek_lookup':
-        return 'เลื่อนเวลา + ค้นคำ';
+        return 'ทางลัด + ค้นคำ';
       case 'video_immersive_mode_unlock_only':
         return 'เฉพาะปลดล็อก';
       case 'custom_fonts_catalog_title':
@@ -128208,6 +138401,344 @@ extension on _StringsTh {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'ลดค่านี้เพื่อให้ตัวอักษรคำบรรยายลอยโปร่งใสขึ้น';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'ปรับความโปร่งใสของพื้นหลังปุ่มควบคุมคำบรรยายลอย';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'ลดค่านี้เพื่อให้แถบคำบรรยายลอยโปร่งใสขึ้นและบังมุมมองน้อยลง';
+      case 'video_setting_auto_play_next_hint':
+        return 'เมื่อตอนหนึ่งจบ ให้เล่นตอนถัดไปในเพลย์ลิสต์โดยอัตโนมัติ';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -129037,7 +139568,7 @@ extension on _StringsTr {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} karakter';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} karakter';
+        return ({required Object n}) => '${n}万 karakter';
       case 'error_log_share_subject':
         return 'hibiki Hata Günlüğü';
       case 'update_never_remind':
@@ -130622,7 +141153,7 @@ extension on _StringsTr {
       case 'video_immersive_mode_full':
         return 'Tüm denetimler';
       case 'video_immersive_mode_seek_lookup':
-        return 'Sarma + arama';
+        return 'Kısayol + arama';
       case 'video_immersive_mode_unlock_only':
         return 'Yalnızca kilit açma';
       case 'custom_fonts_catalog_title':
@@ -132303,6 +142834,344 @@ extension on _StringsTr {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Kayan altyazı metnini daha saydam yapmak için bunu azaltın';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Kayan altyazı denetim düğmelerinin ne kadar saydam olacağını ayarlayın';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Kayan altyazı çubuğunu daha saydam yapıp görüşünüzü daha az engellemesi için bunu azaltın';
+      case 'video_setting_auto_play_next_hint':
+        return 'Bir oynatma listesinde biri bittiğinde sonraki bölümü otomatik olarak oynat';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -133131,7 +144000,7 @@ extension on _StringsVi {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} ký tự';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} ký tự';
+        return ({required Object n}) => '${n}万 ký tự';
       case 'error_log_share_subject':
         return 'Nhật ký lỗi hibiki';
       case 'update_never_remind':
@@ -134715,7 +145584,7 @@ extension on _StringsVi {
       case 'video_immersive_mode_full':
         return 'Toàn bộ điều khiển';
       case 'video_immersive_mode_seek_lookup':
-        return 'Tua + tra từ';
+        return 'Phím tắt + tra từ';
       case 'video_immersive_mode_unlock_only':
         return 'Chỉ mở khóa';
       case 'custom_fonts_catalog_title':
@@ -136393,6 +147262,344 @@ extension on _StringsVi {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return 'Giảm xuống để chữ phụ đề nổi trong suốt hơn';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return 'Điều chỉnh mức trong suốt của nền các nút điều khiển phụ đề nổi';
+      case 'floating_lyric_bg_opacity_hint':
+        return 'Giảm xuống để thanh phụ đề nổi trong suốt hơn, ít che tầm nhìn hơn';
+      case 'video_setting_auto_play_next_hint':
+        return 'Tự động phát tập tiếp theo trong danh sách phát khi một tập kết thúc';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -138786,7 +149993,7 @@ extension on _StringsZhCn {
       case 'video_immersive_mode_full':
         return '全部功能';
       case 'video_immersive_mode_seek_lookup':
-        return '跳转 + 查词';
+        return '快捷键 + 查词';
       case 'video_immersive_mode_unlock_only':
         return '仅解锁';
       case 'custom_fonts_catalog_title':
@@ -140011,7 +151218,7 @@ extension on _StringsZhCn {
       case 'video_danmaku_manual_server_error':
         return '搜索失败，请稍后重试。';
       case 'desktop_clipboard_destination':
-        return '剪贴板查词显示位置';
+        return '查词弹窗位置';
       case 'desktop_clipboard_destination_main':
         return '主窗口';
       case 'desktop_clipboard_destination_panel':
@@ -140450,6 +151657,343 @@ extension on _StringsZhCn {
         return '字体用途';
       case 'video_clip_export_cancelled':
         return '已取消片段导出';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return '上一句字幕对齐到当前时间';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return '下一句字幕对齐到当前时间';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return '循环副字幕遮蔽';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return '隐藏副字幕';
+      case 'video_setting_secondary_subtitle_obscure':
+        return '副字幕遮蔽';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return '模糊或隐藏副字幕（翻译参考轨）';
+      case 'games':
+        return '游戏';
+      case 'games_add':
+        return '添加游戏';
+      case 'games_empty':
+        return '还没有添加游戏';
+      case 'games_rename':
+        return '重命名';
+      case 'games_remove':
+        return '移除';
+      case 'games_launch_unsupported':
+        return '启动游戏仅支持 Windows 桌面';
+      case 'games_exe_missing':
+        return '找不到游戏可执行文件';
+      case 'nav_home':
+        return '首页';
+      case 'home_activity':
+        return '活动';
+      case 'home_continue':
+        return '继续';
+      case 'home_filter_all':
+        return '全部';
+      case 'home_filter_read':
+        return '阅读';
+      case 'home_filter_watch':
+        return '观看';
+      case 'home_filter_game':
+        return '游戏';
+      case 'home_filter_added':
+        return '导入';
+      case 'home_stat_library':
+        return '媒体库';
+      case 'home_stat_total_time':
+        return '总时长';
+      case 'home_stat_today':
+        return '今日';
+      case 'home_stat_this_week':
+        return '本周';
+      case 'home_stat_this_month':
+        return '本月';
+      case 'home_range_week':
+        return '周';
+      case 'home_range_month':
+        return '月';
+      case 'home_activity_empty':
+        return '暂无活动记录';
+      case 'home_today':
+        return '今天';
+      case 'home_yesterday':
+        return '昨天';
+      case 'activity_just_now':
+        return '刚刚';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} 分钟前';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} 小时前';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} 天前';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} 次';
+      case 'home_dashboard_title':
+        return '首页';
+      case 'clipboard_history_title':
+        return '复制历史';
+      case 'clipboard_history_clear':
+        return '清空';
+      case 'clipboard_history_empty':
+        return '暂无复制记录';
+      case 'video_setting_torrent_upload_enabled':
+        return '启用上传 / 做种';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return '默认关闭。下载完成后向网络回传做种。';
+      case 'video_setting_torrent_seed_time_limit':
+        return '做种时长上限（分钟）';
+      case 'video_setting_torrent_seed_time_hint':
+        return '做种超过此时长后停止上传。0 = 不限。';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return '做种分享率上限';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return '上传/下载比值达到此值后停止上传。0 = 不限。';
+      case 'torrent_upload_intro_title':
+        return '上传 / 做种';
+      case 'torrent_upload_intro_body':
+        return '上传（做种）默认关闭。开启后会把下载内容回传给网络，会占用你的上传带宽。可随时在「设置」里修改。';
+      case 'torrent_upload_intro_enable':
+        return '启用上传 / 做种';
+      case 'torrent_upload_intro_keep_off':
+        return '保持关闭';
+      case 'torrent_upload_intro_confirm':
+        return '保存';
+      case 'anime_download_generic_title':
+        return '粘贴链接下载（书、视频等）';
+      case 'anime_download_generic_hint':
+        return '磁力链接';
+      case 'anime_download_generic_download':
+        return '下载';
+      case 'anime_download_magnet_invalid':
+        return '磁力链接无效';
+      case 'anime_download_kind_auto':
+        return '自动';
+      case 'anime_download_kind_video':
+        return '视频';
+      case 'anime_download_kind_book':
+        return '书';
+      case 'nav_downloads':
+        return '下载';
+      case 'video_setting_torrent_memory_limit':
+        return '内存占用上限（MB）';
+      case 'video_setting_torrent_memory_hint':
+        return '限制引擎内存占用。0 = 自动（按设备内存推导）。';
+      case 'galgame_helper_needed_title':
+        return '需要下载 galgame 引擎组件';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            '启动 galgame 需要引擎-hook 注入器组件（约 ${size}）。它含进程注入代码，与主程序分离分发以避免杀软误报。现在下载吗？';
+      case 'galgame_helper_size_unknown':
+        return '大小未知';
+      case 'galgame_helper_download':
+        return '下载';
+      case 'galgame_helper_downloading':
+        return '正在下载引擎组件…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) => '引擎组件下载失败：${error}';
+      case 'galgame_helper_install_incomplete':
+        return '引擎组件安装不完整，请重试';
+      case 'download_settings':
+        return '下载设置';
+      case 'download_backend_not_configured':
+        return '请在下方「下载设置」里配置下载后端';
+      case 'floating_lyric_text_opacity_hint':
+        return '调低让悬浮字幕文字更透明';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return '调整悬浮字幕控制按钮底色的透明度';
+      case 'floating_lyric_bg_opacity_hint':
+        return '调低让悬浮字幕条更透明、更不挡视野';
+      case 'video_setting_auto_play_next_hint':
+        return '播放列表里一集播完后自动播放下一集';
+      case 'desktop_clipboard_destination_hint':
+        return '剪贴板查词结果显示在哪里';
+      case 'interconnect_inactive_note':
+        return 'Hibiki 互联未启用为同步方式';
+      case 'interconnect_inactive_note_hint':
+        return '在「同步与备份 → 同步方式」中选择 Hibiki 互联后，这里的配置才会生效';
+      case 'interconnect_moved_note':
+        return '互联连接与本机服务器设置在「Hibiki 互联」分类';
+      case 'nav_game':
+        return '游戏';
+      case 'game_home_subtitle':
+        return '游戏库与捕获监控';
+      case 'game_library':
+        return '游戏库';
+      case 'game_capture_workbench':
+        return '捕获工作台';
+      case 'game_capture_ready':
+        return '捕获工具已就绪';
+      case 'game_capture_active':
+        return '正在捕获';
+      case 'game_capture_description':
+        return '启动或绑定游戏，并监控文本、语音、画面与 Anki 出卡。';
+      case 'game_captured_lines':
+        return '已捕获台词';
+      case 'game_waiting_for_text':
+        return '等待文本';
+      case 'game_library_empty_title':
+        return '尚未添加游戏';
+      case 'game_library_empty_body':
+        return '游戏配置与兼容性记录会显示在这里；当前可先使用捕获工作台。';
+      case 'game_open_capture_workspace':
+        return '打开捕获工作台';
+      case 'game_back_to_library':
+        return '返回游戏库';
+      case 'game_launch_and_capture':
+        return '启动并捕获';
+      case 'game_capture_launching':
+        return '正在启动游戏并开始捕获…';
+      case 'game_capture_launch_failed':
+        return '游戏启动或捕获失败';
+      case 'game_capture_running':
+        return '捕获会话已运行';
+      case 'game_capture_running_no_window':
+        return '捕获已运行；尚未找到游戏窗口';
+      case 'game_text_source_engine':
+        return '引擎 Hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return '未知来源';
+      case 'game_line_audio_pending':
+        return '匹配中';
+      case 'game_line_audio_matched':
+        return '音频就绪';
+      case 'game_line_audio_encoded':
+        return '已编码';
+      case 'game_line_audio_fallback':
+        return '已降级';
+      case 'game_line_audio_missing':
+        return '无音频';
+      case 'game_line_audio_unavailable':
+        return '仅文本';
+      case 'game_live_lines':
+        return '实时台词';
+      case 'game_follow_live':
+        return '跟随实时';
+      case 'game_unread_lines':
+        return '未读';
+      case 'game_session_overview':
+        return '会话概览';
+      case 'game_session_idle':
+        return '尚未开始捕获';
+      case 'game_session_listening':
+        return '正在监听';
+      case 'game_stop_listening':
+        return '停止监听';
+      case 'game_health':
+        return '健康状态';
+      case 'game_health_process':
+        return '游戏进程';
+      case 'game_health_window':
+        return '游戏窗口';
+      case 'game_health_text':
+        return '文本来源';
+      case 'game_health_audio':
+        return '音频来源';
+      case 'game_health_helper':
+        return 'Hook Helper';
+      case 'game_health_anki':
+        return 'Anki 出卡';
+      case 'game_status_ready':
+        return '可用';
+      case 'game_status_waiting':
+        return '等待';
+      case 'game_status_unavailable':
+        return '不可用';
+      case 'game_status_not_configured':
+        return '待验证';
+      case 'game_audio_backend_none':
+        return '无音频源';
+      case 'game_audio_backend_paired':
+        return '纯人声 OGG';
+      case 'game_audio_backend_engine':
+        return '引擎 PCM';
+      case 'game_audio_backend_loopback':
+        return '系统 Loopback（混音）';
+      case 'game_open_diagnostics':
+        return '打开诊断';
+      case 'game_capture_empty_title':
+        return '尚未收到台词';
+      case 'game_capture_empty_body':
+        return '启动或绑定游戏后，文本与句音状态会显示在这里。';
+      case 'game_window_bound':
+        return '已绑定';
+      case 'game_window_missing':
+        return '未绑定';
+      case 'game_text_endpoints':
+        return '文本端点';
+      case 'game_text_gaps':
+        return '序号缺口';
+      case 'game_audio_format':
+        return '音频格式';
+      case 'game_diagnostics':
+        return '兼容性诊断';
+      case 'game_diagnostics_subtitle':
+        return '会话阶段、端点、音轨与结构化事件';
+      case 'game_back_to_capture':
+        return '返回捕获工作台';
+      case 'game_clear_events':
+        return '清空事件';
+      case 'game_pipeline':
+        return '会话管线';
+      case 'game_metrics':
+        return '实时指标';
+      case 'game_audio_tracks':
+        return '活跃音轨';
+      case 'game_refresh_tracks':
+        return '刷新音轨';
+      case 'game_track_auto':
+        return '自动选择';
+      case 'game_track_voice':
+        return '语音';
+      case 'game_track_bgm':
+        return 'BGM / 已排除';
+      case 'game_track_select_as_voice':
+        return '设为语音轨';
+      case 'game_track_exclude_bgm':
+        return '标记为 BGM';
+      case 'game_track_restore':
+        return '恢复音轨';
+      case 'game_no_tracks':
+        return '尚无音轨数据';
+      case 'game_no_events':
+        return '尚无会话事件';
+      case 'game_event_all':
+        return '全部事件';
+      case 'game_event_warnings':
+        return '警告及错误';
+      case 'game_session_events':
+        return '会话事件';
+      case 'game_latest_line':
+        return '最新台词';
+      case 'game_no_active_line':
+        return '选择一条台词查看句音状态。';
+      case 'game_text_thread':
+        return '文本线程';
+      case 'game_text_thread_all':
+        return '全部文本线程';
+      case 'game_text_thread_hint':
+        return '像 Luna Translator 一样选择干净的台词线程';
+      case 'game_show_hook_text_window':
+        return '显示 Hook 文本浮窗';
+      case 'game_hook_line_unavailable':
+        return '这条捕获台词已不可用，未使用其他台词替代。';
+      case 'game_card_sentence_audio_missing':
+        return '卡片已创建，但没有句子音频；未借用其他台词的音频。';
+      case 'game_card_mapping_missing':
+        return 'Anki 字段映射缺少游戏卡片字段';
+      case 'game_audio_backend_resource':
+        return '游戏资源音频';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
@@ -142844,7 +154388,7 @@ extension on _StringsZhHk {
       case 'video_immersive_mode_full':
         return '全部功能';
       case 'video_immersive_mode_seek_lookup':
-        return '跳轉＋查詞';
+        return '快捷鍵＋查詞';
       case 'video_immersive_mode_unlock_only':
         return '僅解鎖';
       case 'custom_fonts_catalog_title':
@@ -144073,7 +155617,7 @@ extension on _StringsZhHk {
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
-        return 'Clipboard lookup destination';
+        return '查詞彈窗位置';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -144514,6 +156058,344 @@ extension on _StringsZhHk {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
+      case 'floating_lyric_text_opacity_hint':
+        return '調低可讓懸浮字幕文字更透明';
+      case 'floating_lyric_button_bg_opacity_hint':
+        return '調整懸浮字幕控制按鈕底色的透明度';
+      case 'floating_lyric_bg_opacity_hint':
+        return '調低可讓懸浮字幕條更透明、更少遮擋視野';
+      case 'video_setting_auto_play_next_hint':
+        return '播放清單中一集播完後，自動播放下一集';
+      case 'desktop_clipboard_destination_hint':
+        return 'Where clipboard lookups appear';
+      case 'interconnect_inactive_note':
+        return 'Hibiki Interconnect is not the active sync method';
+      case 'interconnect_inactive_note_hint':
+        return 'Select Hibiki Interconnect under Sync & backup - Sync method to use these settings';
+      case 'interconnect_moved_note':
+        return 'Connection & server settings are in the Hibiki Interconnect category';
+      case 'nav_game':
+        return 'Game';
+      case 'game_home_subtitle':
+        return 'Game library and capture monitoring';
+      case 'game_library':
+        return 'Game library';
+      case 'game_capture_workbench':
+        return 'Capture workspace';
+      case 'game_capture_ready':
+        return 'Capture tools ready';
+      case 'game_capture_active':
+        return 'Capture is active';
+      case 'game_capture_description':
+        return 'Launch or attach a game, then monitor text, voice, screenshots and Anki output.';
+      case 'game_captured_lines':
+        return 'Captured lines';
+      case 'game_waiting_for_text':
+        return 'Waiting for text';
+      case 'game_library_empty_title':
+        return 'No games added yet';
+      case 'game_library_empty_body':
+        return 'Game profiles and compatibility history will appear here. Capture tools are already available.';
+      case 'game_open_capture_workspace':
+        return 'Open capture workspace';
+      case 'game_back_to_library':
+        return 'Back to game library';
+      case 'game_launch_and_capture':
+        return 'Launch and capture';
+      case 'game_capture_launching':
+        return 'Launching game and starting capture...';
+      case 'game_capture_launch_failed':
+        return 'Game launch or capture failed';
+      case 'game_capture_running':
+        return 'Capture session is running';
+      case 'game_capture_running_no_window':
+        return 'Capture is running; the game window was not found yet';
+      case 'game_text_source_engine':
+        return 'Engine hook';
+      case 'game_text_source_websocket':
+        return 'WebSocket';
+      case 'game_text_source_unknown':
+        return 'Unknown source';
+      case 'game_line_audio_pending':
+        return 'Matching';
+      case 'game_line_audio_matched':
+        return 'Audio ready';
+      case 'game_line_audio_encoded':
+        return 'Encoded';
+      case 'game_line_audio_fallback':
+        return 'Fallback';
+      case 'game_line_audio_missing':
+        return 'No audio';
+      case 'game_line_audio_unavailable':
+        return 'Text only';
+      case 'game_live_lines':
+        return 'Live lines';
+      case 'game_follow_live':
+        return 'Follow live';
+      case 'game_unread_lines':
+        return 'Unread';
+      case 'game_session_overview':
+        return 'Session overview';
+      case 'game_session_idle':
+        return 'Capture has not started';
+      case 'game_session_listening':
+        return 'Listening';
+      case 'game_stop_listening':
+        return 'Stop listeners';
+      case 'game_health':
+        return 'Health status';
+      case 'game_health_process':
+        return 'Game process';
+      case 'game_health_window':
+        return 'Game window';
+      case 'game_health_text':
+        return 'Text source';
+      case 'game_health_audio':
+        return 'Audio source';
+      case 'game_health_helper':
+        return 'Hook helper';
+      case 'game_health_anki':
+        return 'Anki output';
+      case 'game_status_ready':
+        return 'Ready';
+      case 'game_status_waiting':
+        return 'Waiting';
+      case 'game_status_unavailable':
+        return 'Unavailable';
+      case 'game_status_not_configured':
+        return 'Not verified';
+      case 'game_audio_backend_none':
+        return 'No audio source';
+      case 'game_audio_backend_paired':
+        return 'Original voice OGG';
+      case 'game_audio_backend_engine':
+        return 'Engine PCM';
+      case 'game_audio_backend_loopback':
+        return 'System loopback (mixed)';
+      case 'game_open_diagnostics':
+        return 'Open diagnostics';
+      case 'game_capture_empty_title':
+        return 'No lines received yet';
+      case 'game_capture_empty_body':
+        return 'Launch or bind a game; text and sentence-audio status will appear here.';
+      case 'game_window_bound':
+        return 'Bound';
+      case 'game_window_missing':
+        return 'Not bound';
+      case 'game_text_endpoints':
+        return 'Text endpoints';
+      case 'game_text_gaps':
+        return 'Sequence gaps';
+      case 'game_audio_format':
+        return 'Audio format';
+      case 'game_diagnostics':
+        return 'Compatibility diagnostics';
+      case 'game_diagnostics_subtitle':
+        return 'Session stages, endpoints, audio tracks and structured events';
+      case 'game_back_to_capture':
+        return 'Back to capture workspace';
+      case 'game_clear_events':
+        return 'Clear events';
+      case 'game_pipeline':
+        return 'Session pipeline';
+      case 'game_metrics':
+        return 'Live metrics';
+      case 'game_audio_tracks':
+        return 'Active audio tracks';
+      case 'game_refresh_tracks':
+        return 'Refresh tracks';
+      case 'game_track_auto':
+        return 'Automatic selection';
+      case 'game_track_voice':
+        return 'Voice';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
+      case 'game_track_select_as_voice':
+        return 'Use as voice track';
+      case 'game_track_exclude_bgm':
+        return 'Mark as BGM';
+      case 'game_track_restore':
+        return 'Restore track';
+      case 'game_no_tracks':
+        return 'No audio-track data yet';
+      case 'game_no_events':
+        return 'No session events yet';
+      case 'game_event_all':
+        return 'All events';
+      case 'game_event_warnings':
+        return 'Warnings and errors';
+      case 'game_session_events':
+        return 'Session events';
+      case 'game_latest_line':
+        return 'Latest line';
+      case 'game_no_active_line':
+        return 'Select a line to inspect its sentence-audio state.';
+      case 'game_text_thread':
+        return 'Text thread';
+      case 'game_text_thread_all':
+        return 'All text threads';
+      case 'game_text_thread_hint':
+        return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
+      case 'game_audio_backend_resource':
+        return 'Game resource audio';
+      case 'game_audio_fallback_allow':
+        return '允许音频降级';
+      case 'game_audio_fallback_resource_only':
+        return '仅游戏资源音频';
+      case 'game_audio_fallback_disabled_missing':
+        return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
+      case 'game_audio_resource_id':
+        return '音频资源 ID';
       default:
         return null;
     }
