@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36788 (2164 per locale)
+/// Strings: 36822 (2166 per locale)
 ///
-/// Built on 2026-07-20 at 17:06 UTC
+/// Built on 2026-07-20 at 17:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2770,6 +2770,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Engine component download failed: ${error}';
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  String get download_settings => 'Download settings';
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
   String get floating_lyric_text_opacity_hint =>
       'Lower this to make the floating subtitle text more transparent';
   String get floating_lyric_button_bg_opacity_hint =>
@@ -7569,6 +7572,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'اخفض هذا لجعل نص الترجمة العائمة أكثر شفافية';
@@ -12539,6 +12547,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Verringern, um den schwebenden Untertiteltext transparenter zu machen';
@@ -17525,6 +17538,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Bájala para que el texto del subtítulo flotante sea más transparente';
@@ -22523,6 +22541,11 @@ class _StringsFr extends _StringsEn {
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
   @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'Baissez cette valeur pour rendre le texte du sous-titre flottant plus transparent';
   @override
@@ -27446,6 +27469,11 @@ class _StringsId extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Turunkan untuk membuat teks subtitle melayang lebih transparan';
@@ -32419,6 +32447,11 @@ class _StringsIt extends _StringsEn {
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
   @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'Abbassa questo valore per rendere più trasparente il testo del sottotitolo fluttuante';
   @override
@@ -37196,6 +37229,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint => '下げるとフローティング字幕の文字がより透明になります';
   @override
@@ -41976,6 +42014,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint => '낮추면 플로팅 자막 텍스트가 더 투명해집니다';
   @override
@@ -46925,6 +46968,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Verlaag dit om de tekst van de zwevende ondertitel transparanter te maken';
@@ -51891,6 +51939,11 @@ class _StringsPtBr extends _StringsEn {
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
   @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'Reduza para deixar o texto da legenda flutuante mais transparente';
   @override
@@ -56839,6 +56892,11 @@ class _StringsRu extends _StringsEn {
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
   @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'Уменьшите, чтобы текст плавающих субтитров стал прозрачнее';
   @override
@@ -61731,6 +61789,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
+  @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'ลดค่านี้เพื่อให้ตัวอักษรคำบรรยายลอยโปร่งใสขึ้น';
@@ -66657,6 +66720,11 @@ class _StringsTr extends _StringsEn {
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
   @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'Kayan altyazı metnini daha saydam yapmak için bunu azaltın';
   @override
@@ -71569,6 +71637,11 @@ class _StringsVi extends _StringsEn {
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
   @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'Giảm xuống để chữ phụ đề nổi trong suốt hơn';
   @override
@@ -76154,6 +76227,10 @@ class _StringsZhCn extends _StringsEn {
       '引擎组件下载失败：${error}';
   @override
   String get galgame_helper_install_incomplete => '引擎组件安装不完整，请重试';
+  @override
+  String get download_settings => '下载设置';
+  @override
+  String get download_backend_not_configured => '请在下方「下载设置」里配置下载后端';
   @override
   String get floating_lyric_text_opacity_hint => '调低让悬浮字幕文字更透明';
   @override
@@ -80838,6 +80915,11 @@ class _StringsZhHk extends _StringsEn {
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
   @override
+  String get download_settings => 'Download settings';
+  @override
+  String get download_backend_not_configured =>
+      'Configure the download backend below (expand Download settings).';
+  @override
   String get floating_lyric_text_opacity_hint => '調低可讓懸浮字幕文字更透明';
   @override
   String get floating_lyric_button_bg_opacity_hint => '調整懸浮字幕控制按鈕底色的透明度';
@@ -85272,6 +85354,10 @@ extension on _StringsEn {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Lower this to make the floating subtitle text more transparent';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -89690,6 +89776,10 @@ extension on _StringsAr {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'اخفض هذا لجعل نص الترجمة العائمة أكثر شفافية';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -94129,6 +94219,10 @@ extension on _StringsDe {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Verringern, um den schwebenden Untertiteltext transparenter zu machen';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -98567,6 +98661,10 @@ extension on _StringsEs {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Bájala para que el texto del subtítulo flotante sea más transparente';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -103011,6 +103109,10 @@ extension on _StringsFr {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Baissez cette valeur pour rendre le texte du sous-titre flottant plus transparent';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -107437,6 +107539,10 @@ extension on _StringsId {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Turunkan untuk membuat teks subtitle melayang lebih transparan';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -111878,6 +111984,10 @@ extension on _StringsIt {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Abbassa questo valore per rendere più trasparente il testo del sottotitolo fluttuante';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -116281,6 +116391,10 @@ extension on _StringsJa {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return '下げるとフローティング字幕の文字がより透明になります';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -120688,6 +120802,10 @@ extension on _StringsKo {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return '낮추면 플로팅 자막 텍스트가 더 투명해집니다';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -125122,6 +125240,10 @@ extension on _StringsNl {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Verlaag dit om de tekst van de zwevende ondertitel transparanter te maken';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -129553,6 +129675,10 @@ extension on _StringsPtBr {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Reduza para deixar o texto da legenda flutuante mais transparente';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -133989,6 +134115,10 @@ extension on _StringsRu {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Уменьшите, чтобы текст плавающих субтитров стал прозрачнее';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -138409,6 +138539,10 @@ extension on _StringsTh {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'ลดค่านี้เพื่อให้ตัวอักษรคำบรรยายลอยโปร่งใสขึ้น';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -142838,6 +142972,10 @@ extension on _StringsTr {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Kayan altyazı metnini daha saydam yapmak için bunu azaltın';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -147262,6 +147400,10 @@ extension on _StringsVi {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Giảm xuống để chữ phụ đề nổi trong suốt hơn';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -151652,6 +151794,10 @@ extension on _StringsZhCn {
         return ({required Object error}) => '引擎组件下载失败：${error}';
       case 'galgame_helper_install_incomplete':
         return '引擎组件安装不完整，请重试';
+      case 'download_settings':
+        return '下载设置';
+      case 'download_backend_not_configured':
+        return '请在下方「下载设置」里配置下载后端';
       case 'floating_lyric_text_opacity_hint':
         return '调低让悬浮字幕文字更透明';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -156050,6 +156196,10 @@ extension on _StringsZhHk {
             'Engine component download failed: ${error}';
       case 'galgame_helper_install_incomplete':
         return 'Engine component install incomplete, please retry';
+      case 'download_settings':
+        return 'Download settings';
+      case 'download_backend_not_configured':
+        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return '調低可讓懸浮字幕文字更透明';
       case 'floating_lyric_button_bg_opacity_hint':
