@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 34969 (2057 per locale)
+/// Strings: 35003 (2059 per locale)
 ///
-/// Built on 2026-07-20 at 10:34 UTC
+/// Built on 2026-07-20 at 10:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2757,6 +2757,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anime_download_kind_video => 'Video';
   String get anime_download_kind_book => 'Book';
   String get nav_downloads => 'Downloads';
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 // Path: <root>
@@ -7417,6 +7420,11 @@ class _StringsAr extends _StringsEn {
   String get anime_download_kind_book => 'Book';
   @override
   String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 // Path: <root>
@@ -12150,6 +12158,11 @@ class _StringsDe extends _StringsEn {
   String get anime_download_kind_book => 'Book';
   @override
   String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 // Path: <root>
@@ -16899,6 +16912,11 @@ class _StringsEs extends _StringsEn {
   String get anime_download_kind_book => 'Book';
   @override
   String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 // Path: <root>
@@ -21659,6 +21677,11 @@ class _StringsFr extends _StringsEn {
   String get anime_download_kind_book => 'Book';
   @override
   String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 // Path: <root>
@@ -26346,6 +26369,11 @@ class _StringsId extends _StringsEn {
   String get anime_download_kind_book => 'Book';
   @override
   String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 // Path: <root>
@@ -31081,6 +31109,11 @@ class _StringsIt extends _StringsEn {
   String get anime_download_kind_book => 'Book';
   @override
   String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 // Path: <root>
@@ -35622,6 +35655,11 @@ class _StringsJa extends _StringsEn {
   String get anime_download_kind_book => 'Book';
   @override
   String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 // Path: <root>
@@ -40166,6 +40204,11 @@ class _StringsKo extends _StringsEn {
   String get anime_download_kind_book => 'Book';
   @override
   String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 // Path: <root>
@@ -44879,6 +44922,11 @@ class _StringsNl extends _StringsEn {
   String get anime_download_kind_book => 'Book';
   @override
   String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 // Path: <root>
@@ -49607,6 +49655,11 @@ class _StringsPtBr extends _StringsEn {
   String get anime_download_kind_book => 'Book';
   @override
   String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 // Path: <root>
@@ -54318,6 +54371,11 @@ class _StringsRu extends _StringsEn {
   String get anime_download_kind_book => 'Book';
   @override
   String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 // Path: <root>
@@ -58974,6 +59032,11 @@ class _StringsTh extends _StringsEn {
   String get anime_download_kind_book => 'Book';
   @override
   String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 // Path: <root>
@@ -63662,6 +63725,11 @@ class _StringsTr extends _StringsEn {
   String get anime_download_kind_book => 'Book';
   @override
   String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 // Path: <root>
@@ -68337,6 +68405,11 @@ class _StringsVi extends _StringsEn {
   String get anime_download_kind_book => 'Book';
   @override
   String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 // Path: <root>
@@ -72688,6 +72761,10 @@ class _StringsZhCn extends _StringsEn {
   String get anime_download_kind_book => '书';
   @override
   String get nav_downloads => '下载';
+  @override
+  String get video_setting_torrent_memory_limit => '内存占用上限（MB）';
+  @override
+  String get video_setting_torrent_memory_hint => '限制引擎内存占用。0 = 自动（按设备内存推导）。';
 }
 
 // Path: <root>
@@ -77151,6 +77228,11 @@ class _StringsZhHk extends _StringsEn {
   String get anime_download_kind_book => 'Book';
   @override
   String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
 }
 
 /// Flat map(s) containing all translations.
@@ -81355,6 +81437,10 @@ extension on _StringsEn {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
@@ -85557,6 +85643,10 @@ extension on _StringsAr {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
@@ -89780,6 +89870,10 @@ extension on _StringsDe {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
@@ -94002,6 +94096,10 @@ extension on _StringsEs {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
@@ -98230,6 +98328,10 @@ extension on _StringsFr {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
@@ -102440,6 +102542,10 @@ extension on _StringsId {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
@@ -106665,6 +106771,10 @@ extension on _StringsIt {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
@@ -110852,6 +110962,10 @@ extension on _StringsJa {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
@@ -115043,6 +115157,10 @@ extension on _StringsKo {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
@@ -119261,6 +119379,10 @@ extension on _StringsNl {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
@@ -123476,6 +123598,10 @@ extension on _StringsPtBr {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
@@ -127696,6 +127822,10 @@ extension on _StringsRu {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
@@ -131900,6 +132030,10 @@ extension on _StringsTh {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
@@ -136113,6 +136247,10 @@ extension on _StringsTr {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
@@ -140321,6 +140459,10 @@ extension on _StringsVi {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
@@ -144496,6 +144638,10 @@ extension on _StringsZhCn {
         return '书';
       case 'nav_downloads':
         return '下载';
+      case 'video_setting_torrent_memory_limit':
+        return '内存占用上限（MB）';
+      case 'video_setting_torrent_memory_hint':
+        return '限制引擎内存占用。0 = 自动（按设备内存推导）。';
       default:
         return null;
     }
@@ -148678,6 +148824,10 @@ extension on _StringsZhHk {
         return 'Book';
       case 'nav_downloads':
         return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
       default:
         return null;
     }
