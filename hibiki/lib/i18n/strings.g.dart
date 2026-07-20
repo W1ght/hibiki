@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35632 (2096 per locale)
+/// Strings: 36788 (2164 per locale)
 ///
-/// Built on 2026-07-20 at 15:15 UTC
+/// Built on 2026-07-20 at 17:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -676,7 +676,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String stat_format_hours_minutes({required Object h, required Object m}) =>
       '${h} hr ${m} min';
   String stat_format_chars({required Object n}) => '${n} characters';
-  String stat_format_chars_wan({required Object n}) => '${n} characters';
+  String stat_format_chars_wan({required Object n}) => '${n}万 characters';
   String get error_log_share_subject => 'hibiki Error Log';
   String get update_never_remind => 'Don\'t remind me about updates';
   String get update_auto_install => 'Auto-install updates';
@@ -1603,7 +1603,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Controls what remains available after pressing the side lock button';
   String get video_immersive_mode_lookup_only => 'Lookup only';
   String get video_immersive_mode_full => 'Full controls';
-  String get video_immersive_mode_seek_lookup => 'Seek + lookup';
+  String get video_immersive_mode_seek_lookup => 'Shortcut + lookup';
   String get video_immersive_mode_unlock_only => 'Unlock only';
   String get custom_fonts_catalog_title => 'Font library';
   String get startup_default_dictionary_tab => 'Open lookup on startup';
@@ -2405,7 +2405,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Network error. Check your connection and try again.';
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
-  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  String get desktop_clipboard_destination => 'Lookup popup position';
   String get desktop_clipboard_destination_main => 'Main window';
   String get desktop_clipboard_destination_panel => 'Floating panel';
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
@@ -2685,6 +2685,91 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Google/Adobe Serif · Traditional Chinese glyphs priority · Ideal for vertical reading';
   String get custom_fonts_font_roles => 'Font roles';
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  String get games => 'Games';
+  String get games_add => 'Add game';
+  String get games_empty => 'No games added yet';
+  String get games_rename => 'Rename';
+  String get games_remove => 'Remove';
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  String get games_exe_missing => 'Game executable not found';
+  String get nav_home => 'Home';
+  String get home_activity => 'Activity';
+  String get home_continue => 'Continue';
+  String get home_filter_all => 'All';
+  String get home_filter_read => 'Read';
+  String get home_filter_watch => 'Watch';
+  String get home_filter_game => 'Game';
+  String get home_filter_added => 'Added';
+  String get home_stat_library => 'Library';
+  String get home_stat_total_time => 'Total Time';
+  String get home_stat_today => 'Today';
+  String get home_stat_this_week => 'This Week';
+  String get home_stat_this_month => 'This Month';
+  String get home_range_week => 'Week';
+  String get home_range_month => 'Month';
+  String get home_activity_empty => 'No activity yet';
+  String get home_today => 'Today';
+  String get home_yesterday => 'Yesterday';
+  String get activity_just_now => 'Just now';
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  String home_session_count({required Object n}) => '${n} sessions';
+  String get home_dashboard_title => 'Home';
+  String get clipboard_history_title => 'Clipboard history';
+  String get clipboard_history_clear => 'Clear';
+  String get clipboard_history_empty => 'No copy history yet';
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  String get torrent_upload_intro_confirm => 'Save';
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  String get anime_download_generic_hint => 'Magnet link';
+  String get anime_download_generic_download => 'Download';
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  String get anime_download_kind_auto => 'Auto';
+  String get anime_download_kind_video => 'Video';
+  String get anime_download_kind_book => 'Book';
+  String get nav_downloads => 'Downloads';
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  String get galgame_helper_size_unknown => 'unknown size';
+  String get galgame_helper_download => 'Download';
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
   String get floating_lyric_text_opacity_hint =>
       'Lower this to make the floating subtitle text more transparent';
   String get floating_lyric_button_bg_opacity_hint =>
@@ -3692,7 +3777,7 @@ class _StringsAr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} حرف';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} حرف';
+  String stat_format_chars_wan({required Object n}) => '${n}万 حرف';
   @override
   String get error_log_share_subject => 'سجل أخطاء hibiki';
   @override
@@ -5432,7 +5517,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'كامل عناصر التحكم';
   @override
-  String get video_immersive_mode_seek_lookup => 'الانتقال + البحث';
+  String get video_immersive_mode_seek_lookup => 'اختصار + بحث';
   @override
   String get video_immersive_mode_unlock_only => 'إلغاء القفل فقط';
   @override
@@ -7332,6 +7417,159 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
   @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'اخفض هذا لجعل نص الترجمة العائمة أكثر شفافية';
   @override
@@ -8454,7 +8692,7 @@ class _StringsDe extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} Zeichen';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} Zeichen';
+  String stat_format_chars_wan({required Object n}) => '${n}万 Zeichen';
   @override
   String get error_log_share_subject => 'hibiki Fehlerprotokoll';
   @override
@@ -10232,7 +10470,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Alle Bedienelemente';
   @override
-  String get video_immersive_mode_seek_lookup => 'Spulen + Nachschlagen';
+  String get video_immersive_mode_seek_lookup => 'Tastenkürzel + Nachschlagen';
   @override
   String get video_immersive_mode_unlock_only => 'Nur Entsperren';
   @override
@@ -12149,6 +12387,159 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
   @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'Verringern, um den schwebenden Untertiteltext transparenter zu machen';
   @override
@@ -13277,7 +13668,7 @@ class _StringsEs extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caracteres';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} caracteres';
+  String stat_format_chars_wan({required Object n}) => '${n}万 caracteres';
   @override
   String get error_log_share_subject => 'Registro de errores de hibiki';
   @override
@@ -15065,7 +15456,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Todos los controles';
   @override
-  String get video_immersive_mode_seek_lookup => 'Saltar + consultar';
+  String get video_immersive_mode_seek_lookup => 'Atajo + consulta';
   @override
   String get video_immersive_mode_unlock_only => 'Solo desbloquear';
   @override
@@ -16982,6 +17373,159 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
   @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'Bájala para que el texto del subtítulo flotante sea más transparente';
   @override
@@ -18114,7 +18658,7 @@ class _StringsFr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caractères';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} caractères';
+  String stat_format_chars_wan({required Object n}) => '${n}万 caractères';
   @override
   String get error_log_share_subject => 'Journal d\'erreurs hibiki';
   @override
@@ -19909,7 +20453,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Tous les contrôles';
   @override
-  String get video_immersive_mode_seek_lookup => 'Navigation + recherche';
+  String get video_immersive_mode_seek_lookup => 'Raccourci + recherche';
   @override
   String get video_immersive_mode_unlock_only => 'Déverrouillage uniquement';
   @override
@@ -21826,6 +22370,159 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
   @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'Baissez cette valeur pour rendre le texte du sous-titre flottant plus transparent';
   @override
@@ -22938,7 +23635,7 @@ class _StringsId extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} karakter';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} karakter';
+  String stat_format_chars_wan({required Object n}) => '${n}万 karakter';
   @override
   String get error_log_share_subject => 'Log Error hibiki';
   @override
@@ -24686,7 +25383,7 @@ class _StringsId extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Kontrol penuh';
   @override
-  String get video_immersive_mode_seek_lookup => 'Lompat + pencarian kata';
+  String get video_immersive_mode_seek_lookup => 'Pintasan + pencarian kata';
   @override
   String get video_immersive_mode_unlock_only => 'Hanya buka kunci';
   @override
@@ -26597,6 +27294,159 @@ class _StringsId extends _StringsEn {
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
   @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'Turunkan untuk membuat teks subtitle melayang lebih transparan';
   @override
@@ -27722,7 +28572,7 @@ class _StringsIt extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caratteri';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} caratteri';
+  String stat_format_chars_wan({required Object n}) => '${n}万 caratteri';
   @override
   String get error_log_share_subject => 'Registro errori hibiki';
   @override
@@ -29499,7 +30349,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Tutti i controlli';
   @override
-  String get video_immersive_mode_seek_lookup => 'Spostamento + ricerca';
+  String get video_immersive_mode_seek_lookup => 'Scorciatoia + ricerca';
   @override
   String get video_immersive_mode_unlock_only => 'Solo sblocco';
   @override
@@ -31415,6 +32265,159 @@ class _StringsIt extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Abbassa questo valore per rendere più trasparente il testo del sottotitolo fluttuante';
@@ -34166,7 +35169,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'すべての操作';
   @override
-  String get video_immersive_mode_seek_lookup => 'シーク＋辞書引き';
+  String get video_immersive_mode_seek_lookup => 'ショートカット＋辞書引き';
   @override
   String get video_immersive_mode_unlock_only => 'ロック解除のみ';
   @override
@@ -36040,6 +37043,159 @@ class _StringsJa extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
   @override
   String get floating_lyric_text_opacity_hint => '下げるとフローティング字幕の文字がより透明になります';
   @override
@@ -38794,7 +39950,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_immersive_mode_full => '전체 조작';
   @override
-  String get video_immersive_mode_seek_lookup => '이동 + 단어 찾기';
+  String get video_immersive_mode_seek_lookup => '단축키 + 단어 찾기';
   @override
   String get video_immersive_mode_unlock_only => '잠금 해제만';
   @override
@@ -40668,6 +41824,159 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
   @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
   String get floating_lyric_text_opacity_hint => '낮추면 플로팅 자막 텍스트가 더 투명해집니다';
   @override
   String get floating_lyric_button_bg_opacity_hint =>
@@ -41783,7 +43092,7 @@ class _StringsNl extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} tekens';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} tekens';
+  String stat_format_chars_wan({required Object n}) => '${n}万 tekens';
   @override
   String get error_log_share_subject => 'hibiki foutenlogboek';
   @override
@@ -43553,7 +44862,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Alle bediening';
   @override
-  String get video_immersive_mode_seek_lookup => 'Spoelen + opzoeken';
+  String get video_immersive_mode_seek_lookup => 'Sneltoets + opzoeken';
   @override
   String get video_immersive_mode_unlock_only => 'Alleen ontgrendelen';
   @override
@@ -45464,6 +46773,159 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
   @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'Verlaag dit om de tekst van de zwevende ondertitel transparanter te maken';
   @override
@@ -46588,7 +48050,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caracteres';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} caracteres';
+  String stat_format_chars_wan({required Object n}) => '${n}万 caracteres';
   @override
   String get error_log_share_subject => 'Log de Erros do hibiki';
   @override
@@ -48361,7 +49823,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Todos os controles';
   @override
-  String get video_immersive_mode_seek_lookup => 'Avançar + consultar';
+  String get video_immersive_mode_seek_lookup => 'Atalho + consulta';
   @override
   String get video_immersive_mode_unlock_only => 'Apenas desbloquear';
   @override
@@ -50276,6 +51738,159 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
   @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'Reduza para deixar o texto da legenda flutuante mais transparente';
   @override
@@ -51393,7 +53008,7 @@ class _StringsRu extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} символов';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} символов';
+  String stat_format_chars_wan({required Object n}) => '${n}万 символов';
   @override
   String get error_log_share_subject => 'Журнал ошибок hibiki';
   @override
@@ -53154,7 +54769,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Все элементы управления';
   @override
-  String get video_immersive_mode_seek_lookup => 'Перемотка + поиск слов';
+  String get video_immersive_mode_seek_lookup => 'Горячая клавиша + поиск слов';
   @override
   String get video_immersive_mode_unlock_only => 'Только разблокировка';
   @override
@@ -55071,6 +56686,159 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
   @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'Уменьшите, чтобы текст плавающих субтитров стал прозрачнее';
   @override
@@ -56174,7 +57942,7 @@ class _StringsTh extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} ตัวอักษร';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} ตัวอักษร';
+  String stat_format_chars_wan({required Object n}) => '${n}万 ตัวอักษร';
   @override
   String get error_log_share_subject => 'บันทึกข้อผิดพลาด hibiki';
   @override
@@ -57907,7 +59675,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'ควบคุมทั้งหมด';
   @override
-  String get video_immersive_mode_seek_lookup => 'เลื่อนเวลา + ค้นคำ';
+  String get video_immersive_mode_seek_lookup => 'ทางลัด + ค้นคำ';
   @override
   String get video_immersive_mode_unlock_only => 'เฉพาะปลดล็อก';
   @override
@@ -59811,6 +61579,159 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
   @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'ลดค่านี้เพื่อให้ตัวอักษรคำบรรยายลอยโปร่งใสขึ้น';
   @override
@@ -60923,7 +62844,7 @@ class _StringsTr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} karakter';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} karakter';
+  String stat_format_chars_wan({required Object n}) => '${n}万 karakter';
   @override
   String get error_log_share_subject => 'hibiki Hata Günlüğü';
   @override
@@ -62677,7 +64598,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Tüm denetimler';
   @override
-  String get video_immersive_mode_seek_lookup => 'Sarma + arama';
+  String get video_immersive_mode_seek_lookup => 'Kısayol + arama';
   @override
   String get video_immersive_mode_unlock_only => 'Yalnızca kilit açma';
   @override
@@ -64583,6 +66504,159 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
   @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
+  @override
   String get floating_lyric_text_opacity_hint =>
       'Kayan altyazı metnini daha saydam yapmak için bunu azaltın';
   @override
@@ -65689,7 +67763,7 @@ class _StringsVi extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} ký tự';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} ký tự';
+  String stat_format_chars_wan({required Object n}) => '${n}万 ký tự';
   @override
   String get error_log_share_subject => 'Nhật ký lỗi hibiki';
   @override
@@ -67437,7 +69511,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_immersive_mode_full => 'Toàn bộ điều khiển';
   @override
-  String get video_immersive_mode_seek_lookup => 'Tua + tra từ';
+  String get video_immersive_mode_seek_lookup => 'Phím tắt + tra từ';
   @override
   String get video_immersive_mode_unlock_only => 'Chỉ mở khóa';
   @override
@@ -69341,6 +71415,159 @@ class _StringsVi extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Giảm xuống để chữ phụ đề nổi trong suốt hơn';
@@ -72032,7 +74259,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_immersive_mode_full => '全部功能';
   @override
-  String get video_immersive_mode_seek_lookup => '跳转 + 查词';
+  String get video_immersive_mode_seek_lookup => '快捷键 + 查词';
   @override
   String get video_immersive_mode_unlock_only => '仅解锁';
   @override
@@ -73332,7 +75559,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error => '搜索失败，请稍后重试。';
   @override
-  String get desktop_clipboard_destination => '剪贴板查词显示位置';
+  String get desktop_clipboard_destination => '查词弹窗位置';
   @override
   String get desktop_clipboard_destination_main => '主窗口';
   @override
@@ -73786,6 +76013,147 @@ class _StringsZhCn extends _StringsEn {
   String get custom_fonts_font_roles => '字体用途';
   @override
   String get video_clip_export_cancelled => '已取消片段导出';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev => '上一句字幕对齐到当前时间';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next => '下一句字幕对齐到当前时间';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      '循环副字幕遮蔽';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide => '隐藏副字幕';
+  @override
+  String get video_setting_secondary_subtitle_obscure => '副字幕遮蔽';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint => '模糊或隐藏副字幕（翻译参考轨）';
+  @override
+  String get games => '游戏';
+  @override
+  String get games_add => '添加游戏';
+  @override
+  String get games_empty => '还没有添加游戏';
+  @override
+  String get games_rename => '重命名';
+  @override
+  String get games_remove => '移除';
+  @override
+  String get games_launch_unsupported => '启动游戏仅支持 Windows 桌面';
+  @override
+  String get games_exe_missing => '找不到游戏可执行文件';
+  @override
+  String get nav_home => '首页';
+  @override
+  String get home_activity => '活动';
+  @override
+  String get home_continue => '继续';
+  @override
+  String get home_filter_all => '全部';
+  @override
+  String get home_filter_read => '阅读';
+  @override
+  String get home_filter_watch => '观看';
+  @override
+  String get home_filter_game => '游戏';
+  @override
+  String get home_filter_added => '导入';
+  @override
+  String get home_stat_library => '媒体库';
+  @override
+  String get home_stat_total_time => '总时长';
+  @override
+  String get home_stat_today => '今日';
+  @override
+  String get home_stat_this_week => '本周';
+  @override
+  String get home_stat_this_month => '本月';
+  @override
+  String get home_range_week => '周';
+  @override
+  String get home_range_month => '月';
+  @override
+  String get home_activity_empty => '暂无活动记录';
+  @override
+  String get home_today => '今天';
+  @override
+  String get home_yesterday => '昨天';
+  @override
+  String get activity_just_now => '刚刚';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} 分钟前';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} 小时前';
+  @override
+  String activity_days_ago({required Object n}) => '${n} 天前';
+  @override
+  String home_session_count({required Object n}) => '${n} 次';
+  @override
+  String get home_dashboard_title => '首页';
+  @override
+  String get clipboard_history_title => '复制历史';
+  @override
+  String get clipboard_history_clear => '清空';
+  @override
+  String get clipboard_history_empty => '暂无复制记录';
+  @override
+  String get video_setting_torrent_upload_enabled => '启用上传 / 做种';
+  @override
+  String get video_setting_torrent_upload_enabled_hint => '默认关闭。下载完成后向网络回传做种。';
+  @override
+  String get video_setting_torrent_seed_time_limit => '做种时长上限（分钟）';
+  @override
+  String get video_setting_torrent_seed_time_hint => '做种超过此时长后停止上传。0 = 不限。';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => '做种分享率上限';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      '上传/下载比值达到此值后停止上传。0 = 不限。';
+  @override
+  String get torrent_upload_intro_title => '上传 / 做种';
+  @override
+  String get torrent_upload_intro_body =>
+      '上传（做种）默认关闭。开启后会把下载内容回传给网络，会占用你的上传带宽。可随时在「设置」里修改。';
+  @override
+  String get torrent_upload_intro_enable => '启用上传 / 做种';
+  @override
+  String get torrent_upload_intro_keep_off => '保持关闭';
+  @override
+  String get torrent_upload_intro_confirm => '保存';
+  @override
+  String get anime_download_generic_title => '粘贴链接下载（书、视频等）';
+  @override
+  String get anime_download_generic_hint => '磁力链接';
+  @override
+  String get anime_download_generic_download => '下载';
+  @override
+  String get anime_download_magnet_invalid => '磁力链接无效';
+  @override
+  String get anime_download_kind_auto => '自动';
+  @override
+  String get anime_download_kind_video => '视频';
+  @override
+  String get anime_download_kind_book => '书';
+  @override
+  String get nav_downloads => '下载';
+  @override
+  String get video_setting_torrent_memory_limit => '内存占用上限（MB）';
+  @override
+  String get video_setting_torrent_memory_hint => '限制引擎内存占用。0 = 自动（按设备内存推导）。';
+  @override
+  String get galgame_helper_needed_title => '需要下载 galgame 引擎组件';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      '启动 galgame 需要引擎-hook 注入器组件（约 ${size}）。它含进程注入代码，与主程序分离分发以避免杀软误报。现在下载吗？';
+  @override
+  String get galgame_helper_size_unknown => '大小未知';
+  @override
+  String get galgame_helper_download => '下载';
+  @override
+  String get galgame_helper_downloading => '正在下载引擎组件…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      '引擎组件下载失败：${error}';
+  @override
+  String get galgame_helper_install_incomplete => '引擎组件安装不完整，请重试';
   @override
   String get floating_lyric_text_opacity_hint => '调低让悬浮字幕文字更透明';
   @override
@@ -76461,7 +78829,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_immersive_mode_full => '全部功能';
   @override
-  String get video_immersive_mode_seek_lookup => '跳轉＋查詞';
+  String get video_immersive_mode_seek_lookup => '快捷鍵＋查詞';
   @override
   String get video_immersive_mode_unlock_only => '僅解鎖';
   @override
@@ -77821,7 +80189,7 @@ class _StringsZhHk extends _StringsEn {
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
   @override
-  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  String get desktop_clipboard_destination => '查詞彈窗位置';
   @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
@@ -78316,6 +80684,159 @@ class _StringsZhHk extends _StringsEn {
   String get custom_fonts_font_roles => 'Font roles';
   @override
   String get video_clip_export_cancelled => 'Clip export cancelled';
+  @override
+  String get shortcut_action_video_align_subtitle_to_prev =>
+      'Align previous subtitle to now';
+  @override
+  String get shortcut_action_video_align_subtitle_to_next =>
+      'Align next subtitle to now';
+  @override
+  String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
+      'Cycle Secondary Subtitle Obscure';
+  @override
+  String get shortcut_action_video_toggle_secondary_subtitle_hide =>
+      'Toggle Hide Secondary Subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure =>
+      'Obscure secondary subtitle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_hint =>
+      'Blur or hide the secondary (translation) subtitle';
+  @override
+  String get games => 'Games';
+  @override
+  String get games_add => 'Add game';
+  @override
+  String get games_empty => 'No games added yet';
+  @override
+  String get games_rename => 'Rename';
+  @override
+  String get games_remove => 'Remove';
+  @override
+  String get games_launch_unsupported =>
+      'Launching games is only supported on Windows';
+  @override
+  String get games_exe_missing => 'Game executable not found';
+  @override
+  String get nav_home => 'Home';
+  @override
+  String get home_activity => 'Activity';
+  @override
+  String get home_continue => 'Continue';
+  @override
+  String get home_filter_all => 'All';
+  @override
+  String get home_filter_read => 'Read';
+  @override
+  String get home_filter_watch => 'Watch';
+  @override
+  String get home_filter_game => 'Game';
+  @override
+  String get home_filter_added => 'Added';
+  @override
+  String get home_stat_library => 'Library';
+  @override
+  String get home_stat_total_time => 'Total Time';
+  @override
+  String get home_stat_today => 'Today';
+  @override
+  String get home_stat_this_week => 'This Week';
+  @override
+  String get home_stat_this_month => 'This Month';
+  @override
+  String get home_range_week => 'Week';
+  @override
+  String get home_range_month => 'Month';
+  @override
+  String get home_activity_empty => 'No activity yet';
+  @override
+  String get home_today => 'Today';
+  @override
+  String get home_yesterday => 'Yesterday';
+  @override
+  String get activity_just_now => 'Just now';
+  @override
+  String activity_minutes_ago({required Object n}) => '${n} min ago';
+  @override
+  String activity_hours_ago({required Object n}) => '${n} h ago';
+  @override
+  String activity_days_ago({required Object n}) => '${n} d ago';
+  @override
+  String home_session_count({required Object n}) => '${n} sessions';
+  @override
+  String get home_dashboard_title => 'Home';
+  @override
+  String get clipboard_history_title => 'Clipboard history';
+  @override
+  String get clipboard_history_clear => 'Clear';
+  @override
+  String get clipboard_history_empty => 'No copy history yet';
+  @override
+  String get video_setting_torrent_upload_enabled => 'Enable upload / seeding';
+  @override
+  String get video_setting_torrent_upload_enabled_hint =>
+      'Off by default. Seed back to the swarm after downloading.';
+  @override
+  String get video_setting_torrent_seed_time_limit =>
+      'Seed time limit (minutes)';
+  @override
+  String get video_setting_torrent_seed_time_hint =>
+      'Stop uploading after seeding this long. 0 = unlimited.';
+  @override
+  String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
+  @override
+  String get video_setting_torrent_seed_ratio_hint =>
+      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  @override
+  String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get torrent_upload_intro_body =>
+      'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+  @override
+  String get torrent_upload_intro_enable => 'Enable upload / seeding';
+  @override
+  String get torrent_upload_intro_keep_off => 'Keep off';
+  @override
+  String get torrent_upload_intro_confirm => 'Save';
+  @override
+  String get anime_download_generic_title =>
+      'Paste a link (books, videos, anything)';
+  @override
+  String get anime_download_generic_hint => 'Magnet link';
+  @override
+  String get anime_download_generic_download => 'Download';
+  @override
+  String get anime_download_magnet_invalid => 'Invalid magnet link';
+  @override
+  String get anime_download_kind_auto => 'Auto';
+  @override
+  String get anime_download_kind_video => 'Video';
+  @override
+  String get anime_download_kind_book => 'Book';
+  @override
+  String get nav_downloads => 'Downloads';
+  @override
+  String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
+  @override
+  String get video_setting_torrent_memory_hint =>
+      'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
   @override
   String get floating_lyric_text_opacity_hint => '調低可讓懸浮字幕文字更透明';
   @override
@@ -79404,7 +81925,7 @@ extension on _StringsEn {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} characters';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} characters';
+        return ({required Object n}) => '${n}万 characters';
       case 'error_log_share_subject':
         return 'hibiki Error Log';
       case 'update_never_remind':
@@ -80938,7 +83459,7 @@ extension on _StringsEn {
       case 'video_immersive_mode_full':
         return 'Full controls';
       case 'video_immersive_mode_seek_lookup':
-        return 'Seek + lookup';
+        return 'Shortcut + lookup';
       case 'video_immersive_mode_unlock_only':
         return 'Unlock only';
       case 'custom_fonts_catalog_title':
@@ -82171,7 +84692,7 @@ extension on _StringsEn {
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
-        return 'Clipboard lookup destination';
+        return 'Lookup popup position';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -82613,6 +85134,144 @@ extension on _StringsEn {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return 'Lower this to make the floating subtitle text more transparent';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -83634,7 +86293,7 @@ extension on _StringsAr {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} حرف';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} حرف';
+        return ({required Object n}) => '${n}万 حرف';
       case 'error_log_share_subject':
         return 'سجل أخطاء hibiki';
       case 'update_never_remind':
@@ -85216,7 +87875,7 @@ extension on _StringsAr {
       case 'video_immersive_mode_full':
         return 'كامل عناصر التحكم';
       case 'video_immersive_mode_seek_lookup':
-        return 'الانتقال + البحث';
+        return 'اختصار + بحث';
       case 'video_immersive_mode_unlock_only':
         return 'إلغاء القفل فقط';
       case 'custom_fonts_catalog_title':
@@ -86893,6 +89552,144 @@ extension on _StringsAr {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return 'اخفض هذا لجعل نص الترجمة العائمة أكثر شفافية';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -87921,7 +90718,7 @@ extension on _StringsDe {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} Zeichen';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} Zeichen';
+        return ({required Object n}) => '${n}万 Zeichen';
       case 'error_log_share_subject':
         return 'hibiki Fehlerprotokoll';
       case 'update_never_remind':
@@ -89516,7 +92313,7 @@ extension on _StringsDe {
       case 'video_immersive_mode_full':
         return 'Alle Bedienelemente';
       case 'video_immersive_mode_seek_lookup':
-        return 'Spulen + Nachschlagen';
+        return 'Tastenkürzel + Nachschlagen';
       case 'video_immersive_mode_unlock_only':
         return 'Nur Entsperren';
       case 'custom_fonts_catalog_title':
@@ -91194,6 +93991,144 @@ extension on _StringsDe {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return 'Verringern, um den schwebenden Untertiteltext transparenter zu machen';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -92221,7 +95156,7 @@ extension on _StringsEs {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caracteres';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} caracteres';
+        return ({required Object n}) => '${n}万 caracteres';
       case 'error_log_share_subject':
         return 'Registro de errores de hibiki';
       case 'update_never_remind':
@@ -93815,7 +96750,7 @@ extension on _StringsEs {
       case 'video_immersive_mode_full':
         return 'Todos los controles';
       case 'video_immersive_mode_seek_lookup':
-        return 'Saltar + consultar';
+        return 'Atajo + consulta';
       case 'video_immersive_mode_unlock_only':
         return 'Solo desbloquear';
       case 'custom_fonts_catalog_title':
@@ -95494,6 +98429,144 @@ extension on _StringsEs {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return 'Bájala para que el texto del subtítulo flotante sea más transparente';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -96519,7 +99592,7 @@ extension on _StringsFr {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caractères';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} caractères';
+        return ({required Object n}) => '${n}万 caractères';
       case 'error_log_share_subject':
         return 'Journal d\'erreurs hibiki';
       case 'update_never_remind':
@@ -98118,7 +101191,7 @@ extension on _StringsFr {
       case 'video_immersive_mode_full':
         return 'Tous les contrôles';
       case 'video_immersive_mode_seek_lookup':
-        return 'Navigation + recherche';
+        return 'Raccourci + recherche';
       case 'video_immersive_mode_unlock_only':
         return 'Déverrouillage uniquement';
       case 'custom_fonts_catalog_title':
@@ -99800,6 +102873,144 @@ extension on _StringsFr {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return 'Baissez cette valeur pour rendre le texte du sous-titre flottant plus transparent';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -100825,7 +104036,7 @@ extension on _StringsId {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} karakter';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} karakter';
+        return ({required Object n}) => '${n}万 karakter';
       case 'error_log_share_subject':
         return 'Log Error hibiki';
       case 'update_never_remind':
@@ -102411,7 +105622,7 @@ extension on _StringsId {
       case 'video_immersive_mode_full':
         return 'Kontrol penuh';
       case 'video_immersive_mode_seek_lookup':
-        return 'Lompat + pencarian kata';
+        return 'Pintasan + pencarian kata';
       case 'video_immersive_mode_unlock_only':
         return 'Hanya buka kunci';
       case 'custom_fonts_catalog_title':
@@ -104088,6 +107299,144 @@ extension on _StringsId {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return 'Turunkan untuk membuat teks subtitle melayang lebih transparan';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -105114,7 +108463,7 @@ extension on _StringsIt {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caratteri';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} caratteri';
+        return ({required Object n}) => '${n}万 caratteri';
       case 'error_log_share_subject':
         return 'Registro errori hibiki';
       case 'update_never_remind':
@@ -106708,7 +110057,7 @@ extension on _StringsIt {
       case 'video_immersive_mode_full':
         return 'Tutti i controlli';
       case 'video_immersive_mode_seek_lookup':
-        return 'Spostamento + ricerca';
+        return 'Scorciatoia + ricerca';
       case 'video_immersive_mode_unlock_only':
         return 'Solo sblocco';
       case 'custom_fonts_catalog_title':
@@ -108391,6 +111740,144 @@ extension on _StringsIt {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return 'Abbassa questo valore per rendere più trasparente il testo del sottotitolo fluttuante';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -110983,7 +114470,7 @@ extension on _StringsJa {
       case 'video_immersive_mode_full':
         return 'すべての操作';
       case 'video_immersive_mode_seek_lookup':
-        return 'シーク＋辞書引き';
+        return 'ショートカット＋辞書引き';
       case 'video_immersive_mode_unlock_only':
         return 'ロック解除のみ';
       case 'custom_fonts_catalog_title':
@@ -112656,6 +116143,144 @@ extension on _StringsJa {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return '下げるとフローティング字幕の文字がより透明になります';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -115251,7 +118876,7 @@ extension on _StringsKo {
       case 'video_immersive_mode_full':
         return '전체 조작';
       case 'video_immersive_mode_seek_lookup':
-        return '이동 + 단어 찾기';
+        return '단축키 + 단어 찾기';
       case 'video_immersive_mode_unlock_only':
         return '잠금 해제만';
       case 'custom_fonts_catalog_title':
@@ -116925,6 +120550,144 @@ extension on _StringsKo {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return '낮추면 플로팅 자막 텍스트가 더 투명해집니다';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -117952,7 +121715,7 @@ extension on _StringsNl {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} tekens';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} tekens';
+        return ({required Object n}) => '${n}万 tekens';
       case 'error_log_share_subject':
         return 'hibiki foutenlogboek';
       case 'update_never_remind':
@@ -119541,7 +123304,7 @@ extension on _StringsNl {
       case 'video_immersive_mode_full':
         return 'Alle bediening';
       case 'video_immersive_mode_seek_lookup':
-        return 'Spoelen + opzoeken';
+        return 'Sneltoets + opzoeken';
       case 'video_immersive_mode_unlock_only':
         return 'Alleen ontgrendelen';
       case 'custom_fonts_catalog_title':
@@ -121221,6 +124984,144 @@ extension on _StringsNl {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return 'Verlaag dit om de tekst van de zwevende ondertitel transparanter te maken';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -122246,7 +126147,7 @@ extension on _StringsPtBr {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caracteres';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} caracteres';
+        return ({required Object n}) => '${n}万 caracteres';
       case 'error_log_share_subject':
         return 'Log de Erros do hibiki';
       case 'update_never_remind':
@@ -123836,7 +127737,7 @@ extension on _StringsPtBr {
       case 'video_immersive_mode_full':
         return 'Todos os controles';
       case 'video_immersive_mode_seek_lookup':
-        return 'Avançar + consultar';
+        return 'Atalho + consulta';
       case 'video_immersive_mode_unlock_only':
         return 'Apenas desbloquear';
       case 'custom_fonts_catalog_title':
@@ -125514,6 +129415,144 @@ extension on _StringsPtBr {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return 'Reduza para deixar o texto da legenda flutuante mais transparente';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -126539,7 +130578,7 @@ extension on _StringsRu {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} символов';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} символов';
+        return ({required Object n}) => '${n}万 символов';
       case 'error_log_share_subject':
         return 'Журнал ошибок hibiki';
       case 'update_never_remind':
@@ -128132,7 +132171,7 @@ extension on _StringsRu {
       case 'video_immersive_mode_full':
         return 'Все элементы управления';
       case 'video_immersive_mode_seek_lookup':
-        return 'Перемотка + поиск слов';
+        return 'Горячая клавиша + поиск слов';
       case 'video_immersive_mode_unlock_only':
         return 'Только разблокировка';
       case 'custom_fonts_catalog_title':
@@ -129812,6 +133851,144 @@ extension on _StringsRu {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return 'Уменьшите, чтобы текст плавающих субтитров стал прозрачнее';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -130836,7 +135013,7 @@ extension on _StringsTh {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} ตัวอักษร';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} ตัวอักษร';
+        return ({required Object n}) => '${n}万 ตัวอักษร';
       case 'error_log_share_subject':
         return 'บันทึกข้อผิดพลาด hibiki';
       case 'update_never_remind':
@@ -132417,7 +136594,7 @@ extension on _StringsTh {
       case 'video_immersive_mode_full':
         return 'ควบคุมทั้งหมด';
       case 'video_immersive_mode_seek_lookup':
-        return 'เลื่อนเวลา + ค้นคำ';
+        return 'ทางลัด + ค้นคำ';
       case 'video_immersive_mode_unlock_only':
         return 'เฉพาะปลดล็อก';
       case 'custom_fonts_catalog_title':
@@ -134094,6 +138271,144 @@ extension on _StringsTh {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return 'ลดค่านี้เพื่อให้ตัวอักษรคำบรรยายลอยโปร่งใสขึ้น';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -135119,7 +139434,7 @@ extension on _StringsTr {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} karakter';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} karakter';
+        return ({required Object n}) => '${n}万 karakter';
       case 'error_log_share_subject':
         return 'hibiki Hata Günlüğü';
       case 'update_never_remind':
@@ -136704,7 +141019,7 @@ extension on _StringsTr {
       case 'video_immersive_mode_full':
         return 'Tüm denetimler';
       case 'video_immersive_mode_seek_lookup':
-        return 'Sarma + arama';
+        return 'Kısayol + arama';
       case 'video_immersive_mode_unlock_only':
         return 'Yalnızca kilit açma';
       case 'custom_fonts_catalog_title':
@@ -138385,6 +142700,144 @@ extension on _StringsTr {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return 'Kayan altyazı metnini daha saydam yapmak için bunu azaltın';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -139409,7 +143862,7 @@ extension on _StringsVi {
       case 'stat_format_chars':
         return ({required Object n}) => '${n} ký tự';
       case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} ký tự';
+        return ({required Object n}) => '${n}万 ký tự';
       case 'error_log_share_subject':
         return 'Nhật ký lỗi hibiki';
       case 'update_never_remind':
@@ -140993,7 +145446,7 @@ extension on _StringsVi {
       case 'video_immersive_mode_full':
         return 'Toàn bộ điều khiển';
       case 'video_immersive_mode_seek_lookup':
-        return 'Tua + tra từ';
+        return 'Phím tắt + tra từ';
       case 'video_immersive_mode_unlock_only':
         return 'Chỉ mở khóa';
       case 'custom_fonts_catalog_title':
@@ -142671,6 +147124,144 @@ extension on _StringsVi {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return 'Giảm xuống để chữ phụ đề nổi trong suốt hơn';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -145260,7 +149851,7 @@ extension on _StringsZhCn {
       case 'video_immersive_mode_full':
         return '全部功能';
       case 'video_immersive_mode_seek_lookup':
-        return '跳转 + 查词';
+        return '快捷键 + 查词';
       case 'video_immersive_mode_unlock_only':
         return '仅解锁';
       case 'custom_fonts_catalog_title':
@@ -146485,7 +151076,7 @@ extension on _StringsZhCn {
       case 'video_danmaku_manual_server_error':
         return '搜索失败，请稍后重试。';
       case 'desktop_clipboard_destination':
-        return '剪贴板查词显示位置';
+        return '查词弹窗位置';
       case 'desktop_clipboard_destination_main':
         return '主窗口';
       case 'desktop_clipboard_destination_panel':
@@ -146924,6 +151515,143 @@ extension on _StringsZhCn {
         return '字体用途';
       case 'video_clip_export_cancelled':
         return '已取消片段导出';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return '上一句字幕对齐到当前时间';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return '下一句字幕对齐到当前时间';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return '循环副字幕遮蔽';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return '隐藏副字幕';
+      case 'video_setting_secondary_subtitle_obscure':
+        return '副字幕遮蔽';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return '模糊或隐藏副字幕（翻译参考轨）';
+      case 'games':
+        return '游戏';
+      case 'games_add':
+        return '添加游戏';
+      case 'games_empty':
+        return '还没有添加游戏';
+      case 'games_rename':
+        return '重命名';
+      case 'games_remove':
+        return '移除';
+      case 'games_launch_unsupported':
+        return '启动游戏仅支持 Windows 桌面';
+      case 'games_exe_missing':
+        return '找不到游戏可执行文件';
+      case 'nav_home':
+        return '首页';
+      case 'home_activity':
+        return '活动';
+      case 'home_continue':
+        return '继续';
+      case 'home_filter_all':
+        return '全部';
+      case 'home_filter_read':
+        return '阅读';
+      case 'home_filter_watch':
+        return '观看';
+      case 'home_filter_game':
+        return '游戏';
+      case 'home_filter_added':
+        return '导入';
+      case 'home_stat_library':
+        return '媒体库';
+      case 'home_stat_total_time':
+        return '总时长';
+      case 'home_stat_today':
+        return '今日';
+      case 'home_stat_this_week':
+        return '本周';
+      case 'home_stat_this_month':
+        return '本月';
+      case 'home_range_week':
+        return '周';
+      case 'home_range_month':
+        return '月';
+      case 'home_activity_empty':
+        return '暂无活动记录';
+      case 'home_today':
+        return '今天';
+      case 'home_yesterday':
+        return '昨天';
+      case 'activity_just_now':
+        return '刚刚';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} 分钟前';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} 小时前';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} 天前';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} 次';
+      case 'home_dashboard_title':
+        return '首页';
+      case 'clipboard_history_title':
+        return '复制历史';
+      case 'clipboard_history_clear':
+        return '清空';
+      case 'clipboard_history_empty':
+        return '暂无复制记录';
+      case 'video_setting_torrent_upload_enabled':
+        return '启用上传 / 做种';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return '默认关闭。下载完成后向网络回传做种。';
+      case 'video_setting_torrent_seed_time_limit':
+        return '做种时长上限（分钟）';
+      case 'video_setting_torrent_seed_time_hint':
+        return '做种超过此时长后停止上传。0 = 不限。';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return '做种分享率上限';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return '上传/下载比值达到此值后停止上传。0 = 不限。';
+      case 'torrent_upload_intro_title':
+        return '上传 / 做种';
+      case 'torrent_upload_intro_body':
+        return '上传（做种）默认关闭。开启后会把下载内容回传给网络，会占用你的上传带宽。可随时在「设置」里修改。';
+      case 'torrent_upload_intro_enable':
+        return '启用上传 / 做种';
+      case 'torrent_upload_intro_keep_off':
+        return '保持关闭';
+      case 'torrent_upload_intro_confirm':
+        return '保存';
+      case 'anime_download_generic_title':
+        return '粘贴链接下载（书、视频等）';
+      case 'anime_download_generic_hint':
+        return '磁力链接';
+      case 'anime_download_generic_download':
+        return '下载';
+      case 'anime_download_magnet_invalid':
+        return '磁力链接无效';
+      case 'anime_download_kind_auto':
+        return '自动';
+      case 'anime_download_kind_video':
+        return '视频';
+      case 'anime_download_kind_book':
+        return '书';
+      case 'nav_downloads':
+        return '下载';
+      case 'video_setting_torrent_memory_limit':
+        return '内存占用上限（MB）';
+      case 'video_setting_torrent_memory_hint':
+        return '限制引擎内存占用。0 = 自动（按设备内存推导）。';
+      case 'galgame_helper_needed_title':
+        return '需要下载 galgame 引擎组件';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            '启动 galgame 需要引擎-hook 注入器组件（约 ${size}）。它含进程注入代码，与主程序分离分发以避免杀软误报。现在下载吗？';
+      case 'galgame_helper_size_unknown':
+        return '大小未知';
+      case 'galgame_helper_download':
+        return '下载';
+      case 'galgame_helper_downloading':
+        return '正在下载引擎组件…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) => '引擎组件下载失败：${error}';
+      case 'galgame_helper_install_incomplete':
+        return '引擎组件安装不完整，请重试';
       case 'floating_lyric_text_opacity_hint':
         return '调低让悬浮字幕文字更透明';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -149514,7 +154242,7 @@ extension on _StringsZhHk {
       case 'video_immersive_mode_full':
         return '全部功能';
       case 'video_immersive_mode_seek_lookup':
-        return '跳轉＋查詞';
+        return '快捷鍵＋查詞';
       case 'video_immersive_mode_unlock_only':
         return '僅解鎖';
       case 'custom_fonts_catalog_title':
@@ -150743,7 +155471,7 @@ extension on _StringsZhHk {
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
-        return 'Clipboard lookup destination';
+        return '查詞彈窗位置';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -151184,6 +155912,144 @@ extension on _StringsZhHk {
         return 'Font roles';
       case 'video_clip_export_cancelled':
         return 'Clip export cancelled';
+      case 'shortcut_action_video_align_subtitle_to_prev':
+        return 'Align previous subtitle to now';
+      case 'shortcut_action_video_align_subtitle_to_next':
+        return 'Align next subtitle to now';
+      case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
+        return 'Cycle Secondary Subtitle Obscure';
+      case 'shortcut_action_video_toggle_secondary_subtitle_hide':
+        return 'Toggle Hide Secondary Subtitle';
+      case 'video_setting_secondary_subtitle_obscure':
+        return 'Obscure secondary subtitle';
+      case 'video_setting_secondary_subtitle_obscure_hint':
+        return 'Blur or hide the secondary (translation) subtitle';
+      case 'games':
+        return 'Games';
+      case 'games_add':
+        return 'Add game';
+      case 'games_empty':
+        return 'No games added yet';
+      case 'games_rename':
+        return 'Rename';
+      case 'games_remove':
+        return 'Remove';
+      case 'games_launch_unsupported':
+        return 'Launching games is only supported on Windows';
+      case 'games_exe_missing':
+        return 'Game executable not found';
+      case 'nav_home':
+        return 'Home';
+      case 'home_activity':
+        return 'Activity';
+      case 'home_continue':
+        return 'Continue';
+      case 'home_filter_all':
+        return 'All';
+      case 'home_filter_read':
+        return 'Read';
+      case 'home_filter_watch':
+        return 'Watch';
+      case 'home_filter_game':
+        return 'Game';
+      case 'home_filter_added':
+        return 'Added';
+      case 'home_stat_library':
+        return 'Library';
+      case 'home_stat_total_time':
+        return 'Total Time';
+      case 'home_stat_today':
+        return 'Today';
+      case 'home_stat_this_week':
+        return 'This Week';
+      case 'home_stat_this_month':
+        return 'This Month';
+      case 'home_range_week':
+        return 'Week';
+      case 'home_range_month':
+        return 'Month';
+      case 'home_activity_empty':
+        return 'No activity yet';
+      case 'home_today':
+        return 'Today';
+      case 'home_yesterday':
+        return 'Yesterday';
+      case 'activity_just_now':
+        return 'Just now';
+      case 'activity_minutes_ago':
+        return ({required Object n}) => '${n} min ago';
+      case 'activity_hours_ago':
+        return ({required Object n}) => '${n} h ago';
+      case 'activity_days_ago':
+        return ({required Object n}) => '${n} d ago';
+      case 'home_session_count':
+        return ({required Object n}) => '${n} sessions';
+      case 'home_dashboard_title':
+        return 'Home';
+      case 'clipboard_history_title':
+        return 'Clipboard history';
+      case 'clipboard_history_clear':
+        return 'Clear';
+      case 'clipboard_history_empty':
+        return 'No copy history yet';
+      case 'video_setting_torrent_upload_enabled':
+        return 'Enable upload / seeding';
+      case 'video_setting_torrent_upload_enabled_hint':
+        return 'Off by default. Seed back to the swarm after downloading.';
+      case 'video_setting_torrent_seed_time_limit':
+        return 'Seed time limit (minutes)';
+      case 'video_setting_torrent_seed_time_hint':
+        return 'Stop uploading after seeding this long. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_limit':
+        return 'Seed ratio limit';
+      case 'video_setting_torrent_seed_ratio_hint':
+        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'torrent_upload_intro_title':
+        return 'Upload / seeding';
+      case 'torrent_upload_intro_body':
+        return 'Uploading (seeding) is off by default. Turn it on to share downloaded content back to the swarm — this uses your upload bandwidth. You can change this anytime in Settings.';
+      case 'torrent_upload_intro_enable':
+        return 'Enable upload / seeding';
+      case 'torrent_upload_intro_keep_off':
+        return 'Keep off';
+      case 'torrent_upload_intro_confirm':
+        return 'Save';
+      case 'anime_download_generic_title':
+        return 'Paste a link (books, videos, anything)';
+      case 'anime_download_generic_hint':
+        return 'Magnet link';
+      case 'anime_download_generic_download':
+        return 'Download';
+      case 'anime_download_magnet_invalid':
+        return 'Invalid magnet link';
+      case 'anime_download_kind_auto':
+        return 'Auto';
+      case 'anime_download_kind_video':
+        return 'Video';
+      case 'anime_download_kind_book':
+        return 'Book';
+      case 'nav_downloads':
+        return 'Downloads';
+      case 'video_setting_torrent_memory_limit':
+        return 'Memory limit (MB)';
+      case 'video_setting_torrent_memory_hint':
+        return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       case 'floating_lyric_text_opacity_hint':
         return '調低可讓懸浮字幕文字更透明';
       case 'floating_lyric_button_bg_opacity_hint':
