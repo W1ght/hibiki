@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 35003 (2059 per locale)
+/// Strings: 35122 (2066 per locale)
 ///
-/// Built on 2026-07-20 at 10:35 UTC
+/// Built on 2026-07-20 at 15:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2405,7 +2405,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Network error. Check your connection and try again.';
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
-  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  String get desktop_clipboard_destination => 'Lookup popup position';
   String get desktop_clipboard_destination_main => 'Main window';
   String get desktop_clipboard_destination_panel => 'Floating panel';
   String get desktop_clipboard_destination_transient => 'Popup at cursor';
@@ -2760,6 +2760,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_torrent_memory_limit => 'Memory limit (MB)';
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  String get galgame_helper_size_unknown => 'unknown size';
+  String get galgame_helper_download => 'Download';
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 // Path: <root>
@@ -7425,6 +7435,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 // Path: <root>
@@ -12163,6 +12190,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 // Path: <root>
@@ -16917,6 +16961,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 // Path: <root>
@@ -21682,6 +21743,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 // Path: <root>
@@ -26374,6 +26452,23 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 // Path: <root>
@@ -31114,6 +31209,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 // Path: <root>
@@ -35660,6 +35772,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 // Path: <root>
@@ -40209,6 +40338,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 // Path: <root>
@@ -44927,6 +45073,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 // Path: <root>
@@ -49660,6 +49823,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 // Path: <root>
@@ -54376,6 +54556,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 // Path: <root>
@@ -59037,6 +59234,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 // Path: <root>
@@ -63730,6 +63944,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 // Path: <root>
@@ -68410,6 +68641,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 // Path: <root>
@@ -72186,7 +72434,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_danmaku_manual_server_error => '搜索失败，请稍后重试。';
   @override
-  String get desktop_clipboard_destination => '剪贴板查词显示位置';
+  String get desktop_clipboard_destination => '查词弹窗位置';
   @override
   String get desktop_clipboard_destination_main => '主窗口';
   @override
@@ -72765,6 +73013,22 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_torrent_memory_limit => '内存占用上限（MB）';
   @override
   String get video_setting_torrent_memory_hint => '限制引擎内存占用。0 = 自动（按设备内存推导）。';
+  @override
+  String get galgame_helper_needed_title => '需要下载 galgame 引擎组件';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      '启动 galgame 需要引擎-hook 注入器组件（约 ${size}）。它含进程注入代码，与主程序分离分发以避免杀软误报。现在下载吗？';
+  @override
+  String get galgame_helper_size_unknown => '大小未知';
+  @override
+  String get galgame_helper_download => '下载';
+  @override
+  String get galgame_helper_downloading => '正在下载引擎组件…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      '引擎组件下载失败：${error}';
+  @override
+  String get galgame_helper_install_incomplete => '引擎组件安装不完整，请重试';
 }
 
 // Path: <root>
@@ -76602,7 +76866,7 @@ class _StringsZhHk extends _StringsEn {
   String get video_danmaku_manual_server_error =>
       'Search failed. Try again later.';
   @override
-  String get desktop_clipboard_destination => 'Clipboard lookup destination';
+  String get desktop_clipboard_destination => '查詞彈窗位置';
   @override
   String get desktop_clipboard_destination_main => 'Main window';
   @override
@@ -77233,6 +77497,23 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_torrent_memory_hint =>
       'Cap engine memory. 0 = auto (based on device RAM).';
+  @override
+  String get galgame_helper_needed_title => 'Galgame engine component required';
+  @override
+  String galgame_helper_needed_body({required Object size}) =>
+      'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+  @override
+  String get galgame_helper_size_unknown => 'unknown size';
+  @override
+  String get galgame_helper_download => 'Download';
+  @override
+  String get galgame_helper_downloading => 'Downloading engine component…';
+  @override
+  String galgame_helper_download_failed({required Object error}) =>
+      'Engine component download failed: ${error}';
+  @override
+  String get galgame_helper_install_incomplete =>
+      'Engine component install incomplete, please retry';
 }
 
 /// Flat map(s) containing all translations.
@@ -80877,7 +81158,7 @@ extension on _StringsEn {
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
-        return 'Clipboard lookup destination';
+        return 'Lookup popup position';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -81441,6 +81722,22 @@ extension on _StringsEn {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
@@ -85647,6 +85944,22 @@ extension on _StringsAr {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
@@ -89874,6 +90187,22 @@ extension on _StringsDe {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
@@ -94100,6 +94429,22 @@ extension on _StringsEs {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
@@ -98332,6 +98677,22 @@ extension on _StringsFr {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
@@ -102546,6 +102907,22 @@ extension on _StringsId {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
@@ -106775,6 +107152,22 @@ extension on _StringsIt {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
@@ -110966,6 +111359,22 @@ extension on _StringsJa {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
@@ -115161,6 +115570,22 @@ extension on _StringsKo {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
@@ -119383,6 +119808,22 @@ extension on _StringsNl {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
@@ -123602,6 +124043,22 @@ extension on _StringsPtBr {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
@@ -127826,6 +128283,22 @@ extension on _StringsRu {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
@@ -132034,6 +132507,22 @@ extension on _StringsTh {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
@@ -136251,6 +136740,22 @@ extension on _StringsTr {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
@@ -140463,6 +140968,22 @@ extension on _StringsVi {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
@@ -144081,7 +144602,7 @@ extension on _StringsZhCn {
       case 'video_danmaku_manual_server_error':
         return '搜索失败，请稍后重试。';
       case 'desktop_clipboard_destination':
-        return '剪贴板查词显示位置';
+        return '查词弹窗位置';
       case 'desktop_clipboard_destination_main':
         return '主窗口';
       case 'desktop_clipboard_destination_panel':
@@ -144642,6 +145163,21 @@ extension on _StringsZhCn {
         return '内存占用上限（MB）';
       case 'video_setting_torrent_memory_hint':
         return '限制引擎内存占用。0 = 自动（按设备内存推导）。';
+      case 'galgame_helper_needed_title':
+        return '需要下载 galgame 引擎组件';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            '启动 galgame 需要引擎-hook 注入器组件（约 ${size}）。它含进程注入代码，与主程序分离分发以避免杀软误报。现在下载吗？';
+      case 'galgame_helper_size_unknown':
+        return '大小未知';
+      case 'galgame_helper_download':
+        return '下载';
+      case 'galgame_helper_downloading':
+        return '正在下载引擎组件…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) => '引擎组件下载失败：${error}';
+      case 'galgame_helper_install_incomplete':
+        return '引擎组件安装不完整，请重试';
       default:
         return null;
     }
@@ -148265,7 +148801,7 @@ extension on _StringsZhHk {
       case 'video_danmaku_manual_server_error':
         return 'Search failed. Try again later.';
       case 'desktop_clipboard_destination':
-        return 'Clipboard lookup destination';
+        return '查詞彈窗位置';
       case 'desktop_clipboard_destination_main':
         return 'Main window';
       case 'desktop_clipboard_destination_panel':
@@ -148828,6 +149364,22 @@ extension on _StringsZhHk {
         return 'Memory limit (MB)';
       case 'video_setting_torrent_memory_hint':
         return 'Cap engine memory. 0 = auto (based on device RAM).';
+      case 'galgame_helper_needed_title':
+        return 'Galgame engine component required';
+      case 'galgame_helper_needed_body':
+        return ({required Object size}) =>
+            'Launching a galgame needs the engine-hook injector component (about ${size}). It contains process-injection code and ships separately from the app to avoid antivirus false positives. Download it now?';
+      case 'galgame_helper_size_unknown':
+        return 'unknown size';
+      case 'galgame_helper_download':
+        return 'Download';
+      case 'galgame_helper_downloading':
+        return 'Downloading engine component…';
+      case 'galgame_helper_download_failed':
+        return ({required Object error}) =>
+            'Engine component download failed: ${error}';
+      case 'galgame_helper_install_incomplete':
+        return 'Engine component install incomplete, please retry';
       default:
         return null;
     }
