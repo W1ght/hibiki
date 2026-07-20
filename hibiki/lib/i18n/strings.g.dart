@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 34272 (2016 per locale)
+/// Strings: 34340 (2020 per locale)
 ///
-/// Built on 2026-07-19 at 14:54 UTC
+/// Built on 2026-07-20 at 12:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2700,6 +2700,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_text_thread_all => 'All text threads';
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  String get game_show_hook_text_window => 'Show Hook text window';
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 // Path: <root>
@@ -7262,6 +7269,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 // Path: <root>
@@ -11897,6 +11915,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 // Path: <root>
@@ -16548,6 +16577,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 // Path: <root>
@@ -21210,6 +21250,17 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 // Path: <root>
@@ -25799,6 +25850,17 @@ class _StringsId extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 // Path: <root>
@@ -30436,6 +30498,17 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 // Path: <root>
@@ -34878,6 +34951,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 // Path: <root>
@@ -39323,6 +39407,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 // Path: <root>
@@ -43938,6 +44033,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 // Path: <root>
@@ -48568,6 +48674,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 // Path: <root>
@@ -53181,6 +53298,17 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 // Path: <root>
@@ -57739,6 +57867,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 // Path: <root>
@@ -62329,6 +62468,17 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 // Path: <root>
@@ -66906,6 +67056,17 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 // Path: <root>
@@ -71169,6 +71330,14 @@ class _StringsZhCn extends _StringsEn {
   String get game_text_thread_all => '全部文本线程';
   @override
   String get game_text_thread_hint => '像 Luna Translator 一样选择干净的台词线程';
+  @override
+  String get game_show_hook_text_window => '显示 Hook 文本浮窗';
+  @override
+  String get game_hook_line_unavailable => '这条捕获台词已不可用，未使用其他台词替代。';
+  @override
+  String get game_card_sentence_audio_missing => '卡片已创建，但没有句子音频；未借用其他台词的音频。';
+  @override
+  String get game_card_mapping_missing => 'Anki 字段映射缺少游戏卡片字段';
 }
 
 // Path: <root>
@@ -75530,6 +75699,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_text_thread_hint =>
       'Choose the clean dialogue thread, like Luna Translator';
+  @override
+  String get game_show_hook_text_window => 'Show Hook text window';
+  @override
+  String get game_hook_line_unavailable =>
+      'This captured line is no longer available.';
+  @override
+  String get game_card_sentence_audio_missing =>
+      'The card was created without sentence audio; no other line\'s audio was substituted.';
+  @override
+  String get game_card_mapping_missing =>
+      'Anki field mappings are missing game-card tokens';
 }
 
 /// Flat map(s) containing all translations.
@@ -79650,6 +79830,14 @@ extension on _StringsEn {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
@@ -83768,6 +83956,14 @@ extension on _StringsAr {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
@@ -87907,6 +88103,14 @@ extension on _StringsDe {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
@@ -92045,6 +92249,14 @@ extension on _StringsEs {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
@@ -96189,6 +96401,14 @@ extension on _StringsFr {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
@@ -100315,6 +100535,14 @@ extension on _StringsId {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
@@ -104456,6 +104684,14 @@ extension on _StringsIt {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
@@ -108559,6 +108795,14 @@ extension on _StringsJa {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
@@ -112666,6 +112910,14 @@ extension on _StringsKo {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
@@ -116800,6 +117052,14 @@ extension on _StringsNl {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
@@ -120931,6 +121191,14 @@ extension on _StringsPtBr {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
@@ -125067,6 +125335,14 @@ extension on _StringsRu {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
@@ -129187,6 +129463,14 @@ extension on _StringsTh {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
@@ -133316,6 +133600,14 @@ extension on _StringsTr {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
@@ -137440,6 +137732,14 @@ extension on _StringsVi {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
@@ -141532,6 +141832,14 @@ extension on _StringsZhCn {
         return '全部文本线程';
       case 'game_text_thread_hint':
         return '像 Luna Translator 一样选择干净的台词线程';
+      case 'game_show_hook_text_window':
+        return '显示 Hook 文本浮窗';
+      case 'game_hook_line_unavailable':
+        return '这条捕获台词已不可用，未使用其他台词替代。';
+      case 'game_card_sentence_audio_missing':
+        return '卡片已创建，但没有句子音频；未借用其他台词的音频。';
+      case 'game_card_mapping_missing':
+        return 'Anki 字段映射缺少游戏卡片字段';
       default:
         return null;
     }
@@ -145630,6 +145938,14 @@ extension on _StringsZhHk {
         return 'All text threads';
       case 'game_text_thread_hint':
         return 'Choose the clean dialogue thread, like Luna Translator';
+      case 'game_show_hook_text_window':
+        return 'Show Hook text window';
+      case 'game_hook_line_unavailable':
+        return 'This captured line is no longer available.';
+      case 'game_card_sentence_audio_missing':
+        return 'The card was created without sentence audio; no other line\'s audio was substituted.';
+      case 'game_card_mapping_missing':
+        return 'Anki field mappings are missing game-card tokens';
       default:
         return null;
     }
