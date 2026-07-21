@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37825 (2225 per locale)
+/// Strings: 37842 (2226 per locale)
 ///
-/// Built on 2026-07-21 at 16:43 UTC
+/// Built on 2026-07-21 at 17:27 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1572,7 +1572,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Toggle Immersive Lock';
   String get shortcut_action_video_toggle_subtitle_blur =>
       'Toggle Subtitle Blur';
-  String get shortcut_action_video_escape => 'Exit / Back';
+  String get shortcut_action_video_escape => 'Close video / Back';
   String get book_edit_author => 'Author';
   String get floating_lyric_toggle_action => 'Floating subtitle';
   String get video_setting_picture_fit_cover => 'Fill keep ratio crop edges';
@@ -2965,6 +2965,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_upload_video_files => 'Upload video files';
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  String get shortcut_action_reader_exit_book => 'Exit book';
 }
 
 // Path: <root>
@@ -8001,6 +8002,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
 }
 
 // Path: <root>
@@ -13110,6 +13113,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
 }
 
 // Path: <root>
@@ -18235,6 +18240,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
 }
 
 // Path: <root>
@@ -23371,6 +23378,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
 }
 
 // Path: <root>
@@ -28434,6 +28443,8 @@ class _StringsId extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
 }
 
 // Path: <root>
@@ -33545,6 +33556,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
 }
 
 // Path: <root>
@@ -36027,7 +36040,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_subtitle_blur => '字幕ぼかしの切り替え';
   @override
-  String get shortcut_action_video_escape => '終了／戻る';
+  String get shortcut_action_video_escape => '動画を閉じる／戻る';
   @override
   String get book_edit_author => '著者';
   @override
@@ -38461,6 +38474,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => '本を閉じる';
 }
 
 // Path: <root>
@@ -43380,6 +43395,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
 }
 
 // Path: <root>
@@ -48469,6 +48486,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
 }
 
 // Path: <root>
@@ -53573,6 +53592,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
 }
 
 // Path: <root>
@@ -58660,6 +58681,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
 }
 
 // Path: <root>
@@ -63692,6 +63715,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
 }
 
 // Path: <root>
@@ -68756,6 +68781,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
 }
 
 // Path: <root>
@@ -73807,6 +73834,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
 }
 
 // Path: <root>
@@ -76229,7 +76258,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_subtitle_blur => '切换字幕模糊';
   @override
-  String get shortcut_action_video_escape => '退出/返回';
+  String get shortcut_action_video_escape => '关闭视频/返回';
   @override
   String get book_edit_author => '作者';
   @override
@@ -78506,6 +78535,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       '把本设备的本地视频文件上传同步到互联对端（体积较大）。';
+  @override
+  String get shortcut_action_reader_exit_book => '退出书籍';
 }
 
 // Path: <root>
@@ -80929,7 +80960,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_subtitle_blur => '切換字幕模糊';
   @override
-  String get shortcut_action_video_escape => '退出／返回';
+  String get shortcut_action_video_escape => '關閉影片／返回';
   @override
   String get book_edit_author => '作者';
   @override
@@ -83341,6 +83372,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get interconnect_upload_video_files_hint =>
       'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => '退出書籍';
 }
 
 /// Flat map(s) containing all translations.
@@ -85698,7 +85731,7 @@ extension on _StringsEn {
       case 'shortcut_action_video_toggle_subtitle_blur':
         return 'Toggle Subtitle Blur';
       case 'shortcut_action_video_escape':
-        return 'Exit / Back';
+        return 'Close video / Back';
       case 'book_edit_author':
         return 'Author';
       case 'floating_lyric_toggle_action':
@@ -87883,6 +87916,8 @@ extension on _StringsEn {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
       default:
         return null;
     }
@@ -92423,6 +92458,8 @@ extension on _StringsAr {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
       default:
         return null;
     }
@@ -96984,6 +97021,8 @@ extension on _StringsDe {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
       default:
         return null;
     }
@@ -101544,6 +101583,8 @@ extension on _StringsEs {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
       default:
         return null;
     }
@@ -106110,6 +106151,8 @@ extension on _StringsFr {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
       default:
         return null;
     }
@@ -110658,6 +110701,8 @@ extension on _StringsId {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
       default:
         return null;
     }
@@ -115221,6 +115266,8 @@ extension on _StringsIt {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
       default:
         return null;
     }
@@ -117563,7 +117610,7 @@ extension on _StringsJa {
       case 'shortcut_action_video_toggle_subtitle_blur':
         return '字幕ぼかしの切り替え';
       case 'shortcut_action_video_escape':
-        return '終了／戻る';
+        return '動画を閉じる／戻る';
       case 'book_edit_author':
         return '著者';
       case 'floating_lyric_toggle_action':
@@ -119746,6 +119793,8 @@ extension on _StringsJa {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return '本を閉じる';
       default:
         return null;
     }
@@ -124275,6 +124324,8 @@ extension on _StringsKo {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
       default:
         return null;
     }
@@ -128831,6 +128882,8 @@ extension on _StringsNl {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
       default:
         return null;
     }
@@ -133384,6 +133437,8 @@ extension on _StringsPtBr {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
       default:
         return null;
     }
@@ -137942,6 +137997,8 @@ extension on _StringsRu {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
       default:
         return null;
     }
@@ -142484,6 +142541,8 @@ extension on _StringsTh {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
       default:
         return null;
     }
@@ -147035,6 +147094,8 @@ extension on _StringsTr {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
       default:
         return null;
     }
@@ -151581,6 +151642,8 @@ extension on _StringsVi {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
       default:
         return null;
     }
@@ -153920,7 +153983,7 @@ extension on _StringsZhCn {
       case 'shortcut_action_video_toggle_subtitle_blur':
         return '切换字幕模糊';
       case 'shortcut_action_video_escape':
-        return '退出/返回';
+        return '关闭视频/返回';
       case 'book_edit_author':
         return '作者';
       case 'floating_lyric_toggle_action':
@@ -156093,6 +156156,8 @@ extension on _StringsZhCn {
         return '上传视频文件';
       case 'interconnect_upload_video_files_hint':
         return '把本设备的本地视频文件上传同步到互联对端（体积较大）。';
+      case 'shortcut_action_reader_exit_book':
+        return '退出书籍';
       default:
         return null;
     }
@@ -158433,7 +158498,7 @@ extension on _StringsZhHk {
       case 'shortcut_action_video_toggle_subtitle_blur':
         return '切換字幕模糊';
       case 'shortcut_action_video_escape':
-        return '退出／返回';
+        return '關閉影片／返回';
       case 'book_edit_author':
         return '作者';
       case 'floating_lyric_toggle_action':
@@ -160613,6 +160678,8 @@ extension on _StringsZhHk {
         return 'Upload video files';
       case 'interconnect_upload_video_files_hint':
         return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return '退出書籍';
       default:
         return null;
     }
