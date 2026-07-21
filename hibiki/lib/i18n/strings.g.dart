@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37604 (2212 per locale)
+/// Strings: 37638 (2214 per locale)
 ///
-/// Built on 2026-07-21 at 10:28 UTC
+/// Built on 2026-07-21 at 14:38 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2945,6 +2945,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  String get eink_mode => 'E-ink mode';
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 // Path: <root>
@@ -7948,6 +7951,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 // Path: <root>
@@ -13024,6 +13032,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 // Path: <root>
@@ -18116,6 +18129,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 // Path: <root>
@@ -23219,6 +23237,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 // Path: <root>
@@ -28249,6 +28272,11 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 // Path: <root>
@@ -33327,6 +33355,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 // Path: <root>
@@ -38210,6 +38243,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 // Path: <root>
@@ -43096,6 +43134,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 // Path: <root>
@@ -48152,6 +48195,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 // Path: <root>
@@ -53223,6 +53271,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 // Path: <root>
@@ -58277,6 +58330,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 // Path: <root>
@@ -63276,6 +63334,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 // Path: <root>
@@ -68307,6 +68370,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 // Path: <root>
@@ -73325,6 +73393,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 // Path: <root>
@@ -77994,6 +78067,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       '通过共享的 Google Drive 文件夹（ttu-reader-data）同步阅读进度。需完整 Drive 权限并重新登录。';
+  @override
+  String get eink_mode => '墨水屏模式';
+  @override
+  String get eink_mode_hint => '纯黑白主题、无动画、线式高亮，适合墨水屏设备';
 }
 
 // Path: <root>
@@ -82796,6 +82873,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
 }
 
 /// Flat map(s) containing all translations.
@@ -87312,6 +87394,10 @@ extension on _StringsEn {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
@@ -91826,6 +91912,10 @@ extension on _StringsAr {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
@@ -96361,6 +96451,10 @@ extension on _StringsDe {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
@@ -100895,6 +100989,10 @@ extension on _StringsEs {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
@@ -105435,6 +105533,10 @@ extension on _StringsFr {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
@@ -109957,6 +110059,10 @@ extension on _StringsId {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
@@ -114494,6 +114600,10 @@ extension on _StringsIt {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
@@ -118993,6 +119103,10 @@ extension on _StringsJa {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
@@ -123496,6 +123610,10 @@ extension on _StringsKo {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
@@ -128026,6 +128144,10 @@ extension on _StringsNl {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
@@ -132553,6 +132675,10 @@ extension on _StringsPtBr {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
@@ -137085,6 +137211,10 @@ extension on _StringsRu {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
@@ -141601,6 +141731,10 @@ extension on _StringsTh {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
@@ -146126,6 +146260,10 @@ extension on _StringsTr {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
@@ -150646,6 +150784,10 @@ extension on _StringsVi {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
@@ -155132,6 +155274,10 @@ extension on _StringsZhCn {
         return '与 Hoshi / ッツ 共享进度';
       case 'sync_google_drive_hoshi_compat_desc':
         return '通过共享的 Google Drive 文件夹（ttu-reader-data）同步阅读进度。需完整 Drive 权限并重新登录。';
+      case 'eink_mode':
+        return '墨水屏模式';
+      case 'eink_mode_hint':
+        return '纯黑白主题、无动画、线式高亮，适合墨水屏设备';
       default:
         return null;
     }
@@ -159626,6 +159772,10 @@ extension on _StringsZhHk {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       default:
         return null;
     }
