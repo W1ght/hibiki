@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 36822 (2166 per locale)
+/// Strings: 37604 (2212 per locale)
 ///
-/// Built on 2026-07-20 at 17:44 UTC
+/// Built on 2026-07-21 at 10:28 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1083,7 +1083,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Reset all shortcuts in this section to defaults?';
   String get shortcut_keyboard => 'Keyboard';
   String get shortcut_gamepad => 'Gamepad';
-  String get shortcut_none => 'None';
   String get shortcut_clear => 'Clear';
   String get shortcut_stop_capture => 'Stop';
   String get section_advanced_typography => 'Advanced';
@@ -2772,7 +2771,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Engine component install incomplete, please retry';
   String get download_settings => 'Download settings';
   String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
+      'Configure the download backend first (settings, top-right).';
   String get floating_lyric_text_opacity_hint =>
       'Lower this to make the floating subtitle text more transparent';
   String get floating_lyric_button_bg_opacity_hint =>
@@ -2890,6 +2889,62 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_audio_fallback_disabled_missing =>
       'No matching game resource audio; fallback is disabled';
   String get game_audio_resource_id => 'Audio resource ID';
+  String get home_remote_source => 'Remote';
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  String get video_setting_torrent_section_session => 'Session';
+  String get video_setting_torrent_listen_port => 'Listen port';
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  String get video_setting_torrent_dht => 'DHT';
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  String get video_setting_torrent_encryption_forced => 'Force';
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  String get video_setting_torrent_zero_default => '0 = default';
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  String get video_setting_torrent_zero_off => '0 = off';
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  String get anime_download_retry => 'Retry';
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  String get nav_browser_extension => 'Extension';
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  String get browser_extension_verify_button => 'Check connection';
+  String get browser_extension_verify_checking => 'Checking…';
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  String get browser_extension_status_connected => 'Extension connected';
+  String get browser_extension_status_never => 'Extension not detected yet';
+  String get browser_extension_version_label => 'Extension version';
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  String get browser_extension_server_on => 'Lookup server on';
+  String get browser_extension_server_off => 'Lookup server off';
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 // Path: <root>
@@ -4585,8 +4640,6 @@ class _StringsAr extends _StringsEn {
   String get shortcut_keyboard => 'لوحة المفاتيح';
   @override
   String get shortcut_gamepad => 'يد التحكّم';
-  @override
-  String get shortcut_none => 'بلا';
   @override
   String get shortcut_clear => 'مسح';
   @override
@@ -7792,6 +7845,109 @@ class _StringsAr extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  @override
+  String get anime_download_retry => 'Retry';
+  @override
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  @override
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  @override
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  @override
+  String get nav_browser_extension => 'Extension';
+  @override
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  @override
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  @override
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  @override
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  @override
+  String get browser_extension_verify_button => 'Check connection';
+  @override
+  String get browser_extension_verify_checking => 'Checking…';
+  @override
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  @override
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  @override
+  String get browser_extension_status_connected => 'Extension connected';
+  @override
+  String get browser_extension_status_never => 'Extension not detected yet';
+  @override
+  String get browser_extension_version_label => 'Extension version';
+  @override
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  @override
+  String get browser_extension_server_on => 'Lookup server on';
+  @override
+  String get browser_extension_server_off => 'Lookup server off';
+  @override
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 // Path: <root>
@@ -9515,8 +9671,6 @@ class _StringsDe extends _StringsEn {
   String get shortcut_keyboard => 'Tastatur';
   @override
   String get shortcut_gamepad => 'Gamepad';
-  @override
-  String get shortcut_none => 'Keine';
   @override
   String get shortcut_clear => 'Löschen';
   @override
@@ -12767,6 +12921,109 @@ class _StringsDe extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  @override
+  String get anime_download_retry => 'Retry';
+  @override
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  @override
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  @override
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  @override
+  String get nav_browser_extension => 'Extension';
+  @override
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  @override
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  @override
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  @override
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  @override
+  String get browser_extension_verify_button => 'Check connection';
+  @override
+  String get browser_extension_verify_checking => 'Checking…';
+  @override
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  @override
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  @override
+  String get browser_extension_status_connected => 'Extension connected';
+  @override
+  String get browser_extension_status_never => 'Extension not detected yet';
+  @override
+  String get browser_extension_version_label => 'Extension version';
+  @override
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  @override
+  String get browser_extension_server_on => 'Lookup server on';
+  @override
+  String get browser_extension_server_off => 'Lookup server off';
+  @override
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 // Path: <root>
@@ -14501,8 +14758,6 @@ class _StringsEs extends _StringsEn {
   String get shortcut_keyboard => 'Teclado';
   @override
   String get shortcut_gamepad => 'Mando';
-  @override
-  String get shortcut_none => 'Ninguno';
   @override
   String get shortcut_clear => 'Borrar';
   @override
@@ -17758,6 +18013,109 @@ class _StringsEs extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  @override
+  String get anime_download_retry => 'Retry';
+  @override
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  @override
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  @override
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  @override
+  String get nav_browser_extension => 'Extension';
+  @override
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  @override
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  @override
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  @override
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  @override
+  String get browser_extension_verify_button => 'Check connection';
+  @override
+  String get browser_extension_verify_checking => 'Checking…';
+  @override
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  @override
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  @override
+  String get browser_extension_status_connected => 'Extension connected';
+  @override
+  String get browser_extension_status_never => 'Extension not detected yet';
+  @override
+  String get browser_extension_version_label => 'Extension version';
+  @override
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  @override
+  String get browser_extension_server_on => 'Lookup server on';
+  @override
+  String get browser_extension_server_off => 'Lookup server off';
+  @override
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 // Path: <root>
@@ -19501,8 +19859,6 @@ class _StringsFr extends _StringsEn {
   String get shortcut_keyboard => 'Clavier';
   @override
   String get shortcut_gamepad => 'Manette';
-  @override
-  String get shortcut_none => 'Aucun';
   @override
   String get shortcut_clear => 'Effacer';
   @override
@@ -22760,6 +23116,109 @@ class _StringsFr extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  @override
+  String get anime_download_retry => 'Retry';
+  @override
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  @override
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  @override
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  @override
+  String get nav_browser_extension => 'Extension';
+  @override
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  @override
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  @override
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  @override
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  @override
+  String get browser_extension_verify_button => 'Check connection';
+  @override
+  String get browser_extension_verify_checking => 'Checking…';
+  @override
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  @override
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  @override
+  String get browser_extension_status_connected => 'Extension connected';
+  @override
+  String get browser_extension_status_never => 'Extension not detected yet';
+  @override
+  String get browser_extension_version_label => 'Extension version';
+  @override
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  @override
+  String get browser_extension_server_on => 'Lookup server on';
+  @override
+  String get browser_extension_server_off => 'Lookup server off';
+  @override
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 // Path: <root>
@@ -24463,8 +24922,6 @@ class _StringsId extends _StringsEn {
   String get shortcut_keyboard => 'Keyboard';
   @override
   String get shortcut_gamepad => 'Gamepad';
-  @override
-  String get shortcut_none => 'Tidak Ada';
   @override
   String get shortcut_clear => 'Hapus';
   @override
@@ -27689,6 +28146,109 @@ class _StringsId extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  @override
+  String get anime_download_retry => 'Retry';
+  @override
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  @override
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  @override
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  @override
+  String get nav_browser_extension => 'Extension';
+  @override
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  @override
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  @override
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  @override
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  @override
+  String get browser_extension_verify_button => 'Check connection';
+  @override
+  String get browser_extension_verify_checking => 'Checking…';
+  @override
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  @override
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  @override
+  String get browser_extension_status_connected => 'Extension connected';
+  @override
+  String get browser_extension_status_never => 'Extension not detected yet';
+  @override
+  String get browser_extension_version_label => 'Extension version';
+  @override
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  @override
+  String get browser_extension_server_on => 'Lookup server on';
+  @override
+  String get browser_extension_server_off => 'Lookup server off';
+  @override
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 // Path: <root>
@@ -29415,8 +29975,6 @@ class _StringsIt extends _StringsEn {
   String get shortcut_keyboard => 'Tastiera';
   @override
   String get shortcut_gamepad => 'Gamepad';
-  @override
-  String get shortcut_none => 'Nessuna';
   @override
   String get shortcut_clear => 'Cancella';
   @override
@@ -32666,6 +33224,109 @@ class _StringsIt extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  @override
+  String get anime_download_retry => 'Retry';
+  @override
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  @override
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  @override
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  @override
+  String get nav_browser_extension => 'Extension';
+  @override
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  @override
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  @override
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  @override
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  @override
+  String get browser_extension_verify_button => 'Check connection';
+  @override
+  String get browser_extension_verify_checking => 'Checking…';
+  @override
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  @override
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  @override
+  String get browser_extension_status_connected => 'Extension connected';
+  @override
+  String get browser_extension_status_never => 'Extension not detected yet';
+  @override
+  String get browser_extension_version_label => 'Extension version';
+  @override
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  @override
+  String get browser_extension_server_on => 'Lookup server on';
+  @override
+  String get browser_extension_server_off => 'Lookup server off';
+  @override
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 // Path: <root>
@@ -34311,8 +34972,6 @@ class _StringsJa extends _StringsEn {
   String get shortcut_keyboard => 'キーボード';
   @override
   String get shortcut_gamepad => 'ゲームパッド';
-  @override
-  String get shortcut_none => 'なし';
   @override
   String get shortcut_clear => 'クリア';
   @override
@@ -37448,6 +38107,109 @@ class _StringsJa extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  @override
+  String get anime_download_retry => 'Retry';
+  @override
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  @override
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  @override
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  @override
+  String get nav_browser_extension => 'Extension';
+  @override
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  @override
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  @override
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  @override
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  @override
+  String get browser_extension_verify_button => 'Check connection';
+  @override
+  String get browser_extension_verify_checking => 'Checking…';
+  @override
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  @override
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  @override
+  String get browser_extension_status_connected => 'Extension connected';
+  @override
+  String get browser_extension_status_never => 'Extension not detected yet';
+  @override
+  String get browser_extension_version_label => 'Extension version';
+  @override
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  @override
+  String get browser_extension_server_on => 'Lookup server on';
+  @override
+  String get browser_extension_server_off => 'Lookup server off';
+  @override
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 // Path: <root>
@@ -39096,8 +39858,6 @@ class _StringsKo extends _StringsEn {
   String get shortcut_keyboard => '키보드';
   @override
   String get shortcut_gamepad => '게임패드';
-  @override
-  String get shortcut_none => '없음';
   @override
   String get shortcut_clear => '지우기';
   @override
@@ -42233,6 +42993,109 @@ class _StringsKo extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  @override
+  String get anime_download_retry => 'Retry';
+  @override
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  @override
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  @override
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  @override
+  String get nav_browser_extension => 'Extension';
+  @override
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  @override
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  @override
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  @override
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  @override
+  String get browser_extension_verify_button => 'Check connection';
+  @override
+  String get browser_extension_verify_checking => 'Checking…';
+  @override
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  @override
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  @override
+  String get browser_extension_status_connected => 'Extension connected';
+  @override
+  String get browser_extension_status_never => 'Extension not detected yet';
+  @override
+  String get browser_extension_version_label => 'Extension version';
+  @override
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  @override
+  String get browser_extension_server_on => 'Lookup server on';
+  @override
+  String get browser_extension_server_off => 'Lookup server off';
+  @override
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 // Path: <root>
@@ -43949,8 +44812,6 @@ class _StringsNl extends _StringsEn {
   String get shortcut_keyboard => 'Toetsenbord';
   @override
   String get shortcut_gamepad => 'Gamepad';
-  @override
-  String get shortcut_none => 'Geen';
   @override
   String get shortcut_clear => 'Wissen';
   @override
@@ -47188,6 +48049,109 @@ class _StringsNl extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  @override
+  String get anime_download_retry => 'Retry';
+  @override
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  @override
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  @override
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  @override
+  String get nav_browser_extension => 'Extension';
+  @override
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  @override
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  @override
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  @override
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  @override
+  String get browser_extension_verify_button => 'Check connection';
+  @override
+  String get browser_extension_verify_checking => 'Checking…';
+  @override
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  @override
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  @override
+  String get browser_extension_status_connected => 'Extension connected';
+  @override
+  String get browser_extension_status_never => 'Extension not detected yet';
+  @override
+  String get browser_extension_version_label => 'Extension version';
+  @override
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  @override
+  String get browser_extension_server_on => 'Lookup server on';
+  @override
+  String get browser_extension_server_off => 'Lookup server off';
+  @override
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 // Path: <root>
@@ -48913,8 +49877,6 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_keyboard => 'Teclado';
   @override
   String get shortcut_gamepad => 'Controle';
-  @override
-  String get shortcut_none => 'Nenhum';
   @override
   String get shortcut_clear => 'Limpar';
   @override
@@ -52158,6 +53120,109 @@ class _StringsPtBr extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  @override
+  String get anime_download_retry => 'Retry';
+  @override
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  @override
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  @override
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  @override
+  String get nav_browser_extension => 'Extension';
+  @override
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  @override
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  @override
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  @override
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  @override
+  String get browser_extension_verify_button => 'Check connection';
+  @override
+  String get browser_extension_verify_checking => 'Checking…';
+  @override
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  @override
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  @override
+  String get browser_extension_status_connected => 'Extension connected';
+  @override
+  String get browser_extension_status_never => 'Extension not detected yet';
+  @override
+  String get browser_extension_version_label => 'Extension version';
+  @override
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  @override
+  String get browser_extension_server_on => 'Lookup server on';
+  @override
+  String get browser_extension_server_off => 'Lookup server off';
+  @override
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 // Path: <root>
@@ -53875,8 +54940,6 @@ class _StringsRu extends _StringsEn {
   String get shortcut_keyboard => 'Клавиатура';
   @override
   String get shortcut_gamepad => 'Геймпад';
-  @override
-  String get shortcut_none => 'Нет';
   @override
   String get shortcut_clear => 'Очистить';
   @override
@@ -57111,6 +58174,109 @@ class _StringsRu extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  @override
+  String get anime_download_retry => 'Retry';
+  @override
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  @override
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  @override
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  @override
+  String get nav_browser_extension => 'Extension';
+  @override
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  @override
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  @override
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  @override
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  @override
+  String get browser_extension_verify_button => 'Check connection';
+  @override
+  String get browser_extension_verify_checking => 'Checking…';
+  @override
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  @override
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  @override
+  String get browser_extension_status_connected => 'Extension connected';
+  @override
+  String get browser_extension_status_never => 'Extension not detected yet';
+  @override
+  String get browser_extension_version_label => 'Extension version';
+  @override
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  @override
+  String get browser_extension_server_on => 'Lookup server on';
+  @override
+  String get browser_extension_server_off => 'Lookup server off';
+  @override
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 // Path: <root>
@@ -58802,8 +59968,6 @@ class _StringsTh extends _StringsEn {
   String get shortcut_keyboard => 'แป้นพิมพ์';
   @override
   String get shortcut_gamepad => 'เกมแพด';
-  @override
-  String get shortcut_none => 'ไม่มี';
   @override
   String get shortcut_clear => 'ล้าง';
   @override
@@ -62009,6 +63173,109 @@ class _StringsTh extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  @override
+  String get anime_download_retry => 'Retry';
+  @override
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  @override
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  @override
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  @override
+  String get nav_browser_extension => 'Extension';
+  @override
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  @override
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  @override
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  @override
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  @override
+  String get browser_extension_verify_button => 'Check connection';
+  @override
+  String get browser_extension_verify_checking => 'Checking…';
+  @override
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  @override
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  @override
+  String get browser_extension_status_connected => 'Extension connected';
+  @override
+  String get browser_extension_status_never => 'Extension not detected yet';
+  @override
+  String get browser_extension_version_label => 'Extension version';
+  @override
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  @override
+  String get browser_extension_server_on => 'Lookup server on';
+  @override
+  String get browser_extension_server_off => 'Lookup server off';
+  @override
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 // Path: <root>
@@ -63718,8 +64985,6 @@ class _StringsTr extends _StringsEn {
   String get shortcut_keyboard => 'Klavye';
   @override
   String get shortcut_gamepad => 'Oyun kumandası';
-  @override
-  String get shortcut_none => 'Yok';
   @override
   String get shortcut_clear => 'Temizle';
   @override
@@ -66939,6 +68204,109 @@ class _StringsTr extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  @override
+  String get anime_download_retry => 'Retry';
+  @override
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  @override
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  @override
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  @override
+  String get nav_browser_extension => 'Extension';
+  @override
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  @override
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  @override
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  @override
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  @override
+  String get browser_extension_verify_button => 'Check connection';
+  @override
+  String get browser_extension_verify_checking => 'Checking…';
+  @override
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  @override
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  @override
+  String get browser_extension_status_connected => 'Extension connected';
+  @override
+  String get browser_extension_status_never => 'Extension not detected yet';
+  @override
+  String get browser_extension_version_label => 'Extension version';
+  @override
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  @override
+  String get browser_extension_server_on => 'Lookup server on';
+  @override
+  String get browser_extension_server_off => 'Lookup server off';
+  @override
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 // Path: <root>
@@ -68640,8 +70008,6 @@ class _StringsVi extends _StringsEn {
   String get shortcut_keyboard => 'Bàn phím';
   @override
   String get shortcut_gamepad => 'Tay cầm';
-  @override
-  String get shortcut_none => 'Không có';
   @override
   String get shortcut_clear => 'Xóa';
   @override
@@ -71856,6 +73222,109 @@ class _StringsVi extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  @override
+  String get anime_download_retry => 'Retry';
+  @override
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  @override
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  @override
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  @override
+  String get nav_browser_extension => 'Extension';
+  @override
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  @override
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  @override
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  @override
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  @override
+  String get browser_extension_verify_button => 'Check connection';
+  @override
+  String get browser_extension_verify_checking => 'Checking…';
+  @override
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  @override
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  @override
+  String get browser_extension_status_connected => 'Extension connected';
+  @override
+  String get browser_extension_status_never => 'Extension not detected yet';
+  @override
+  String get browser_extension_version_label => 'Extension version';
+  @override
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  @override
+  String get browser_extension_server_on => 'Lookup server on';
+  @override
+  String get browser_extension_server_off => 'Lookup server off';
+  @override
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 // Path: <root>
@@ -73477,8 +74946,6 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_keyboard => '键盘';
   @override
   String get shortcut_gamepad => '手柄';
-  @override
-  String get shortcut_none => '无';
   @override
   String get shortcut_clear => '清除';
   @override
@@ -76230,7 +77697,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_settings => '下载设置';
   @override
-  String get download_backend_not_configured => '请在下方「下载设置」里配置下载后端';
+  String get download_backend_not_configured => '请先配置下载后端（右上角设置）';
   @override
   String get floating_lyric_text_opacity_hint => '调低让悬浮字幕文字更透明';
   @override
@@ -76429,6 +77896,104 @@ class _StringsZhCn extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => '远端';
+  @override
+  String get shortcut_press_gamepad => '按下手柄按钮…';
+  @override
+  String get shortcut_gamepad_pick_list => '从列表选择';
+  @override
+  String get video_setting_torrent_section_session => '会话设置';
+  @override
+  String get video_setting_torrent_listen_port => '监听端口';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = 默认（6881）';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => '本地节点发现 (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP 端口映射';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP 端口映射';
+  @override
+  String get video_setting_torrent_anonymous => '匿名模式';
+  @override
+  String get video_setting_torrent_encryption_prefer => '首选';
+  @override
+  String get video_setting_torrent_encryption_forced => '强制';
+  @override
+  String get video_setting_torrent_encryption_disabled => '禁用';
+  @override
+  String get video_setting_torrent_active_downloads => '最大活跃下载数';
+  @override
+  String get video_setting_torrent_active_seeds => '最大活跃做种数';
+  @override
+  String get video_setting_torrent_upload_slots => '最大上传槽位';
+  @override
+  String get video_setting_torrent_zero_default => '0 = 默认';
+  @override
+  String get video_setting_torrent_section_antileech => '反吸血';
+  @override
+  String get video_setting_torrent_antileech => '启用反吸血';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => '封禁进度作弊';
+  @override
+  String get video_setting_torrent_ban_relative_cheat => '封禁相对进度作弊';
+  @override
+  String get video_setting_torrent_max_ip_ports => '同 IP 最大端口数';
+  @override
+  String get video_setting_torrent_zero_off => '0 = 关闭';
+  @override
+  String get video_setting_torrent_ban_time => '封禁时长（分钟）';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = 永久';
+  @override
+  String get anime_download_retry => '重试';
+  @override
+  String get anime_download_search_failed => '搜索失败或超时，请点重试';
+  @override
+  String get anime_download_subs_need_key => '在上方填写 Jimaku API key 后可搜字幕';
+  @override
+  String get anime_download_subs_failed => '字幕搜索失败，请点重试';
+  @override
+  String get nav_browser_extension => '浏览器扩展';
+  @override
+  String get browser_extension_page_intro =>
+      '在电脑的 Chrome / Edge 里直接划词查词、解析字幕、一键制卡。先在下面准备扩展文件，再按步骤加载到浏览器。';
+  @override
+  String get browser_extension_prepare_button => '准备扩展文件';
+  @override
+  String get browser_extension_prepare_hint =>
+      '会自动开启查词服务并把扩展解压到本机，扩展文件夹路径已复制到剪贴板。';
+  @override
+  String get browser_extension_step_verify => '验证插件已加载并连上本机';
+  @override
+  String get browser_extension_verify_button => '检测连接';
+  @override
+  String get browser_extension_verify_checking => '检测中…';
+  @override
+  String get browser_extension_verify_connected => '已检测到插件已连接，一切正常。';
+  @override
+  String get browser_extension_verify_not_detected =>
+      '还没检测到插件。请确认已在浏览器里加载并启用扩展后再检测。';
+  @override
+  String get browser_extension_status_connected => '插件已连接';
+  @override
+  String get browser_extension_status_never => '尚未检测到插件';
+  @override
+  String get browser_extension_version_label => '扩展版本';
+  @override
+  String get browser_extension_reinstall_button => '重新准备 / 刷新文件';
+  @override
+  String get browser_extension_server_on => '查词服务已开启';
+  @override
+  String get browser_extension_server_off => '查词服务未开启';
+  @override
+  String get sync_google_drive_hoshi_compat => '与 Hoshi / ッツ 共享进度';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      '通过共享的 Google Drive 文件夹（ttu-reader-data）同步阅读进度。需完整 Drive 权限并重新登录。';
 }
 
 // Path: <root>
@@ -78049,8 +79614,6 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_keyboard => '鍵盤';
   @override
   String get shortcut_gamepad => '手掣';
-  @override
-  String get shortcut_none => '無';
   @override
   String get shortcut_clear => '清除';
   @override
@@ -81130,6 +82693,109 @@ class _StringsZhHk extends _StringsEn {
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
   String get game_audio_resource_id => '音频资源 ID';
+  @override
+  String get home_remote_source => 'Remote';
+  @override
+  String get shortcut_press_gamepad => 'Press a gamepad button...';
+  @override
+  String get shortcut_gamepad_pick_list => 'Choose from list';
+  @override
+  String get video_setting_torrent_section_session => 'Session';
+  @override
+  String get video_setting_torrent_listen_port => 'Listen port';
+  @override
+  String get video_setting_torrent_listen_port_hint => '0 = default (6881)';
+  @override
+  String get video_setting_torrent_dht => 'DHT';
+  @override
+  String get video_setting_torrent_lsd => 'Local peer discovery (LSD)';
+  @override
+  String get video_setting_torrent_upnp => 'UPnP port mapping';
+  @override
+  String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
+  @override
+  String get video_setting_torrent_anonymous => 'Anonymous mode';
+  @override
+  String get video_setting_torrent_encryption_prefer => 'Prefer';
+  @override
+  String get video_setting_torrent_encryption_forced => 'Force';
+  @override
+  String get video_setting_torrent_encryption_disabled => 'Off';
+  @override
+  String get video_setting_torrent_active_downloads => 'Max active downloads';
+  @override
+  String get video_setting_torrent_active_seeds => 'Max active seeds';
+  @override
+  String get video_setting_torrent_upload_slots => 'Max upload slots';
+  @override
+  String get video_setting_torrent_zero_default => '0 = default';
+  @override
+  String get video_setting_torrent_section_antileech => 'Anti-leech';
+  @override
+  String get video_setting_torrent_antileech => 'Enable anti-leech';
+  @override
+  String get video_setting_torrent_ban_progress_cheat => 'Ban progress cheat';
+  @override
+  String get video_setting_torrent_ban_relative_cheat =>
+      'Ban relative progress cheat';
+  @override
+  String get video_setting_torrent_max_ip_ports => 'Max ports per IP';
+  @override
+  String get video_setting_torrent_zero_off => '0 = off';
+  @override
+  String get video_setting_torrent_ban_time => 'Ban duration (min)';
+  @override
+  String get video_setting_torrent_ban_time_hint => '0 = permanent';
+  @override
+  String get anime_download_retry => 'Retry';
+  @override
+  String get anime_download_search_failed =>
+      'Search failed or timed out. Tap retry.';
+  @override
+  String get anime_download_subs_need_key =>
+      'Enter a Jimaku API key above to search subtitles.';
+  @override
+  String get anime_download_subs_failed => 'Subtitle search failed. Tap retry.';
+  @override
+  String get nav_browser_extension => 'Extension';
+  @override
+  String get browser_extension_page_intro =>
+      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+  @override
+  String get browser_extension_prepare_button => 'Prepare extension files';
+  @override
+  String get browser_extension_prepare_hint =>
+      'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+  @override
+  String get browser_extension_step_verify =>
+      'Verify the extension is loaded and connected';
+  @override
+  String get browser_extension_verify_button => 'Check connection';
+  @override
+  String get browser_extension_verify_checking => 'Checking…';
+  @override
+  String get browser_extension_verify_connected =>
+      'Extension detected and connected.';
+  @override
+  String get browser_extension_verify_not_detected =>
+      'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+  @override
+  String get browser_extension_status_connected => 'Extension connected';
+  @override
+  String get browser_extension_status_never => 'Extension not detected yet';
+  @override
+  String get browser_extension_version_label => 'Extension version';
+  @override
+  String get browser_extension_reinstall_button => 'Re-prepare / refresh files';
+  @override
+  String get browser_extension_server_on => 'Lookup server on';
+  @override
+  String get browser_extension_server_off => 'Lookup server off';
+  @override
+  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
+  @override
+  String get sync_google_drive_hoshi_compat_desc =>
+      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
 }
 
 /// Flat map(s) containing all translations.
@@ -82709,8 +84375,6 @@ extension on _StringsEn {
         return 'Keyboard';
       case 'shortcut_gamepad':
         return 'Gamepad';
-      case 'shortcut_none':
-        return 'None';
       case 'shortcut_clear':
         return 'Clear';
       case 'shortcut_stop_capture':
@@ -85357,7 +87021,7 @@ extension on _StringsEn {
       case 'download_settings':
         return 'Download settings';
       case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
+        return 'Configure the download backend first (settings, top-right).';
       case 'floating_lyric_text_opacity_hint':
         return 'Lower this to make the floating subtitle text more transparent';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -85554,6 +87218,100 @@ extension on _StringsEn {
         return 'No matching game resource audio; fallback is disabled';
       case 'game_audio_resource_id':
         return 'Audio resource ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
@@ -87129,8 +88887,6 @@ extension on _StringsAr {
         return 'لوحة المفاتيح';
       case 'shortcut_gamepad':
         return 'يد التحكّم';
-      case 'shortcut_none':
-        return 'بلا';
       case 'shortcut_clear':
         return 'مسح';
       case 'shortcut_stop_capture':
@@ -89976,6 +91732,100 @@ extension on _StringsAr {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
@@ -91566,8 +93416,6 @@ extension on _StringsDe {
         return 'Tastatur';
       case 'shortcut_gamepad':
         return 'Gamepad';
-      case 'shortcut_none':
-        return 'Keine';
       case 'shortcut_clear':
         return 'Löschen';
       case 'shortcut_stop_capture':
@@ -94419,6 +96267,100 @@ extension on _StringsDe {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
@@ -96008,8 +97950,6 @@ extension on _StringsEs {
         return 'Teclado';
       case 'shortcut_gamepad':
         return 'Mando';
-      case 'shortcut_none':
-        return 'Ninguno';
       case 'shortcut_clear':
         return 'Borrar';
       case 'shortcut_stop_capture':
@@ -98861,6 +100801,100 @@ extension on _StringsEs {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
@@ -100452,8 +102486,6 @@ extension on _StringsFr {
         return 'Clavier';
       case 'shortcut_gamepad':
         return 'Manette';
-      case 'shortcut_none':
-        return 'Aucun';
       case 'shortcut_clear':
         return 'Effacer';
       case 'shortcut_stop_capture':
@@ -103309,6 +105341,100 @@ extension on _StringsFr {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
@@ -104890,8 +107016,6 @@ extension on _StringsId {
         return 'Keyboard';
       case 'shortcut_gamepad':
         return 'Gamepad';
-      case 'shortcut_none':
-        return 'Tidak Ada';
       case 'shortcut_clear':
         return 'Hapus';
       case 'shortcut_stop_capture':
@@ -107739,6 +109863,100 @@ extension on _StringsId {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
@@ -109326,8 +111544,6 @@ extension on _StringsIt {
         return 'Tastiera';
       case 'shortcut_gamepad':
         return 'Gamepad';
-      case 'shortcut_none':
-        return 'Nessuna';
       case 'shortcut_clear':
         return 'Cancella';
       case 'shortcut_stop_capture':
@@ -112184,6 +114400,100 @@ extension on _StringsIt {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
@@ -113752,8 +116062,6 @@ extension on _StringsJa {
         return 'キーボード';
       case 'shortcut_gamepad':
         return 'ゲームパッド';
-      case 'shortcut_none':
-        return 'なし';
       case 'shortcut_clear':
         return 'クリア';
       case 'shortcut_stop_capture':
@@ -116591,6 +118899,100 @@ extension on _StringsJa {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
@@ -118161,8 +120563,6 @@ extension on _StringsKo {
         return '키보드';
       case 'shortcut_gamepad':
         return '게임패드';
-      case 'shortcut_none':
-        return '없음';
       case 'shortcut_clear':
         return '지우기';
       case 'shortcut_stop_capture':
@@ -121002,6 +123402,100 @@ extension on _StringsKo {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
@@ -122586,8 +125080,6 @@ extension on _StringsNl {
         return 'Toetsenbord';
       case 'shortcut_gamepad':
         return 'Gamepad';
-      case 'shortcut_none':
-        return 'Geen';
       case 'shortcut_clear':
         return 'Wissen';
       case 'shortcut_stop_capture':
@@ -125440,6 +127932,100 @@ extension on _StringsNl {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
@@ -127023,8 +129609,6 @@ extension on _StringsPtBr {
         return 'Teclado';
       case 'shortcut_gamepad':
         return 'Controle';
-      case 'shortcut_none':
-        return 'Nenhum';
       case 'shortcut_clear':
         return 'Limpar';
       case 'shortcut_stop_capture':
@@ -129875,6 +132459,100 @@ extension on _StringsPtBr {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
@@ -131461,8 +134139,6 @@ extension on _StringsRu {
         return 'Клавиатура';
       case 'shortcut_gamepad':
         return 'Геймпад';
-      case 'shortcut_none':
-        return 'Нет';
       case 'shortcut_clear':
         return 'Очистить';
       case 'shortcut_stop_capture':
@@ -134315,6 +136991,100 @@ extension on _StringsRu {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
@@ -135893,8 +138663,6 @@ extension on _StringsTh {
         return 'แป้นพิมพ์';
       case 'shortcut_gamepad':
         return 'เกมแพด';
-      case 'shortcut_none':
-        return 'ไม่มี';
       case 'shortcut_clear':
         return 'ล้าง';
       case 'shortcut_stop_capture':
@@ -138739,6 +141507,100 @@ extension on _StringsTh {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
@@ -140320,8 +143182,6 @@ extension on _StringsTr {
         return 'Klavye';
       case 'shortcut_gamepad':
         return 'Oyun kumandası';
-      case 'shortcut_none':
-        return 'Yok';
       case 'shortcut_clear':
         return 'Temizle';
       case 'shortcut_stop_capture':
@@ -143172,6 +146032,100 @@ extension on _StringsTr {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
@@ -144751,8 +147705,6 @@ extension on _StringsVi {
         return 'Bàn phím';
       case 'shortcut_gamepad':
         return 'Tay cầm';
-      case 'shortcut_none':
-        return 'Không có';
       case 'shortcut_clear':
         return 'Xóa';
       case 'shortcut_stop_capture':
@@ -147600,6 +150552,100 @@ extension on _StringsVi {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
@@ -149168,8 +152214,6 @@ extension on _StringsZhCn {
         return '键盘';
       case 'shortcut_gamepad':
         return '手柄';
-      case 'shortcut_none':
-        return '无';
       case 'shortcut_clear':
         return '清除';
       case 'shortcut_stop_capture':
@@ -151797,7 +154841,7 @@ extension on _StringsZhCn {
       case 'download_settings':
         return '下载设置';
       case 'download_backend_not_configured':
-        return '请在下方「下载设置」里配置下载后端';
+        return '请先配置下载后端（右上角设置）';
       case 'floating_lyric_text_opacity_hint':
         return '调低让悬浮字幕文字更透明';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -151994,6 +155038,100 @@ extension on _StringsZhCn {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return '远端';
+      case 'shortcut_press_gamepad':
+        return '按下手柄按钮…';
+      case 'shortcut_gamepad_pick_list':
+        return '从列表选择';
+      case 'video_setting_torrent_section_session':
+        return '会话设置';
+      case 'video_setting_torrent_listen_port':
+        return '监听端口';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = 默认（6881）';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return '本地节点发现 (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP 端口映射';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP 端口映射';
+      case 'video_setting_torrent_anonymous':
+        return '匿名模式';
+      case 'video_setting_torrent_encryption_prefer':
+        return '首选';
+      case 'video_setting_torrent_encryption_forced':
+        return '强制';
+      case 'video_setting_torrent_encryption_disabled':
+        return '禁用';
+      case 'video_setting_torrent_active_downloads':
+        return '最大活跃下载数';
+      case 'video_setting_torrent_active_seeds':
+        return '最大活跃做种数';
+      case 'video_setting_torrent_upload_slots':
+        return '最大上传槽位';
+      case 'video_setting_torrent_zero_default':
+        return '0 = 默认';
+      case 'video_setting_torrent_section_antileech':
+        return '反吸血';
+      case 'video_setting_torrent_antileech':
+        return '启用反吸血';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return '封禁进度作弊';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return '封禁相对进度作弊';
+      case 'video_setting_torrent_max_ip_ports':
+        return '同 IP 最大端口数';
+      case 'video_setting_torrent_zero_off':
+        return '0 = 关闭';
+      case 'video_setting_torrent_ban_time':
+        return '封禁时长（分钟）';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = 永久';
+      case 'anime_download_retry':
+        return '重试';
+      case 'anime_download_search_failed':
+        return '搜索失败或超时，请点重试';
+      case 'anime_download_subs_need_key':
+        return '在上方填写 Jimaku API key 后可搜字幕';
+      case 'anime_download_subs_failed':
+        return '字幕搜索失败，请点重试';
+      case 'nav_browser_extension':
+        return '浏览器扩展';
+      case 'browser_extension_page_intro':
+        return '在电脑的 Chrome / Edge 里直接划词查词、解析字幕、一键制卡。先在下面准备扩展文件，再按步骤加载到浏览器。';
+      case 'browser_extension_prepare_button':
+        return '准备扩展文件';
+      case 'browser_extension_prepare_hint':
+        return '会自动开启查词服务并把扩展解压到本机，扩展文件夹路径已复制到剪贴板。';
+      case 'browser_extension_step_verify':
+        return '验证插件已加载并连上本机';
+      case 'browser_extension_verify_button':
+        return '检测连接';
+      case 'browser_extension_verify_checking':
+        return '检测中…';
+      case 'browser_extension_verify_connected':
+        return '已检测到插件已连接，一切正常。';
+      case 'browser_extension_verify_not_detected':
+        return '还没检测到插件。请确认已在浏览器里加载并启用扩展后再检测。';
+      case 'browser_extension_status_connected':
+        return '插件已连接';
+      case 'browser_extension_status_never':
+        return '尚未检测到插件';
+      case 'browser_extension_version_label':
+        return '扩展版本';
+      case 'browser_extension_reinstall_button':
+        return '重新准备 / 刷新文件';
+      case 'browser_extension_server_on':
+        return '查词服务已开启';
+      case 'browser_extension_server_off':
+        return '查词服务未开启';
+      case 'sync_google_drive_hoshi_compat':
+        return '与 Hoshi / ッツ 共享进度';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return '通过共享的 Google Drive 文件夹（ttu-reader-data）同步阅读进度。需完整 Drive 权限并重新登录。';
       default:
         return null;
     }
@@ -153562,8 +156700,6 @@ extension on _StringsZhHk {
         return '鍵盤';
       case 'shortcut_gamepad':
         return '手掣';
-      case 'shortcut_none':
-        return '無';
       case 'shortcut_clear':
         return '清除';
       case 'shortcut_stop_capture':
@@ -156396,6 +159532,100 @@ extension on _StringsZhHk {
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
         return '音频资源 ID';
+      case 'home_remote_source':
+        return 'Remote';
+      case 'shortcut_press_gamepad':
+        return 'Press a gamepad button...';
+      case 'shortcut_gamepad_pick_list':
+        return 'Choose from list';
+      case 'video_setting_torrent_section_session':
+        return 'Session';
+      case 'video_setting_torrent_listen_port':
+        return 'Listen port';
+      case 'video_setting_torrent_listen_port_hint':
+        return '0 = default (6881)';
+      case 'video_setting_torrent_dht':
+        return 'DHT';
+      case 'video_setting_torrent_lsd':
+        return 'Local peer discovery (LSD)';
+      case 'video_setting_torrent_upnp':
+        return 'UPnP port mapping';
+      case 'video_setting_torrent_natpmp':
+        return 'NAT-PMP port mapping';
+      case 'video_setting_torrent_anonymous':
+        return 'Anonymous mode';
+      case 'video_setting_torrent_encryption_prefer':
+        return 'Prefer';
+      case 'video_setting_torrent_encryption_forced':
+        return 'Force';
+      case 'video_setting_torrent_encryption_disabled':
+        return 'Off';
+      case 'video_setting_torrent_active_downloads':
+        return 'Max active downloads';
+      case 'video_setting_torrent_active_seeds':
+        return 'Max active seeds';
+      case 'video_setting_torrent_upload_slots':
+        return 'Max upload slots';
+      case 'video_setting_torrent_zero_default':
+        return '0 = default';
+      case 'video_setting_torrent_section_antileech':
+        return 'Anti-leech';
+      case 'video_setting_torrent_antileech':
+        return 'Enable anti-leech';
+      case 'video_setting_torrent_ban_progress_cheat':
+        return 'Ban progress cheat';
+      case 'video_setting_torrent_ban_relative_cheat':
+        return 'Ban relative progress cheat';
+      case 'video_setting_torrent_max_ip_ports':
+        return 'Max ports per IP';
+      case 'video_setting_torrent_zero_off':
+        return '0 = off';
+      case 'video_setting_torrent_ban_time':
+        return 'Ban duration (min)';
+      case 'video_setting_torrent_ban_time_hint':
+        return '0 = permanent';
+      case 'anime_download_retry':
+        return 'Retry';
+      case 'anime_download_search_failed':
+        return 'Search failed or timed out. Tap retry.';
+      case 'anime_download_subs_need_key':
+        return 'Enter a Jimaku API key above to search subtitles.';
+      case 'anime_download_subs_failed':
+        return 'Subtitle search failed. Tap retry.';
+      case 'nav_browser_extension':
+        return 'Extension';
+      case 'browser_extension_page_intro':
+        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
+      case 'browser_extension_prepare_button':
+        return 'Prepare extension files';
+      case 'browser_extension_prepare_hint':
+        return 'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
+      case 'browser_extension_step_verify':
+        return 'Verify the extension is loaded and connected';
+      case 'browser_extension_verify_button':
+        return 'Check connection';
+      case 'browser_extension_verify_checking':
+        return 'Checking…';
+      case 'browser_extension_verify_connected':
+        return 'Extension detected and connected.';
+      case 'browser_extension_verify_not_detected':
+        return 'No extension detected yet. Make sure it is loaded and enabled in your browser, then check again.';
+      case 'browser_extension_status_connected':
+        return 'Extension connected';
+      case 'browser_extension_status_never':
+        return 'Extension not detected yet';
+      case 'browser_extension_version_label':
+        return 'Extension version';
+      case 'browser_extension_reinstall_button':
+        return 'Re-prepare / refresh files';
+      case 'browser_extension_server_on':
+        return 'Lookup server on';
+      case 'browser_extension_server_off':
+        return 'Lookup server off';
+      case 'sync_google_drive_hoshi_compat':
+        return 'Share progress with Hoshi / ッツ';
+      case 'sync_google_drive_hoshi_compat_desc':
+        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       default:
         return null;
     }
