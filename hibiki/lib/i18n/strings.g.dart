@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37859 (2227 per locale)
+/// Strings: 37893 (2229 per locale)
 ///
-/// Built on 2026-07-21 at 18:40 UTC
+/// Built on 2026-07-21 at 21:53 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2967,6 +2967,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Sync this device\'s local video files up to the interconnect peer (large).';
   String get shortcut_action_reader_exit_book => 'Exit book';
   String get clipboard_text_window_title => 'Clipboard text';
+  String get settings_secret_show => 'Show value';
+  String get settings_secret_hide => 'Hide value';
 }
 
 // Path: <root>
@@ -8007,6 +8009,10 @@ class _StringsAr extends _StringsEn {
   String get shortcut_action_reader_exit_book => 'Exit book';
   @override
   String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
 }
 
 // Path: <root>
@@ -13120,6 +13126,10 @@ class _StringsDe extends _StringsEn {
   String get shortcut_action_reader_exit_book => 'Exit book';
   @override
   String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
 }
 
 // Path: <root>
@@ -18249,6 +18259,10 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_reader_exit_book => 'Exit book';
   @override
   String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
 }
 
 // Path: <root>
@@ -23389,6 +23403,10 @@ class _StringsFr extends _StringsEn {
   String get shortcut_action_reader_exit_book => 'Exit book';
   @override
   String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
 }
 
 // Path: <root>
@@ -28456,6 +28474,10 @@ class _StringsId extends _StringsEn {
   String get shortcut_action_reader_exit_book => 'Exit book';
   @override
   String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
 }
 
 // Path: <root>
@@ -33571,6 +33593,10 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_reader_exit_book => 'Exit book';
   @override
   String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
 }
 
 // Path: <root>
@@ -38491,6 +38517,10 @@ class _StringsJa extends _StringsEn {
   String get shortcut_action_reader_exit_book => '本を閉じる';
   @override
   String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
 }
 
 // Path: <root>
@@ -43414,6 +43444,10 @@ class _StringsKo extends _StringsEn {
   String get shortcut_action_reader_exit_book => 'Exit book';
   @override
   String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
 }
 
 // Path: <root>
@@ -48507,6 +48541,10 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_reader_exit_book => 'Exit book';
   @override
   String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
 }
 
 // Path: <root>
@@ -53615,6 +53653,10 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_reader_exit_book => 'Exit book';
   @override
   String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
 }
 
 // Path: <root>
@@ -58706,6 +58748,10 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_reader_exit_book => 'Exit book';
   @override
   String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
 }
 
 // Path: <root>
@@ -63742,6 +63788,10 @@ class _StringsTh extends _StringsEn {
   String get shortcut_action_reader_exit_book => 'Exit book';
   @override
   String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
 }
 
 // Path: <root>
@@ -68810,6 +68860,10 @@ class _StringsTr extends _StringsEn {
   String get shortcut_action_reader_exit_book => 'Exit book';
   @override
   String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
 }
 
 // Path: <root>
@@ -73865,6 +73919,10 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_reader_exit_book => 'Exit book';
   @override
   String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
 }
 
 // Path: <root>
@@ -78568,6 +78626,10 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_action_reader_exit_book => '退出书籍';
   @override
   String get clipboard_text_window_title => '剪贴板文字';
+  @override
+  String get settings_secret_show => '显示内容';
+  @override
+  String get settings_secret_hide => '隐藏内容';
 }
 
 // Path: <root>
@@ -83407,6 +83469,10 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_action_reader_exit_book => '退出書籍';
   @override
   String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
 }
 
 /// Flat map(s) containing all translations.
@@ -87953,6 +88019,10 @@ extension on _StringsEn {
         return 'Exit book';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
@@ -92497,6 +92567,10 @@ extension on _StringsAr {
         return 'Exit book';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
@@ -97062,6 +97136,10 @@ extension on _StringsDe {
         return 'Exit book';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
@@ -101626,6 +101704,10 @@ extension on _StringsEs {
         return 'Exit book';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
@@ -106196,6 +106278,10 @@ extension on _StringsFr {
         return 'Exit book';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
@@ -110748,6 +110834,10 @@ extension on _StringsId {
         return 'Exit book';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
@@ -115315,6 +115405,10 @@ extension on _StringsIt {
         return 'Exit book';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
@@ -119844,6 +119938,10 @@ extension on _StringsJa {
         return '本を閉じる';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
@@ -124377,6 +124475,10 @@ extension on _StringsKo {
         return 'Exit book';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
@@ -128937,6 +129039,10 @@ extension on _StringsNl {
         return 'Exit book';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
@@ -133494,6 +133600,10 @@ extension on _StringsPtBr {
         return 'Exit book';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
@@ -138056,6 +138166,10 @@ extension on _StringsRu {
         return 'Exit book';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
@@ -142602,6 +142716,10 @@ extension on _StringsTh {
         return 'Exit book';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
@@ -147157,6 +147275,10 @@ extension on _StringsTr {
         return 'Exit book';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
@@ -151707,6 +151829,10 @@ extension on _StringsVi {
         return 'Exit book';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
@@ -156223,6 +156349,10 @@ extension on _StringsZhCn {
         return '退出书籍';
       case 'clipboard_text_window_title':
         return '剪贴板文字';
+      case 'settings_secret_show':
+        return '显示内容';
+      case 'settings_secret_hide':
+        return '隐藏内容';
       default:
         return null;
     }
@@ -160747,6 +160877,10 @@ extension on _StringsZhHk {
         return '退出書籍';
       case 'clipboard_text_window_title':
         return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
       default:
         return null;
     }
