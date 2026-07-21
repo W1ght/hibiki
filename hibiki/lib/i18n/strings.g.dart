@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37910 (2230 per locale)
+/// Strings: 37944 (2232 per locale)
 ///
 /// Built on 2026-07-21 at 21:54 UTC
 
@@ -2970,6 +2970,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_secret_show => 'Show value';
   String get settings_secret_hide => 'Hide value';
   String get video_setting_speed_step => 'Speed step';
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 // Path: <root>
@@ -8016,6 +8019,11 @@ class _StringsAr extends _StringsEn {
   String get settings_secret_hide => 'Hide value';
   @override
   String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 // Path: <root>
@@ -13135,6 +13143,11 @@ class _StringsDe extends _StringsEn {
   String get settings_secret_hide => 'Hide value';
   @override
   String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 // Path: <root>
@@ -18270,6 +18283,11 @@ class _StringsEs extends _StringsEn {
   String get settings_secret_hide => 'Hide value';
   @override
   String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 // Path: <root>
@@ -23416,6 +23434,11 @@ class _StringsFr extends _StringsEn {
   String get settings_secret_hide => 'Hide value';
   @override
   String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 // Path: <root>
@@ -28489,6 +28512,11 @@ class _StringsId extends _StringsEn {
   String get settings_secret_hide => 'Hide value';
   @override
   String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 // Path: <root>
@@ -33610,6 +33638,11 @@ class _StringsIt extends _StringsEn {
   String get settings_secret_hide => 'Hide value';
   @override
   String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 // Path: <root>
@@ -38536,6 +38569,11 @@ class _StringsJa extends _StringsEn {
   String get settings_secret_hide => 'Hide value';
   @override
   String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 // Path: <root>
@@ -43465,6 +43503,11 @@ class _StringsKo extends _StringsEn {
   String get settings_secret_hide => 'Hide value';
   @override
   String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 // Path: <root>
@@ -48564,6 +48607,11 @@ class _StringsNl extends _StringsEn {
   String get settings_secret_hide => 'Hide value';
   @override
   String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 // Path: <root>
@@ -53678,6 +53726,11 @@ class _StringsPtBr extends _StringsEn {
   String get settings_secret_hide => 'Hide value';
   @override
   String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 // Path: <root>
@@ -58775,6 +58828,11 @@ class _StringsRu extends _StringsEn {
   String get settings_secret_hide => 'Hide value';
   @override
   String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 // Path: <root>
@@ -63817,6 +63875,11 @@ class _StringsTh extends _StringsEn {
   String get settings_secret_hide => 'Hide value';
   @override
   String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 // Path: <root>
@@ -68891,6 +68954,11 @@ class _StringsTr extends _StringsEn {
   String get settings_secret_hide => 'Hide value';
   @override
   String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 // Path: <root>
@@ -73952,6 +74020,11 @@ class _StringsVi extends _StringsEn {
   String get settings_secret_hide => 'Hide value';
   @override
   String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 // Path: <root>
@@ -78661,6 +78734,11 @@ class _StringsZhCn extends _StringsEn {
   String get settings_secret_hide => '隐藏内容';
   @override
   String get video_setting_speed_step => '倍速步进';
+  @override
+  String get clipboard_panel_block_capture => '防截屏 / 防录屏';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      '把查词和剪贴板悬浮窗从截图、录屏、直播串流中排除（Windows）。关闭后，截图、录屏和串流即可拍到查词悬浮窗。';
 }
 
 // Path: <root>
@@ -83506,6 +83584,11 @@ class _StringsZhHk extends _StringsEn {
   String get settings_secret_hide => 'Hide value';
   @override
   String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
 }
 
 /// Flat map(s) containing all translations.
@@ -88058,6 +88141,10 @@ extension on _StringsEn {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
@@ -92608,6 +92695,10 @@ extension on _StringsAr {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
@@ -97179,6 +97270,10 @@ extension on _StringsDe {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
@@ -101749,6 +101844,10 @@ extension on _StringsEs {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
@@ -106325,6 +106424,10 @@ extension on _StringsFr {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
@@ -110883,6 +110986,10 @@ extension on _StringsId {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
@@ -115456,6 +115563,10 @@ extension on _StringsIt {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
@@ -119991,6 +120102,10 @@ extension on _StringsJa {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
@@ -124530,6 +124645,10 @@ extension on _StringsKo {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
@@ -129096,6 +129215,10 @@ extension on _StringsNl {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
@@ -133659,6 +133782,10 @@ extension on _StringsPtBr {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
@@ -138227,6 +138354,10 @@ extension on _StringsRu {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
@@ -142779,6 +142910,10 @@ extension on _StringsTh {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
@@ -147340,6 +147475,10 @@ extension on _StringsTr {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
@@ -151896,6 +152035,10 @@ extension on _StringsVi {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
@@ -156418,6 +156561,10 @@ extension on _StringsZhCn {
         return '隐藏内容';
       case 'video_setting_speed_step':
         return '倍速步进';
+      case 'clipboard_panel_block_capture':
+        return '防截屏 / 防录屏';
+      case 'clipboard_panel_block_capture_hint':
+        return '把查词和剪贴板悬浮窗从截图、录屏、直播串流中排除（Windows）。关闭后，截图、录屏和串流即可拍到查词悬浮窗。';
       default:
         return null;
     }
@@ -160948,6 +161095,10 @@ extension on _StringsZhHk {
         return 'Hide value';
       case 'video_setting_speed_step':
         return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       default:
         return null;
     }
