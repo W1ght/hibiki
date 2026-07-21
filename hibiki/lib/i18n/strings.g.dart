@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37638 (2214 per locale)
+/// Strings: 37655 (2215 per locale)
 ///
-/// Built on 2026-07-21 at 14:38 UTC
+/// Built on 2026-07-21 at 15:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2948,6 +2948,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get eink_mode => 'E-ink mode';
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 // Path: <root>
@@ -7956,6 +7958,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 // Path: <root>
@@ -13037,6 +13042,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 // Path: <root>
@@ -18134,6 +18142,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 // Path: <root>
@@ -23242,6 +23253,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 // Path: <root>
@@ -28277,6 +28291,9 @@ class _StringsId extends _StringsEn {
   @override
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 // Path: <root>
@@ -33360,6 +33377,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 // Path: <root>
@@ -38248,6 +38268,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 // Path: <root>
@@ -43139,6 +43162,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 // Path: <root>
@@ -48200,6 +48226,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 // Path: <root>
@@ -53276,6 +53305,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 // Path: <root>
@@ -58335,6 +58367,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 // Path: <root>
@@ -63339,6 +63374,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 // Path: <root>
@@ -68375,6 +68413,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 // Path: <root>
@@ -73398,6 +73439,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 // Path: <root>
@@ -78071,6 +78115,9 @@ class _StringsZhCn extends _StringsEn {
   String get eink_mode => '墨水屏模式';
   @override
   String get eink_mode_hint => '纯黑白主题、无动画、线式高亮，适合墨水屏设备';
+  @override
+  String get update_mac_install_incomplete_message =>
+      '更新未能应用，Hibiki 仍是旧版本。你可以重试更新，或手动下载最新版本。';
 }
 
 // Path: <root>
@@ -82878,6 +82925,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get eink_mode_hint =>
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
 }
 
 /// Flat map(s) containing all translations.
@@ -87398,6 +87448,8 @@ extension on _StringsEn {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
@@ -91916,6 +91968,8 @@ extension on _StringsAr {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
@@ -96455,6 +96509,8 @@ extension on _StringsDe {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
@@ -100993,6 +101049,8 @@ extension on _StringsEs {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
@@ -105537,6 +105595,8 @@ extension on _StringsFr {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
@@ -110063,6 +110123,8 @@ extension on _StringsId {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
@@ -114604,6 +114666,8 @@ extension on _StringsIt {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
@@ -119107,6 +119171,8 @@ extension on _StringsJa {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
@@ -123614,6 +123680,8 @@ extension on _StringsKo {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
@@ -128148,6 +128216,8 @@ extension on _StringsNl {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
@@ -132679,6 +132749,8 @@ extension on _StringsPtBr {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
@@ -137215,6 +137287,8 @@ extension on _StringsRu {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
@@ -141735,6 +141809,8 @@ extension on _StringsTh {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
@@ -146264,6 +146340,8 @@ extension on _StringsTr {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
@@ -150788,6 +150866,8 @@ extension on _StringsVi {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
@@ -155278,6 +155358,8 @@ extension on _StringsZhCn {
         return '墨水屏模式';
       case 'eink_mode_hint':
         return '纯黑白主题、无动画、线式高亮，适合墨水屏设备';
+      case 'update_mac_install_incomplete_message':
+        return '更新未能应用，Hibiki 仍是旧版本。你可以重试更新，或手动下载最新版本。';
       default:
         return null;
     }
@@ -159776,6 +159858,8 @@ extension on _StringsZhHk {
         return 'E-ink mode';
       case 'eink_mode_hint':
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
       default:
         return null;
     }
