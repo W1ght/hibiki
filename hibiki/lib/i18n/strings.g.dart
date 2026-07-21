@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37655 (2215 per locale)
+/// Strings: 37825 (2225 per locale)
 ///
-/// Built on 2026-07-21 at 15:41 UTC
+/// Built on 2026-07-21 at 16:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2950,6 +2950,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  String get interconnect_upload_content => 'Upload book files';
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  String get interconnect_upload_video_files => 'Upload video files';
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 // Path: <root>
@@ -7961,6 +7976,31 @@ class _StringsAr extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 // Path: <root>
@@ -13045,6 +13085,31 @@ class _StringsDe extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 // Path: <root>
@@ -18145,6 +18210,31 @@ class _StringsEs extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 // Path: <root>
@@ -23256,6 +23346,31 @@ class _StringsFr extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 // Path: <root>
@@ -28294,6 +28409,31 @@ class _StringsId extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 // Path: <root>
@@ -33380,6 +33520,31 @@ class _StringsIt extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 // Path: <root>
@@ -38271,6 +38436,31 @@ class _StringsJa extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 // Path: <root>
@@ -43165,6 +43355,31 @@ class _StringsKo extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 // Path: <root>
@@ -48229,6 +48444,31 @@ class _StringsNl extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 // Path: <root>
@@ -53308,6 +53548,31 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 // Path: <root>
@@ -58370,6 +58635,31 @@ class _StringsRu extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 // Path: <root>
@@ -63377,6 +63667,31 @@ class _StringsTh extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 // Path: <root>
@@ -68416,6 +68731,31 @@ class _StringsTr extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 // Path: <root>
@@ -73442,6 +73782,31 @@ class _StringsVi extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 // Path: <root>
@@ -78118,6 +78483,29 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       '更新未能应用，Hibiki 仍是旧版本。你可以重试更新，或手动下载最新版本。';
+  @override
+  String get interconnect_upload_section => '上传到互联对端';
+  @override
+  String get interconnect_upload_section_footer =>
+      '选择本设备要把哪些内容上传到已连接的互联对端。与云备份、以及「启用互联」连接开关互不影响；默认全部关闭。';
+  @override
+  String get interconnect_upload_content => '上传书籍文件';
+  @override
+  String get interconnect_upload_content_hint => '把本设备的书籍/阅读内容上传同步到互联对端。';
+  @override
+  String get interconnect_upload_dictionary => '上传词典';
+  @override
+  String get interconnect_upload_dictionary_hint => '把本设备的词典上传同步到互联对端。';
+  @override
+  String get interconnect_upload_audiobook_files => '上传有声书文件';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      '把本设备的有声书音频+字幕包上传同步到互联对端（体积较大）。';
+  @override
+  String get interconnect_upload_video_files => '上传视频文件';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      '把本设备的本地视频文件上传同步到互联对端（体积较大）。';
 }
 
 // Path: <root>
@@ -82928,6 +83316,31 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get update_mac_install_incomplete_message =>
       'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
 }
 
 /// Flat map(s) containing all translations.
@@ -87450,6 +87863,26 @@ extension on _StringsEn {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
@@ -91970,6 +92403,26 @@ extension on _StringsAr {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
@@ -96511,6 +96964,26 @@ extension on _StringsDe {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
@@ -101051,6 +101524,26 @@ extension on _StringsEs {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
@@ -105597,6 +106090,26 @@ extension on _StringsFr {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
@@ -110125,6 +110638,26 @@ extension on _StringsId {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
@@ -114668,6 +115201,26 @@ extension on _StringsIt {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
@@ -119173,6 +119726,26 @@ extension on _StringsJa {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
@@ -123682,6 +124255,26 @@ extension on _StringsKo {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
@@ -128218,6 +128811,26 @@ extension on _StringsNl {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
@@ -132751,6 +133364,26 @@ extension on _StringsPtBr {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
@@ -137289,6 +137922,26 @@ extension on _StringsRu {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
@@ -141811,6 +142464,26 @@ extension on _StringsTh {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
@@ -146342,6 +147015,26 @@ extension on _StringsTr {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
@@ -150868,6 +151561,26 @@ extension on _StringsVi {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
@@ -155360,6 +156073,26 @@ extension on _StringsZhCn {
         return '纯黑白主题、无动画、线式高亮，适合墨水屏设备';
       case 'update_mac_install_incomplete_message':
         return '更新未能应用，Hibiki 仍是旧版本。你可以重试更新，或手动下载最新版本。';
+      case 'interconnect_upload_section':
+        return '上传到互联对端';
+      case 'interconnect_upload_section_footer':
+        return '选择本设备要把哪些内容上传到已连接的互联对端。与云备份、以及「启用互联」连接开关互不影响；默认全部关闭。';
+      case 'interconnect_upload_content':
+        return '上传书籍文件';
+      case 'interconnect_upload_content_hint':
+        return '把本设备的书籍/阅读内容上传同步到互联对端。';
+      case 'interconnect_upload_dictionary':
+        return '上传词典';
+      case 'interconnect_upload_dictionary_hint':
+        return '把本设备的词典上传同步到互联对端。';
+      case 'interconnect_upload_audiobook_files':
+        return '上传有声书文件';
+      case 'interconnect_upload_audiobook_files_hint':
+        return '把本设备的有声书音频+字幕包上传同步到互联对端（体积较大）。';
+      case 'interconnect_upload_video_files':
+        return '上传视频文件';
+      case 'interconnect_upload_video_files_hint':
+        return '把本设备的本地视频文件上传同步到互联对端（体积较大）。';
       default:
         return null;
     }
@@ -159860,6 +160593,26 @@ extension on _StringsZhHk {
         return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
       case 'update_mac_install_incomplete_message':
         return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
       default:
         return null;
     }
