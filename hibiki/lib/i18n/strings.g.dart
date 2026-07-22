@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38437 (2261 per locale)
+/// Strings: 38471 (2263 per locale)
 ///
-/// Built on 2026-07-22 at 14:47 UTC
+/// Built on 2026-07-22 at 17:28 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3008,6 +3008,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   String get remote_video_info_no_subtitle => 'No subtitles';
   String get app_icon_presets => 'Presets';
+  String get anki_mine_to_server => 'Mine to paired device';
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 // Path: <root>
@@ -8123,6 +8126,11 @@ class _StringsAr extends _StringsEn {
   String get remote_video_info_no_subtitle => 'No subtitles';
   @override
   String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 // Path: <root>
@@ -13311,6 +13319,11 @@ class _StringsDe extends _StringsEn {
   String get remote_video_info_no_subtitle => 'No subtitles';
   @override
   String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 // Path: <root>
@@ -18515,6 +18528,11 @@ class _StringsEs extends _StringsEn {
   String get remote_video_info_no_subtitle => 'No subtitles';
   @override
   String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 // Path: <root>
@@ -23730,6 +23748,11 @@ class _StringsFr extends _StringsEn {
   String get remote_video_info_no_subtitle => 'No subtitles';
   @override
   String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 // Path: <root>
@@ -28872,6 +28895,11 @@ class _StringsId extends _StringsEn {
   String get remote_video_info_no_subtitle => 'No subtitles';
   @override
   String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 // Path: <root>
@@ -34062,6 +34090,11 @@ class _StringsIt extends _StringsEn {
   String get remote_video_info_no_subtitle => 'No subtitles';
   @override
   String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 // Path: <root>
@@ -39057,6 +39090,11 @@ class _StringsJa extends _StringsEn {
   String get remote_video_info_no_subtitle => 'No subtitles';
   @override
   String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 // Path: <root>
@@ -44055,6 +44093,11 @@ class _StringsKo extends _StringsEn {
   String get remote_video_info_no_subtitle => 'No subtitles';
   @override
   String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 // Path: <root>
@@ -49223,6 +49266,11 @@ class _StringsNl extends _StringsEn {
   String get remote_video_info_no_subtitle => 'No subtitles';
   @override
   String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 // Path: <root>
@@ -54406,6 +54454,11 @@ class _StringsPtBr extends _StringsEn {
   String get remote_video_info_no_subtitle => 'No subtitles';
   @override
   String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 // Path: <root>
@@ -59572,6 +59625,11 @@ class _StringsRu extends _StringsEn {
   String get remote_video_info_no_subtitle => 'No subtitles';
   @override
   String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 // Path: <root>
@@ -64683,6 +64741,11 @@ class _StringsTh extends _StringsEn {
   String get remote_video_info_no_subtitle => 'No subtitles';
   @override
   String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 // Path: <root>
@@ -69826,6 +69889,11 @@ class _StringsTr extends _StringsEn {
   String get remote_video_info_no_subtitle => 'No subtitles';
   @override
   String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 // Path: <root>
@@ -74956,6 +75024,11 @@ class _StringsVi extends _StringsEn {
   String get remote_video_info_no_subtitle => 'No subtitles';
   @override
   String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 // Path: <root>
@@ -79729,6 +79802,11 @@ class _StringsZhCn extends _StringsEn {
   String get remote_video_info_no_subtitle => '不含字幕';
   @override
   String get app_icon_presets => '预设';
+  @override
+  String get anki_mine_to_server => '制卡到已配对设备';
+  @override
+  String get anki_mine_to_server_hint =>
+      '把制卡发送到已配对主机的 Anki（用该设备的牌组与设置），而非本机。需先在互联/同步里完成配对。';
 }
 
 // Path: <root>
@@ -84642,6 +84720,11 @@ class _StringsZhHk extends _StringsEn {
   String get remote_video_info_no_subtitle => 'No subtitles';
   @override
   String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
 }
 
 /// Flat map(s) containing all translations.
@@ -89256,6 +89339,10 @@ extension on _StringsEn {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
@@ -93868,6 +93955,10 @@ extension on _StringsAr {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
@@ -98501,6 +98592,10 @@ extension on _StringsDe {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
@@ -103133,6 +103228,10 @@ extension on _StringsEs {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
@@ -107771,6 +107870,10 @@ extension on _StringsFr {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
@@ -112391,6 +112494,10 @@ extension on _StringsId {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
@@ -117026,6 +117133,10 @@ extension on _StringsIt {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
@@ -121623,6 +121734,10 @@ extension on _StringsJa {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
@@ -126224,6 +126339,10 @@ extension on _StringsKo {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
@@ -130852,6 +130971,10 @@ extension on _StringsNl {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
@@ -135477,6 +135600,10 @@ extension on _StringsPtBr {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
@@ -140107,6 +140234,10 @@ extension on _StringsRu {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
@@ -144721,6 +144852,10 @@ extension on _StringsTh {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
@@ -149344,6 +149479,10 @@ extension on _StringsTr {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
@@ -153962,6 +154101,10 @@ extension on _StringsVi {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
@@ -158546,6 +158689,10 @@ extension on _StringsZhCn {
         return '不含字幕';
       case 'app_icon_presets':
         return '预设';
+      case 'anki_mine_to_server':
+        return '制卡到已配对设备';
+      case 'anki_mine_to_server_hint':
+        return '把制卡发送到已配对主机的 Anki（用该设备的牌组与设置），而非本机。需先在互联/同步里完成配对。';
       default:
         return null;
     }
@@ -163138,6 +163285,10 @@ extension on _StringsZhHk {
         return 'No subtitles';
       case 'app_icon_presets':
         return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
       default:
         return null;
     }
