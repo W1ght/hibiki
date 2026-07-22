@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38539 (2267 per locale)
+/// Strings: 38437 (2261 per locale)
 ///
-/// Built on 2026-07-22 at 10:26 UTC
+/// Built on 2026-07-22 at 14:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2439,10 +2439,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
   String get video_continue_watching => 'Continue Watching';
-  String get video_library_overview => 'Statistics';
-  String get video_stat_total_videos => 'Total';
-  String get video_stat_unfinished => 'Unfinished';
-  String get video_stat_recent_imports => 'New in 7 days';
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   String get collection_view_all => 'View all';
@@ -2462,8 +2458,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_render_skia_fix_hint =>
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   String get book_continue_reading => 'Continue Reading';
-  String get book_library_overview => 'Statistics';
-  String get shelf_stat_reading => 'Reading';
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   String get sort_by => 'Sort';
   String get sort_recent_read => 'Recently read';
@@ -7112,14 +7106,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -7152,10 +7138,6 @@ class _StringsAr extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -12312,14 +12294,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -12352,10 +12326,6 @@ class _StringsDe extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -17528,14 +17498,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -17568,10 +17530,6 @@ class _StringsEs extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -22755,14 +22713,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -22795,10 +22745,6 @@ class _StringsFr extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -27909,14 +27855,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -27949,10 +27887,6 @@ class _StringsId extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -33111,14 +33045,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -33151,10 +33077,6 @@ class _StringsIt extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -38120,14 +38042,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -38160,10 +38074,6 @@ class _StringsJa extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -43129,14 +43039,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -43169,10 +43071,6 @@ class _StringsKo extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -48308,14 +48206,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -48348,10 +48238,6 @@ class _StringsNl extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -53503,14 +53389,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -53543,10 +53421,6 @@ class _StringsPtBr extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -58681,14 +58555,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -58721,10 +58587,6 @@ class _StringsRu extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -63804,14 +63666,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -63844,10 +63698,6 @@ class _StringsTh extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -68959,14 +68809,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -68999,10 +68841,6 @@ class _StringsTr extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -74101,14 +73939,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -74141,10 +73971,6 @@ class _StringsVi extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -78969,14 +78795,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_continue_watching => '继续观看';
   @override
-  String get video_library_overview => '统计';
-  @override
-  String get video_stat_total_videos => '总数';
-  @override
-  String get video_stat_unfinished => '未完成';
-  @override
-  String get video_stat_recent_imports => '近7天导入';
-  @override
   String video_watched_up_to({required Object time}) => '已看至 ${time}';
   @override
   String video_last_watched({required Object date}) => '上次观看 ${date}';
@@ -79004,10 +78822,6 @@ class _StringsZhCn extends _StringsEn {
   String get video_render_skia_fix_hint => '有声音但画面全黑时用。关闭 Impeller，重启后生效。';
   @override
   String get book_continue_reading => '继续阅读';
-  @override
-  String get book_library_overview => '统计';
-  @override
-  String get shelf_stat_reading => '在读';
   @override
   String book_read_progress({required Object percent}) => '已读 ${percent}%';
   @override
@@ -83817,14 +83631,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => '統計';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -83857,10 +83663,6 @@ class _StringsZhHk extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => '統計';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -88545,14 +88347,6 @@ extension on _StringsEn {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -88581,10 +88375,6 @@ extension on _StringsEn {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -93169,14 +92959,6 @@ extension on _StringsAr {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -93205,10 +92987,6 @@ extension on _StringsAr {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -97814,14 +97592,6 @@ extension on _StringsDe {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -97850,10 +97620,6 @@ extension on _StringsDe {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -102458,14 +102224,6 @@ extension on _StringsEs {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -102494,10 +102252,6 @@ extension on _StringsEs {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -107108,14 +106862,6 @@ extension on _StringsFr {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -107144,10 +106890,6 @@ extension on _StringsFr {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -111740,14 +111482,6 @@ extension on _StringsId {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -111776,10 +111510,6 @@ extension on _StringsId {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -116387,14 +116117,6 @@ extension on _StringsIt {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -116423,10 +116145,6 @@ extension on _StringsIt {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -120997,14 +120715,6 @@ extension on _StringsJa {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -121033,10 +120743,6 @@ extension on _StringsJa {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -125609,14 +125315,6 @@ extension on _StringsKo {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -125645,10 +125343,6 @@ extension on _StringsKo {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -130249,14 +129943,6 @@ extension on _StringsNl {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -130285,10 +129971,6 @@ extension on _StringsNl {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -134886,14 +134568,6 @@ extension on _StringsPtBr {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -134922,10 +134596,6 @@ extension on _StringsPtBr {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -139528,14 +139198,6 @@ extension on _StringsRu {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -139564,10 +139226,6 @@ extension on _StringsRu {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -144154,14 +143812,6 @@ extension on _StringsTh {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -144190,10 +143840,6 @@ extension on _StringsTh {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -148789,14 +148435,6 @@ extension on _StringsTr {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -148825,10 +148463,6 @@ extension on _StringsTr {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -153419,14 +153053,6 @@ extension on _StringsVi {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -153455,10 +153081,6 @@ extension on _StringsVi {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -158019,14 +157641,6 @@ extension on _StringsZhCn {
         return ({required Object count}) => '已选 ${count} 个视频';
       case 'video_continue_watching':
         return '继续观看';
-      case 'video_library_overview':
-        return '统计';
-      case 'video_stat_total_videos':
-        return '总数';
-      case 'video_stat_unfinished':
-        return '未完成';
-      case 'video_stat_recent_imports':
-        return '近7天导入';
       case 'video_watched_up_to':
         return ({required Object time}) => '已看至 ${time}';
       case 'video_last_watched':
@@ -158055,10 +157669,6 @@ extension on _StringsZhCn {
         return '有声音但画面全黑时用。关闭 Impeller，重启后生效。';
       case 'book_continue_reading':
         return '继续阅读';
-      case 'book_library_overview':
-        return '统计';
-      case 'shelf_stat_reading':
-        return '在读';
       case 'book_read_progress':
         return ({required Object percent}) => '已读 ${percent}%';
       case 'sort_by':
@@ -162620,14 +162230,6 @@ extension on _StringsZhHk {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return '統計';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -162656,10 +162258,6 @@ extension on _StringsZhHk {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return '統計';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
