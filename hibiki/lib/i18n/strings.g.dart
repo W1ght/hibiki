@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38471 (2263 per locale)
+/// Strings: 38607 (2271 per locale)
 ///
-/// Built on 2026-07-22 at 17:28 UTC
+/// Built on 2026-07-22 at 21:40 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3011,6 +3011,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_mine_to_server => 'Mine to paired device';
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  String get delete_scope_keep_local => 'Delete on this device only';
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  String get delete_prompt_title => 'Deleted on another device';
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  String get delete_prompt_select_all => 'Select all';
+  String get delete_prompt_delete_selected => 'Delete selected';
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 // Path: <root>
@@ -8131,6 +8141,24 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 // Path: <root>
@@ -13324,6 +13352,24 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 // Path: <root>
@@ -18533,6 +18579,24 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 // Path: <root>
@@ -23753,6 +23817,24 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 // Path: <root>
@@ -28900,6 +28982,24 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 // Path: <root>
@@ -34095,6 +34195,24 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 // Path: <root>
@@ -39095,6 +39213,24 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 // Path: <root>
@@ -44098,6 +44234,24 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 // Path: <root>
@@ -49271,6 +49425,24 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 // Path: <root>
@@ -54459,6 +54631,24 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 // Path: <root>
@@ -59630,6 +59820,24 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 // Path: <root>
@@ -64746,6 +64954,24 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 // Path: <root>
@@ -69894,6 +70120,24 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 // Path: <root>
@@ -75029,6 +75273,24 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 // Path: <root>
@@ -79807,6 +80069,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       '把制卡发送到已配对主机的 Anki（用该设备的牌组与设置），而非本机。需先在互联/同步里完成配对。';
+  @override
+  String get delete_scope_keep_local => '仅从本机删除';
+  @override
+  String get delete_scope_keep_local_desc => '其他设备保留';
+  @override
+  String get delete_prompt_title => '其他设备已删除';
+  @override
+  String get delete_prompt_message => '以下内容已在其他设备删除，也从本机删除吗？';
+  @override
+  String get delete_prompt_select_all => '全选';
+  @override
+  String get delete_prompt_delete_selected => '删除选中';
+  @override
+  String get delete_scope_sync_everywhere => '从所有设备删除';
+  @override
+  String get delete_scope_sync_everywhere_desc => '其他设备下次同步时会确认删除';
 }
 
 // Path: <root>
@@ -84725,6 +85003,24 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_mine_to_server_hint =>
       'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
 }
 
 /// Flat map(s) containing all translations.
@@ -89343,6 +89639,22 @@ extension on _StringsEn {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
@@ -93959,6 +94271,22 @@ extension on _StringsAr {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
@@ -98596,6 +98924,22 @@ extension on _StringsDe {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
@@ -103232,6 +103576,22 @@ extension on _StringsEs {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
@@ -107874,6 +108234,22 @@ extension on _StringsFr {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
@@ -112498,6 +112874,22 @@ extension on _StringsId {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
@@ -117137,6 +117529,22 @@ extension on _StringsIt {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
@@ -121738,6 +122146,22 @@ extension on _StringsJa {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
@@ -126343,6 +126767,22 @@ extension on _StringsKo {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
@@ -130975,6 +131415,22 @@ extension on _StringsNl {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
@@ -135604,6 +136060,22 @@ extension on _StringsPtBr {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
@@ -140238,6 +140710,22 @@ extension on _StringsRu {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
@@ -144856,6 +145344,22 @@ extension on _StringsTh {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
@@ -149483,6 +149987,22 @@ extension on _StringsTr {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
@@ -154105,6 +154625,22 @@ extension on _StringsVi {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
@@ -158693,6 +159229,22 @@ extension on _StringsZhCn {
         return '制卡到已配对设备';
       case 'anki_mine_to_server_hint':
         return '把制卡发送到已配对主机的 Anki（用该设备的牌组与设置），而非本机。需先在互联/同步里完成配对。';
+      case 'delete_scope_keep_local':
+        return '仅从本机删除';
+      case 'delete_scope_keep_local_desc':
+        return '其他设备保留';
+      case 'delete_prompt_title':
+        return '其他设备已删除';
+      case 'delete_prompt_message':
+        return '以下内容已在其他设备删除，也从本机删除吗？';
+      case 'delete_prompt_select_all':
+        return '全选';
+      case 'delete_prompt_delete_selected':
+        return '删除选中';
+      case 'delete_scope_sync_everywhere':
+        return '从所有设备删除';
+      case 'delete_scope_sync_everywhere_desc':
+        return '其他设备下次同步时会确认删除';
       default:
         return null;
     }
@@ -163289,6 +163841,22 @@ extension on _StringsZhHk {
         return 'Mine to paired device';
       case 'anki_mine_to_server_hint':
         return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
       default:
         return null;
     }
