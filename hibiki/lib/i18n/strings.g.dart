@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 37995 (2235 per locale)
 ///
-/// Built on 2026-07-22 at 00:05 UTC
+/// Built on 2026-07-22 at 04:30 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2642,7 +2642,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_enable => 'Enable interconnect';
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   String get video_watch_activity => 'Watch activity';
   String get book_mark_completed_action => 'Mark as completed';
   String get book_mark_uncompleted_action => 'Mark as not completed';
@@ -7430,7 +7430,7 @@ class _StringsAr extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -12561,7 +12561,7 @@ class _StringsDe extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -17708,7 +17708,7 @@ class _StringsEs extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -22866,7 +22866,7 @@ class _StringsFr extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -27951,7 +27951,7 @@ class _StringsId extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -33084,7 +33084,7 @@ class _StringsIt extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -38023,7 +38023,7 @@ class _StringsJa extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -42964,7 +42964,7 @@ class _StringsKo extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -48074,7 +48074,7 @@ class _StringsNl extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -53200,7 +53200,7 @@ class _StringsPtBr extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -58309,7 +58309,7 @@ class _StringsRu extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -63363,7 +63363,7 @@ class _StringsTh extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -68449,7 +68449,7 @@ class _StringsTr extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -73522,7 +73522,7 @@ class _StringsVi extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -78288,7 +78288,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get interconnect_enable_hint => '通过局域网连接你的其他设备。与云备份后端并存，互不冲突。';
   @override
-  String get reading_activity => '阅读活动';
+  String get reading_activity => '学习活动';
   @override
   String get video_watch_activity => '观看活动';
   @override
@@ -83103,7 +83103,7 @@ class _StringsZhHk extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -87721,7 +87721,7 @@ extension on _StringsEn {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -92281,7 +92281,7 @@ extension on _StringsAr {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -96862,7 +96862,7 @@ extension on _StringsDe {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -101442,7 +101442,7 @@ extension on _StringsEs {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -106028,7 +106028,7 @@ extension on _StringsFr {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -110596,7 +110596,7 @@ extension on _StringsId {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -115179,7 +115179,7 @@ extension on _StringsIt {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -119724,7 +119724,7 @@ extension on _StringsJa {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -124273,7 +124273,7 @@ extension on _StringsKo {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -128849,7 +128849,7 @@ extension on _StringsNl {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -133422,7 +133422,7 @@ extension on _StringsPtBr {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -138000,7 +138000,7 @@ extension on _StringsRu {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -142562,7 +142562,7 @@ extension on _StringsTh {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -147133,7 +147133,7 @@ extension on _StringsTr {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -151699,7 +151699,7 @@ extension on _StringsVi {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -156233,7 +156233,7 @@ extension on _StringsZhCn {
       case 'interconnect_enable_hint':
         return '通过局域网连接你的其他设备。与云备份后端并存，互不冲突。';
       case 'reading_activity':
-        return '阅读活动';
+        return '学习活动';
       case 'video_watch_activity':
         return '观看活动';
       case 'book_mark_completed_action':
@@ -160771,7 +160771,7 @@ extension on _StringsZhHk {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
