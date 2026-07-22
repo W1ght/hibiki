@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37961 (2233 per locale)
+/// Strings: 38437 (2261 per locale)
 ///
-/// Built on 2026-07-21 at 21:54 UTC
+/// Built on 2026-07-22 at 08:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -349,7 +349,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get server_address => 'Server Address';
   String get text_segmentation => 'Text Segmentation';
   String get settings => 'Settings';
-  String get manager => 'Manager';
+  String get manager => 'Dictionaries & sources';
   String get volume_button_page_turning => 'Volume button page turning';
   String get invert_volume_buttons => 'Invert volume buttons';
   String get invert_swipe_direction => 'Invert swipe page turn direction';
@@ -2642,7 +2642,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_enable => 'Enable interconnect';
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   String get video_watch_activity => 'Watch activity';
   String get book_mark_completed_action => 'Mark as completed';
   String get book_mark_uncompleted_action => 'Mark as not completed';
@@ -2770,8 +2770,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get galgame_helper_install_incomplete =>
       'Engine component install incomplete, please retry';
   String get download_settings => 'Download settings';
-  String get download_backend_not_configured =>
-      'Configure the download backend first (settings, top-right).';
   String get floating_lyric_text_opacity_hint =>
       'Lower this to make the floating subtitle text more transparent';
   String get floating_lyric_button_bg_opacity_hint =>
@@ -2974,6 +2972,40 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get clipboard_panel_block_capture_hint =>
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   String get settings_section_general => 'General';
+  String get reading_section_mode => 'Mode & orientation';
+  String get settings_destination_system_summary =>
+      'General, updates & diagnostics';
+  String get error_load_failed => 'Something went wrong while loading';
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  String get download_open_settings => 'Open settings';
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  String get download_test_connection => 'Test connection';
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  String get anime_download_trusted => 'Trusted';
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  String get game_phase_idle => 'Idle';
+  String get game_phase_resolving => 'Resolving';
+  String get game_phase_launching => 'Launching';
+  String get game_phase_attaching => 'Attaching';
+  String get game_phase_injecting => 'Injecting';
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  String get game_phase_running => 'Running';
+  String get game_phase_degraded => 'Degraded';
+  String get game_phase_stopping => 'Stopping';
+  String get game_phase_error => 'Error';
+  String get game_endpoint_phase_connecting => 'Connecting';
+  String get game_endpoint_phase_connected => 'Connected';
+  String get game_endpoint_phase_retrying => 'Retrying';
+  String get game_endpoint_phase_stopped => 'Stopped';
+  String get game_track_clips => 'Clips';
+  String get game_track_energy => 'Energy';
+  String get game_audio_duration => 'Audio duration';
+  String get games_rename_label => 'Game name';
 }
 
 // Path: <root>
@@ -7427,7 +7459,7 @@ class _StringsAr extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -7656,9 +7688,6 @@ class _StringsAr extends _StringsEn {
       'Engine component install incomplete, please retry';
   @override
   String get download_settings => 'Download settings';
-  @override
-  String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'اخفض هذا لجعل نص الترجمة العائمة أكثر شفافية';
@@ -8027,6 +8056,69 @@ class _StringsAr extends _StringsEn {
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   @override
   String get settings_section_general => 'General';
+  @override
+  String get reading_section_mode => 'Mode & orientation';
+  @override
+  String get settings_destination_system_summary =>
+      'General, updates & diagnostics';
+  @override
+  String get error_load_failed => 'Something went wrong while loading';
+  @override
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  @override
+  String get download_open_settings => 'Open settings';
+  @override
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  @override
+  String get download_test_connection => 'Test connection';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  @override
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  @override
+  String get game_phase_idle => 'Idle';
+  @override
+  String get game_phase_resolving => 'Resolving';
+  @override
+  String get game_phase_launching => 'Launching';
+  @override
+  String get game_phase_attaching => 'Attaching';
+  @override
+  String get game_phase_injecting => 'Injecting';
+  @override
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  @override
+  String get game_phase_running => 'Running';
+  @override
+  String get game_phase_degraded => 'Degraded';
+  @override
+  String get game_phase_stopping => 'Stopping';
+  @override
+  String get game_phase_error => 'Error';
+  @override
+  String get game_endpoint_phase_connecting => 'Connecting';
+  @override
+  String get game_endpoint_phase_connected => 'Connected';
+  @override
+  String get game_endpoint_phase_retrying => 'Retrying';
+  @override
+  String get game_endpoint_phase_stopped => 'Stopped';
+  @override
+  String get game_track_clips => 'Clips';
+  @override
+  String get game_track_energy => 'Energy';
+  @override
+  String get game_audio_duration => 'Audio duration';
+  @override
+  String get games_rename_label => 'Game name';
 }
 
 // Path: <root>
@@ -12553,7 +12645,7 @@ class _StringsDe extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -12782,9 +12874,6 @@ class _StringsDe extends _StringsEn {
       'Engine component install incomplete, please retry';
   @override
   String get download_settings => 'Download settings';
-  @override
-  String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Verringern, um den schwebenden Untertiteltext transparenter zu machen';
@@ -13153,6 +13242,69 @@ class _StringsDe extends _StringsEn {
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   @override
   String get settings_section_general => 'General';
+  @override
+  String get reading_section_mode => 'Mode & orientation';
+  @override
+  String get settings_destination_system_summary =>
+      'General, updates & diagnostics';
+  @override
+  String get error_load_failed => 'Something went wrong while loading';
+  @override
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  @override
+  String get download_open_settings => 'Open settings';
+  @override
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  @override
+  String get download_test_connection => 'Test connection';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  @override
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  @override
+  String get game_phase_idle => 'Idle';
+  @override
+  String get game_phase_resolving => 'Resolving';
+  @override
+  String get game_phase_launching => 'Launching';
+  @override
+  String get game_phase_attaching => 'Attaching';
+  @override
+  String get game_phase_injecting => 'Injecting';
+  @override
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  @override
+  String get game_phase_running => 'Running';
+  @override
+  String get game_phase_degraded => 'Degraded';
+  @override
+  String get game_phase_stopping => 'Stopping';
+  @override
+  String get game_phase_error => 'Error';
+  @override
+  String get game_endpoint_phase_connecting => 'Connecting';
+  @override
+  String get game_endpoint_phase_connected => 'Connected';
+  @override
+  String get game_endpoint_phase_retrying => 'Retrying';
+  @override
+  String get game_endpoint_phase_stopped => 'Stopped';
+  @override
+  String get game_track_clips => 'Clips';
+  @override
+  String get game_track_energy => 'Energy';
+  @override
+  String get game_audio_duration => 'Audio duration';
+  @override
+  String get games_rename_label => 'Game name';
 }
 
 // Path: <root>
@@ -17695,7 +17847,7 @@ class _StringsEs extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -17924,9 +18076,6 @@ class _StringsEs extends _StringsEn {
       'Engine component install incomplete, please retry';
   @override
   String get download_settings => 'Download settings';
-  @override
-  String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Bájala para que el texto del subtítulo flotante sea más transparente';
@@ -18295,6 +18444,69 @@ class _StringsEs extends _StringsEn {
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   @override
   String get settings_section_general => 'General';
+  @override
+  String get reading_section_mode => 'Mode & orientation';
+  @override
+  String get settings_destination_system_summary =>
+      'General, updates & diagnostics';
+  @override
+  String get error_load_failed => 'Something went wrong while loading';
+  @override
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  @override
+  String get download_open_settings => 'Open settings';
+  @override
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  @override
+  String get download_test_connection => 'Test connection';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  @override
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  @override
+  String get game_phase_idle => 'Idle';
+  @override
+  String get game_phase_resolving => 'Resolving';
+  @override
+  String get game_phase_launching => 'Launching';
+  @override
+  String get game_phase_attaching => 'Attaching';
+  @override
+  String get game_phase_injecting => 'Injecting';
+  @override
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  @override
+  String get game_phase_running => 'Running';
+  @override
+  String get game_phase_degraded => 'Degraded';
+  @override
+  String get game_phase_stopping => 'Stopping';
+  @override
+  String get game_phase_error => 'Error';
+  @override
+  String get game_endpoint_phase_connecting => 'Connecting';
+  @override
+  String get game_endpoint_phase_connected => 'Connected';
+  @override
+  String get game_endpoint_phase_retrying => 'Retrying';
+  @override
+  String get game_endpoint_phase_stopped => 'Stopped';
+  @override
+  String get game_track_clips => 'Clips';
+  @override
+  String get game_track_energy => 'Energy';
+  @override
+  String get game_audio_duration => 'Audio duration';
+  @override
+  String get games_rename_label => 'Game name';
 }
 
 // Path: <root>
@@ -22848,7 +23060,7 @@ class _StringsFr extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -23077,9 +23289,6 @@ class _StringsFr extends _StringsEn {
       'Engine component install incomplete, please retry';
   @override
   String get download_settings => 'Download settings';
-  @override
-  String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Baissez cette valeur pour rendre le texte du sous-titre flottant plus transparent';
@@ -23448,6 +23657,69 @@ class _StringsFr extends _StringsEn {
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   @override
   String get settings_section_general => 'General';
+  @override
+  String get reading_section_mode => 'Mode & orientation';
+  @override
+  String get settings_destination_system_summary =>
+      'General, updates & diagnostics';
+  @override
+  String get error_load_failed => 'Something went wrong while loading';
+  @override
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  @override
+  String get download_open_settings => 'Open settings';
+  @override
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  @override
+  String get download_test_connection => 'Test connection';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  @override
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  @override
+  String get game_phase_idle => 'Idle';
+  @override
+  String get game_phase_resolving => 'Resolving';
+  @override
+  String get game_phase_launching => 'Launching';
+  @override
+  String get game_phase_attaching => 'Attaching';
+  @override
+  String get game_phase_injecting => 'Injecting';
+  @override
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  @override
+  String get game_phase_running => 'Running';
+  @override
+  String get game_phase_degraded => 'Degraded';
+  @override
+  String get game_phase_stopping => 'Stopping';
+  @override
+  String get game_phase_error => 'Error';
+  @override
+  String get game_endpoint_phase_connecting => 'Connecting';
+  @override
+  String get game_endpoint_phase_connected => 'Connected';
+  @override
+  String get game_endpoint_phase_retrying => 'Retrying';
+  @override
+  String get game_endpoint_phase_stopped => 'Stopped';
+  @override
+  String get game_track_clips => 'Clips';
+  @override
+  String get game_track_energy => 'Energy';
+  @override
+  String get game_audio_duration => 'Audio duration';
+  @override
+  String get games_rename_label => 'Game name';
 }
 
 // Path: <root>
@@ -27928,7 +28200,7 @@ class _StringsId extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -28157,9 +28429,6 @@ class _StringsId extends _StringsEn {
       'Engine component install incomplete, please retry';
   @override
   String get download_settings => 'Download settings';
-  @override
-  String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Turunkan untuk membuat teks subtitle melayang lebih transparan';
@@ -28528,6 +28797,69 @@ class _StringsId extends _StringsEn {
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   @override
   String get settings_section_general => 'General';
+  @override
+  String get reading_section_mode => 'Mode & orientation';
+  @override
+  String get settings_destination_system_summary =>
+      'General, updates & diagnostics';
+  @override
+  String get error_load_failed => 'Something went wrong while loading';
+  @override
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  @override
+  String get download_open_settings => 'Open settings';
+  @override
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  @override
+  String get download_test_connection => 'Test connection';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  @override
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  @override
+  String get game_phase_idle => 'Idle';
+  @override
+  String get game_phase_resolving => 'Resolving';
+  @override
+  String get game_phase_launching => 'Launching';
+  @override
+  String get game_phase_attaching => 'Attaching';
+  @override
+  String get game_phase_injecting => 'Injecting';
+  @override
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  @override
+  String get game_phase_running => 'Running';
+  @override
+  String get game_phase_degraded => 'Degraded';
+  @override
+  String get game_phase_stopping => 'Stopping';
+  @override
+  String get game_phase_error => 'Error';
+  @override
+  String get game_endpoint_phase_connecting => 'Connecting';
+  @override
+  String get game_endpoint_phase_connected => 'Connected';
+  @override
+  String get game_endpoint_phase_retrying => 'Retrying';
+  @override
+  String get game_endpoint_phase_stopped => 'Stopped';
+  @override
+  String get game_track_clips => 'Clips';
+  @override
+  String get game_track_energy => 'Energy';
+  @override
+  String get game_audio_duration => 'Audio duration';
+  @override
+  String get games_rename_label => 'Game name';
 }
 
 // Path: <root>
@@ -33056,7 +33388,7 @@ class _StringsIt extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -33285,9 +33617,6 @@ class _StringsIt extends _StringsEn {
       'Engine component install incomplete, please retry';
   @override
   String get download_settings => 'Download settings';
-  @override
-  String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Abbassa questo valore per rendere più trasparente il testo del sottotitolo fluttuante';
@@ -33656,6 +33985,69 @@ class _StringsIt extends _StringsEn {
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   @override
   String get settings_section_general => 'General';
+  @override
+  String get reading_section_mode => 'Mode & orientation';
+  @override
+  String get settings_destination_system_summary =>
+      'General, updates & diagnostics';
+  @override
+  String get error_load_failed => 'Something went wrong while loading';
+  @override
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  @override
+  String get download_open_settings => 'Open settings';
+  @override
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  @override
+  String get download_test_connection => 'Test connection';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  @override
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  @override
+  String get game_phase_idle => 'Idle';
+  @override
+  String get game_phase_resolving => 'Resolving';
+  @override
+  String get game_phase_launching => 'Launching';
+  @override
+  String get game_phase_attaching => 'Attaching';
+  @override
+  String get game_phase_injecting => 'Injecting';
+  @override
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  @override
+  String get game_phase_running => 'Running';
+  @override
+  String get game_phase_degraded => 'Degraded';
+  @override
+  String get game_phase_stopping => 'Stopping';
+  @override
+  String get game_phase_error => 'Error';
+  @override
+  String get game_endpoint_phase_connecting => 'Connecting';
+  @override
+  String get game_endpoint_phase_connected => 'Connected';
+  @override
+  String get game_endpoint_phase_retrying => 'Retrying';
+  @override
+  String get game_endpoint_phase_stopped => 'Stopped';
+  @override
+  String get game_track_clips => 'Clips';
+  @override
+  String get game_track_energy => 'Energy';
+  @override
+  String get game_audio_duration => 'Audio duration';
+  @override
+  String get games_rename_label => 'Game name';
 }
 
 // Path: <root>
@@ -37990,7 +38382,7 @@ class _StringsJa extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -38219,9 +38611,6 @@ class _StringsJa extends _StringsEn {
       'Engine component install incomplete, please retry';
   @override
   String get download_settings => 'Download settings';
-  @override
-  String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint => '下げるとフローティング字幕の文字がより透明になります';
   @override
@@ -38589,6 +38978,69 @@ class _StringsJa extends _StringsEn {
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   @override
   String get settings_section_general => 'General';
+  @override
+  String get reading_section_mode => 'Mode & orientation';
+  @override
+  String get settings_destination_system_summary =>
+      'General, updates & diagnostics';
+  @override
+  String get error_load_failed => 'Something went wrong while loading';
+  @override
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  @override
+  String get download_open_settings => 'Open settings';
+  @override
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  @override
+  String get download_test_connection => 'Test connection';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  @override
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  @override
+  String get game_phase_idle => 'Idle';
+  @override
+  String get game_phase_resolving => 'Resolving';
+  @override
+  String get game_phase_launching => 'Launching';
+  @override
+  String get game_phase_attaching => 'Attaching';
+  @override
+  String get game_phase_injecting => 'Injecting';
+  @override
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  @override
+  String get game_phase_running => 'Running';
+  @override
+  String get game_phase_degraded => 'Degraded';
+  @override
+  String get game_phase_stopping => 'Stopping';
+  @override
+  String get game_phase_error => 'Error';
+  @override
+  String get game_endpoint_phase_connecting => 'Connecting';
+  @override
+  String get game_endpoint_phase_connected => 'Connected';
+  @override
+  String get game_endpoint_phase_retrying => 'Retrying';
+  @override
+  String get game_endpoint_phase_stopped => 'Stopped';
+  @override
+  String get game_track_clips => 'Clips';
+  @override
+  String get game_track_energy => 'Energy';
+  @override
+  String get game_audio_duration => 'Audio duration';
+  @override
+  String get games_rename_label => 'Game name';
 }
 
 // Path: <root>
@@ -42926,7 +43378,7 @@ class _StringsKo extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -43155,9 +43607,6 @@ class _StringsKo extends _StringsEn {
       'Engine component install incomplete, please retry';
   @override
   String get download_settings => 'Download settings';
-  @override
-  String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint => '낮추면 플로팅 자막 텍스트가 더 투명해집니다';
   @override
@@ -43525,6 +43974,69 @@ class _StringsKo extends _StringsEn {
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   @override
   String get settings_section_general => 'General';
+  @override
+  String get reading_section_mode => 'Mode & orientation';
+  @override
+  String get settings_destination_system_summary =>
+      'General, updates & diagnostics';
+  @override
+  String get error_load_failed => 'Something went wrong while loading';
+  @override
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  @override
+  String get download_open_settings => 'Open settings';
+  @override
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  @override
+  String get download_test_connection => 'Test connection';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  @override
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  @override
+  String get game_phase_idle => 'Idle';
+  @override
+  String get game_phase_resolving => 'Resolving';
+  @override
+  String get game_phase_launching => 'Launching';
+  @override
+  String get game_phase_attaching => 'Attaching';
+  @override
+  String get game_phase_injecting => 'Injecting';
+  @override
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  @override
+  String get game_phase_running => 'Running';
+  @override
+  String get game_phase_degraded => 'Degraded';
+  @override
+  String get game_phase_stopping => 'Stopping';
+  @override
+  String get game_phase_error => 'Error';
+  @override
+  String get game_endpoint_phase_connecting => 'Connecting';
+  @override
+  String get game_endpoint_phase_connected => 'Connected';
+  @override
+  String get game_endpoint_phase_retrying => 'Retrying';
+  @override
+  String get game_endpoint_phase_stopped => 'Stopped';
+  @override
+  String get game_track_clips => 'Clips';
+  @override
+  String get game_track_energy => 'Energy';
+  @override
+  String get game_audio_duration => 'Audio duration';
+  @override
+  String get games_rename_label => 'Game name';
 }
 
 // Path: <root>
@@ -48031,7 +48543,7 @@ class _StringsNl extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -48260,9 +48772,6 @@ class _StringsNl extends _StringsEn {
       'Engine component install incomplete, please retry';
   @override
   String get download_settings => 'Download settings';
-  @override
-  String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Verlaag dit om de tekst van de zwevende ondertitel transparanter te maken';
@@ -48631,6 +49140,69 @@ class _StringsNl extends _StringsEn {
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   @override
   String get settings_section_general => 'General';
+  @override
+  String get reading_section_mode => 'Mode & orientation';
+  @override
+  String get settings_destination_system_summary =>
+      'General, updates & diagnostics';
+  @override
+  String get error_load_failed => 'Something went wrong while loading';
+  @override
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  @override
+  String get download_open_settings => 'Open settings';
+  @override
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  @override
+  String get download_test_connection => 'Test connection';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  @override
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  @override
+  String get game_phase_idle => 'Idle';
+  @override
+  String get game_phase_resolving => 'Resolving';
+  @override
+  String get game_phase_launching => 'Launching';
+  @override
+  String get game_phase_attaching => 'Attaching';
+  @override
+  String get game_phase_injecting => 'Injecting';
+  @override
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  @override
+  String get game_phase_running => 'Running';
+  @override
+  String get game_phase_degraded => 'Degraded';
+  @override
+  String get game_phase_stopping => 'Stopping';
+  @override
+  String get game_phase_error => 'Error';
+  @override
+  String get game_endpoint_phase_connecting => 'Connecting';
+  @override
+  String get game_endpoint_phase_connected => 'Connected';
+  @override
+  String get game_endpoint_phase_retrying => 'Retrying';
+  @override
+  String get game_endpoint_phase_stopped => 'Stopped';
+  @override
+  String get game_track_clips => 'Clips';
+  @override
+  String get game_track_energy => 'Energy';
+  @override
+  String get game_audio_duration => 'Audio duration';
+  @override
+  String get games_rename_label => 'Game name';
 }
 
 // Path: <root>
@@ -53152,7 +53724,7 @@ class _StringsPtBr extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -53381,9 +53953,6 @@ class _StringsPtBr extends _StringsEn {
       'Engine component install incomplete, please retry';
   @override
   String get download_settings => 'Download settings';
-  @override
-  String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Reduza para deixar o texto da legenda flutuante mais transparente';
@@ -53752,6 +54321,69 @@ class _StringsPtBr extends _StringsEn {
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   @override
   String get settings_section_general => 'General';
+  @override
+  String get reading_section_mode => 'Mode & orientation';
+  @override
+  String get settings_destination_system_summary =>
+      'General, updates & diagnostics';
+  @override
+  String get error_load_failed => 'Something went wrong while loading';
+  @override
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  @override
+  String get download_open_settings => 'Open settings';
+  @override
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  @override
+  String get download_test_connection => 'Test connection';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  @override
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  @override
+  String get game_phase_idle => 'Idle';
+  @override
+  String get game_phase_resolving => 'Resolving';
+  @override
+  String get game_phase_launching => 'Launching';
+  @override
+  String get game_phase_attaching => 'Attaching';
+  @override
+  String get game_phase_injecting => 'Injecting';
+  @override
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  @override
+  String get game_phase_running => 'Running';
+  @override
+  String get game_phase_degraded => 'Degraded';
+  @override
+  String get game_phase_stopping => 'Stopping';
+  @override
+  String get game_phase_error => 'Error';
+  @override
+  String get game_endpoint_phase_connecting => 'Connecting';
+  @override
+  String get game_endpoint_phase_connected => 'Connected';
+  @override
+  String get game_endpoint_phase_retrying => 'Retrying';
+  @override
+  String get game_endpoint_phase_stopped => 'Stopped';
+  @override
+  String get game_track_clips => 'Clips';
+  @override
+  String get game_track_energy => 'Energy';
+  @override
+  String get game_audio_duration => 'Audio duration';
+  @override
+  String get games_rename_label => 'Game name';
 }
 
 // Path: <root>
@@ -58256,7 +58888,7 @@ class _StringsRu extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -58485,9 +59117,6 @@ class _StringsRu extends _StringsEn {
       'Engine component install incomplete, please retry';
   @override
   String get download_settings => 'Download settings';
-  @override
-  String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Уменьшите, чтобы текст плавающих субтитров стал прозрачнее';
@@ -58856,6 +59485,69 @@ class _StringsRu extends _StringsEn {
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   @override
   String get settings_section_general => 'General';
+  @override
+  String get reading_section_mode => 'Mode & orientation';
+  @override
+  String get settings_destination_system_summary =>
+      'General, updates & diagnostics';
+  @override
+  String get error_load_failed => 'Something went wrong while loading';
+  @override
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  @override
+  String get download_open_settings => 'Open settings';
+  @override
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  @override
+  String get download_test_connection => 'Test connection';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  @override
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  @override
+  String get game_phase_idle => 'Idle';
+  @override
+  String get game_phase_resolving => 'Resolving';
+  @override
+  String get game_phase_launching => 'Launching';
+  @override
+  String get game_phase_attaching => 'Attaching';
+  @override
+  String get game_phase_injecting => 'Injecting';
+  @override
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  @override
+  String get game_phase_running => 'Running';
+  @override
+  String get game_phase_degraded => 'Degraded';
+  @override
+  String get game_phase_stopping => 'Stopping';
+  @override
+  String get game_phase_error => 'Error';
+  @override
+  String get game_endpoint_phase_connecting => 'Connecting';
+  @override
+  String get game_endpoint_phase_connected => 'Connected';
+  @override
+  String get game_endpoint_phase_retrying => 'Retrying';
+  @override
+  String get game_endpoint_phase_stopped => 'Stopped';
+  @override
+  String get game_track_clips => 'Clips';
+  @override
+  String get game_track_energy => 'Energy';
+  @override
+  String get game_audio_duration => 'Audio duration';
+  @override
+  String get games_rename_label => 'Game name';
 }
 
 // Path: <root>
@@ -63305,7 +63997,7 @@ class _StringsTh extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -63534,9 +64226,6 @@ class _StringsTh extends _StringsEn {
       'Engine component install incomplete, please retry';
   @override
   String get download_settings => 'Download settings';
-  @override
-  String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'ลดค่านี้เพื่อให้ตัวอักษรคำบรรยายลอยโปร่งใสขึ้น';
@@ -63905,6 +64594,69 @@ class _StringsTh extends _StringsEn {
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   @override
   String get settings_section_general => 'General';
+  @override
+  String get reading_section_mode => 'Mode & orientation';
+  @override
+  String get settings_destination_system_summary =>
+      'General, updates & diagnostics';
+  @override
+  String get error_load_failed => 'Something went wrong while loading';
+  @override
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  @override
+  String get download_open_settings => 'Open settings';
+  @override
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  @override
+  String get download_test_connection => 'Test connection';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  @override
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  @override
+  String get game_phase_idle => 'Idle';
+  @override
+  String get game_phase_resolving => 'Resolving';
+  @override
+  String get game_phase_launching => 'Launching';
+  @override
+  String get game_phase_attaching => 'Attaching';
+  @override
+  String get game_phase_injecting => 'Injecting';
+  @override
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  @override
+  String get game_phase_running => 'Running';
+  @override
+  String get game_phase_degraded => 'Degraded';
+  @override
+  String get game_phase_stopping => 'Stopping';
+  @override
+  String get game_phase_error => 'Error';
+  @override
+  String get game_endpoint_phase_connecting => 'Connecting';
+  @override
+  String get game_endpoint_phase_connected => 'Connected';
+  @override
+  String get game_endpoint_phase_retrying => 'Retrying';
+  @override
+  String get game_endpoint_phase_stopped => 'Stopped';
+  @override
+  String get game_track_clips => 'Clips';
+  @override
+  String get game_track_energy => 'Energy';
+  @override
+  String get game_audio_duration => 'Audio duration';
+  @override
+  String get games_rename_label => 'Game name';
 }
 
 // Path: <root>
@@ -68386,7 +69138,7 @@ class _StringsTr extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -68615,9 +69367,6 @@ class _StringsTr extends _StringsEn {
       'Engine component install incomplete, please retry';
   @override
   String get download_settings => 'Download settings';
-  @override
-  String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Kayan altyazı metnini daha saydam yapmak için bunu azaltın';
@@ -68986,6 +69735,69 @@ class _StringsTr extends _StringsEn {
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   @override
   String get settings_section_general => 'General';
+  @override
+  String get reading_section_mode => 'Mode & orientation';
+  @override
+  String get settings_destination_system_summary =>
+      'General, updates & diagnostics';
+  @override
+  String get error_load_failed => 'Something went wrong while loading';
+  @override
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  @override
+  String get download_open_settings => 'Open settings';
+  @override
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  @override
+  String get download_test_connection => 'Test connection';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  @override
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  @override
+  String get game_phase_idle => 'Idle';
+  @override
+  String get game_phase_resolving => 'Resolving';
+  @override
+  String get game_phase_launching => 'Launching';
+  @override
+  String get game_phase_attaching => 'Attaching';
+  @override
+  String get game_phase_injecting => 'Injecting';
+  @override
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  @override
+  String get game_phase_running => 'Running';
+  @override
+  String get game_phase_degraded => 'Degraded';
+  @override
+  String get game_phase_stopping => 'Stopping';
+  @override
+  String get game_phase_error => 'Error';
+  @override
+  String get game_endpoint_phase_connecting => 'Connecting';
+  @override
+  String get game_endpoint_phase_connected => 'Connected';
+  @override
+  String get game_endpoint_phase_retrying => 'Retrying';
+  @override
+  String get game_endpoint_phase_stopped => 'Stopped';
+  @override
+  String get game_track_clips => 'Clips';
+  @override
+  String get game_track_energy => 'Energy';
+  @override
+  String get game_audio_duration => 'Audio duration';
+  @override
+  String get games_rename_label => 'Game name';
 }
 
 // Path: <root>
@@ -73454,7 +74266,7 @@ class _StringsVi extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -73683,9 +74495,6 @@ class _StringsVi extends _StringsEn {
       'Engine component install incomplete, please retry';
   @override
   String get download_settings => 'Download settings';
-  @override
-  String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint =>
       'Giảm xuống để chữ phụ đề nổi trong suốt hơn';
@@ -74054,6 +74863,69 @@ class _StringsVi extends _StringsEn {
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   @override
   String get settings_section_general => 'General';
+  @override
+  String get reading_section_mode => 'Mode & orientation';
+  @override
+  String get settings_destination_system_summary =>
+      'General, updates & diagnostics';
+  @override
+  String get error_load_failed => 'Something went wrong while loading';
+  @override
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  @override
+  String get download_open_settings => 'Open settings';
+  @override
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  @override
+  String get download_test_connection => 'Test connection';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  @override
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  @override
+  String get game_phase_idle => 'Idle';
+  @override
+  String get game_phase_resolving => 'Resolving';
+  @override
+  String get game_phase_launching => 'Launching';
+  @override
+  String get game_phase_attaching => 'Attaching';
+  @override
+  String get game_phase_injecting => 'Injecting';
+  @override
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  @override
+  String get game_phase_running => 'Running';
+  @override
+  String get game_phase_degraded => 'Degraded';
+  @override
+  String get game_phase_stopping => 'Stopping';
+  @override
+  String get game_phase_error => 'Error';
+  @override
+  String get game_endpoint_phase_connecting => 'Connecting';
+  @override
+  String get game_endpoint_phase_connected => 'Connected';
+  @override
+  String get game_endpoint_phase_retrying => 'Retrying';
+  @override
+  String get game_endpoint_phase_stopped => 'Stopped';
+  @override
+  String get game_track_clips => 'Clips';
+  @override
+  String get game_track_energy => 'Energy';
+  @override
+  String get game_audio_duration => 'Audio duration';
+  @override
+  String get games_rename_label => 'Game name';
 }
 
 // Path: <root>
@@ -74373,7 +75245,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get settings => '设置';
   @override
-  String get manager => '管理器';
+  String get manager => '词典与来源';
   @override
   String get volume_button_page_turning => '音量键翻页';
   @override
@@ -78215,7 +79087,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get interconnect_enable_hint => '通过局域网连接你的其他设备。与云备份后端并存，互不冲突。';
   @override
-  String get reading_activity => '阅读活动';
+  String get reading_activity => '学习活动';
   @override
   String get video_watch_activity => '观看活动';
   @override
@@ -78425,8 +79297,6 @@ class _StringsZhCn extends _StringsEn {
   String get galgame_helper_install_incomplete => '引擎组件安装不完整，请重试';
   @override
   String get download_settings => '下载设置';
-  @override
-  String get download_backend_not_configured => '请先配置下载后端（右上角设置）';
   @override
   String get floating_lyric_text_opacity_hint => '调低让悬浮字幕文字更透明';
   @override
@@ -78770,6 +79640,65 @@ class _StringsZhCn extends _StringsEn {
       '把查词和剪贴板悬浮窗从截图、录屏、直播串流中排除（Windows）。关闭后，截图、录屏和串流即可拍到查词悬浮窗。';
   @override
   String get settings_section_general => '通用';
+  @override
+  String get reading_section_mode => '模式与排版方向';
+  @override
+  String get settings_destination_system_summary => '通用、更新与诊断';
+  @override
+  String get error_load_failed => '加载出错';
+  @override
+  String get download_backend_not_configured => '请先配置下载后端。';
+  @override
+  String get download_open_settings => '去设置';
+  @override
+  String get anime_download_search_start_hint => '在上方搜索番剧名，自动匹配种子与字幕。';
+  @override
+  String get download_test_connection => '测试连接';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      '连接成功（版本：${version}）';
+  @override
+  String get download_test_connection_failed => '连接失败，请检查地址与账号密码。';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => '${count} 集';
+  @override
+  String get game_phase_idle => '空闲';
+  @override
+  String get game_phase_resolving => '解析中';
+  @override
+  String get game_phase_launching => '启动中';
+  @override
+  String get game_phase_attaching => '附着中';
+  @override
+  String get game_phase_injecting => '注入中';
+  @override
+  String get game_phase_waiting_signals => '等待信号';
+  @override
+  String get game_phase_running => '运行中';
+  @override
+  String get game_phase_degraded => '降级运行';
+  @override
+  String get game_phase_stopping => '停止中';
+  @override
+  String get game_phase_error => '出错';
+  @override
+  String get game_endpoint_phase_connecting => '连接中';
+  @override
+  String get game_endpoint_phase_connected => '已连接';
+  @override
+  String get game_endpoint_phase_retrying => '重试中';
+  @override
+  String get game_endpoint_phase_stopped => '已停止';
+  @override
+  String get game_track_clips => '音频段';
+  @override
+  String get game_track_energy => '能量';
+  @override
+  String get game_audio_duration => '音频时长';
+  @override
+  String get games_rename_label => '游戏名称';
 }
 
 // Path: <root>
@@ -79061,7 +79990,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get settings => '設定';
   @override
-  String get manager => '管理員';
+  String get manager => '詞典與來源';
   @override
   String get volume_button_page_turning => '音量鍵翻頁';
   @override
@@ -83026,7 +83955,7 @@ class _StringsZhHk extends _StringsEn {
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
   @override
-  String get reading_activity => 'Reading activity';
+  String get reading_activity => 'Study activity';
   @override
   String get video_watch_activity => 'Watch activity';
   @override
@@ -83255,9 +84184,6 @@ class _StringsZhHk extends _StringsEn {
       'Engine component install incomplete, please retry';
   @override
   String get download_settings => 'Download settings';
-  @override
-  String get download_backend_not_configured =>
-      'Configure the download backend below (expand Download settings).';
   @override
   String get floating_lyric_text_opacity_hint => '調低可讓懸浮字幕文字更透明';
   @override
@@ -83622,6 +84548,68 @@ class _StringsZhHk extends _StringsEn {
       'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
   @override
   String get settings_section_general => '通用';
+  @override
+  String get reading_section_mode => '模式與排版方向';
+  @override
+  String get settings_destination_system_summary => '通用、更新與診斷';
+  @override
+  String get error_load_failed => 'Something went wrong while loading';
+  @override
+  String get download_backend_not_configured =>
+      'Download backend is not configured yet.';
+  @override
+  String get download_open_settings => 'Open settings';
+  @override
+  String get anime_download_search_start_hint =>
+      'Search an anime title above — torrents and subtitles are matched automatically.';
+  @override
+  String get download_test_connection => 'Test connection';
+  @override
+  String download_test_connection_ok({required Object version}) =>
+      'Connected (version: ${version})';
+  @override
+  String get download_test_connection_failed =>
+      'Connection failed. Check the address and credentials.';
+  @override
+  String get anime_download_trusted => 'Trusted';
+  @override
+  String anime_download_episode_count({required Object count}) => 'EP ${count}';
+  @override
+  String get game_phase_idle => 'Idle';
+  @override
+  String get game_phase_resolving => 'Resolving';
+  @override
+  String get game_phase_launching => 'Launching';
+  @override
+  String get game_phase_attaching => 'Attaching';
+  @override
+  String get game_phase_injecting => 'Injecting';
+  @override
+  String get game_phase_waiting_signals => 'Waiting for signals';
+  @override
+  String get game_phase_running => 'Running';
+  @override
+  String get game_phase_degraded => 'Degraded';
+  @override
+  String get game_phase_stopping => 'Stopping';
+  @override
+  String get game_phase_error => 'Error';
+  @override
+  String get game_endpoint_phase_connecting => 'Connecting';
+  @override
+  String get game_endpoint_phase_connected => 'Connected';
+  @override
+  String get game_endpoint_phase_retrying => 'Retrying';
+  @override
+  String get game_endpoint_phase_stopped => 'Stopped';
+  @override
+  String get game_track_clips => 'Clips';
+  @override
+  String get game_track_energy => 'Energy';
+  @override
+  String get game_audio_duration => 'Audio duration';
+  @override
+  String get games_rename_label => 'Game name';
 }
 
 /// Flat map(s) containing all translations.
@@ -83909,7 +84897,7 @@ extension on _StringsEn {
       case 'settings':
         return 'Settings';
       case 'manager':
-        return 'Manager';
+        return 'Dictionaries & sources';
       case 'volume_button_page_turning':
         return 'Volume button page turning';
       case 'invert_volume_buttons':
@@ -87640,7 +88628,7 @@ extension on _StringsEn {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -87846,8 +88834,6 @@ extension on _StringsEn {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend first (settings, top-right).';
       case 'floating_lyric_text_opacity_hint':
         return 'Lower this to make the floating subtitle text more transparent';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -88180,6 +89166,64 @@ extension on _StringsEn {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return 'General';
+      case 'reading_section_mode':
+        return 'Mode & orientation';
+      case 'settings_destination_system_summary':
+        return 'General, updates & diagnostics';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
@@ -92196,7 +93240,7 @@ extension on _StringsAr {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -92402,8 +93446,6 @@ extension on _StringsAr {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'اخفض هذا لجعل نص الترجمة العائمة أكثر شفافية';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -92736,6 +93778,64 @@ extension on _StringsAr {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return 'General';
+      case 'reading_section_mode':
+        return 'Mode & orientation';
+      case 'settings_destination_system_summary':
+        return 'General, updates & diagnostics';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
@@ -96773,7 +97873,7 @@ extension on _StringsDe {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -96979,8 +98079,6 @@ extension on _StringsDe {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Verringern, um den schwebenden Untertiteltext transparenter zu machen';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -97313,6 +98411,64 @@ extension on _StringsDe {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return 'General';
+      case 'reading_section_mode':
+        return 'Mode & orientation';
+      case 'settings_destination_system_summary':
+        return 'General, updates & diagnostics';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
@@ -101349,7 +102505,7 @@ extension on _StringsEs {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -101555,8 +102711,6 @@ extension on _StringsEs {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Bájala para que el texto del subtítulo flotante sea más transparente';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -101889,6 +103043,64 @@ extension on _StringsEs {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return 'General';
+      case 'reading_section_mode':
+        return 'Mode & orientation';
+      case 'settings_destination_system_summary':
+        return 'General, updates & diagnostics';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
@@ -105931,7 +107143,7 @@ extension on _StringsFr {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -106137,8 +107349,6 @@ extension on _StringsFr {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Baissez cette valeur pour rendre le texte du sous-titre flottant plus transparent';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -106471,6 +107681,64 @@ extension on _StringsFr {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return 'General';
+      case 'reading_section_mode':
+        return 'Mode & orientation';
+      case 'settings_destination_system_summary':
+        return 'General, updates & diagnostics';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
@@ -110495,7 +111763,7 @@ extension on _StringsId {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -110701,8 +111969,6 @@ extension on _StringsId {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Turunkan untuk membuat teks subtitle melayang lebih transparan';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -111035,6 +112301,64 @@ extension on _StringsId {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return 'General';
+      case 'reading_section_mode':
+        return 'Mode & orientation';
+      case 'settings_destination_system_summary':
+        return 'General, updates & diagnostics';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
@@ -115074,7 +116398,7 @@ extension on _StringsIt {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -115280,8 +116604,6 @@ extension on _StringsIt {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Abbassa questo valore per rendere più trasparente il testo del sottotitolo fluttuante';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -115614,6 +116936,64 @@ extension on _StringsIt {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return 'General';
+      case 'reading_section_mode':
+        return 'Mode & orientation';
+      case 'settings_destination_system_summary':
+        return 'General, updates & diagnostics';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
@@ -119615,7 +120995,7 @@ extension on _StringsJa {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -119821,8 +121201,6 @@ extension on _StringsJa {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return '下げるとフローティング字幕の文字がより透明になります';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -120155,6 +121533,64 @@ extension on _StringsJa {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return 'General';
+      case 'reading_section_mode':
+        return 'Mode & orientation';
+      case 'settings_destination_system_summary':
+        return 'General, updates & diagnostics';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
@@ -124160,7 +125596,7 @@ extension on _StringsKo {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -124366,8 +125802,6 @@ extension on _StringsKo {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return '낮추면 플로팅 자막 텍스트가 더 투명해집니다';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -124700,6 +126134,64 @@ extension on _StringsKo {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return 'General';
+      case 'reading_section_mode':
+        return 'Mode & orientation';
+      case 'settings_destination_system_summary':
+        return 'General, updates & diagnostics';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
@@ -128732,7 +130224,7 @@ extension on _StringsNl {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -128938,8 +130430,6 @@ extension on _StringsNl {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Verlaag dit om de tekst van de zwevende ondertitel transparanter te maken';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -129272,6 +130762,64 @@ extension on _StringsNl {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return 'General';
+      case 'reading_section_mode':
+        return 'Mode & orientation';
+      case 'settings_destination_system_summary':
+        return 'General, updates & diagnostics';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
@@ -133301,7 +134849,7 @@ extension on _StringsPtBr {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -133507,8 +135055,6 @@ extension on _StringsPtBr {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Reduza para deixar o texto da legenda flutuante mais transparente';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -133841,6 +135387,64 @@ extension on _StringsPtBr {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return 'General';
+      case 'reading_section_mode':
+        return 'Mode & orientation';
+      case 'settings_destination_system_summary':
+        return 'General, updates & diagnostics';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
@@ -137875,7 +139479,7 @@ extension on _StringsRu {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -138081,8 +139685,6 @@ extension on _StringsRu {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Уменьшите, чтобы текст плавающих субтитров стал прозрачнее';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -138415,6 +140017,64 @@ extension on _StringsRu {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return 'General';
+      case 'reading_section_mode':
+        return 'Mode & orientation';
+      case 'settings_destination_system_summary':
+        return 'General, updates & diagnostics';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
@@ -142433,7 +144093,7 @@ extension on _StringsTh {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -142639,8 +144299,6 @@ extension on _StringsTh {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'ลดค่านี้เพื่อให้ตัวอักษรคำบรรยายลอยโปร่งใสขึ้น';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -142973,6 +144631,64 @@ extension on _StringsTh {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return 'General';
+      case 'reading_section_mode':
+        return 'Mode & orientation';
+      case 'settings_destination_system_summary':
+        return 'General, updates & diagnostics';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
@@ -147000,7 +148716,7 @@ extension on _StringsTr {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -147206,8 +148922,6 @@ extension on _StringsTr {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Kayan altyazı metnini daha saydam yapmak için bunu azaltın';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -147540,6 +149254,64 @@ extension on _StringsTr {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return 'General';
+      case 'reading_section_mode':
+        return 'Mode & orientation';
+      case 'settings_destination_system_summary':
+        return 'General, updates & diagnostics';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
@@ -151562,7 +153334,7 @@ extension on _StringsVi {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -151768,8 +153540,6 @@ extension on _StringsVi {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return 'Giảm xuống để chữ phụ đề nổi trong suốt hơn';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -152102,6 +153872,64 @@ extension on _StringsVi {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return 'General';
+      case 'reading_section_mode':
+        return 'Mode & orientation';
+      case 'settings_destination_system_summary':
+        return 'General, updates & diagnostics';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
@@ -152387,7 +154215,7 @@ extension on _StringsZhCn {
       case 'settings':
         return '设置';
       case 'manager':
-        return '管理器';
+        return '词典与来源';
       case 'volume_button_page_turning':
         return '音量键翻页';
       case 'invert_volume_buttons':
@@ -156092,7 +157920,7 @@ extension on _StringsZhCn {
       case 'interconnect_enable_hint':
         return '通过局域网连接你的其他设备。与云备份后端并存，互不冲突。';
       case 'reading_activity':
-        return '阅读活动';
+        return '学习活动';
       case 'video_watch_activity':
         return '观看活动';
       case 'book_mark_completed_action':
@@ -156296,8 +158124,6 @@ extension on _StringsZhCn {
         return '引擎组件安装不完整，请重试';
       case 'download_settings':
         return '下载设置';
-      case 'download_backend_not_configured':
-        return '请先配置下载后端（右上角设置）';
       case 'floating_lyric_text_opacity_hint':
         return '调低让悬浮字幕文字更透明';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -156630,6 +158456,64 @@ extension on _StringsZhCn {
         return '把查词和剪贴板悬浮窗从截图、录屏、直播串流中排除（Windows）。关闭后，截图、录屏和串流即可拍到查词悬浮窗。';
       case 'settings_section_general':
         return '通用';
+      case 'reading_section_mode':
+        return '模式与排版方向';
+      case 'settings_destination_system_summary':
+        return '通用、更新与诊断';
+      case 'error_load_failed':
+        return '加载出错';
+      case 'download_backend_not_configured':
+        return '请先配置下载后端。';
+      case 'download_open_settings':
+        return '去设置';
+      case 'anime_download_search_start_hint':
+        return '在上方搜索番剧名，自动匹配种子与字幕。';
+      case 'download_test_connection':
+        return '测试连接';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => '连接成功（版本：${version}）';
+      case 'download_test_connection_failed':
+        return '连接失败，请检查地址与账号密码。';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => '${count} 集';
+      case 'game_phase_idle':
+        return '空闲';
+      case 'game_phase_resolving':
+        return '解析中';
+      case 'game_phase_launching':
+        return '启动中';
+      case 'game_phase_attaching':
+        return '附着中';
+      case 'game_phase_injecting':
+        return '注入中';
+      case 'game_phase_waiting_signals':
+        return '等待信号';
+      case 'game_phase_running':
+        return '运行中';
+      case 'game_phase_degraded':
+        return '降级运行';
+      case 'game_phase_stopping':
+        return '停止中';
+      case 'game_phase_error':
+        return '出错';
+      case 'game_endpoint_phase_connecting':
+        return '连接中';
+      case 'game_endpoint_phase_connected':
+        return '已连接';
+      case 'game_endpoint_phase_retrying':
+        return '重试中';
+      case 'game_endpoint_phase_stopped':
+        return '已停止';
+      case 'game_track_clips':
+        return '音频段';
+      case 'game_track_energy':
+        return '能量';
+      case 'game_audio_duration':
+        return '音频时长';
+      case 'games_rename_label':
+        return '游戏名称';
       default:
         return null;
     }
@@ -156887,7 +158771,7 @@ extension on _StringsZhHk {
       case 'settings':
         return '設定';
       case 'manager':
-        return '管理員';
+        return '詞典與來源';
       case 'volume_button_page_turning':
         return '音量鍵翻頁';
       case 'invert_volume_buttons':
@@ -160626,7 +162510,7 @@ extension on _StringsZhHk {
       case 'interconnect_enable_hint':
         return 'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
       case 'reading_activity':
-        return 'Reading activity';
+        return 'Study activity';
       case 'video_watch_activity':
         return 'Watch activity';
       case 'book_mark_completed_action':
@@ -160832,8 +162716,6 @@ extension on _StringsZhHk {
         return 'Engine component install incomplete, please retry';
       case 'download_settings':
         return 'Download settings';
-      case 'download_backend_not_configured':
-        return 'Configure the download backend below (expand Download settings).';
       case 'floating_lyric_text_opacity_hint':
         return '調低可讓懸浮字幕文字更透明';
       case 'floating_lyric_button_bg_opacity_hint':
@@ -161166,6 +163048,64 @@ extension on _StringsZhHk {
         return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
       case 'settings_section_general':
         return '通用';
+      case 'reading_section_mode':
+        return '模式與排版方向';
+      case 'settings_destination_system_summary':
+        return '通用、更新與診斷';
+      case 'error_load_failed':
+        return 'Something went wrong while loading';
+      case 'download_backend_not_configured':
+        return 'Download backend is not configured yet.';
+      case 'download_open_settings':
+        return 'Open settings';
+      case 'anime_download_search_start_hint':
+        return 'Search an anime title above — torrents and subtitles are matched automatically.';
+      case 'download_test_connection':
+        return 'Test connection';
+      case 'download_test_connection_ok':
+        return ({required Object version}) => 'Connected (version: ${version})';
+      case 'download_test_connection_failed':
+        return 'Connection failed. Check the address and credentials.';
+      case 'anime_download_trusted':
+        return 'Trusted';
+      case 'anime_download_episode_count':
+        return ({required Object count}) => 'EP ${count}';
+      case 'game_phase_idle':
+        return 'Idle';
+      case 'game_phase_resolving':
+        return 'Resolving';
+      case 'game_phase_launching':
+        return 'Launching';
+      case 'game_phase_attaching':
+        return 'Attaching';
+      case 'game_phase_injecting':
+        return 'Injecting';
+      case 'game_phase_waiting_signals':
+        return 'Waiting for signals';
+      case 'game_phase_running':
+        return 'Running';
+      case 'game_phase_degraded':
+        return 'Degraded';
+      case 'game_phase_stopping':
+        return 'Stopping';
+      case 'game_phase_error':
+        return 'Error';
+      case 'game_endpoint_phase_connecting':
+        return 'Connecting';
+      case 'game_endpoint_phase_connected':
+        return 'Connected';
+      case 'game_endpoint_phase_retrying':
+        return 'Retrying';
+      case 'game_endpoint_phase_stopped':
+        return 'Stopped';
+      case 'game_track_clips':
+        return 'Clips';
+      case 'game_track_energy':
+        return 'Energy';
+      case 'game_audio_duration':
+        return 'Audio duration';
+      case 'games_rename_label':
+        return 'Game name';
       default:
         return null;
     }
