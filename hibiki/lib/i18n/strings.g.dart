@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 37604 (2212 per locale)
+/// Strings: 37961 (2233 per locale)
 ///
-/// Built on 2026-07-21 at 10:28 UTC
+/// Built on 2026-07-21 at 21:54 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1393,11 +1393,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get yomitan_api_key => 'Yomitan API key (optional)';
   String get desktop_clipboard_enabled => 'Desktop clipboard lookup';
   String get desktop_clipboard_enabled_hint =>
-      'Watch clipboard + global hotkey to pop a lookup window (desktop)';
+      'Watch clipboard + global shortcut to pop a lookup window (desktop · experimental)';
   String get desktop_clipboard_always_on_top => 'Keep lookup window on top';
   String get texthooker_experimental_banner =>
       'Texthooker is experimental — live text, lookup and card creation may be unstable.';
-  String get settings_experimental_suffix => ' (experimental, may be unstable)';
+  String get settings_experimental_suffix => ' (experimental)';
   String get db_downgrade_title => 'Update Hibiki';
   String db_downgrade_message(
           {required Object dbVersion, required Object appVersion}) =>
@@ -1572,7 +1572,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Toggle Immersive Lock';
   String get shortcut_action_video_toggle_subtitle_blur =>
       'Toggle Subtitle Blur';
-  String get shortcut_action_video_escape => 'Exit / Back';
+  String get shortcut_action_video_escape => 'Close video / Back';
   String get book_edit_author => 'Author';
   String get floating_lyric_toggle_action => 'Floating subtitle';
   String get video_setting_picture_fit_cover => 'Fill keep ratio crop edges';
@@ -2174,9 +2174,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get profile_media_video => 'Video';
   String get shortcut_scope_global_external => 'Global (app-external)';
   String get shortcut_action_global_external_lookup =>
-      'App-external lookup hotkey';
+      'App-external lookup shortcut';
   String get shortcut_scope_global_external_mobile_note =>
-      'Triggered by the system (text selection menu, share, floating ball); the OS does not allow apps to remap this hotkey.';
+      'Triggered by the system (text selection menu, share, floating ball); the OS does not allow apps to remap this shortcut.';
   String get shortcut_assign_pick_action => 'Assign to action…';
   String get shortcut_mouse_left => 'Left click';
   String get shortcut_mouse_right => 'Right click';
@@ -2668,7 +2668,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_torrent_backend => 'Download backend';
   String get video_setting_torrent_backend_qb => 'External qBittorrent';
   String get video_setting_torrent_backend_embedded =>
-      'Built-in engine (desktop)';
+      'Built-in engine (desktop only)';
   String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
   String get video_setting_torrent_upload_limit => 'Upload limit (KB/s)';
   String get video_setting_torrent_max_connections => 'Max connections';
@@ -2945,6 +2945,35 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  String get eink_mode => 'E-ink mode';
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  String get interconnect_upload_content => 'Upload book files';
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  String get interconnect_upload_video_files => 'Upload video files';
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  String get shortcut_action_reader_exit_book => 'Exit book';
+  String get clipboard_text_window_title => 'Clipboard text';
+  String get settings_secret_show => 'Show value';
+  String get settings_secret_hide => 'Hide value';
+  String get video_setting_speed_step => 'Speed step';
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  String get settings_section_general => 'General';
 }
 
 // Path: <root>
@@ -7948,6 +7977,56 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
+  @override
+  String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  @override
+  String get settings_section_general => 'General';
 }
 
 // Path: <root>
@@ -13024,6 +13103,56 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
+  @override
+  String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  @override
+  String get settings_section_general => 'General';
 }
 
 // Path: <root>
@@ -18116,6 +18245,56 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
+  @override
+  String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  @override
+  String get settings_section_general => 'General';
 }
 
 // Path: <root>
@@ -23219,6 +23398,56 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
+  @override
+  String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  @override
+  String get settings_section_general => 'General';
 }
 
 // Path: <root>
@@ -28249,6 +28478,56 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
+  @override
+  String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  @override
+  String get settings_section_general => 'General';
 }
 
 // Path: <root>
@@ -33327,6 +33606,56 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
+  @override
+  String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  @override
+  String get settings_section_general => 'General';
 }
 
 // Path: <root>
@@ -35809,7 +36138,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_subtitle_blur => '字幕ぼかしの切り替え';
   @override
-  String get shortcut_action_video_escape => '終了／戻る';
+  String get shortcut_action_video_escape => '動画を閉じる／戻る';
   @override
   String get book_edit_author => '著者';
   @override
@@ -38210,6 +38539,56 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => '本を閉じる';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
+  @override
+  String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  @override
+  String get settings_section_general => 'General';
 }
 
 // Path: <root>
@@ -43096,6 +43475,56 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
+  @override
+  String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  @override
+  String get settings_section_general => 'General';
 }
 
 // Path: <root>
@@ -48152,6 +48581,56 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
+  @override
+  String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  @override
+  String get settings_section_general => 'General';
 }
 
 // Path: <root>
@@ -53223,6 +53702,56 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
+  @override
+  String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  @override
+  String get settings_section_general => 'General';
 }
 
 // Path: <root>
@@ -58277,6 +58806,56 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
+  @override
+  String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  @override
+  String get settings_section_general => 'General';
 }
 
 // Path: <root>
@@ -63276,6 +63855,56 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
+  @override
+  String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  @override
+  String get settings_section_general => 'General';
 }
 
 // Path: <root>
@@ -68307,6 +68936,56 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
+  @override
+  String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  @override
+  String get settings_section_general => 'General';
 }
 
 // Path: <root>
@@ -73325,6 +74004,56 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => 'Exit book';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
+  @override
+  String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  @override
+  String get settings_section_general => 'General';
 }
 
 // Path: <root>
@@ -75457,13 +76186,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get desktop_clipboard_enabled => '桌面剪贴板查词';
   @override
-  String get desktop_clipboard_enabled_hint => '监听剪贴板+全局热键弹出查词窗（桌面）';
+  String get desktop_clipboard_enabled_hint => '监听剪贴板 + 全局快捷键弹出查词窗（桌面·实验性）';
   @override
   String get desktop_clipboard_always_on_top => '查词时窗口置顶';
   @override
   String get texthooker_experimental_banner => '文本钩子为实验性功能：实时文本、查词与制卡可能尚不稳定。';
   @override
-  String get settings_experimental_suffix => '（实验性，可能不稳定）';
+  String get settings_experimental_suffix => '（实验性）';
   @override
   String get db_downgrade_title => '请更新 Hibiki';
   @override
@@ -75747,7 +76476,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_subtitle_blur => '切换字幕模糊';
   @override
-  String get shortcut_action_video_escape => '退出/返回';
+  String get shortcut_action_video_escape => '关闭视频/返回';
   @override
   String get book_edit_author => '作者';
   @override
@@ -76563,7 +77292,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_tap_to_assign => '未设置 · 点击设置';
   @override
-  String get data_storage_location_hint => 'Hibiki 存放书库、有声书和数据库的位置（仅桌面端）。';
+  String get data_storage_location_hint => 'Hibiki 存放书库、有声书和数据库的位置（仅桌面）。';
   @override
   String get data_storage_location_default => '默认位置';
   @override
@@ -76722,10 +77451,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_scope_global_external => '全局（应用外）';
   @override
-  String get shortcut_action_global_external_lookup => '应用外查词热键';
+  String get shortcut_action_global_external_lookup => '应用外查词快捷键';
   @override
   String get shortcut_scope_global_external_mobile_note =>
-      '由系统触发（选中文本菜单、分享、悬浮球），系统不允许应用自定义此热键。';
+      '由系统触发（选中文本菜单、分享、悬浮球），系统不允许应用自定义此快捷键。';
   @override
   String get shortcut_assign_pick_action => '分配到动作…';
   @override
@@ -77530,7 +78259,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_torrent_backend_qb => '外接 qBittorrent';
   @override
-  String get video_setting_torrent_backend_embedded => '内置引擎（桌面）';
+  String get video_setting_torrent_backend_embedded => '内置引擎（仅桌面）';
   @override
   String get video_setting_torrent_download_limit => '下载限速 (KB/s)';
   @override
@@ -77994,6 +78723,53 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       '通过共享的 Google Drive 文件夹（ttu-reader-data）同步阅读进度。需完整 Drive 权限并重新登录。';
+  @override
+  String get eink_mode => '墨水屏模式';
+  @override
+  String get eink_mode_hint => '纯黑白主题、无动画、线式高亮，适合墨水屏设备';
+  @override
+  String get update_mac_install_incomplete_message =>
+      '更新未能应用，Hibiki 仍是旧版本。你可以重试更新，或手动下载最新版本。';
+  @override
+  String get interconnect_upload_section => '上传到互联对端';
+  @override
+  String get interconnect_upload_section_footer =>
+      '选择本设备要把哪些内容上传到已连接的互联对端。与云备份、以及「启用互联」连接开关互不影响；默认全部关闭。';
+  @override
+  String get interconnect_upload_content => '上传书籍文件';
+  @override
+  String get interconnect_upload_content_hint => '把本设备的书籍/阅读内容上传同步到互联对端。';
+  @override
+  String get interconnect_upload_dictionary => '上传词典';
+  @override
+  String get interconnect_upload_dictionary_hint => '把本设备的词典上传同步到互联对端。';
+  @override
+  String get interconnect_upload_audiobook_files => '上传有声书文件';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      '把本设备的有声书音频+字幕包上传同步到互联对端（体积较大）。';
+  @override
+  String get interconnect_upload_video_files => '上传视频文件';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      '把本设备的本地视频文件上传同步到互联对端（体积较大）。';
+  @override
+  String get shortcut_action_reader_exit_book => '退出书籍';
+  @override
+  String get clipboard_text_window_title => '剪贴板文字';
+  @override
+  String get settings_secret_show => '显示内容';
+  @override
+  String get settings_secret_hide => '隐藏内容';
+  @override
+  String get video_setting_speed_step => '倍速步进';
+  @override
+  String get clipboard_panel_block_capture => '防截屏 / 防录屏';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      '把查词和剪贴板悬浮窗从截图、录屏、直播串流中排除（Windows）。关闭后，截图、录屏和串流即可拍到查词悬浮窗。';
+  @override
+  String get settings_section_general => '通用';
 }
 
 // Path: <root>
@@ -80126,14 +80902,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get desktop_clipboard_enabled => '桌面剪貼簿查詞';
   @override
-  String get desktop_clipboard_enabled_hint => '監聽剪貼簿＋全域熱鍵彈出查詞視窗（桌面）';
+  String get desktop_clipboard_enabled_hint => '監聽剪貼簿＋全域快捷鍵彈出查詞視窗（桌面·實驗性）';
   @override
   String get desktop_clipboard_always_on_top => '查詞時視窗置頂';
   @override
   String get texthooker_experimental_banner =>
       'Texthooker 為實驗性功能：即時文字、查詞與製卡可能尚未穩定。';
   @override
-  String get settings_experimental_suffix => '（實驗性，可能不穩定）';
+  String get settings_experimental_suffix => '（實驗性）';
   @override
   String get db_downgrade_title => '請更新 Hibiki';
   @override
@@ -80417,7 +81193,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_subtitle_blur => '切換字幕模糊';
   @override
-  String get shortcut_action_video_escape => '退出／返回';
+  String get shortcut_action_video_escape => '關閉影片／返回';
   @override
   String get book_edit_author => '作者';
   @override
@@ -81422,10 +82198,10 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_scope_global_external => 'Global (app-external)';
   @override
   String get shortcut_action_global_external_lookup =>
-      'App-external lookup hotkey';
+      'App-external lookup shortcut';
   @override
   String get shortcut_scope_global_external_mobile_note =>
-      'Triggered by the system (text selection menu, share, floating ball); the OS does not allow apps to remap this hotkey.';
+      'Triggered by the system (text selection menu, share, floating ball); the OS does not allow apps to remap this shortcut.';
   @override
   String get shortcut_assign_pick_action => 'Assign to action…';
   @override
@@ -82297,7 +83073,7 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_torrent_backend_qb => 'External qBittorrent';
   @override
   String get video_setting_torrent_backend_embedded =>
-      'Built-in engine (desktop)';
+      'Built-in engine (desktop only)';
   @override
   String get video_setting_torrent_download_limit => 'Download limit (KB/s)';
   @override
@@ -82796,6 +83572,56 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_google_drive_hoshi_compat_desc =>
       'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+  @override
+  String get eink_mode => 'E-ink mode';
+  @override
+  String get eink_mode_hint =>
+      'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+  @override
+  String get update_mac_install_incomplete_message =>
+      'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+  @override
+  String get interconnect_upload_section => 'Upload to interconnect peer';
+  @override
+  String get interconnect_upload_section_footer =>
+      'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+  @override
+  String get interconnect_upload_content => 'Upload book files';
+  @override
+  String get interconnect_upload_content_hint =>
+      'Sync this device\'s books and reading content up to the interconnect peer.';
+  @override
+  String get interconnect_upload_dictionary => 'Upload dictionaries';
+  @override
+  String get interconnect_upload_dictionary_hint =>
+      'Sync this device\'s dictionaries up to the interconnect peer.';
+  @override
+  String get interconnect_upload_audiobook_files => 'Upload audiobook files';
+  @override
+  String get interconnect_upload_audiobook_files_hint =>
+      'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+  @override
+  String get interconnect_upload_video_files => 'Upload video files';
+  @override
+  String get interconnect_upload_video_files_hint =>
+      'Sync this device\'s local video files up to the interconnect peer (large).';
+  @override
+  String get shortcut_action_reader_exit_book => '退出書籍';
+  @override
+  String get clipboard_text_window_title => 'Clipboard text';
+  @override
+  String get settings_secret_show => 'Show value';
+  @override
+  String get settings_secret_hide => 'Hide value';
+  @override
+  String get video_setting_speed_step => 'Speed step';
+  @override
+  String get clipboard_panel_block_capture => 'Block screen capture';
+  @override
+  String get clipboard_panel_block_capture_hint =>
+      'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+  @override
+  String get settings_section_general => '通用';
 }
 
 /// Flat map(s) containing all translations.
@@ -84878,13 +85704,13 @@ extension on _StringsEn {
       case 'desktop_clipboard_enabled':
         return 'Desktop clipboard lookup';
       case 'desktop_clipboard_enabled_hint':
-        return 'Watch clipboard + global hotkey to pop a lookup window (desktop)';
+        return 'Watch clipboard + global shortcut to pop a lookup window (desktop · experimental)';
       case 'desktop_clipboard_always_on_top':
         return 'Keep lookup window on top';
       case 'texthooker_experimental_banner':
         return 'Texthooker is experimental — live text, lookup and card creation may be unstable.';
       case 'settings_experimental_suffix':
-        return ' (experimental, may be unstable)';
+        return ' (experimental)';
       case 'db_downgrade_title':
         return 'Update Hibiki';
       case 'db_downgrade_message':
@@ -85153,7 +85979,7 @@ extension on _StringsEn {
       case 'shortcut_action_video_toggle_subtitle_blur':
         return 'Toggle Subtitle Blur';
       case 'shortcut_action_video_escape':
-        return 'Exit / Back';
+        return 'Close video / Back';
       case 'book_edit_author':
         return 'Author';
       case 'floating_lyric_toggle_action':
@@ -86083,9 +86909,9 @@ extension on _StringsEn {
       case 'shortcut_scope_global_external':
         return 'Global (app-external)';
       case 'shortcut_action_global_external_lookup':
-        return 'App-external lookup hotkey';
+        return 'App-external lookup shortcut';
       case 'shortcut_scope_global_external_mobile_note':
-        return 'Triggered by the system (text selection menu, share, floating ball); the OS does not allow apps to remap this hotkey.';
+        return 'Triggered by the system (text selection menu, share, floating ball); the OS does not allow apps to remap this shortcut.';
       case 'shortcut_assign_pick_action':
         return 'Assign to action…';
       case 'shortcut_mouse_left':
@@ -86857,7 +87683,7 @@ extension on _StringsEn {
       case 'video_setting_torrent_backend_qb':
         return 'External qBittorrent';
       case 'video_setting_torrent_backend_embedded':
-        return 'Built-in engine (desktop)';
+        return 'Built-in engine (desktop only)';
       case 'video_setting_torrent_download_limit':
         return 'Download limit (KB/s)';
       case 'video_setting_torrent_upload_limit':
@@ -87312,6 +88138,48 @@ extension on _StringsEn {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return 'General';
       default:
         return null;
     }
@@ -91826,6 +92694,48 @@ extension on _StringsAr {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return 'General';
       default:
         return null;
     }
@@ -96361,6 +97271,48 @@ extension on _StringsDe {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return 'General';
       default:
         return null;
     }
@@ -100895,6 +101847,48 @@ extension on _StringsEs {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return 'General';
       default:
         return null;
     }
@@ -105435,6 +106429,48 @@ extension on _StringsFr {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return 'General';
       default:
         return null;
     }
@@ -109957,6 +110993,48 @@ extension on _StringsId {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return 'General';
       default:
         return null;
     }
@@ -114494,6 +115572,48 @@ extension on _StringsIt {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return 'General';
       default:
         return null;
     }
@@ -116836,7 +117956,7 @@ extension on _StringsJa {
       case 'shortcut_action_video_toggle_subtitle_blur':
         return '字幕ぼかしの切り替え';
       case 'shortcut_action_video_escape':
-        return '終了／戻る';
+        return '動画を閉じる／戻る';
       case 'book_edit_author':
         return '著者';
       case 'floating_lyric_toggle_action':
@@ -118993,6 +120113,48 @@ extension on _StringsJa {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return '本を閉じる';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return 'General';
       default:
         return null;
     }
@@ -123496,6 +124658,48 @@ extension on _StringsKo {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return 'General';
       default:
         return null;
     }
@@ -128026,6 +129230,48 @@ extension on _StringsNl {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return 'General';
       default:
         return null;
     }
@@ -132553,6 +133799,48 @@ extension on _StringsPtBr {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return 'General';
       default:
         return null;
     }
@@ -137085,6 +138373,48 @@ extension on _StringsRu {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return 'General';
       default:
         return null;
     }
@@ -141601,6 +142931,48 @@ extension on _StringsTh {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return 'General';
       default:
         return null;
     }
@@ -146126,6 +147498,48 @@ extension on _StringsTr {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return 'General';
       default:
         return null;
     }
@@ -150646,6 +152060,48 @@ extension on _StringsVi {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return 'Exit book';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return 'General';
       default:
         return null;
     }
@@ -152711,13 +154167,13 @@ extension on _StringsZhCn {
       case 'desktop_clipboard_enabled':
         return '桌面剪贴板查词';
       case 'desktop_clipboard_enabled_hint':
-        return '监听剪贴板+全局热键弹出查词窗（桌面）';
+        return '监听剪贴板 + 全局快捷键弹出查词窗（桌面·实验性）';
       case 'desktop_clipboard_always_on_top':
         return '查词时窗口置顶';
       case 'texthooker_experimental_banner':
         return '文本钩子为实验性功能：实时文本、查词与制卡可能尚不稳定。';
       case 'settings_experimental_suffix':
-        return '（实验性，可能不稳定）';
+        return '（实验性）';
       case 'db_downgrade_title':
         return '请更新 Hibiki';
       case 'db_downgrade_message':
@@ -152985,7 +154441,7 @@ extension on _StringsZhCn {
       case 'shortcut_action_video_toggle_subtitle_blur':
         return '切换字幕模糊';
       case 'shortcut_action_video_escape':
-        return '退出/返回';
+        return '关闭视频/返回';
       case 'book_edit_author':
         return '作者';
       case 'floating_lyric_toggle_action':
@@ -153760,7 +155216,7 @@ extension on _StringsZhCn {
       case 'shortcut_tap_to_assign':
         return '未设置 · 点击设置';
       case 'data_storage_location_hint':
-        return 'Hibiki 存放书库、有声书和数据库的位置（仅桌面端）。';
+        return 'Hibiki 存放书库、有声书和数据库的位置（仅桌面）。';
       case 'data_storage_location_default':
         return '默认位置';
       case 'data_storage_change_button':
@@ -153907,9 +155363,9 @@ extension on _StringsZhCn {
       case 'shortcut_scope_global_external':
         return '全局（应用外）';
       case 'shortcut_action_global_external_lookup':
-        return '应用外查词热键';
+        return '应用外查词快捷键';
       case 'shortcut_scope_global_external_mobile_note':
-        return '由系统触发（选中文本菜单、分享、悬浮球），系统不允许应用自定义此热键。';
+        return '由系统触发（选中文本菜单、分享、悬浮球），系统不允许应用自定义此快捷键。';
       case 'shortcut_assign_pick_action':
         return '分配到动作…';
       case 'shortcut_mouse_left':
@@ -154678,7 +156134,7 @@ extension on _StringsZhCn {
       case 'video_setting_torrent_backend_qb':
         return '外接 qBittorrent';
       case 'video_setting_torrent_backend_embedded':
-        return '内置引擎（桌面）';
+        return '内置引擎（仅桌面）';
       case 'video_setting_torrent_download_limit':
         return '下载限速 (KB/s)';
       case 'video_setting_torrent_upload_limit':
@@ -155132,6 +156588,48 @@ extension on _StringsZhCn {
         return '与 Hoshi / ッツ 共享进度';
       case 'sync_google_drive_hoshi_compat_desc':
         return '通过共享的 Google Drive 文件夹（ttu-reader-data）同步阅读进度。需完整 Drive 权限并重新登录。';
+      case 'eink_mode':
+        return '墨水屏模式';
+      case 'eink_mode_hint':
+        return '纯黑白主题、无动画、线式高亮，适合墨水屏设备';
+      case 'update_mac_install_incomplete_message':
+        return '更新未能应用，Hibiki 仍是旧版本。你可以重试更新，或手动下载最新版本。';
+      case 'interconnect_upload_section':
+        return '上传到互联对端';
+      case 'interconnect_upload_section_footer':
+        return '选择本设备要把哪些内容上传到已连接的互联对端。与云备份、以及「启用互联」连接开关互不影响；默认全部关闭。';
+      case 'interconnect_upload_content':
+        return '上传书籍文件';
+      case 'interconnect_upload_content_hint':
+        return '把本设备的书籍/阅读内容上传同步到互联对端。';
+      case 'interconnect_upload_dictionary':
+        return '上传词典';
+      case 'interconnect_upload_dictionary_hint':
+        return '把本设备的词典上传同步到互联对端。';
+      case 'interconnect_upload_audiobook_files':
+        return '上传有声书文件';
+      case 'interconnect_upload_audiobook_files_hint':
+        return '把本设备的有声书音频+字幕包上传同步到互联对端（体积较大）。';
+      case 'interconnect_upload_video_files':
+        return '上传视频文件';
+      case 'interconnect_upload_video_files_hint':
+        return '把本设备的本地视频文件上传同步到互联对端（体积较大）。';
+      case 'shortcut_action_reader_exit_book':
+        return '退出书籍';
+      case 'clipboard_text_window_title':
+        return '剪贴板文字';
+      case 'settings_secret_show':
+        return '显示内容';
+      case 'settings_secret_hide':
+        return '隐藏内容';
+      case 'video_setting_speed_step':
+        return '倍速步进';
+      case 'clipboard_panel_block_capture':
+        return '防截屏 / 防录屏';
+      case 'clipboard_panel_block_capture_hint':
+        return '把查词和剪贴板悬浮窗从截图、录屏、直播串流中排除（Windows）。关闭后，截图、录屏和串流即可拍到查词悬浮窗。';
+      case 'settings_section_general':
+        return '通用';
       default:
         return null;
     }
@@ -157198,13 +158696,13 @@ extension on _StringsZhHk {
       case 'desktop_clipboard_enabled':
         return '桌面剪貼簿查詞';
       case 'desktop_clipboard_enabled_hint':
-        return '監聽剪貼簿＋全域熱鍵彈出查詞視窗（桌面）';
+        return '監聽剪貼簿＋全域快捷鍵彈出查詞視窗（桌面·實驗性）';
       case 'desktop_clipboard_always_on_top':
         return '查詞時視窗置頂';
       case 'texthooker_experimental_banner':
         return 'Texthooker 為實驗性功能：即時文字、查詞與製卡可能尚未穩定。';
       case 'settings_experimental_suffix':
-        return '（實驗性，可能不穩定）';
+        return '（實驗性）';
       case 'db_downgrade_title':
         return '請更新 Hibiki';
       case 'db_downgrade_message':
@@ -157472,7 +158970,7 @@ extension on _StringsZhHk {
       case 'shortcut_action_video_toggle_subtitle_blur':
         return '切換字幕模糊';
       case 'shortcut_action_video_escape':
-        return '退出／返回';
+        return '關閉影片／返回';
       case 'book_edit_author':
         return '作者';
       case 'floating_lyric_toggle_action':
@@ -158398,9 +159896,9 @@ extension on _StringsZhHk {
       case 'shortcut_scope_global_external':
         return 'Global (app-external)';
       case 'shortcut_action_global_external_lookup':
-        return 'App-external lookup hotkey';
+        return 'App-external lookup shortcut';
       case 'shortcut_scope_global_external_mobile_note':
-        return 'Triggered by the system (text selection menu, share, floating ball); the OS does not allow apps to remap this hotkey.';
+        return 'Triggered by the system (text selection menu, share, floating ball); the OS does not allow apps to remap this shortcut.';
       case 'shortcut_assign_pick_action':
         return 'Assign to action…';
       case 'shortcut_mouse_left':
@@ -159171,7 +160669,7 @@ extension on _StringsZhHk {
       case 'video_setting_torrent_backend_qb':
         return 'External qBittorrent';
       case 'video_setting_torrent_backend_embedded':
-        return 'Built-in engine (desktop)';
+        return 'Built-in engine (desktop only)';
       case 'video_setting_torrent_download_limit':
         return 'Download limit (KB/s)';
       case 'video_setting_torrent_upload_limit':
@@ -159626,6 +161124,48 @@ extension on _StringsZhHk {
         return 'Share progress with Hoshi / ッツ';
       case 'sync_google_drive_hoshi_compat_desc':
         return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
+      case 'eink_mode':
+        return 'E-ink mode';
+      case 'eink_mode_hint':
+        return 'Pure black-and-white theme with no animations and line-style highlights, for e-ink displays';
+      case 'update_mac_install_incomplete_message':
+        return 'The update could not be applied, so Hibiki is still on the previous version. You can retry the update, or download the latest release manually.';
+      case 'interconnect_upload_section':
+        return 'Upload to interconnect peer';
+      case 'interconnect_upload_section_footer':
+        return 'Choose what this device uploads to the connected peer. Independent from cloud backup and from the Enable interconnect toggle — off by default.';
+      case 'interconnect_upload_content':
+        return 'Upload book files';
+      case 'interconnect_upload_content_hint':
+        return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_dictionary':
+        return 'Upload dictionaries';
+      case 'interconnect_upload_dictionary_hint':
+        return 'Sync this device\'s dictionaries up to the interconnect peer.';
+      case 'interconnect_upload_audiobook_files':
+        return 'Upload audiobook files';
+      case 'interconnect_upload_audiobook_files_hint':
+        return 'Sync this device\'s audiobook audio and subtitle packages up to the interconnect peer (large).';
+      case 'interconnect_upload_video_files':
+        return 'Upload video files';
+      case 'interconnect_upload_video_files_hint':
+        return 'Sync this device\'s local video files up to the interconnect peer (large).';
+      case 'shortcut_action_reader_exit_book':
+        return '退出書籍';
+      case 'clipboard_text_window_title':
+        return 'Clipboard text';
+      case 'settings_secret_show':
+        return 'Show value';
+      case 'settings_secret_hide':
+        return 'Hide value';
+      case 'video_setting_speed_step':
+        return 'Speed step';
+      case 'clipboard_panel_block_capture':
+        return 'Block screen capture';
+      case 'clipboard_panel_block_capture_hint':
+        return 'Excludes the lookup and clipboard popup windows from screenshots, screen recording, and live streaming (Windows). Turn this off to let screenshots, recording, and streaming capture the lookup popup.';
+      case 'settings_section_general':
+        return '通用';
       default:
         return null;
     }
