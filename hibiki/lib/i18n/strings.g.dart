@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38437 (2261 per locale)
+/// Strings: 38454 (2262 per locale)
 ///
-/// Built on 2026-07-22 at 08:04 UTC
+/// Built on 2026-07-22 at 09:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3006,6 +3006,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_track_energy => 'Energy';
   String get game_audio_duration => 'Audio duration';
   String get games_rename_label => 'Game name';
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 // Path: <root>
@@ -8119,6 +8121,9 @@ class _StringsAr extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 // Path: <root>
@@ -13305,6 +13310,9 @@ class _StringsDe extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 // Path: <root>
@@ -18507,6 +18515,9 @@ class _StringsEs extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 // Path: <root>
@@ -23720,6 +23731,9 @@ class _StringsFr extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 // Path: <root>
@@ -28860,6 +28874,9 @@ class _StringsId extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 // Path: <root>
@@ -34048,6 +34065,9 @@ class _StringsIt extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 // Path: <root>
@@ -39041,6 +39061,9 @@ class _StringsJa extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 // Path: <root>
@@ -44037,6 +44060,9 @@ class _StringsKo extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 // Path: <root>
@@ -49203,6 +49229,9 @@ class _StringsNl extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 // Path: <root>
@@ -54384,6 +54413,9 @@ class _StringsPtBr extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 // Path: <root>
@@ -59548,6 +59580,9 @@ class _StringsRu extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 // Path: <root>
@@ -64657,6 +64692,9 @@ class _StringsTh extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 // Path: <root>
@@ -69798,6 +69836,9 @@ class _StringsTr extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 // Path: <root>
@@ -74926,6 +74967,9 @@ class _StringsVi extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 // Path: <root>
@@ -79699,6 +79743,8 @@ class _StringsZhCn extends _StringsEn {
   String get game_audio_duration => '音频时长';
   @override
   String get games_rename_label => '游戏名称';
+  @override
+  String get collection_loading_hint => '正在加载收藏并匹配音频文件…';
 }
 
 // Path: <root>
@@ -84610,6 +84656,9 @@ class _StringsZhHk extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
 }
 
 /// Flat map(s) containing all translations.
@@ -89224,6 +89273,8 @@ extension on _StringsEn {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
@@ -93836,6 +93887,8 @@ extension on _StringsAr {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
@@ -98469,6 +98522,8 @@ extension on _StringsDe {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
@@ -103101,6 +103156,8 @@ extension on _StringsEs {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
@@ -107739,6 +107796,8 @@ extension on _StringsFr {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
@@ -112359,6 +112418,8 @@ extension on _StringsId {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
@@ -116994,6 +117055,8 @@ extension on _StringsIt {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
@@ -121591,6 +121654,8 @@ extension on _StringsJa {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
@@ -126192,6 +126257,8 @@ extension on _StringsKo {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
@@ -130820,6 +130887,8 @@ extension on _StringsNl {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
@@ -135445,6 +135514,8 @@ extension on _StringsPtBr {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
@@ -140075,6 +140146,8 @@ extension on _StringsRu {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
@@ -144689,6 +144762,8 @@ extension on _StringsTh {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
@@ -149312,6 +149387,8 @@ extension on _StringsTr {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
@@ -153930,6 +154007,8 @@ extension on _StringsVi {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
@@ -158514,6 +158593,8 @@ extension on _StringsZhCn {
         return '音频时长';
       case 'games_rename_label':
         return '游戏名称';
+      case 'collection_loading_hint':
+        return '正在加载收藏并匹配音频文件…';
       default:
         return null;
     }
@@ -163106,6 +163187,8 @@ extension on _StringsZhHk {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
       default:
         return null;
     }
