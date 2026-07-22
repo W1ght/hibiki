@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38522 (2266 per locale)
+/// Strings: 38539 (2267 per locale)
 ///
-/// Built on 2026-07-22 at 09:35 UTC
+/// Built on 2026-07-22 at 10:26 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3013,6 +3013,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Couldn\'t load danmaku for this episode. Try again later.';
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   String get remote_video_info_no_subtitle => 'No subtitles';
+  String get app_icon_presets => 'Presets';
 }
 
 // Path: <root>
@@ -8138,6 +8139,8 @@ class _StringsAr extends _StringsEn {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   @override
   String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
 }
 
 // Path: <root>
@@ -13336,6 +13339,8 @@ class _StringsDe extends _StringsEn {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   @override
   String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
 }
 
 // Path: <root>
@@ -18550,6 +18555,8 @@ class _StringsEs extends _StringsEn {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   @override
   String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
 }
 
 // Path: <root>
@@ -23775,6 +23782,8 @@ class _StringsFr extends _StringsEn {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   @override
   String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
 }
 
 // Path: <root>
@@ -28927,6 +28936,8 @@ class _StringsId extends _StringsEn {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   @override
   String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
 }
 
 // Path: <root>
@@ -34127,6 +34138,8 @@ class _StringsIt extends _StringsEn {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   @override
   String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
 }
 
 // Path: <root>
@@ -39132,6 +39145,8 @@ class _StringsJa extends _StringsEn {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   @override
   String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
 }
 
 // Path: <root>
@@ -44140,6 +44155,8 @@ class _StringsKo extends _StringsEn {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   @override
   String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
 }
 
 // Path: <root>
@@ -49318,6 +49335,8 @@ class _StringsNl extends _StringsEn {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   @override
   String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
 }
 
 // Path: <root>
@@ -54511,6 +54530,8 @@ class _StringsPtBr extends _StringsEn {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   @override
   String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
 }
 
 // Path: <root>
@@ -59687,6 +59708,8 @@ class _StringsRu extends _StringsEn {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   @override
   String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
 }
 
 // Path: <root>
@@ -64808,6 +64831,8 @@ class _StringsTh extends _StringsEn {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   @override
   String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
 }
 
 // Path: <root>
@@ -69961,6 +69986,8 @@ class _StringsTr extends _StringsEn {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   @override
   String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
 }
 
 // Path: <root>
@@ -75101,6 +75128,8 @@ class _StringsVi extends _StringsEn {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   @override
   String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
 }
 
 // Path: <root>
@@ -79884,6 +79913,8 @@ class _StringsZhCn extends _StringsEn {
   String remote_video_info_size({required Object size}) => '大小：${size}';
   @override
   String get remote_video_info_no_subtitle => '不含字幕';
+  @override
+  String get app_icon_presets => '预设';
 }
 
 // Path: <root>
@@ -84807,6 +84838,8 @@ class _StringsZhHk extends _StringsEn {
   String remote_video_info_size({required Object size}) => 'Size: ${size}';
   @override
   String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
 }
 
 /// Flat map(s) containing all translations.
@@ -89431,6 +89464,8 @@ extension on _StringsEn {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -94053,6 +94088,8 @@ extension on _StringsAr {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -98696,6 +98733,8 @@ extension on _StringsDe {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -103338,6 +103377,8 @@ extension on _StringsEs {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -107986,6 +108027,8 @@ extension on _StringsFr {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -112616,6 +112659,8 @@ extension on _StringsId {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -117261,6 +117306,8 @@ extension on _StringsIt {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -121868,6 +121915,8 @@ extension on _StringsJa {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -126479,6 +126528,8 @@ extension on _StringsKo {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -131117,6 +131168,8 @@ extension on _StringsNl {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -135752,6 +135805,8 @@ extension on _StringsPtBr {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -140392,6 +140447,8 @@ extension on _StringsRu {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -145016,6 +145073,8 @@ extension on _StringsTh {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -149649,6 +149708,8 @@ extension on _StringsTr {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -154277,6 +154338,8 @@ extension on _StringsVi {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -158871,6 +158934,8 @@ extension on _StringsZhCn {
         return ({required Object size}) => '大小：${size}';
       case 'remote_video_info_no_subtitle':
         return '不含字幕';
+      case 'app_icon_presets':
+        return '预设';
       default:
         return null;
     }
@@ -163473,6 +163538,8 @@ extension on _StringsZhHk {
         return ({required Object size}) => 'Size: ${size}';
       case 'remote_video_info_no_subtitle':
         return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
       default:
         return null;
     }
