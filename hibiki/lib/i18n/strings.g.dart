@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39559 (2327 per locale)
+/// Strings: 39678 (2334 per locale)
 ///
-/// Built on 2026-07-23 at 23:50 UTC
+/// Built on 2026-07-24 at 02:05 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3104,6 +3104,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${count} with audio';
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   String get game_line_preview_failed => 'No playable audio for this line';
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 // Path: <root>
@@ -8381,6 +8393,25 @@ class _StringsAr extends _StringsEn {
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   @override
   String get game_line_preview_failed => 'No playable audio for this line';
+  @override
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  @override
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  @override
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  @override
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  @override
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  @override
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 // Path: <root>
@@ -13731,6 +13762,25 @@ class _StringsDe extends _StringsEn {
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   @override
   String get game_line_preview_failed => 'No playable audio for this line';
+  @override
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  @override
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  @override
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  @override
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  @override
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  @override
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 // Path: <root>
@@ -19097,6 +19147,25 @@ class _StringsEs extends _StringsEn {
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   @override
   String get game_line_preview_failed => 'No playable audio for this line';
+  @override
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  @override
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  @override
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  @override
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  @override
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  @override
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 // Path: <root>
@@ -24474,6 +24543,25 @@ class _StringsFr extends _StringsEn {
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   @override
   String get game_line_preview_failed => 'No playable audio for this line';
+  @override
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  @override
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  @override
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  @override
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  @override
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  @override
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 // Path: <root>
@@ -29778,6 +29866,25 @@ class _StringsId extends _StringsEn {
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   @override
   String get game_line_preview_failed => 'No playable audio for this line';
+  @override
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  @override
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  @override
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  @override
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  @override
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  @override
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 // Path: <root>
@@ -35130,6 +35237,25 @@ class _StringsIt extends _StringsEn {
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   @override
   String get game_line_preview_failed => 'No playable audio for this line';
+  @override
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  @override
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  @override
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  @override
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  @override
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  @override
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 // Path: <root>
@@ -40287,6 +40413,25 @@ class _StringsJa extends _StringsEn {
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   @override
   String get game_line_preview_failed => 'No playable audio for this line';
+  @override
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  @override
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  @override
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  @override
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  @override
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  @override
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 // Path: <root>
@@ -45447,6 +45592,25 @@ class _StringsKo extends _StringsEn {
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   @override
   String get game_line_preview_failed => 'No playable audio for this line';
+  @override
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  @override
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  @override
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  @override
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  @override
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  @override
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 // Path: <root>
@@ -50777,6 +50941,25 @@ class _StringsNl extends _StringsEn {
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   @override
   String get game_line_preview_failed => 'No playable audio for this line';
+  @override
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  @override
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  @override
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  @override
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  @override
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  @override
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 // Path: <root>
@@ -56122,6 +56305,25 @@ class _StringsPtBr extends _StringsEn {
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   @override
   String get game_line_preview_failed => 'No playable audio for this line';
+  @override
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  @override
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  @override
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  @override
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  @override
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  @override
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 // Path: <root>
@@ -61450,6 +61652,25 @@ class _StringsRu extends _StringsEn {
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   @override
   String get game_line_preview_failed => 'No playable audio for this line';
+  @override
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  @override
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  @override
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  @override
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  @override
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  @override
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 // Path: <root>
@@ -66723,6 +66944,25 @@ class _StringsTh extends _StringsEn {
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   @override
   String get game_line_preview_failed => 'No playable audio for this line';
+  @override
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  @override
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  @override
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  @override
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  @override
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  @override
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 // Path: <root>
@@ -72028,6 +72268,25 @@ class _StringsTr extends _StringsEn {
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   @override
   String get game_line_preview_failed => 'No playable audio for this line';
+  @override
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  @override
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  @override
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  @override
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  @override
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  @override
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 // Path: <root>
@@ -77320,6 +77579,25 @@ class _StringsVi extends _StringsEn {
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   @override
   String get game_line_preview_failed => 'No playable audio for this line';
+  @override
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  @override
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  @override
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  @override
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  @override
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  @override
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 // Path: <root>
@@ -82241,6 +82519,23 @@ class _StringsZhCn extends _StringsEn {
   String get game_line_preview_tooltip => '播放这句音频';
   @override
   String get game_line_preview_failed => '这句还没有可播放的音频';
+  @override
+  String get interconnect_section_delegate => '交给已配对设备';
+  @override
+  String get interconnect_backup_backend => '用互联做备份后端';
+  @override
+  String get interconnect_backup_backend_hint =>
+      '备份与同步写到已配对设备，而不是云盘。写过去的内容由上面「上传到互联对端」的几个开关决定。';
+  @override
+  String get interconnect_backup_backend_apply => '设为备份后端';
+  @override
+  String get interconnect_backup_backend_active =>
+      '备份已写到已配对设备。要换回云盘，去「同步与备份」里改后端。';
+  @override
+  String get interconnect_backup_backend_needs_pairing => '请先在上面连接一台设备。';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      '当前备份后端：${backend}';
 }
 
 // Path: <root>
@@ -87316,6 +87611,25 @@ class _StringsZhHk extends _StringsEn {
   String get game_line_preview_tooltip => 'Play this line\'s audio';
   @override
   String get game_line_preview_failed => 'No playable audio for this line';
+  @override
+  String get interconnect_section_delegate => 'Delegate to the paired device';
+  @override
+  String get interconnect_backup_backend =>
+      'Use interconnect as the backup backend';
+  @override
+  String get interconnect_backup_backend_hint =>
+      'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+  @override
+  String get interconnect_backup_backend_apply => 'Set as backup backend';
+  @override
+  String get interconnect_backup_backend_active =>
+      'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+  @override
+  String get interconnect_backup_backend_needs_pairing =>
+      'Connect to a device above first.';
+  @override
+  String interconnect_backup_backend_current({required Object backend}) =>
+      'Current backup backend: ${backend}';
 }
 
 /// Flat map(s) containing all translations.
@@ -92067,6 +92381,21 @@ extension on _StringsEn {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
@@ -96816,6 +97145,21 @@ extension on _StringsAr {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
@@ -101586,6 +101930,21 @@ extension on _StringsDe {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
@@ -106355,6 +106714,21 @@ extension on _StringsEs {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
@@ -111130,6 +111504,21 @@ extension on _StringsFr {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
@@ -115887,6 +116276,21 @@ extension on _StringsId {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
@@ -120659,6 +121063,21 @@ extension on _StringsIt {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
@@ -125393,6 +125812,21 @@ extension on _StringsJa {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
@@ -130131,6 +130565,21 @@ extension on _StringsKo {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
@@ -134896,6 +135345,21 @@ extension on _StringsNl {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
@@ -139658,6 +140122,21 @@ extension on _StringsPtBr {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
@@ -144425,6 +144904,21 @@ extension on _StringsRu {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
@@ -149176,6 +149670,21 @@ extension on _StringsTh {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
@@ -153936,6 +154445,21 @@ extension on _StringsTr {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
@@ -158691,6 +159215,21 @@ extension on _StringsVi {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
@@ -163409,6 +163948,20 @@ extension on _StringsZhCn {
         return '播放这句音频';
       case 'game_line_preview_failed':
         return '这句还没有可播放的音频';
+      case 'interconnect_section_delegate':
+        return '交给已配对设备';
+      case 'interconnect_backup_backend':
+        return '用互联做备份后端';
+      case 'interconnect_backup_backend_hint':
+        return '备份与同步写到已配对设备，而不是云盘。写过去的内容由上面「上传到互联对端」的几个开关决定。';
+      case 'interconnect_backup_backend_apply':
+        return '设为备份后端';
+      case 'interconnect_backup_backend_active':
+        return '备份已写到已配对设备。要换回云盘，去「同步与备份」里改后端。';
+      case 'interconnect_backup_backend_needs_pairing':
+        return '请先在上面连接一台设备。';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) => '当前备份后端：${backend}';
       default:
         return null;
     }
@@ -168138,6 +168691,21 @@ extension on _StringsZhHk {
         return 'Play this line\'s audio';
       case 'game_line_preview_failed':
         return 'No playable audio for this line';
+      case 'interconnect_section_delegate':
+        return 'Delegate to the paired device';
+      case 'interconnect_backup_backend':
+        return 'Use interconnect as the backup backend';
+      case 'interconnect_backup_backend_hint':
+        return 'Back up and sync to the paired device instead of a cloud drive. Everything the paired-device upload switches above allow is what gets written there.';
+      case 'interconnect_backup_backend_apply':
+        return 'Set as backup backend';
+      case 'interconnect_backup_backend_active':
+        return 'Backups already go to the paired device. Pick another backend in Sync & backup to switch away.';
+      case 'interconnect_backup_backend_needs_pairing':
+        return 'Connect to a device above first.';
+      case 'interconnect_backup_backend_current':
+        return ({required Object backend}) =>
+            'Current backup backend: ${backend}';
       default:
         return null;
     }
