@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39338 (2314 per locale)
+/// Strings: 39389 (2317 per locale)
 ///
-/// Built on 2026-07-23 at 12:57 UTC
+/// Built on 2026-07-23 at 12:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3088,6 +3088,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This PDF has no text layer (scanned image), so lookup is unavailable.';
   String get pdf_outline => 'Contents';
   String get pdf_outline_empty => 'This PDF has no contents.';
+  String get pdf_bookmarks => 'Bookmarks';
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 // Path: <root>
@@ -8336,6 +8339,12 @@ class _StringsAr extends _StringsEn {
   String get pdf_outline => 'Contents';
   @override
   String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 // Path: <root>
@@ -13657,6 +13666,12 @@ class _StringsDe extends _StringsEn {
   String get pdf_outline => 'Contents';
   @override
   String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 // Path: <root>
@@ -18994,6 +19009,12 @@ class _StringsEs extends _StringsEn {
   String get pdf_outline => 'Contents';
   @override
   String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 // Path: <root>
@@ -24342,6 +24363,12 @@ class _StringsFr extends _StringsEn {
   String get pdf_outline => 'Contents';
   @override
   String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 // Path: <root>
@@ -29617,6 +29644,12 @@ class _StringsId extends _StringsEn {
   String get pdf_outline => 'Contents';
   @override
   String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 // Path: <root>
@@ -34940,6 +34973,12 @@ class _StringsIt extends _StringsEn {
   String get pdf_outline => 'Contents';
   @override
   String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 // Path: <root>
@@ -40068,6 +40107,12 @@ class _StringsJa extends _StringsEn {
   String get pdf_outline => 'Contents';
   @override
   String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 // Path: <root>
@@ -45199,6 +45244,12 @@ class _StringsKo extends _StringsEn {
   String get pdf_outline => 'Contents';
   @override
   String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 // Path: <root>
@@ -50500,6 +50551,12 @@ class _StringsNl extends _StringsEn {
   String get pdf_outline => 'Contents';
   @override
   String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 // Path: <root>
@@ -55816,6 +55873,12 @@ class _StringsPtBr extends _StringsEn {
   String get pdf_outline => 'Contents';
   @override
   String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 // Path: <root>
@@ -61115,6 +61178,12 @@ class _StringsRu extends _StringsEn {
   String get pdf_outline => 'Contents';
   @override
   String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 // Path: <root>
@@ -66359,6 +66428,12 @@ class _StringsTh extends _StringsEn {
   String get pdf_outline => 'Contents';
   @override
   String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 // Path: <root>
@@ -71635,6 +71710,12 @@ class _StringsTr extends _StringsEn {
   String get pdf_outline => 'Contents';
   @override
   String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 // Path: <root>
@@ -76898,6 +76979,12 @@ class _StringsVi extends _StringsEn {
   String get pdf_outline => 'Contents';
   @override
   String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 // Path: <root>
@@ -81790,6 +81877,12 @@ class _StringsZhCn extends _StringsEn {
   String get pdf_outline => '目录';
   @override
   String get pdf_outline_empty => '此 PDF 没有目录。';
+  @override
+  String get pdf_bookmarks => '书签';
+  @override
+  String get pdf_bookmarks_empty => '还没有书签。';
+  @override
+  String get pdf_bookmark_added => '已添加书签';
 }
 
 // Path: <root>
@@ -86836,6 +86929,12 @@ class _StringsZhHk extends _StringsEn {
   String get pdf_outline => 'Contents';
   @override
   String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
 }
 
 /// Flat map(s) containing all translations.
@@ -91560,6 +91659,12 @@ extension on _StringsEn {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
@@ -96282,6 +96387,12 @@ extension on _StringsAr {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
@@ -101025,6 +101136,12 @@ extension on _StringsDe {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
@@ -105767,6 +105884,12 @@ extension on _StringsEs {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
@@ -110515,6 +110638,12 @@ extension on _StringsFr {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
@@ -115245,6 +115374,12 @@ extension on _StringsId {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
@@ -119990,6 +120125,12 @@ extension on _StringsIt {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
@@ -124697,6 +124838,12 @@ extension on _StringsJa {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
@@ -129408,6 +129555,12 @@ extension on _StringsKo {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
@@ -134146,6 +134299,12 @@ extension on _StringsNl {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
@@ -138881,6 +139040,12 @@ extension on _StringsPtBr {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
@@ -143621,6 +143786,12 @@ extension on _StringsRu {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
@@ -148345,6 +148516,12 @@ extension on _StringsTh {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
@@ -153078,6 +153255,12 @@ extension on _StringsTr {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
@@ -157806,6 +157989,12 @@ extension on _StringsVi {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
@@ -162498,6 +162687,12 @@ extension on _StringsZhCn {
         return '目录';
       case 'pdf_outline_empty':
         return '此 PDF 没有目录。';
+      case 'pdf_bookmarks':
+        return '书签';
+      case 'pdf_bookmarks_empty':
+        return '还没有书签。';
+      case 'pdf_bookmark_added':
+        return '已添加书签';
       default:
         return null;
     }
@@ -167200,6 +167395,12 @@ extension on _StringsZhHk {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       default:
         return null;
     }
