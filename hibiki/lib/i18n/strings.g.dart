@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39287 (2311 per locale)
+/// Strings: 39304 (2312 per locale)
 ///
-/// Built on 2026-07-23 at 11:05 UTC
+/// Built on 2026-07-23 at 13:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3084,6 +3084,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String download_subscription_latest_episode({required Object episode}) =>
       'Latest queued: episode ${episode}';
   String get download_subscription_check_now => 'Check now';
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -8325,6 +8326,8 @@ class _StringsAr extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -13639,6 +13642,8 @@ class _StringsDe extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -18969,6 +18974,8 @@ class _StringsEs extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -24310,6 +24317,8 @@ class _StringsFr extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -29578,6 +29587,8 @@ class _StringsId extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -34894,6 +34905,8 @@ class _StringsIt extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -40015,6 +40028,8 @@ class _StringsJa extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -45139,6 +45154,8 @@ class _StringsKo extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -50433,6 +50450,8 @@ class _StringsNl extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -55742,6 +55761,8 @@ class _StringsPtBr extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -61034,6 +61055,8 @@ class _StringsRu extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -66271,6 +66294,8 @@ class _StringsTh extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -71540,6 +71565,8 @@ class _StringsTr extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -76796,6 +76823,8 @@ class _StringsVi extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -81682,6 +81711,8 @@ class _StringsZhCn extends _StringsEn {
       '最近加入：第 ${episode} 集';
   @override
   String get download_subscription_check_now => '立即检查';
+  @override
+  String get home_recently_added => '最近添加';
 }
 
 // Path: <root>
@@ -86721,6 +86752,8 @@ class _StringsZhHk extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 /// Flat map(s) containing all translations.
@@ -91439,6 +91472,8 @@ extension on _StringsEn {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -96155,6 +96190,8 @@ extension on _StringsAr {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -100892,6 +100929,8 @@ extension on _StringsDe {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -105628,6 +105667,8 @@ extension on _StringsEs {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -110370,6 +110411,8 @@ extension on _StringsFr {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -115094,6 +115137,8 @@ extension on _StringsId {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -119833,6 +119878,8 @@ extension on _StringsIt {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -124534,6 +124581,8 @@ extension on _StringsJa {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -129239,6 +129288,8 @@ extension on _StringsKo {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -133971,6 +134022,8 @@ extension on _StringsNl {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -138700,6 +138753,8 @@ extension on _StringsPtBr {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -143434,6 +143489,8 @@ extension on _StringsRu {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -148152,6 +148209,8 @@ extension on _StringsTh {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -152879,6 +152938,8 @@ extension on _StringsTr {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -157601,6 +157662,8 @@ extension on _StringsVi {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -162287,6 +162350,8 @@ extension on _StringsZhCn {
         return ({required Object episode}) => '最近加入：第 ${episode} 集';
       case 'download_subscription_check_now':
         return '立即检查';
+      case 'home_recently_added':
+        return '最近添加';
       default:
         return null;
     }
@@ -166983,6 +167048,8 @@ extension on _StringsZhHk {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
