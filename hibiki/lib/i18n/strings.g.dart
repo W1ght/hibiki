@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38437 (2261 per locale)
+/// Strings: 38641 (2273 per locale)
 ///
-/// Built on 2026-07-22 at 08:04 UTC
+/// Built on 2026-07-23 at 00:39 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2439,10 +2439,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String backup_export_videos_selected({required Object count}) =>
       '${count} videos selected';
   String get video_continue_watching => 'Continue Watching';
-  String get video_library_overview => 'Statistics';
-  String get video_stat_total_videos => 'Total';
-  String get video_stat_unfinished => 'Unfinished';
-  String get video_stat_recent_imports => 'New in 7 days';
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   String video_last_watched({required Object date}) => 'Last watched ${date}';
   String get collection_view_all => 'View all';
@@ -2462,8 +2458,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_render_skia_fix_hint =>
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   String get book_continue_reading => 'Continue Reading';
-  String get book_library_overview => 'Statistics';
-  String get shelf_stat_reading => 'Reading';
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   String get sort_by => 'Sort';
   String get sort_recent_read => 'Recently read';
@@ -3006,6 +3000,32 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_track_energy => 'Energy';
   String get game_audio_duration => 'Audio duration';
   String get games_rename_label => 'Game name';
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  String get video_quality_empty => 'No switchable quality for this video';
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  String get app_icon_presets => 'Presets';
+  String get anki_mine_to_server => 'Mine to paired device';
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  String get delete_scope_keep_local => 'Delete on this device only';
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  String get delete_prompt_title => 'Deleted on another device';
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  String get delete_prompt_select_all => 'Select all';
+  String get delete_prompt_delete_selected => 'Delete selected';
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -7104,14 +7124,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -7144,10 +7156,6 @@ class _StringsAr extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -8119,6 +8127,50 @@ class _StringsAr extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  @override
+  String get video_quality_empty => 'No switchable quality for this video';
+  @override
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  @override
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  @override
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -12290,14 +12342,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -12330,10 +12374,6 @@ class _StringsDe extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -13305,6 +13345,50 @@ class _StringsDe extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  @override
+  String get video_quality_empty => 'No switchable quality for this video';
+  @override
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  @override
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  @override
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -17492,14 +17576,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -17532,10 +17608,6 @@ class _StringsEs extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -18507,6 +18579,50 @@ class _StringsEs extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  @override
+  String get video_quality_empty => 'No switchable quality for this video';
+  @override
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  @override
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  @override
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -22705,14 +22821,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -22745,10 +22853,6 @@ class _StringsFr extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -23720,6 +23824,50 @@ class _StringsFr extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  @override
+  String get video_quality_empty => 'No switchable quality for this video';
+  @override
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  @override
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  @override
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -27845,14 +27993,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -27885,10 +28025,6 @@ class _StringsId extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -28860,6 +28996,50 @@ class _StringsId extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  @override
+  String get video_quality_empty => 'No switchable quality for this video';
+  @override
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  @override
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  @override
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -33033,14 +33213,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -33073,10 +33245,6 @@ class _StringsIt extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -34048,6 +34216,50 @@ class _StringsIt extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  @override
+  String get video_quality_empty => 'No switchable quality for this video';
+  @override
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  @override
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  @override
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -38028,14 +38240,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -38068,10 +38272,6 @@ class _StringsJa extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -39041,6 +39241,50 @@ class _StringsJa extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  @override
+  String get video_quality_empty => 'No switchable quality for this video';
+  @override
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  @override
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  @override
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -43023,14 +43267,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -43063,10 +43299,6 @@ class _StringsKo extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -44037,6 +44269,50 @@ class _StringsKo extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  @override
+  String get video_quality_empty => 'No switchable quality for this video';
+  @override
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  @override
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  @override
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -48188,14 +48464,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -48228,10 +48496,6 @@ class _StringsNl extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -49203,6 +49467,50 @@ class _StringsNl extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  @override
+  String get video_quality_empty => 'No switchable quality for this video';
+  @override
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  @override
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  @override
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -53369,14 +53677,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -53409,10 +53709,6 @@ class _StringsPtBr extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -54384,6 +54680,50 @@ class _StringsPtBr extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  @override
+  String get video_quality_empty => 'No switchable quality for this video';
+  @override
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  @override
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  @override
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -58533,14 +58873,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -58573,10 +58905,6 @@ class _StringsRu extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -59548,6 +59876,50 @@ class _StringsRu extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  @override
+  String get video_quality_empty => 'No switchable quality for this video';
+  @override
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  @override
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  @override
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -63642,14 +64014,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -63682,10 +64046,6 @@ class _StringsTh extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -64657,6 +65017,50 @@ class _StringsTh extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  @override
+  String get video_quality_empty => 'No switchable quality for this video';
+  @override
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  @override
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  @override
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -68783,14 +69187,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -68823,10 +69219,6 @@ class _StringsTr extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -69798,6 +70190,50 @@ class _StringsTr extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  @override
+  String get video_quality_empty => 'No switchable quality for this video';
+  @override
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  @override
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  @override
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -73911,14 +74347,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => 'Statistics';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -73951,10 +74379,6 @@ class _StringsVi extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => 'Statistics';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -74926,6 +75350,50 @@ class _StringsVi extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  @override
+  String get video_quality_empty => 'No switchable quality for this video';
+  @override
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  @override
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  @override
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -78765,14 +79233,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_continue_watching => '继续观看';
   @override
-  String get video_library_overview => '统计';
-  @override
-  String get video_stat_total_videos => '总数';
-  @override
-  String get video_stat_unfinished => '未完成';
-  @override
-  String get video_stat_recent_imports => '近7天导入';
-  @override
   String video_watched_up_to({required Object time}) => '已看至 ${time}';
   @override
   String video_last_watched({required Object date}) => '上次观看 ${date}';
@@ -78800,10 +79260,6 @@ class _StringsZhCn extends _StringsEn {
   String get video_render_skia_fix_hint => '有声音但画面全黑时用。关闭 Impeller，重启后生效。';
   @override
   String get book_continue_reading => '继续阅读';
-  @override
-  String get book_library_overview => '统计';
-  @override
-  String get shelf_stat_reading => '在读';
   @override
   String book_read_progress({required Object percent}) => '已读 ${percent}%';
   @override
@@ -79699,6 +80155,45 @@ class _StringsZhCn extends _StringsEn {
   String get game_audio_duration => '音频时长';
   @override
   String get games_rename_label => '游戏名称';
+  @override
+  String get collection_loading_hint => '正在加载收藏并匹配音频文件…';
+  @override
+  String get video_quality_empty => '本视频没有可切换的画质';
+  @override
+  String get video_danmaku_manual_bind_failed => '弹幕加载失败，请稍后重试';
+  @override
+  String remote_video_info_size({required Object size}) => '大小：${size}';
+  @override
+  String get remote_video_info_no_subtitle => '不含字幕';
+  @override
+  String get app_icon_presets => '预设';
+  @override
+  String get anki_mine_to_server => '制卡到已配对设备';
+  @override
+  String get anki_mine_to_server_hint =>
+      '把制卡发送到已配对主机的 Anki（用该设备的牌组与设置），而非本机。需先在互联/同步里完成配对。';
+  @override
+  String get delete_scope_keep_local => '仅从本机删除';
+  @override
+  String get delete_scope_keep_local_desc => '其他设备保留';
+  @override
+  String get delete_prompt_title => '其他设备已删除';
+  @override
+  String get delete_prompt_message => '以下内容已在其他设备删除，也从本机删除吗？';
+  @override
+  String get delete_prompt_select_all => '全选';
+  @override
+  String get delete_prompt_delete_selected => '删除选中';
+  @override
+  String get delete_scope_sync_everywhere => '从所有设备删除';
+  @override
+  String get delete_scope_sync_everywhere_desc => '其他设备下次同步时会确认删除';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      '已看完 ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) => '继续看 第${n}集';
 }
 
 // Path: <root>
@@ -83601,14 +84096,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
-  String get video_library_overview => '統計';
-  @override
-  String get video_stat_total_videos => 'Total';
-  @override
-  String get video_stat_unfinished => 'Unfinished';
-  @override
-  String get video_stat_recent_imports => 'New in 7 days';
-  @override
   String video_watched_up_to({required Object time}) => 'Watched to ${time}';
   @override
   String video_last_watched({required Object date}) => 'Last watched ${date}';
@@ -83641,10 +84128,6 @@ class _StringsZhHk extends _StringsEn {
       'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
   @override
   String get book_continue_reading => 'Continue Reading';
-  @override
-  String get book_library_overview => '統計';
-  @override
-  String get shelf_stat_reading => 'Reading';
   @override
   String book_read_progress({required Object percent}) => 'Read ${percent}%';
   @override
@@ -84610,6 +85093,50 @@ class _StringsZhHk extends _StringsEn {
   String get game_audio_duration => 'Audio duration';
   @override
   String get games_rename_label => 'Game name';
+  @override
+  String get collection_loading_hint =>
+      'Loading collections and matching audio files…';
+  @override
+  String get video_quality_empty => 'No switchable quality for this video';
+  @override
+  String get video_danmaku_manual_bind_failed =>
+      'Couldn\'t load danmaku for this episode. Try again later.';
+  @override
+  String remote_video_info_size({required Object size}) => 'Size: ${size}';
+  @override
+  String get remote_video_info_no_subtitle => 'No subtitles';
+  @override
+  String get app_icon_presets => 'Presets';
+  @override
+  String get anki_mine_to_server => 'Mine to paired device';
+  @override
+  String get anki_mine_to_server_hint =>
+      'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+  @override
+  String get delete_scope_keep_local => 'Delete on this device only';
+  @override
+  String get delete_scope_keep_local_desc => 'Other devices keep their copy';
+  @override
+  String get delete_prompt_title => 'Deleted on another device';
+  @override
+  String get delete_prompt_message =>
+      'These items were deleted on another device. Delete them here too?';
+  @override
+  String get delete_prompt_select_all => 'Select all';
+  @override
+  String get delete_prompt_delete_selected => 'Delete selected';
+  @override
+  String get delete_scope_sync_everywhere => 'Delete from all devices';
+  @override
+  String get delete_scope_sync_everywhere_desc =>
+      'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 /// Flat map(s) containing all translations.
@@ -88315,14 +88842,6 @@ extension on _StringsEn {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -88351,10 +88870,6 @@ extension on _StringsEn {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -89224,6 +89739,43 @@ extension on _StringsEn {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -92927,14 +93479,6 @@ extension on _StringsAr {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -92963,10 +93507,6 @@ extension on _StringsAr {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -93836,6 +94376,43 @@ extension on _StringsAr {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -97560,14 +98137,6 @@ extension on _StringsDe {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -97596,10 +98165,6 @@ extension on _StringsDe {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -98469,6 +99034,43 @@ extension on _StringsDe {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -102192,14 +102794,6 @@ extension on _StringsEs {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -102228,10 +102822,6 @@ extension on _StringsEs {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -103101,6 +103691,43 @@ extension on _StringsEs {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -106830,14 +107457,6 @@ extension on _StringsFr {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -106866,10 +107485,6 @@ extension on _StringsFr {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -107739,6 +108354,43 @@ extension on _StringsFr {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -111450,14 +112102,6 @@ extension on _StringsId {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -111486,10 +112130,6 @@ extension on _StringsId {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -112359,6 +112999,43 @@ extension on _StringsId {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -116085,14 +116762,6 @@ extension on _StringsIt {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -116121,10 +116790,6 @@ extension on _StringsIt {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -116994,6 +117659,43 @@ extension on _StringsIt {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -120683,14 +121385,6 @@ extension on _StringsJa {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -120719,10 +121413,6 @@ extension on _StringsJa {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -121591,6 +122281,43 @@ extension on _StringsJa {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -125283,14 +126010,6 @@ extension on _StringsKo {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -125319,10 +126038,6 @@ extension on _StringsKo {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -126192,6 +126907,43 @@ extension on _StringsKo {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -129911,14 +130663,6 @@ extension on _StringsNl {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -129947,10 +130691,6 @@ extension on _StringsNl {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -130820,6 +131560,43 @@ extension on _StringsNl {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -134536,14 +135313,6 @@ extension on _StringsPtBr {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -134572,10 +135341,6 @@ extension on _StringsPtBr {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -135445,6 +136210,43 @@ extension on _StringsPtBr {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -139166,14 +139968,6 @@ extension on _StringsRu {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -139202,10 +139996,6 @@ extension on _StringsRu {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -140075,6 +140865,43 @@ extension on _StringsRu {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -143780,14 +144607,6 @@ extension on _StringsTh {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -143816,10 +144635,6 @@ extension on _StringsTh {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -144689,6 +145504,43 @@ extension on _StringsTh {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -148403,14 +149255,6 @@ extension on _StringsTr {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -148439,10 +149283,6 @@ extension on _StringsTr {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -149312,6 +150152,43 @@ extension on _StringsTr {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -153021,14 +153898,6 @@ extension on _StringsVi {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return 'Statistics';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -153057,10 +153926,6 @@ extension on _StringsVi {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return 'Statistics';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -153930,6 +154795,43 @@ extension on _StringsVi {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -157609,14 +158511,6 @@ extension on _StringsZhCn {
         return ({required Object count}) => '已选 ${count} 个视频';
       case 'video_continue_watching':
         return '继续观看';
-      case 'video_library_overview':
-        return '统计';
-      case 'video_stat_total_videos':
-        return '总数';
-      case 'video_stat_unfinished':
-        return '未完成';
-      case 'video_stat_recent_imports':
-        return '近7天导入';
       case 'video_watched_up_to':
         return ({required Object time}) => '已看至 ${time}';
       case 'video_last_watched':
@@ -157645,10 +158539,6 @@ extension on _StringsZhCn {
         return '有声音但画面全黑时用。关闭 Impeller，重启后生效。';
       case 'book_continue_reading':
         return '继续阅读';
-      case 'book_library_overview':
-        return '统计';
-      case 'shelf_stat_reading':
-        return '在读';
       case 'book_read_progress':
         return ({required Object percent}) => '已读 ${percent}%';
       case 'sort_by':
@@ -158514,6 +159404,43 @@ extension on _StringsZhCn {
         return '音频时长';
       case 'games_rename_label':
         return '游戏名称';
+      case 'collection_loading_hint':
+        return '正在加载收藏并匹配音频文件…';
+      case 'video_quality_empty':
+        return '本视频没有可切换的画质';
+      case 'video_danmaku_manual_bind_failed':
+        return '弹幕加载失败，请稍后重试';
+      case 'remote_video_info_size':
+        return ({required Object size}) => '大小：${size}';
+      case 'remote_video_info_no_subtitle':
+        return '不含字幕';
+      case 'app_icon_presets':
+        return '预设';
+      case 'anki_mine_to_server':
+        return '制卡到已配对设备';
+      case 'anki_mine_to_server_hint':
+        return '把制卡发送到已配对主机的 Anki（用该设备的牌组与设置），而非本机。需先在互联/同步里完成配对。';
+      case 'delete_scope_keep_local':
+        return '仅从本机删除';
+      case 'delete_scope_keep_local_desc':
+        return '其他设备保留';
+      case 'delete_prompt_title':
+        return '其他设备已删除';
+      case 'delete_prompt_message':
+        return '以下内容已在其他设备删除，也从本机删除吗？';
+      case 'delete_prompt_select_all':
+        return '全选';
+      case 'delete_prompt_delete_selected':
+        return '删除选中';
+      case 'delete_scope_sync_everywhere':
+        return '从所有设备删除';
+      case 'delete_scope_sync_everywhere_desc':
+        return '其他设备下次同步时会确认删除';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            '已看完 ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => '继续看 第${n}集';
       default:
         return null;
     }
@@ -162198,14 +163125,6 @@ extension on _StringsZhHk {
         return ({required Object count}) => '${count} videos selected';
       case 'video_continue_watching':
         return 'Continue Watching';
-      case 'video_library_overview':
-        return '統計';
-      case 'video_stat_total_videos':
-        return 'Total';
-      case 'video_stat_unfinished':
-        return 'Unfinished';
-      case 'video_stat_recent_imports':
-        return 'New in 7 days';
       case 'video_watched_up_to':
         return ({required Object time}) => 'Watched to ${time}';
       case 'video_last_watched':
@@ -162234,10 +163153,6 @@ extension on _StringsZhHk {
         return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
       case 'book_continue_reading':
         return 'Continue Reading';
-      case 'book_library_overview':
-        return '統計';
-      case 'shelf_stat_reading':
-        return 'Reading';
       case 'book_read_progress':
         return ({required Object percent}) => 'Read ${percent}%';
       case 'sort_by':
@@ -163106,6 +164021,43 @@ extension on _StringsZhHk {
         return 'Audio duration';
       case 'games_rename_label':
         return 'Game name';
+      case 'collection_loading_hint':
+        return 'Loading collections and matching audio files…';
+      case 'video_quality_empty':
+        return 'No switchable quality for this video';
+      case 'video_danmaku_manual_bind_failed':
+        return 'Couldn\'t load danmaku for this episode. Try again later.';
+      case 'remote_video_info_size':
+        return ({required Object size}) => 'Size: ${size}';
+      case 'remote_video_info_no_subtitle':
+        return 'No subtitles';
+      case 'app_icon_presets':
+        return 'Presets';
+      case 'anki_mine_to_server':
+        return 'Mine to paired device';
+      case 'anki_mine_to_server_hint':
+        return 'Send mined cards to the paired host\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      case 'delete_scope_keep_local':
+        return 'Delete on this device only';
+      case 'delete_scope_keep_local_desc':
+        return 'Other devices keep their copy';
+      case 'delete_prompt_title':
+        return 'Deleted on another device';
+      case 'delete_prompt_message':
+        return 'These items were deleted on another device. Delete them here too?';
+      case 'delete_prompt_select_all':
+        return 'Select all';
+      case 'delete_prompt_delete_selected':
+        return 'Delete selected';
+      case 'delete_scope_sync_everywhere':
+        return 'Delete from all devices';
+      case 'delete_scope_sync_everywhere_desc':
+        return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
