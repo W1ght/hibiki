@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39423 (2319 per locale)
+/// Strings: 39508 (2324 per locale)
 ///
-/// Built on 2026-07-23 at 19:03 UTC
+/// Built on 2026-07-23 at 20:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3094,6 +3094,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
   String get home_recently_added => 'Recently added';
+  String get games_set_cover => 'Set cover';
+  String get games_auto_cover => 'Fetch cover automatically';
+  String get games_cover_updated => 'Cover updated';
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -8353,6 +8359,17 @@ class _StringsAr extends _StringsEn {
       'Clip exported with subtitles: ${path}';
   @override
   String get home_recently_added => 'Recently added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -13685,6 +13702,17 @@ class _StringsDe extends _StringsEn {
       'Clip exported with subtitles: ${path}';
   @override
   String get home_recently_added => 'Recently added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -19033,6 +19061,17 @@ class _StringsEs extends _StringsEn {
       'Clip exported with subtitles: ${path}';
   @override
   String get home_recently_added => 'Recently added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -24392,6 +24431,17 @@ class _StringsFr extends _StringsEn {
       'Clip exported with subtitles: ${path}';
   @override
   String get home_recently_added => 'Recently added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -29678,6 +29728,17 @@ class _StringsId extends _StringsEn {
       'Clip exported with subtitles: ${path}';
   @override
   String get home_recently_added => 'Recently added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -35012,6 +35073,17 @@ class _StringsIt extends _StringsEn {
       'Clip exported with subtitles: ${path}';
   @override
   String get home_recently_added => 'Recently added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -40151,6 +40223,17 @@ class _StringsJa extends _StringsEn {
       'Clip exported with subtitles: ${path}';
   @override
   String get home_recently_added => 'Recently added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -45293,6 +45376,17 @@ class _StringsKo extends _StringsEn {
       'Clip exported with subtitles: ${path}';
   @override
   String get home_recently_added => 'Recently added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -50605,6 +50699,17 @@ class _StringsNl extends _StringsEn {
       'Clip exported with subtitles: ${path}';
   @override
   String get home_recently_added => 'Recently added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -55932,6 +56037,17 @@ class _StringsPtBr extends _StringsEn {
       'Clip exported with subtitles: ${path}';
   @override
   String get home_recently_added => 'Recently added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -61242,6 +61358,17 @@ class _StringsRu extends _StringsEn {
       'Clip exported with subtitles: ${path}';
   @override
   String get home_recently_added => 'Recently added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -66497,6 +66624,17 @@ class _StringsTh extends _StringsEn {
       'Clip exported with subtitles: ${path}';
   @override
   String get home_recently_added => 'Recently added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -71784,6 +71922,17 @@ class _StringsTr extends _StringsEn {
       'Clip exported with subtitles: ${path}';
   @override
   String get home_recently_added => 'Recently added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -77058,6 +77207,17 @@ class _StringsVi extends _StringsEn {
       'Clip exported with subtitles: ${path}';
   @override
   String get home_recently_added => 'Recently added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -81962,6 +82122,16 @@ class _StringsZhCn extends _StringsEn {
       '片段已导出（含字幕）：${path}';
   @override
   String get home_recently_added => '最近添加';
+  @override
+  String get games_set_cover => '设置封面';
+  @override
+  String get games_auto_cover => '自动获取封面';
+  @override
+  String get games_cover_updated => '封面已更新';
+  @override
+  String get games_cover_not_found => '游戏目录和程序图标里都没找到可用封面';
+  @override
+  String get games_cover_searching => '正在查找封面...';
 }
 
 // Path: <root>
@@ -87019,6 +87189,17 @@ class _StringsZhHk extends _StringsEn {
       'Clip exported with subtitles: ${path}';
   @override
   String get home_recently_added => 'Recently added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 /// Flat map(s) containing all translations.
@@ -91754,6 +91935,16 @@ extension on _StringsEn {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -96487,6 +96678,16 @@ extension on _StringsAr {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -101241,6 +101442,16 @@ extension on _StringsDe {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -105994,6 +106205,16 @@ extension on _StringsEs {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -110753,6 +110974,16 @@ extension on _StringsFr {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -115494,6 +115725,16 @@ extension on _StringsId {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -120250,6 +120491,16 @@ extension on _StringsIt {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -124968,6 +125219,16 @@ extension on _StringsJa {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -129690,6 +129951,16 @@ extension on _StringsKo {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -134439,6 +134710,16 @@ extension on _StringsNl {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -139185,6 +139466,16 @@ extension on _StringsPtBr {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -143936,6 +144227,16 @@ extension on _StringsRu {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -148671,6 +148972,16 @@ extension on _StringsTh {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -153415,6 +153726,16 @@ extension on _StringsTr {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -158154,6 +158475,16 @@ extension on _StringsVi {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -162856,6 +163187,16 @@ extension on _StringsZhCn {
         return ({required Object path}) => '片段已导出（含字幕）：${path}';
       case 'home_recently_added':
         return '最近添加';
+      case 'games_set_cover':
+        return '设置封面';
+      case 'games_auto_cover':
+        return '自动获取封面';
+      case 'games_cover_updated':
+        return '封面已更新';
+      case 'games_cover_not_found':
+        return '游戏目录和程序图标里都没找到可用封面';
+      case 'games_cover_searching':
+        return '正在查找封面...';
       default:
         return null;
     }
@@ -167569,6 +167910,16 @@ extension on _StringsZhHk {
             'Clip exported with subtitles: ${path}';
       case 'home_recently_added':
         return 'Recently added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
