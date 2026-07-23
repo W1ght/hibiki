@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39678 (2334 per locale)
+/// Strings: 39695 (2335 per locale)
 ///
-/// Built on 2026-07-24 at 02:05 UTC
+/// Built on 2026-07-24 at 02:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3116,6 +3116,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Connect to a device above first.';
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  String get external_window_current_game => 'Current game';
 }
 
 // Path: <root>
@@ -8412,6 +8413,8 @@ class _StringsAr extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  @override
+  String get external_window_current_game => 'Current game';
 }
 
 // Path: <root>
@@ -13781,6 +13784,8 @@ class _StringsDe extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  @override
+  String get external_window_current_game => 'Current game';
 }
 
 // Path: <root>
@@ -19166,6 +19171,8 @@ class _StringsEs extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  @override
+  String get external_window_current_game => 'Current game';
 }
 
 // Path: <root>
@@ -24562,6 +24569,8 @@ class _StringsFr extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  @override
+  String get external_window_current_game => 'Current game';
 }
 
 // Path: <root>
@@ -29885,6 +29894,8 @@ class _StringsId extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  @override
+  String get external_window_current_game => 'Current game';
 }
 
 // Path: <root>
@@ -35256,6 +35267,8 @@ class _StringsIt extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  @override
+  String get external_window_current_game => 'Current game';
 }
 
 // Path: <root>
@@ -40432,6 +40445,8 @@ class _StringsJa extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  @override
+  String get external_window_current_game => 'Current game';
 }
 
 // Path: <root>
@@ -45611,6 +45626,8 @@ class _StringsKo extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  @override
+  String get external_window_current_game => 'Current game';
 }
 
 // Path: <root>
@@ -50960,6 +50977,8 @@ class _StringsNl extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  @override
+  String get external_window_current_game => 'Current game';
 }
 
 // Path: <root>
@@ -56324,6 +56343,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  @override
+  String get external_window_current_game => 'Current game';
 }
 
 // Path: <root>
@@ -61671,6 +61692,8 @@ class _StringsRu extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  @override
+  String get external_window_current_game => 'Current game';
 }
 
 // Path: <root>
@@ -66963,6 +66986,8 @@ class _StringsTh extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  @override
+  String get external_window_current_game => 'Current game';
 }
 
 // Path: <root>
@@ -72287,6 +72312,8 @@ class _StringsTr extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  @override
+  String get external_window_current_game => 'Current game';
 }
 
 // Path: <root>
@@ -77598,6 +77625,8 @@ class _StringsVi extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  @override
+  String get external_window_current_game => 'Current game';
 }
 
 // Path: <root>
@@ -82536,6 +82565,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       '当前备份后端：${backend}';
+  @override
+  String get external_window_current_game => '当前游戏';
 }
 
 // Path: <root>
@@ -87630,6 +87661,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String interconnect_backup_backend_current({required Object backend}) =>
       'Current backup backend: ${backend}';
+  @override
+  String get external_window_current_game => 'Current game';
 }
 
 /// Flat map(s) containing all translations.
@@ -92396,6 +92429,8 @@ extension on _StringsEn {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
@@ -97160,6 +97195,8 @@ extension on _StringsAr {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
@@ -101945,6 +101982,8 @@ extension on _StringsDe {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
@@ -106729,6 +106768,8 @@ extension on _StringsEs {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
@@ -111519,6 +111560,8 @@ extension on _StringsFr {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
@@ -116291,6 +116334,8 @@ extension on _StringsId {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
@@ -121078,6 +121123,8 @@ extension on _StringsIt {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
@@ -125827,6 +125874,8 @@ extension on _StringsJa {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
@@ -130580,6 +130629,8 @@ extension on _StringsKo {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
@@ -135360,6 +135411,8 @@ extension on _StringsNl {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
@@ -140137,6 +140190,8 @@ extension on _StringsPtBr {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
@@ -144919,6 +144974,8 @@ extension on _StringsRu {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
@@ -149685,6 +149742,8 @@ extension on _StringsTh {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
@@ -154460,6 +154519,8 @@ extension on _StringsTr {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
@@ -159230,6 +159291,8 @@ extension on _StringsVi {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
@@ -163962,6 +164025,8 @@ extension on _StringsZhCn {
         return '请先在上面连接一台设备。';
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) => '当前备份后端：${backend}';
+      case 'external_window_current_game':
+        return '当前游戏';
       default:
         return null;
     }
@@ -168706,6 +168771,8 @@ extension on _StringsZhHk {
       case 'interconnect_backup_backend_current':
         return ({required Object backend}) =>
             'Current backup backend: ${backend}';
+      case 'external_window_current_game':
+        return 'Current game';
       default:
         return null;
     }
