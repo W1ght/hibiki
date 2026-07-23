@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39508 (2324 per locale)
+/// Strings: 39525 (2325 per locale)
 ///
-/// Built on 2026-07-23 at 20:47 UTC
+/// Built on 2026-07-23 at 23:15 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3100,6 +3100,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get games_cover_not_found =>
       'No usable cover found in the game folder or executable';
   String get games_cover_searching => 'Looking for a cover...';
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 // Path: <root>
@@ -8370,6 +8372,9 @@ class _StringsAr extends _StringsEn {
       'No usable cover found in the game folder or executable';
   @override
   String get games_cover_searching => 'Looking for a cover...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 // Path: <root>
@@ -13713,6 +13718,9 @@ class _StringsDe extends _StringsEn {
       'No usable cover found in the game folder or executable';
   @override
   String get games_cover_searching => 'Looking for a cover...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 // Path: <root>
@@ -19072,6 +19080,9 @@ class _StringsEs extends _StringsEn {
       'No usable cover found in the game folder or executable';
   @override
   String get games_cover_searching => 'Looking for a cover...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 // Path: <root>
@@ -24442,6 +24453,9 @@ class _StringsFr extends _StringsEn {
       'No usable cover found in the game folder or executable';
   @override
   String get games_cover_searching => 'Looking for a cover...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 // Path: <root>
@@ -29739,6 +29753,9 @@ class _StringsId extends _StringsEn {
       'No usable cover found in the game folder or executable';
   @override
   String get games_cover_searching => 'Looking for a cover...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 // Path: <root>
@@ -35084,6 +35101,9 @@ class _StringsIt extends _StringsEn {
       'No usable cover found in the game folder or executable';
   @override
   String get games_cover_searching => 'Looking for a cover...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 // Path: <root>
@@ -40234,6 +40254,9 @@ class _StringsJa extends _StringsEn {
       'No usable cover found in the game folder or executable';
   @override
   String get games_cover_searching => 'Looking for a cover...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 // Path: <root>
@@ -45387,6 +45410,9 @@ class _StringsKo extends _StringsEn {
       'No usable cover found in the game folder or executable';
   @override
   String get games_cover_searching => 'Looking for a cover...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 // Path: <root>
@@ -50710,6 +50736,9 @@ class _StringsNl extends _StringsEn {
       'No usable cover found in the game folder or executable';
   @override
   String get games_cover_searching => 'Looking for a cover...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 // Path: <root>
@@ -56048,6 +56077,9 @@ class _StringsPtBr extends _StringsEn {
       'No usable cover found in the game folder or executable';
   @override
   String get games_cover_searching => 'Looking for a cover...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 // Path: <root>
@@ -61369,6 +61401,9 @@ class _StringsRu extends _StringsEn {
       'No usable cover found in the game folder or executable';
   @override
   String get games_cover_searching => 'Looking for a cover...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 // Path: <root>
@@ -66635,6 +66670,9 @@ class _StringsTh extends _StringsEn {
       'No usable cover found in the game folder or executable';
   @override
   String get games_cover_searching => 'Looking for a cover...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 // Path: <root>
@@ -71933,6 +71971,9 @@ class _StringsTr extends _StringsEn {
       'No usable cover found in the game folder or executable';
   @override
   String get games_cover_searching => 'Looking for a cover...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 // Path: <root>
@@ -77218,6 +77259,9 @@ class _StringsVi extends _StringsEn {
       'No usable cover found in the game folder or executable';
   @override
   String get games_cover_searching => 'Looking for a cover...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 // Path: <root>
@@ -82132,6 +82176,9 @@ class _StringsZhCn extends _StringsEn {
   String get games_cover_not_found => '游戏目录和程序图标里都没找到可用封面';
   @override
   String get games_cover_searching => '正在查找封面...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} 行有音频';
 }
 
 // Path: <root>
@@ -87200,6 +87247,9 @@ class _StringsZhHk extends _StringsEn {
       'No usable cover found in the game folder or executable';
   @override
   String get games_cover_searching => 'Looking for a cover...';
+  @override
+  String game_text_thread_audio_count({required Object count}) =>
+      '${count} with audio';
 }
 
 /// Flat map(s) containing all translations.
@@ -91945,6 +91995,8 @@ extension on _StringsEn {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
@@ -96688,6 +96740,8 @@ extension on _StringsAr {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
@@ -101452,6 +101506,8 @@ extension on _StringsDe {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
@@ -106215,6 +106271,8 @@ extension on _StringsEs {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
@@ -110984,6 +111042,8 @@ extension on _StringsFr {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
@@ -115735,6 +115795,8 @@ extension on _StringsId {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
@@ -120501,6 +120563,8 @@ extension on _StringsIt {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
@@ -125229,6 +125293,8 @@ extension on _StringsJa {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
@@ -129961,6 +130027,8 @@ extension on _StringsKo {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
@@ -134720,6 +134788,8 @@ extension on _StringsNl {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
@@ -139476,6 +139546,8 @@ extension on _StringsPtBr {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
@@ -144237,6 +144309,8 @@ extension on _StringsRu {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
@@ -148982,6 +149056,8 @@ extension on _StringsTh {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
@@ -153736,6 +153812,8 @@ extension on _StringsTr {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
@@ -158485,6 +158563,8 @@ extension on _StringsVi {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
@@ -163197,6 +163277,8 @@ extension on _StringsZhCn {
         return '游戏目录和程序图标里都没找到可用封面';
       case 'games_cover_searching':
         return '正在查找封面...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} 行有音频';
       default:
         return null;
     }
@@ -167920,6 +168002,8 @@ extension on _StringsZhHk {
         return 'No usable cover found in the game folder or executable';
       case 'games_cover_searching':
         return 'Looking for a cover...';
+      case 'game_text_thread_audio_count':
+        return ({required Object count}) => '${count} with audio';
       default:
         return null;
     }
