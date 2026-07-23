@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38981 (2293 per locale)
+/// Strings: 39287 (2311 per locale)
 ///
-/// Built on 2026-07-23 at 10:04 UTC
+/// Built on 2026-07-23 at 11:05 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3055,6 +3055,35 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  String get download_discover_tab => 'Discover';
+  String get download_tasks_tab => 'Tasks';
+  String get download_subscriptions_tab => 'Subscriptions';
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  String get download_subscription_check_all => 'Check all';
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  String get download_subscription_delete => 'Delete subscription';
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  String get download_subscription_never_checked => 'Never checked';
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  String get download_subscription_check_now => 'Check now';
 }
 
 // Path: <root>
@@ -8249,6 +8278,53 @@ class _StringsAr extends _StringsEn {
   @override
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  @override
+  String get download_discover_tab => 'Discover';
+  @override
+  String get download_tasks_tab => 'Tasks';
+  @override
+  String get download_subscriptions_tab => 'Subscriptions';
+  @override
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  @override
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  @override
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  @override
+  String get download_subscription_check_all => 'Check all';
+  @override
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  @override
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  @override
+  String get download_subscription_delete => 'Delete subscription';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  @override
+  String get download_subscription_never_checked => 'Never checked';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  @override
+  String get download_subscription_check_now => 'Check now';
 }
 
 // Path: <root>
@@ -13516,6 +13592,53 @@ class _StringsDe extends _StringsEn {
   @override
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  @override
+  String get download_discover_tab => 'Discover';
+  @override
+  String get download_tasks_tab => 'Tasks';
+  @override
+  String get download_subscriptions_tab => 'Subscriptions';
+  @override
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  @override
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  @override
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  @override
+  String get download_subscription_check_all => 'Check all';
+  @override
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  @override
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  @override
+  String get download_subscription_delete => 'Delete subscription';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  @override
+  String get download_subscription_never_checked => 'Never checked';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  @override
+  String get download_subscription_check_now => 'Check now';
 }
 
 // Path: <root>
@@ -18799,6 +18922,53 @@ class _StringsEs extends _StringsEn {
   @override
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  @override
+  String get download_discover_tab => 'Discover';
+  @override
+  String get download_tasks_tab => 'Tasks';
+  @override
+  String get download_subscriptions_tab => 'Subscriptions';
+  @override
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  @override
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  @override
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  @override
+  String get download_subscription_check_all => 'Check all';
+  @override
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  @override
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  @override
+  String get download_subscription_delete => 'Delete subscription';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  @override
+  String get download_subscription_never_checked => 'Never checked';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  @override
+  String get download_subscription_check_now => 'Check now';
 }
 
 // Path: <root>
@@ -24093,6 +24263,53 @@ class _StringsFr extends _StringsEn {
   @override
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  @override
+  String get download_discover_tab => 'Discover';
+  @override
+  String get download_tasks_tab => 'Tasks';
+  @override
+  String get download_subscriptions_tab => 'Subscriptions';
+  @override
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  @override
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  @override
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  @override
+  String get download_subscription_check_all => 'Check all';
+  @override
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  @override
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  @override
+  String get download_subscription_delete => 'Delete subscription';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  @override
+  String get download_subscription_never_checked => 'Never checked';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  @override
+  String get download_subscription_check_now => 'Check now';
 }
 
 // Path: <root>
@@ -29314,6 +29531,53 @@ class _StringsId extends _StringsEn {
   @override
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  @override
+  String get download_discover_tab => 'Discover';
+  @override
+  String get download_tasks_tab => 'Tasks';
+  @override
+  String get download_subscriptions_tab => 'Subscriptions';
+  @override
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  @override
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  @override
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  @override
+  String get download_subscription_check_all => 'Check all';
+  @override
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  @override
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  @override
+  String get download_subscription_delete => 'Delete subscription';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  @override
+  String get download_subscription_never_checked => 'Never checked';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  @override
+  String get download_subscription_check_now => 'Check now';
 }
 
 // Path: <root>
@@ -34583,6 +34847,53 @@ class _StringsIt extends _StringsEn {
   @override
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  @override
+  String get download_discover_tab => 'Discover';
+  @override
+  String get download_tasks_tab => 'Tasks';
+  @override
+  String get download_subscriptions_tab => 'Subscriptions';
+  @override
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  @override
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  @override
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  @override
+  String get download_subscription_check_all => 'Check all';
+  @override
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  @override
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  @override
+  String get download_subscription_delete => 'Delete subscription';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  @override
+  String get download_subscription_never_checked => 'Never checked';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  @override
+  String get download_subscription_check_now => 'Check now';
 }
 
 // Path: <root>
@@ -39657,6 +39968,53 @@ class _StringsJa extends _StringsEn {
   @override
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  @override
+  String get download_discover_tab => 'Discover';
+  @override
+  String get download_tasks_tab => 'Tasks';
+  @override
+  String get download_subscriptions_tab => 'Subscriptions';
+  @override
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  @override
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  @override
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  @override
+  String get download_subscription_check_all => 'Check all';
+  @override
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  @override
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  @override
+  String get download_subscription_delete => 'Delete subscription';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  @override
+  String get download_subscription_never_checked => 'Never checked';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  @override
+  String get download_subscription_check_now => 'Check now';
 }
 
 // Path: <root>
@@ -44734,6 +45092,53 @@ class _StringsKo extends _StringsEn {
   @override
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  @override
+  String get download_discover_tab => 'Discover';
+  @override
+  String get download_tasks_tab => 'Tasks';
+  @override
+  String get download_subscriptions_tab => 'Subscriptions';
+  @override
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  @override
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  @override
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  @override
+  String get download_subscription_check_all => 'Check all';
+  @override
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  @override
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  @override
+  String get download_subscription_delete => 'Delete subscription';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  @override
+  String get download_subscription_never_checked => 'Never checked';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  @override
+  String get download_subscription_check_now => 'Check now';
 }
 
 // Path: <root>
@@ -49981,6 +50386,53 @@ class _StringsNl extends _StringsEn {
   @override
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  @override
+  String get download_discover_tab => 'Discover';
+  @override
+  String get download_tasks_tab => 'Tasks';
+  @override
+  String get download_subscriptions_tab => 'Subscriptions';
+  @override
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  @override
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  @override
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  @override
+  String get download_subscription_check_all => 'Check all';
+  @override
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  @override
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  @override
+  String get download_subscription_delete => 'Delete subscription';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  @override
+  String get download_subscription_never_checked => 'Never checked';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  @override
+  String get download_subscription_check_now => 'Check now';
 }
 
 // Path: <root>
@@ -55243,6 +55695,53 @@ class _StringsPtBr extends _StringsEn {
   @override
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  @override
+  String get download_discover_tab => 'Discover';
+  @override
+  String get download_tasks_tab => 'Tasks';
+  @override
+  String get download_subscriptions_tab => 'Subscriptions';
+  @override
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  @override
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  @override
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  @override
+  String get download_subscription_check_all => 'Check all';
+  @override
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  @override
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  @override
+  String get download_subscription_delete => 'Delete subscription';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  @override
+  String get download_subscription_never_checked => 'Never checked';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  @override
+  String get download_subscription_check_now => 'Check now';
 }
 
 // Path: <root>
@@ -60488,6 +60987,53 @@ class _StringsRu extends _StringsEn {
   @override
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  @override
+  String get download_discover_tab => 'Discover';
+  @override
+  String get download_tasks_tab => 'Tasks';
+  @override
+  String get download_subscriptions_tab => 'Subscriptions';
+  @override
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  @override
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  @override
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  @override
+  String get download_subscription_check_all => 'Check all';
+  @override
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  @override
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  @override
+  String get download_subscription_delete => 'Delete subscription';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  @override
+  String get download_subscription_never_checked => 'Never checked';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  @override
+  String get download_subscription_check_now => 'Check now';
 }
 
 // Path: <root>
@@ -65678,6 +66224,53 @@ class _StringsTh extends _StringsEn {
   @override
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  @override
+  String get download_discover_tab => 'Discover';
+  @override
+  String get download_tasks_tab => 'Tasks';
+  @override
+  String get download_subscriptions_tab => 'Subscriptions';
+  @override
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  @override
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  @override
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  @override
+  String get download_subscription_check_all => 'Check all';
+  @override
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  @override
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  @override
+  String get download_subscription_delete => 'Delete subscription';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  @override
+  String get download_subscription_never_checked => 'Never checked';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  @override
+  String get download_subscription_check_now => 'Check now';
 }
 
 // Path: <root>
@@ -70900,6 +71493,53 @@ class _StringsTr extends _StringsEn {
   @override
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  @override
+  String get download_discover_tab => 'Discover';
+  @override
+  String get download_tasks_tab => 'Tasks';
+  @override
+  String get download_subscriptions_tab => 'Subscriptions';
+  @override
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  @override
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  @override
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  @override
+  String get download_subscription_check_all => 'Check all';
+  @override
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  @override
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  @override
+  String get download_subscription_delete => 'Delete subscription';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  @override
+  String get download_subscription_never_checked => 'Never checked';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  @override
+  String get download_subscription_check_now => 'Check now';
 }
 
 // Path: <root>
@@ -76109,6 +76749,53 @@ class _StringsVi extends _StringsEn {
   @override
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  @override
+  String get download_discover_tab => 'Discover';
+  @override
+  String get download_tasks_tab => 'Tasks';
+  @override
+  String get download_subscriptions_tab => 'Subscriptions';
+  @override
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  @override
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  @override
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  @override
+  String get download_subscription_check_all => 'Check all';
+  @override
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  @override
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  @override
+  String get download_subscription_delete => 'Delete subscription';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  @override
+  String get download_subscription_never_checked => 'Never checked';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  @override
+  String get download_subscription_check_now => 'Check now';
 }
 
 // Path: <root>
@@ -80951,6 +81638,50 @@ class _StringsZhCn extends _StringsEn {
   String get game_text_gaps_hint => '序号缺口 = Hook 文本环丢行计数，0 为正常';
   @override
   String handlebar_deprecated_label({required Object label}) => '${label}（已弃用）';
+  @override
+  String get download_discover_tab => '发现';
+  @override
+  String get download_tasks_tab => '任务';
+  @override
+  String get download_subscriptions_tab => '订阅';
+  @override
+  String get download_subscription_created => '已加入下载并创建订阅';
+  @override
+  String get download_subscription_download_and_create => '下载并订阅';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      '将追踪 ${group} · ${resolution}，有新的单集发布时自动加入下载。';
+  @override
+  String get download_subscription_unavailable_hint =>
+      '请选择能识别字幕组的单集发布后再订阅；合集仍可单次下载。';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki 运行期间每 15 分钟检查一次已启用的订阅。';
+  @override
+  String get download_subscription_check_all => '全部检查';
+  @override
+  String get download_subscription_empty_title => '还没有订阅';
+  @override
+  String get download_subscription_empty_body => '在“发现”中选择一个单集发布，然后使用“下载并订阅”。';
+  @override
+  String get download_subscription_delete => '删除订阅';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      '删除“${title}”的订阅吗？已创建的下载任务会保留。';
+  @override
+  String get download_subscription_never_checked => '尚未检查';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      '第 ${episode} 集之后';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      '上次检查：${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      '最近加入：第 ${episode} 集';
+  @override
+  String get download_subscription_check_now => '立即检查';
 }
 
 // Path: <root>
@@ -85943,6 +86674,53 @@ class _StringsZhHk extends _StringsEn {
   @override
   String handlebar_deprecated_label({required Object label}) =>
       '${label} (deprecated)';
+  @override
+  String get download_discover_tab => 'Discover';
+  @override
+  String get download_tasks_tab => 'Tasks';
+  @override
+  String get download_subscriptions_tab => 'Subscriptions';
+  @override
+  String get download_subscription_created =>
+      'Download queued and subscription created';
+  @override
+  String get download_subscription_download_and_create =>
+      'Download and subscribe';
+  @override
+  String download_subscription_choice_hint(
+          {required Object group, required Object resolution}) =>
+      'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+  @override
+  String get download_subscription_unavailable_hint =>
+      'Choose a single-episode release with a recognizable release group to subscribe.';
+  @override
+  String get download_subscription_running_hint =>
+      'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+  @override
+  String get download_subscription_check_all => 'Check all';
+  @override
+  String get download_subscription_empty_title => 'No subscriptions yet';
+  @override
+  String get download_subscription_empty_body =>
+      'In Discover, choose a single-episode release and use Download and subscribe.';
+  @override
+  String get download_subscription_delete => 'Delete subscription';
+  @override
+  String download_subscription_delete_confirm({required Object title}) =>
+      'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  @override
+  String get download_subscription_never_checked => 'Never checked';
+  @override
+  String download_subscription_after_episode({required Object episode}) =>
+      'After episode ${episode}';
+  @override
+  String download_subscription_last_checked({required Object time}) =>
+      'Last checked: ${time}';
+  @override
+  String download_subscription_latest_episode({required Object episode}) =>
+      'Latest queued: episode ${episode}';
+  @override
+  String get download_subscription_check_now => 'Check now';
 }
 
 /// Flat map(s) containing all translations.
@@ -90622,6 +91400,45 @@ extension on _StringsEn {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
@@ -95299,6 +96116,45 @@ extension on _StringsAr {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
@@ -99997,6 +100853,45 @@ extension on _StringsDe {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
@@ -104694,6 +105589,45 @@ extension on _StringsEs {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
@@ -109397,6 +110331,45 @@ extension on _StringsFr {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
@@ -114082,6 +115055,45 @@ extension on _StringsId {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
@@ -118782,6 +119794,45 @@ extension on _StringsIt {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
@@ -123444,6 +124495,45 @@ extension on _StringsJa {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
@@ -128110,6 +129200,45 @@ extension on _StringsKo {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
@@ -132803,6 +133932,45 @@ extension on _StringsNl {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
@@ -137493,6 +138661,45 @@ extension on _StringsPtBr {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
@@ -142188,6 +143395,45 @@ extension on _StringsRu {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
@@ -146867,6 +148113,45 @@ extension on _StringsTh {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
@@ -151555,6 +152840,45 @@ extension on _StringsTr {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
@@ -156238,6 +157562,45 @@ extension on _StringsVi {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
@@ -160887,6 +162250,43 @@ extension on _StringsZhCn {
         return '序号缺口 = Hook 文本环丢行计数，0 为正常';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label}（已弃用）';
+      case 'download_discover_tab':
+        return '发现';
+      case 'download_tasks_tab':
+        return '任务';
+      case 'download_subscriptions_tab':
+        return '订阅';
+      case 'download_subscription_created':
+        return '已加入下载并创建订阅';
+      case 'download_subscription_download_and_create':
+        return '下载并订阅';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            '将追踪 ${group} · ${resolution}，有新的单集发布时自动加入下载。';
+      case 'download_subscription_unavailable_hint':
+        return '请选择能识别字幕组的单集发布后再订阅；合集仍可单次下载。';
+      case 'download_subscription_running_hint':
+        return 'Hibiki 运行期间每 15 分钟检查一次已启用的订阅。';
+      case 'download_subscription_check_all':
+        return '全部检查';
+      case 'download_subscription_empty_title':
+        return '还没有订阅';
+      case 'download_subscription_empty_body':
+        return '在“发现”中选择一个单集发布，然后使用“下载并订阅”。';
+      case 'download_subscription_delete':
+        return '删除订阅';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) => '删除“${title}”的订阅吗？已创建的下载任务会保留。';
+      case 'download_subscription_never_checked':
+        return '尚未检查';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => '第 ${episode} 集之后';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => '上次检查：${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) => '最近加入：第 ${episode} 集';
+      case 'download_subscription_check_now':
+        return '立即检查';
       default:
         return null;
     }
@@ -165544,6 +166944,45 @@ extension on _StringsZhHk {
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
       case 'handlebar_deprecated_label':
         return ({required Object label}) => '${label} (deprecated)';
+      case 'download_discover_tab':
+        return 'Discover';
+      case 'download_tasks_tab':
+        return 'Tasks';
+      case 'download_subscriptions_tab':
+        return 'Subscriptions';
+      case 'download_subscription_created':
+        return 'Download queued and subscription created';
+      case 'download_subscription_download_and_create':
+        return 'Download and subscribe';
+      case 'download_subscription_choice_hint':
+        return ({required Object group, required Object resolution}) =>
+            'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
+      case 'download_subscription_unavailable_hint':
+        return 'Choose a single-episode release with a recognizable release group to subscribe.';
+      case 'download_subscription_running_hint':
+        return 'Hibiki checks enabled subscriptions every 15 minutes while the app is running.';
+      case 'download_subscription_check_all':
+        return 'Check all';
+      case 'download_subscription_empty_title':
+        return 'No subscriptions yet';
+      case 'download_subscription_empty_body':
+        return 'In Discover, choose a single-episode release and use Download and subscribe.';
+      case 'download_subscription_delete':
+        return 'Delete subscription';
+      case 'download_subscription_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_never_checked':
+        return 'Never checked';
+      case 'download_subscription_after_episode':
+        return ({required Object episode}) => 'After episode ${episode}';
+      case 'download_subscription_last_checked':
+        return ({required Object time}) => 'Last checked: ${time}';
+      case 'download_subscription_latest_episode':
+        return ({required Object episode}) =>
+            'Latest queued: episode ${episode}';
+      case 'download_subscription_check_now':
+        return 'Check now';
       default:
         return null;
     }
