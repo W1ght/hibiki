@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38607 (2271 per locale)
+/// Strings: 38641 (2273 per locale)
 ///
-/// Built on 2026-07-22 at 21:40 UTC
+/// Built on 2026-07-23 at 00:39 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3021,6 +3021,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get delete_scope_sync_everywhere => 'Delete from all devices';
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -8159,6 +8164,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -13370,6 +13382,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -18597,6 +18616,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -23835,6 +23861,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -29000,6 +29033,13 @@ class _StringsId extends _StringsEn {
   @override
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -34213,6 +34253,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -39231,6 +39278,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -44252,6 +44306,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -49443,6 +49504,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -54649,6 +54717,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -59838,6 +59913,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -64972,6 +65054,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -70138,6 +70227,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -75291,6 +75387,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 // Path: <root>
@@ -80085,6 +80188,12 @@ class _StringsZhCn extends _StringsEn {
   String get delete_scope_sync_everywhere => '从所有设备删除';
   @override
   String get delete_scope_sync_everywhere_desc => '其他设备下次同步时会确认删除';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      '已看完 ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) => '继续看 第${n}集';
 }
 
 // Path: <root>
@@ -85021,6 +85130,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get delete_scope_sync_everywhere_desc =>
       'Other devices confirm the deletion on next sync';
+  @override
+  String collection_watched_progress(
+          {required Object done, required Object total}) =>
+      'Watched ${done}/${total}';
+  @override
+  String collection_continue_progress({required Object n}) =>
+      'Continue · EP ${n}';
 }
 
 /// Flat map(s) containing all translations.
@@ -89655,6 +89771,11 @@ extension on _StringsEn {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -94287,6 +94408,11 @@ extension on _StringsAr {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -98940,6 +99066,11 @@ extension on _StringsDe {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -103592,6 +103723,11 @@ extension on _StringsEs {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -108250,6 +108386,11 @@ extension on _StringsFr {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -112890,6 +113031,11 @@ extension on _StringsId {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -117545,6 +117691,11 @@ extension on _StringsIt {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -122162,6 +122313,11 @@ extension on _StringsJa {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -126783,6 +126939,11 @@ extension on _StringsKo {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -131431,6 +131592,11 @@ extension on _StringsNl {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -136076,6 +136242,11 @@ extension on _StringsPtBr {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -140726,6 +140897,11 @@ extension on _StringsRu {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -145360,6 +145536,11 @@ extension on _StringsTh {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -150003,6 +150184,11 @@ extension on _StringsTr {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -154641,6 +154827,11 @@ extension on _StringsVi {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
@@ -159245,6 +159436,11 @@ extension on _StringsZhCn {
         return '从所有设备删除';
       case 'delete_scope_sync_everywhere_desc':
         return '其他设备下次同步时会确认删除';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            '已看完 ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => '继续看 第${n}集';
       default:
         return null;
     }
@@ -163857,6 +164053,11 @@ extension on _StringsZhHk {
         return 'Delete from all devices';
       case 'delete_scope_sync_everywhere_desc':
         return 'Other devices confirm the deletion on next sync';
+      case 'collection_watched_progress':
+        return ({required Object done, required Object total}) =>
+            'Watched ${done}/${total}';
+      case 'collection_continue_progress':
+        return ({required Object n}) => 'Continue · EP ${n}';
       default:
         return null;
     }
