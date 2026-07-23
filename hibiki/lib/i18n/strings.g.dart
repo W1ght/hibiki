@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 39389 (2317 per locale)
 ///
-/// Built on 2026-07-23 at 12:58 UTC
+/// Built on 2026-07-23 at 16:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2648,17 +2648,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Tag ${name} is already on this collection.';
   String get mining_image_quality => 'Image / GIF quality';
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   String get mining_image_quality_thrift => 'Data saver';
   String get mining_image_quality_standard => 'Standard';
   String get mining_image_quality_hd => 'HD';
-  String get mining_image_quality_native => 'Native';
   String get mining_audio_quality => 'Audio quality';
   String get mining_audio_quality_hint =>
       'Higher bitrate is clearer but makes larger cards.';
   String get mining_audio_quality_standard => 'Standard';
   String get mining_audio_quality_high => 'High';
-  String get mining_audio_quality_native => 'Native';
   String get video_setting_torrent_backend => 'Download backend';
   String get video_setting_torrent_backend_qb => 'External qBittorrent';
   String get video_setting_torrent_backend_embedded =>
@@ -3091,6 +3089,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get pdf_bookmarks => 'Bookmarks';
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   String get pdf_bookmark_added => 'Bookmark added';
+  String get mining_image_quality_max => 'Maximum';
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 // Path: <root>
@@ -7553,15 +7553,13 @@ class _StringsAr extends _StringsEn {
   String get mining_image_quality => 'Image / GIF quality';
   @override
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   @override
   String get mining_image_quality_thrift => 'Data saver';
   @override
   String get mining_image_quality_standard => 'Standard';
   @override
   String get mining_image_quality_hd => 'HD';
-  @override
-  String get mining_image_quality_native => 'Native';
   @override
   String get mining_audio_quality => 'Audio quality';
   @override
@@ -7571,8 +7569,6 @@ class _StringsAr extends _StringsEn {
   String get mining_audio_quality_standard => 'Standard';
   @override
   String get mining_audio_quality_high => 'High';
-  @override
-  String get mining_audio_quality_native => 'Native';
   @override
   String get video_setting_torrent_backend => 'Download backend';
   @override
@@ -8345,6 +8341,10 @@ class _StringsAr extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get mining_image_quality_max => 'Maximum';
+  @override
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 // Path: <root>
@@ -12880,15 +12880,13 @@ class _StringsDe extends _StringsEn {
   String get mining_image_quality => 'Image / GIF quality';
   @override
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   @override
   String get mining_image_quality_thrift => 'Data saver';
   @override
   String get mining_image_quality_standard => 'Standard';
   @override
   String get mining_image_quality_hd => 'HD';
-  @override
-  String get mining_image_quality_native => 'Native';
   @override
   String get mining_audio_quality => 'Audio quality';
   @override
@@ -12898,8 +12896,6 @@ class _StringsDe extends _StringsEn {
   String get mining_audio_quality_standard => 'Standard';
   @override
   String get mining_audio_quality_high => 'High';
-  @override
-  String get mining_audio_quality_native => 'Native';
   @override
   String get video_setting_torrent_backend => 'Download backend';
   @override
@@ -13672,6 +13668,10 @@ class _StringsDe extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get mining_image_quality_max => 'Maximum';
+  @override
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 // Path: <root>
@@ -18223,15 +18223,13 @@ class _StringsEs extends _StringsEn {
   String get mining_image_quality => 'Image / GIF quality';
   @override
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   @override
   String get mining_image_quality_thrift => 'Data saver';
   @override
   String get mining_image_quality_standard => 'Standard';
   @override
   String get mining_image_quality_hd => 'HD';
-  @override
-  String get mining_image_quality_native => 'Native';
   @override
   String get mining_audio_quality => 'Audio quality';
   @override
@@ -18241,8 +18239,6 @@ class _StringsEs extends _StringsEn {
   String get mining_audio_quality_standard => 'Standard';
   @override
   String get mining_audio_quality_high => 'High';
-  @override
-  String get mining_audio_quality_native => 'Native';
   @override
   String get video_setting_torrent_backend => 'Download backend';
   @override
@@ -19015,6 +19011,10 @@ class _StringsEs extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get mining_image_quality_max => 'Maximum';
+  @override
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 // Path: <root>
@@ -23577,15 +23577,13 @@ class _StringsFr extends _StringsEn {
   String get mining_image_quality => 'Image / GIF quality';
   @override
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   @override
   String get mining_image_quality_thrift => 'Data saver';
   @override
   String get mining_image_quality_standard => 'Standard';
   @override
   String get mining_image_quality_hd => 'HD';
-  @override
-  String get mining_image_quality_native => 'Native';
   @override
   String get mining_audio_quality => 'Audio quality';
   @override
@@ -23595,8 +23593,6 @@ class _StringsFr extends _StringsEn {
   String get mining_audio_quality_standard => 'Standard';
   @override
   String get mining_audio_quality_high => 'High';
-  @override
-  String get mining_audio_quality_native => 'Native';
   @override
   String get video_setting_torrent_backend => 'Download backend';
   @override
@@ -24369,6 +24365,10 @@ class _StringsFr extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get mining_image_quality_max => 'Maximum';
+  @override
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 // Path: <root>
@@ -28858,15 +28858,13 @@ class _StringsId extends _StringsEn {
   String get mining_image_quality => 'Image / GIF quality';
   @override
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   @override
   String get mining_image_quality_thrift => 'Data saver';
   @override
   String get mining_image_quality_standard => 'Standard';
   @override
   String get mining_image_quality_hd => 'HD';
-  @override
-  String get mining_image_quality_native => 'Native';
   @override
   String get mining_audio_quality => 'Audio quality';
   @override
@@ -28876,8 +28874,6 @@ class _StringsId extends _StringsEn {
   String get mining_audio_quality_standard => 'Standard';
   @override
   String get mining_audio_quality_high => 'High';
-  @override
-  String get mining_audio_quality_native => 'Native';
   @override
   String get video_setting_torrent_backend => 'Download backend';
   @override
@@ -29650,6 +29646,10 @@ class _StringsId extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get mining_image_quality_max => 'Maximum';
+  @override
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 // Path: <root>
@@ -34187,15 +34187,13 @@ class _StringsIt extends _StringsEn {
   String get mining_image_quality => 'Image / GIF quality';
   @override
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   @override
   String get mining_image_quality_thrift => 'Data saver';
   @override
   String get mining_image_quality_standard => 'Standard';
   @override
   String get mining_image_quality_hd => 'HD';
-  @override
-  String get mining_image_quality_native => 'Native';
   @override
   String get mining_audio_quality => 'Audio quality';
   @override
@@ -34205,8 +34203,6 @@ class _StringsIt extends _StringsEn {
   String get mining_audio_quality_standard => 'Standard';
   @override
   String get mining_audio_quality_high => 'High';
-  @override
-  String get mining_audio_quality_native => 'Native';
   @override
   String get video_setting_torrent_backend => 'Download backend';
   @override
@@ -34979,6 +34975,10 @@ class _StringsIt extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get mining_image_quality_max => 'Maximum';
+  @override
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 // Path: <root>
@@ -39322,15 +39322,13 @@ class _StringsJa extends _StringsEn {
   String get mining_image_quality => 'Image / GIF quality';
   @override
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   @override
   String get mining_image_quality_thrift => 'Data saver';
   @override
   String get mining_image_quality_standard => 'Standard';
   @override
   String get mining_image_quality_hd => 'HD';
-  @override
-  String get mining_image_quality_native => 'Native';
   @override
   String get mining_audio_quality => 'Audio quality';
   @override
@@ -39340,8 +39338,6 @@ class _StringsJa extends _StringsEn {
   String get mining_audio_quality_standard => 'Standard';
   @override
   String get mining_audio_quality_high => 'High';
-  @override
-  String get mining_audio_quality_native => 'Native';
   @override
   String get video_setting_torrent_backend => 'Download backend';
   @override
@@ -40113,6 +40109,10 @@ class _StringsJa extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get mining_image_quality_max => 'Maximum';
+  @override
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 // Path: <root>
@@ -44459,15 +44459,13 @@ class _StringsKo extends _StringsEn {
   String get mining_image_quality => 'Image / GIF quality';
   @override
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   @override
   String get mining_image_quality_thrift => 'Data saver';
   @override
   String get mining_image_quality_standard => 'Standard';
   @override
   String get mining_image_quality_hd => 'HD';
-  @override
-  String get mining_image_quality_native => 'Native';
   @override
   String get mining_audio_quality => 'Audio quality';
   @override
@@ -44477,8 +44475,6 @@ class _StringsKo extends _StringsEn {
   String get mining_audio_quality_standard => 'Standard';
   @override
   String get mining_audio_quality_high => 'High';
-  @override
-  String get mining_audio_quality_native => 'Native';
   @override
   String get video_setting_torrent_backend => 'Download backend';
   @override
@@ -45250,6 +45246,10 @@ class _StringsKo extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get mining_image_quality_max => 'Maximum';
+  @override
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 // Path: <root>
@@ -49765,15 +49765,13 @@ class _StringsNl extends _StringsEn {
   String get mining_image_quality => 'Image / GIF quality';
   @override
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   @override
   String get mining_image_quality_thrift => 'Data saver';
   @override
   String get mining_image_quality_standard => 'Standard';
   @override
   String get mining_image_quality_hd => 'HD';
-  @override
-  String get mining_image_quality_native => 'Native';
   @override
   String get mining_audio_quality => 'Audio quality';
   @override
@@ -49783,8 +49781,6 @@ class _StringsNl extends _StringsEn {
   String get mining_audio_quality_standard => 'Standard';
   @override
   String get mining_audio_quality_high => 'High';
-  @override
-  String get mining_audio_quality_native => 'Native';
   @override
   String get video_setting_torrent_backend => 'Download backend';
   @override
@@ -50557,6 +50553,10 @@ class _StringsNl extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get mining_image_quality_max => 'Maximum';
+  @override
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 // Path: <root>
@@ -55087,15 +55087,13 @@ class _StringsPtBr extends _StringsEn {
   String get mining_image_quality => 'Image / GIF quality';
   @override
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   @override
   String get mining_image_quality_thrift => 'Data saver';
   @override
   String get mining_image_quality_standard => 'Standard';
   @override
   String get mining_image_quality_hd => 'HD';
-  @override
-  String get mining_image_quality_native => 'Native';
   @override
   String get mining_audio_quality => 'Audio quality';
   @override
@@ -55105,8 +55103,6 @@ class _StringsPtBr extends _StringsEn {
   String get mining_audio_quality_standard => 'Standard';
   @override
   String get mining_audio_quality_high => 'High';
-  @override
-  String get mining_audio_quality_native => 'Native';
   @override
   String get video_setting_torrent_backend => 'Download backend';
   @override
@@ -55879,6 +55875,10 @@ class _StringsPtBr extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get mining_image_quality_max => 'Maximum';
+  @override
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 // Path: <root>
@@ -60392,15 +60392,13 @@ class _StringsRu extends _StringsEn {
   String get mining_image_quality => 'Image / GIF quality';
   @override
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   @override
   String get mining_image_quality_thrift => 'Data saver';
   @override
   String get mining_image_quality_standard => 'Standard';
   @override
   String get mining_image_quality_hd => 'HD';
-  @override
-  String get mining_image_quality_native => 'Native';
   @override
   String get mining_audio_quality => 'Audio quality';
   @override
@@ -60410,8 +60408,6 @@ class _StringsRu extends _StringsEn {
   String get mining_audio_quality_standard => 'Standard';
   @override
   String get mining_audio_quality_high => 'High';
-  @override
-  String get mining_audio_quality_native => 'Native';
   @override
   String get video_setting_torrent_backend => 'Download backend';
   @override
@@ -61184,6 +61180,10 @@ class _StringsRu extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get mining_image_quality_max => 'Maximum';
+  @override
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 // Path: <root>
@@ -65642,15 +65642,13 @@ class _StringsTh extends _StringsEn {
   String get mining_image_quality => 'Image / GIF quality';
   @override
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   @override
   String get mining_image_quality_thrift => 'Data saver';
   @override
   String get mining_image_quality_standard => 'Standard';
   @override
   String get mining_image_quality_hd => 'HD';
-  @override
-  String get mining_image_quality_native => 'Native';
   @override
   String get mining_audio_quality => 'Audio quality';
   @override
@@ -65660,8 +65658,6 @@ class _StringsTh extends _StringsEn {
   String get mining_audio_quality_standard => 'Standard';
   @override
   String get mining_audio_quality_high => 'High';
-  @override
-  String get mining_audio_quality_native => 'Native';
   @override
   String get video_setting_torrent_backend => 'Download backend';
   @override
@@ -66434,6 +66430,10 @@ class _StringsTh extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get mining_image_quality_max => 'Maximum';
+  @override
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 // Path: <root>
@@ -70924,15 +70924,13 @@ class _StringsTr extends _StringsEn {
   String get mining_image_quality => 'Image / GIF quality';
   @override
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   @override
   String get mining_image_quality_thrift => 'Data saver';
   @override
   String get mining_image_quality_standard => 'Standard';
   @override
   String get mining_image_quality_hd => 'HD';
-  @override
-  String get mining_image_quality_native => 'Native';
   @override
   String get mining_audio_quality => 'Audio quality';
   @override
@@ -70942,8 +70940,6 @@ class _StringsTr extends _StringsEn {
   String get mining_audio_quality_standard => 'Standard';
   @override
   String get mining_audio_quality_high => 'High';
-  @override
-  String get mining_audio_quality_native => 'Native';
   @override
   String get video_setting_torrent_backend => 'Download backend';
   @override
@@ -71716,6 +71712,10 @@ class _StringsTr extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get mining_image_quality_max => 'Maximum';
+  @override
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 // Path: <root>
@@ -76193,15 +76193,13 @@ class _StringsVi extends _StringsEn {
   String get mining_image_quality => 'Image / GIF quality';
   @override
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   @override
   String get mining_image_quality_thrift => 'Data saver';
   @override
   String get mining_image_quality_standard => 'Standard';
   @override
   String get mining_image_quality_hd => 'HD';
-  @override
-  String get mining_image_quality_native => 'Native';
   @override
   String get mining_audio_quality => 'Audio quality';
   @override
@@ -76211,8 +76209,6 @@ class _StringsVi extends _StringsEn {
   String get mining_audio_quality_standard => 'Standard';
   @override
   String get mining_audio_quality_high => 'High';
-  @override
-  String get mining_audio_quality_native => 'Native';
   @override
   String get video_setting_torrent_backend => 'Download backend';
   @override
@@ -76985,6 +76981,10 @@ class _StringsVi extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get mining_image_quality_max => 'Maximum';
+  @override
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 // Path: <root>
@@ -81154,15 +81154,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get mining_image_quality => '图片 / GIF 清晰度';
   @override
-  String get mining_image_quality_hint => '越高越清晰，卡片体积也越大。原片档保留源分辨率与帧率。';
+  String get mining_image_quality_hint =>
+      '越高越清晰，卡片体积也越大。最高档的截图保留源分辨率；动图有上限，避免卡片大到不可用。';
   @override
   String get mining_image_quality_thrift => '省流';
   @override
   String get mining_image_quality_standard => '标准';
   @override
   String get mining_image_quality_hd => '高清';
-  @override
-  String get mining_image_quality_native => '原片';
   @override
   String get mining_audio_quality => '音频质量';
   @override
@@ -81171,8 +81170,6 @@ class _StringsZhCn extends _StringsEn {
   String get mining_audio_quality_standard => '标准';
   @override
   String get mining_audio_quality_high => '高音质';
-  @override
-  String get mining_audio_quality_native => '原片';
   @override
   String get video_setting_torrent_backend => '下载后端';
   @override
@@ -81883,6 +81880,10 @@ class _StringsZhCn extends _StringsEn {
   String get pdf_bookmarks_empty => '还没有书签。';
   @override
   String get pdf_bookmark_added => '已添加书签';
+  @override
+  String get mining_image_quality_max => '最高';
+  @override
+  String get mining_audio_quality_max => '最高';
 }
 
 // Path: <root>
@@ -86148,15 +86149,13 @@ class _StringsZhHk extends _StringsEn {
   String get mining_image_quality => 'Image / GIF quality';
   @override
   String get mining_image_quality_hint =>
-      'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+      'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
   @override
   String get mining_image_quality_thrift => 'Data saver';
   @override
   String get mining_image_quality_standard => 'Standard';
   @override
   String get mining_image_quality_hd => 'HD';
-  @override
-  String get mining_image_quality_native => 'Native';
   @override
   String get mining_audio_quality => 'Audio quality';
   @override
@@ -86166,8 +86165,6 @@ class _StringsZhHk extends _StringsEn {
   String get mining_audio_quality_standard => 'Standard';
   @override
   String get mining_audio_quality_high => 'High';
-  @override
-  String get mining_audio_quality_native => 'Native';
   @override
   String get video_setting_torrent_backend => 'Download backend';
   @override
@@ -86935,6 +86932,10 @@ class _StringsZhHk extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get mining_image_quality_max => 'Maximum';
+  @override
+  String get mining_audio_quality_max => 'Maximum';
 }
 
 /// Flat map(s) containing all translations.
@@ -90960,15 +90961,13 @@ extension on _StringsEn {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -90977,8 +90976,6 @@ extension on _StringsEn {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -91665,6 +91662,10 @@ extension on _StringsEn {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
@@ -95688,15 +95689,13 @@ extension on _StringsAr {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -95705,8 +95704,6 @@ extension on _StringsAr {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -96393,6 +96390,10 @@ extension on _StringsAr {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
@@ -100437,15 +100438,13 @@ extension on _StringsDe {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -100454,8 +100453,6 @@ extension on _StringsDe {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -101142,6 +101139,10 @@ extension on _StringsDe {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
@@ -105185,15 +105186,13 @@ extension on _StringsEs {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -105202,8 +105201,6 @@ extension on _StringsEs {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -105890,6 +105887,10 @@ extension on _StringsEs {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
@@ -109939,15 +109940,13 @@ extension on _StringsFr {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -109956,8 +109955,6 @@ extension on _StringsFr {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -110644,6 +110641,10 @@ extension on _StringsFr {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
@@ -114675,15 +114676,13 @@ extension on _StringsId {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -114692,8 +114691,6 @@ extension on _StringsId {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -115380,6 +115377,10 @@ extension on _StringsId {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
@@ -119426,15 +119427,13 @@ extension on _StringsIt {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -119443,8 +119442,6 @@ extension on _StringsIt {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -120131,6 +120128,10 @@ extension on _StringsIt {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
@@ -124139,15 +124140,13 @@ extension on _StringsJa {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -124156,8 +124155,6 @@ extension on _StringsJa {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -124844,6 +124841,10 @@ extension on _StringsJa {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
@@ -128856,15 +128857,13 @@ extension on _StringsKo {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -128873,8 +128872,6 @@ extension on _StringsKo {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -129561,6 +129558,10 @@ extension on _StringsKo {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
@@ -133600,15 +133601,13 @@ extension on _StringsNl {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -133617,8 +133616,6 @@ extension on _StringsNl {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -134305,6 +134302,10 @@ extension on _StringsNl {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
@@ -138341,15 +138342,13 @@ extension on _StringsPtBr {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -138358,8 +138357,6 @@ extension on _StringsPtBr {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -139046,6 +139043,10 @@ extension on _StringsPtBr {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
@@ -143087,15 +143088,13 @@ extension on _StringsRu {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -143104,8 +143103,6 @@ extension on _StringsRu {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -143792,6 +143789,10 @@ extension on _StringsRu {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
@@ -147817,15 +147818,13 @@ extension on _StringsTh {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -147834,8 +147833,6 @@ extension on _StringsTh {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -148522,6 +148519,10 @@ extension on _StringsTh {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
@@ -152556,15 +152557,13 @@ extension on _StringsTr {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -152573,8 +152572,6 @@ extension on _StringsTr {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -153261,6 +153258,10 @@ extension on _StringsTr {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
@@ -157290,15 +157291,13 @@ extension on _StringsVi {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -157307,8 +157306,6 @@ extension on _StringsVi {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -157995,6 +157992,10 @@ extension on _StringsVi {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
@@ -161991,15 +161992,13 @@ extension on _StringsZhCn {
       case 'mining_image_quality':
         return '图片 / GIF 清晰度';
       case 'mining_image_quality_hint':
-        return '越高越清晰，卡片体积也越大。原片档保留源分辨率与帧率。';
+        return '越高越清晰，卡片体积也越大。最高档的截图保留源分辨率；动图有上限，避免卡片大到不可用。';
       case 'mining_image_quality_thrift':
         return '省流';
       case 'mining_image_quality_standard':
         return '标准';
       case 'mining_image_quality_hd':
         return '高清';
-      case 'mining_image_quality_native':
-        return '原片';
       case 'mining_audio_quality':
         return '音频质量';
       case 'mining_audio_quality_hint':
@@ -162008,8 +162007,6 @@ extension on _StringsZhCn {
         return '标准';
       case 'mining_audio_quality_high':
         return '高音质';
-      case 'mining_audio_quality_native':
-        return '原片';
       case 'video_setting_torrent_backend':
         return '下载后端';
       case 'video_setting_torrent_backend_qb':
@@ -162693,6 +162690,10 @@ extension on _StringsZhCn {
         return '还没有书签。';
       case 'pdf_bookmark_added':
         return '已添加书签';
+      case 'mining_image_quality_max':
+        return '最高';
+      case 'mining_audio_quality_max':
+        return '最高';
       default:
         return null;
     }
@@ -166696,15 +166697,13 @@ extension on _StringsZhHk {
       case 'mining_image_quality':
         return 'Image / GIF quality';
       case 'mining_image_quality_hint':
-        return 'Higher is sharper but makes larger cards. Native keeps the source resolution and frame rate.';
+        return 'Higher is sharper but makes larger cards. Maximum keeps screenshots at the source resolution; animated GIFs stay capped so cards remain usable.';
       case 'mining_image_quality_thrift':
         return 'Data saver';
       case 'mining_image_quality_standard':
         return 'Standard';
       case 'mining_image_quality_hd':
         return 'HD';
-      case 'mining_image_quality_native':
-        return 'Native';
       case 'mining_audio_quality':
         return 'Audio quality';
       case 'mining_audio_quality_hint':
@@ -166713,8 +166712,6 @@ extension on _StringsZhHk {
         return 'Standard';
       case 'mining_audio_quality_high':
         return 'High';
-      case 'mining_audio_quality_native':
-        return 'Native';
       case 'video_setting_torrent_backend':
         return 'Download backend';
       case 'video_setting_torrent_backend_qb':
@@ -167401,6 +167398,10 @@ extension on _StringsZhHk {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'mining_image_quality_max':
+        return 'Maximum';
+      case 'mining_audio_quality_max':
+        return 'Maximum';
       default:
         return null;
     }
