@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39389 (2317 per locale)
+/// Strings: 39406 (2318 per locale)
 ///
-/// Built on 2026-07-23 at 16:58 UTC
+/// Built on 2026-07-23 at 18:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3091,6 +3091,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get pdf_bookmark_added => 'Bookmark added';
   String get mining_image_quality_max => 'Maximum';
   String get mining_audio_quality_max => 'Maximum';
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 // Path: <root>
@@ -8345,6 +8347,9 @@ class _StringsAr extends _StringsEn {
   String get mining_image_quality_max => 'Maximum';
   @override
   String get mining_audio_quality_max => 'Maximum';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 // Path: <root>
@@ -13672,6 +13677,9 @@ class _StringsDe extends _StringsEn {
   String get mining_image_quality_max => 'Maximum';
   @override
   String get mining_audio_quality_max => 'Maximum';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 // Path: <root>
@@ -19015,6 +19023,9 @@ class _StringsEs extends _StringsEn {
   String get mining_image_quality_max => 'Maximum';
   @override
   String get mining_audio_quality_max => 'Maximum';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 // Path: <root>
@@ -24369,6 +24380,9 @@ class _StringsFr extends _StringsEn {
   String get mining_image_quality_max => 'Maximum';
   @override
   String get mining_audio_quality_max => 'Maximum';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 // Path: <root>
@@ -29650,6 +29664,9 @@ class _StringsId extends _StringsEn {
   String get mining_image_quality_max => 'Maximum';
   @override
   String get mining_audio_quality_max => 'Maximum';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 // Path: <root>
@@ -34979,6 +34996,9 @@ class _StringsIt extends _StringsEn {
   String get mining_image_quality_max => 'Maximum';
   @override
   String get mining_audio_quality_max => 'Maximum';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 // Path: <root>
@@ -40113,6 +40133,9 @@ class _StringsJa extends _StringsEn {
   String get mining_image_quality_max => 'Maximum';
   @override
   String get mining_audio_quality_max => 'Maximum';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 // Path: <root>
@@ -45250,6 +45273,9 @@ class _StringsKo extends _StringsEn {
   String get mining_image_quality_max => 'Maximum';
   @override
   String get mining_audio_quality_max => 'Maximum';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 // Path: <root>
@@ -50557,6 +50583,9 @@ class _StringsNl extends _StringsEn {
   String get mining_image_quality_max => 'Maximum';
   @override
   String get mining_audio_quality_max => 'Maximum';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 // Path: <root>
@@ -55879,6 +55908,9 @@ class _StringsPtBr extends _StringsEn {
   String get mining_image_quality_max => 'Maximum';
   @override
   String get mining_audio_quality_max => 'Maximum';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 // Path: <root>
@@ -61184,6 +61216,9 @@ class _StringsRu extends _StringsEn {
   String get mining_image_quality_max => 'Maximum';
   @override
   String get mining_audio_quality_max => 'Maximum';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 // Path: <root>
@@ -66434,6 +66469,9 @@ class _StringsTh extends _StringsEn {
   String get mining_image_quality_max => 'Maximum';
   @override
   String get mining_audio_quality_max => 'Maximum';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 // Path: <root>
@@ -71716,6 +71754,9 @@ class _StringsTr extends _StringsEn {
   String get mining_image_quality_max => 'Maximum';
   @override
   String get mining_audio_quality_max => 'Maximum';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 // Path: <root>
@@ -76985,6 +77026,9 @@ class _StringsVi extends _StringsEn {
   String get mining_image_quality_max => 'Maximum';
   @override
   String get mining_audio_quality_max => 'Maximum';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 // Path: <root>
@@ -81884,6 +81928,9 @@ class _StringsZhCn extends _StringsEn {
   String get mining_image_quality_max => '最高';
   @override
   String get mining_audio_quality_max => '最高';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      '片段已导出（含字幕）：${path}';
 }
 
 // Path: <root>
@@ -86936,6 +86983,9 @@ class _StringsZhHk extends _StringsEn {
   String get mining_image_quality_max => 'Maximum';
   @override
   String get mining_audio_quality_max => 'Maximum';
+  @override
+  String video_clip_exported_with_subtitles({required Object path}) =>
+      'Clip exported with subtitles: ${path}';
 }
 
 /// Flat map(s) containing all translations.
@@ -91666,6 +91716,9 @@ extension on _StringsEn {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
@@ -96394,6 +96447,9 @@ extension on _StringsAr {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
@@ -101143,6 +101199,9 @@ extension on _StringsDe {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
@@ -105891,6 +105950,9 @@ extension on _StringsEs {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
@@ -110645,6 +110707,9 @@ extension on _StringsFr {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
@@ -115381,6 +115446,9 @@ extension on _StringsId {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
@@ -120132,6 +120200,9 @@ extension on _StringsIt {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
@@ -124845,6 +124916,9 @@ extension on _StringsJa {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
@@ -129562,6 +129636,9 @@ extension on _StringsKo {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
@@ -134306,6 +134383,9 @@ extension on _StringsNl {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
@@ -139047,6 +139127,9 @@ extension on _StringsPtBr {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
@@ -143793,6 +143876,9 @@ extension on _StringsRu {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
@@ -148523,6 +148609,9 @@ extension on _StringsTh {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
@@ -153262,6 +153351,9 @@ extension on _StringsTr {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
@@ -157996,6 +158088,9 @@ extension on _StringsVi {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
@@ -162694,6 +162789,8 @@ extension on _StringsZhCn {
         return '最高';
       case 'mining_audio_quality_max':
         return '最高';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) => '片段已导出（含字幕）：${path}';
       default:
         return null;
     }
@@ -167402,6 +167499,9 @@ extension on _StringsZhHk {
         return 'Maximum';
       case 'mining_audio_quality_max':
         return 'Maximum';
+      case 'video_clip_exported_with_subtitles':
+        return ({required Object path}) =>
+            'Clip exported with subtitles: ${path}';
       default:
         return null;
     }
