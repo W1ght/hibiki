@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39304 (2312 per locale)
+/// Strings: 39406 (2318 per locale)
 ///
-/// Built on 2026-07-23 at 13:04 UTC
+/// Built on 2026-07-23 at 13:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3084,6 +3084,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String download_subscription_latest_episode({required Object episode}) =>
       'Latest queued: episode ${episode}';
   String get download_subscription_check_now => 'Check now';
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  String get pdf_outline => 'Contents';
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  String get pdf_bookmarks => 'Bookmarks';
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  String get pdf_bookmark_added => 'Bookmark added';
   String get home_recently_added => 'Recently added';
 }
 
@@ -8326,6 +8333,19 @@ class _StringsAr extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  @override
+  String get pdf_outline => 'Contents';
+  @override
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
   @override
   String get home_recently_added => 'Recently added';
 }
@@ -13642,6 +13662,19 @@ class _StringsDe extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  @override
+  String get pdf_outline => 'Contents';
+  @override
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
   @override
   String get home_recently_added => 'Recently added';
 }
@@ -18974,6 +19007,19 @@ class _StringsEs extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  @override
+  String get pdf_outline => 'Contents';
+  @override
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
   @override
   String get home_recently_added => 'Recently added';
 }
@@ -24318,6 +24364,19 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Check now';
   @override
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  @override
+  String get pdf_outline => 'Contents';
+  @override
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
+  @override
   String get home_recently_added => 'Recently added';
 }
 
@@ -29587,6 +29646,19 @@ class _StringsId extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  @override
+  String get pdf_outline => 'Contents';
+  @override
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
   @override
   String get home_recently_added => 'Recently added';
 }
@@ -34906,6 +34978,19 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Check now';
   @override
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  @override
+  String get pdf_outline => 'Contents';
+  @override
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
+  @override
   String get home_recently_added => 'Recently added';
 }
 
@@ -40028,6 +40113,19 @@ class _StringsJa extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  @override
+  String get pdf_outline => 'Contents';
+  @override
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
   @override
   String get home_recently_added => 'Recently added';
 }
@@ -45154,6 +45252,19 @@ class _StringsKo extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  @override
+  String get pdf_outline => 'Contents';
+  @override
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
   @override
   String get home_recently_added => 'Recently added';
 }
@@ -50450,6 +50561,19 @@ class _StringsNl extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  @override
+  String get pdf_outline => 'Contents';
+  @override
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
   @override
   String get home_recently_added => 'Recently added';
 }
@@ -55762,6 +55886,19 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Check now';
   @override
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  @override
+  String get pdf_outline => 'Contents';
+  @override
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
+  @override
   String get home_recently_added => 'Recently added';
 }
 
@@ -61056,6 +61193,19 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Check now';
   @override
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  @override
+  String get pdf_outline => 'Contents';
+  @override
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
+  @override
   String get home_recently_added => 'Recently added';
 }
 
@@ -66294,6 +66444,19 @@ class _StringsTh extends _StringsEn {
       'Latest queued: episode ${episode}';
   @override
   String get download_subscription_check_now => 'Check now';
+  @override
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  @override
+  String get pdf_outline => 'Contents';
+  @override
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
   @override
   String get home_recently_added => 'Recently added';
 }
@@ -71566,6 +71729,19 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Check now';
   @override
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  @override
+  String get pdf_outline => 'Contents';
+  @override
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
+  @override
   String get home_recently_added => 'Recently added';
 }
 
@@ -76824,6 +77000,19 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Check now';
   @override
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  @override
+  String get pdf_outline => 'Contents';
+  @override
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
+  @override
   String get home_recently_added => 'Recently added';
 }
 
@@ -81711,6 +81900,18 @@ class _StringsZhCn extends _StringsEn {
       '最近加入：第 ${episode} 集';
   @override
   String get download_subscription_check_now => '立即检查';
+  @override
+  String get pdf_no_text_layer => '此 PDF 没有文本层（扫描图），无法查词。';
+  @override
+  String get pdf_outline => '目录';
+  @override
+  String get pdf_outline_empty => '此 PDF 没有目录。';
+  @override
+  String get pdf_bookmarks => '书签';
+  @override
+  String get pdf_bookmarks_empty => '还没有书签。';
+  @override
+  String get pdf_bookmark_added => '已添加书签';
   @override
   String get home_recently_added => '最近添加';
 }
@@ -86753,6 +86954,19 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Check now';
   @override
+  String get pdf_no_text_layer =>
+      'This PDF has no text layer (scanned image), so lookup is unavailable.';
+  @override
+  String get pdf_outline => 'Contents';
+  @override
+  String get pdf_outline_empty => 'This PDF has no contents.';
+  @override
+  String get pdf_bookmarks => 'Bookmarks';
+  @override
+  String get pdf_bookmarks_empty => 'No bookmarks yet.';
+  @override
+  String get pdf_bookmark_added => 'Bookmark added';
+  @override
   String get home_recently_added => 'Recently added';
 }
 
@@ -91472,6 +91686,18 @@ extension on _StringsEn {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
@@ -96190,6 +96416,18 @@ extension on _StringsAr {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
@@ -100929,6 +101167,18 @@ extension on _StringsDe {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
@@ -105667,6 +105917,18 @@ extension on _StringsEs {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
@@ -110411,6 +110673,18 @@ extension on _StringsFr {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
@@ -115137,6 +115411,18 @@ extension on _StringsId {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
@@ -119878,6 +120164,18 @@ extension on _StringsIt {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
@@ -124581,6 +124879,18 @@ extension on _StringsJa {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
@@ -129288,6 +129598,18 @@ extension on _StringsKo {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
@@ -134022,6 +134344,18 @@ extension on _StringsNl {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
@@ -138753,6 +139087,18 @@ extension on _StringsPtBr {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
@@ -143489,6 +143835,18 @@ extension on _StringsRu {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
@@ -148209,6 +148567,18 @@ extension on _StringsTh {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
@@ -152938,6 +153308,18 @@ extension on _StringsTr {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
@@ -157662,6 +158044,18 @@ extension on _StringsVi {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
@@ -162350,6 +162744,18 @@ extension on _StringsZhCn {
         return ({required Object episode}) => '最近加入：第 ${episode} 集';
       case 'download_subscription_check_now':
         return '立即检查';
+      case 'pdf_no_text_layer':
+        return '此 PDF 没有文本层（扫描图），无法查词。';
+      case 'pdf_outline':
+        return '目录';
+      case 'pdf_outline_empty':
+        return '此 PDF 没有目录。';
+      case 'pdf_bookmarks':
+        return '书签';
+      case 'pdf_bookmarks_empty':
+        return '还没有书签。';
+      case 'pdf_bookmark_added':
+        return '已添加书签';
       case 'home_recently_added':
         return '最近添加';
       default:
@@ -167048,6 +167454,18 @@ extension on _StringsZhHk {
             'Latest queued: episode ${episode}';
       case 'download_subscription_check_now':
         return 'Check now';
+      case 'pdf_no_text_layer':
+        return 'This PDF has no text layer (scanned image), so lookup is unavailable.';
+      case 'pdf_outline':
+        return 'Contents';
+      case 'pdf_outline_empty':
+        return 'This PDF has no contents.';
+      case 'pdf_bookmarks':
+        return 'Bookmarks';
+      case 'pdf_bookmarks_empty':
+        return 'No bookmarks yet.';
+      case 'pdf_bookmark_added':
+        return 'Bookmark added';
       case 'home_recently_added':
         return 'Recently added';
       default:
