@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39389 (2317 per locale)
+/// Strings: 39474 (2322 per locale)
 ///
-/// Built on 2026-07-23 at 12:58 UTC
+/// Built on 2026-07-23 at 14:27 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3091,6 +3091,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get pdf_bookmarks => 'Bookmarks';
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   String get pdf_bookmark_added => 'Bookmark added';
+  String get games_set_cover => 'Set cover';
+  String get games_auto_cover => 'Fetch cover automatically';
+  String get games_cover_updated => 'Cover updated';
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -8345,6 +8351,17 @@ class _StringsAr extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -13672,6 +13689,17 @@ class _StringsDe extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -19015,6 +19043,17 @@ class _StringsEs extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -24369,6 +24408,17 @@ class _StringsFr extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -29650,6 +29700,17 @@ class _StringsId extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -34979,6 +35040,17 @@ class _StringsIt extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -40113,6 +40185,17 @@ class _StringsJa extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -45250,6 +45333,17 @@ class _StringsKo extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -50557,6 +50651,17 @@ class _StringsNl extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -55879,6 +55984,17 @@ class _StringsPtBr extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -61184,6 +61300,17 @@ class _StringsRu extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -66434,6 +66561,17 @@ class _StringsTh extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -71716,6 +71854,17 @@ class _StringsTr extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -76985,6 +77134,17 @@ class _StringsVi extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 // Path: <root>
@@ -81883,6 +82043,16 @@ class _StringsZhCn extends _StringsEn {
   String get pdf_bookmarks_empty => '还没有书签。';
   @override
   String get pdf_bookmark_added => '已添加书签';
+  @override
+  String get games_set_cover => '设置封面';
+  @override
+  String get games_auto_cover => '自动获取封面';
+  @override
+  String get games_cover_updated => '封面已更新';
+  @override
+  String get games_cover_not_found => '游戏目录和程序图标里都没找到可用封面';
+  @override
+  String get games_cover_searching => '正在查找封面...';
 }
 
 // Path: <root>
@@ -86935,6 +87105,17 @@ class _StringsZhHk extends _StringsEn {
   String get pdf_bookmarks_empty => 'No bookmarks yet.';
   @override
   String get pdf_bookmark_added => 'Bookmark added';
+  @override
+  String get games_set_cover => 'Set cover';
+  @override
+  String get games_auto_cover => 'Fetch cover automatically';
+  @override
+  String get games_cover_updated => 'Cover updated';
+  @override
+  String get games_cover_not_found =>
+      'No usable cover found in the game folder or executable';
+  @override
+  String get games_cover_searching => 'Looking for a cover...';
 }
 
 /// Flat map(s) containing all translations.
@@ -91665,6 +91846,16 @@ extension on _StringsEn {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -96393,6 +96584,16 @@ extension on _StringsAr {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -101142,6 +101343,16 @@ extension on _StringsDe {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -105890,6 +106101,16 @@ extension on _StringsEs {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -110644,6 +110865,16 @@ extension on _StringsFr {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -115380,6 +115611,16 @@ extension on _StringsId {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -120131,6 +120372,16 @@ extension on _StringsIt {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -124844,6 +125095,16 @@ extension on _StringsJa {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -129561,6 +129822,16 @@ extension on _StringsKo {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -134305,6 +134576,16 @@ extension on _StringsNl {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -139046,6 +139327,16 @@ extension on _StringsPtBr {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -143792,6 +144083,16 @@ extension on _StringsRu {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -148522,6 +148823,16 @@ extension on _StringsTh {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -153261,6 +153572,16 @@ extension on _StringsTr {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -157995,6 +158316,16 @@ extension on _StringsVi {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
@@ -162693,6 +163024,16 @@ extension on _StringsZhCn {
         return '还没有书签。';
       case 'pdf_bookmark_added':
         return '已添加书签';
+      case 'games_set_cover':
+        return '设置封面';
+      case 'games_auto_cover':
+        return '自动获取封面';
+      case 'games_cover_updated':
+        return '封面已更新';
+      case 'games_cover_not_found':
+        return '游戏目录和程序图标里都没找到可用封面';
+      case 'games_cover_searching':
+        return '正在查找封面...';
       default:
         return null;
     }
@@ -167401,6 +167742,16 @@ extension on _StringsZhHk {
         return 'No bookmarks yet.';
       case 'pdf_bookmark_added':
         return 'Bookmark added';
+      case 'games_set_cover':
+        return 'Set cover';
+      case 'games_auto_cover':
+        return 'Fetch cover automatically';
+      case 'games_cover_updated':
+        return 'Cover updated';
+      case 'games_cover_not_found':
+        return 'No usable cover found in the game folder or executable';
+      case 'games_cover_searching':
+        return 'Looking for a cover...';
       default:
         return null;
     }
