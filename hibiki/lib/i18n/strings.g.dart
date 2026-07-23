@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 39508 (2324 per locale)
 ///
-/// Built on 2026-07-23 at 20:20 UTC
+/// Built on 2026-07-23 at 20:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1938,9 +1938,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Please allow Hibiki to install apps in system settings, then retry.';
   String get update_install_permission_retry => 'Retry install';
   String get update_install_permission_cancel => 'Cancel';
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   String get profile_export => 'Export';
   String get profile_import => 'Import';
   String get profile_export_failed => 'Export failed';
@@ -6305,10 +6305,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get update_install_permission_cancel => 'Cancel';
   @override
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   @override
   String get profile_export => 'Export';
   @override
@@ -11647,10 +11647,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get update_install_permission_cancel => 'Cancel';
   @override
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   @override
   String get profile_export => 'Export';
   @override
@@ -17006,10 +17006,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get update_install_permission_cancel => 'Cancel';
   @override
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   @override
   String get profile_export => 'Export';
   @override
@@ -22376,10 +22376,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get update_install_permission_cancel => 'Cancel';
   @override
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   @override
   String get profile_export => 'Export';
   @override
@@ -27673,10 +27673,10 @@ class _StringsId extends _StringsEn {
   @override
   String get update_install_permission_cancel => 'Cancel';
   @override
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   @override
   String get profile_export => 'Export';
   @override
@@ -33018,10 +33018,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get update_install_permission_cancel => 'Cancel';
   @override
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   @override
   String get profile_export => 'Export';
   @override
@@ -38172,10 +38172,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get update_install_permission_cancel => 'Cancel';
   @override
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   @override
   String get profile_export => 'Export';
   @override
@@ -43324,10 +43324,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get update_install_permission_cancel => 'Cancel';
   @override
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   @override
   String get profile_export => 'Export';
   @override
@@ -48644,10 +48644,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get update_install_permission_cancel => 'Cancel';
   @override
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   @override
   String get profile_export => 'Export';
   @override
@@ -53982,10 +53982,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get update_install_permission_cancel => 'Cancel';
   @override
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   @override
   String get profile_export => 'Export';
   @override
@@ -59303,10 +59303,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get update_install_permission_cancel => 'Cancel';
   @override
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   @override
   String get profile_export => 'Export';
   @override
@@ -64570,10 +64570,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get update_install_permission_cancel => 'Cancel';
   @override
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   @override
   String get profile_export => 'Export';
   @override
@@ -69867,10 +69867,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get update_install_permission_cancel => 'Cancel';
   @override
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   @override
   String get profile_export => 'Export';
   @override
@@ -75153,10 +75153,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get update_install_permission_cancel => 'Cancel';
   @override
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   @override
   String get profile_export => 'Export';
   @override
@@ -80224,10 +80224,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get update_install_permission_cancel => '取消';
   @override
-  String get popup_auto_expand_dictionaries => '自动展开词典数';
+  String get popup_auto_expand_dictionaries => '自动展开行数';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      '即使开启「折叠词典」，也保持前 N 个词典展开（0 = 全部折叠）';
+      '即使开启「折叠词典」，也保持前 N 行词典方框展开。展开数跟随列数设置：行数 x 词典列数（0 = 全部折叠）';
   @override
   String get profile_export => '导出';
   @override
@@ -85142,10 +85142,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get update_install_permission_cancel => '取消';
   @override
-  String get popup_auto_expand_dictionaries => 'Auto-expand dictionaries';
+  String get popup_auto_expand_dictionaries => 'Auto-expand rows';
   @override
   String get popup_auto_expand_dictionaries_hint =>
-      'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+      'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
   @override
   String get profile_export => 'Export';
   @override
@@ -90113,9 +90113,9 @@ extension on _StringsEn {
       case 'update_install_permission_cancel':
         return 'Cancel';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
@@ -94856,9 +94856,9 @@ extension on _StringsAr {
       case 'update_install_permission_cancel':
         return 'Cancel';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
@@ -99620,9 +99620,9 @@ extension on _StringsDe {
       case 'update_install_permission_cancel':
         return 'Cancel';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
@@ -104383,9 +104383,9 @@ extension on _StringsEs {
       case 'update_install_permission_cancel':
         return 'Cancel';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
@@ -109152,9 +109152,9 @@ extension on _StringsFr {
       case 'update_install_permission_cancel':
         return 'Cancel';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
@@ -113903,9 +113903,9 @@ extension on _StringsId {
       case 'update_install_permission_cancel':
         return 'Cancel';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
@@ -118669,9 +118669,9 @@ extension on _StringsIt {
       case 'update_install_permission_cancel':
         return 'Cancel';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
@@ -123398,9 +123398,9 @@ extension on _StringsJa {
       case 'update_install_permission_cancel':
         return 'Cancel';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
@@ -128129,9 +128129,9 @@ extension on _StringsKo {
       case 'update_install_permission_cancel':
         return 'Cancel';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
@@ -132888,9 +132888,9 @@ extension on _StringsNl {
       case 'update_install_permission_cancel':
         return 'Cancel';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
@@ -137644,9 +137644,9 @@ extension on _StringsPtBr {
       case 'update_install_permission_cancel':
         return 'Cancel';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
@@ -142405,9 +142405,9 @@ extension on _StringsRu {
       case 'update_install_permission_cancel':
         return 'Cancel';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
@@ -147150,9 +147150,9 @@ extension on _StringsTh {
       case 'update_install_permission_cancel':
         return 'Cancel';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
@@ -151904,9 +151904,9 @@ extension on _StringsTr {
       case 'update_install_permission_cancel':
         return 'Cancel';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
@@ -156653,9 +156653,9 @@ extension on _StringsVi {
       case 'update_install_permission_cancel':
         return 'Cancel';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
@@ -161375,9 +161375,9 @@ extension on _StringsZhCn {
       case 'update_install_permission_cancel':
         return '取消';
       case 'popup_auto_expand_dictionaries':
-        return '自动展开词典数';
+        return '自动展开行数';
       case 'popup_auto_expand_dictionaries_hint':
-        return '即使开启「折叠词典」，也保持前 N 个词典展开（0 = 全部折叠）';
+        return '即使开启「折叠词典」，也保持前 N 行词典方框展开。展开数跟随列数设置：行数 x 词典列数（0 = 全部折叠）';
       case 'profile_export':
         return '导出';
       case 'profile_import':
@@ -166089,9 +166089,9 @@ extension on _StringsZhHk {
       case 'update_install_permission_cancel':
         return '取消';
       case 'popup_auto_expand_dictionaries':
-        return 'Auto-expand dictionaries';
+        return 'Auto-expand rows';
       case 'popup_auto_expand_dictionaries_hint':
-        return 'Keep the first N dictionary blocks expanded even when \'Collapse dictionaries\' is on (0 = collapse all)';
+        return 'Keep the first N rows of dictionary blocks expanded even when \'Collapse dictionaries\' is on. The expanded count follows the column setting: rows x columns (0 = collapse all)';
       case 'profile_export':
         return 'Export';
       case 'profile_import':
