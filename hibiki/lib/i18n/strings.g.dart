@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39525 (2325 per locale)
+/// Strings: 39559 (2327 per locale)
 ///
-/// Built on 2026-07-23 at 23:15 UTC
+/// Built on 2026-07-23 at 23:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3102,6 +3102,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get games_cover_searching => 'Looking for a cover...';
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 // Path: <root>
@@ -8375,6 +8377,10 @@ class _StringsAr extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  @override
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  @override
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 // Path: <root>
@@ -13721,6 +13727,10 @@ class _StringsDe extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  @override
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  @override
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 // Path: <root>
@@ -19083,6 +19093,10 @@ class _StringsEs extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  @override
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  @override
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 // Path: <root>
@@ -24456,6 +24470,10 @@ class _StringsFr extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  @override
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  @override
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 // Path: <root>
@@ -29756,6 +29774,10 @@ class _StringsId extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  @override
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  @override
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 // Path: <root>
@@ -35104,6 +35126,10 @@ class _StringsIt extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  @override
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  @override
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 // Path: <root>
@@ -40257,6 +40283,10 @@ class _StringsJa extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  @override
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  @override
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 // Path: <root>
@@ -45413,6 +45443,10 @@ class _StringsKo extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  @override
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  @override
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 // Path: <root>
@@ -50739,6 +50773,10 @@ class _StringsNl extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  @override
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  @override
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 // Path: <root>
@@ -56080,6 +56118,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  @override
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  @override
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 // Path: <root>
@@ -61404,6 +61446,10 @@ class _StringsRu extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  @override
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  @override
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 // Path: <root>
@@ -66673,6 +66719,10 @@ class _StringsTh extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  @override
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  @override
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 // Path: <root>
@@ -71974,6 +72024,10 @@ class _StringsTr extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  @override
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  @override
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 // Path: <root>
@@ -77262,6 +77316,10 @@ class _StringsVi extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  @override
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  @override
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 // Path: <root>
@@ -82179,6 +82237,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} 行有音频';
+  @override
+  String get game_line_preview_tooltip => '播放这句音频';
+  @override
+  String get game_line_preview_failed => '这句还没有可播放的音频';
 }
 
 // Path: <root>
@@ -87250,6 +87312,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
+  @override
+  String get game_line_preview_tooltip => 'Play this line\'s audio';
+  @override
+  String get game_line_preview_failed => 'No playable audio for this line';
 }
 
 /// Flat map(s) containing all translations.
@@ -91997,6 +92063,10 @@ extension on _StringsEn {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
@@ -96742,6 +96812,10 @@ extension on _StringsAr {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
@@ -101508,6 +101582,10 @@ extension on _StringsDe {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
@@ -106273,6 +106351,10 @@ extension on _StringsEs {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
@@ -111044,6 +111126,10 @@ extension on _StringsFr {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
@@ -115797,6 +115883,10 @@ extension on _StringsId {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
@@ -120565,6 +120655,10 @@ extension on _StringsIt {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
@@ -125295,6 +125389,10 @@ extension on _StringsJa {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
@@ -130029,6 +130127,10 @@ extension on _StringsKo {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
@@ -134790,6 +134892,10 @@ extension on _StringsNl {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
@@ -139548,6 +139654,10 @@ extension on _StringsPtBr {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
@@ -144311,6 +144421,10 @@ extension on _StringsRu {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
@@ -149058,6 +149172,10 @@ extension on _StringsTh {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
@@ -153814,6 +153932,10 @@ extension on _StringsTr {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
@@ -158565,6 +158687,10 @@ extension on _StringsVi {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
@@ -163279,6 +163405,10 @@ extension on _StringsZhCn {
         return '正在查找封面...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} 行有音频';
+      case 'game_line_preview_tooltip':
+        return '播放这句音频';
+      case 'game_line_preview_failed':
+        return '这句还没有可播放的音频';
       default:
         return null;
     }
@@ -168004,6 +168134,10 @@ extension on _StringsZhHk {
         return 'Looking for a cover...';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
+      case 'game_line_preview_tooltip':
+        return 'Play this line\'s audio';
+      case 'game_line_preview_failed':
+        return 'No playable audio for this line';
       default:
         return null;
     }
