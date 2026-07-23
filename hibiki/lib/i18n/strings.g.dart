@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 38964 (2292 per locale)
+/// Strings: 38981 (2293 per locale)
 ///
-/// Built on 2026-07-23 at 09:34 UTC
+/// Built on 2026-07-23 at 10:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3053,6 +3053,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Text is provided by the engine hook; these endpoints are optional';
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 // Path: <root>
@@ -8244,6 +8246,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  @override
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 // Path: <root>
@@ -13508,6 +13513,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  @override
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 // Path: <root>
@@ -18788,6 +18796,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  @override
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 // Path: <root>
@@ -24079,6 +24090,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  @override
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 // Path: <root>
@@ -29297,6 +29311,9 @@ class _StringsId extends _StringsEn {
   @override
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  @override
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 // Path: <root>
@@ -34563,6 +34580,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  @override
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 // Path: <root>
@@ -39634,6 +39654,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  @override
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 // Path: <root>
@@ -44708,6 +44731,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  @override
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 // Path: <root>
@@ -49952,6 +49978,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  @override
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 // Path: <root>
@@ -55211,6 +55240,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  @override
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 // Path: <root>
@@ -60453,6 +60485,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  @override
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 // Path: <root>
@@ -65640,6 +65675,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  @override
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 // Path: <root>
@@ -70859,6 +70897,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  @override
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 // Path: <root>
@@ -76065,6 +76106,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  @override
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 // Path: <root>
@@ -80905,6 +80949,8 @@ class _StringsZhCn extends _StringsEn {
   String get game_endpoints_engine_active => '当前文本来自引擎 Hook，这些端点无需连接';
   @override
   String get game_text_gaps_hint => '序号缺口 = Hook 文本环丢行计数，0 为正常';
+  @override
+  String handlebar_deprecated_label({required Object label}) => '${label}（已弃用）';
 }
 
 // Path: <root>
@@ -85894,6 +85940,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_text_gaps_hint =>
       'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+  @override
+  String handlebar_deprecated_label({required Object label}) =>
+      '${label} (deprecated)';
 }
 
 /// Flat map(s) containing all translations.
@@ -90571,6 +90620,8 @@ extension on _StringsEn {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
@@ -95246,6 +95297,8 @@ extension on _StringsAr {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
@@ -99942,6 +99995,8 @@ extension on _StringsDe {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
@@ -104637,6 +104692,8 @@ extension on _StringsEs {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
@@ -109338,6 +109395,8 @@ extension on _StringsFr {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
@@ -114021,6 +114080,8 @@ extension on _StringsId {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
@@ -118719,6 +118780,8 @@ extension on _StringsIt {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
@@ -123379,6 +123442,8 @@ extension on _StringsJa {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
@@ -128043,6 +128108,8 @@ extension on _StringsKo {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
@@ -132734,6 +132801,8 @@ extension on _StringsNl {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
@@ -137422,6 +137491,8 @@ extension on _StringsPtBr {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
@@ -142115,6 +142186,8 @@ extension on _StringsRu {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
@@ -146792,6 +146865,8 @@ extension on _StringsTh {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
@@ -151478,6 +151553,8 @@ extension on _StringsTr {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
@@ -156159,6 +156236,8 @@ extension on _StringsVi {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
@@ -160806,6 +160885,8 @@ extension on _StringsZhCn {
         return '当前文本来自引擎 Hook，这些端点无需连接';
       case 'game_text_gaps_hint':
         return '序号缺口 = Hook 文本环丢行计数，0 为正常';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label}（已弃用）';
       default:
         return null;
     }
@@ -165461,6 +165542,8 @@ extension on _StringsZhHk {
         return 'Text is provided by the engine hook; these endpoints are optional';
       case 'game_text_gaps_hint':
         return 'Sequence gaps = dropped-line count in the hook text ring; 0 is normal';
+      case 'handlebar_deprecated_label':
+        return ({required Object label}) => '${label} (deprecated)';
       default:
         return null;
     }
