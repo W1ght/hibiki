@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 39406 (2318 per locale)
+/// Strings: 39423 (2319 per locale)
 ///
-/// Built on 2026-07-23 at 18:22 UTC
+/// Built on 2026-07-23 at 19:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3093,6 +3093,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mining_audio_quality_max => 'Maximum';
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -8350,6 +8351,8 @@ class _StringsAr extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -13680,6 +13683,8 @@ class _StringsDe extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -19026,6 +19031,8 @@ class _StringsEs extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -24383,6 +24390,8 @@ class _StringsFr extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -29667,6 +29676,8 @@ class _StringsId extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -34999,6 +35010,8 @@ class _StringsIt extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -40136,6 +40149,8 @@ class _StringsJa extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -45276,6 +45291,8 @@ class _StringsKo extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -50586,6 +50603,8 @@ class _StringsNl extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -55911,6 +55930,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -61219,6 +61240,8 @@ class _StringsRu extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -66472,6 +66495,8 @@ class _StringsTh extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -71757,6 +71782,8 @@ class _StringsTr extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -77029,6 +77056,8 @@ class _StringsVi extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 // Path: <root>
@@ -81931,6 +81960,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       '片段已导出（含字幕）：${path}';
+  @override
+  String get home_recently_added => '最近添加';
 }
 
 // Path: <root>
@@ -86986,6 +87017,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String video_clip_exported_with_subtitles({required Object path}) =>
       'Clip exported with subtitles: ${path}';
+  @override
+  String get home_recently_added => 'Recently added';
 }
 
 /// Flat map(s) containing all translations.
@@ -91719,6 +91752,8 @@ extension on _StringsEn {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -96450,6 +96485,8 @@ extension on _StringsAr {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -101202,6 +101239,8 @@ extension on _StringsDe {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -105953,6 +105992,8 @@ extension on _StringsEs {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -110710,6 +110751,8 @@ extension on _StringsFr {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -115449,6 +115492,8 @@ extension on _StringsId {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -120203,6 +120248,8 @@ extension on _StringsIt {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -124919,6 +124966,8 @@ extension on _StringsJa {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -129639,6 +129688,8 @@ extension on _StringsKo {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -134386,6 +134437,8 @@ extension on _StringsNl {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -139130,6 +139183,8 @@ extension on _StringsPtBr {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -143879,6 +143934,8 @@ extension on _StringsRu {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -148612,6 +148669,8 @@ extension on _StringsTh {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -153354,6 +153413,8 @@ extension on _StringsTr {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -158091,6 +158152,8 @@ extension on _StringsVi {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
@@ -162791,6 +162854,8 @@ extension on _StringsZhCn {
         return '最高';
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) => '片段已导出（含字幕）：${path}';
+      case 'home_recently_added':
+        return '最近添加';
       default:
         return null;
     }
@@ -167502,6 +167567,8 @@ extension on _StringsZhHk {
       case 'video_clip_exported_with_subtitles':
         return ({required Object path}) =>
             'Clip exported with subtitles: ${path}';
+      case 'home_recently_added':
+        return 'Recently added';
       default:
         return null;
     }
