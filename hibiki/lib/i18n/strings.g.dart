@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 42313 (2489 per locale)
+/// Strings: 42534 (2502 per locale)
 ///
-/// Built on 2026-07-24 at 20:20 UTC
+/// Built on 2026-07-24 at 20:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3327,6 +3327,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The capture channel could not be opened; restart Hibiki.';
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  String get section_video_library => 'Library';
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  String get video_scrape_info => 'Series info';
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  String get video_scrape_rating => 'Rating';
+  String get video_scrape_air_date => 'Aired';
+  String get video_scrape_episodes => 'Episodes';
+  String get video_scrape_tags => 'Tags';
+  String get video_scrape_summary => 'Synopsis';
+  String get video_scrape_view_subject => 'View on Bangumi';
+  String get video_scrape_rescrape => 'Re-scrape';
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 // Path: <root>
@@ -8989,6 +9005,35 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  @override
+  String get section_video_library => 'Library';
+  @override
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  @override
+  String get video_scrape_info => 'Series info';
+  @override
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  @override
+  String get video_scrape_rating => 'Rating';
+  @override
+  String get video_scrape_air_date => 'Aired';
+  @override
+  String get video_scrape_episodes => 'Episodes';
+  @override
+  String get video_scrape_tags => 'Tags';
+  @override
+  String get video_scrape_summary => 'Synopsis';
+  @override
+  String get video_scrape_view_subject => 'View on Bangumi';
+  @override
+  String get video_scrape_rescrape => 'Re-scrape';
+  @override
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 // Path: <root>
@@ -14724,6 +14769,35 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  @override
+  String get section_video_library => 'Library';
+  @override
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  @override
+  String get video_scrape_info => 'Series info';
+  @override
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  @override
+  String get video_scrape_rating => 'Rating';
+  @override
+  String get video_scrape_air_date => 'Aired';
+  @override
+  String get video_scrape_episodes => 'Episodes';
+  @override
+  String get video_scrape_tags => 'Tags';
+  @override
+  String get video_scrape_summary => 'Synopsis';
+  @override
+  String get video_scrape_view_subject => 'View on Bangumi';
+  @override
+  String get video_scrape_rescrape => 'Re-scrape';
+  @override
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 // Path: <root>
@@ -20475,6 +20549,35 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  @override
+  String get section_video_library => 'Library';
+  @override
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  @override
+  String get video_scrape_info => 'Series info';
+  @override
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  @override
+  String get video_scrape_rating => 'Rating';
+  @override
+  String get video_scrape_air_date => 'Aired';
+  @override
+  String get video_scrape_episodes => 'Episodes';
+  @override
+  String get video_scrape_tags => 'Tags';
+  @override
+  String get video_scrape_summary => 'Synopsis';
+  @override
+  String get video_scrape_view_subject => 'View on Bangumi';
+  @override
+  String get video_scrape_rescrape => 'Re-scrape';
+  @override
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 // Path: <root>
@@ -26237,6 +26340,35 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  @override
+  String get section_video_library => 'Library';
+  @override
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  @override
+  String get video_scrape_info => 'Series info';
+  @override
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  @override
+  String get video_scrape_rating => 'Rating';
+  @override
+  String get video_scrape_air_date => 'Aired';
+  @override
+  String get video_scrape_episodes => 'Episodes';
+  @override
+  String get video_scrape_tags => 'Tags';
+  @override
+  String get video_scrape_summary => 'Synopsis';
+  @override
+  String get video_scrape_view_subject => 'View on Bangumi';
+  @override
+  String get video_scrape_rescrape => 'Re-scrape';
+  @override
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 // Path: <root>
@@ -31926,6 +32058,35 @@ class _StringsId extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  @override
+  String get section_video_library => 'Library';
+  @override
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  @override
+  String get video_scrape_info => 'Series info';
+  @override
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  @override
+  String get video_scrape_rating => 'Rating';
+  @override
+  String get video_scrape_air_date => 'Aired';
+  @override
+  String get video_scrape_episodes => 'Episodes';
+  @override
+  String get video_scrape_tags => 'Tags';
+  @override
+  String get video_scrape_summary => 'Synopsis';
+  @override
+  String get video_scrape_view_subject => 'View on Bangumi';
+  @override
+  String get video_scrape_rescrape => 'Re-scrape';
+  @override
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 // Path: <root>
@@ -37663,6 +37824,35 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  @override
+  String get section_video_library => 'Library';
+  @override
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  @override
+  String get video_scrape_info => 'Series info';
+  @override
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  @override
+  String get video_scrape_rating => 'Rating';
+  @override
+  String get video_scrape_air_date => 'Aired';
+  @override
+  String get video_scrape_episodes => 'Episodes';
+  @override
+  String get video_scrape_tags => 'Tags';
+  @override
+  String get video_scrape_summary => 'Synopsis';
+  @override
+  String get video_scrape_view_subject => 'View on Bangumi';
+  @override
+  String get video_scrape_rescrape => 'Re-scrape';
+  @override
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 // Path: <root>
@@ -43205,6 +43395,35 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  @override
+  String get section_video_library => 'Library';
+  @override
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  @override
+  String get video_scrape_info => 'Series info';
+  @override
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  @override
+  String get video_scrape_rating => 'Rating';
+  @override
+  String get video_scrape_air_date => 'Aired';
+  @override
+  String get video_scrape_episodes => 'Episodes';
+  @override
+  String get video_scrape_tags => 'Tags';
+  @override
+  String get video_scrape_summary => 'Synopsis';
+  @override
+  String get video_scrape_view_subject => 'View on Bangumi';
+  @override
+  String get video_scrape_rescrape => 'Re-scrape';
+  @override
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 // Path: <root>
@@ -48750,6 +48969,35 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  @override
+  String get section_video_library => 'Library';
+  @override
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  @override
+  String get video_scrape_info => 'Series info';
+  @override
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  @override
+  String get video_scrape_rating => 'Rating';
+  @override
+  String get video_scrape_air_date => 'Aired';
+  @override
+  String get video_scrape_episodes => 'Episodes';
+  @override
+  String get video_scrape_tags => 'Tags';
+  @override
+  String get video_scrape_summary => 'Synopsis';
+  @override
+  String get video_scrape_view_subject => 'View on Bangumi';
+  @override
+  String get video_scrape_rescrape => 'Re-scrape';
+  @override
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 // Path: <root>
@@ -54465,6 +54713,35 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  @override
+  String get section_video_library => 'Library';
+  @override
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  @override
+  String get video_scrape_info => 'Series info';
+  @override
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  @override
+  String get video_scrape_rating => 'Rating';
+  @override
+  String get video_scrape_air_date => 'Aired';
+  @override
+  String get video_scrape_episodes => 'Episodes';
+  @override
+  String get video_scrape_tags => 'Tags';
+  @override
+  String get video_scrape_summary => 'Synopsis';
+  @override
+  String get video_scrape_view_subject => 'View on Bangumi';
+  @override
+  String get video_scrape_rescrape => 'Re-scrape';
+  @override
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 // Path: <root>
@@ -60195,6 +60472,35 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  @override
+  String get section_video_library => 'Library';
+  @override
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  @override
+  String get video_scrape_info => 'Series info';
+  @override
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  @override
+  String get video_scrape_rating => 'Rating';
+  @override
+  String get video_scrape_air_date => 'Aired';
+  @override
+  String get video_scrape_episodes => 'Episodes';
+  @override
+  String get video_scrape_tags => 'Tags';
+  @override
+  String get video_scrape_summary => 'Synopsis';
+  @override
+  String get video_scrape_view_subject => 'View on Bangumi';
+  @override
+  String get video_scrape_rescrape => 'Re-scrape';
+  @override
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 // Path: <root>
@@ -65908,6 +66214,35 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  @override
+  String get section_video_library => 'Library';
+  @override
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  @override
+  String get video_scrape_info => 'Series info';
+  @override
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  @override
+  String get video_scrape_rating => 'Rating';
+  @override
+  String get video_scrape_air_date => 'Aired';
+  @override
+  String get video_scrape_episodes => 'Episodes';
+  @override
+  String get video_scrape_tags => 'Tags';
+  @override
+  String get video_scrape_summary => 'Synopsis';
+  @override
+  String get video_scrape_view_subject => 'View on Bangumi';
+  @override
+  String get video_scrape_rescrape => 'Re-scrape';
+  @override
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 // Path: <root>
@@ -71566,6 +71901,35 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  @override
+  String get section_video_library => 'Library';
+  @override
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  @override
+  String get video_scrape_info => 'Series info';
+  @override
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  @override
+  String get video_scrape_rating => 'Rating';
+  @override
+  String get video_scrape_air_date => 'Aired';
+  @override
+  String get video_scrape_episodes => 'Episodes';
+  @override
+  String get video_scrape_tags => 'Tags';
+  @override
+  String get video_scrape_summary => 'Synopsis';
+  @override
+  String get video_scrape_view_subject => 'View on Bangumi';
+  @override
+  String get video_scrape_rescrape => 'Re-scrape';
+  @override
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 // Path: <root>
@@ -77256,6 +77620,35 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  @override
+  String get section_video_library => 'Library';
+  @override
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  @override
+  String get video_scrape_info => 'Series info';
+  @override
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  @override
+  String get video_scrape_rating => 'Rating';
+  @override
+  String get video_scrape_air_date => 'Aired';
+  @override
+  String get video_scrape_episodes => 'Episodes';
+  @override
+  String get video_scrape_tags => 'Tags';
+  @override
+  String get video_scrape_summary => 'Synopsis';
+  @override
+  String get video_scrape_view_subject => 'View on Bangumi';
+  @override
+  String get video_scrape_rescrape => 'Re-scrape';
+  @override
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 // Path: <root>
@@ -82933,6 +83326,35 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  @override
+  String get section_video_library => 'Library';
+  @override
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  @override
+  String get video_scrape_info => 'Series info';
+  @override
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  @override
+  String get video_scrape_rating => 'Rating';
+  @override
+  String get video_scrape_air_date => 'Aired';
+  @override
+  String get video_scrape_episodes => 'Episodes';
+  @override
+  String get video_scrape_tags => 'Tags';
+  @override
+  String get video_scrape_summary => 'Synopsis';
+  @override
+  String get video_scrape_view_subject => 'View on Bangumi';
+  @override
+  String get video_scrape_rescrape => 'Re-scrape';
+  @override
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 // Path: <root>
@@ -88205,6 +88627,33 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       '已注入游戏，但超时内没有文本或音频，该引擎可能尚未支持。';
+  @override
+  String get section_video_library => '媒体库';
+  @override
+  String get video_setting_auto_scrape => '自动刮削条目资料';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      '库里的视频后台自动从 Bangumi 获取封面、简介、评分与标签';
+  @override
+  String get video_scrape_info => '条目信息';
+  @override
+  String get video_scrape_info_empty => '还没有条目资料。后台会自动刮削，也可以手动匹配。';
+  @override
+  String get video_scrape_rating => '评分';
+  @override
+  String get video_scrape_air_date => '放送开始';
+  @override
+  String get video_scrape_episodes => '话数';
+  @override
+  String get video_scrape_tags => '标签';
+  @override
+  String get video_scrape_summary => '简介';
+  @override
+  String get video_scrape_view_subject => '在 Bangumi 查看';
+  @override
+  String get video_scrape_rescrape => '重新刮削';
+  @override
+  String video_scrape_rating_votes({required Object count}) => '${count} 人评分';
 }
 
 // Path: <root>
@@ -93665,6 +94114,35 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_hook_reason_handshake_timeout =>
       'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+  @override
+  String get section_video_library => 'Library';
+  @override
+  String get video_setting_auto_scrape => 'Auto-fetch series info';
+  @override
+  String get video_setting_auto_scrape_hint =>
+      'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+  @override
+  String get video_scrape_info => 'Series info';
+  @override
+  String get video_scrape_info_empty =>
+      'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+  @override
+  String get video_scrape_rating => 'Rating';
+  @override
+  String get video_scrape_air_date => 'Aired';
+  @override
+  String get video_scrape_episodes => 'Episodes';
+  @override
+  String get video_scrape_tags => 'Tags';
+  @override
+  String get video_scrape_summary => 'Synopsis';
+  @override
+  String get video_scrape_view_subject => 'View on Bangumi';
+  @override
+  String get video_scrape_rescrape => 'Re-scrape';
+  @override
+  String video_scrape_rating_votes({required Object count}) =>
+      '${count} ratings';
 }
 
 /// Flat map(s) containing all translations.
@@ -98749,6 +99227,32 @@ extension on _StringsEn {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
@@ -103831,6 +104335,32 @@ extension on _StringsAr {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
@@ -108934,6 +109464,32 @@ extension on _StringsDe {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
@@ -114036,6 +114592,32 @@ extension on _StringsEs {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
@@ -119144,6 +119726,32 @@ extension on _StringsFr {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
@@ -124234,6 +124842,32 @@ extension on _StringsId {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
@@ -129339,6 +129973,32 @@ extension on _StringsIt {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
@@ -134406,6 +135066,32 @@ extension on _StringsJa {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
@@ -139477,6 +140163,32 @@ extension on _StringsKo {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
@@ -144575,6 +145287,32 @@ extension on _StringsNl {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
@@ -149670,6 +150408,32 @@ extension on _StringsPtBr {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
@@ -154770,6 +155534,32 @@ extension on _StringsRu {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
@@ -159854,6 +160644,32 @@ extension on _StringsTh {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
@@ -164947,6 +165763,32 @@ extension on _StringsTr {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
@@ -170035,6 +170877,32 @@ extension on _StringsVi {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
@@ -175084,6 +175952,32 @@ extension on _StringsZhCn {
         return '捕获通道无法打开，请重启 Hibiki。';
       case 'game_hook_reason_handshake_timeout':
         return '已注入游戏，但超时内没有文本或音频，该引擎可能尚未支持。';
+      case 'section_video_library':
+        return '媒体库';
+      case 'video_setting_auto_scrape':
+        return '自动刮削条目资料';
+      case 'video_setting_auto_scrape_hint':
+        return '库里的视频后台自动从 Bangumi 获取封面、简介、评分与标签';
+      case 'video_scrape_info':
+        return '条目信息';
+      case 'video_scrape_info_empty':
+        return '还没有条目资料。后台会自动刮削，也可以手动匹配。';
+      case 'video_scrape_rating':
+        return '评分';
+      case 'video_scrape_air_date':
+        return '放送开始';
+      case 'video_scrape_episodes':
+        return '话数';
+      case 'video_scrape_tags':
+        return '标签';
+      case 'video_scrape_summary':
+        return '简介';
+      case 'video_scrape_view_subject':
+        return '在 Bangumi 查看';
+      case 'video_scrape_rescrape':
+        return '重新刮削';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} 人评分';
       default:
         return null;
     }
@@ -180146,6 +181040,32 @@ extension on _StringsZhHk {
         return 'The capture channel could not be opened; restart Hibiki.';
       case 'game_hook_reason_handshake_timeout':
         return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
+      case 'section_video_library':
+        return 'Library';
+      case 'video_setting_auto_scrape':
+        return 'Auto-fetch series info';
+      case 'video_setting_auto_scrape_hint':
+        return 'Silently fetch cover, synopsis, rating and tags from Bangumi for videos in your library';
+      case 'video_scrape_info':
+        return 'Series info';
+      case 'video_scrape_info_empty':
+        return 'No series info yet. It is fetched automatically in the background; you can also match it manually.';
+      case 'video_scrape_rating':
+        return 'Rating';
+      case 'video_scrape_air_date':
+        return 'Aired';
+      case 'video_scrape_episodes':
+        return 'Episodes';
+      case 'video_scrape_tags':
+        return 'Tags';
+      case 'video_scrape_summary':
+        return 'Synopsis';
+      case 'video_scrape_view_subject':
+        return 'View on Bangumi';
+      case 'video_scrape_rescrape':
+        return 'Re-scrape';
+      case 'video_scrape_rating_votes':
+        return ({required Object count}) => '${count} ratings';
       default:
         return null;
     }
