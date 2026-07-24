@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 40443 (2379 per locale)
+/// Strings: 41667 (2451 per locale)
 ///
-/// Built on 2026-07-24 at 09:01 UTC
+/// Built on 2026-07-24 at 11:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3174,6 +3174,97 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The danmaku server rejected the request. Try again later.';
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  String get manga_import_title => 'Import Manga';
+  String get manga_import_pick => 'Pick .mokuro File';
+  String get manga_import_confirm => 'Import';
+  String get manga_import_action => 'Import Manga';
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  String get manga_reading_mode_spread => 'Spread';
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  String get manga_mode_toggle => 'Reading Mode';
+  String get manga_ocr_section => 'Manga OCR';
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  String get manga_ocr_download => 'Download models';
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  String get manga_ocr_download_failed => 'Model download failed';
+  String get manga_ocr_download_done => 'Models downloaded';
+  String get manga_ocr_delete => 'Delete models';
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  String get manga_ocr_delete_done => 'Models deleted';
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  String get manga_ocr_external_detect => 'Detect';
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  String get manga_ocr_engine_builtin => 'Built-in';
+  String get manga_ocr_engine_external => 'External mokuro';
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  String get manga_ocr_wizard_run => 'Run OCR';
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  String get manga_ocr_wizard_importing => 'Importing…';
+  String get manga_ocr_wizard_done => 'Manga imported';
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  String get manga_layout_single => 'Single Page';
+  String get manga_layout_double => 'Double Page';
+  String get manga_layout_auto => 'Auto';
+  String get manga_remote_ocr_engine => 'Paired host';
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  String get manga_rescan_button => 'Box scan';
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  String get manga_rescan_running => 'Recognising...';
+  String get manga_rescan_failed => 'Recognition failed';
+  String get manga_rescan_empty => 'No text recognised';
+  String get manga_rescan_lookup => 'Look up';
+  String get manga_rescan_writeback => 'Save to page';
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  String get manga_rescan_local_source => 'On-device result';
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  String get manga_cloud_ocr_model => 'Model name';
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 // Path: <root>
@@ -8573,6 +8664,169 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  @override
+  String get manga_import_title => 'Import Manga';
+  @override
+  String get manga_import_pick => 'Pick .mokuro File';
+  @override
+  String get manga_import_confirm => 'Import';
+  @override
+  String get manga_import_action => 'Import Manga';
+  @override
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  @override
+  String get manga_reading_mode_spread => 'Spread';
+  @override
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  @override
+  String get manga_mode_toggle => 'Reading Mode';
+  @override
+  String get manga_ocr_section => 'Manga OCR';
+  @override
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  @override
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  @override
+  String get manga_ocr_download => 'Download models';
+  @override
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  @override
+  String get manga_ocr_download_failed => 'Model download failed';
+  @override
+  String get manga_ocr_download_done => 'Models downloaded';
+  @override
+  String get manga_ocr_delete => 'Delete models';
+  @override
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  @override
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  @override
+  String get manga_ocr_delete_done => 'Models deleted';
+  @override
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  @override
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  @override
+  String get manga_ocr_external_detect => 'Detect';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  @override
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  @override
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  @override
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  @override
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  @override
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  @override
+  String get manga_ocr_engine_builtin => 'Built-in';
+  @override
+  String get manga_ocr_engine_external => 'External mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  @override
+  String get manga_ocr_wizard_run => 'Run OCR';
+  @override
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  @override
+  String get manga_ocr_wizard_importing => 'Importing…';
+  @override
+  String get manga_ocr_wizard_done => 'Manga imported';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  @override
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  @override
+  String get manga_layout_single => 'Single Page';
+  @override
+  String get manga_layout_double => 'Double Page';
+  @override
+  String get manga_layout_auto => 'Auto';
+  @override
+  String get manga_remote_ocr_engine => 'Paired host';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  @override
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  @override
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  @override
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  @override
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  @override
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  @override
+  String get manga_rescan_button => 'Box scan';
+  @override
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  @override
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  @override
+  String get manga_rescan_running => 'Recognising...';
+  @override
+  String get manga_rescan_failed => 'Recognition failed';
+  @override
+  String get manga_rescan_empty => 'No text recognised';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  @override
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  @override
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  @override
+  String get manga_rescan_local_source => 'On-device result';
+  @override
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  @override
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  @override
+  String get manga_cloud_ocr_model => 'Model name';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  @override
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  @override
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 // Path: <root>
@@ -14045,6 +14299,169 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  @override
+  String get manga_import_title => 'Import Manga';
+  @override
+  String get manga_import_pick => 'Pick .mokuro File';
+  @override
+  String get manga_import_confirm => 'Import';
+  @override
+  String get manga_import_action => 'Import Manga';
+  @override
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  @override
+  String get manga_reading_mode_spread => 'Spread';
+  @override
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  @override
+  String get manga_mode_toggle => 'Reading Mode';
+  @override
+  String get manga_ocr_section => 'Manga OCR';
+  @override
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  @override
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  @override
+  String get manga_ocr_download => 'Download models';
+  @override
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  @override
+  String get manga_ocr_download_failed => 'Model download failed';
+  @override
+  String get manga_ocr_download_done => 'Models downloaded';
+  @override
+  String get manga_ocr_delete => 'Delete models';
+  @override
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  @override
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  @override
+  String get manga_ocr_delete_done => 'Models deleted';
+  @override
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  @override
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  @override
+  String get manga_ocr_external_detect => 'Detect';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  @override
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  @override
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  @override
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  @override
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  @override
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  @override
+  String get manga_ocr_engine_builtin => 'Built-in';
+  @override
+  String get manga_ocr_engine_external => 'External mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  @override
+  String get manga_ocr_wizard_run => 'Run OCR';
+  @override
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  @override
+  String get manga_ocr_wizard_importing => 'Importing…';
+  @override
+  String get manga_ocr_wizard_done => 'Manga imported';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  @override
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  @override
+  String get manga_layout_single => 'Single Page';
+  @override
+  String get manga_layout_double => 'Double Page';
+  @override
+  String get manga_layout_auto => 'Auto';
+  @override
+  String get manga_remote_ocr_engine => 'Paired host';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  @override
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  @override
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  @override
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  @override
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  @override
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  @override
+  String get manga_rescan_button => 'Box scan';
+  @override
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  @override
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  @override
+  String get manga_rescan_running => 'Recognising...';
+  @override
+  String get manga_rescan_failed => 'Recognition failed';
+  @override
+  String get manga_rescan_empty => 'No text recognised';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  @override
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  @override
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  @override
+  String get manga_rescan_local_source => 'On-device result';
+  @override
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  @override
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  @override
+  String get manga_cloud_ocr_model => 'Model name';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  @override
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  @override
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 // Path: <root>
@@ -19533,6 +19950,169 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  @override
+  String get manga_import_title => 'Import Manga';
+  @override
+  String get manga_import_pick => 'Pick .mokuro File';
+  @override
+  String get manga_import_confirm => 'Import';
+  @override
+  String get manga_import_action => 'Import Manga';
+  @override
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  @override
+  String get manga_reading_mode_spread => 'Spread';
+  @override
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  @override
+  String get manga_mode_toggle => 'Reading Mode';
+  @override
+  String get manga_ocr_section => 'Manga OCR';
+  @override
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  @override
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  @override
+  String get manga_ocr_download => 'Download models';
+  @override
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  @override
+  String get manga_ocr_download_failed => 'Model download failed';
+  @override
+  String get manga_ocr_download_done => 'Models downloaded';
+  @override
+  String get manga_ocr_delete => 'Delete models';
+  @override
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  @override
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  @override
+  String get manga_ocr_delete_done => 'Models deleted';
+  @override
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  @override
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  @override
+  String get manga_ocr_external_detect => 'Detect';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  @override
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  @override
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  @override
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  @override
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  @override
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  @override
+  String get manga_ocr_engine_builtin => 'Built-in';
+  @override
+  String get manga_ocr_engine_external => 'External mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  @override
+  String get manga_ocr_wizard_run => 'Run OCR';
+  @override
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  @override
+  String get manga_ocr_wizard_importing => 'Importing…';
+  @override
+  String get manga_ocr_wizard_done => 'Manga imported';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  @override
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  @override
+  String get manga_layout_single => 'Single Page';
+  @override
+  String get manga_layout_double => 'Double Page';
+  @override
+  String get manga_layout_auto => 'Auto';
+  @override
+  String get manga_remote_ocr_engine => 'Paired host';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  @override
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  @override
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  @override
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  @override
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  @override
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  @override
+  String get manga_rescan_button => 'Box scan';
+  @override
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  @override
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  @override
+  String get manga_rescan_running => 'Recognising...';
+  @override
+  String get manga_rescan_failed => 'Recognition failed';
+  @override
+  String get manga_rescan_empty => 'No text recognised';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  @override
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  @override
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  @override
+  String get manga_rescan_local_source => 'On-device result';
+  @override
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  @override
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  @override
+  String get manga_cloud_ocr_model => 'Model name';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  @override
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  @override
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 // Path: <root>
@@ -25032,6 +25612,169 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  @override
+  String get manga_import_title => 'Import Manga';
+  @override
+  String get manga_import_pick => 'Pick .mokuro File';
+  @override
+  String get manga_import_confirm => 'Import';
+  @override
+  String get manga_import_action => 'Import Manga';
+  @override
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  @override
+  String get manga_reading_mode_spread => 'Spread';
+  @override
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  @override
+  String get manga_mode_toggle => 'Reading Mode';
+  @override
+  String get manga_ocr_section => 'Manga OCR';
+  @override
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  @override
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  @override
+  String get manga_ocr_download => 'Download models';
+  @override
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  @override
+  String get manga_ocr_download_failed => 'Model download failed';
+  @override
+  String get manga_ocr_download_done => 'Models downloaded';
+  @override
+  String get manga_ocr_delete => 'Delete models';
+  @override
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  @override
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  @override
+  String get manga_ocr_delete_done => 'Models deleted';
+  @override
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  @override
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  @override
+  String get manga_ocr_external_detect => 'Detect';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  @override
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  @override
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  @override
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  @override
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  @override
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  @override
+  String get manga_ocr_engine_builtin => 'Built-in';
+  @override
+  String get manga_ocr_engine_external => 'External mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  @override
+  String get manga_ocr_wizard_run => 'Run OCR';
+  @override
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  @override
+  String get manga_ocr_wizard_importing => 'Importing…';
+  @override
+  String get manga_ocr_wizard_done => 'Manga imported';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  @override
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  @override
+  String get manga_layout_single => 'Single Page';
+  @override
+  String get manga_layout_double => 'Double Page';
+  @override
+  String get manga_layout_auto => 'Auto';
+  @override
+  String get manga_remote_ocr_engine => 'Paired host';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  @override
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  @override
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  @override
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  @override
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  @override
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  @override
+  String get manga_rescan_button => 'Box scan';
+  @override
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  @override
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  @override
+  String get manga_rescan_running => 'Recognising...';
+  @override
+  String get manga_rescan_failed => 'Recognition failed';
+  @override
+  String get manga_rescan_empty => 'No text recognised';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  @override
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  @override
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  @override
+  String get manga_rescan_local_source => 'On-device result';
+  @override
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  @override
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  @override
+  String get manga_cloud_ocr_model => 'Model name';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  @override
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  @override
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 // Path: <root>
@@ -30458,6 +31201,169 @@ class _StringsId extends _StringsEn {
   @override
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  @override
+  String get manga_import_title => 'Import Manga';
+  @override
+  String get manga_import_pick => 'Pick .mokuro File';
+  @override
+  String get manga_import_confirm => 'Import';
+  @override
+  String get manga_import_action => 'Import Manga';
+  @override
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  @override
+  String get manga_reading_mode_spread => 'Spread';
+  @override
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  @override
+  String get manga_mode_toggle => 'Reading Mode';
+  @override
+  String get manga_ocr_section => 'Manga OCR';
+  @override
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  @override
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  @override
+  String get manga_ocr_download => 'Download models';
+  @override
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  @override
+  String get manga_ocr_download_failed => 'Model download failed';
+  @override
+  String get manga_ocr_download_done => 'Models downloaded';
+  @override
+  String get manga_ocr_delete => 'Delete models';
+  @override
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  @override
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  @override
+  String get manga_ocr_delete_done => 'Models deleted';
+  @override
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  @override
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  @override
+  String get manga_ocr_external_detect => 'Detect';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  @override
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  @override
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  @override
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  @override
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  @override
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  @override
+  String get manga_ocr_engine_builtin => 'Built-in';
+  @override
+  String get manga_ocr_engine_external => 'External mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  @override
+  String get manga_ocr_wizard_run => 'Run OCR';
+  @override
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  @override
+  String get manga_ocr_wizard_importing => 'Importing…';
+  @override
+  String get manga_ocr_wizard_done => 'Manga imported';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  @override
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  @override
+  String get manga_layout_single => 'Single Page';
+  @override
+  String get manga_layout_double => 'Double Page';
+  @override
+  String get manga_layout_auto => 'Auto';
+  @override
+  String get manga_remote_ocr_engine => 'Paired host';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  @override
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  @override
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  @override
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  @override
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  @override
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  @override
+  String get manga_rescan_button => 'Box scan';
+  @override
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  @override
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  @override
+  String get manga_rescan_running => 'Recognising...';
+  @override
+  String get manga_rescan_failed => 'Recognition failed';
+  @override
+  String get manga_rescan_empty => 'No text recognised';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  @override
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  @override
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  @override
+  String get manga_rescan_local_source => 'On-device result';
+  @override
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  @override
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  @override
+  String get manga_cloud_ocr_model => 'Model name';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  @override
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  @override
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 // Path: <root>
@@ -35932,6 +36838,169 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  @override
+  String get manga_import_title => 'Import Manga';
+  @override
+  String get manga_import_pick => 'Pick .mokuro File';
+  @override
+  String get manga_import_confirm => 'Import';
+  @override
+  String get manga_import_action => 'Import Manga';
+  @override
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  @override
+  String get manga_reading_mode_spread => 'Spread';
+  @override
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  @override
+  String get manga_mode_toggle => 'Reading Mode';
+  @override
+  String get manga_ocr_section => 'Manga OCR';
+  @override
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  @override
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  @override
+  String get manga_ocr_download => 'Download models';
+  @override
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  @override
+  String get manga_ocr_download_failed => 'Model download failed';
+  @override
+  String get manga_ocr_download_done => 'Models downloaded';
+  @override
+  String get manga_ocr_delete => 'Delete models';
+  @override
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  @override
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  @override
+  String get manga_ocr_delete_done => 'Models deleted';
+  @override
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  @override
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  @override
+  String get manga_ocr_external_detect => 'Detect';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  @override
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  @override
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  @override
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  @override
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  @override
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  @override
+  String get manga_ocr_engine_builtin => 'Built-in';
+  @override
+  String get manga_ocr_engine_external => 'External mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  @override
+  String get manga_ocr_wizard_run => 'Run OCR';
+  @override
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  @override
+  String get manga_ocr_wizard_importing => 'Importing…';
+  @override
+  String get manga_ocr_wizard_done => 'Manga imported';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  @override
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  @override
+  String get manga_layout_single => 'Single Page';
+  @override
+  String get manga_layout_double => 'Double Page';
+  @override
+  String get manga_layout_auto => 'Auto';
+  @override
+  String get manga_remote_ocr_engine => 'Paired host';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  @override
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  @override
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  @override
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  @override
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  @override
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  @override
+  String get manga_rescan_button => 'Box scan';
+  @override
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  @override
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  @override
+  String get manga_rescan_running => 'Recognising...';
+  @override
+  String get manga_rescan_failed => 'Recognition failed';
+  @override
+  String get manga_rescan_empty => 'No text recognised';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  @override
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  @override
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  @override
+  String get manga_rescan_local_source => 'On-device result';
+  @override
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  @override
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  @override
+  String get manga_cloud_ocr_model => 'Model name';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  @override
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  @override
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 // Path: <root>
@@ -41211,6 +42280,169 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  @override
+  String get manga_import_title => 'Import Manga';
+  @override
+  String get manga_import_pick => 'Pick .mokuro File';
+  @override
+  String get manga_import_confirm => 'Import';
+  @override
+  String get manga_import_action => 'Import Manga';
+  @override
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  @override
+  String get manga_reading_mode_spread => 'Spread';
+  @override
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  @override
+  String get manga_mode_toggle => 'Reading Mode';
+  @override
+  String get manga_ocr_section => 'Manga OCR';
+  @override
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  @override
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  @override
+  String get manga_ocr_download => 'Download models';
+  @override
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  @override
+  String get manga_ocr_download_failed => 'Model download failed';
+  @override
+  String get manga_ocr_download_done => 'Models downloaded';
+  @override
+  String get manga_ocr_delete => 'Delete models';
+  @override
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  @override
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  @override
+  String get manga_ocr_delete_done => 'Models deleted';
+  @override
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  @override
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  @override
+  String get manga_ocr_external_detect => 'Detect';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  @override
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  @override
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  @override
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  @override
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  @override
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  @override
+  String get manga_ocr_engine_builtin => 'Built-in';
+  @override
+  String get manga_ocr_engine_external => 'External mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  @override
+  String get manga_ocr_wizard_run => 'Run OCR';
+  @override
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  @override
+  String get manga_ocr_wizard_importing => 'Importing…';
+  @override
+  String get manga_ocr_wizard_done => 'Manga imported';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  @override
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  @override
+  String get manga_layout_single => 'Single Page';
+  @override
+  String get manga_layout_double => 'Double Page';
+  @override
+  String get manga_layout_auto => 'Auto';
+  @override
+  String get manga_remote_ocr_engine => 'Paired host';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  @override
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  @override
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  @override
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  @override
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  @override
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  @override
+  String get manga_rescan_button => 'Box scan';
+  @override
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  @override
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  @override
+  String get manga_rescan_running => 'Recognising...';
+  @override
+  String get manga_rescan_failed => 'Recognition failed';
+  @override
+  String get manga_rescan_empty => 'No text recognised';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  @override
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  @override
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  @override
+  String get manga_rescan_local_source => 'On-device result';
+  @override
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  @override
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  @override
+  String get manga_cloud_ocr_model => 'Model name';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  @override
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  @override
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 // Path: <root>
@@ -46493,6 +47725,169 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  @override
+  String get manga_import_title => 'Import Manga';
+  @override
+  String get manga_import_pick => 'Pick .mokuro File';
+  @override
+  String get manga_import_confirm => 'Import';
+  @override
+  String get manga_import_action => 'Import Manga';
+  @override
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  @override
+  String get manga_reading_mode_spread => 'Spread';
+  @override
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  @override
+  String get manga_mode_toggle => 'Reading Mode';
+  @override
+  String get manga_ocr_section => 'Manga OCR';
+  @override
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  @override
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  @override
+  String get manga_ocr_download => 'Download models';
+  @override
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  @override
+  String get manga_ocr_download_failed => 'Model download failed';
+  @override
+  String get manga_ocr_download_done => 'Models downloaded';
+  @override
+  String get manga_ocr_delete => 'Delete models';
+  @override
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  @override
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  @override
+  String get manga_ocr_delete_done => 'Models deleted';
+  @override
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  @override
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  @override
+  String get manga_ocr_external_detect => 'Detect';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  @override
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  @override
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  @override
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  @override
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  @override
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  @override
+  String get manga_ocr_engine_builtin => 'Built-in';
+  @override
+  String get manga_ocr_engine_external => 'External mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  @override
+  String get manga_ocr_wizard_run => 'Run OCR';
+  @override
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  @override
+  String get manga_ocr_wizard_importing => 'Importing…';
+  @override
+  String get manga_ocr_wizard_done => 'Manga imported';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  @override
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  @override
+  String get manga_layout_single => 'Single Page';
+  @override
+  String get manga_layout_double => 'Double Page';
+  @override
+  String get manga_layout_auto => 'Auto';
+  @override
+  String get manga_remote_ocr_engine => 'Paired host';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  @override
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  @override
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  @override
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  @override
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  @override
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  @override
+  String get manga_rescan_button => 'Box scan';
+  @override
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  @override
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  @override
+  String get manga_rescan_running => 'Recognising...';
+  @override
+  String get manga_rescan_failed => 'Recognition failed';
+  @override
+  String get manga_rescan_empty => 'No text recognised';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  @override
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  @override
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  @override
+  String get manga_rescan_local_source => 'On-device result';
+  @override
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  @override
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  @override
+  String get manga_cloud_ocr_model => 'Model name';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  @override
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  @override
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 // Path: <root>
@@ -51945,6 +53340,169 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  @override
+  String get manga_import_title => 'Import Manga';
+  @override
+  String get manga_import_pick => 'Pick .mokuro File';
+  @override
+  String get manga_import_confirm => 'Import';
+  @override
+  String get manga_import_action => 'Import Manga';
+  @override
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  @override
+  String get manga_reading_mode_spread => 'Spread';
+  @override
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  @override
+  String get manga_mode_toggle => 'Reading Mode';
+  @override
+  String get manga_ocr_section => 'Manga OCR';
+  @override
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  @override
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  @override
+  String get manga_ocr_download => 'Download models';
+  @override
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  @override
+  String get manga_ocr_download_failed => 'Model download failed';
+  @override
+  String get manga_ocr_download_done => 'Models downloaded';
+  @override
+  String get manga_ocr_delete => 'Delete models';
+  @override
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  @override
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  @override
+  String get manga_ocr_delete_done => 'Models deleted';
+  @override
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  @override
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  @override
+  String get manga_ocr_external_detect => 'Detect';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  @override
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  @override
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  @override
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  @override
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  @override
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  @override
+  String get manga_ocr_engine_builtin => 'Built-in';
+  @override
+  String get manga_ocr_engine_external => 'External mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  @override
+  String get manga_ocr_wizard_run => 'Run OCR';
+  @override
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  @override
+  String get manga_ocr_wizard_importing => 'Importing…';
+  @override
+  String get manga_ocr_wizard_done => 'Manga imported';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  @override
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  @override
+  String get manga_layout_single => 'Single Page';
+  @override
+  String get manga_layout_double => 'Double Page';
+  @override
+  String get manga_layout_auto => 'Auto';
+  @override
+  String get manga_remote_ocr_engine => 'Paired host';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  @override
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  @override
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  @override
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  @override
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  @override
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  @override
+  String get manga_rescan_button => 'Box scan';
+  @override
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  @override
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  @override
+  String get manga_rescan_running => 'Recognising...';
+  @override
+  String get manga_rescan_failed => 'Recognition failed';
+  @override
+  String get manga_rescan_empty => 'No text recognised';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  @override
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  @override
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  @override
+  String get manga_rescan_local_source => 'On-device result';
+  @override
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  @override
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  @override
+  String get manga_cloud_ocr_model => 'Model name';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  @override
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  @override
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 // Path: <root>
@@ -57412,6 +58970,169 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  @override
+  String get manga_import_title => 'Import Manga';
+  @override
+  String get manga_import_pick => 'Pick .mokuro File';
+  @override
+  String get manga_import_confirm => 'Import';
+  @override
+  String get manga_import_action => 'Import Manga';
+  @override
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  @override
+  String get manga_reading_mode_spread => 'Spread';
+  @override
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  @override
+  String get manga_mode_toggle => 'Reading Mode';
+  @override
+  String get manga_ocr_section => 'Manga OCR';
+  @override
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  @override
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  @override
+  String get manga_ocr_download => 'Download models';
+  @override
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  @override
+  String get manga_ocr_download_failed => 'Model download failed';
+  @override
+  String get manga_ocr_download_done => 'Models downloaded';
+  @override
+  String get manga_ocr_delete => 'Delete models';
+  @override
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  @override
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  @override
+  String get manga_ocr_delete_done => 'Models deleted';
+  @override
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  @override
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  @override
+  String get manga_ocr_external_detect => 'Detect';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  @override
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  @override
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  @override
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  @override
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  @override
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  @override
+  String get manga_ocr_engine_builtin => 'Built-in';
+  @override
+  String get manga_ocr_engine_external => 'External mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  @override
+  String get manga_ocr_wizard_run => 'Run OCR';
+  @override
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  @override
+  String get manga_ocr_wizard_importing => 'Importing…';
+  @override
+  String get manga_ocr_wizard_done => 'Manga imported';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  @override
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  @override
+  String get manga_layout_single => 'Single Page';
+  @override
+  String get manga_layout_double => 'Double Page';
+  @override
+  String get manga_layout_auto => 'Auto';
+  @override
+  String get manga_remote_ocr_engine => 'Paired host';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  @override
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  @override
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  @override
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  @override
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  @override
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  @override
+  String get manga_rescan_button => 'Box scan';
+  @override
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  @override
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  @override
+  String get manga_rescan_running => 'Recognising...';
+  @override
+  String get manga_rescan_failed => 'Recognition failed';
+  @override
+  String get manga_rescan_empty => 'No text recognised';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  @override
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  @override
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  @override
+  String get manga_rescan_local_source => 'On-device result';
+  @override
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  @override
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  @override
+  String get manga_cloud_ocr_model => 'Model name';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  @override
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  @override
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 // Path: <root>
@@ -62862,6 +64583,169 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  @override
+  String get manga_import_title => 'Import Manga';
+  @override
+  String get manga_import_pick => 'Pick .mokuro File';
+  @override
+  String get manga_import_confirm => 'Import';
+  @override
+  String get manga_import_action => 'Import Manga';
+  @override
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  @override
+  String get manga_reading_mode_spread => 'Spread';
+  @override
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  @override
+  String get manga_mode_toggle => 'Reading Mode';
+  @override
+  String get manga_ocr_section => 'Manga OCR';
+  @override
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  @override
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  @override
+  String get manga_ocr_download => 'Download models';
+  @override
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  @override
+  String get manga_ocr_download_failed => 'Model download failed';
+  @override
+  String get manga_ocr_download_done => 'Models downloaded';
+  @override
+  String get manga_ocr_delete => 'Delete models';
+  @override
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  @override
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  @override
+  String get manga_ocr_delete_done => 'Models deleted';
+  @override
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  @override
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  @override
+  String get manga_ocr_external_detect => 'Detect';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  @override
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  @override
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  @override
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  @override
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  @override
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  @override
+  String get manga_ocr_engine_builtin => 'Built-in';
+  @override
+  String get manga_ocr_engine_external => 'External mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  @override
+  String get manga_ocr_wizard_run => 'Run OCR';
+  @override
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  @override
+  String get manga_ocr_wizard_importing => 'Importing…';
+  @override
+  String get manga_ocr_wizard_done => 'Manga imported';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  @override
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  @override
+  String get manga_layout_single => 'Single Page';
+  @override
+  String get manga_layout_double => 'Double Page';
+  @override
+  String get manga_layout_auto => 'Auto';
+  @override
+  String get manga_remote_ocr_engine => 'Paired host';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  @override
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  @override
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  @override
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  @override
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  @override
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  @override
+  String get manga_rescan_button => 'Box scan';
+  @override
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  @override
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  @override
+  String get manga_rescan_running => 'Recognising...';
+  @override
+  String get manga_rescan_failed => 'Recognition failed';
+  @override
+  String get manga_rescan_empty => 'No text recognised';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  @override
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  @override
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  @override
+  String get manga_rescan_local_source => 'On-device result';
+  @override
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  @override
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  @override
+  String get manga_cloud_ocr_model => 'Model name';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  @override
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  @override
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 // Path: <root>
@@ -68257,6 +70141,169 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  @override
+  String get manga_import_title => 'Import Manga';
+  @override
+  String get manga_import_pick => 'Pick .mokuro File';
+  @override
+  String get manga_import_confirm => 'Import';
+  @override
+  String get manga_import_action => 'Import Manga';
+  @override
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  @override
+  String get manga_reading_mode_spread => 'Spread';
+  @override
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  @override
+  String get manga_mode_toggle => 'Reading Mode';
+  @override
+  String get manga_ocr_section => 'Manga OCR';
+  @override
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  @override
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  @override
+  String get manga_ocr_download => 'Download models';
+  @override
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  @override
+  String get manga_ocr_download_failed => 'Model download failed';
+  @override
+  String get manga_ocr_download_done => 'Models downloaded';
+  @override
+  String get manga_ocr_delete => 'Delete models';
+  @override
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  @override
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  @override
+  String get manga_ocr_delete_done => 'Models deleted';
+  @override
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  @override
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  @override
+  String get manga_ocr_external_detect => 'Detect';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  @override
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  @override
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  @override
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  @override
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  @override
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  @override
+  String get manga_ocr_engine_builtin => 'Built-in';
+  @override
+  String get manga_ocr_engine_external => 'External mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  @override
+  String get manga_ocr_wizard_run => 'Run OCR';
+  @override
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  @override
+  String get manga_ocr_wizard_importing => 'Importing…';
+  @override
+  String get manga_ocr_wizard_done => 'Manga imported';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  @override
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  @override
+  String get manga_layout_single => 'Single Page';
+  @override
+  String get manga_layout_double => 'Double Page';
+  @override
+  String get manga_layout_auto => 'Auto';
+  @override
+  String get manga_remote_ocr_engine => 'Paired host';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  @override
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  @override
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  @override
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  @override
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  @override
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  @override
+  String get manga_rescan_button => 'Box scan';
+  @override
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  @override
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  @override
+  String get manga_rescan_running => 'Recognising...';
+  @override
+  String get manga_rescan_failed => 'Recognition failed';
+  @override
+  String get manga_rescan_empty => 'No text recognised';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  @override
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  @override
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  @override
+  String get manga_rescan_local_source => 'On-device result';
+  @override
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  @override
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  @override
+  String get manga_cloud_ocr_model => 'Model name';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  @override
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  @override
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 // Path: <root>
@@ -73684,6 +75731,169 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  @override
+  String get manga_import_title => 'Import Manga';
+  @override
+  String get manga_import_pick => 'Pick .mokuro File';
+  @override
+  String get manga_import_confirm => 'Import';
+  @override
+  String get manga_import_action => 'Import Manga';
+  @override
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  @override
+  String get manga_reading_mode_spread => 'Spread';
+  @override
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  @override
+  String get manga_mode_toggle => 'Reading Mode';
+  @override
+  String get manga_ocr_section => 'Manga OCR';
+  @override
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  @override
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  @override
+  String get manga_ocr_download => 'Download models';
+  @override
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  @override
+  String get manga_ocr_download_failed => 'Model download failed';
+  @override
+  String get manga_ocr_download_done => 'Models downloaded';
+  @override
+  String get manga_ocr_delete => 'Delete models';
+  @override
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  @override
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  @override
+  String get manga_ocr_delete_done => 'Models deleted';
+  @override
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  @override
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  @override
+  String get manga_ocr_external_detect => 'Detect';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  @override
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  @override
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  @override
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  @override
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  @override
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  @override
+  String get manga_ocr_engine_builtin => 'Built-in';
+  @override
+  String get manga_ocr_engine_external => 'External mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  @override
+  String get manga_ocr_wizard_run => 'Run OCR';
+  @override
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  @override
+  String get manga_ocr_wizard_importing => 'Importing…';
+  @override
+  String get manga_ocr_wizard_done => 'Manga imported';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  @override
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  @override
+  String get manga_layout_single => 'Single Page';
+  @override
+  String get manga_layout_double => 'Double Page';
+  @override
+  String get manga_layout_auto => 'Auto';
+  @override
+  String get manga_remote_ocr_engine => 'Paired host';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  @override
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  @override
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  @override
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  @override
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  @override
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  @override
+  String get manga_rescan_button => 'Box scan';
+  @override
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  @override
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  @override
+  String get manga_rescan_running => 'Recognising...';
+  @override
+  String get manga_rescan_failed => 'Recognition failed';
+  @override
+  String get manga_rescan_empty => 'No text recognised';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  @override
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  @override
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  @override
+  String get manga_rescan_local_source => 'On-device result';
+  @override
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  @override
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  @override
+  String get manga_cloud_ocr_model => 'Model name';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  @override
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  @override
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 // Path: <root>
@@ -79098,6 +81308,169 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  @override
+  String get manga_import_title => 'Import Manga';
+  @override
+  String get manga_import_pick => 'Pick .mokuro File';
+  @override
+  String get manga_import_confirm => 'Import';
+  @override
+  String get manga_import_action => 'Import Manga';
+  @override
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  @override
+  String get manga_reading_mode_spread => 'Spread';
+  @override
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  @override
+  String get manga_mode_toggle => 'Reading Mode';
+  @override
+  String get manga_ocr_section => 'Manga OCR';
+  @override
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  @override
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  @override
+  String get manga_ocr_download => 'Download models';
+  @override
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  @override
+  String get manga_ocr_download_failed => 'Model download failed';
+  @override
+  String get manga_ocr_download_done => 'Models downloaded';
+  @override
+  String get manga_ocr_delete => 'Delete models';
+  @override
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  @override
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  @override
+  String get manga_ocr_delete_done => 'Models deleted';
+  @override
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  @override
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  @override
+  String get manga_ocr_external_detect => 'Detect';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  @override
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  @override
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  @override
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  @override
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  @override
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  @override
+  String get manga_ocr_engine_builtin => 'Built-in';
+  @override
+  String get manga_ocr_engine_external => 'External mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  @override
+  String get manga_ocr_wizard_run => 'Run OCR';
+  @override
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  @override
+  String get manga_ocr_wizard_importing => 'Importing…';
+  @override
+  String get manga_ocr_wizard_done => 'Manga imported';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  @override
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  @override
+  String get manga_layout_single => 'Single Page';
+  @override
+  String get manga_layout_double => 'Double Page';
+  @override
+  String get manga_layout_auto => 'Auto';
+  @override
+  String get manga_remote_ocr_engine => 'Paired host';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  @override
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  @override
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  @override
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  @override
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  @override
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  @override
+  String get manga_rescan_button => 'Box scan';
+  @override
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  @override
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  @override
+  String get manga_rescan_running => 'Recognising...';
+  @override
+  String get manga_rescan_failed => 'Recognition failed';
+  @override
+  String get manga_rescan_empty => 'No text recognised';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  @override
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  @override
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  @override
+  String get manga_rescan_local_source => 'On-device result';
+  @override
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  @override
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  @override
+  String get manga_cloud_ocr_model => 'Model name';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  @override
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  @override
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 // Path: <root>
@@ -84134,6 +86507,157 @@ class _StringsZhCn extends _StringsEn {
   String get video_danmaku_manual_bind_server_error => '弹幕服务器拒绝了请求，请稍后重试';
   @override
   String get video_danmaku_manual_bind_empty => '这一集还没有弹幕';
+  @override
+  String get manga_import_title => '导入漫画';
+  @override
+  String get manga_import_pick => '选择 .mokuro 文件';
+  @override
+  String get manga_import_confirm => '导入';
+  @override
+  String get manga_import_action => '导入漫画';
+  @override
+  String get manga_invalid_import => '不是有效的 Mokuro 漫画文件夹';
+  @override
+  String get manga_reading_mode_spread => '翻页';
+  @override
+  String get manga_reading_mode_webtoon => '条漫';
+  @override
+  String get manga_mode_toggle => '阅读模式';
+  @override
+  String get manga_ocr_section => '漫画 OCR';
+  @override
+  String get manga_ocr_section_summary => '内置 OCR 模型与外部 mokuro 命令行';
+  @override
+  String get manga_ocr_unsupported => '内置漫画 OCR 暂不支持当前平台。';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR 模型已就绪';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR 模型未下载';
+  @override
+  String get manga_ocr_download => '下载模型';
+  @override
+  String manga_ocr_downloading_file({required Object file}) => '正在下载 ${file}…';
+  @override
+  String get manga_ocr_download_failed => '模型下载失败';
+  @override
+  String get manga_ocr_download_done => '模型下载完成';
+  @override
+  String get manga_ocr_delete => '删除模型';
+  @override
+  String get manga_ocr_delete_confirm_title => '删除 OCR 模型？';
+  @override
+  String get manga_ocr_delete_confirm_message => '这将释放磁盘空间，之后可再次下载。';
+  @override
+  String get manga_ocr_delete_done => '模型已删除';
+  @override
+  String get manga_ocr_external_cli_label => '外部 mokuro 命令行路径';
+  @override
+  String get manga_ocr_external_cli_hint => '留空则自动探测（HIBIKI_MOKURO / PATH）';
+  @override
+  String get manga_ocr_external_detect => '检测';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      '已检测到：${version}';
+  @override
+  String get manga_ocr_external_not_found => '未找到 mokuro';
+  @override
+  String get manga_ocr_wizard_title => 'OCR 导入漫画';
+  @override
+  String get manga_ocr_wizard_pick_folder => '选择图片文件夹';
+  @override
+  String get manga_ocr_wizard_no_images => '此文件夹中没有找到图片。';
+  @override
+  String get manga_ocr_wizard_has_mokuro => '此文件夹已有 .mokuro 文件，请直接用普通导入。';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR 引擎';
+  @override
+  String get manga_ocr_engine_builtin => '内置';
+  @override
+  String get manga_ocr_engine_external => '外部 mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      '没有可用的 OCR 引擎。请在设置中下载内置模型或配置 mokuro 命令行路径。';
+  @override
+  String get manga_ocr_wizard_run => '开始 OCR';
+  @override
+  String get manga_ocr_wizard_running => '正在识别…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      '第 ${done} / ${total} 页';
+  @override
+  String get manga_ocr_wizard_importing => '正在导入…';
+  @override
+  String get manga_ocr_wizard_done => '漫画已导入';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR 失败';
+  @override
+  String get manga_ocr_wizard_title_label => '标题（可选）';
+  @override
+  String get manga_layout_single => '单页';
+  @override
+  String get manga_layout_double => '双页';
+  @override
+  String get manga_layout_auto => '自动';
+  @override
+  String get manga_remote_ocr_engine => '已配对主机';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      '正在上传页面 ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => '已配对主机正在识别…';
+  @override
+  String get manga_remote_ocr_not_ready => '已配对主机的 OCR 模型未下载，请先在主机上下载模型。';
+  @override
+  String get manga_remote_ocr_unsupported => '已配对主机不支持漫画 OCR。';
+  @override
+  String get manga_remote_ocr_no_host => '没有可用的支持漫画 OCR 的已配对主机。';
+  @override
+  String get manga_remote_ocr_failed => '远程 OCR 失败';
+  @override
+  String get manga_remote_ocr_cancelled => '主机侧已取消远程 OCR。';
+  @override
+  String get manga_rescan_button => '框选识别';
+  @override
+  String get manga_rescan_model_missing => '识别模型未下载，请到「设置 > 漫画 OCR」下载';
+  @override
+  String get manga_rescan_mode_hint => '拖动框选要识别的区域';
+  @override
+  String get manga_rescan_running => '识别中…';
+  @override
+  String get manga_rescan_failed => '识别失败';
+  @override
+  String get manga_rescan_empty => '未识别出文字';
+  @override
+  String get manga_rescan_lookup => '查词';
+  @override
+  String get manga_rescan_writeback => '回写本页';
+  @override
+  String get manga_rescan_writeback_done => '已回写本页';
+  @override
+  String get manga_rescan_writeback_failed => '回写失败';
+  @override
+  String get manga_rescan_cloud_retry => '云端重试';
+  @override
+  String get manga_rescan_cloud_source => '云端识别结果（Gemini）';
+  @override
+  String get manga_rescan_local_source => '本地识别结果';
+  @override
+  String get manga_cloud_ocr_section => '云端手写识别（Gemini）';
+  @override
+  String get manga_cloud_ocr_enabled => '启用云端识别';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API Key';
+  @override
+  String get manga_cloud_ocr_model => '模型名';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      '点击「云端重试」时，所选图片区域将用你自备的 API Key 发送至 Google Gemini API；仅在你手动触发时才会上传。';
+  @override
+  String get manga_cloud_ocr_failed => '云端识别失败';
+  @override
+  String get manga_ocr_mobile_note => '移动端下载的模型用于漫画阅读页的框选识别。';
 }
 
 // Path: <root>
@@ -89331,6 +91855,169 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_danmaku_manual_bind_empty =>
       'No danmaku for this episode yet.';
+  @override
+  String get manga_import_title => 'Import Manga';
+  @override
+  String get manga_import_pick => 'Pick .mokuro File';
+  @override
+  String get manga_import_confirm => 'Import';
+  @override
+  String get manga_import_action => 'Import Manga';
+  @override
+  String get manga_invalid_import => 'Not a valid Mokuro manga folder';
+  @override
+  String get manga_reading_mode_spread => 'Spread';
+  @override
+  String get manga_reading_mode_webtoon => 'Webtoon';
+  @override
+  String get manga_mode_toggle => 'Reading Mode';
+  @override
+  String get manga_ocr_section => 'Manga OCR';
+  @override
+  String get manga_ocr_section_summary =>
+      'Built-in OCR models and external mokuro CLI';
+  @override
+  String get manga_ocr_unsupported =>
+      'Built-in manga OCR isn\'t available on this platform yet.';
+  @override
+  String get manga_ocr_model_status_ready => 'OCR models ready';
+  @override
+  String get manga_ocr_model_status_missing => 'OCR models not downloaded';
+  @override
+  String get manga_ocr_download => 'Download models';
+  @override
+  String manga_ocr_downloading_file({required Object file}) =>
+      'Downloading ${file}…';
+  @override
+  String get manga_ocr_download_failed => 'Model download failed';
+  @override
+  String get manga_ocr_download_done => 'Models downloaded';
+  @override
+  String get manga_ocr_delete => 'Delete models';
+  @override
+  String get manga_ocr_delete_confirm_title => 'Delete OCR models?';
+  @override
+  String get manga_ocr_delete_confirm_message =>
+      'This frees disk space. You can download them again later.';
+  @override
+  String get manga_ocr_delete_done => 'Models deleted';
+  @override
+  String get manga_ocr_external_cli_label => 'External mokuro CLI path';
+  @override
+  String get manga_ocr_external_cli_hint =>
+      'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+  @override
+  String get manga_ocr_external_detect => 'Detect';
+  @override
+  String manga_ocr_external_detected({required Object version}) =>
+      'Detected: ${version}';
+  @override
+  String get manga_ocr_external_not_found => 'mokuro not found';
+  @override
+  String get manga_ocr_wizard_title => 'OCR import manga';
+  @override
+  String get manga_ocr_wizard_pick_folder => 'Choose image folder';
+  @override
+  String get manga_ocr_wizard_no_images => 'No images found in this folder.';
+  @override
+  String get manga_ocr_wizard_has_mokuro =>
+      'This folder already has a .mokuro file — use normal import instead.';
+  @override
+  String get manga_ocr_wizard_engine => 'OCR engine';
+  @override
+  String get manga_ocr_engine_builtin => 'Built-in';
+  @override
+  String get manga_ocr_engine_external => 'External mokuro';
+  @override
+  String get manga_ocr_engine_none =>
+      'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+  @override
+  String get manga_ocr_wizard_run => 'Run OCR';
+  @override
+  String get manga_ocr_wizard_running => 'Running OCR…';
+  @override
+  String manga_ocr_wizard_page_progress(
+          {required Object done, required Object total}) =>
+      'Page ${done} / ${total}';
+  @override
+  String get manga_ocr_wizard_importing => 'Importing…';
+  @override
+  String get manga_ocr_wizard_done => 'Manga imported';
+  @override
+  String get manga_ocr_wizard_failed => 'OCR failed';
+  @override
+  String get manga_ocr_wizard_title_label => 'Title (optional)';
+  @override
+  String get manga_layout_single => 'Single Page';
+  @override
+  String get manga_layout_double => 'Double Page';
+  @override
+  String get manga_layout_auto => 'Auto';
+  @override
+  String get manga_remote_ocr_engine => 'Paired host';
+  @override
+  String manga_remote_ocr_uploading(
+          {required Object done, required Object total}) =>
+      'Uploading pages ${done} / ${total}…';
+  @override
+  String get manga_remote_ocr_running => 'Paired host is running OCR…';
+  @override
+  String get manga_remote_ocr_not_ready =>
+      'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+  @override
+  String get manga_remote_ocr_unsupported =>
+      'The paired host does not support manga OCR.';
+  @override
+  String get manga_remote_ocr_no_host =>
+      'No paired host with manga OCR is reachable.';
+  @override
+  String get manga_remote_ocr_failed => 'Remote OCR failed';
+  @override
+  String get manga_remote_ocr_cancelled =>
+      'Remote OCR was cancelled on the host.';
+  @override
+  String get manga_rescan_button => 'Box scan';
+  @override
+  String get manga_rescan_model_missing =>
+      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+  @override
+  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
+  @override
+  String get manga_rescan_running => 'Recognising...';
+  @override
+  String get manga_rescan_failed => 'Recognition failed';
+  @override
+  String get manga_rescan_empty => 'No text recognised';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to this page';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to page';
+  @override
+  String get manga_rescan_cloud_retry => 'Cloud retry';
+  @override
+  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
+  @override
+  String get manga_rescan_local_source => 'On-device result';
+  @override
+  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
+  @override
+  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
+  @override
+  String get manga_cloud_ocr_api_key => 'Gemini API key';
+  @override
+  String get manga_cloud_ocr_model => 'Model name';
+  @override
+  String get manga_cloud_ocr_privacy =>
+      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+  @override
+  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
+  @override
+  String get manga_ocr_mobile_note =>
+      'On mobile, the recognition model powers box scan in the manga reader.';
 }
 
 /// Flat map(s) containing all translations.
@@ -94193,6 +96880,152 @@ extension on _StringsEn {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
@@ -99053,6 +101886,152 @@ extension on _StringsAr {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
@@ -103934,6 +106913,152 @@ extension on _StringsDe {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
@@ -108814,6 +111939,152 @@ extension on _StringsEs {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
@@ -113700,6 +116971,152 @@ extension on _StringsFr {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
@@ -118568,6 +121985,152 @@ extension on _StringsId {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
@@ -123451,6 +127014,152 @@ extension on _StringsIt {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
@@ -128296,6 +132005,152 @@ extension on _StringsJa {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
@@ -133145,6 +137000,152 @@ extension on _StringsKo {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
@@ -138021,6 +142022,152 @@ extension on _StringsNl {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
@@ -142894,6 +147041,152 @@ extension on _StringsPtBr {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
@@ -147772,6 +152065,152 @@ extension on _StringsRu {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
@@ -152634,6 +157073,152 @@ extension on _StringsTh {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
@@ -157505,6 +162090,152 @@ extension on _StringsTr {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
@@ -162371,6 +167102,152 @@ extension on _StringsVi {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
@@ -167198,6 +172075,152 @@ extension on _StringsZhCn {
         return '弹幕服务器拒绝了请求，请稍后重试';
       case 'video_danmaku_manual_bind_empty':
         return '这一集还没有弹幕';
+      case 'manga_import_title':
+        return '导入漫画';
+      case 'manga_import_pick':
+        return '选择 .mokuro 文件';
+      case 'manga_import_confirm':
+        return '导入';
+      case 'manga_import_action':
+        return '导入漫画';
+      case 'manga_invalid_import':
+        return '不是有效的 Mokuro 漫画文件夹';
+      case 'manga_reading_mode_spread':
+        return '翻页';
+      case 'manga_reading_mode_webtoon':
+        return '条漫';
+      case 'manga_mode_toggle':
+        return '阅读模式';
+      case 'manga_ocr_section':
+        return '漫画 OCR';
+      case 'manga_ocr_section_summary':
+        return '内置 OCR 模型与外部 mokuro 命令行';
+      case 'manga_ocr_unsupported':
+        return '内置漫画 OCR 暂不支持当前平台。';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR 模型已就绪';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR 模型未下载';
+      case 'manga_ocr_download':
+        return '下载模型';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => '正在下载 ${file}…';
+      case 'manga_ocr_download_failed':
+        return '模型下载失败';
+      case 'manga_ocr_download_done':
+        return '模型下载完成';
+      case 'manga_ocr_delete':
+        return '删除模型';
+      case 'manga_ocr_delete_confirm_title':
+        return '删除 OCR 模型？';
+      case 'manga_ocr_delete_confirm_message':
+        return '这将释放磁盘空间，之后可再次下载。';
+      case 'manga_ocr_delete_done':
+        return '模型已删除';
+      case 'manga_ocr_external_cli_label':
+        return '外部 mokuro 命令行路径';
+      case 'manga_ocr_external_cli_hint':
+        return '留空则自动探测（HIBIKI_MOKURO / PATH）';
+      case 'manga_ocr_external_detect':
+        return '检测';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => '已检测到：${version}';
+      case 'manga_ocr_external_not_found':
+        return '未找到 mokuro';
+      case 'manga_ocr_wizard_title':
+        return 'OCR 导入漫画';
+      case 'manga_ocr_wizard_pick_folder':
+        return '选择图片文件夹';
+      case 'manga_ocr_wizard_no_images':
+        return '此文件夹中没有找到图片。';
+      case 'manga_ocr_wizard_has_mokuro':
+        return '此文件夹已有 .mokuro 文件，请直接用普通导入。';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR 引擎';
+      case 'manga_ocr_engine_builtin':
+        return '内置';
+      case 'manga_ocr_engine_external':
+        return '外部 mokuro';
+      case 'manga_ocr_engine_none':
+        return '没有可用的 OCR 引擎。请在设置中下载内置模型或配置 mokuro 命令行路径。';
+      case 'manga_ocr_wizard_run':
+        return '开始 OCR';
+      case 'manga_ocr_wizard_running':
+        return '正在识别…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            '第 ${done} / ${total} 页';
+      case 'manga_ocr_wizard_importing':
+        return '正在导入…';
+      case 'manga_ocr_wizard_done':
+        return '漫画已导入';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR 失败';
+      case 'manga_ocr_wizard_title_label':
+        return '标题（可选）';
+      case 'manga_layout_single':
+        return '单页';
+      case 'manga_layout_double':
+        return '双页';
+      case 'manga_layout_auto':
+        return '自动';
+      case 'manga_remote_ocr_engine':
+        return '已配对主机';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            '正在上传页面 ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return '已配对主机正在识别…';
+      case 'manga_remote_ocr_not_ready':
+        return '已配对主机的 OCR 模型未下载，请先在主机上下载模型。';
+      case 'manga_remote_ocr_unsupported':
+        return '已配对主机不支持漫画 OCR。';
+      case 'manga_remote_ocr_no_host':
+        return '没有可用的支持漫画 OCR 的已配对主机。';
+      case 'manga_remote_ocr_failed':
+        return '远程 OCR 失败';
+      case 'manga_remote_ocr_cancelled':
+        return '主机侧已取消远程 OCR。';
+      case 'manga_rescan_button':
+        return '框选识别';
+      case 'manga_rescan_model_missing':
+        return '识别模型未下载，请到「设置 > 漫画 OCR」下载';
+      case 'manga_rescan_mode_hint':
+        return '拖动框选要识别的区域';
+      case 'manga_rescan_running':
+        return '识别中…';
+      case 'manga_rescan_failed':
+        return '识别失败';
+      case 'manga_rescan_empty':
+        return '未识别出文字';
+      case 'manga_rescan_lookup':
+        return '查词';
+      case 'manga_rescan_writeback':
+        return '回写本页';
+      case 'manga_rescan_writeback_done':
+        return '已回写本页';
+      case 'manga_rescan_writeback_failed':
+        return '回写失败';
+      case 'manga_rescan_cloud_retry':
+        return '云端重试';
+      case 'manga_rescan_cloud_source':
+        return '云端识别结果（Gemini）';
+      case 'manga_rescan_local_source':
+        return '本地识别结果';
+      case 'manga_cloud_ocr_section':
+        return '云端手写识别（Gemini）';
+      case 'manga_cloud_ocr_enabled':
+        return '启用云端识别';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API Key';
+      case 'manga_cloud_ocr_model':
+        return '模型名';
+      case 'manga_cloud_ocr_privacy':
+        return '点击「云端重试」时，所选图片区域将用你自备的 API Key 发送至 Google Gemini API；仅在你手动触发时才会上传。';
+      case 'manga_cloud_ocr_failed':
+        return '云端识别失败';
+      case 'manga_ocr_mobile_note':
+        return '移动端下载的模型用于漫画阅读页的框选识别。';
       default:
         return null;
     }
@@ -172038,6 +177061,152 @@ extension on _StringsZhHk {
         return 'The danmaku server rejected the request. Try again later.';
       case 'video_danmaku_manual_bind_empty':
         return 'No danmaku for this episode yet.';
+      case 'manga_import_title':
+        return 'Import Manga';
+      case 'manga_import_pick':
+        return 'Pick .mokuro File';
+      case 'manga_import_confirm':
+        return 'Import';
+      case 'manga_import_action':
+        return 'Import Manga';
+      case 'manga_invalid_import':
+        return 'Not a valid Mokuro manga folder';
+      case 'manga_reading_mode_spread':
+        return 'Spread';
+      case 'manga_reading_mode_webtoon':
+        return 'Webtoon';
+      case 'manga_mode_toggle':
+        return 'Reading Mode';
+      case 'manga_ocr_section':
+        return 'Manga OCR';
+      case 'manga_ocr_section_summary':
+        return 'Built-in OCR models and external mokuro CLI';
+      case 'manga_ocr_unsupported':
+        return 'Built-in manga OCR isn\'t available on this platform yet.';
+      case 'manga_ocr_model_status_ready':
+        return 'OCR models ready';
+      case 'manga_ocr_model_status_missing':
+        return 'OCR models not downloaded';
+      case 'manga_ocr_download':
+        return 'Download models';
+      case 'manga_ocr_downloading_file':
+        return ({required Object file}) => 'Downloading ${file}…';
+      case 'manga_ocr_download_failed':
+        return 'Model download failed';
+      case 'manga_ocr_download_done':
+        return 'Models downloaded';
+      case 'manga_ocr_delete':
+        return 'Delete models';
+      case 'manga_ocr_delete_confirm_title':
+        return 'Delete OCR models?';
+      case 'manga_ocr_delete_confirm_message':
+        return 'This frees disk space. You can download them again later.';
+      case 'manga_ocr_delete_done':
+        return 'Models deleted';
+      case 'manga_ocr_external_cli_label':
+        return 'External mokuro CLI path';
+      case 'manga_ocr_external_cli_hint':
+        return 'Leave empty to auto-detect (HIBIKI_MOKURO / PATH)';
+      case 'manga_ocr_external_detect':
+        return 'Detect';
+      case 'manga_ocr_external_detected':
+        return ({required Object version}) => 'Detected: ${version}';
+      case 'manga_ocr_external_not_found':
+        return 'mokuro not found';
+      case 'manga_ocr_wizard_title':
+        return 'OCR import manga';
+      case 'manga_ocr_wizard_pick_folder':
+        return 'Choose image folder';
+      case 'manga_ocr_wizard_no_images':
+        return 'No images found in this folder.';
+      case 'manga_ocr_wizard_has_mokuro':
+        return 'This folder already has a .mokuro file — use normal import instead.';
+      case 'manga_ocr_wizard_engine':
+        return 'OCR engine';
+      case 'manga_ocr_engine_builtin':
+        return 'Built-in';
+      case 'manga_ocr_engine_external':
+        return 'External mokuro';
+      case 'manga_ocr_engine_none':
+        return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
+      case 'manga_ocr_wizard_run':
+        return 'Run OCR';
+      case 'manga_ocr_wizard_running':
+        return 'Running OCR…';
+      case 'manga_ocr_wizard_page_progress':
+        return ({required Object done, required Object total}) =>
+            'Page ${done} / ${total}';
+      case 'manga_ocr_wizard_importing':
+        return 'Importing…';
+      case 'manga_ocr_wizard_done':
+        return 'Manga imported';
+      case 'manga_ocr_wizard_failed':
+        return 'OCR failed';
+      case 'manga_ocr_wizard_title_label':
+        return 'Title (optional)';
+      case 'manga_layout_single':
+        return 'Single Page';
+      case 'manga_layout_double':
+        return 'Double Page';
+      case 'manga_layout_auto':
+        return 'Auto';
+      case 'manga_remote_ocr_engine':
+        return 'Paired host';
+      case 'manga_remote_ocr_uploading':
+        return ({required Object done, required Object total}) =>
+            'Uploading pages ${done} / ${total}…';
+      case 'manga_remote_ocr_running':
+        return 'Paired host is running OCR…';
+      case 'manga_remote_ocr_not_ready':
+        return 'The paired host\'s OCR models are not downloaded. Download them on the host first.';
+      case 'manga_remote_ocr_unsupported':
+        return 'The paired host does not support manga OCR.';
+      case 'manga_remote_ocr_no_host':
+        return 'No paired host with manga OCR is reachable.';
+      case 'manga_remote_ocr_failed':
+        return 'Remote OCR failed';
+      case 'manga_remote_ocr_cancelled':
+        return 'Remote OCR was cancelled on the host.';
+      case 'manga_rescan_button':
+        return 'Box scan';
+      case 'manga_rescan_model_missing':
+        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
+      case 'manga_rescan_mode_hint':
+        return 'Drag to select an area to recognise';
+      case 'manga_rescan_running':
+        return 'Recognising...';
+      case 'manga_rescan_failed':
+        return 'Recognition failed';
+      case 'manga_rescan_empty':
+        return 'No text recognised';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to this page';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to page';
+      case 'manga_rescan_cloud_retry':
+        return 'Cloud retry';
+      case 'manga_rescan_cloud_source':
+        return 'Cloud result (Gemini)';
+      case 'manga_rescan_local_source':
+        return 'On-device result';
+      case 'manga_cloud_ocr_section':
+        return 'Cloud handwriting OCR (Gemini)';
+      case 'manga_cloud_ocr_enabled':
+        return 'Enable cloud recognition';
+      case 'manga_cloud_ocr_api_key':
+        return 'Gemini API key';
+      case 'manga_cloud_ocr_model':
+        return 'Model name';
+      case 'manga_cloud_ocr_privacy':
+        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
+      case 'manga_cloud_ocr_failed':
+        return 'Cloud recognition failed';
+      case 'manga_ocr_mobile_note':
+        return 'On mobile, the recognition model powers box scan in the manga reader.';
       default:
         return null;
     }
