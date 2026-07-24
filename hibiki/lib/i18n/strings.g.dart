@@ -1,12 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 41786 (2458 per locale)
+/// Strings: 42313 (2489 per locale)
 ///
-/// Built on 2026-07-24 at 15:54 UTC
-/// Strings: 41820 (2460 per locale)
-///
-/// Built on 2026-07-24 at 15:03 UTC
+/// Built on 2026-07-24 at 20:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3296,6 +3293,40 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_wheel_down => 'Wheel down';
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 // Path: <root>
@@ -8876,6 +8907,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_hook_recapture_unavailable =>
       'Voice recapture needs system loopback audio';
+  @override
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
   @override
@@ -8886,6 +8918,7 @@ class _StringsAr extends _StringsEn {
   String get anki_duplicate_scope_collection => 'Whole collection';
   @override
   String get anki_duplicate_scope => 'Duplicate check scope';
+  @override
   String get shortcut_scope_dictionary_popup => 'Dictionary popup';
   @override
   String get shortcut_action_popup_next_entry => 'Next word entry';
@@ -8905,6 +8938,57 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  @override
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  @override
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  @override
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  @override
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  @override
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  @override
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  @override
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  @override
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  @override
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  @override
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  @override
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  @override
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  @override
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 // Path: <root>
@@ -14558,6 +14642,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_hook_recapture_unavailable =>
       'Voice recapture needs system loopback audio';
+  @override
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
   @override
@@ -14568,6 +14653,7 @@ class _StringsDe extends _StringsEn {
   String get anki_duplicate_scope_collection => 'Whole collection';
   @override
   String get anki_duplicate_scope => 'Duplicate check scope';
+  @override
   String get shortcut_scope_dictionary_popup => 'Dictionary popup';
   @override
   String get shortcut_action_popup_next_entry => 'Next word entry';
@@ -14587,6 +14673,57 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  @override
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  @override
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  @override
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  @override
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  @override
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  @override
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  @override
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  @override
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  @override
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  @override
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  @override
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  @override
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  @override
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 // Path: <root>
@@ -20256,6 +20393,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_hook_recapture_unavailable =>
       'Voice recapture needs system loopback audio';
+  @override
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
   @override
@@ -20266,6 +20404,7 @@ class _StringsEs extends _StringsEn {
   String get anki_duplicate_scope_collection => 'Whole collection';
   @override
   String get anki_duplicate_scope => 'Duplicate check scope';
+  @override
   String get shortcut_scope_dictionary_popup => 'Dictionary popup';
   @override
   String get shortcut_action_popup_next_entry => 'Next word entry';
@@ -20285,6 +20424,57 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  @override
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  @override
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  @override
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  @override
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  @override
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  @override
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  @override
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  @override
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  @override
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  @override
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  @override
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  @override
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  @override
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 // Path: <root>
@@ -25965,6 +26155,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_hook_recapture_unavailable =>
       'Voice recapture needs system loopback audio';
+  @override
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
   @override
@@ -25975,6 +26166,7 @@ class _StringsFr extends _StringsEn {
   String get anki_duplicate_scope_collection => 'Whole collection';
   @override
   String get anki_duplicate_scope => 'Duplicate check scope';
+  @override
   String get shortcut_scope_dictionary_popup => 'Dictionary popup';
   @override
   String get shortcut_action_popup_next_entry => 'Next word entry';
@@ -25994,6 +26186,57 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  @override
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  @override
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  @override
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  @override
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  @override
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  @override
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  @override
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  @override
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  @override
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  @override
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  @override
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  @override
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  @override
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 // Path: <root>
@@ -31601,6 +31844,7 @@ class _StringsId extends _StringsEn {
   @override
   String get game_hook_recapture_unavailable =>
       'Voice recapture needs system loopback audio';
+  @override
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
   @override
@@ -31611,6 +31855,7 @@ class _StringsId extends _StringsEn {
   String get anki_duplicate_scope_collection => 'Whole collection';
   @override
   String get anki_duplicate_scope => 'Duplicate check scope';
+  @override
   String get shortcut_scope_dictionary_popup => 'Dictionary popup';
   @override
   String get shortcut_action_popup_next_entry => 'Next word entry';
@@ -31630,6 +31875,57 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  @override
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  @override
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  @override
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  @override
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  @override
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  @override
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  @override
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  @override
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  @override
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  @override
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  @override
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  @override
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  @override
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 // Path: <root>
@@ -37285,6 +37581,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_hook_recapture_unavailable =>
       'Voice recapture needs system loopback audio';
+  @override
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
   @override
@@ -37295,6 +37592,7 @@ class _StringsIt extends _StringsEn {
   String get anki_duplicate_scope_collection => 'Whole collection';
   @override
   String get anki_duplicate_scope => 'Duplicate check scope';
+  @override
   String get shortcut_scope_dictionary_popup => 'Dictionary popup';
   @override
   String get shortcut_action_popup_next_entry => 'Next word entry';
@@ -37314,6 +37612,57 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  @override
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  @override
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  @override
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  @override
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  @override
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  @override
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  @override
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  @override
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  @override
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  @override
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  @override
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  @override
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  @override
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 // Path: <root>
@@ -42774,6 +43123,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_hook_recapture_unavailable =>
       'Voice recapture needs system loopback audio';
+  @override
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
   @override
@@ -42784,6 +43134,7 @@ class _StringsJa extends _StringsEn {
   String get anki_duplicate_scope_collection => 'Whole collection';
   @override
   String get anki_duplicate_scope => 'Duplicate check scope';
+  @override
   String get shortcut_scope_dictionary_popup => 'Dictionary popup';
   @override
   String get shortcut_action_popup_next_entry => 'Next word entry';
@@ -42803,6 +43154,57 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  @override
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  @override
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  @override
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  @override
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  @override
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  @override
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  @override
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  @override
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  @override
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  @override
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  @override
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  @override
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  @override
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 // Path: <root>
@@ -48266,6 +48668,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_hook_recapture_unavailable =>
       'Voice recapture needs system loopback audio';
+  @override
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
   @override
@@ -48276,6 +48679,7 @@ class _StringsKo extends _StringsEn {
   String get anki_duplicate_scope_collection => 'Whole collection';
   @override
   String get anki_duplicate_scope => 'Duplicate check scope';
+  @override
   String get shortcut_scope_dictionary_popup => 'Dictionary popup';
   @override
   String get shortcut_action_popup_next_entry => 'Next word entry';
@@ -48295,6 +48699,57 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  @override
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  @override
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  @override
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  @override
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  @override
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  @override
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  @override
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  @override
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  @override
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  @override
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  @override
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  @override
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  @override
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 // Path: <root>
@@ -53928,6 +54383,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_hook_recapture_unavailable =>
       'Voice recapture needs system loopback audio';
+  @override
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
   @override
@@ -53938,6 +54394,7 @@ class _StringsNl extends _StringsEn {
   String get anki_duplicate_scope_collection => 'Whole collection';
   @override
   String get anki_duplicate_scope => 'Duplicate check scope';
+  @override
   String get shortcut_scope_dictionary_popup => 'Dictionary popup';
   @override
   String get shortcut_action_popup_next_entry => 'Next word entry';
@@ -53957,6 +54414,57 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  @override
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  @override
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  @override
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  @override
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  @override
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  @override
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  @override
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  @override
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  @override
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  @override
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  @override
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  @override
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  @override
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 // Path: <root>
@@ -59605,6 +60113,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_hook_recapture_unavailable =>
       'Voice recapture needs system loopback audio';
+  @override
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
   @override
@@ -59615,6 +60124,7 @@ class _StringsPtBr extends _StringsEn {
   String get anki_duplicate_scope_collection => 'Whole collection';
   @override
   String get anki_duplicate_scope => 'Duplicate check scope';
+  @override
   String get shortcut_scope_dictionary_popup => 'Dictionary popup';
   @override
   String get shortcut_action_popup_next_entry => 'Next word entry';
@@ -59634,6 +60144,57 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  @override
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  @override
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  @override
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  @override
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  @override
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  @override
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  @override
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  @override
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  @override
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  @override
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  @override
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  @override
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  @override
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 // Path: <root>
@@ -65265,6 +65826,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_hook_recapture_unavailable =>
       'Voice recapture needs system loopback audio';
+  @override
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
   @override
@@ -65275,6 +65837,7 @@ class _StringsRu extends _StringsEn {
   String get anki_duplicate_scope_collection => 'Whole collection';
   @override
   String get anki_duplicate_scope => 'Duplicate check scope';
+  @override
   String get shortcut_scope_dictionary_popup => 'Dictionary popup';
   @override
   String get shortcut_action_popup_next_entry => 'Next word entry';
@@ -65294,6 +65857,57 @@ class _StringsRu extends _StringsEn {
   @override
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  @override
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  @override
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  @override
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  @override
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  @override
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  @override
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  @override
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  @override
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  @override
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  @override
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  @override
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  @override
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  @override
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 // Path: <root>
@@ -70870,6 +71484,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_hook_recapture_unavailable =>
       'Voice recapture needs system loopback audio';
+  @override
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
   @override
@@ -70880,6 +71495,7 @@ class _StringsTh extends _StringsEn {
   String get anki_duplicate_scope_collection => 'Whole collection';
   @override
   String get anki_duplicate_scope => 'Duplicate check scope';
+  @override
   String get shortcut_scope_dictionary_popup => 'Dictionary popup';
   @override
   String get shortcut_action_popup_next_entry => 'Next word entry';
@@ -70899,6 +71515,57 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  @override
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  @override
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  @override
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  @override
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  @override
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  @override
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  @override
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  @override
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  @override
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  @override
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  @override
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  @override
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  @override
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 // Path: <root>
@@ -76507,6 +77174,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_hook_recapture_unavailable =>
       'Voice recapture needs system loopback audio';
+  @override
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
   @override
@@ -76517,6 +77185,7 @@ class _StringsTr extends _StringsEn {
   String get anki_duplicate_scope_collection => 'Whole collection';
   @override
   String get anki_duplicate_scope => 'Duplicate check scope';
+  @override
   String get shortcut_scope_dictionary_popup => 'Dictionary popup';
   @override
   String get shortcut_action_popup_next_entry => 'Next word entry';
@@ -76536,6 +77205,57 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  @override
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  @override
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  @override
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  @override
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  @override
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  @override
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  @override
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  @override
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  @override
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  @override
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  @override
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  @override
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  @override
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 // Path: <root>
@@ -82131,6 +82851,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_hook_recapture_unavailable =>
       'Voice recapture needs system loopback audio';
+  @override
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
   @override
@@ -82141,6 +82862,7 @@ class _StringsVi extends _StringsEn {
   String get anki_duplicate_scope_collection => 'Whole collection';
   @override
   String get anki_duplicate_scope => 'Duplicate check scope';
+  @override
   String get shortcut_scope_dictionary_popup => 'Dictionary popup';
   @override
   String get shortcut_action_popup_next_entry => 'Next word entry';
@@ -82160,6 +82882,57 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  @override
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  @override
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  @override
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  @override
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  @override
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  @override
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  @override
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  @override
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  @override
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  @override
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  @override
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  @override
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  @override
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 // Path: <root>
@@ -87361,6 +88134,7 @@ class _StringsZhCn extends _StringsEn {
   String get game_hook_recapture_empty => '补录窗口内没有录到声音';
   @override
   String get game_hook_recapture_unavailable => '补录需要系统声音采集可用';
+  @override
   String get anki_duplicate_scope_hint =>
       '查询「这个词是否已经有卡」时搜索哪些卡组。仅 AnkiConnect（桌面 Anki）生效；AnkiDroid 始终整库查重。';
   @override
@@ -87371,6 +88145,7 @@ class _StringsZhCn extends _StringsEn {
   String get anki_duplicate_scope_collection => '整个收藏集';
   @override
   String get anki_duplicate_scope => '查重范围';
+  @override
   String get shortcut_scope_dictionary_popup => '查词弹窗';
   @override
   String get shortcut_action_popup_next_entry => '下一个词条';
@@ -87389,6 +88164,47 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_wheel_down => '滚轮向下';
   @override
   String get shortcut_scope_dictionary_popup_note => '鼠标位于查词弹窗上时生效';
+  @override
+  String get game_hook_reason_helper_missing => '未安装与该游戏位数匹配的语音钩子组件，请先安装后重试。';
+  @override
+  String get game_hook_reason_target_missing => '没有可捕获的游戏进程或可执行文件。';
+  @override
+  String get game_hook_reason_spawn_failed => '语音钩子组件无法启动，请检查是否被杀毒软件删除或拦截。';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      '钩子组件位数与游戏不匹配（32 位 / 64 位），请重新安装组件。';
+  @override
+  String get game_hook_reason_access_denied =>
+      '游戏以更高权限运行，请以管理员身份启动 Hibiki 后重试。';
+  @override
+  String get game_hook_reason_elevation_required =>
+      '该游戏需要管理员权限，请以管理员身份启动 Hibiki 后再启动游戏。';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'Hibiki 无法启动该游戏，请检查可执行文件路径。';
+  @override
+  String get game_hook_reason_hook_dll_missing => '钩子组件不完整（缺少 hook 库），请重新安装。';
+  @override
+  String get game_hook_reason_game_exe_missing => '保存的游戏可执行文件路径已不存在。';
+  @override
+  String get game_hook_reason_stale_session => '游戏里还残留上一次的捕获会话，请重启一次游戏。';
+  @override
+  String get game_hook_reason_ready_timeout => '钩子库未能在超时内加载完成，杀毒软件扫描可能是原因。';
+  @override
+  String get game_hook_reason_injection_failed =>
+      '注入游戏被拦截，请把 Hibiki 与该游戏加入杀毒软件白名单。';
+  @override
+  String get game_hook_reason_guarded_hook_failed => '受保护的钩子未能在超时内安装，正在自动重试。';
+  @override
+  String get game_hook_reason_resume_failed => '已启动的游戏无法恢复运行并被结束，请重新启动。';
+  @override
+  String get game_hook_reason_steam_timeout => 'Steam 已接受启动请求，但始终没有出现游戏进程。';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      '捕获通道无法打开，请重启 Hibiki。';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      '已注入游戏，但超时内没有文本或音频，该引擎可能尚未支持。';
 }
 
 // Path: <root>
@@ -92767,6 +93583,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_hook_recapture_unavailable =>
       'Voice recapture needs system loopback audio';
+  @override
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
   @override
@@ -92777,6 +93594,7 @@ class _StringsZhHk extends _StringsEn {
   String get anki_duplicate_scope_collection => 'Whole collection';
   @override
   String get anki_duplicate_scope => 'Duplicate check scope';
+  @override
   String get shortcut_scope_dictionary_popup => 'Dictionary popup';
   @override
   String get shortcut_action_popup_next_entry => 'Next word entry';
@@ -92796,6 +93614,57 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_scope_dictionary_popup_note =>
       'Works while the pointer is over a dictionary popup';
+  @override
+  String get game_hook_reason_helper_missing =>
+      'Voice-hook helper is not installed for this game architecture; install it and try again.';
+  @override
+  String get game_hook_reason_target_missing =>
+      'No game process or executable was selected for capture.';
+  @override
+  String get game_hook_reason_spawn_failed =>
+      'The helper could not be started; check that antivirus has not removed or blocked it.';
+  @override
+  String get game_hook_reason_bitness_mismatch =>
+      'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+  @override
+  String get game_hook_reason_access_denied =>
+      'The game runs with higher privileges; start Hibiki as administrator and try again.';
+  @override
+  String get game_hook_reason_elevation_required =>
+      'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+  @override
+  String get game_hook_reason_create_process_failed =>
+      'The game could not be started from Hibiki; check the executable path.';
+  @override
+  String get game_hook_reason_hook_dll_missing =>
+      'The helper package is incomplete (hook library missing); reinstall it.';
+  @override
+  String get game_hook_reason_game_exe_missing =>
+      'The game executable no longer exists at the saved path.';
+  @override
+  String get game_hook_reason_stale_session =>
+      'A previous capture session is still loaded in the game; restart the game once.';
+  @override
+  String get game_hook_reason_ready_timeout =>
+      'The hook library did not finish loading in time; antivirus scanning can cause this.';
+  @override
+  String get game_hook_reason_injection_failed =>
+      'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+  @override
+  String get game_hook_reason_guarded_hook_failed =>
+      'A profile-guarded hook could not be installed in time; retrying automatically.';
+  @override
+  String get game_hook_reason_resume_failed =>
+      'The launched game could not be resumed and was stopped; launch it again.';
+  @override
+  String get game_hook_reason_steam_timeout =>
+      'Steam accepted the launch request but the game process never appeared.';
+  @override
+  String get game_hook_reason_shared_memory_unavailable =>
+      'The capture channel could not be opened; restart Hibiki.';
+  @override
+  String get game_hook_reason_handshake_timeout =>
+      'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
 }
 
 /// Flat map(s) containing all translations.
@@ -97846,6 +98715,40 @@ extension on _StringsEn {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
@@ -102894,6 +103797,40 @@ extension on _StringsAr {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
@@ -107963,6 +108900,40 @@ extension on _StringsDe {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
@@ -113031,6 +114002,40 @@ extension on _StringsEs {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
@@ -118105,6 +119110,40 @@ extension on _StringsFr {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
@@ -123161,6 +124200,40 @@ extension on _StringsId {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
@@ -128232,6 +129305,40 @@ extension on _StringsIt {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
@@ -133265,6 +134372,40 @@ extension on _StringsJa {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
@@ -138302,6 +139443,40 @@ extension on _StringsKo {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
@@ -143366,6 +144541,40 @@ extension on _StringsNl {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
@@ -148427,6 +149636,40 @@ extension on _StringsPtBr {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
@@ -153493,6 +154736,40 @@ extension on _StringsRu {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
@@ -158543,6 +159820,40 @@ extension on _StringsTh {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
@@ -163602,6 +164913,40 @@ extension on _StringsTr {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
@@ -168656,6 +170001,40 @@ extension on _StringsVi {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
@@ -173671,6 +175050,40 @@ extension on _StringsZhCn {
         return '滚轮向下';
       case 'shortcut_scope_dictionary_popup_note':
         return '鼠标位于查词弹窗上时生效';
+      case 'game_hook_reason_helper_missing':
+        return '未安装与该游戏位数匹配的语音钩子组件，请先安装后重试。';
+      case 'game_hook_reason_target_missing':
+        return '没有可捕获的游戏进程或可执行文件。';
+      case 'game_hook_reason_spawn_failed':
+        return '语音钩子组件无法启动，请检查是否被杀毒软件删除或拦截。';
+      case 'game_hook_reason_bitness_mismatch':
+        return '钩子组件位数与游戏不匹配（32 位 / 64 位），请重新安装组件。';
+      case 'game_hook_reason_access_denied':
+        return '游戏以更高权限运行，请以管理员身份启动 Hibiki 后重试。';
+      case 'game_hook_reason_elevation_required':
+        return '该游戏需要管理员权限，请以管理员身份启动 Hibiki 后再启动游戏。';
+      case 'game_hook_reason_create_process_failed':
+        return 'Hibiki 无法启动该游戏，请检查可执行文件路径。';
+      case 'game_hook_reason_hook_dll_missing':
+        return '钩子组件不完整（缺少 hook 库），请重新安装。';
+      case 'game_hook_reason_game_exe_missing':
+        return '保存的游戏可执行文件路径已不存在。';
+      case 'game_hook_reason_stale_session':
+        return '游戏里还残留上一次的捕获会话，请重启一次游戏。';
+      case 'game_hook_reason_ready_timeout':
+        return '钩子库未能在超时内加载完成，杀毒软件扫描可能是原因。';
+      case 'game_hook_reason_injection_failed':
+        return '注入游戏被拦截，请把 Hibiki 与该游戏加入杀毒软件白名单。';
+      case 'game_hook_reason_guarded_hook_failed':
+        return '受保护的钩子未能在超时内安装，正在自动重试。';
+      case 'game_hook_reason_resume_failed':
+        return '已启动的游戏无法恢复运行并被结束，请重新启动。';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam 已接受启动请求，但始终没有出现游戏进程。';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return '捕获通道无法打开，请重启 Hibiki。';
+      case 'game_hook_reason_handshake_timeout':
+        return '已注入游戏，但超时内没有文本或音频，该引擎可能尚未支持。';
       default:
         return null;
     }
@@ -178699,6 +180112,40 @@ extension on _StringsZhHk {
         return 'Wheel down';
       case 'shortcut_scope_dictionary_popup_note':
         return 'Works while the pointer is over a dictionary popup';
+      case 'game_hook_reason_helper_missing':
+        return 'Voice-hook helper is not installed for this game architecture; install it and try again.';
+      case 'game_hook_reason_target_missing':
+        return 'No game process or executable was selected for capture.';
+      case 'game_hook_reason_spawn_failed':
+        return 'The helper could not be started; check that antivirus has not removed or blocked it.';
+      case 'game_hook_reason_bitness_mismatch':
+        return 'Helper architecture does not match the game (32-bit vs 64-bit); reinstall the helper.';
+      case 'game_hook_reason_access_denied':
+        return 'The game runs with higher privileges; start Hibiki as administrator and try again.';
+      case 'game_hook_reason_elevation_required':
+        return 'This game requires administrator rights; start Hibiki as administrator and launch it again.';
+      case 'game_hook_reason_create_process_failed':
+        return 'The game could not be started from Hibiki; check the executable path.';
+      case 'game_hook_reason_hook_dll_missing':
+        return 'The helper package is incomplete (hook library missing); reinstall it.';
+      case 'game_hook_reason_game_exe_missing':
+        return 'The game executable no longer exists at the saved path.';
+      case 'game_hook_reason_stale_session':
+        return 'A previous capture session is still loaded in the game; restart the game once.';
+      case 'game_hook_reason_ready_timeout':
+        return 'The hook library did not finish loading in time; antivirus scanning can cause this.';
+      case 'game_hook_reason_injection_failed':
+        return 'Injection into the game was blocked; add Hibiki and the game to antivirus exclusions.';
+      case 'game_hook_reason_guarded_hook_failed':
+        return 'A profile-guarded hook could not be installed in time; retrying automatically.';
+      case 'game_hook_reason_resume_failed':
+        return 'The launched game could not be resumed and was stopped; launch it again.';
+      case 'game_hook_reason_steam_timeout':
+        return 'Steam accepted the launch request but the game process never appeared.';
+      case 'game_hook_reason_shared_memory_unavailable':
+        return 'The capture channel could not be opened; restart Hibiki.';
+      case 'game_hook_reason_handshake_timeout':
+        return 'The game was hooked but produced no text or audio in time; this engine may not be supported yet.';
       default:
         return null;
     }
