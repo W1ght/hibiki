@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 40409 (2377 per locale)
+/// Strings: 40443 (2379 per locale)
 ///
-/// Built on 2026-07-24 at 08:00 UTC
+/// Built on 2026-07-24 at 09:01 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3170,6 +3170,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_network_proxy_custom_label => 'Custom proxy';
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 // Path: <root>
@@ -8563,6 +8567,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  @override
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  @override
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 // Path: <root>
@@ -14029,6 +14039,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  @override
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  @override
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 // Path: <root>
@@ -19511,6 +19527,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  @override
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  @override
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 // Path: <root>
@@ -25004,6 +25026,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  @override
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  @override
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 // Path: <root>
@@ -30424,6 +30452,12 @@ class _StringsId extends _StringsEn {
   @override
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  @override
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  @override
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 // Path: <root>
@@ -35892,6 +35926,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  @override
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  @override
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 // Path: <root>
@@ -41165,6 +41205,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  @override
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  @override
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 // Path: <root>
@@ -46441,6 +46487,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  @override
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  @override
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 // Path: <root>
@@ -51887,6 +51939,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  @override
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  @override
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 // Path: <root>
@@ -57348,6 +57406,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  @override
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  @override
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 // Path: <root>
@@ -62792,6 +62856,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  @override
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  @override
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 // Path: <root>
@@ -68181,6 +68251,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  @override
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  @override
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 // Path: <root>
@@ -73602,6 +73678,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  @override
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  @override
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 // Path: <root>
@@ -79010,6 +79092,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  @override
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  @override
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 // Path: <root>
@@ -84042,6 +84130,10 @@ class _StringsZhCn extends _StringsEn {
   String get download_network_proxy_custom_label => '自定义代理';
   @override
   String get update_custom_proxy_auto_hint => '留空时自动读取环境变量，再读取已启用的系统代理。';
+  @override
+  String get video_danmaku_manual_bind_server_error => '弹幕服务器拒绝了请求，请稍后重试';
+  @override
+  String get video_danmaku_manual_bind_empty => '这一集还没有弹幕';
 }
 
 // Path: <root>
@@ -89233,6 +89325,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get update_custom_proxy_auto_hint =>
       'Leave blank to use environment variables, then the enabled system proxy.';
+  @override
+  String get video_danmaku_manual_bind_server_error =>
+      'The danmaku server rejected the request. Try again later.';
+  @override
+  String get video_danmaku_manual_bind_empty =>
+      'No danmaku for this episode yet.';
 }
 
 /// Flat map(s) containing all translations.
@@ -94091,6 +94189,10 @@ extension on _StringsEn {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
@@ -98947,6 +99049,10 @@ extension on _StringsAr {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
@@ -103824,6 +103930,10 @@ extension on _StringsDe {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
@@ -108700,6 +108810,10 @@ extension on _StringsEs {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
@@ -113582,6 +113696,10 @@ extension on _StringsFr {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
@@ -118446,6 +118564,10 @@ extension on _StringsId {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
@@ -123325,6 +123447,10 @@ extension on _StringsIt {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
@@ -128166,6 +128292,10 @@ extension on _StringsJa {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
@@ -133011,6 +133141,10 @@ extension on _StringsKo {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
@@ -137883,6 +138017,10 @@ extension on _StringsNl {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
@@ -142752,6 +142890,10 @@ extension on _StringsPtBr {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
@@ -147626,6 +147768,10 @@ extension on _StringsRu {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
@@ -152484,6 +152630,10 @@ extension on _StringsTh {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
@@ -157351,6 +157501,10 @@ extension on _StringsTr {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
@@ -162213,6 +162367,10 @@ extension on _StringsVi {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
@@ -167036,6 +167194,10 @@ extension on _StringsZhCn {
         return '自定义代理';
       case 'update_custom_proxy_auto_hint':
         return '留空时自动读取环境变量，再读取已启用的系统代理。';
+      case 'video_danmaku_manual_bind_server_error':
+        return '弹幕服务器拒绝了请求，请稍后重试';
+      case 'video_danmaku_manual_bind_empty':
+        return '这一集还没有弹幕';
       default:
         return null;
     }
@@ -171872,6 +172034,10 @@ extension on _StringsZhHk {
         return 'Custom proxy';
       case 'update_custom_proxy_auto_hint':
         return 'Leave blank to use environment variables, then the enabled system proxy.';
+      case 'video_danmaku_manual_bind_server_error':
+        return 'The danmaku server rejected the request. Try again later.';
+      case 'video_danmaku_manual_bind_empty':
+        return 'No danmaku for this episode yet.';
       default:
         return null;
     }
