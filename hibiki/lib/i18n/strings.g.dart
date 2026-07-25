@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45050 (2650 per locale)
+/// Strings: 45186 (2658 per locale)
 ///
-/// Built on 2026-07-25 at 20:52 UTC
+/// Built on 2026-07-25 at 22:36 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3516,6 +3516,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Passed to the game on launch, e.g. -windowed';
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  String get download_save_root_title => 'Download folder';
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  String get download_save_root_change => 'Change folder';
+  String get download_save_root_reset => 'Restore default';
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -9528,6 +9540,26 @@ class _StringsAr extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -15613,6 +15645,26 @@ class _StringsDe extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -21714,6 +21766,26 @@ class _StringsEs extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -27826,6 +27898,26 @@ class _StringsFr extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -33865,6 +33957,26 @@ class _StringsId extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -39952,6 +40064,26 @@ class _StringsIt extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -45844,6 +45976,26 @@ class _StringsJa extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -51739,6 +51891,26 @@ class _StringsKo extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -57804,6 +57976,26 @@ class _StringsNl extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -63884,6 +64076,26 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -69947,6 +70159,26 @@ class _StringsRu extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -75955,6 +76187,26 @@ class _StringsTh extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -81995,6 +82247,26 @@ class _StringsTr extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -88022,6 +88294,26 @@ class _StringsVi extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -93635,6 +93927,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       '引擎组件已被拒绝安装：无法校验其完整性（GitHub 上的 .sha256 校验文件不可达、缺失或与下载内容不符）。为避免装入被篡改的注入器代码，本次安装已终止。';
+  @override
+  String get download_save_root_title => '下载目录';
+  @override
+  String get download_save_root_hint => '新的下载任务保存到这里；已有任务仍留在原目录，不会被移动。';
+  @override
+  String get download_save_root_change => '更改目录';
+  @override
+  String get download_save_root_reset => '恢复默认';
+  @override
+  String get download_save_root_not_absolute => '请选择一个绝对路径的目录。';
+  @override
+  String get download_save_root_create_failed => '无法创建该目录，请检查磁盘与权限。';
+  @override
+  String get download_save_root_not_writable => '该目录不可写入。';
+  @override
+  String get download_save_root_fallback_warning => '配置的下载目录当前不可用，已回退到默认目录。';
 }
 
 // Path: <root>
@@ -99445,6 +99753,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get galgame_helper_verification_failed =>
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 /// Flat map(s) containing all translations.
@@ -104858,6 +105186,22 @@ extension on _StringsEn {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -110269,6 +110613,22 @@ extension on _StringsAr {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -115701,6 +116061,22 @@ extension on _StringsDe {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -121132,6 +121508,22 @@ extension on _StringsEs {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -126569,6 +126961,22 @@ extension on _StringsFr {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -131988,6 +132396,22 @@ extension on _StringsId {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -137422,6 +137846,22 @@ extension on _StringsIt {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -142818,6 +143258,22 @@ extension on _StringsJa {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -148218,6 +148674,22 @@ extension on _StringsKo {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -153645,6 +154117,22 @@ extension on _StringsNl {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -159069,6 +159557,22 @@ extension on _StringsPtBr {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -164498,6 +165002,22 @@ extension on _StringsRu {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -169911,6 +170431,22 @@ extension on _StringsTh {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -175333,6 +175869,22 @@ extension on _StringsTr {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -180750,6 +181302,22 @@ extension on _StringsVi {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -186124,6 +186692,22 @@ extension on _StringsZhCn {
         return '启动时传给游戏，例如 -windowed';
       case 'galgame_helper_verification_failed':
         return '引擎组件已被拒绝安装：无法校验其完整性（GitHub 上的 .sha256 校验文件不可达、缺失或与下载内容不符）。为避免装入被篡改的注入器代码，本次安装已终止。';
+      case 'download_save_root_title':
+        return '下载目录';
+      case 'download_save_root_hint':
+        return '新的下载任务保存到这里；已有任务仍留在原目录，不会被移动。';
+      case 'download_save_root_change':
+        return '更改目录';
+      case 'download_save_root_reset':
+        return '恢复默认';
+      case 'download_save_root_not_absolute':
+        return '请选择一个绝对路径的目录。';
+      case 'download_save_root_create_failed':
+        return '无法创建该目录，请检查磁盘与权限。';
+      case 'download_save_root_not_writable':
+        return '该目录不可写入。';
+      case 'download_save_root_fallback_warning':
+        return '配置的下载目录当前不可用，已回退到默认目录。';
       default:
         return null;
     }
@@ -191515,6 +192099,22 @@ extension on _StringsZhHk {
         return 'Passed to the game on launch, e.g. -windowed';
       case 'galgame_helper_verification_failed':
         return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
