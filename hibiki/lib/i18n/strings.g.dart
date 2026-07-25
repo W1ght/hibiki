@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44761 (2633 per locale)
+/// Strings: 44812 (2636 per locale)
 ///
-/// Built on 2026-07-25 at 18:31 UTC
+/// Built on 2026-07-25 at 19:07 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3489,6 +3489,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get yomitan_port_kill_confirm => 'End process';
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 // Path: <root>
@@ -9457,6 +9461,13 @@ class _StringsAr extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 // Path: <root>
@@ -15498,6 +15509,13 @@ class _StringsDe extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 // Path: <root>
@@ -21555,6 +21573,13 @@ class _StringsEs extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 // Path: <root>
@@ -27623,6 +27648,13 @@ class _StringsFr extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 // Path: <root>
@@ -33618,6 +33650,13 @@ class _StringsId extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 // Path: <root>
@@ -39661,6 +39700,13 @@ class _StringsIt extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 // Path: <root>
@@ -45509,6 +45555,13 @@ class _StringsJa extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 // Path: <root>
@@ -51360,6 +51413,13 @@ class _StringsKo extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 // Path: <root>
@@ -57381,6 +57441,13 @@ class _StringsNl extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 // Path: <root>
@@ -63417,6 +63484,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 // Path: <root>
@@ -69436,6 +69510,13 @@ class _StringsRu extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 // Path: <root>
@@ -75400,6 +75481,13 @@ class _StringsTh extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 // Path: <root>
@@ -81396,6 +81484,13 @@ class _StringsTr extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 // Path: <root>
@@ -87379,6 +87474,13 @@ class _StringsVi extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 // Path: <root>
@@ -92950,6 +93052,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} 是关键系统进程，Hibiki 不会结束它；请改用其他端口。';
+  @override
+  String get gal_hook_text_font_size => 'Galgame 台词浮窗字号';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      '拖动浮窗右下角只改窗口大小（换来更多可见行），字号在这里单独设置。';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame 台词浮窗';
 }
 
 // Path: <root>
@@ -98716,6 +98825,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
 }
 
 /// Flat map(s) containing all translations.
@@ -104095,6 +104211,12 @@ extension on _StringsEn {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
@@ -109472,6 +109594,12 @@ extension on _StringsAr {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
@@ -114870,6 +114998,12 @@ extension on _StringsDe {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
@@ -120267,6 +120401,12 @@ extension on _StringsEs {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
@@ -125670,6 +125810,12 @@ extension on _StringsFr {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
@@ -131055,6 +131201,12 @@ extension on _StringsId {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
@@ -136455,6 +136607,12 @@ extension on _StringsIt {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
@@ -141817,6 +141975,12 @@ extension on _StringsJa {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
@@ -147183,6 +147347,12 @@ extension on _StringsKo {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
@@ -152576,6 +152746,12 @@ extension on _StringsNl {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
@@ -157966,6 +158142,12 @@ extension on _StringsPtBr {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
@@ -163361,6 +163543,12 @@ extension on _StringsRu {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
@@ -168740,6 +168928,12 @@ extension on _StringsTh {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
@@ -174128,6 +174322,12 @@ extension on _StringsTr {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
@@ -179511,6 +179711,12 @@ extension on _StringsVi {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
@@ -184851,6 +185057,12 @@ extension on _StringsZhCn {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} 是关键系统进程，Hibiki 不会结束它；请改用其他端口。';
+      case 'gal_hook_text_font_size':
+        return 'Galgame 台词浮窗字号';
+      case 'gal_hook_text_font_size_hint':
+        return '拖动浮窗右下角只改窗口大小（换来更多可见行），字号在这里单独设置。';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame 台词浮窗';
       default:
         return null;
     }
@@ -190208,6 +190420,12 @@ extension on _StringsZhHk {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
       default:
         return null;
     }
