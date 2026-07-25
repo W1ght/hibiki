@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45033 (2649 per locale)
+/// Strings: 45050 (2650 per locale)
 ///
-/// Built on 2026-07-25 at 20:10 UTC
+/// Built on 2026-07-25 at 20:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3514,6 +3514,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_edit_launch_args => 'Launch arguments';
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 // Path: <root>
@@ -9523,6 +9525,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 // Path: <root>
@@ -15605,6 +15610,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 // Path: <root>
@@ -21703,6 +21711,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 // Path: <root>
@@ -27812,6 +27823,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 // Path: <root>
@@ -33848,6 +33862,9 @@ class _StringsId extends _StringsEn {
   @override
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 // Path: <root>
@@ -39932,6 +39949,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 // Path: <root>
@@ -45821,6 +45841,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 // Path: <root>
@@ -51713,6 +51736,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 // Path: <root>
@@ -57775,6 +57801,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 // Path: <root>
@@ -63852,6 +63881,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 // Path: <root>
@@ -69912,6 +69944,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 // Path: <root>
@@ -75917,6 +75952,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 // Path: <root>
@@ -81954,6 +81992,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 // Path: <root>
@@ -87978,6 +88019,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 // Path: <root>
@@ -93588,6 +93632,9 @@ class _StringsZhCn extends _StringsEn {
   String get game_edit_launch_args => '启动参数';
   @override
   String get game_edit_launch_args_hint => '启动时传给游戏，例如 -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      '引擎组件已被拒绝安装：无法校验其完整性（GitHub 上的 .sha256 校验文件不可达、缺失或与下载内容不符）。为避免装入被篡改的注入器代码，本次安装已终止。';
 }
 
 // Path: <root>
@@ -99395,6 +99442,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_edit_launch_args_hint =>
       'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
 }
 
 /// Flat map(s) containing all translations.
@@ -104806,6 +104856,8 @@ extension on _StringsEn {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
@@ -110215,6 +110267,8 @@ extension on _StringsAr {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
@@ -115645,6 +115699,8 @@ extension on _StringsDe {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
@@ -121074,6 +121130,8 @@ extension on _StringsEs {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
@@ -126509,6 +126567,8 @@ extension on _StringsFr {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
@@ -131926,6 +131986,8 @@ extension on _StringsId {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
@@ -137358,6 +137420,8 @@ extension on _StringsIt {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
@@ -142752,6 +142816,8 @@ extension on _StringsJa {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
@@ -148150,6 +148216,8 @@ extension on _StringsKo {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
@@ -153575,6 +153643,8 @@ extension on _StringsNl {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
@@ -158997,6 +159067,8 @@ extension on _StringsPtBr {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
@@ -164424,6 +164496,8 @@ extension on _StringsRu {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
@@ -169835,6 +169909,8 @@ extension on _StringsTh {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
@@ -175255,6 +175331,8 @@ extension on _StringsTr {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
@@ -180670,6 +180748,8 @@ extension on _StringsVi {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
@@ -186042,6 +186122,8 @@ extension on _StringsZhCn {
         return '启动参数';
       case 'game_edit_launch_args_hint':
         return '启动时传给游戏，例如 -windowed';
+      case 'galgame_helper_verification_failed':
+        return '引擎组件已被拒绝安装：无法校验其完整性（GitHub 上的 .sha256 校验文件不可达、缺失或与下载内容不符）。为避免装入被篡改的注入器代码，本次安装已终止。';
       default:
         return null;
     }
@@ -191431,6 +191513,8 @@ extension on _StringsZhHk {
         return 'Launch arguments';
       case 'game_edit_launch_args_hint':
         return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
       default:
         return null;
     }
