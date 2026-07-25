@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44285 (2605 per locale)
+/// Strings: 44302 (2606 per locale)
 ///
-/// Built on 2026-07-25 at 13:20 UTC
+/// Built on 2026-07-25 at 13:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3451,6 +3451,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get book_scrape_empty => 'No matching covers';
   String get book_scrape_failed => 'Failed to fetch cover';
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -9353,6 +9354,8 @@ class _StringsAr extends _StringsEn {
   String get book_scrape_failed => 'Failed to fetch cover';
   @override
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -15328,6 +15331,8 @@ class _StringsDe extends _StringsEn {
   String get book_scrape_failed => 'Failed to fetch cover';
   @override
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -21319,6 +21324,8 @@ class _StringsEs extends _StringsEn {
   String get book_scrape_failed => 'Failed to fetch cover';
   @override
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -27321,6 +27328,8 @@ class _StringsFr extends _StringsEn {
   String get book_scrape_failed => 'Failed to fetch cover';
   @override
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -33250,6 +33259,8 @@ class _StringsId extends _StringsEn {
   String get book_scrape_failed => 'Failed to fetch cover';
   @override
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -39227,6 +39238,8 @@ class _StringsIt extends _StringsEn {
   String get book_scrape_failed => 'Failed to fetch cover';
   @override
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -45009,6 +45022,8 @@ class _StringsJa extends _StringsEn {
   String get book_scrape_failed => 'Failed to fetch cover';
   @override
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -50794,6 +50809,8 @@ class _StringsKo extends _StringsEn {
   String get book_scrape_failed => 'Failed to fetch cover';
   @override
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -56749,6 +56766,8 @@ class _StringsNl extends _StringsEn {
   String get book_scrape_failed => 'Failed to fetch cover';
   @override
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -62719,6 +62738,8 @@ class _StringsPtBr extends _StringsEn {
   String get book_scrape_failed => 'Failed to fetch cover';
   @override
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -68672,6 +68693,8 @@ class _StringsRu extends _StringsEn {
   String get book_scrape_failed => 'Failed to fetch cover';
   @override
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -74570,6 +74593,8 @@ class _StringsTh extends _StringsEn {
   String get book_scrape_failed => 'Failed to fetch cover';
   @override
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -80500,6 +80525,8 @@ class _StringsTr extends _StringsEn {
   String get book_scrape_failed => 'Failed to fetch cover';
   @override
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -86417,6 +86444,8 @@ class _StringsVi extends _StringsEn {
   String get book_scrape_failed => 'Failed to fetch cover';
   @override
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -91924,6 +91953,8 @@ class _StringsZhCn extends _StringsEn {
   String get book_scrape_failed => '封面获取失败';
   @override
   String get book_scrape_search_failed => '搜索失败，请点击「搜索」重试';
+  @override
+  String get add_to_collection => '加入合集';
 }
 
 // Path: <root>
@@ -97624,6 +97655,8 @@ class _StringsZhHk extends _StringsEn {
   String get book_scrape_failed => 'Failed to fetch cover';
   @override
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 /// Flat map(s) containing all translations.
@@ -102942,6 +102975,8 @@ extension on _StringsEn {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -108258,6 +108293,8 @@ extension on _StringsAr {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -113595,6 +113632,8 @@ extension on _StringsDe {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -118931,6 +118970,8 @@ extension on _StringsEs {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -124273,6 +124314,8 @@ extension on _StringsFr {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -129597,6 +129640,8 @@ extension on _StringsId {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -134936,6 +134981,8 @@ extension on _StringsIt {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -140237,6 +140284,8 @@ extension on _StringsJa {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -145542,6 +145591,8 @@ extension on _StringsKo {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -150874,6 +150925,8 @@ extension on _StringsNl {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -156203,6 +156256,8 @@ extension on _StringsPtBr {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -161537,6 +161592,8 @@ extension on _StringsRu {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -166855,6 +166912,8 @@ extension on _StringsTh {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -172182,6 +172241,8 @@ extension on _StringsTr {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -177504,6 +177565,8 @@ extension on _StringsVi {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -182786,6 +182849,8 @@ extension on _StringsZhCn {
         return '封面获取失败';
       case 'book_scrape_search_failed':
         return '搜索失败，请点击「搜索」重试';
+      case 'add_to_collection':
+        return '加入合集';
       default:
         return null;
     }
@@ -188082,6 +188147,8 @@ extension on _StringsZhHk {
         return 'Failed to fetch cover';
       case 'book_scrape_search_failed':
         return 'Search failed. Tap Search to retry.';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
