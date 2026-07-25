@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 43894 (2582 per locale)
+/// Strings: 43945 (2585 per locale)
 ///
-/// Built on 2026-07-25 at 07:20 UTC
+/// Built on 2026-07-25 at 07:54 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3427,6 +3427,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String data_root_unavailable_message({required Object path}) =>
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   String get data_root_use_default_button => 'Start with default location';
+  String get browser_extension_version_app => 'App bundled';
+  String get browser_extension_version_browser => 'Loaded in browser';
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -9282,6 +9286,13 @@ class _StringsAr extends _StringsEn {
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   @override
   String get data_root_use_default_button => 'Start with default location';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -15210,6 +15221,13 @@ class _StringsDe extends _StringsEn {
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   @override
   String get data_root_use_default_button => 'Start with default location';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -21154,6 +21172,13 @@ class _StringsEs extends _StringsEn {
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   @override
   String get data_root_use_default_button => 'Start with default location';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -27109,6 +27134,13 @@ class _StringsFr extends _StringsEn {
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   @override
   String get data_root_use_default_button => 'Start with default location';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -32991,6 +33023,13 @@ class _StringsId extends _StringsEn {
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   @override
   String get data_root_use_default_button => 'Start with default location';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -38921,6 +38960,13 @@ class _StringsIt extends _StringsEn {
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   @override
   String get data_root_use_default_button => 'Start with default location';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -44656,6 +44702,13 @@ class _StringsJa extends _StringsEn {
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   @override
   String get data_root_use_default_button => 'Start with default location';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -50394,6 +50447,13 @@ class _StringsKo extends _StringsEn {
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   @override
   String get data_root_use_default_button => 'Start with default location';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -56302,6 +56362,13 @@ class _StringsNl extends _StringsEn {
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   @override
   String get data_root_use_default_button => 'Start with default location';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -62225,6 +62292,13 @@ class _StringsPtBr extends _StringsEn {
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   @override
   String get data_root_use_default_button => 'Start with default location';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -68131,6 +68205,13 @@ class _StringsRu extends _StringsEn {
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   @override
   String get data_root_use_default_button => 'Start with default location';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -73982,6 +74063,13 @@ class _StringsTh extends _StringsEn {
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   @override
   String get data_root_use_default_button => 'Start with default location';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -79865,6 +79953,13 @@ class _StringsTr extends _StringsEn {
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   @override
   String get data_root_use_default_button => 'Start with default location';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -85735,6 +85830,13 @@ class _StringsVi extends _StringsEn {
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   @override
   String get data_root_use_default_button => 'Start with default location';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -91195,6 +91297,13 @@ class _StringsZhCn extends _StringsEn {
       '你设置的数据位置 ${path} 暂时读不到（盘可能在休眠、被占用或未连接）。你的数据是安全的、原封不动留在那里——没有丢失。请点「重试」,等盘就绪即可用回你的数据；或选择用默认位置临时启动（不会改动你原来的数据）。';
   @override
   String get data_root_use_default_button => '仍用默认位置启动';
+  @override
+  String get browser_extension_version_app => 'App 内置';
+  @override
+  String get browser_extension_version_browser => '浏览器中加载';
+  @override
+  String get browser_extension_version_mismatch =>
+      '浏览器中加载的扩展不是最新版本：如有需要先重新准备扩展，再到浏览器扩展管理页（chrome://extensions）点「重新加载」。';
 }
 
 // Path: <root>
@@ -96848,6 +96957,13 @@ class _StringsZhHk extends _StringsEn {
       'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
   @override
   String get data_root_use_default_button => 'Start with default location';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 /// Flat map(s) containing all translations.
@@ -102120,6 +102236,12 @@ extension on _StringsEn {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -107390,6 +107512,12 @@ extension on _StringsAr {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -112681,6 +112809,12 @@ extension on _StringsDe {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -117971,6 +118105,12 @@ extension on _StringsEs {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -123267,6 +123407,12 @@ extension on _StringsFr {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -128545,6 +128691,12 @@ extension on _StringsId {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -133838,6 +133990,12 @@ extension on _StringsIt {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -139093,6 +139251,12 @@ extension on _StringsJa {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -144352,6 +144516,12 @@ extension on _StringsKo {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -149638,6 +149808,12 @@ extension on _StringsNl {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -154921,6 +155097,12 @@ extension on _StringsPtBr {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -160209,6 +160391,12 @@ extension on _StringsRu {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -165481,6 +165669,12 @@ extension on _StringsTh {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -170762,6 +170956,12 @@ extension on _StringsTr {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -176038,6 +176238,12 @@ extension on _StringsVi {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -181274,6 +181480,12 @@ extension on _StringsZhCn {
             '你设置的数据位置 ${path} 暂时读不到（盘可能在休眠、被占用或未连接）。你的数据是安全的、原封不动留在那里——没有丢失。请点「重试」,等盘就绪即可用回你的数据；或选择用默认位置临时启动（不会改动你原来的数据）。';
       case 'data_root_use_default_button':
         return '仍用默认位置启动';
+      case 'browser_extension_version_app':
+        return 'App 内置';
+      case 'browser_extension_version_browser':
+        return '浏览器中加载';
+      case 'browser_extension_version_mismatch':
+        return '浏览器中加载的扩展不是最新版本：如有需要先重新准备扩展，再到浏览器扩展管理页（chrome://extensions）点「重新加载」。';
       default:
         return null;
     }
@@ -186524,6 +186736,12 @@ extension on _StringsZhHk {
             'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
       case 'data_root_use_default_button':
         return 'Start with default location';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
