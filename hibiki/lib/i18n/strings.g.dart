@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44812 (2636 per locale)
+/// Strings: 44999 (2647 per locale)
 ///
-/// Built on 2026-07-25 at 19:07 UTC
+/// Built on 2026-07-25 at 19:42 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3493,6 +3493,24 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get gal_hook_text_font_size_hint =>
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  String get game_track_no_clips => 'No clips in the recent window';
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 // Path: <root>
@@ -9468,6 +9486,35 @@ class _StringsAr extends _StringsEn {
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 // Path: <root>
@@ -15516,6 +15563,35 @@ class _StringsDe extends _StringsEn {
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 // Path: <root>
@@ -21580,6 +21656,35 @@ class _StringsEs extends _StringsEn {
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 // Path: <root>
@@ -27655,6 +27760,35 @@ class _StringsFr extends _StringsEn {
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 // Path: <root>
@@ -33657,6 +33791,35 @@ class _StringsId extends _StringsEn {
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 // Path: <root>
@@ -39707,6 +39870,35 @@ class _StringsIt extends _StringsEn {
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 // Path: <root>
@@ -45562,6 +45754,35 @@ class _StringsJa extends _StringsEn {
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 // Path: <root>
@@ -51420,6 +51641,35 @@ class _StringsKo extends _StringsEn {
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 // Path: <root>
@@ -57448,6 +57698,35 @@ class _StringsNl extends _StringsEn {
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 // Path: <root>
@@ -63491,6 +63770,35 @@ class _StringsPtBr extends _StringsEn {
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 // Path: <root>
@@ -69517,6 +69825,35 @@ class _StringsRu extends _StringsEn {
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 // Path: <root>
@@ -75488,6 +75825,35 @@ class _StringsTh extends _StringsEn {
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 // Path: <root>
@@ -81491,6 +81857,35 @@ class _StringsTr extends _StringsEn {
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 // Path: <root>
@@ -87481,6 +87876,35 @@ class _StringsVi extends _StringsEn {
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 // Path: <root>
@@ -93059,6 +93483,34 @@ class _StringsZhCn extends _StringsEn {
       '拖动浮窗右下角只改窗口大小（换来更多可见行），字号在这里单独设置。';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame 台词浮窗';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      '引擎语音钩子已装好，但游戏还没播放过语音。暂时用系统混音，出现第一句语音后会自动切回引擎语音。';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      '引擎语音钩子和系统回环都启动失败，当前无法采集任何音频。';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      '音频采集正常，但游戏窗口还没出现，暂时无法截图。窗口出现后会自动绑定。';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      '附着引擎语音钩子到正在运行的游戏失败，改用系统混音。';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      '游戏已经启动，但早期注入引擎钩子失败，改用系统混音。';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      '只有当前音频后端是「引擎 PCM」时，选轨/排除才会真正影响取音。当前后端下方列表只读。';
+  @override
+  String get game_track_no_clips => '近窗内没有片段';
+  @override
+  String get game_line_track_tooltip => '为这句选择语音轨';
+  @override
+  String get game_line_track_dialog_title => '这句台词的语音轨';
+  @override
+  String get game_line_track_failed => '这条轨在该句附近没有取到语音';
+  @override
+  String get game_line_track_applied => '已把该轨的语音绑定到这句';
 }
 
 // Path: <root>
@@ -98832,6 +99284,35 @@ class _StringsZhHk extends _StringsEn {
       'Drag the overlay\'s corner to resize the window; the caption size is set here.';
   @override
   String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
 }
 
 /// Flat map(s) containing all translations.
@@ -104217,6 +104698,28 @@ extension on _StringsEn {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
@@ -109600,6 +110103,28 @@ extension on _StringsAr {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
@@ -115004,6 +115529,28 @@ extension on _StringsDe {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
@@ -120407,6 +120954,28 @@ extension on _StringsEs {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
@@ -125816,6 +126385,28 @@ extension on _StringsFr {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
@@ -131207,6 +131798,28 @@ extension on _StringsId {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
@@ -136613,6 +137226,28 @@ extension on _StringsIt {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
@@ -141981,6 +142616,28 @@ extension on _StringsJa {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
@@ -147353,6 +148010,28 @@ extension on _StringsKo {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
@@ -152752,6 +153431,28 @@ extension on _StringsNl {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
@@ -158148,6 +158849,28 @@ extension on _StringsPtBr {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
@@ -163549,6 +164272,28 @@ extension on _StringsRu {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
@@ -168934,6 +169679,28 @@ extension on _StringsTh {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
@@ -174328,6 +175095,28 @@ extension on _StringsTr {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
@@ -179717,6 +180506,28 @@ extension on _StringsVi {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
@@ -185063,6 +185874,28 @@ extension on _StringsZhCn {
         return '拖动浮窗右下角只改窗口大小（换来更多可见行），字号在这里单独设置。';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame 台词浮窗';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return '引擎语音钩子已装好，但游戏还没播放过语音。暂时用系统混音，出现第一句语音后会自动切回引擎语音。';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return '引擎语音钩子和系统回环都启动失败，当前无法采集任何音频。';
+      case 'game_hook_fallback_window_not_found':
+        return '音频采集正常，但游戏窗口还没出现，暂时无法截图。窗口出现后会自动绑定。';
+      case 'game_hook_fallback_engine_attach_failed':
+        return '附着引擎语音钩子到正在运行的游戏失败，改用系统混音。';
+      case 'game_hook_fallback_launch_injection_failed':
+        return '游戏已经启动，但早期注入引擎钩子失败，改用系统混音。';
+      case 'game_tracks_pcm_only_hint':
+        return '只有当前音频后端是「引擎 PCM」时，选轨/排除才会真正影响取音。当前后端下方列表只读。';
+      case 'game_track_no_clips':
+        return '近窗内没有片段';
+      case 'game_line_track_tooltip':
+        return '为这句选择语音轨';
+      case 'game_line_track_dialog_title':
+        return '这句台词的语音轨';
+      case 'game_line_track_failed':
+        return '这条轨在该句附近没有取到语音';
+      case 'game_line_track_applied':
+        return '已把该轨的语音绑定到这句';
       default:
         return null;
     }
@@ -190426,6 +191259,28 @@ extension on _StringsZhHk {
         return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
       case 'settings_section_gal_hook_overlay':
         return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
       default:
         return null;
     }
