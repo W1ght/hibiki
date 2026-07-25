@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44370 (2610 per locale)
+/// Strings: 44557 (2621 per locale)
 ///
-/// Built on 2026-07-25 at 14:19 UTC
+/// Built on 2026-07-25 at 15:25 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3457,6 +3457,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anime_download_sort_date => 'Published';
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  String get manga_online_catalog_title => 'Online catalog';
+  String get manga_online_search_hint => 'Search series';
+  String get manga_online_load_failed => 'Failed to load catalog';
+  String get manga_online_downloaded => 'Imported';
+  String get manga_online_download_selected => 'Download selected';
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  String get manga_online_stage_extract => 'Extracting…';
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  String get manga_online_failed => 'Download failed';
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 // Path: <root>
@@ -9370,6 +9383,30 @@ class _StringsAr extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 // Path: <root>
@@ -15356,6 +15393,30 @@ class _StringsDe extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 // Path: <root>
@@ -21358,6 +21419,30 @@ class _StringsEs extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 // Path: <root>
@@ -27371,6 +27456,30 @@ class _StringsFr extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 // Path: <root>
@@ -33311,6 +33420,30 @@ class _StringsId extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 // Path: <root>
@@ -39299,6 +39432,30 @@ class _StringsIt extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 // Path: <root>
@@ -45092,6 +45249,30 @@ class _StringsJa extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 // Path: <root>
@@ -50888,6 +51069,30 @@ class _StringsKo extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 // Path: <root>
@@ -56854,6 +57059,30 @@ class _StringsNl extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 // Path: <root>
@@ -62835,6 +63064,30 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 // Path: <root>
@@ -68799,6 +69052,30 @@ class _StringsRu extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 // Path: <root>
@@ -74708,6 +74985,30 @@ class _StringsTh extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 // Path: <root>
@@ -80649,6 +80950,30 @@ class _StringsTr extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 // Path: <root>
@@ -86577,6 +86902,30 @@ class _StringsVi extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 // Path: <root>
@@ -92094,6 +92443,30 @@ class _StringsZhCn extends _StringsEn {
   String get anime_download_sort_date => '发布时间';
   @override
   String get anime_download_search_error_proxy_hint => '站点无法直连时，可在下载设置中配置网络代理。';
+  @override
+  String get manga_online_catalog_title => '在线目录';
+  @override
+  String get manga_online_search_hint => '搜索系列';
+  @override
+  String get manga_online_load_failed => '目录加载失败';
+  @override
+  String get manga_online_downloaded => '已入库';
+  @override
+  String get manga_online_download_selected => '下载所选';
+  @override
+  String get manga_online_stage_mokuro => '下载 OCR 数据…';
+  @override
+  String get manga_online_stage_cbz => '下载卷包…';
+  @override
+  String get manga_online_stage_extract => '解包中…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      '第 ${done} / ${total} 卷';
+  @override
+  String get manga_online_failed => '下载失败';
+  @override
+  String get manga_online_base_url_label => '在线目录地址';
 }
 
 // Path: <root>
@@ -97805,6 +98178,30 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
 }
 
 /// Flat map(s) containing all translations.
@@ -103133,6 +103530,29 @@ extension on _StringsEn {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
@@ -108459,6 +108879,29 @@ extension on _StringsAr {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
@@ -113806,6 +114249,29 @@ extension on _StringsDe {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
@@ -119152,6 +119618,29 @@ extension on _StringsEs {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
@@ -124504,6 +124993,29 @@ extension on _StringsFr {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
@@ -129838,6 +130350,29 @@ extension on _StringsId {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
@@ -135187,6 +135722,29 @@ extension on _StringsIt {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
@@ -140498,6 +141056,29 @@ extension on _StringsJa {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
@@ -145813,6 +146394,29 @@ extension on _StringsKo {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
@@ -151155,6 +151759,29 @@ extension on _StringsNl {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
@@ -156494,6 +157121,29 @@ extension on _StringsPtBr {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
@@ -161838,6 +162488,29 @@ extension on _StringsRu {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
@@ -167166,6 +167839,29 @@ extension on _StringsTh {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
@@ -172503,6 +173199,29 @@ extension on _StringsTr {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
@@ -177835,6 +178554,29 @@ extension on _StringsVi {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
@@ -183127,6 +183869,29 @@ extension on _StringsZhCn {
         return '发布时间';
       case 'anime_download_search_error_proxy_hint':
         return '站点无法直连时，可在下载设置中配置网络代理。';
+      case 'manga_online_catalog_title':
+        return '在线目录';
+      case 'manga_online_search_hint':
+        return '搜索系列';
+      case 'manga_online_load_failed':
+        return '目录加载失败';
+      case 'manga_online_downloaded':
+        return '已入库';
+      case 'manga_online_download_selected':
+        return '下载所选';
+      case 'manga_online_stage_mokuro':
+        return '下载 OCR 数据…';
+      case 'manga_online_stage_cbz':
+        return '下载卷包…';
+      case 'manga_online_stage_extract':
+        return '解包中…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            '第 ${done} / ${total} 卷';
+      case 'manga_online_failed':
+        return '下载失败';
+      case 'manga_online_base_url_label':
+        return '在线目录地址';
       default:
         return null;
     }
@@ -188433,6 +189198,29 @@ extension on _StringsZhHk {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
       default:
         return null;
     }
