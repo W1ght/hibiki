@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44761 (2633 per locale)
+/// Strings: 44795 (2635 per locale)
 ///
-/// Built on 2026-07-25 at 18:31 UTC
+/// Built on 2026-07-25 at 19:30 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3489,6 +3489,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get yomitan_port_kill_confirm => 'End process';
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  String get game_edit_launch_args => 'Launch arguments';
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -9457,6 +9460,11 @@ class _StringsAr extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -15498,6 +15506,11 @@ class _StringsDe extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -21555,6 +21568,11 @@ class _StringsEs extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -27623,6 +27641,11 @@ class _StringsFr extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -33618,6 +33641,11 @@ class _StringsId extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -39661,6 +39689,11 @@ class _StringsIt extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -45509,6 +45542,11 @@ class _StringsJa extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -51360,6 +51398,11 @@ class _StringsKo extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -57381,6 +57424,11 @@ class _StringsNl extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -63417,6 +63465,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -69436,6 +69489,11 @@ class _StringsRu extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -75400,6 +75458,11 @@ class _StringsTh extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -81396,6 +81459,11 @@ class _StringsTr extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -87379,6 +87447,11 @@ class _StringsVi extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -92950,6 +93023,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} 是关键系统进程，Hibiki 不会结束它；请改用其他端口。';
+  @override
+  String get game_edit_launch_args => '启动参数';
+  @override
+  String get game_edit_launch_args_hint => '启动时传给游戏，例如 -windowed';
 }
 
 // Path: <root>
@@ -98716,6 +98793,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String yomitan_port_kill_protected({required Object process}) =>
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 /// Flat map(s) containing all translations.
@@ -104095,6 +104177,10 @@ extension on _StringsEn {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -109472,6 +109558,10 @@ extension on _StringsAr {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -114870,6 +114960,10 @@ extension on _StringsDe {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -120267,6 +120361,10 @@ extension on _StringsEs {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -125670,6 +125768,10 @@ extension on _StringsFr {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -131055,6 +131157,10 @@ extension on _StringsId {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -136455,6 +136561,10 @@ extension on _StringsIt {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -141817,6 +141927,10 @@ extension on _StringsJa {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -147183,6 +147297,10 @@ extension on _StringsKo {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -152576,6 +152694,10 @@ extension on _StringsNl {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -157966,6 +158088,10 @@ extension on _StringsPtBr {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -163361,6 +163487,10 @@ extension on _StringsRu {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -168740,6 +168870,10 @@ extension on _StringsTh {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -174128,6 +174262,10 @@ extension on _StringsTr {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -179511,6 +179649,10 @@ extension on _StringsVi {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -184851,6 +184993,10 @@ extension on _StringsZhCn {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} 是关键系统进程，Hibiki 不会结束它；请改用其他端口。';
+      case 'game_edit_launch_args':
+        return '启动参数';
+      case 'game_edit_launch_args_hint':
+        return '启动时传给游戏，例如 -windowed';
       default:
         return null;
     }
@@ -190208,6 +190354,10 @@ extension on _StringsZhHk {
       case 'yomitan_port_kill_protected':
         return ({required Object process}) =>
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
