@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44098 (2594 per locale)
+/// Strings: 44149 (2597 per locale)
 ///
-/// Built on 2026-07-25 at 07:52 UTC
+/// Built on 2026-07-25 at 08:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3439,6 +3439,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_recently_played => 'Recently played';
   String get game_random_title => 'Pick for me';
   String get game_random_reroll => 'Shuffle';
+  String get browser_extension_version_app => 'App bundled';
+  String get browser_extension_version_browser => 'Loaded in browser';
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -9318,6 +9322,13 @@ class _StringsAr extends _StringsEn {
   String get game_random_title => 'Pick for me';
   @override
   String get game_random_reroll => 'Shuffle';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -15270,6 +15281,13 @@ class _StringsDe extends _StringsEn {
   String get game_random_title => 'Pick for me';
   @override
   String get game_random_reroll => 'Shuffle';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -21238,6 +21256,13 @@ class _StringsEs extends _StringsEn {
   String get game_random_title => 'Pick for me';
   @override
   String get game_random_reroll => 'Shuffle';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -27217,6 +27242,13 @@ class _StringsFr extends _StringsEn {
   String get game_random_title => 'Pick for me';
   @override
   String get game_random_reroll => 'Shuffle';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -33123,6 +33155,13 @@ class _StringsId extends _StringsEn {
   String get game_random_title => 'Pick for me';
   @override
   String get game_random_reroll => 'Shuffle';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -39077,6 +39116,13 @@ class _StringsIt extends _StringsEn {
   String get game_random_title => 'Pick for me';
   @override
   String get game_random_reroll => 'Shuffle';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -44836,6 +44882,13 @@ class _StringsJa extends _StringsEn {
   String get game_random_title => 'Pick for me';
   @override
   String get game_random_reroll => 'Shuffle';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -50598,6 +50651,13 @@ class _StringsKo extends _StringsEn {
   String get game_random_title => 'Pick for me';
   @override
   String get game_random_reroll => 'Shuffle';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -56530,6 +56590,13 @@ class _StringsNl extends _StringsEn {
   String get game_random_title => 'Pick for me';
   @override
   String get game_random_reroll => 'Shuffle';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -62477,6 +62544,13 @@ class _StringsPtBr extends _StringsEn {
   String get game_random_title => 'Pick for me';
   @override
   String get game_random_reroll => 'Shuffle';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -68407,6 +68481,13 @@ class _StringsRu extends _StringsEn {
   String get game_random_title => 'Pick for me';
   @override
   String get game_random_reroll => 'Shuffle';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -74282,6 +74363,13 @@ class _StringsTh extends _StringsEn {
   String get game_random_title => 'Pick for me';
   @override
   String get game_random_reroll => 'Shuffle';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -80189,6 +80277,13 @@ class _StringsTr extends _StringsEn {
   String get game_random_title => 'Pick for me';
   @override
   String get game_random_reroll => 'Shuffle';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -86083,6 +86178,13 @@ class _StringsVi extends _StringsEn {
   String get game_random_title => 'Pick for me';
   @override
   String get game_random_reroll => 'Shuffle';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 // Path: <root>
@@ -91567,6 +91669,13 @@ class _StringsZhCn extends _StringsEn {
   String get game_random_title => '随机推荐';
   @override
   String get game_random_reroll => '换一个';
+  @override
+  String get browser_extension_version_app => 'App 内置';
+  @override
+  String get browser_extension_version_browser => '浏览器中加载';
+  @override
+  String get browser_extension_version_mismatch =>
+      '浏览器中加载的扩展不是最新版本：如有需要先重新准备扩展，再到浏览器扩展管理页（chrome://extensions）点「重新加载」。';
 }
 
 // Path: <root>
@@ -97244,6 +97353,13 @@ class _StringsZhHk extends _StringsEn {
   String get game_random_title => 'Pick for me';
   @override
   String get game_random_reroll => 'Shuffle';
+  @override
+  String get browser_extension_version_app => 'App bundled';
+  @override
+  String get browser_extension_version_browser => 'Loaded in browser';
+  @override
+  String get browser_extension_version_mismatch =>
+      'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
 }
 
 /// Flat map(s) containing all translations.
@@ -102540,6 +102656,12 @@ extension on _StringsEn {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -107834,6 +107956,12 @@ extension on _StringsAr {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -113149,6 +113277,12 @@ extension on _StringsDe {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -118463,6 +118597,12 @@ extension on _StringsEs {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -123783,6 +123923,12 @@ extension on _StringsFr {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -129085,6 +129231,12 @@ extension on _StringsId {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -134402,6 +134554,12 @@ extension on _StringsIt {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -139681,6 +139839,12 @@ extension on _StringsJa {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -144964,6 +145128,12 @@ extension on _StringsKo {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -150274,6 +150444,12 @@ extension on _StringsNl {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -155581,6 +155757,12 @@ extension on _StringsPtBr {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -160893,6 +161075,12 @@ extension on _StringsRu {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -166189,6 +166377,12 @@ extension on _StringsTh {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -171494,6 +171688,12 @@ extension on _StringsTr {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -176794,6 +176994,12 @@ extension on _StringsVi {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
@@ -182054,6 +182260,12 @@ extension on _StringsZhCn {
         return '随机推荐';
       case 'game_random_reroll':
         return '换一个';
+      case 'browser_extension_version_app':
+        return 'App 内置';
+      case 'browser_extension_version_browser':
+        return '浏览器中加载';
+      case 'browser_extension_version_mismatch':
+        return '浏览器中加载的扩展不是最新版本：如有需要先重新准备扩展，再到浏览器扩展管理页（chrome://extensions）点「重新加载」。';
       default:
         return null;
     }
@@ -187328,6 +187540,12 @@ extension on _StringsZhHk {
         return 'Pick for me';
       case 'game_random_reroll':
         return 'Shuffle';
+      case 'browser_extension_version_app':
+        return 'App bundled';
+      case 'browser_extension_version_browser':
+        return 'Loaded in browser';
+      case 'browser_extension_version_mismatch':
+        return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       default:
         return null;
     }
