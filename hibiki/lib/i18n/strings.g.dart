@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44625 (2625 per locale)
+/// Strings: 44761 (2633 per locale)
 ///
-/// Built on 2026-07-25 at 18:20 UTC
+/// Built on 2026-07-25 at 18:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2632,7 +2632,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   String get interconnect_enable => 'Enable interconnect';
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
@@ -3476,6 +3476,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  String get yomitan_port_kill_action => 'End process and retry';
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  String get yomitan_port_kill_confirm => 'End process';
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -7910,7 +7923,7 @@ class _StringsAr extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -9423,6 +9436,27 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -13930,7 +13964,7 @@ class _StringsDe extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -15443,6 +15477,27 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -19966,7 +20021,7 @@ class _StringsEs extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -21479,6 +21534,27 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -26013,7 +26089,7 @@ class _StringsFr extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -27526,6 +27602,27 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -31987,7 +32084,7 @@ class _StringsId extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -33500,6 +33597,27 @@ class _StringsId extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -38009,7 +38127,7 @@ class _StringsIt extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -39522,6 +39640,27 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -43837,7 +43976,7 @@ class _StringsJa extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -45349,6 +45488,27 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -49667,7 +49827,7 @@ class _StringsKo extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -51179,6 +51339,27 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -55666,7 +55847,7 @@ class _StringsNl extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -57179,6 +57360,27 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -61681,7 +61883,7 @@ class _StringsPtBr extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -63194,6 +63396,27 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -67679,7 +67902,7 @@ class _StringsRu extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -69192,6 +69415,27 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -73622,7 +73866,7 @@ class _StringsTh extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -75135,6 +75379,27 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -79597,7 +79862,7 @@ class _StringsTr extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -81110,6 +81375,27 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -85559,7 +85845,7 @@ class _StringsVi extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -87072,6 +87358,27 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -91215,7 +91522,7 @@ class _StringsZhCn extends _StringsEn {
   String get desktop_clipboard_window_mode_hint => '控制 Hibiki 是否保持在其他窗口上方';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
+      '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Hibiki 的 Yomitan API 服务器。';
   @override
   String get interconnect_enable => '启用互联';
   @override
@@ -92623,6 +92930,26 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       '游戏进程已启动，但窗口一直没有出现，游戏可能没能真正启动。可以再启动一次试试。';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API 服务器已开启';
+  @override
+  String get yomitan_port_kill_action => '结束进程并重试';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      '无法结束 ${process}，请手动结束该进程后重试。';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      '结束占用端口 ${port} 的进程？';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      '该端口目前被以下进程占用：${process}';
+  @override
+  String get yomitan_port_kill_self_instance => '该进程是本应用的另一个正在运行的实例。';
+  @override
+  String get yomitan_port_kill_confirm => '结束进程';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} 是关键系统进程，Hibiki 不会结束它；请改用其他端口。';
 }
 
 // Path: <root>
@@ -96860,7 +97187,7 @@ class _StringsZhHk extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -98368,6 +98695,27 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_capture_window_missing =>
       'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 /// Flat map(s) containing all translations.
@@ -102368,7 +102716,7 @@ extension on _StringsEn {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -103727,6 +104075,26 @@ extension on _StringsEn {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -107725,7 +108093,7 @@ extension on _StringsAr {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -109084,6 +109452,26 @@ extension on _StringsAr {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -113103,7 +113491,7 @@ extension on _StringsDe {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -114462,6 +114850,26 @@ extension on _StringsDe {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -118480,7 +118888,7 @@ extension on _StringsEs {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -119839,6 +120247,26 @@ extension on _StringsEs {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -123863,7 +124291,7 @@ extension on _StringsFr {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -125222,6 +125650,26 @@ extension on _StringsFr {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -129228,7 +129676,7 @@ extension on _StringsId {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -130587,6 +131035,26 @@ extension on _StringsId {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -134608,7 +135076,7 @@ extension on _StringsIt {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -135967,6 +136435,26 @@ extension on _StringsIt {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -139950,7 +140438,7 @@ extension on _StringsJa {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -141309,6 +141797,26 @@ extension on _StringsJa {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -145296,7 +145804,7 @@ extension on _StringsKo {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -146655,6 +147163,26 @@ extension on _StringsKo {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -150669,7 +151197,7 @@ extension on _StringsNl {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -152028,6 +152556,26 @@ extension on _StringsNl {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -156039,7 +156587,7 @@ extension on _StringsPtBr {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -157398,6 +157946,26 @@ extension on _StringsPtBr {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -161414,7 +161982,7 @@ extension on _StringsRu {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -162773,6 +163341,26 @@ extension on _StringsRu {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -166773,7 +167361,7 @@ extension on _StringsTh {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -168132,6 +168720,26 @@ extension on _StringsTh {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -172141,7 +172749,7 @@ extension on _StringsTr {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -173500,6 +174108,26 @@ extension on _StringsTr {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -177504,7 +178132,7 @@ extension on _StringsVi {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -178863,6 +179491,26 @@ extension on _StringsVi {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -182835,7 +183483,7 @@ extension on _StringsZhCn {
         return '控制 Hibiki 是否保持在其他窗口上方';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
+            '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Hibiki 的 Yomitan API 服务器。';
       case 'interconnect_enable':
         return '启用互联';
       case 'interconnect_enable_hint':
@@ -184186,6 +184834,23 @@ extension on _StringsZhCn {
         return '游戏已在运行，但引擎注入失败，改用整机混音兜底，可能混入 BGM 和音效。';
       case 'game_capture_window_missing':
         return '游戏进程已启动，但窗口一直没有出现，游戏可能没能真正启动。可以再启动一次试试。';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API 服务器已开启';
+      case 'yomitan_port_kill_action':
+        return '结束进程并重试';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) => '无法结束 ${process}，请手动结束该进程后重试。';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) => '结束占用端口 ${port} 的进程？';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) => '该端口目前被以下进程占用：${process}';
+      case 'yomitan_port_kill_self_instance':
+        return '该进程是本应用的另一个正在运行的实例。';
+      case 'yomitan_port_kill_confirm':
+        return '结束进程';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} 是关键系统进程，Hibiki 不会结束它；请改用其他端口。';
       default:
         return null;
     }
@@ -188164,7 +188829,7 @@ extension on _StringsZhHk {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -189523,6 +190188,26 @@ extension on _StringsZhHk {
         return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
       case 'game_capture_window_missing':
         return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
