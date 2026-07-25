@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 43775 (2575 per locale)
+/// Strings: 43979 (2587 per locale)
 ///
-/// Built on 2026-07-24 at 20:56 UTC
+/// Built on 2026-07-25 at 07:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3417,6 +3417,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_developer => 'Developer';
   String get game_site_score => 'Site rating';
   String get game_user_rating => 'My rating';
+  String get game_meta_source => 'Data source';
+  String get game_meta_added => 'Added';
+  String get game_meta_ranking => 'Ranking';
+  String get game_tags_title => 'Game tags';
+  String get game_tags_clear => 'Clear selection';
+  String get game_dashboard => 'Home';
+  String get game_kpi_total_games => 'Games';
+  String get game_kpi_week => 'This week';
+  String get game_focus_continue => 'Continue';
+  String get game_recently_played => 'Recently played';
+  String get game_random_title => 'Pick for me';
+  String get game_random_reroll => 'Shuffle';
 }
 
 // Path: <root>
@@ -9255,6 +9267,30 @@ class _StringsAr extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get game_meta_source => 'Data source';
+  @override
+  String get game_meta_added => 'Added';
+  @override
+  String get game_meta_ranking => 'Ranking';
+  @override
+  String get game_tags_title => 'Game tags';
+  @override
+  String get game_tags_clear => 'Clear selection';
+  @override
+  String get game_dashboard => 'Home';
+  @override
+  String get game_kpi_total_games => 'Games';
+  @override
+  String get game_kpi_week => 'This week';
+  @override
+  String get game_focus_continue => 'Continue';
+  @override
+  String get game_recently_played => 'Recently played';
+  @override
+  String get game_random_title => 'Pick for me';
+  @override
+  String get game_random_reroll => 'Shuffle';
 }
 
 // Path: <root>
@@ -15166,6 +15202,30 @@ class _StringsDe extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get game_meta_source => 'Data source';
+  @override
+  String get game_meta_added => 'Added';
+  @override
+  String get game_meta_ranking => 'Ranking';
+  @override
+  String get game_tags_title => 'Game tags';
+  @override
+  String get game_tags_clear => 'Clear selection';
+  @override
+  String get game_dashboard => 'Home';
+  @override
+  String get game_kpi_total_games => 'Games';
+  @override
+  String get game_kpi_week => 'This week';
+  @override
+  String get game_focus_continue => 'Continue';
+  @override
+  String get game_recently_played => 'Recently played';
+  @override
+  String get game_random_title => 'Pick for me';
+  @override
+  String get game_random_reroll => 'Shuffle';
 }
 
 // Path: <root>
@@ -21093,6 +21153,30 @@ class _StringsEs extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get game_meta_source => 'Data source';
+  @override
+  String get game_meta_added => 'Added';
+  @override
+  String get game_meta_ranking => 'Ranking';
+  @override
+  String get game_tags_title => 'Game tags';
+  @override
+  String get game_tags_clear => 'Clear selection';
+  @override
+  String get game_dashboard => 'Home';
+  @override
+  String get game_kpi_total_games => 'Games';
+  @override
+  String get game_kpi_week => 'This week';
+  @override
+  String get game_focus_continue => 'Continue';
+  @override
+  String get game_recently_played => 'Recently played';
+  @override
+  String get game_random_title => 'Pick for me';
+  @override
+  String get game_random_reroll => 'Shuffle';
 }
 
 // Path: <root>
@@ -27031,6 +27115,30 @@ class _StringsFr extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get game_meta_source => 'Data source';
+  @override
+  String get game_meta_added => 'Added';
+  @override
+  String get game_meta_ranking => 'Ranking';
+  @override
+  String get game_tags_title => 'Game tags';
+  @override
+  String get game_tags_clear => 'Clear selection';
+  @override
+  String get game_dashboard => 'Home';
+  @override
+  String get game_kpi_total_games => 'Games';
+  @override
+  String get game_kpi_week => 'This week';
+  @override
+  String get game_focus_continue => 'Continue';
+  @override
+  String get game_recently_played => 'Recently played';
+  @override
+  String get game_random_title => 'Pick for me';
+  @override
+  String get game_random_reroll => 'Shuffle';
 }
 
 // Path: <root>
@@ -32896,6 +33004,30 @@ class _StringsId extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get game_meta_source => 'Data source';
+  @override
+  String get game_meta_added => 'Added';
+  @override
+  String get game_meta_ranking => 'Ranking';
+  @override
+  String get game_tags_title => 'Game tags';
+  @override
+  String get game_tags_clear => 'Clear selection';
+  @override
+  String get game_dashboard => 'Home';
+  @override
+  String get game_kpi_total_games => 'Games';
+  @override
+  String get game_kpi_week => 'This week';
+  @override
+  String get game_focus_continue => 'Continue';
+  @override
+  String get game_recently_played => 'Recently played';
+  @override
+  String get game_random_title => 'Pick for me';
+  @override
+  String get game_random_reroll => 'Shuffle';
 }
 
 // Path: <root>
@@ -38809,6 +38941,30 @@ class _StringsIt extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get game_meta_source => 'Data source';
+  @override
+  String get game_meta_added => 'Added';
+  @override
+  String get game_meta_ranking => 'Ranking';
+  @override
+  String get game_tags_title => 'Game tags';
+  @override
+  String get game_tags_clear => 'Clear selection';
+  @override
+  String get game_dashboard => 'Home';
+  @override
+  String get game_kpi_total_games => 'Games';
+  @override
+  String get game_kpi_week => 'This week';
+  @override
+  String get game_focus_continue => 'Continue';
+  @override
+  String get game_recently_played => 'Recently played';
+  @override
+  String get game_random_title => 'Pick for me';
+  @override
+  String get game_random_reroll => 'Shuffle';
 }
 
 // Path: <root>
@@ -44527,6 +44683,30 @@ class _StringsJa extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get game_meta_source => 'Data source';
+  @override
+  String get game_meta_added => 'Added';
+  @override
+  String get game_meta_ranking => 'Ranking';
+  @override
+  String get game_tags_title => 'Game tags';
+  @override
+  String get game_tags_clear => 'Clear selection';
+  @override
+  String get game_dashboard => 'Home';
+  @override
+  String get game_kpi_total_games => 'Games';
+  @override
+  String get game_kpi_week => 'This week';
+  @override
+  String get game_focus_continue => 'Continue';
+  @override
+  String get game_recently_played => 'Recently played';
+  @override
+  String get game_random_title => 'Pick for me';
+  @override
+  String get game_random_reroll => 'Shuffle';
 }
 
 // Path: <root>
@@ -50248,6 +50428,30 @@ class _StringsKo extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get game_meta_source => 'Data source';
+  @override
+  String get game_meta_added => 'Added';
+  @override
+  String get game_meta_ranking => 'Ranking';
+  @override
+  String get game_tags_title => 'Game tags';
+  @override
+  String get game_tags_clear => 'Clear selection';
+  @override
+  String get game_dashboard => 'Home';
+  @override
+  String get game_kpi_total_games => 'Games';
+  @override
+  String get game_kpi_week => 'This week';
+  @override
+  String get game_focus_continue => 'Continue';
+  @override
+  String get game_recently_played => 'Recently played';
+  @override
+  String get game_random_title => 'Pick for me';
+  @override
+  String get game_random_reroll => 'Shuffle';
 }
 
 // Path: <root>
@@ -56139,6 +56343,30 @@ class _StringsNl extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get game_meta_source => 'Data source';
+  @override
+  String get game_meta_added => 'Added';
+  @override
+  String get game_meta_ranking => 'Ranking';
+  @override
+  String get game_tags_title => 'Game tags';
+  @override
+  String get game_tags_clear => 'Clear selection';
+  @override
+  String get game_dashboard => 'Home';
+  @override
+  String get game_kpi_total_games => 'Games';
+  @override
+  String get game_kpi_week => 'This week';
+  @override
+  String get game_focus_continue => 'Continue';
+  @override
+  String get game_recently_played => 'Recently played';
+  @override
+  String get game_random_title => 'Pick for me';
+  @override
+  String get game_random_reroll => 'Shuffle';
 }
 
 // Path: <root>
@@ -62045,6 +62273,30 @@ class _StringsPtBr extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get game_meta_source => 'Data source';
+  @override
+  String get game_meta_added => 'Added';
+  @override
+  String get game_meta_ranking => 'Ranking';
+  @override
+  String get game_tags_title => 'Game tags';
+  @override
+  String get game_tags_clear => 'Clear selection';
+  @override
+  String get game_dashboard => 'Home';
+  @override
+  String get game_kpi_total_games => 'Games';
+  @override
+  String get game_kpi_week => 'This week';
+  @override
+  String get game_focus_continue => 'Continue';
+  @override
+  String get game_recently_played => 'Recently played';
+  @override
+  String get game_random_title => 'Pick for me';
+  @override
+  String get game_random_reroll => 'Shuffle';
 }
 
 // Path: <root>
@@ -67934,6 +68186,30 @@ class _StringsRu extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get game_meta_source => 'Data source';
+  @override
+  String get game_meta_added => 'Added';
+  @override
+  String get game_meta_ranking => 'Ranking';
+  @override
+  String get game_tags_title => 'Game tags';
+  @override
+  String get game_tags_clear => 'Clear selection';
+  @override
+  String get game_dashboard => 'Home';
+  @override
+  String get game_kpi_total_games => 'Games';
+  @override
+  String get game_kpi_week => 'This week';
+  @override
+  String get game_focus_continue => 'Continue';
+  @override
+  String get game_recently_played => 'Recently played';
+  @override
+  String get game_random_title => 'Pick for me';
+  @override
+  String get game_random_reroll => 'Shuffle';
 }
 
 // Path: <root>
@@ -73768,6 +74044,30 @@ class _StringsTh extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get game_meta_source => 'Data source';
+  @override
+  String get game_meta_added => 'Added';
+  @override
+  String get game_meta_ranking => 'Ranking';
+  @override
+  String get game_tags_title => 'Game tags';
+  @override
+  String get game_tags_clear => 'Clear selection';
+  @override
+  String get game_dashboard => 'Home';
+  @override
+  String get game_kpi_total_games => 'Games';
+  @override
+  String get game_kpi_week => 'This week';
+  @override
+  String get game_focus_continue => 'Continue';
+  @override
+  String get game_recently_played => 'Recently played';
+  @override
+  String get game_random_title => 'Pick for me';
+  @override
+  String get game_random_reroll => 'Shuffle';
 }
 
 // Path: <root>
@@ -79634,6 +79934,30 @@ class _StringsTr extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get game_meta_source => 'Data source';
+  @override
+  String get game_meta_added => 'Added';
+  @override
+  String get game_meta_ranking => 'Ranking';
+  @override
+  String get game_tags_title => 'Game tags';
+  @override
+  String get game_tags_clear => 'Clear selection';
+  @override
+  String get game_dashboard => 'Home';
+  @override
+  String get game_kpi_total_games => 'Games';
+  @override
+  String get game_kpi_week => 'This week';
+  @override
+  String get game_focus_continue => 'Continue';
+  @override
+  String get game_recently_played => 'Recently played';
+  @override
+  String get game_random_title => 'Pick for me';
+  @override
+  String get game_random_reroll => 'Shuffle';
 }
 
 // Path: <root>
@@ -85487,6 +85811,30 @@ class _StringsVi extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get game_meta_source => 'Data source';
+  @override
+  String get game_meta_added => 'Added';
+  @override
+  String get game_meta_ranking => 'Ranking';
+  @override
+  String get game_tags_title => 'Game tags';
+  @override
+  String get game_tags_clear => 'Clear selection';
+  @override
+  String get game_dashboard => 'Home';
+  @override
+  String get game_kpi_total_games => 'Games';
+  @override
+  String get game_kpi_week => 'This week';
+  @override
+  String get game_focus_continue => 'Continue';
+  @override
+  String get game_recently_played => 'Recently played';
+  @override
+  String get game_random_title => 'Pick for me';
+  @override
+  String get game_random_reroll => 'Shuffle';
 }
 
 // Path: <root>
@@ -90932,6 +91280,30 @@ class _StringsZhCn extends _StringsEn {
   String get game_site_score => '站点评分';
   @override
   String get game_user_rating => '我的评分';
+  @override
+  String get game_meta_source => '数据来源';
+  @override
+  String get game_meta_added => '添加时间';
+  @override
+  String get game_meta_ranking => '游戏排行';
+  @override
+  String get game_tags_title => '游戏标签';
+  @override
+  String get game_tags_clear => '清空所选';
+  @override
+  String get game_dashboard => '首页';
+  @override
+  String get game_kpi_total_games => '游戏总数';
+  @override
+  String get game_kpi_week => '本周';
+  @override
+  String get game_focus_continue => '继续游戏';
+  @override
+  String get game_recently_played => '最近玩过';
+  @override
+  String get game_random_title => '随机推荐';
+  @override
+  String get game_random_reroll => '换一个';
 }
 
 // Path: <root>
@@ -96568,6 +96940,30 @@ class _StringsZhHk extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get game_meta_source => 'Data source';
+  @override
+  String get game_meta_added => 'Added';
+  @override
+  String get game_meta_ranking => 'Ranking';
+  @override
+  String get game_tags_title => 'Game tags';
+  @override
+  String get game_tags_clear => 'Clear selection';
+  @override
+  String get game_dashboard => 'Home';
+  @override
+  String get game_kpi_total_games => 'Games';
+  @override
+  String get game_kpi_week => 'This week';
+  @override
+  String get game_focus_continue => 'Continue';
+  @override
+  String get game_recently_played => 'Recently played';
+  @override
+  String get game_random_title => 'Pick for me';
+  @override
+  String get game_random_reroll => 'Shuffle';
 }
 
 /// Flat map(s) containing all translations.
@@ -101824,6 +102220,30 @@ extension on _StringsEn {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
@@ -107078,6 +107498,30 @@ extension on _StringsAr {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
@@ -112353,6 +112797,30 @@ extension on _StringsDe {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
@@ -117627,6 +118095,30 @@ extension on _StringsEs {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
@@ -122907,6 +123399,30 @@ extension on _StringsFr {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
@@ -128169,6 +128685,30 @@ extension on _StringsId {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
@@ -133446,6 +133986,30 @@ extension on _StringsIt {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
@@ -138685,6 +139249,30 @@ extension on _StringsJa {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
@@ -143928,6 +144516,30 @@ extension on _StringsKo {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
@@ -149198,6 +149810,30 @@ extension on _StringsNl {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
@@ -154465,6 +155101,30 @@ extension on _StringsPtBr {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
@@ -159737,6 +160397,30 @@ extension on _StringsRu {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
@@ -164993,6 +165677,30 @@ extension on _StringsTh {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
@@ -170258,6 +170966,30 @@ extension on _StringsTr {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
@@ -175518,6 +176250,30 @@ extension on _StringsVi {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
@@ -180739,6 +181495,30 @@ extension on _StringsZhCn {
         return '站点评分';
       case 'game_user_rating':
         return '我的评分';
+      case 'game_meta_source':
+        return '数据来源';
+      case 'game_meta_added':
+        return '添加时间';
+      case 'game_meta_ranking':
+        return '游戏排行';
+      case 'game_tags_title':
+        return '游戏标签';
+      case 'game_tags_clear':
+        return '清空所选';
+      case 'game_dashboard':
+        return '首页';
+      case 'game_kpi_total_games':
+        return '游戏总数';
+      case 'game_kpi_week':
+        return '本周';
+      case 'game_focus_continue':
+        return '继续游戏';
+      case 'game_recently_played':
+        return '最近玩过';
+      case 'game_random_title':
+        return '随机推荐';
+      case 'game_random_reroll':
+        return '换一个';
       default:
         return null;
     }
@@ -185973,6 +186753,30 @@ extension on _StringsZhHk {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'game_meta_source':
+        return 'Data source';
+      case 'game_meta_added':
+        return 'Added';
+      case 'game_meta_ranking':
+        return 'Ranking';
+      case 'game_tags_title':
+        return 'Game tags';
+      case 'game_tags_clear':
+        return 'Clear selection';
+      case 'game_dashboard':
+        return 'Home';
+      case 'game_kpi_total_games':
+        return 'Games';
+      case 'game_kpi_week':
+        return 'This week';
+      case 'game_focus_continue':
+        return 'Continue';
+      case 'game_recently_played':
+        return 'Recently played';
+      case 'game_random_title':
+        return 'Pick for me';
+      case 'game_random_reroll':
+        return 'Shuffle';
       default:
         return null;
     }
