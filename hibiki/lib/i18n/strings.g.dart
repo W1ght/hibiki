@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 43843 (2579 per locale)
+/// Strings: 43894 (2582 per locale)
 ///
-/// Built on 2026-07-25 at 05:56 UTC
+/// Built on 2026-07-25 at 07:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3423,6 +3423,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   String get stat_goal_presets => 'Presets';
+  String get data_root_unavailable_title => 'Data location not responding';
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -9271,6 +9275,13 @@ class _StringsAr extends _StringsEn {
       'Last 7 days: ${n} chars/day on average';
   @override
   String get stat_goal_presets => 'Presets';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -15192,6 +15203,13 @@ class _StringsDe extends _StringsEn {
       'Last 7 days: ${n} chars/day on average';
   @override
   String get stat_goal_presets => 'Presets';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -21129,6 +21147,13 @@ class _StringsEs extends _StringsEn {
       'Last 7 days: ${n} chars/day on average';
   @override
   String get stat_goal_presets => 'Presets';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -27077,6 +27102,13 @@ class _StringsFr extends _StringsEn {
       'Last 7 days: ${n} chars/day on average';
   @override
   String get stat_goal_presets => 'Presets';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -32952,6 +32984,13 @@ class _StringsId extends _StringsEn {
       'Last 7 days: ${n} chars/day on average';
   @override
   String get stat_goal_presets => 'Presets';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -38875,6 +38914,13 @@ class _StringsIt extends _StringsEn {
       'Last 7 days: ${n} chars/day on average';
   @override
   String get stat_goal_presets => 'Presets';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -44603,6 +44649,13 @@ class _StringsJa extends _StringsEn {
       'Last 7 days: ${n} chars/day on average';
   @override
   String get stat_goal_presets => 'Presets';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -50334,6 +50387,13 @@ class _StringsKo extends _StringsEn {
       'Last 7 days: ${n} chars/day on average';
   @override
   String get stat_goal_presets => 'Presets';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -56235,6 +56295,13 @@ class _StringsNl extends _StringsEn {
       'Last 7 days: ${n} chars/day on average';
   @override
   String get stat_goal_presets => 'Presets';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -62151,6 +62218,13 @@ class _StringsPtBr extends _StringsEn {
       'Last 7 days: ${n} chars/day on average';
   @override
   String get stat_goal_presets => 'Presets';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -68050,6 +68124,13 @@ class _StringsRu extends _StringsEn {
       'Last 7 days: ${n} chars/day on average';
   @override
   String get stat_goal_presets => 'Presets';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -73894,6 +73975,13 @@ class _StringsTh extends _StringsEn {
       'Last 7 days: ${n} chars/day on average';
   @override
   String get stat_goal_presets => 'Presets';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -79770,6 +79858,13 @@ class _StringsTr extends _StringsEn {
       'Last 7 days: ${n} chars/day on average';
   @override
   String get stat_goal_presets => 'Presets';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -85633,6 +85728,13 @@ class _StringsVi extends _StringsEn {
       'Last 7 days: ${n} chars/day on average';
   @override
   String get stat_goal_presets => 'Presets';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 // Path: <root>
@@ -91086,6 +91188,13 @@ class _StringsZhCn extends _StringsEn {
   String stat_goal_recent_average({required Object n}) => '近 7 日日均 ${n} 字';
   @override
   String get stat_goal_presets => '快捷预设';
+  @override
+  String get data_root_unavailable_title => '数据位置未响应';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      '你设置的数据位置 ${path} 暂时读不到（盘可能在休眠、被占用或未连接）。你的数据是安全的、原封不动留在那里——没有丢失。请点「重试」,等盘就绪即可用回你的数据；或选择用默认位置临时启动（不会改动你原来的数据）。';
+  @override
+  String get data_root_use_default_button => '仍用默认位置启动';
 }
 
 // Path: <root>
@@ -96732,6 +96841,13 @@ class _StringsZhHk extends _StringsEn {
       'Last 7 days: ${n} chars/day on average';
   @override
   String get stat_goal_presets => 'Presets';
+  @override
+  String get data_root_unavailable_title => 'Data location not responding';
+  @override
+  String data_root_unavailable_message({required Object path}) =>
+      'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+  @override
+  String get data_root_use_default_button => 'Start with default location';
 }
 
 /// Flat map(s) containing all translations.
@@ -101997,6 +102113,13 @@ extension on _StringsEn {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -107260,6 +107383,13 @@ extension on _StringsAr {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -112544,6 +112674,13 @@ extension on _StringsDe {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -117827,6 +117964,13 @@ extension on _StringsEs {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -123116,6 +123260,13 @@ extension on _StringsFr {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -128387,6 +128538,13 @@ extension on _StringsId {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -133673,6 +133831,13 @@ extension on _StringsIt {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -138921,6 +139086,13 @@ extension on _StringsJa {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -144173,6 +144345,13 @@ extension on _StringsKo {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -149452,6 +149631,13 @@ extension on _StringsNl {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -154728,6 +154914,13 @@ extension on _StringsPtBr {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -160009,6 +160202,13 @@ extension on _StringsRu {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -165274,6 +165474,13 @@ extension on _StringsTh {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -170548,6 +170755,13 @@ extension on _StringsTr {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -175817,6 +176031,13 @@ extension on _StringsVi {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
@@ -181046,6 +181267,13 @@ extension on _StringsZhCn {
         return ({required Object n}) => '近 7 日日均 ${n} 字';
       case 'stat_goal_presets':
         return '快捷预设';
+      case 'data_root_unavailable_title':
+        return '数据位置未响应';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            '你设置的数据位置 ${path} 暂时读不到（盘可能在休眠、被占用或未连接）。你的数据是安全的、原封不动留在那里——没有丢失。请点「重试」,等盘就绪即可用回你的数据；或选择用默认位置临时启动（不会改动你原来的数据）。';
+      case 'data_root_use_default_button':
+        return '仍用默认位置启动';
       default:
         return null;
     }
@@ -186289,6 +186517,13 @@ extension on _StringsZhHk {
             'Last 7 days: ${n} chars/day on average';
       case 'stat_goal_presets':
         return 'Presets';
+      case 'data_root_unavailable_title':
+        return 'Data location not responding';
+      case 'data_root_unavailable_message':
+        return ({required Object path}) =>
+            'Your configured data location ${path} is temporarily unreachable (the drive may be asleep, busy, or disconnected). Your data is safe and untouched there — nothing is lost. Tap Retry once the drive is ready to load your data, or start with the default location for now (your existing data will NOT be modified).';
+      case 'data_root_use_default_button':
+        return 'Start with default location';
       default:
         return null;
     }
