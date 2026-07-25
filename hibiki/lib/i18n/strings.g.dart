@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44608 (2624 per locale)
+/// Strings: 44625 (2625 per locale)
 ///
-/// Built on 2026-07-25 at 18:16 UTC
+/// Built on 2026-07-25 at 18:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2797,8 +2797,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_capture_launching => 'Launching game and starting capture...';
   String get game_capture_launch_failed => 'Game launch or capture failed';
   String get game_capture_running => 'Capture session is running';
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   String get game_text_source_engine => 'Engine hook';
   String get game_text_source_websocket => 'WebSocket';
   String get game_text_source_unknown => 'Unknown source';
@@ -3474,6 +3472,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'That audio source no longer exists — edit discarded';
   String get audio_source_edit_url => 'Edit audio source link';
   String get audio_source_updated => 'Audio source updated';
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 // Path: <root>
@@ -8201,9 +8203,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_capture_running => 'Capture session is running';
   @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
-  @override
   String get game_text_source_engine => 'Engine hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -9418,6 +9417,12 @@ class _StringsAr extends _StringsEn {
   String get audio_source_edit_url => 'Edit audio source link';
   @override
   String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 // Path: <root>
@@ -14218,9 +14223,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_capture_running => 'Capture session is running';
   @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
-  @override
   String get game_text_source_engine => 'Engine hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -15435,6 +15437,12 @@ class _StringsDe extends _StringsEn {
   String get audio_source_edit_url => 'Edit audio source link';
   @override
   String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 // Path: <root>
@@ -20251,9 +20259,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_capture_running => 'Capture session is running';
   @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
-  @override
   String get game_text_source_engine => 'Engine hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -21468,6 +21473,12 @@ class _StringsEs extends _StringsEn {
   String get audio_source_edit_url => 'Edit audio source link';
   @override
   String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 // Path: <root>
@@ -26295,9 +26306,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_capture_running => 'Capture session is running';
   @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
-  @override
   String get game_text_source_engine => 'Engine hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -27512,6 +27520,12 @@ class _StringsFr extends _StringsEn {
   String get audio_source_edit_url => 'Edit audio source link';
   @override
   String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 // Path: <root>
@@ -32266,9 +32280,6 @@ class _StringsId extends _StringsEn {
   @override
   String get game_capture_running => 'Capture session is running';
   @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
-  @override
   String get game_text_source_engine => 'Engine hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -33483,6 +33494,12 @@ class _StringsId extends _StringsEn {
   String get audio_source_edit_url => 'Edit audio source link';
   @override
   String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 // Path: <root>
@@ -38285,9 +38302,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_capture_running => 'Capture session is running';
   @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
-  @override
   String get game_text_source_engine => 'Engine hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -39502,6 +39516,12 @@ class _StringsIt extends _StringsEn {
   String get audio_source_edit_url => 'Edit audio source link';
   @override
   String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 // Path: <root>
@@ -44109,9 +44129,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_capture_running => 'Capture session is running';
   @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
-  @override
   String get game_text_source_engine => 'Engine hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -45326,6 +45343,12 @@ class _StringsJa extends _StringsEn {
   String get audio_source_edit_url => 'Edit audio source link';
   @override
   String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 // Path: <root>
@@ -49936,9 +49959,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_capture_running => 'Capture session is running';
   @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
-  @override
   String get game_text_source_engine => 'Engine hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -51153,6 +51173,12 @@ class _StringsKo extends _StringsEn {
   String get audio_source_edit_url => 'Edit audio source link';
   @override
   String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 // Path: <root>
@@ -55933,9 +55959,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_capture_running => 'Capture session is running';
   @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
-  @override
   String get game_text_source_engine => 'Engine hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -57150,6 +57173,12 @@ class _StringsNl extends _StringsEn {
   String get audio_source_edit_url => 'Edit audio source link';
   @override
   String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 // Path: <root>
@@ -61945,9 +61974,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_capture_running => 'Capture session is running';
   @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
-  @override
   String get game_text_source_engine => 'Engine hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -63162,6 +63188,12 @@ class _StringsPtBr extends _StringsEn {
   String get audio_source_edit_url => 'Edit audio source link';
   @override
   String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 // Path: <root>
@@ -67940,9 +67972,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_capture_running => 'Capture session is running';
   @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
-  @override
   String get game_text_source_engine => 'Engine hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -69157,6 +69186,12 @@ class _StringsRu extends _StringsEn {
   String get audio_source_edit_url => 'Edit audio source link';
   @override
   String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 // Path: <root>
@@ -73880,9 +73915,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_capture_running => 'Capture session is running';
   @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
-  @override
   String get game_text_source_engine => 'Engine hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -75097,6 +75129,12 @@ class _StringsTh extends _StringsEn {
   String get audio_source_edit_url => 'Edit audio source link';
   @override
   String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 // Path: <root>
@@ -79852,9 +79890,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_capture_running => 'Capture session is running';
   @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
-  @override
   String get game_text_source_engine => 'Engine hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -81069,6 +81104,12 @@ class _StringsTr extends _StringsEn {
   String get audio_source_edit_url => 'Edit audio source link';
   @override
   String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 // Path: <root>
@@ -85811,9 +85852,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_capture_running => 'Capture session is running';
   @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
-  @override
   String get game_text_source_engine => 'Engine hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -87028,6 +87066,12 @@ class _StringsVi extends _StringsEn {
   String get audio_source_edit_url => 'Edit audio source link';
   @override
   String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 // Path: <root>
@@ -91436,8 +91480,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_capture_running => '捕获会话已运行';
   @override
-  String get game_capture_running_no_window => '捕获已运行；尚未找到游戏窗口';
-  @override
   String get game_text_source_engine => '引擎 Hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -92575,6 +92617,12 @@ class _StringsZhCn extends _StringsEn {
   String get audio_source_edit_url => '编辑音频来源链接';
   @override
   String get audio_source_updated => '已更新音频来源';
+  @override
+  String get game_capture_degraded_loopback =>
+      '游戏已在运行，但引擎注入失败，改用整机混音兜底，可能混入 BGM 和音效。';
+  @override
+  String get game_capture_window_missing =>
+      '游戏进程已启动，但窗口一直没有出现，游戏可能没能真正启动。可以再启动一次试试。';
 }
 
 // Path: <root>
@@ -97101,9 +97149,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_capture_running => 'Capture session is running';
   @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
-  @override
   String get game_text_source_engine => 'Engine hook';
   @override
   String get game_text_source_websocket => 'WebSocket';
@@ -98317,6 +98362,12 @@ class _StringsZhHk extends _StringsEn {
   String get audio_source_edit_url => 'Edit audio source link';
   @override
   String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
 }
 
 /// Flat map(s) containing all translations.
@@ -102575,8 +102626,6 @@ extension on _StringsEn {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -103674,6 +103723,10 @@ extension on _StringsEn {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
@@ -107930,8 +107983,6 @@ extension on _StringsAr {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -109029,6 +109080,10 @@ extension on _StringsAr {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
@@ -113306,8 +113361,6 @@ extension on _StringsDe {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -114405,6 +114458,10 @@ extension on _StringsDe {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
@@ -118681,8 +118738,6 @@ extension on _StringsEs {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -119780,6 +119835,10 @@ extension on _StringsEs {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
@@ -124062,8 +124121,6 @@ extension on _StringsFr {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -125161,6 +125218,10 @@ extension on _StringsFr {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
@@ -129425,8 +129486,6 @@ extension on _StringsId {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -130524,6 +130583,10 @@ extension on _StringsId {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
@@ -134803,8 +134866,6 @@ extension on _StringsIt {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -135902,6 +135963,10 @@ extension on _StringsIt {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
@@ -140143,8 +140208,6 @@ extension on _StringsJa {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -141242,6 +141305,10 @@ extension on _StringsJa {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
@@ -145487,8 +145554,6 @@ extension on _StringsKo {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -146586,6 +146651,10 @@ extension on _StringsKo {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
@@ -150858,8 +150927,6 @@ extension on _StringsNl {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -151957,6 +152024,10 @@ extension on _StringsNl {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
@@ -156226,8 +156297,6 @@ extension on _StringsPtBr {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -157325,6 +157394,10 @@ extension on _StringsPtBr {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
@@ -161599,8 +161672,6 @@ extension on _StringsRu {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -162698,6 +162769,10 @@ extension on _StringsRu {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
@@ -166956,8 +167031,6 @@ extension on _StringsTh {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -168055,6 +168128,10 @@ extension on _StringsTh {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
@@ -172322,8 +172399,6 @@ extension on _StringsTr {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -173421,6 +173496,10 @@ extension on _StringsTr {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
@@ -177683,8 +177762,6 @@ extension on _StringsVi {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -178782,6 +178859,10 @@ extension on _StringsVi {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
@@ -183010,8 +183091,6 @@ extension on _StringsZhCn {
         return '游戏启动或捕获失败';
       case 'game_capture_running':
         return '捕获会话已运行';
-      case 'game_capture_running_no_window':
-        return '捕获已运行；尚未找到游戏窗口';
       case 'game_text_source_engine':
         return '引擎 Hook';
       case 'game_text_source_websocket':
@@ -184103,6 +184182,10 @@ extension on _StringsZhCn {
         return '编辑音频来源链接';
       case 'audio_source_updated':
         return '已更新音频来源';
+      case 'game_capture_degraded_loopback':
+        return '游戏已在运行，但引擎注入失败，改用整机混音兜底，可能混入 BGM 和音效。';
+      case 'game_capture_window_missing':
+        return '游戏进程已启动，但窗口一直没有出现，游戏可能没能真正启动。可以再启动一次试试。';
       default:
         return null;
     }
@@ -188339,8 +188422,6 @@ extension on _StringsZhHk {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -189438,6 +189519,10 @@ extension on _StringsZhHk {
         return 'Edit audio source link';
       case 'audio_source_updated':
         return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
       default:
         return null;
     }
