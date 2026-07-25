@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44149 (2597 per locale)
+/// Strings: 44166 (2598 per locale)
 ///
-/// Built on 2026-07-25 at 08:44 UTC
+/// Built on 2026-07-25 at 12:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3443,6 +3443,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get browser_extension_version_browser => 'Loaded in browser';
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -9329,6 +9330,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -15288,6 +15291,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -21263,6 +21268,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -27249,6 +27256,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -33162,6 +33171,8 @@ class _StringsId extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -39123,6 +39134,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -44889,6 +44902,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -50658,6 +50673,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -56597,6 +56614,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -62551,6 +62570,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -68488,6 +68509,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -74370,6 +74393,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -80284,6 +80309,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -86185,6 +86212,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 // Path: <root>
@@ -91676,6 +91705,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       '浏览器中加载的扩展不是最新版本：如有需要先重新准备扩展，再到浏览器扩展管理页（chrome://extensions）点「重新加载」。';
+  @override
+  String get add_to_collection => '加入合集';
 }
 
 // Path: <root>
@@ -97360,6 +97391,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  @override
+  String get add_to_collection => 'Add to collection';
 }
 
 /// Flat map(s) containing all translations.
@@ -102662,6 +102695,8 @@ extension on _StringsEn {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -107962,6 +107997,8 @@ extension on _StringsAr {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -113283,6 +113320,8 @@ extension on _StringsDe {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -118603,6 +118642,8 @@ extension on _StringsEs {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -123929,6 +123970,8 @@ extension on _StringsFr {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -129237,6 +129280,8 @@ extension on _StringsId {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -134560,6 +134605,8 @@ extension on _StringsIt {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -139845,6 +139892,8 @@ extension on _StringsJa {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -145134,6 +145183,8 @@ extension on _StringsKo {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -150450,6 +150501,8 @@ extension on _StringsNl {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -155763,6 +155816,8 @@ extension on _StringsPtBr {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -161081,6 +161136,8 @@ extension on _StringsRu {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -166383,6 +166440,8 @@ extension on _StringsTh {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -171694,6 +171753,8 @@ extension on _StringsTr {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -177000,6 +177061,8 @@ extension on _StringsVi {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
@@ -182266,6 +182329,8 @@ extension on _StringsZhCn {
         return '浏览器中加载';
       case 'browser_extension_version_mismatch':
         return '浏览器中加载的扩展不是最新版本：如有需要先重新准备扩展，再到浏览器扩展管理页（chrome://extensions）点「重新加载」。';
+      case 'add_to_collection':
+        return '加入合集';
       default:
         return null;
     }
@@ -187546,6 +187611,8 @@ extension on _StringsZhHk {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'add_to_collection':
+        return 'Add to collection';
       default:
         return null;
     }
