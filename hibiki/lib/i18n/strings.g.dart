@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44999 (2647 per locale)
+/// Strings: 45033 (2649 per locale)
 ///
-/// Built on 2026-07-25 at 19:42 UTC
+/// Built on 2026-07-25 at 20:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3511,6 +3511,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_line_track_failed =>
       'That track has no audio around this line';
   String get game_line_track_applied => 'Voice track applied to this line';
+  String get game_edit_launch_args => 'Launch arguments';
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -9515,6 +9518,11 @@ class _StringsAr extends _StringsEn {
       'That track has no audio around this line';
   @override
   String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -15592,6 +15600,11 @@ class _StringsDe extends _StringsEn {
       'That track has no audio around this line';
   @override
   String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -21685,6 +21698,11 @@ class _StringsEs extends _StringsEn {
       'That track has no audio around this line';
   @override
   String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -27789,6 +27807,11 @@ class _StringsFr extends _StringsEn {
       'That track has no audio around this line';
   @override
   String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -33820,6 +33843,11 @@ class _StringsId extends _StringsEn {
       'That track has no audio around this line';
   @override
   String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -39899,6 +39927,11 @@ class _StringsIt extends _StringsEn {
       'That track has no audio around this line';
   @override
   String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -45783,6 +45816,11 @@ class _StringsJa extends _StringsEn {
       'That track has no audio around this line';
   @override
   String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -51670,6 +51708,11 @@ class _StringsKo extends _StringsEn {
       'That track has no audio around this line';
   @override
   String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -57727,6 +57770,11 @@ class _StringsNl extends _StringsEn {
       'That track has no audio around this line';
   @override
   String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -63799,6 +63847,11 @@ class _StringsPtBr extends _StringsEn {
       'That track has no audio around this line';
   @override
   String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -69854,6 +69907,11 @@ class _StringsRu extends _StringsEn {
       'That track has no audio around this line';
   @override
   String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -75854,6 +75912,11 @@ class _StringsTh extends _StringsEn {
       'That track has no audio around this line';
   @override
   String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -81886,6 +81949,11 @@ class _StringsTr extends _StringsEn {
       'That track has no audio around this line';
   @override
   String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -87905,6 +87973,11 @@ class _StringsVi extends _StringsEn {
       'That track has no audio around this line';
   @override
   String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 // Path: <root>
@@ -93511,6 +93584,10 @@ class _StringsZhCn extends _StringsEn {
   String get game_line_track_failed => '这条轨在该句附近没有取到语音';
   @override
   String get game_line_track_applied => '已把该轨的语音绑定到这句';
+  @override
+  String get game_edit_launch_args => '启动参数';
+  @override
+  String get game_edit_launch_args_hint => '启动时传给游戏，例如 -windowed';
 }
 
 // Path: <root>
@@ -99313,6 +99390,11 @@ class _StringsZhHk extends _StringsEn {
       'That track has no audio around this line';
   @override
   String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
 }
 
 /// Flat map(s) containing all translations.
@@ -104720,6 +104802,10 @@ extension on _StringsEn {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -110125,6 +110211,10 @@ extension on _StringsAr {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -115551,6 +115641,10 @@ extension on _StringsDe {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -120976,6 +121070,10 @@ extension on _StringsEs {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -126407,6 +126505,10 @@ extension on _StringsFr {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -131820,6 +131922,10 @@ extension on _StringsId {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -137248,6 +137354,10 @@ extension on _StringsIt {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -142638,6 +142748,10 @@ extension on _StringsJa {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -148032,6 +148146,10 @@ extension on _StringsKo {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -153453,6 +153571,10 @@ extension on _StringsNl {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -158871,6 +158993,10 @@ extension on _StringsPtBr {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -164294,6 +164420,10 @@ extension on _StringsRu {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -169701,6 +169831,10 @@ extension on _StringsTh {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -175117,6 +175251,10 @@ extension on _StringsTr {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -180528,6 +180666,10 @@ extension on _StringsVi {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
@@ -185896,6 +186038,10 @@ extension on _StringsZhCn {
         return '这条轨在该句附近没有取到语音';
       case 'game_line_track_applied':
         return '已把该轨的语音绑定到这句';
+      case 'game_edit_launch_args':
+        return '启动参数';
+      case 'game_edit_launch_args_hint':
+        return '启动时传给游戏，例如 -windowed';
       default:
         return null;
     }
@@ -191281,6 +191427,10 @@ extension on _StringsZhHk {
         return 'That track has no audio around this line';
       case 'game_line_track_applied':
         return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
       default:
         return null;
     }
