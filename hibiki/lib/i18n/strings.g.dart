@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44370 (2610 per locale)
+/// Strings: 44421 (2613 per locale)
 ///
-/// Built on 2026-07-25 at 14:19 UTC
+/// Built on 2026-07-25 at 15:46 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2632,7 +2632,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   String get interconnect_enable => 'Enable interconnect';
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
@@ -3457,6 +3457,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anime_download_sort_date => 'Published';
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  String get yomitan_port_kill_action => 'End process and retry';
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 // Path: <root>
@@ -7891,7 +7895,7 @@ class _StringsAr extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -9370,6 +9374,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 // Path: <root>
@@ -13877,7 +13888,7 @@ class _StringsDe extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -15356,6 +15367,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 // Path: <root>
@@ -19879,7 +19897,7 @@ class _StringsEs extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -21358,6 +21376,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 // Path: <root>
@@ -25892,7 +25917,7 @@ class _StringsFr extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -27371,6 +27396,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 // Path: <root>
@@ -31832,7 +31864,7 @@ class _StringsId extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -33311,6 +33343,13 @@ class _StringsId extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 // Path: <root>
@@ -37820,7 +37859,7 @@ class _StringsIt extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -39299,6 +39338,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 // Path: <root>
@@ -43614,7 +43660,7 @@ class _StringsJa extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -45092,6 +45138,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 // Path: <root>
@@ -49410,7 +49463,7 @@ class _StringsKo extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -50888,6 +50941,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 // Path: <root>
@@ -55375,7 +55435,7 @@ class _StringsNl extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -56854,6 +56914,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 // Path: <root>
@@ -61356,7 +61423,7 @@ class _StringsPtBr extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -62835,6 +62902,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 // Path: <root>
@@ -67320,7 +67394,7 @@ class _StringsRu extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -68799,6 +68873,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 // Path: <root>
@@ -73229,7 +73310,7 @@ class _StringsTh extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -74708,6 +74789,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 // Path: <root>
@@ -79170,7 +79258,7 @@ class _StringsTr extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -80649,6 +80737,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 // Path: <root>
@@ -85098,7 +85193,7 @@ class _StringsVi extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -86577,6 +86672,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 // Path: <root>
@@ -90720,7 +90822,7 @@ class _StringsZhCn extends _StringsEn {
   String get desktop_clipboard_window_mode_hint => '控制 Hibiki 是否保持在其他窗口上方';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
+      '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Hibiki 的 Yomitan API 服务器。';
   @override
   String get interconnect_enable => '启用互联';
   @override
@@ -92094,6 +92196,13 @@ class _StringsZhCn extends _StringsEn {
   String get anime_download_sort_date => '发布时间';
   @override
   String get anime_download_search_error_proxy_hint => '站点无法直连时，可在下载设置中配置网络代理。';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API 服务器已开启';
+  @override
+  String get yomitan_port_kill_action => '结束进程并重试';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      '无法结束 ${process}，请手动结束该进程后重试。';
 }
 
 // Path: <root>
@@ -96331,7 +96440,7 @@ class _StringsZhHk extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -97805,6 +97914,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
 }
 
 /// Flat map(s) containing all translations.
@@ -101805,7 +101921,7 @@ extension on _StringsEn {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -103133,6 +103249,13 @@ extension on _StringsEn {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
@@ -107131,7 +107254,7 @@ extension on _StringsAr {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -108459,6 +108582,13 @@ extension on _StringsAr {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
@@ -112478,7 +112608,7 @@ extension on _StringsDe {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -113806,6 +113936,13 @@ extension on _StringsDe {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
@@ -117824,7 +117961,7 @@ extension on _StringsEs {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -119152,6 +119289,13 @@ extension on _StringsEs {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
@@ -123176,7 +123320,7 @@ extension on _StringsFr {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -124504,6 +124648,13 @@ extension on _StringsFr {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
@@ -128510,7 +128661,7 @@ extension on _StringsId {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -129838,6 +129989,13 @@ extension on _StringsId {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
@@ -133859,7 +134017,7 @@ extension on _StringsIt {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -135187,6 +135345,13 @@ extension on _StringsIt {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
@@ -139170,7 +139335,7 @@ extension on _StringsJa {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -140498,6 +140663,13 @@ extension on _StringsJa {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
@@ -144485,7 +144657,7 @@ extension on _StringsKo {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -145813,6 +145985,13 @@ extension on _StringsKo {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
@@ -149827,7 +150006,7 @@ extension on _StringsNl {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -151155,6 +151334,13 @@ extension on _StringsNl {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
@@ -155166,7 +155352,7 @@ extension on _StringsPtBr {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -156494,6 +156680,13 @@ extension on _StringsPtBr {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
@@ -160510,7 +160703,7 @@ extension on _StringsRu {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -161838,6 +162031,13 @@ extension on _StringsRu {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
@@ -165838,7 +166038,7 @@ extension on _StringsTh {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -167166,6 +167366,13 @@ extension on _StringsTh {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
@@ -171175,7 +171382,7 @@ extension on _StringsTr {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -172503,6 +172710,13 @@ extension on _StringsTr {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
@@ -176507,7 +176721,7 @@ extension on _StringsVi {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -177835,6 +178049,13 @@ extension on _StringsVi {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
@@ -181807,7 +182028,7 @@ extension on _StringsZhCn {
         return '控制 Hibiki 是否保持在其他窗口上方';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
+            '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Hibiki 的 Yomitan API 服务器。';
       case 'interconnect_enable':
         return '启用互联';
       case 'interconnect_enable_hint':
@@ -183127,6 +183348,12 @@ extension on _StringsZhCn {
         return '发布时间';
       case 'anime_download_search_error_proxy_hint':
         return '站点无法直连时，可在下载设置中配置网络代理。';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API 服务器已开启';
+      case 'yomitan_port_kill_action':
+        return '结束进程并重试';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) => '无法结束 ${process}，请手动结束该进程后重试。';
       default:
         return null;
     }
@@ -187105,7 +187332,7 @@ extension on _StringsZhHk {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -188433,6 +188660,13 @@ extension on _StringsZhHk {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
       default:
         return null;
     }
