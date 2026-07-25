@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44302 (2606 per locale)
+/// Strings: 44370 (2610 per locale)
 ///
-/// Built on 2026-07-25 at 13:49 UTC
+/// Built on 2026-07-25 at 14:19 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3452,6 +3452,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get book_scrape_failed => 'Failed to fetch cover';
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   String get add_to_collection => 'Add to collection';
+  String get anime_download_sort_seeders => 'Seeders';
+  String get anime_download_sort_size => 'Size';
+  String get anime_download_sort_date => 'Published';
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 // Path: <root>
@@ -9356,6 +9361,15 @@ class _StringsAr extends _StringsEn {
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 // Path: <root>
@@ -15333,6 +15347,15 @@ class _StringsDe extends _StringsEn {
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 // Path: <root>
@@ -21326,6 +21349,15 @@ class _StringsEs extends _StringsEn {
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 // Path: <root>
@@ -27330,6 +27362,15 @@ class _StringsFr extends _StringsEn {
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 // Path: <root>
@@ -33261,6 +33302,15 @@ class _StringsId extends _StringsEn {
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 // Path: <root>
@@ -39240,6 +39290,15 @@ class _StringsIt extends _StringsEn {
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 // Path: <root>
@@ -45024,6 +45083,15 @@ class _StringsJa extends _StringsEn {
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 // Path: <root>
@@ -50811,6 +50879,15 @@ class _StringsKo extends _StringsEn {
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 // Path: <root>
@@ -56768,6 +56845,15 @@ class _StringsNl extends _StringsEn {
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 // Path: <root>
@@ -62740,6 +62826,15 @@ class _StringsPtBr extends _StringsEn {
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 // Path: <root>
@@ -68695,6 +68790,15 @@ class _StringsRu extends _StringsEn {
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 // Path: <root>
@@ -74595,6 +74699,15 @@ class _StringsTh extends _StringsEn {
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 // Path: <root>
@@ -80527,6 +80640,15 @@ class _StringsTr extends _StringsEn {
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 // Path: <root>
@@ -86446,6 +86568,15 @@ class _StringsVi extends _StringsEn {
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 // Path: <root>
@@ -91955,6 +92086,14 @@ class _StringsZhCn extends _StringsEn {
   String get book_scrape_search_failed => '搜索失败，请点击「搜索」重试';
   @override
   String get add_to_collection => '加入合集';
+  @override
+  String get anime_download_sort_seeders => '做种数';
+  @override
+  String get anime_download_sort_size => '体积';
+  @override
+  String get anime_download_sort_date => '发布时间';
+  @override
+  String get anime_download_search_error_proxy_hint => '站点无法直连时，可在下载设置中配置网络代理。';
 }
 
 // Path: <root>
@@ -97657,6 +97796,15 @@ class _StringsZhHk extends _StringsEn {
   String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
 }
 
 /// Flat map(s) containing all translations.
@@ -102977,6 +103125,14 @@ extension on _StringsEn {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
@@ -108295,6 +108451,14 @@ extension on _StringsAr {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
@@ -113634,6 +113798,14 @@ extension on _StringsDe {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
@@ -118972,6 +119144,14 @@ extension on _StringsEs {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
@@ -124316,6 +124496,14 @@ extension on _StringsFr {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
@@ -129642,6 +129830,14 @@ extension on _StringsId {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
@@ -134983,6 +135179,14 @@ extension on _StringsIt {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
@@ -140286,6 +140490,14 @@ extension on _StringsJa {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
@@ -145593,6 +145805,14 @@ extension on _StringsKo {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
@@ -150927,6 +151147,14 @@ extension on _StringsNl {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
@@ -156258,6 +156486,14 @@ extension on _StringsPtBr {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
@@ -161594,6 +161830,14 @@ extension on _StringsRu {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
@@ -166914,6 +167158,14 @@ extension on _StringsTh {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
@@ -172243,6 +172495,14 @@ extension on _StringsTr {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
@@ -177567,6 +177827,14 @@ extension on _StringsVi {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
@@ -182851,6 +183119,14 @@ extension on _StringsZhCn {
         return '搜索失败，请点击「搜索」重试';
       case 'add_to_collection':
         return '加入合集';
+      case 'anime_download_sort_seeders':
+        return '做种数';
+      case 'anime_download_sort_size':
+        return '体积';
+      case 'anime_download_sort_date':
+        return '发布时间';
+      case 'anime_download_search_error_proxy_hint':
+        return '站点无法直连时，可在下载设置中配置网络代理。';
       default:
         return null;
     }
@@ -188149,6 +188425,14 @@ extension on _StringsZhHk {
         return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
       default:
         return null;
     }
