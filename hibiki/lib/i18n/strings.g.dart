@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44421 (2613 per locale)
+/// Strings: 44506 (2618 per locale)
 ///
-/// Built on 2026-07-25 at 15:46 UTC
+/// Built on 2026-07-25 at 18:23 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3461,6 +3461,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get yomitan_port_kill_action => 'End process and retry';
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  String get yomitan_port_kill_confirm => 'End process';
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -9381,6 +9390,20 @@ class _StringsAr extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -15374,6 +15397,20 @@ class _StringsDe extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -21383,6 +21420,20 @@ class _StringsEs extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -27403,6 +27454,20 @@ class _StringsFr extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -33350,6 +33415,20 @@ class _StringsId extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -39345,6 +39424,20 @@ class _StringsIt extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -45145,6 +45238,20 @@ class _StringsJa extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -50948,6 +51055,20 @@ class _StringsKo extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -56921,6 +57042,20 @@ class _StringsNl extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -62909,6 +63044,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -68880,6 +69029,20 @@ class _StringsRu extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -74796,6 +74959,20 @@ class _StringsTh extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -80744,6 +80921,20 @@ class _StringsTr extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -86679,6 +86870,20 @@ class _StringsVi extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 // Path: <root>
@@ -92203,6 +92408,19 @@ class _StringsZhCn extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       '无法结束 ${process}，请手动结束该进程后重试。';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      '结束占用端口 ${port} 的进程？';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      '该端口目前被以下进程占用：${process}';
+  @override
+  String get yomitan_port_kill_self_instance => '该进程是本应用的另一个正在运行的实例。';
+  @override
+  String get yomitan_port_kill_confirm => '结束进程';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} 是关键系统进程，Hibiki 不会结束它；请改用其他端口。';
 }
 
 // Path: <root>
@@ -97921,6 +98139,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
 }
 
 /// Flat map(s) containing all translations.
@@ -103256,6 +103488,19 @@ extension on _StringsEn {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -108589,6 +108834,19 @@ extension on _StringsAr {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -113943,6 +114201,19 @@ extension on _StringsDe {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -119296,6 +119567,19 @@ extension on _StringsEs {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -124655,6 +124939,19 @@ extension on _StringsFr {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -129996,6 +130293,19 @@ extension on _StringsId {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -135352,6 +135662,19 @@ extension on _StringsIt {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -140670,6 +140993,19 @@ extension on _StringsJa {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -145992,6 +146328,19 @@ extension on _StringsKo {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -151341,6 +151690,19 @@ extension on _StringsNl {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -156687,6 +157049,19 @@ extension on _StringsPtBr {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -162038,6 +162413,19 @@ extension on _StringsRu {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -167373,6 +167761,19 @@ extension on _StringsTh {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -172717,6 +173118,19 @@ extension on _StringsTr {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -178056,6 +178470,19 @@ extension on _StringsVi {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
@@ -183354,6 +183781,17 @@ extension on _StringsZhCn {
         return '结束进程并重试';
       case 'yomitan_port_kill_failed':
         return ({required Object process}) => '无法结束 ${process}，请手动结束该进程后重试。';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) => '结束占用端口 ${port} 的进程？';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) => '该端口目前被以下进程占用：${process}';
+      case 'yomitan_port_kill_self_instance':
+        return '该进程是本应用的另一个正在运行的实例。';
+      case 'yomitan_port_kill_confirm':
+        return '结束进程';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} 是关键系统进程，Hibiki 不会结束它；请改用其他端口。';
       default:
         return null;
     }
@@ -188667,6 +189105,19 @@ extension on _StringsZhHk {
       case 'yomitan_port_kill_failed':
         return ({required Object process}) =>
             'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       default:
         return null;
     }
