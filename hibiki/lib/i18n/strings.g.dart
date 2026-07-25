@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44557 (2621 per locale)
+/// Strings: 44608 (2624 per locale)
 ///
-/// Built on 2026-07-25 at 15:25 UTC
+/// Built on 2026-07-25 at 18:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3470,6 +3470,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Volume ${done} / ${total}';
   String get manga_online_failed => 'Download failed';
   String get manga_online_base_url_label => 'Online catalog URL';
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  String get audio_source_edit_url => 'Edit audio source link';
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -9407,6 +9411,13 @@ class _StringsAr extends _StringsEn {
   String get manga_online_failed => 'Download failed';
   @override
   String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -15417,6 +15428,13 @@ class _StringsDe extends _StringsEn {
   String get manga_online_failed => 'Download failed';
   @override
   String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -21443,6 +21461,13 @@ class _StringsEs extends _StringsEn {
   String get manga_online_failed => 'Download failed';
   @override
   String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -27480,6 +27505,13 @@ class _StringsFr extends _StringsEn {
   String get manga_online_failed => 'Download failed';
   @override
   String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -33444,6 +33476,13 @@ class _StringsId extends _StringsEn {
   String get manga_online_failed => 'Download failed';
   @override
   String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -39456,6 +39495,13 @@ class _StringsIt extends _StringsEn {
   String get manga_online_failed => 'Download failed';
   @override
   String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -45273,6 +45319,13 @@ class _StringsJa extends _StringsEn {
   String get manga_online_failed => 'Download failed';
   @override
   String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -51093,6 +51146,13 @@ class _StringsKo extends _StringsEn {
   String get manga_online_failed => 'Download failed';
   @override
   String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -57083,6 +57143,13 @@ class _StringsNl extends _StringsEn {
   String get manga_online_failed => 'Download failed';
   @override
   String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -63088,6 +63155,13 @@ class _StringsPtBr extends _StringsEn {
   String get manga_online_failed => 'Download failed';
   @override
   String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -69076,6 +69150,13 @@ class _StringsRu extends _StringsEn {
   String get manga_online_failed => 'Download failed';
   @override
   String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -75009,6 +75090,13 @@ class _StringsTh extends _StringsEn {
   String get manga_online_failed => 'Download failed';
   @override
   String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -80974,6 +81062,13 @@ class _StringsTr extends _StringsEn {
   String get manga_online_failed => 'Download failed';
   @override
   String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -86926,6 +87021,13 @@ class _StringsVi extends _StringsEn {
   String get manga_online_failed => 'Download failed';
   @override
   String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -92467,6 +92569,12 @@ class _StringsZhCn extends _StringsEn {
   String get manga_online_failed => '下载失败';
   @override
   String get manga_online_base_url_label => '在线目录地址';
+  @override
+  String get audio_source_edit_target_gone => '该音频来源已不存在，编辑已丢弃';
+  @override
+  String get audio_source_edit_url => '编辑音频来源链接';
+  @override
+  String get audio_source_updated => '已更新音频来源';
 }
 
 // Path: <root>
@@ -98202,6 +98310,13 @@ class _StringsZhHk extends _StringsEn {
   String get manga_online_failed => 'Download failed';
   @override
   String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 /// Flat map(s) containing all translations.
@@ -103553,6 +103668,12 @@ extension on _StringsEn {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -108902,6 +109023,12 @@ extension on _StringsAr {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -114272,6 +114399,12 @@ extension on _StringsDe {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -119641,6 +119774,12 @@ extension on _StringsEs {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -125016,6 +125155,12 @@ extension on _StringsFr {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -130373,6 +130518,12 @@ extension on _StringsId {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -135745,6 +135896,12 @@ extension on _StringsIt {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -141079,6 +141236,12 @@ extension on _StringsJa {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -146417,6 +146580,12 @@ extension on _StringsKo {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -151782,6 +151951,12 @@ extension on _StringsNl {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -157144,6 +157319,12 @@ extension on _StringsPtBr {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -162511,6 +162692,12 @@ extension on _StringsRu {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -167862,6 +168049,12 @@ extension on _StringsTh {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -173222,6 +173415,12 @@ extension on _StringsTr {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -178577,6 +178776,12 @@ extension on _StringsVi {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -183892,6 +184097,12 @@ extension on _StringsZhCn {
         return '下载失败';
       case 'manga_online_base_url_label':
         return '在线目录地址';
+      case 'audio_source_edit_target_gone':
+        return '该音频来源已不存在，编辑已丢弃';
+      case 'audio_source_edit_url':
+        return '编辑音频来源链接';
+      case 'audio_source_updated':
+        return '已更新音频来源';
       default:
         return null;
     }
@@ -189221,6 +189432,12 @@ extension on _StringsZhHk {
         return 'Download failed';
       case 'manga_online_base_url_label':
         return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
