@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 43775 (2575 per locale)
+/// Strings: 43843 (2579 per locale)
 ///
-/// Built on 2026-07-24 at 20:56 UTC
+/// Built on 2026-07-25 at 05:56 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3417,6 +3417,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_developer => 'Developer';
   String get game_site_score => 'Site rating';
   String get game_user_rating => 'My rating';
+  String get stat_goal_unit_chars => 'chars';
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  String get stat_goal_presets => 'Presets';
 }
 
 // Path: <root>
@@ -9255,6 +9261,16 @@ class _StringsAr extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get stat_goal_unit_chars => 'chars';
+  @override
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  @override
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  @override
+  String get stat_goal_presets => 'Presets';
 }
 
 // Path: <root>
@@ -15166,6 +15182,16 @@ class _StringsDe extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get stat_goal_unit_chars => 'chars';
+  @override
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  @override
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  @override
+  String get stat_goal_presets => 'Presets';
 }
 
 // Path: <root>
@@ -21093,6 +21119,16 @@ class _StringsEs extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get stat_goal_unit_chars => 'chars';
+  @override
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  @override
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  @override
+  String get stat_goal_presets => 'Presets';
 }
 
 // Path: <root>
@@ -27031,6 +27067,16 @@ class _StringsFr extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get stat_goal_unit_chars => 'chars';
+  @override
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  @override
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  @override
+  String get stat_goal_presets => 'Presets';
 }
 
 // Path: <root>
@@ -32896,6 +32942,16 @@ class _StringsId extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get stat_goal_unit_chars => 'chars';
+  @override
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  @override
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  @override
+  String get stat_goal_presets => 'Presets';
 }
 
 // Path: <root>
@@ -38809,6 +38865,16 @@ class _StringsIt extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get stat_goal_unit_chars => 'chars';
+  @override
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  @override
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  @override
+  String get stat_goal_presets => 'Presets';
 }
 
 // Path: <root>
@@ -44527,6 +44593,16 @@ class _StringsJa extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get stat_goal_unit_chars => 'chars';
+  @override
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  @override
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  @override
+  String get stat_goal_presets => 'Presets';
 }
 
 // Path: <root>
@@ -50248,6 +50324,16 @@ class _StringsKo extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get stat_goal_unit_chars => 'chars';
+  @override
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  @override
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  @override
+  String get stat_goal_presets => 'Presets';
 }
 
 // Path: <root>
@@ -56139,6 +56225,16 @@ class _StringsNl extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get stat_goal_unit_chars => 'chars';
+  @override
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  @override
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  @override
+  String get stat_goal_presets => 'Presets';
 }
 
 // Path: <root>
@@ -62045,6 +62141,16 @@ class _StringsPtBr extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get stat_goal_unit_chars => 'chars';
+  @override
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  @override
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  @override
+  String get stat_goal_presets => 'Presets';
 }
 
 // Path: <root>
@@ -67934,6 +68040,16 @@ class _StringsRu extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get stat_goal_unit_chars => 'chars';
+  @override
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  @override
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  @override
+  String get stat_goal_presets => 'Presets';
 }
 
 // Path: <root>
@@ -73768,6 +73884,16 @@ class _StringsTh extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get stat_goal_unit_chars => 'chars';
+  @override
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  @override
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  @override
+  String get stat_goal_presets => 'Presets';
 }
 
 // Path: <root>
@@ -79634,6 +79760,16 @@ class _StringsTr extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get stat_goal_unit_chars => 'chars';
+  @override
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  @override
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  @override
+  String get stat_goal_presets => 'Presets';
 }
 
 // Path: <root>
@@ -85487,6 +85623,16 @@ class _StringsVi extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get stat_goal_unit_chars => 'chars';
+  @override
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  @override
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  @override
+  String get stat_goal_presets => 'Presets';
 }
 
 // Path: <root>
@@ -90932,6 +91078,14 @@ class _StringsZhCn extends _StringsEn {
   String get game_site_score => '站点评分';
   @override
   String get game_user_rating => '我的评分';
+  @override
+  String get stat_goal_unit_chars => '字';
+  @override
+  String get stat_goal_scope_hint => '口径：阅读 + 视频字幕 + 游戏文本的全部字符数合计';
+  @override
+  String stat_goal_recent_average({required Object n}) => '近 7 日日均 ${n} 字';
+  @override
+  String get stat_goal_presets => '快捷预设';
 }
 
 // Path: <root>
@@ -96568,6 +96722,16 @@ class _StringsZhHk extends _StringsEn {
   String get game_site_score => 'Site rating';
   @override
   String get game_user_rating => 'My rating';
+  @override
+  String get stat_goal_unit_chars => 'chars';
+  @override
+  String get stat_goal_scope_hint =>
+      'Counts all characters combined: reading + video subtitles + game text.';
+  @override
+  String stat_goal_recent_average({required Object n}) =>
+      'Last 7 days: ${n} chars/day on average';
+  @override
+  String get stat_goal_presets => 'Presets';
 }
 
 /// Flat map(s) containing all translations.
@@ -101824,6 +101988,15 @@ extension on _StringsEn {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -107078,6 +107251,15 @@ extension on _StringsAr {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -112353,6 +112535,15 @@ extension on _StringsDe {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -117627,6 +117818,15 @@ extension on _StringsEs {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -122907,6 +123107,15 @@ extension on _StringsFr {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -128169,6 +128378,15 @@ extension on _StringsId {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -133446,6 +133664,15 @@ extension on _StringsIt {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -138685,6 +138912,15 @@ extension on _StringsJa {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -143928,6 +144164,15 @@ extension on _StringsKo {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -149198,6 +149443,15 @@ extension on _StringsNl {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -154465,6 +154719,15 @@ extension on _StringsPtBr {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -159737,6 +160000,15 @@ extension on _StringsRu {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -164993,6 +165265,15 @@ extension on _StringsTh {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -170258,6 +170539,15 @@ extension on _StringsTr {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -175518,6 +175808,15 @@ extension on _StringsVi {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
@@ -180739,6 +181038,14 @@ extension on _StringsZhCn {
         return '站点评分';
       case 'game_user_rating':
         return '我的评分';
+      case 'stat_goal_unit_chars':
+        return '字';
+      case 'stat_goal_scope_hint':
+        return '口径：阅读 + 视频字幕 + 游戏文本的全部字符数合计';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) => '近 7 日日均 ${n} 字';
+      case 'stat_goal_presets':
+        return '快捷预设';
       default:
         return null;
     }
@@ -185973,6 +186280,15 @@ extension on _StringsZhHk {
         return 'Site rating';
       case 'game_user_rating':
         return 'My rating';
+      case 'stat_goal_unit_chars':
+        return 'chars';
+      case 'stat_goal_scope_hint':
+        return 'Counts all characters combined: reading + video subtitles + game text.';
+      case 'stat_goal_recent_average':
+        return ({required Object n}) =>
+            'Last 7 days: ${n} chars/day on average';
+      case 'stat_goal_presets':
+        return 'Presets';
       default:
         return null;
     }
