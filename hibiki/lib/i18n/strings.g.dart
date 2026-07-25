@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44370 (2610 per locale)
+/// Strings: 44421 (2613 per locale)
 ///
-/// Built on 2026-07-25 at 14:19 UTC
+/// Built on 2026-07-25 at 15:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3457,6 +3457,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anime_download_sort_date => 'Published';
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  String get audio_source_edit_url => 'Edit audio source link';
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -9370,6 +9374,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -15356,6 +15367,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -21358,6 +21376,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -27371,6 +27396,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -33311,6 +33343,13 @@ class _StringsId extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -39299,6 +39338,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -45092,6 +45138,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -50888,6 +50941,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -56854,6 +56914,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -62835,6 +62902,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -68799,6 +68873,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -74708,6 +74789,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -80649,6 +80737,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -86577,6 +86672,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 // Path: <root>
@@ -92094,6 +92196,12 @@ class _StringsZhCn extends _StringsEn {
   String get anime_download_sort_date => '发布时间';
   @override
   String get anime_download_search_error_proxy_hint => '站点无法直连时，可在下载设置中配置网络代理。';
+  @override
+  String get audio_source_edit_target_gone => '该音频来源已不存在，编辑已丢弃';
+  @override
+  String get audio_source_edit_url => '编辑音频来源链接';
+  @override
+  String get audio_source_updated => '已更新音频来源';
 }
 
 // Path: <root>
@@ -97805,6 +97913,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anime_download_search_error_proxy_hint =>
       'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
 }
 
 /// Flat map(s) containing all translations.
@@ -103133,6 +103248,12 @@ extension on _StringsEn {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -108459,6 +108580,12 @@ extension on _StringsAr {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -113806,6 +113933,12 @@ extension on _StringsDe {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -119152,6 +119285,12 @@ extension on _StringsEs {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -124504,6 +124643,12 @@ extension on _StringsFr {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -129838,6 +129983,12 @@ extension on _StringsId {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -135187,6 +135338,12 @@ extension on _StringsIt {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -140498,6 +140655,12 @@ extension on _StringsJa {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -145813,6 +145976,12 @@ extension on _StringsKo {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -151155,6 +151324,12 @@ extension on _StringsNl {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -156494,6 +156669,12 @@ extension on _StringsPtBr {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -161838,6 +162019,12 @@ extension on _StringsRu {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -167166,6 +167353,12 @@ extension on _StringsTh {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -172503,6 +172696,12 @@ extension on _StringsTr {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -177835,6 +178034,12 @@ extension on _StringsVi {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
@@ -183127,6 +183332,12 @@ extension on _StringsZhCn {
         return '发布时间';
       case 'anime_download_search_error_proxy_hint':
         return '站点无法直连时，可在下载设置中配置网络代理。';
+      case 'audio_source_edit_target_gone':
+        return '该音频来源已不存在，编辑已丢弃';
+      case 'audio_source_edit_url':
+        return '编辑音频来源链接';
+      case 'audio_source_updated':
+        return '已更新音频来源';
       default:
         return null;
     }
@@ -188433,6 +188644,12 @@ extension on _StringsZhHk {
         return 'Published';
       case 'anime_download_search_error_proxy_hint':
         return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
       default:
         return null;
     }
