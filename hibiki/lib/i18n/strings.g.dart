@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45186 (2658 per locale)
+/// Strings: 45305 (2665 per locale)
 ///
-/// Built on 2026-07-25 at 22:36 UTC
+/// Built on 2026-07-26 at 02:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3528,6 +3528,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_save_root_not_writable => 'That folder is not writable.';
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  String get galgame_upscaling => 'Game window upscaling';
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  String get galgame_upscaling_auto => 'Auto';
+  String get galgame_upscaling_installed_only => 'Installed only';
+  String get galgame_upscaling_off => 'Off';
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 // Path: <root>
@@ -9560,6 +9569,22 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  @override
+  String get galgame_upscaling => 'Game window upscaling';
+  @override
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  @override
+  String get galgame_upscaling_auto => 'Auto';
+  @override
+  String get galgame_upscaling_installed_only => 'Installed only';
+  @override
+  String get galgame_upscaling_off => 'Off';
+  @override
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  @override
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 // Path: <root>
@@ -15665,6 +15690,22 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  @override
+  String get galgame_upscaling => 'Game window upscaling';
+  @override
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  @override
+  String get galgame_upscaling_auto => 'Auto';
+  @override
+  String get galgame_upscaling_installed_only => 'Installed only';
+  @override
+  String get galgame_upscaling_off => 'Off';
+  @override
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  @override
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 // Path: <root>
@@ -21786,6 +21827,22 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  @override
+  String get galgame_upscaling => 'Game window upscaling';
+  @override
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  @override
+  String get galgame_upscaling_auto => 'Auto';
+  @override
+  String get galgame_upscaling_installed_only => 'Installed only';
+  @override
+  String get galgame_upscaling_off => 'Off';
+  @override
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  @override
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 // Path: <root>
@@ -27918,6 +27975,22 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  @override
+  String get galgame_upscaling => 'Game window upscaling';
+  @override
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  @override
+  String get galgame_upscaling_auto => 'Auto';
+  @override
+  String get galgame_upscaling_installed_only => 'Installed only';
+  @override
+  String get galgame_upscaling_off => 'Off';
+  @override
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  @override
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 // Path: <root>
@@ -33977,6 +34050,22 @@ class _StringsId extends _StringsEn {
   @override
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  @override
+  String get galgame_upscaling => 'Game window upscaling';
+  @override
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  @override
+  String get galgame_upscaling_auto => 'Auto';
+  @override
+  String get galgame_upscaling_installed_only => 'Installed only';
+  @override
+  String get galgame_upscaling_off => 'Off';
+  @override
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  @override
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 // Path: <root>
@@ -40084,6 +40173,22 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  @override
+  String get galgame_upscaling => 'Game window upscaling';
+  @override
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  @override
+  String get galgame_upscaling_auto => 'Auto';
+  @override
+  String get galgame_upscaling_installed_only => 'Installed only';
+  @override
+  String get galgame_upscaling_off => 'Off';
+  @override
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  @override
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 // Path: <root>
@@ -45996,6 +46101,22 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  @override
+  String get galgame_upscaling => 'Game window upscaling';
+  @override
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  @override
+  String get galgame_upscaling_auto => 'Auto';
+  @override
+  String get galgame_upscaling_installed_only => 'Installed only';
+  @override
+  String get galgame_upscaling_off => 'Off';
+  @override
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  @override
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 // Path: <root>
@@ -51911,6 +52032,22 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  @override
+  String get galgame_upscaling => 'Game window upscaling';
+  @override
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  @override
+  String get galgame_upscaling_auto => 'Auto';
+  @override
+  String get galgame_upscaling_installed_only => 'Installed only';
+  @override
+  String get galgame_upscaling_off => 'Off';
+  @override
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  @override
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 // Path: <root>
@@ -57996,6 +58133,22 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  @override
+  String get galgame_upscaling => 'Game window upscaling';
+  @override
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  @override
+  String get galgame_upscaling_auto => 'Auto';
+  @override
+  String get galgame_upscaling_installed_only => 'Installed only';
+  @override
+  String get galgame_upscaling_off => 'Off';
+  @override
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  @override
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 // Path: <root>
@@ -64096,6 +64249,22 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  @override
+  String get galgame_upscaling => 'Game window upscaling';
+  @override
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  @override
+  String get galgame_upscaling_auto => 'Auto';
+  @override
+  String get galgame_upscaling_installed_only => 'Installed only';
+  @override
+  String get galgame_upscaling_off => 'Off';
+  @override
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  @override
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 // Path: <root>
@@ -70179,6 +70348,22 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  @override
+  String get galgame_upscaling => 'Game window upscaling';
+  @override
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  @override
+  String get galgame_upscaling_auto => 'Auto';
+  @override
+  String get galgame_upscaling_installed_only => 'Installed only';
+  @override
+  String get galgame_upscaling_off => 'Off';
+  @override
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  @override
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 // Path: <root>
@@ -76207,6 +76392,22 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  @override
+  String get galgame_upscaling => 'Game window upscaling';
+  @override
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  @override
+  String get galgame_upscaling_auto => 'Auto';
+  @override
+  String get galgame_upscaling_installed_only => 'Installed only';
+  @override
+  String get galgame_upscaling_off => 'Off';
+  @override
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  @override
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 // Path: <root>
@@ -82267,6 +82468,22 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  @override
+  String get galgame_upscaling => 'Game window upscaling';
+  @override
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  @override
+  String get galgame_upscaling_auto => 'Auto';
+  @override
+  String get galgame_upscaling_installed_only => 'Installed only';
+  @override
+  String get galgame_upscaling_off => 'Off';
+  @override
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  @override
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 // Path: <root>
@@ -88314,6 +88531,22 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  @override
+  String get galgame_upscaling => 'Game window upscaling';
+  @override
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  @override
+  String get galgame_upscaling_auto => 'Auto';
+  @override
+  String get galgame_upscaling_installed_only => 'Installed only';
+  @override
+  String get galgame_upscaling_off => 'Off';
+  @override
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  @override
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 // Path: <root>
@@ -93943,6 +94176,22 @@ class _StringsZhCn extends _StringsEn {
   String get download_save_root_not_writable => '该目录不可写入。';
   @override
   String get download_save_root_fallback_warning => '配置的下载目录当前不可用，已回退到默认目录。';
+  @override
+  String get galgame_upscaling => '游戏窗口超分';
+  @override
+  String get galgame_upscaling_hint =>
+      '使用 Magpie 在 galgame hook 会话期间对游戏窗口做超分。「自动」会在首次使用时按需下载 Magpie。';
+  @override
+  String get galgame_upscaling_auto => '自动';
+  @override
+  String get galgame_upscaling_installed_only => '仅用已装';
+  @override
+  String get galgame_upscaling_off => '关闭';
+  @override
+  String get galgame_upscaling_download_title => '下载 Magpie 超分组件？';
+  @override
+  String get galgame_upscaling_download_body =>
+      '游戏窗口超分需要 Magpie（约 10 MB，GPL-3.0，由我们自行从源码编译）。现在下载吗？';
 }
 
 // Path: <root>
@@ -99773,6 +100022,22 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_save_root_fallback_warning =>
       'The configured download folder is unavailable, so the default folder is being used.';
+  @override
+  String get galgame_upscaling => 'Game window upscaling';
+  @override
+  String get galgame_upscaling_hint =>
+      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+  @override
+  String get galgame_upscaling_auto => 'Auto';
+  @override
+  String get galgame_upscaling_installed_only => 'Installed only';
+  @override
+  String get galgame_upscaling_off => 'Off';
+  @override
+  String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
+  @override
+  String get galgame_upscaling_download_body =>
+      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
 }
 
 /// Flat map(s) containing all translations.
@@ -105202,6 +105467,20 @@ extension on _StringsEn {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
@@ -110629,6 +110908,20 @@ extension on _StringsAr {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
@@ -116077,6 +116370,20 @@ extension on _StringsDe {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
@@ -121524,6 +121831,20 @@ extension on _StringsEs {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
@@ -126977,6 +127298,20 @@ extension on _StringsFr {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
@@ -132412,6 +132747,20 @@ extension on _StringsId {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
@@ -137862,6 +138211,20 @@ extension on _StringsIt {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
@@ -143274,6 +143637,20 @@ extension on _StringsJa {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
@@ -148690,6 +149067,20 @@ extension on _StringsKo {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
@@ -154133,6 +154524,20 @@ extension on _StringsNl {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
@@ -159573,6 +159978,20 @@ extension on _StringsPtBr {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
@@ -165018,6 +165437,20 @@ extension on _StringsRu {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
@@ -170447,6 +170880,20 @@ extension on _StringsTh {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
@@ -175885,6 +176332,20 @@ extension on _StringsTr {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
@@ -181318,6 +181779,20 @@ extension on _StringsVi {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
@@ -186708,6 +187183,20 @@ extension on _StringsZhCn {
         return '该目录不可写入。';
       case 'download_save_root_fallback_warning':
         return '配置的下载目录当前不可用，已回退到默认目录。';
+      case 'galgame_upscaling':
+        return '游戏窗口超分';
+      case 'galgame_upscaling_hint':
+        return '使用 Magpie 在 galgame hook 会话期间对游戏窗口做超分。「自动」会在首次使用时按需下载 Magpie。';
+      case 'galgame_upscaling_auto':
+        return '自动';
+      case 'galgame_upscaling_installed_only':
+        return '仅用已装';
+      case 'galgame_upscaling_off':
+        return '关闭';
+      case 'galgame_upscaling_download_title':
+        return '下载 Magpie 超分组件？';
+      case 'galgame_upscaling_download_body':
+        return '游戏窗口超分需要 Magpie（约 10 MB，GPL-3.0，由我们自行从源码编译）。现在下载吗？';
       default:
         return null;
     }
@@ -192115,6 +192604,20 @@ extension on _StringsZhHk {
         return 'That folder is not writable.';
       case 'download_save_root_fallback_warning':
         return 'The configured download folder is unavailable, so the default folder is being used.';
+      case 'galgame_upscaling':
+        return 'Game window upscaling';
+      case 'galgame_upscaling_hint':
+        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
+      case 'galgame_upscaling_auto':
+        return 'Auto';
+      case 'galgame_upscaling_installed_only':
+        return 'Installed only';
+      case 'galgame_upscaling_off':
+        return 'Off';
+      case 'galgame_upscaling_download_title':
+        return 'Download Magpie upscaler?';
+      case 'galgame_upscaling_download_body':
+        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       default:
         return null;
     }
