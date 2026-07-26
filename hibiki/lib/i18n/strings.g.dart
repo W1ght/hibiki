@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44166 (2598 per locale)
+/// Strings: 45186 (2658 per locale)
 ///
-/// Built on 2026-07-25 at 12:06 UTC
+/// Built on 2026-07-25 at 22:36 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2632,7 +2632,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get desktop_clipboard_window_mode_hint =>
       'Controls whether Hibiki stays above other windows';
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   String get interconnect_enable => 'Enable interconnect';
   String get interconnect_enable_hint =>
       'Connect to your other devices over the LAN. Works alongside a cloud backup backend — they don\'t conflict.';
@@ -2797,8 +2797,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_capture_launching => 'Launching game and starting capture...';
   String get game_capture_launch_failed => 'Game launch or capture failed';
   String get game_capture_running => 'Capture session is running';
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   String get game_text_source_engine => 'Engine hook';
   String get game_text_source_websocket => 'WebSocket';
   String get game_text_source_unknown => 'Unknown source';
@@ -3443,7 +3441,93 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get browser_extension_version_browser => 'Loaded in browser';
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+  String get book_scrape_cover => 'Scrape cover online';
+  String get book_scrape_title => 'Match cover online';
+  String get book_scrape_hint => 'Book title / author';
+  String get book_scrape_search => 'Search';
+  String get book_scrape_use => 'Use';
+  String get book_scrape_empty => 'No matching covers';
+  String get book_scrape_failed => 'Failed to fetch cover';
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
   String get add_to_collection => 'Add to collection';
+  String get anime_download_sort_seeders => 'Seeders';
+  String get anime_download_sort_size => 'Size';
+  String get anime_download_sort_date => 'Published';
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  String get manga_online_catalog_title => 'Online catalog';
+  String get manga_online_search_hint => 'Search series';
+  String get manga_online_load_failed => 'Failed to load catalog';
+  String get manga_online_downloaded => 'Imported';
+  String get manga_online_download_selected => 'Download selected';
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  String get manga_online_stage_extract => 'Extracting…';
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  String get manga_online_failed => 'Download failed';
+  String get manga_online_base_url_label => 'Online catalog URL';
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  String get audio_source_edit_url => 'Edit audio source link';
+  String get audio_source_updated => 'Audio source updated';
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  String get yomitan_port_kill_action => 'End process and retry';
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  String get yomitan_port_kill_confirm => 'End process';
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  String get game_track_no_clips => 'No clips in the recent window';
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  String get game_line_track_applied => 'Voice track applied to this line';
+  String get game_edit_launch_args => 'Launch arguments';
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  String get download_save_root_title => 'Download folder';
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  String get download_save_root_change => 'Change folder';
+  String get download_save_root_reset => 'Restore default';
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -7878,7 +7962,7 @@ class _StringsAr extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -8170,9 +8254,6 @@ class _StringsAr extends _StringsEn {
   String get game_capture_launch_failed => 'Game launch or capture failed';
   @override
   String get game_capture_running => 'Capture session is running';
-  @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   @override
   String get game_text_source_engine => 'Engine hook';
   @override
@@ -9331,7 +9412,154 @@ class _StringsAr extends _StringsEn {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   @override
+  String get book_scrape_cover => 'Scrape cover online';
+  @override
+  String get book_scrape_title => 'Match cover online';
+  @override
+  String get book_scrape_hint => 'Book title / author';
+  @override
+  String get book_scrape_search => 'Search';
+  @override
+  String get book_scrape_use => 'Use';
+  @override
+  String get book_scrape_empty => 'No matching covers';
+  @override
+  String get book_scrape_failed => 'Failed to fetch cover';
+  @override
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -13839,7 +14067,7 @@ class _StringsDe extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -14131,9 +14359,6 @@ class _StringsDe extends _StringsEn {
   String get game_capture_launch_failed => 'Game launch or capture failed';
   @override
   String get game_capture_running => 'Capture session is running';
-  @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   @override
   String get game_text_source_engine => 'Engine hook';
   @override
@@ -15292,7 +15517,154 @@ class _StringsDe extends _StringsEn {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   @override
+  String get book_scrape_cover => 'Scrape cover online';
+  @override
+  String get book_scrape_title => 'Match cover online';
+  @override
+  String get book_scrape_hint => 'Book title / author';
+  @override
+  String get book_scrape_search => 'Search';
+  @override
+  String get book_scrape_use => 'Use';
+  @override
+  String get book_scrape_empty => 'No matching covers';
+  @override
+  String get book_scrape_failed => 'Failed to fetch cover';
+  @override
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -19816,7 +20188,7 @@ class _StringsEs extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -20108,9 +20480,6 @@ class _StringsEs extends _StringsEn {
   String get game_capture_launch_failed => 'Game launch or capture failed';
   @override
   String get game_capture_running => 'Capture session is running';
-  @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   @override
   String get game_text_source_engine => 'Engine hook';
   @override
@@ -21269,7 +21638,154 @@ class _StringsEs extends _StringsEn {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   @override
+  String get book_scrape_cover => 'Scrape cover online';
+  @override
+  String get book_scrape_title => 'Match cover online';
+  @override
+  String get book_scrape_hint => 'Book title / author';
+  @override
+  String get book_scrape_search => 'Search';
+  @override
+  String get book_scrape_use => 'Use';
+  @override
+  String get book_scrape_empty => 'No matching covers';
+  @override
+  String get book_scrape_failed => 'Failed to fetch cover';
+  @override
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -25804,7 +26320,7 @@ class _StringsFr extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -26096,9 +26612,6 @@ class _StringsFr extends _StringsEn {
   String get game_capture_launch_failed => 'Game launch or capture failed';
   @override
   String get game_capture_running => 'Capture session is running';
-  @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   @override
   String get game_text_source_engine => 'Engine hook';
   @override
@@ -27257,7 +27770,154 @@ class _StringsFr extends _StringsEn {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   @override
+  String get book_scrape_cover => 'Scrape cover online';
+  @override
+  String get book_scrape_title => 'Match cover online';
+  @override
+  String get book_scrape_hint => 'Book title / author';
+  @override
+  String get book_scrape_search => 'Search';
+  @override
+  String get book_scrape_use => 'Use';
+  @override
+  String get book_scrape_empty => 'No matching covers';
+  @override
+  String get book_scrape_failed => 'Failed to fetch cover';
+  @override
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -31719,7 +32379,7 @@ class _StringsId extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -32011,9 +32671,6 @@ class _StringsId extends _StringsEn {
   String get game_capture_launch_failed => 'Game launch or capture failed';
   @override
   String get game_capture_running => 'Capture session is running';
-  @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   @override
   String get game_text_source_engine => 'Engine hook';
   @override
@@ -33172,7 +33829,154 @@ class _StringsId extends _StringsEn {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   @override
+  String get book_scrape_cover => 'Scrape cover online';
+  @override
+  String get book_scrape_title => 'Match cover online';
+  @override
+  String get book_scrape_hint => 'Book title / author';
+  @override
+  String get book_scrape_search => 'Search';
+  @override
+  String get book_scrape_use => 'Use';
+  @override
+  String get book_scrape_empty => 'No matching covers';
+  @override
+  String get book_scrape_failed => 'Failed to fetch cover';
+  @override
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -37682,7 +38486,7 @@ class _StringsIt extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -37974,9 +38778,6 @@ class _StringsIt extends _StringsEn {
   String get game_capture_launch_failed => 'Game launch or capture failed';
   @override
   String get game_capture_running => 'Capture session is running';
-  @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   @override
   String get game_text_source_engine => 'Engine hook';
   @override
@@ -39135,7 +39936,154 @@ class _StringsIt extends _StringsEn {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   @override
+  String get book_scrape_cover => 'Scrape cover online';
+  @override
+  String get book_scrape_title => 'Match cover online';
+  @override
+  String get book_scrape_hint => 'Book title / author';
+  @override
+  String get book_scrape_search => 'Search';
+  @override
+  String get book_scrape_use => 'Use';
+  @override
+  String get book_scrape_empty => 'No matching covers';
+  @override
+  String get book_scrape_failed => 'Failed to fetch cover';
+  @override
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -43451,7 +44399,7 @@ class _StringsJa extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -43742,9 +44690,6 @@ class _StringsJa extends _StringsEn {
   String get game_capture_launch_failed => 'Game launch or capture failed';
   @override
   String get game_capture_running => 'Capture session is running';
-  @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   @override
   String get game_text_source_engine => 'Engine hook';
   @override
@@ -44903,7 +45848,154 @@ class _StringsJa extends _StringsEn {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   @override
+  String get book_scrape_cover => 'Scrape cover online';
+  @override
+  String get book_scrape_title => 'Match cover online';
+  @override
+  String get book_scrape_hint => 'Book title / author';
+  @override
+  String get book_scrape_search => 'Search';
+  @override
+  String get book_scrape_use => 'Use';
+  @override
+  String get book_scrape_empty => 'No matching covers';
+  @override
+  String get book_scrape_failed => 'Failed to fetch cover';
+  @override
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -49222,7 +50314,7 @@ class _StringsKo extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -49513,9 +50605,6 @@ class _StringsKo extends _StringsEn {
   String get game_capture_launch_failed => 'Game launch or capture failed';
   @override
   String get game_capture_running => 'Capture session is running';
-  @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   @override
   String get game_text_source_engine => 'Engine hook';
   @override
@@ -50674,7 +51763,154 @@ class _StringsKo extends _StringsEn {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   @override
+  String get book_scrape_cover => 'Scrape cover online';
+  @override
+  String get book_scrape_title => 'Match cover online';
+  @override
+  String get book_scrape_hint => 'Book title / author';
+  @override
+  String get book_scrape_search => 'Search';
+  @override
+  String get book_scrape_use => 'Use';
+  @override
+  String get book_scrape_empty => 'No matching covers';
+  @override
+  String get book_scrape_failed => 'Failed to fetch cover';
+  @override
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -55162,7 +56398,7 @@ class _StringsNl extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -55454,9 +56690,6 @@ class _StringsNl extends _StringsEn {
   String get game_capture_launch_failed => 'Game launch or capture failed';
   @override
   String get game_capture_running => 'Capture session is running';
-  @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   @override
   String get game_text_source_engine => 'Engine hook';
   @override
@@ -56615,7 +57848,154 @@ class _StringsNl extends _StringsEn {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   @override
+  String get book_scrape_cover => 'Scrape cover online';
+  @override
+  String get book_scrape_title => 'Match cover online';
+  @override
+  String get book_scrape_hint => 'Book title / author';
+  @override
+  String get book_scrape_search => 'Search';
+  @override
+  String get book_scrape_use => 'Use';
+  @override
+  String get book_scrape_empty => 'No matching covers';
+  @override
+  String get book_scrape_failed => 'Failed to fetch cover';
+  @override
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -61118,7 +62498,7 @@ class _StringsPtBr extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -61410,9 +62790,6 @@ class _StringsPtBr extends _StringsEn {
   String get game_capture_launch_failed => 'Game launch or capture failed';
   @override
   String get game_capture_running => 'Capture session is running';
-  @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   @override
   String get game_text_source_engine => 'Engine hook';
   @override
@@ -62571,7 +63948,154 @@ class _StringsPtBr extends _StringsEn {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   @override
+  String get book_scrape_cover => 'Scrape cover online';
+  @override
+  String get book_scrape_title => 'Match cover online';
+  @override
+  String get book_scrape_hint => 'Book title / author';
+  @override
+  String get book_scrape_search => 'Search';
+  @override
+  String get book_scrape_use => 'Use';
+  @override
+  String get book_scrape_empty => 'No matching covers';
+  @override
+  String get book_scrape_failed => 'Failed to fetch cover';
+  @override
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -67057,7 +68581,7 @@ class _StringsRu extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -67349,9 +68873,6 @@ class _StringsRu extends _StringsEn {
   String get game_capture_launch_failed => 'Game launch or capture failed';
   @override
   String get game_capture_running => 'Capture session is running';
-  @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   @override
   String get game_text_source_engine => 'Engine hook';
   @override
@@ -68510,7 +70031,154 @@ class _StringsRu extends _StringsEn {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   @override
+  String get book_scrape_cover => 'Scrape cover online';
+  @override
+  String get book_scrape_title => 'Match cover online';
+  @override
+  String get book_scrape_hint => 'Book title / author';
+  @override
+  String get book_scrape_search => 'Search';
+  @override
+  String get book_scrape_use => 'Use';
+  @override
+  String get book_scrape_empty => 'No matching covers';
+  @override
+  String get book_scrape_failed => 'Failed to fetch cover';
+  @override
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -72941,7 +74609,7 @@ class _StringsTh extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -73233,9 +74901,6 @@ class _StringsTh extends _StringsEn {
   String get game_capture_launch_failed => 'Game launch or capture failed';
   @override
   String get game_capture_running => 'Capture session is running';
-  @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   @override
   String get game_text_source_engine => 'Engine hook';
   @override
@@ -74394,7 +76059,154 @@ class _StringsTh extends _StringsEn {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   @override
+  String get book_scrape_cover => 'Scrape cover online';
+  @override
+  String get book_scrape_title => 'Match cover online';
+  @override
+  String get book_scrape_hint => 'Book title / author';
+  @override
+  String get book_scrape_search => 'Search';
+  @override
+  String get book_scrape_use => 'Use';
+  @override
+  String get book_scrape_empty => 'No matching covers';
+  @override
+  String get book_scrape_failed => 'Failed to fetch cover';
+  @override
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -78857,7 +80669,7 @@ class _StringsTr extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -79149,9 +80961,6 @@ class _StringsTr extends _StringsEn {
   String get game_capture_launch_failed => 'Game launch or capture failed';
   @override
   String get game_capture_running => 'Capture session is running';
-  @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   @override
   String get game_text_source_engine => 'Engine hook';
   @override
@@ -80310,7 +82119,154 @@ class _StringsTr extends _StringsEn {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   @override
+  String get book_scrape_cover => 'Scrape cover online';
+  @override
+  String get book_scrape_title => 'Match cover online';
+  @override
+  String get book_scrape_hint => 'Book title / author';
+  @override
+  String get book_scrape_search => 'Search';
+  @override
+  String get book_scrape_use => 'Use';
+  @override
+  String get book_scrape_empty => 'No matching covers';
+  @override
+  String get book_scrape_failed => 'Failed to fetch cover';
+  @override
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -84760,7 +86716,7 @@ class _StringsVi extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -85052,9 +87008,6 @@ class _StringsVi extends _StringsEn {
   String get game_capture_launch_failed => 'Game launch or capture failed';
   @override
   String get game_capture_running => 'Capture session is running';
-  @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   @override
   String get game_text_source_engine => 'Engine hook';
   @override
@@ -86213,7 +88166,154 @@ class _StringsVi extends _StringsEn {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   @override
+  String get book_scrape_cover => 'Scrape cover online';
+  @override
+  String get book_scrape_title => 'Match cover online';
+  @override
+  String get book_scrape_hint => 'Book title / author';
+  @override
+  String get book_scrape_search => 'Search';
+  @override
+  String get book_scrape_use => 'Use';
+  @override
+  String get book_scrape_empty => 'No matching covers';
+  @override
+  String get book_scrape_failed => 'Failed to fetch cover';
+  @override
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 // Path: <root>
@@ -90357,7 +92457,7 @@ class _StringsZhCn extends _StringsEn {
   String get desktop_clipboard_window_mode_hint => '控制 Hibiki 是否保持在其他窗口上方';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
+      '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Hibiki 的 Yomitan API 服务器。';
   @override
   String get interconnect_enable => '启用互联';
   @override
@@ -90621,8 +92721,6 @@ class _StringsZhCn extends _StringsEn {
   String get game_capture_launch_failed => '游戏启动或捕获失败';
   @override
   String get game_capture_running => '捕获会话已运行';
-  @override
-  String get game_capture_running_no_window => '捕获已运行；尚未找到游戏窗口';
   @override
   String get game_text_source_engine => '引擎 Hook';
   @override
@@ -91706,7 +93804,145 @@ class _StringsZhCn extends _StringsEn {
   String get browser_extension_version_mismatch =>
       '浏览器中加载的扩展不是最新版本：如有需要先重新准备扩展，再到浏览器扩展管理页（chrome://extensions）点「重新加载」。';
   @override
+  String get book_scrape_cover => '在线刮削封面';
+  @override
+  String get book_scrape_title => '在线匹配封面';
+  @override
+  String get book_scrape_hint => '书名 / 作者';
+  @override
+  String get book_scrape_search => '搜索';
+  @override
+  String get book_scrape_use => '使用';
+  @override
+  String get book_scrape_empty => '无匹配封面';
+  @override
+  String get book_scrape_failed => '封面获取失败';
+  @override
+  String get book_scrape_search_failed => '搜索失败，请点击「搜索」重试';
+  @override
   String get add_to_collection => '加入合集';
+  @override
+  String get anime_download_sort_seeders => '做种数';
+  @override
+  String get anime_download_sort_size => '体积';
+  @override
+  String get anime_download_sort_date => '发布时间';
+  @override
+  String get anime_download_search_error_proxy_hint => '站点无法直连时，可在下载设置中配置网络代理。';
+  @override
+  String get manga_online_catalog_title => '在线目录';
+  @override
+  String get manga_online_search_hint => '搜索系列';
+  @override
+  String get manga_online_load_failed => '目录加载失败';
+  @override
+  String get manga_online_downloaded => '已入库';
+  @override
+  String get manga_online_download_selected => '下载所选';
+  @override
+  String get manga_online_stage_mokuro => '下载 OCR 数据…';
+  @override
+  String get manga_online_stage_cbz => '下载卷包…';
+  @override
+  String get manga_online_stage_extract => '解包中…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      '第 ${done} / ${total} 卷';
+  @override
+  String get manga_online_failed => '下载失败';
+  @override
+  String get manga_online_base_url_label => '在线目录地址';
+  @override
+  String get audio_source_edit_target_gone => '该音频来源已不存在，编辑已丢弃';
+  @override
+  String get audio_source_edit_url => '编辑音频来源链接';
+  @override
+  String get audio_source_updated => '已更新音频来源';
+  @override
+  String get game_capture_degraded_loopback =>
+      '游戏已在运行，但引擎注入失败，改用整机混音兜底，可能混入 BGM 和音效。';
+  @override
+  String get game_capture_window_missing =>
+      '游戏进程已启动，但窗口一直没有出现，游戏可能没能真正启动。可以再启动一次试试。';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API 服务器已开启';
+  @override
+  String get yomitan_port_kill_action => '结束进程并重试';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      '无法结束 ${process}，请手动结束该进程后重试。';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      '结束占用端口 ${port} 的进程？';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      '该端口目前被以下进程占用：${process}';
+  @override
+  String get yomitan_port_kill_self_instance => '该进程是本应用的另一个正在运行的实例。';
+  @override
+  String get yomitan_port_kill_confirm => '结束进程';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} 是关键系统进程，Hibiki 不会结束它；请改用其他端口。';
+  @override
+  String get gal_hook_text_font_size => 'Galgame 台词浮窗字号';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      '拖动浮窗右下角只改窗口大小（换来更多可见行），字号在这里单独设置。';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame 台词浮窗';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      '引擎语音钩子已装好，但游戏还没播放过语音。暂时用系统混音，出现第一句语音后会自动切回引擎语音。';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      '引擎语音钩子和系统回环都启动失败，当前无法采集任何音频。';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      '音频采集正常，但游戏窗口还没出现，暂时无法截图。窗口出现后会自动绑定。';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      '附着引擎语音钩子到正在运行的游戏失败，改用系统混音。';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      '游戏已经启动，但早期注入引擎钩子失败，改用系统混音。';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      '只有当前音频后端是「引擎 PCM」时，选轨/排除才会真正影响取音。当前后端下方列表只读。';
+  @override
+  String get game_track_no_clips => '近窗内没有片段';
+  @override
+  String get game_line_track_tooltip => '为这句选择语音轨';
+  @override
+  String get game_line_track_dialog_title => '这句台词的语音轨';
+  @override
+  String get game_line_track_failed => '这条轨在该句附近没有取到语音';
+  @override
+  String get game_line_track_applied => '已把该轨的语音绑定到这句';
+  @override
+  String get game_edit_launch_args => '启动参数';
+  @override
+  String get game_edit_launch_args_hint => '启动时传给游戏，例如 -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      '引擎组件已被拒绝安装：无法校验其完整性（GitHub 上的 .sha256 校验文件不可达、缺失或与下载内容不符）。为避免装入被篡改的注入器代码，本次安装已终止。';
+  @override
+  String get download_save_root_title => '下载目录';
+  @override
+  String get download_save_root_hint => '新的下载任务保存到这里；已有任务仍留在原目录，不会被移动。';
+  @override
+  String get download_save_root_change => '更改目录';
+  @override
+  String get download_save_root_reset => '恢复默认';
+  @override
+  String get download_save_root_not_absolute => '请选择一个绝对路径的目录。';
+  @override
+  String get download_save_root_create_failed => '无法创建该目录，请检查磁盘与权限。';
+  @override
+  String get download_save_root_not_writable => '该目录不可写入。';
+  @override
+  String get download_save_root_fallback_warning => '配置的下载目录当前不可用，已回退到默认目录。';
 }
 
 // Path: <root>
@@ -95944,7 +98180,7 @@ class _StringsZhHk extends _StringsEn {
       'Controls whether Hibiki stays above other windows';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
   @override
   String get interconnect_enable => 'Enable interconnect';
   @override
@@ -96232,9 +98468,6 @@ class _StringsZhHk extends _StringsEn {
   String get game_capture_launch_failed => 'Game launch or capture failed';
   @override
   String get game_capture_running => 'Capture session is running';
-  @override
-  String get game_capture_running_no_window =>
-      'Capture is running; the game window was not found yet';
   @override
   String get game_text_source_engine => 'Engine hook';
   @override
@@ -97392,7 +99625,154 @@ class _StringsZhHk extends _StringsEn {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   @override
+  String get book_scrape_cover => 'Scrape cover online';
+  @override
+  String get book_scrape_title => 'Match cover online';
+  @override
+  String get book_scrape_hint => 'Book title / author';
+  @override
+  String get book_scrape_search => 'Search';
+  @override
+  String get book_scrape_use => 'Use';
+  @override
+  String get book_scrape_empty => 'No matching covers';
+  @override
+  String get book_scrape_failed => 'Failed to fetch cover';
+  @override
+  String get book_scrape_search_failed => 'Search failed. Tap Search to retry.';
+  @override
   String get add_to_collection => 'Add to collection';
+  @override
+  String get anime_download_sort_seeders => 'Seeders';
+  @override
+  String get anime_download_sort_size => 'Size';
+  @override
+  String get anime_download_sort_date => 'Published';
+  @override
+  String get anime_download_search_error_proxy_hint =>
+      'If the site cannot be reached directly, configure a network proxy in download settings.';
+  @override
+  String get manga_online_catalog_title => 'Online catalog';
+  @override
+  String get manga_online_search_hint => 'Search series';
+  @override
+  String get manga_online_load_failed => 'Failed to load catalog';
+  @override
+  String get manga_online_downloaded => 'Imported';
+  @override
+  String get manga_online_download_selected => 'Download selected';
+  @override
+  String get manga_online_stage_mokuro => 'Downloading OCR data…';
+  @override
+  String get manga_online_stage_cbz => 'Downloading volume…';
+  @override
+  String get manga_online_stage_extract => 'Extracting…';
+  @override
+  String manga_online_queue_progress(
+          {required Object done, required Object total}) =>
+      'Volume ${done} / ${total}';
+  @override
+  String get manga_online_failed => 'Download failed';
+  @override
+  String get manga_online_base_url_label => 'Online catalog URL';
+  @override
+  String get audio_source_edit_target_gone =>
+      'That audio source no longer exists — edit discarded';
+  @override
+  String get audio_source_edit_url => 'Edit audio source link';
+  @override
+  String get audio_source_updated => 'Audio source updated';
+  @override
+  String get game_capture_degraded_loopback =>
+      'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+  @override
+  String get game_capture_window_missing =>
+      'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+  @override
+  String get yomitan_api_server_started => 'Yomitan API server started';
+  @override
+  String get yomitan_port_kill_action => 'End process and retry';
+  @override
+  String yomitan_port_kill_failed({required Object process}) =>
+      'Could not end ${process}. Please end it manually, then retry.';
+  @override
+  String yomitan_port_kill_confirm_title({required Object port}) =>
+      'End the process using port ${port}?';
+  @override
+  String yomitan_port_kill_confirm_message({required Object process}) =>
+      'The port is currently used by: ${process}';
+  @override
+  String get yomitan_port_kill_self_instance =>
+      'This process is another running instance of this app.';
+  @override
+  String get yomitan_port_kill_confirm => 'End process';
+  @override
+  String yomitan_port_kill_protected({required Object process}) =>
+      '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+  @override
+  String get gal_hook_text_font_size => 'Galgame caption font size';
+  @override
+  String get gal_hook_text_font_size_hint =>
+      'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+  @override
+  String get settings_section_gal_hook_overlay => 'Galgame caption overlay';
+  @override
+  String get game_hook_fallback_engine_pcm_unavailable =>
+      'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+  @override
+  String get game_hook_fallback_all_audio_sources_failed =>
+      'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+  @override
+  String get game_hook_fallback_window_not_found =>
+      'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+  @override
+  String get game_hook_fallback_engine_attach_failed =>
+      'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+  @override
+  String get game_hook_fallback_launch_injection_failed =>
+      'The game is running, but early engine injection failed; system mix is used instead.';
+  @override
+  String get game_tracks_pcm_only_hint =>
+      'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+  @override
+  String get game_track_no_clips => 'No clips in the recent window';
+  @override
+  String get game_line_track_tooltip => 'Pick the voice track for this line';
+  @override
+  String get game_line_track_dialog_title => 'Voice track for this line';
+  @override
+  String get game_line_track_failed =>
+      'That track has no audio around this line';
+  @override
+  String get game_line_track_applied => 'Voice track applied to this line';
+  @override
+  String get game_edit_launch_args => 'Launch arguments';
+  @override
+  String get game_edit_launch_args_hint =>
+      'Passed to the game on launch, e.g. -windowed';
+  @override
+  String get galgame_helper_verification_failed =>
+      'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+  @override
+  String get download_save_root_title => 'Download folder';
+  @override
+  String get download_save_root_hint =>
+      'New downloads are saved here. Existing tasks keep their original folder.';
+  @override
+  String get download_save_root_change => 'Change folder';
+  @override
+  String get download_save_root_reset => 'Restore default';
+  @override
+  String get download_save_root_not_absolute =>
+      'Please pick an absolute folder path.';
+  @override
+  String get download_save_root_create_failed =>
+      'Cannot create that folder. Check the drive and permissions.';
+  @override
+  String get download_save_root_not_writable => 'That folder is not writable.';
+  @override
+  String get download_save_root_fallback_warning =>
+      'The configured download folder is unavailable, so the default folder is being used.';
 }
 
 /// Flat map(s) containing all translations.
@@ -101393,7 +103773,7 @@ extension on _StringsEn {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -101651,8 +104031,6 @@ extension on _StringsEn {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -102695,8 +105073,135 @@ extension on _StringsEn {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -106695,7 +109200,7 @@ extension on _StringsAr {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -106953,8 +109458,6 @@ extension on _StringsAr {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -107997,8 +110500,135 @@ extension on _StringsAr {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -112018,7 +114648,7 @@ extension on _StringsDe {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -112276,8 +114906,6 @@ extension on _StringsDe {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -113320,8 +115948,135 @@ extension on _StringsDe {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -117340,7 +120095,7 @@ extension on _StringsEs {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -117598,8 +120353,6 @@ extension on _StringsEs {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -118642,8 +121395,135 @@ extension on _StringsEs {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -122668,7 +125548,7 @@ extension on _StringsFr {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -122926,8 +125806,6 @@ extension on _StringsFr {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -123970,8 +126848,135 @@ extension on _StringsFr {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -127978,7 +130983,7 @@ extension on _StringsId {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -128236,8 +131241,6 @@ extension on _StringsId {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -129280,8 +132283,135 @@ extension on _StringsId {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -133303,7 +136433,7 @@ extension on _StringsIt {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -133561,8 +136691,6 @@ extension on _StringsIt {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -134605,8 +137733,135 @@ extension on _StringsIt {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -138590,7 +141845,7 @@ extension on _StringsJa {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -138848,8 +142103,6 @@ extension on _StringsJa {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -139892,8 +143145,135 @@ extension on _StringsJa {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -143881,7 +147261,7 @@ extension on _StringsKo {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -144139,8 +147519,6 @@ extension on _StringsKo {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -145183,8 +148561,135 @@ extension on _StringsKo {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -149199,7 +152704,7 @@ extension on _StringsNl {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -149457,8 +152962,6 @@ extension on _StringsNl {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -150501,8 +154004,135 @@ extension on _StringsNl {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -154514,7 +158144,7 @@ extension on _StringsPtBr {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -154772,8 +158402,6 @@ extension on _StringsPtBr {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -155816,8 +159444,135 @@ extension on _StringsPtBr {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -159834,7 +163589,7 @@ extension on _StringsRu {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -160092,8 +163847,6 @@ extension on _StringsRu {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -161136,8 +164889,135 @@ extension on _StringsRu {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -165138,7 +169018,7 @@ extension on _StringsTh {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -165396,8 +169276,6 @@ extension on _StringsTh {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -166440,8 +170318,135 @@ extension on _StringsTh {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -170451,7 +174456,7 @@ extension on _StringsTr {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -170709,8 +174714,6 @@ extension on _StringsTr {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -171753,8 +175756,135 @@ extension on _StringsTr {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -175759,7 +179889,7 @@ extension on _StringsVi {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -176017,8 +180147,6 @@ extension on _StringsVi {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -177061,8 +181189,135 @@ extension on _StringsVi {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
@@ -181035,7 +185290,7 @@ extension on _StringsZhCn {
         return '控制 Hibiki 是否保持在其他窗口上方';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            '端口 ${port} 正被 Yomitan API 占用。请先在 Yomitan 高级设置中关闭 Yomitan API，再回 Hibiki 开启 Yomitan API 服务器。';
+            '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Hibiki 的 Yomitan API 服务器。';
       case 'interconnect_enable':
         return '启用互联';
       case 'interconnect_enable_hint':
@@ -181291,8 +185546,6 @@ extension on _StringsZhCn {
         return '游戏启动或捕获失败';
       case 'game_capture_running':
         return '捕获会话已运行';
-      case 'game_capture_running_no_window':
-        return '捕获已运行；尚未找到游戏窗口';
       case 'game_text_source_engine':
         return '引擎 Hook';
       case 'game_text_source_websocket':
@@ -182329,8 +186582,132 @@ extension on _StringsZhCn {
         return '浏览器中加载';
       case 'browser_extension_version_mismatch':
         return '浏览器中加载的扩展不是最新版本：如有需要先重新准备扩展，再到浏览器扩展管理页（chrome://extensions）点「重新加载」。';
+      case 'book_scrape_cover':
+        return '在线刮削封面';
+      case 'book_scrape_title':
+        return '在线匹配封面';
+      case 'book_scrape_hint':
+        return '书名 / 作者';
+      case 'book_scrape_search':
+        return '搜索';
+      case 'book_scrape_use':
+        return '使用';
+      case 'book_scrape_empty':
+        return '无匹配封面';
+      case 'book_scrape_failed':
+        return '封面获取失败';
+      case 'book_scrape_search_failed':
+        return '搜索失败，请点击「搜索」重试';
       case 'add_to_collection':
         return '加入合集';
+      case 'anime_download_sort_seeders':
+        return '做种数';
+      case 'anime_download_sort_size':
+        return '体积';
+      case 'anime_download_sort_date':
+        return '发布时间';
+      case 'anime_download_search_error_proxy_hint':
+        return '站点无法直连时，可在下载设置中配置网络代理。';
+      case 'manga_online_catalog_title':
+        return '在线目录';
+      case 'manga_online_search_hint':
+        return '搜索系列';
+      case 'manga_online_load_failed':
+        return '目录加载失败';
+      case 'manga_online_downloaded':
+        return '已入库';
+      case 'manga_online_download_selected':
+        return '下载所选';
+      case 'manga_online_stage_mokuro':
+        return '下载 OCR 数据…';
+      case 'manga_online_stage_cbz':
+        return '下载卷包…';
+      case 'manga_online_stage_extract':
+        return '解包中…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            '第 ${done} / ${total} 卷';
+      case 'manga_online_failed':
+        return '下载失败';
+      case 'manga_online_base_url_label':
+        return '在线目录地址';
+      case 'audio_source_edit_target_gone':
+        return '该音频来源已不存在，编辑已丢弃';
+      case 'audio_source_edit_url':
+        return '编辑音频来源链接';
+      case 'audio_source_updated':
+        return '已更新音频来源';
+      case 'game_capture_degraded_loopback':
+        return '游戏已在运行，但引擎注入失败，改用整机混音兜底，可能混入 BGM 和音效。';
+      case 'game_capture_window_missing':
+        return '游戏进程已启动，但窗口一直没有出现，游戏可能没能真正启动。可以再启动一次试试。';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API 服务器已开启';
+      case 'yomitan_port_kill_action':
+        return '结束进程并重试';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) => '无法结束 ${process}，请手动结束该进程后重试。';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) => '结束占用端口 ${port} 的进程？';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) => '该端口目前被以下进程占用：${process}';
+      case 'yomitan_port_kill_self_instance':
+        return '该进程是本应用的另一个正在运行的实例。';
+      case 'yomitan_port_kill_confirm':
+        return '结束进程';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} 是关键系统进程，Hibiki 不会结束它；请改用其他端口。';
+      case 'gal_hook_text_font_size':
+        return 'Galgame 台词浮窗字号';
+      case 'gal_hook_text_font_size_hint':
+        return '拖动浮窗右下角只改窗口大小（换来更多可见行），字号在这里单独设置。';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame 台词浮窗';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return '引擎语音钩子已装好，但游戏还没播放过语音。暂时用系统混音，出现第一句语音后会自动切回引擎语音。';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return '引擎语音钩子和系统回环都启动失败，当前无法采集任何音频。';
+      case 'game_hook_fallback_window_not_found':
+        return '音频采集正常，但游戏窗口还没出现，暂时无法截图。窗口出现后会自动绑定。';
+      case 'game_hook_fallback_engine_attach_failed':
+        return '附着引擎语音钩子到正在运行的游戏失败，改用系统混音。';
+      case 'game_hook_fallback_launch_injection_failed':
+        return '游戏已经启动，但早期注入引擎钩子失败，改用系统混音。';
+      case 'game_tracks_pcm_only_hint':
+        return '只有当前音频后端是「引擎 PCM」时，选轨/排除才会真正影响取音。当前后端下方列表只读。';
+      case 'game_track_no_clips':
+        return '近窗内没有片段';
+      case 'game_line_track_tooltip':
+        return '为这句选择语音轨';
+      case 'game_line_track_dialog_title':
+        return '这句台词的语音轨';
+      case 'game_line_track_failed':
+        return '这条轨在该句附近没有取到语音';
+      case 'game_line_track_applied':
+        return '已把该轨的语音绑定到这句';
+      case 'game_edit_launch_args':
+        return '启动参数';
+      case 'game_edit_launch_args_hint':
+        return '启动时传给游戏，例如 -windowed';
+      case 'galgame_helper_verification_failed':
+        return '引擎组件已被拒绝安装：无法校验其完整性（GitHub 上的 .sha256 校验文件不可达、缺失或与下载内容不符）。为避免装入被篡改的注入器代码，本次安装已终止。';
+      case 'download_save_root_title':
+        return '下载目录';
+      case 'download_save_root_hint':
+        return '新的下载任务保存到这里；已有任务仍留在原目录，不会被移动。';
+      case 'download_save_root_change':
+        return '更改目录';
+      case 'download_save_root_reset':
+        return '恢复默认';
+      case 'download_save_root_not_absolute':
+        return '请选择一个绝对路径的目录。';
+      case 'download_save_root_create_failed':
+        return '无法创建该目录，请检查磁盘与权限。';
+      case 'download_save_root_not_writable':
+        return '该目录不可写入。';
+      case 'download_save_root_fallback_warning':
+        return '配置的下载目录当前不可用，已回退到默认目录。';
       default:
         return null;
     }
@@ -186309,7 +190686,7 @@ extension on _StringsZhHk {
         return 'Controls whether Hibiki stays above other windows';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is occupied by Yomitan API. Disable Yomitan API in Yomitan advanced settings, then enable the Yomitan API server in Hibiki.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Hibiki again.';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_hint':
@@ -186567,8 +190944,6 @@ extension on _StringsZhHk {
         return 'Game launch or capture failed';
       case 'game_capture_running':
         return 'Capture session is running';
-      case 'game_capture_running_no_window':
-        return 'Capture is running; the game window was not found yet';
       case 'game_text_source_engine':
         return 'Engine hook';
       case 'game_text_source_websocket':
@@ -187611,8 +191986,135 @@ extension on _StringsZhHk {
         return 'Loaded in browser';
       case 'browser_extension_version_mismatch':
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
+      case 'book_scrape_cover':
+        return 'Scrape cover online';
+      case 'book_scrape_title':
+        return 'Match cover online';
+      case 'book_scrape_hint':
+        return 'Book title / author';
+      case 'book_scrape_search':
+        return 'Search';
+      case 'book_scrape_use':
+        return 'Use';
+      case 'book_scrape_empty':
+        return 'No matching covers';
+      case 'book_scrape_failed':
+        return 'Failed to fetch cover';
+      case 'book_scrape_search_failed':
+        return 'Search failed. Tap Search to retry.';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'anime_download_sort_seeders':
+        return 'Seeders';
+      case 'anime_download_sort_size':
+        return 'Size';
+      case 'anime_download_sort_date':
+        return 'Published';
+      case 'anime_download_search_error_proxy_hint':
+        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+      case 'manga_online_catalog_title':
+        return 'Online catalog';
+      case 'manga_online_search_hint':
+        return 'Search series';
+      case 'manga_online_load_failed':
+        return 'Failed to load catalog';
+      case 'manga_online_downloaded':
+        return 'Imported';
+      case 'manga_online_download_selected':
+        return 'Download selected';
+      case 'manga_online_stage_mokuro':
+        return 'Downloading OCR data…';
+      case 'manga_online_stage_cbz':
+        return 'Downloading volume…';
+      case 'manga_online_stage_extract':
+        return 'Extracting…';
+      case 'manga_online_queue_progress':
+        return ({required Object done, required Object total}) =>
+            'Volume ${done} / ${total}';
+      case 'manga_online_failed':
+        return 'Download failed';
+      case 'manga_online_base_url_label':
+        return 'Online catalog URL';
+      case 'audio_source_edit_target_gone':
+        return 'That audio source no longer exists — edit discarded';
+      case 'audio_source_edit_url':
+        return 'Edit audio source link';
+      case 'audio_source_updated':
+        return 'Audio source updated';
+      case 'game_capture_degraded_loopback':
+        return 'The game is running, but engine injection failed; falling back to system audio, which can mix in BGM and effects.';
+      case 'game_capture_window_missing':
+        return 'The game process started but its window never appeared, so the game may not have launched. Try starting it again.';
+      case 'yomitan_api_server_started':
+        return 'Yomitan API server started';
+      case 'yomitan_port_kill_action':
+        return 'End process and retry';
+      case 'yomitan_port_kill_failed':
+        return ({required Object process}) =>
+            'Could not end ${process}. Please end it manually, then retry.';
+      case 'yomitan_port_kill_confirm_title':
+        return ({required Object port}) =>
+            'End the process using port ${port}?';
+      case 'yomitan_port_kill_confirm_message':
+        return ({required Object process}) =>
+            'The port is currently used by: ${process}';
+      case 'yomitan_port_kill_self_instance':
+        return 'This process is another running instance of this app.';
+      case 'yomitan_port_kill_confirm':
+        return 'End process';
+      case 'yomitan_port_kill_protected':
+        return ({required Object process}) =>
+            '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
+      case 'gal_hook_text_font_size':
+        return 'Galgame caption font size';
+      case 'gal_hook_text_font_size_hint':
+        return 'Drag the overlay\'s corner to resize the window; the caption size is set here.';
+      case 'settings_section_gal_hook_overlay':
+        return 'Galgame caption overlay';
+      case 'game_hook_fallback_engine_pcm_unavailable':
+        return 'The engine voice hook is installed, but the game has not played any voice yet. System mix is used for now and will switch back automatically once the first voice arrives.';
+      case 'game_hook_fallback_all_audio_sources_failed':
+        return 'Neither the engine voice hook nor the system loopback could be started; no audio can be captured.';
+      case 'game_hook_fallback_window_not_found':
+        return 'Audio capture is running, but the game window has not appeared yet, so screenshots are unavailable. It will bind automatically once the window shows up.';
+      case 'game_hook_fallback_engine_attach_failed':
+        return 'Attaching the engine voice hook to the running game failed; system mix is used instead.';
+      case 'game_hook_fallback_launch_injection_failed':
+        return 'The game is running, but early engine injection failed; system mix is used instead.';
+      case 'game_tracks_pcm_only_hint':
+        return 'Per-track selection only affects capture while engine PCM is the active audio backend. The list below is read-only under the current backend.';
+      case 'game_track_no_clips':
+        return 'No clips in the recent window';
+      case 'game_line_track_tooltip':
+        return 'Pick the voice track for this line';
+      case 'game_line_track_dialog_title':
+        return 'Voice track for this line';
+      case 'game_line_track_failed':
+        return 'That track has no audio around this line';
+      case 'game_line_track_applied':
+        return 'Voice track applied to this line';
+      case 'game_edit_launch_args':
+        return 'Launch arguments';
+      case 'game_edit_launch_args_hint':
+        return 'Passed to the game on launch, e.g. -windowed';
+      case 'galgame_helper_verification_failed':
+        return 'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Hibiki refuses to install unverified injector code.';
+      case 'download_save_root_title':
+        return 'Download folder';
+      case 'download_save_root_hint':
+        return 'New downloads are saved here. Existing tasks keep their original folder.';
+      case 'download_save_root_change':
+        return 'Change folder';
+      case 'download_save_root_reset':
+        return 'Restore default';
+      case 'download_save_root_not_absolute':
+        return 'Please pick an absolute folder path.';
+      case 'download_save_root_create_failed':
+        return 'Cannot create that folder. Check the drive and permissions.';
+      case 'download_save_root_not_writable':
+        return 'That folder is not writable.';
+      case 'download_save_root_fallback_warning':
+        return 'The configured download folder is unavailable, so the default folder is being used.';
       default:
         return null;
     }
