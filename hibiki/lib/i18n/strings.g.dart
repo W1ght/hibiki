@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45305 (2665 per locale)
+/// Strings: 45458 (2674 per locale)
 ///
 /// Built on 2026-07-26 at 02:35 UTC
 
@@ -3537,6 +3537,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get galgame_upscaling_download_title => 'Download Magpie upscaler?';
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 // Path: <root>
@@ -9585,6 +9601,31 @@ class _StringsAr extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  @override
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  @override
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  @override
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  @override
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  @override
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  @override
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 // Path: <root>
@@ -15706,6 +15747,31 @@ class _StringsDe extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  @override
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  @override
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  @override
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  @override
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  @override
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  @override
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 // Path: <root>
@@ -21843,6 +21909,31 @@ class _StringsEs extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  @override
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  @override
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  @override
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  @override
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  @override
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  @override
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 // Path: <root>
@@ -27991,6 +28082,31 @@ class _StringsFr extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  @override
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  @override
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  @override
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  @override
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  @override
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  @override
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 // Path: <root>
@@ -34066,6 +34182,31 @@ class _StringsId extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  @override
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  @override
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  @override
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  @override
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  @override
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  @override
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 // Path: <root>
@@ -40189,6 +40330,31 @@ class _StringsIt extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  @override
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  @override
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  @override
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  @override
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  @override
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  @override
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 // Path: <root>
@@ -46117,6 +46283,31 @@ class _StringsJa extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  @override
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  @override
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  @override
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  @override
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  @override
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  @override
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 // Path: <root>
@@ -52048,6 +52239,31 @@ class _StringsKo extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  @override
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  @override
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  @override
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  @override
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  @override
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  @override
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 // Path: <root>
@@ -58149,6 +58365,31 @@ class _StringsNl extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  @override
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  @override
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  @override
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  @override
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  @override
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  @override
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 // Path: <root>
@@ -64265,6 +64506,31 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  @override
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  @override
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  @override
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  @override
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  @override
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  @override
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 // Path: <root>
@@ -70364,6 +70630,31 @@ class _StringsRu extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  @override
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  @override
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  @override
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  @override
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  @override
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  @override
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 // Path: <root>
@@ -76408,6 +76699,31 @@ class _StringsTh extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  @override
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  @override
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  @override
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  @override
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  @override
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  @override
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 // Path: <root>
@@ -82484,6 +82800,31 @@ class _StringsTr extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  @override
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  @override
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  @override
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  @override
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  @override
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  @override
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 // Path: <root>
@@ -88547,6 +88888,31 @@ class _StringsVi extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  @override
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  @override
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  @override
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  @override
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  @override
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  @override
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 // Path: <root>
@@ -94192,6 +94558,27 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       '游戏窗口超分需要 Magpie（约 10 MB，GPL-3.0，由我们自行从源码编译）。现在下载吗？';
+  @override
+  String get galgame_upscaling_status_active => '窗口超分已开启';
+  @override
+  String get galgame_upscaling_status_manual => '窗口超分已就绪，但没有自动开始';
+  @override
+  String get galgame_upscaling_status_unavailable => '窗口超分暂时用不了';
+  @override
+  String get galgame_upscaling_status_failed => '窗口超分没能启动';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      '这次 Magpie 还在做首次初始化。现在按 Win+Shift+A 就能放大；下次启动游戏会自动放大。';
+  @override
+  String get galgame_upscaling_hint_external =>
+      '你的电脑上已经开着一个 Magpie，Hibiki 没有去动它。按 Win+Shift+A 就能放大游戏窗口。';
+  @override
+  String get galgame_upscaling_hint_manual => '按 Win+Shift+A 放大游戏窗口。';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      '没有安装 Magpie。把「游戏窗口超分」改成「自动」即可下载。';
+  @override
+  String get game_health_upscaling => '窗口超分';
 }
 
 // Path: <root>
@@ -100038,6 +100425,31 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get galgame_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+  @override
+  String get galgame_upscaling_status_active => 'Window upscaling is on';
+  @override
+  String get galgame_upscaling_status_manual =>
+      'Window upscaling is ready, but did not start on its own';
+  @override
+  String get galgame_upscaling_status_unavailable =>
+      'Window upscaling is not available';
+  @override
+  String get galgame_upscaling_status_failed =>
+      'Window upscaling could not start';
+  @override
+  String get galgame_upscaling_hint_first_run =>
+      'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+  @override
+  String get galgame_upscaling_hint_external =>
+      'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_manual =>
+      'Press Win+Shift+A to upscale the game window.';
+  @override
+  String get galgame_upscaling_hint_not_installed =>
+      'Magpie is not installed. Set window upscaling to Auto to download it.';
+  @override
+  String get game_health_upscaling => 'Window upscaling';
 }
 
 /// Flat map(s) containing all translations.
@@ -105481,6 +105893,24 @@ extension on _StringsEn {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
@@ -110922,6 +111352,24 @@ extension on _StringsAr {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
@@ -116384,6 +116832,24 @@ extension on _StringsDe {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
@@ -121845,6 +122311,24 @@ extension on _StringsEs {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
@@ -127312,6 +127796,24 @@ extension on _StringsFr {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
@@ -132761,6 +133263,24 @@ extension on _StringsId {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
@@ -138225,6 +138745,24 @@ extension on _StringsIt {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
@@ -143651,6 +144189,24 @@ extension on _StringsJa {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
@@ -149081,6 +149637,24 @@ extension on _StringsKo {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
@@ -154538,6 +155112,24 @@ extension on _StringsNl {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
@@ -159992,6 +160584,24 @@ extension on _StringsPtBr {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
@@ -165451,6 +166061,24 @@ extension on _StringsRu {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
@@ -170894,6 +171522,24 @@ extension on _StringsTh {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
@@ -176346,6 +176992,24 @@ extension on _StringsTr {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
@@ -181793,6 +182457,24 @@ extension on _StringsVi {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
@@ -187197,6 +187879,24 @@ extension on _StringsZhCn {
         return '下载 Magpie 超分组件？';
       case 'galgame_upscaling_download_body':
         return '游戏窗口超分需要 Magpie（约 10 MB，GPL-3.0，由我们自行从源码编译）。现在下载吗？';
+      case 'galgame_upscaling_status_active':
+        return '窗口超分已开启';
+      case 'galgame_upscaling_status_manual':
+        return '窗口超分已就绪，但没有自动开始';
+      case 'galgame_upscaling_status_unavailable':
+        return '窗口超分暂时用不了';
+      case 'galgame_upscaling_status_failed':
+        return '窗口超分没能启动';
+      case 'galgame_upscaling_hint_first_run':
+        return '这次 Magpie 还在做首次初始化。现在按 Win+Shift+A 就能放大；下次启动游戏会自动放大。';
+      case 'galgame_upscaling_hint_external':
+        return '你的电脑上已经开着一个 Magpie，Hibiki 没有去动它。按 Win+Shift+A 就能放大游戏窗口。';
+      case 'galgame_upscaling_hint_manual':
+        return '按 Win+Shift+A 放大游戏窗口。';
+      case 'galgame_upscaling_hint_not_installed':
+        return '没有安装 Magpie。把「游戏窗口超分」改成「自动」即可下载。';
+      case 'game_health_upscaling':
+        return '窗口超分';
       default:
         return null;
     }
@@ -192618,6 +193318,24 @@ extension on _StringsZhHk {
         return 'Download Magpie upscaler?';
       case 'galgame_upscaling_download_body':
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
+      case 'galgame_upscaling_status_active':
+        return 'Window upscaling is on';
+      case 'galgame_upscaling_status_manual':
+        return 'Window upscaling is ready, but did not start on its own';
+      case 'galgame_upscaling_status_unavailable':
+        return 'Window upscaling is not available';
+      case 'galgame_upscaling_status_failed':
+        return 'Window upscaling could not start';
+      case 'galgame_upscaling_hint_first_run':
+        return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
+      case 'galgame_upscaling_hint_external':
+        return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_manual':
+        return 'Press Win+Shift+A to upscale the game window.';
+      case 'galgame_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
+      case 'game_health_upscaling':
+        return 'Window upscaling';
       default:
         return null;
     }
