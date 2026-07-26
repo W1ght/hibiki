@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45475 (2675 per locale)
+/// Strings: 45560 (2680 per locale)
 ///
-/// Built on 2026-07-26 at 05:27 UTC
+/// Built on 2026-07-26 at 15:02 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3554,6 +3554,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Magpie is not installed. Set window upscaling to Auto to download it.';
   String get game_health_upscaling => 'Window upscaling';
   String get library_search => 'Search library';
+  String get manga_online_queue_added => 'Added to download queue';
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  String get download_clear_finished => 'Clear finished';
+  String get download_status_queued => 'Queued';
+  String get download_status_cancelled => 'Cancelled';
 }
 
 // Path: <root>
@@ -9629,6 +9634,16 @@ class _StringsAr extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
 }
 
 // Path: <root>
@@ -15777,6 +15792,16 @@ class _StringsDe extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
 }
 
 // Path: <root>
@@ -21941,6 +21966,16 @@ class _StringsEs extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
 }
 
 // Path: <root>
@@ -28116,6 +28151,16 @@ class _StringsFr extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
 }
 
 // Path: <root>
@@ -34218,6 +34263,16 @@ class _StringsId extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
 }
 
 // Path: <root>
@@ -40368,6 +40423,16 @@ class _StringsIt extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
 }
 
 // Path: <root>
@@ -46323,6 +46388,16 @@ class _StringsJa extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
 }
 
 // Path: <root>
@@ -52281,6 +52356,16 @@ class _StringsKo extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
 }
 
 // Path: <root>
@@ -58409,6 +58494,16 @@ class _StringsNl extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
 }
 
 // Path: <root>
@@ -64552,6 +64647,16 @@ class _StringsPtBr extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
 }
 
 // Path: <root>
@@ -70678,6 +70783,16 @@ class _StringsRu extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
 }
 
 // Path: <root>
@@ -76749,6 +76864,16 @@ class _StringsTh extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
 }
 
 // Path: <root>
@@ -82852,6 +82977,16 @@ class _StringsTr extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
 }
 
 // Path: <root>
@@ -88942,6 +89077,16 @@ class _StringsVi extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
 }
 
 // Path: <root>
@@ -94610,6 +94755,16 @@ class _StringsZhCn extends _StringsEn {
   String get game_health_upscaling => '窗口超分';
   @override
   String get library_search => '搜索库';
+  @override
+  String get manga_online_queue_added => '已加入下载队列';
+  @override
+  String get manga_online_queue_section => '漫画目录下载';
+  @override
+  String get download_clear_finished => '清除已完成';
+  @override
+  String get download_status_queued => '排队中';
+  @override
+  String get download_status_cancelled => '已取消';
 }
 
 // Path: <root>
@@ -100483,6 +100638,16 @@ class _StringsZhHk extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
 }
 
 /// Flat map(s) containing all translations.
@@ -105946,6 +106111,16 @@ extension on _StringsEn {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
@@ -111407,6 +111582,16 @@ extension on _StringsAr {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
@@ -116889,6 +117074,16 @@ extension on _StringsDe {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
@@ -122370,6 +122565,16 @@ extension on _StringsEs {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
@@ -127857,6 +128062,16 @@ extension on _StringsFr {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
@@ -133326,6 +133541,16 @@ extension on _StringsId {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
@@ -138810,6 +139035,16 @@ extension on _StringsIt {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
@@ -144256,6 +144491,16 @@ extension on _StringsJa {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
@@ -149706,6 +149951,16 @@ extension on _StringsKo {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
@@ -155183,6 +155438,16 @@ extension on _StringsNl {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
@@ -160657,6 +160922,16 @@ extension on _StringsPtBr {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
@@ -166136,6 +166411,16 @@ extension on _StringsRu {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
@@ -171599,6 +171884,16 @@ extension on _StringsTh {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
@@ -177071,6 +177366,16 @@ extension on _StringsTr {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
@@ -182538,6 +182843,16 @@ extension on _StringsVi {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
@@ -187962,6 +188277,16 @@ extension on _StringsZhCn {
         return '窗口超分';
       case 'library_search':
         return '搜索库';
+      case 'manga_online_queue_added':
+        return '已加入下载队列';
+      case 'manga_online_queue_section':
+        return '漫画目录下载';
+      case 'download_clear_finished':
+        return '清除已完成';
+      case 'download_status_queued':
+        return '排队中';
+      case 'download_status_cancelled':
+        return '已取消';
       default:
         return null;
     }
@@ -193403,6 +193728,16 @@ extension on _StringsZhHk {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
       default:
         return null;
     }
