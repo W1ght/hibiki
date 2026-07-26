@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 46104 (2712 per locale)
 ///
-/// Built on 2026-07-26 at 18:50 UTC
+/// Built on 2026-07-26 at 18:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3579,8 +3579,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_tracking_pending => 'Pending updates';
   String get media_tracking_mappings => 'Item mappings';
   String get media_tracking_add_mapping => 'Add mapping';
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
   String get media_tracking_local_item => 'Local item';
   String get media_tracking_kind => 'Category';
   String get media_tracking_progress_mode => 'Progress unit';
@@ -3602,6 +3600,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_tracking_episode => 'Episode';
   String get media_tracking_chapter => 'Chapter';
   String get media_tracking_volume => 'Volume';
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 // Path: <root>
@@ -9721,9 +9721,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get media_tracking_add_mapping => 'Add mapping';
   @override
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
-  @override
   String get media_tracking_local_item => 'Local item';
   @override
   String get media_tracking_kind => 'Category';
@@ -9762,6 +9759,9 @@ class _StringsAr extends _StringsEn {
   String get media_tracking_chapter => 'Chapter';
   @override
   String get media_tracking_volume => 'Volume';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 // Path: <root>
@@ -15954,9 +15954,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get media_tracking_add_mapping => 'Add mapping';
   @override
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
-  @override
   String get media_tracking_local_item => 'Local item';
   @override
   String get media_tracking_kind => 'Category';
@@ -15995,6 +15992,9 @@ class _StringsDe extends _StringsEn {
   String get media_tracking_chapter => 'Chapter';
   @override
   String get media_tracking_volume => 'Volume';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 // Path: <root>
@@ -22203,9 +22203,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get media_tracking_add_mapping => 'Add mapping';
   @override
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
-  @override
   String get media_tracking_local_item => 'Local item';
   @override
   String get media_tracking_kind => 'Category';
@@ -22244,6 +22241,9 @@ class _StringsEs extends _StringsEn {
   String get media_tracking_chapter => 'Chapter';
   @override
   String get media_tracking_volume => 'Volume';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 // Path: <root>
@@ -28463,9 +28463,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_tracking_add_mapping => 'Add mapping';
   @override
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
-  @override
   String get media_tracking_local_item => 'Local item';
   @override
   String get media_tracking_kind => 'Category';
@@ -28504,6 +28501,9 @@ class _StringsFr extends _StringsEn {
   String get media_tracking_chapter => 'Chapter';
   @override
   String get media_tracking_volume => 'Volume';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 // Path: <root>
@@ -34650,9 +34650,6 @@ class _StringsId extends _StringsEn {
   @override
   String get media_tracking_add_mapping => 'Add mapping';
   @override
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
-  @override
   String get media_tracking_local_item => 'Local item';
   @override
   String get media_tracking_kind => 'Category';
@@ -34691,6 +34688,9 @@ class _StringsId extends _StringsEn {
   String get media_tracking_chapter => 'Chapter';
   @override
   String get media_tracking_volume => 'Volume';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 // Path: <root>
@@ -40885,9 +40885,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_tracking_add_mapping => 'Add mapping';
   @override
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
-  @override
   String get media_tracking_local_item => 'Local item';
   @override
   String get media_tracking_kind => 'Category';
@@ -40926,6 +40923,9 @@ class _StringsIt extends _StringsEn {
   String get media_tracking_chapter => 'Chapter';
   @override
   String get media_tracking_volume => 'Volume';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 // Path: <root>
@@ -46925,9 +46925,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_tracking_add_mapping => 'Add mapping';
   @override
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
-  @override
   String get media_tracking_local_item => 'Local item';
   @override
   String get media_tracking_kind => 'Category';
@@ -46966,6 +46963,9 @@ class _StringsJa extends _StringsEn {
   String get media_tracking_chapter => 'Chapter';
   @override
   String get media_tracking_volume => 'Volume';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 // Path: <root>
@@ -52968,9 +52968,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get media_tracking_add_mapping => 'Add mapping';
   @override
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
-  @override
   String get media_tracking_local_item => 'Local item';
   @override
   String get media_tracking_kind => 'Category';
@@ -53009,6 +53006,9 @@ class _StringsKo extends _StringsEn {
   String get media_tracking_chapter => 'Chapter';
   @override
   String get media_tracking_volume => 'Volume';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 // Path: <root>
@@ -59181,9 +59181,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get media_tracking_add_mapping => 'Add mapping';
   @override
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
-  @override
   String get media_tracking_local_item => 'Local item';
   @override
   String get media_tracking_kind => 'Category';
@@ -59222,6 +59219,9 @@ class _StringsNl extends _StringsEn {
   String get media_tracking_chapter => 'Chapter';
   @override
   String get media_tracking_volume => 'Volume';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 // Path: <root>
@@ -65409,9 +65409,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_tracking_add_mapping => 'Add mapping';
   @override
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
-  @override
   String get media_tracking_local_item => 'Local item';
   @override
   String get media_tracking_kind => 'Category';
@@ -65450,6 +65447,9 @@ class _StringsPtBr extends _StringsEn {
   String get media_tracking_chapter => 'Chapter';
   @override
   String get media_tracking_volume => 'Volume';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 // Path: <root>
@@ -71620,9 +71620,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_tracking_add_mapping => 'Add mapping';
   @override
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
-  @override
   String get media_tracking_local_item => 'Local item';
   @override
   String get media_tracking_kind => 'Category';
@@ -71661,6 +71658,9 @@ class _StringsRu extends _StringsEn {
   String get media_tracking_chapter => 'Chapter';
   @override
   String get media_tracking_volume => 'Volume';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 // Path: <root>
@@ -77776,9 +77776,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_tracking_add_mapping => 'Add mapping';
   @override
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
-  @override
   String get media_tracking_local_item => 'Local item';
   @override
   String get media_tracking_kind => 'Category';
@@ -77817,6 +77814,9 @@ class _StringsTh extends _StringsEn {
   String get media_tracking_chapter => 'Chapter';
   @override
   String get media_tracking_volume => 'Volume';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 // Path: <root>
@@ -83964,9 +83964,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get media_tracking_add_mapping => 'Add mapping';
   @override
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
-  @override
   String get media_tracking_local_item => 'Local item';
   @override
   String get media_tracking_kind => 'Category';
@@ -84005,6 +84002,9 @@ class _StringsTr extends _StringsEn {
   String get media_tracking_chapter => 'Chapter';
   @override
   String get media_tracking_volume => 'Volume';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 // Path: <root>
@@ -90139,9 +90139,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_tracking_add_mapping => 'Add mapping';
   @override
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
-  @override
   String get media_tracking_local_item => 'Local item';
   @override
   String get media_tracking_kind => 'Category';
@@ -90180,6 +90177,9 @@ class _StringsVi extends _StringsEn {
   String get media_tracking_chapter => 'Chapter';
   @override
   String get media_tracking_volume => 'Volume';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 // Path: <root>
@@ -95890,8 +95890,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_tracking_add_mapping => '添加映射';
   @override
-  String get media_tracking_no_mappings => '尚无映射。添加后即可自动记录。';
-  @override
   String get media_tracking_local_item => '本地条目';
   @override
   String get media_tracking_kind => '分类';
@@ -95928,6 +95926,9 @@ class _StringsZhCn extends _StringsEn {
   String get media_tracking_chapter => '话';
   @override
   String get media_tracking_volume => '卷';
+  @override
+  String get media_tracking_no_mappings =>
+      '暂无手动映射。首次看完一集或产生阅读进度时会自动匹配；歧义条目可在此手动添加。';
 }
 
 // Path: <root>
@@ -101845,9 +101846,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_tracking_add_mapping => 'Add mapping';
   @override
-  String get media_tracking_no_mappings =>
-      'No mappings yet. Add one to enable automatic tracking.';
-  @override
   String get media_tracking_local_item => 'Local item';
   @override
   String get media_tracking_kind => 'Category';
@@ -101886,6 +101884,9 @@ class _StringsZhHk extends _StringsEn {
   String get media_tracking_chapter => 'Chapter';
   @override
   String get media_tracking_volume => 'Volume';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
 }
 
 /// Flat map(s) containing all translations.
@@ -107390,8 +107391,6 @@ extension on _StringsEn {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -107428,6 +107427,8 @@ extension on _StringsEn {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
@@ -112930,8 +112931,6 @@ extension on _StringsAr {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -112968,6 +112967,8 @@ extension on _StringsAr {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
@@ -118491,8 +118492,6 @@ extension on _StringsDe {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -118529,6 +118528,8 @@ extension on _StringsDe {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
@@ -124051,8 +124052,6 @@ extension on _StringsEs {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -124089,6 +124088,8 @@ extension on _StringsEs {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
@@ -129617,8 +129618,6 @@ extension on _StringsFr {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -129655,6 +129654,8 @@ extension on _StringsFr {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
@@ -135165,8 +135166,6 @@ extension on _StringsId {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -135203,6 +135202,8 @@ extension on _StringsId {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
@@ -140728,8 +140729,6 @@ extension on _StringsIt {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -140766,6 +140765,8 @@ extension on _StringsIt {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
@@ -146253,8 +146254,6 @@ extension on _StringsJa {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -146291,6 +146290,8 @@ extension on _StringsJa {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
@@ -151782,8 +151783,6 @@ extension on _StringsKo {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -151820,6 +151819,8 @@ extension on _StringsKo {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
@@ -157338,8 +157339,6 @@ extension on _StringsNl {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -157376,6 +157375,8 @@ extension on _StringsNl {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
@@ -162891,8 +162892,6 @@ extension on _StringsPtBr {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -162929,6 +162928,8 @@ extension on _StringsPtBr {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
@@ -168449,8 +168450,6 @@ extension on _StringsRu {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -168487,6 +168486,8 @@ extension on _StringsRu {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
@@ -173991,8 +173992,6 @@ extension on _StringsTh {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -174029,6 +174028,8 @@ extension on _StringsTh {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
@@ -179542,8 +179543,6 @@ extension on _StringsTr {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -179580,6 +179579,8 @@ extension on _StringsTr {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
@@ -185088,8 +185089,6 @@ extension on _StringsVi {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -185126,6 +185125,8 @@ extension on _StringsVi {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
@@ -190591,8 +190592,6 @@ extension on _StringsZhCn {
         return '条目映射';
       case 'media_tracking_add_mapping':
         return '添加映射';
-      case 'media_tracking_no_mappings':
-        return '尚无映射。添加后即可自动记录。';
       case 'media_tracking_local_item':
         return '本地条目';
       case 'media_tracking_kind':
@@ -190629,6 +190628,8 @@ extension on _StringsZhCn {
         return '话';
       case 'media_tracking_volume':
         return '卷';
+      case 'media_tracking_no_mappings':
+        return '暂无手动映射。首次看完一集或产生阅读进度时会自动匹配；歧义条目可在此手动添加。';
       default:
         return null;
     }
@@ -196111,8 +196112,6 @@ extension on _StringsZhHk {
         return 'Item mappings';
       case 'media_tracking_add_mapping':
         return 'Add mapping';
-      case 'media_tracking_no_mappings':
-        return 'No mappings yet. Add one to enable automatic tracking.';
       case 'media_tracking_local_item':
         return 'Local item';
       case 'media_tracking_kind':
@@ -196149,6 +196148,8 @@ extension on _StringsZhHk {
         return 'Chapter';
       case 'media_tracking_volume':
         return 'Volume';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
       default:
         return null;
     }
