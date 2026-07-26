@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45594 (2682 per locale)
+/// Strings: 46104 (2712 per locale)
 ///
-/// Built on 2026-07-26 at 17:55 UTC
+/// Built on 2026-07-26 at 18:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3566,6 +3566,42 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  String get settings_destination_tracking => 'Media tracking';
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  String get media_tracking_account => 'Bangumi account';
+  String get media_tracking_access_token => 'Access token';
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  String get media_tracking_connect => 'Connect and verify';
+  String get media_tracking_connected_as => 'Connected account';
+  String get media_tracking_sync_now => 'Sync now';
+  String get media_tracking_pending => 'Pending updates';
+  String get media_tracking_mappings => 'Item mappings';
+  String get media_tracking_add_mapping => 'Add mapping';
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  String get media_tracking_local_item => 'Local item';
+  String get media_tracking_kind => 'Category';
+  String get media_tracking_progress_mode => 'Progress unit';
+  String get media_tracking_progress_offset => 'Starting number';
+  String get media_tracking_search => 'Search Bangumi';
+  String get media_tracking_search_results => 'Bangumi results';
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  String get media_tracking_saved => 'Mapping saved';
+  String get media_tracking_sync_success => 'Sync completed';
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  String get media_tracking_anime => 'Anime';
+  String get media_tracking_novel => 'Novel';
+  String get media_tracking_manga => 'Manga';
+  String get media_tracking_episode => 'Episode';
+  String get media_tracking_chapter => 'Chapter';
+  String get media_tracking_volume => 'Volume';
 }
 
 // Path: <root>
@@ -9660,6 +9696,72 @@ class _StringsAr extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_volume => 'Volume';
 }
 
 // Path: <root>
@@ -15827,6 +15929,72 @@ class _StringsDe extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_volume => 'Volume';
 }
 
 // Path: <root>
@@ -22010,6 +22178,72 @@ class _StringsEs extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_volume => 'Volume';
 }
 
 // Path: <root>
@@ -28204,6 +28438,72 @@ class _StringsFr extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_volume => 'Volume';
 }
 
 // Path: <root>
@@ -34325,6 +34625,72 @@ class _StringsId extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_volume => 'Volume';
 }
 
 // Path: <root>
@@ -40494,6 +40860,72 @@ class _StringsIt extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_volume => 'Volume';
 }
 
 // Path: <root>
@@ -46468,6 +46900,72 @@ class _StringsJa extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_volume => 'Volume';
 }
 
 // Path: <root>
@@ -52445,6 +52943,72 @@ class _StringsKo extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_volume => 'Volume';
 }
 
 // Path: <root>
@@ -58592,6 +59156,72 @@ class _StringsNl extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_volume => 'Volume';
 }
 
 // Path: <root>
@@ -64754,6 +65384,72 @@ class _StringsPtBr extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_volume => 'Volume';
 }
 
 // Path: <root>
@@ -70899,6 +71595,72 @@ class _StringsRu extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_volume => 'Volume';
 }
 
 // Path: <root>
@@ -76989,6 +77751,72 @@ class _StringsTh extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_volume => 'Volume';
 }
 
 // Path: <root>
@@ -83111,6 +83939,72 @@ class _StringsTr extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_volume => 'Volume';
 }
 
 // Path: <root>
@@ -89220,6 +90114,72 @@ class _StringsVi extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_volume => 'Volume';
 }
 
 // Path: <root>
@@ -94907,6 +95867,67 @@ class _StringsZhCn extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end}（时长 ${duration} / 共 ${total}）';
+  @override
+  String get settings_destination_tracking => '媒体记录';
+  @override
+  String get media_tracking_summary => '自动将番剧、小说和漫画进度记录到 Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi 账号';
+  @override
+  String get media_tracking_access_token => '访问令牌';
+  @override
+  String get media_tracking_access_token_hint => '创建具有写入权限的个人访问令牌';
+  @override
+  String get media_tracking_connect => '连接并验证';
+  @override
+  String get media_tracking_connected_as => '已连接账号';
+  @override
+  String get media_tracking_sync_now => '立即同步';
+  @override
+  String get media_tracking_pending => '待同步记录';
+  @override
+  String get media_tracking_mappings => '条目映射';
+  @override
+  String get media_tracking_add_mapping => '添加映射';
+  @override
+  String get media_tracking_no_mappings => '尚无映射。添加后即可自动记录。';
+  @override
+  String get media_tracking_local_item => '本地条目';
+  @override
+  String get media_tracking_kind => '分类';
+  @override
+  String get media_tracking_progress_mode => '进度单位';
+  @override
+  String get media_tracking_progress_offset => '起始编号';
+  @override
+  String get media_tracking_search => '搜索 Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi 搜索结果';
+  @override
+  String get media_tracking_delete_mapping => '移除映射';
+  @override
+  String get media_tracking_saved => '映射已保存';
+  @override
+  String get media_tracking_sync_success => '同步完成';
+  @override
+  String get media_tracking_sync_failed => '同步失败，记录已保留在队列中。';
+  @override
+  String get media_tracking_token_required => '请先输入并验证访问令牌';
+  @override
+  String get media_tracking_bookmeter_note =>
+      '读书 Meter 未公开个人写入 API，因此仅参考其进度交互，不进行网页抓取。';
+  @override
+  String get media_tracking_anime => '番剧';
+  @override
+  String get media_tracking_novel => '小说';
+  @override
+  String get media_tracking_manga => '漫画';
+  @override
+  String get media_tracking_episode => '集';
+  @override
+  String get media_tracking_chapter => '话';
+  @override
+  String get media_tracking_volume => '卷';
 }
 
 // Path: <root>
@@ -100799,6 +101820,72 @@ class _StringsZhHk extends _StringsEn {
           required Object duration,
           required Object total}) =>
       '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_no_mappings =>
+      'No mappings yet. Add one to enable automatic tracking.';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_volume => 'Volume';
 }
 
 /// Flat map(s) containing all translations.
@@ -106281,6 +107368,66 @@ extension on _StringsEn {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
@@ -111761,6 +112908,66 @@ extension on _StringsAr {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
@@ -117262,6 +118469,66 @@ extension on _StringsDe {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
@@ -122762,6 +124029,66 @@ extension on _StringsEs {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
@@ -128268,6 +129595,66 @@ extension on _StringsFr {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
@@ -133756,6 +135143,66 @@ extension on _StringsId {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
@@ -139259,6 +140706,66 @@ extension on _StringsIt {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
@@ -144724,6 +146231,66 @@ extension on _StringsJa {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
@@ -150193,6 +151760,66 @@ extension on _StringsKo {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
@@ -155689,6 +157316,66 @@ extension on _StringsNl {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
@@ -161182,6 +162869,66 @@ extension on _StringsPtBr {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
@@ -166680,6 +168427,66 @@ extension on _StringsRu {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
@@ -172162,6 +173969,66 @@ extension on _StringsTh {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
@@ -177653,6 +179520,66 @@ extension on _StringsTr {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
@@ -183139,6 +185066,66 @@ extension on _StringsVi {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
@@ -188582,6 +190569,66 @@ extension on _StringsZhCn {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end}（时长 ${duration} / 共 ${total}）';
+      case 'settings_destination_tracking':
+        return '媒体记录';
+      case 'media_tracking_summary':
+        return '自动将番剧、小说和漫画进度记录到 Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi 账号';
+      case 'media_tracking_access_token':
+        return '访问令牌';
+      case 'media_tracking_access_token_hint':
+        return '创建具有写入权限的个人访问令牌';
+      case 'media_tracking_connect':
+        return '连接并验证';
+      case 'media_tracking_connected_as':
+        return '已连接账号';
+      case 'media_tracking_sync_now':
+        return '立即同步';
+      case 'media_tracking_pending':
+        return '待同步记录';
+      case 'media_tracking_mappings':
+        return '条目映射';
+      case 'media_tracking_add_mapping':
+        return '添加映射';
+      case 'media_tracking_no_mappings':
+        return '尚无映射。添加后即可自动记录。';
+      case 'media_tracking_local_item':
+        return '本地条目';
+      case 'media_tracking_kind':
+        return '分类';
+      case 'media_tracking_progress_mode':
+        return '进度单位';
+      case 'media_tracking_progress_offset':
+        return '起始编号';
+      case 'media_tracking_search':
+        return '搜索 Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi 搜索结果';
+      case 'media_tracking_delete_mapping':
+        return '移除映射';
+      case 'media_tracking_saved':
+        return '映射已保存';
+      case 'media_tracking_sync_success':
+        return '同步完成';
+      case 'media_tracking_sync_failed':
+        return '同步失败，记录已保留在队列中。';
+      case 'media_tracking_token_required':
+        return '请先输入并验证访问令牌';
+      case 'media_tracking_bookmeter_note':
+        return '读书 Meter 未公开个人写入 API，因此仅参考其进度交互，不进行网页抓取。';
+      case 'media_tracking_anime':
+        return '番剧';
+      case 'media_tracking_novel':
+        return '小说';
+      case 'media_tracking_manga':
+        return '漫画';
+      case 'media_tracking_episode':
+        return '集';
+      case 'media_tracking_chapter':
+        return '话';
+      case 'media_tracking_volume':
+        return '卷';
       default:
         return null;
     }
@@ -194042,6 +196089,66 @@ extension on _StringsZhHk {
                 required Object duration,
                 required Object total}) =>
             '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_no_mappings':
+        return 'No mappings yet. Add one to enable automatic tracking.';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_volume':
+        return 'Volume';
       default:
         return null;
     }
