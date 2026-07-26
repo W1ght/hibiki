@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45475 (2675 per locale)
+/// Strings: 45747 (2691 per locale)
 ///
-/// Built on 2026-07-26 at 05:27 UTC
+/// Built on 2026-07-26 at 18:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3554,6 +3554,32 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Magpie is not installed. Set window upscaling to Auto to download it.';
   String get game_health_upscaling => 'Window upscaling';
   String get library_search => 'Search library';
+  String get manga_online_queue_added => 'Added to download queue';
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  String get download_clear_finished => 'Clear finished';
+  String get download_status_queued => 'Queued';
+  String get download_status_cancelled => 'Cancelled';
+  String get game_waveform_select_title => 'Select audio range';
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  String get anime_download_relocate => 'Rename / move';
+  String get anime_download_relocate_rename_title => 'Rename file';
+  String get anime_download_relocate_move_title => 'Move to folder';
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 // Path: <root>
@@ -9629,6 +9655,48 @@ class _StringsAr extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get anime_download_relocate => 'Rename / move';
+  @override
+  String get anime_download_relocate_rename_title => 'Rename file';
+  @override
+  String get anime_download_relocate_move_title => 'Move to folder';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  @override
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  @override
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 // Path: <root>
@@ -15777,6 +15845,48 @@ class _StringsDe extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get anime_download_relocate => 'Rename / move';
+  @override
+  String get anime_download_relocate_rename_title => 'Rename file';
+  @override
+  String get anime_download_relocate_move_title => 'Move to folder';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  @override
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  @override
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 // Path: <root>
@@ -21941,6 +22051,48 @@ class _StringsEs extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get anime_download_relocate => 'Rename / move';
+  @override
+  String get anime_download_relocate_rename_title => 'Rename file';
+  @override
+  String get anime_download_relocate_move_title => 'Move to folder';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  @override
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  @override
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 // Path: <root>
@@ -28116,6 +28268,48 @@ class _StringsFr extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get anime_download_relocate => 'Rename / move';
+  @override
+  String get anime_download_relocate_rename_title => 'Rename file';
+  @override
+  String get anime_download_relocate_move_title => 'Move to folder';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  @override
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  @override
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 // Path: <root>
@@ -34218,6 +34412,48 @@ class _StringsId extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get anime_download_relocate => 'Rename / move';
+  @override
+  String get anime_download_relocate_rename_title => 'Rename file';
+  @override
+  String get anime_download_relocate_move_title => 'Move to folder';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  @override
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  @override
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 // Path: <root>
@@ -40368,6 +40604,48 @@ class _StringsIt extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get anime_download_relocate => 'Rename / move';
+  @override
+  String get anime_download_relocate_rename_title => 'Rename file';
+  @override
+  String get anime_download_relocate_move_title => 'Move to folder';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  @override
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  @override
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 // Path: <root>
@@ -46323,6 +46601,48 @@ class _StringsJa extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get anime_download_relocate => 'Rename / move';
+  @override
+  String get anime_download_relocate_rename_title => 'Rename file';
+  @override
+  String get anime_download_relocate_move_title => 'Move to folder';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  @override
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  @override
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 // Path: <root>
@@ -52281,6 +52601,48 @@ class _StringsKo extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get anime_download_relocate => 'Rename / move';
+  @override
+  String get anime_download_relocate_rename_title => 'Rename file';
+  @override
+  String get anime_download_relocate_move_title => 'Move to folder';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  @override
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  @override
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 // Path: <root>
@@ -58409,6 +58771,48 @@ class _StringsNl extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get anime_download_relocate => 'Rename / move';
+  @override
+  String get anime_download_relocate_rename_title => 'Rename file';
+  @override
+  String get anime_download_relocate_move_title => 'Move to folder';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  @override
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  @override
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 // Path: <root>
@@ -64552,6 +64956,48 @@ class _StringsPtBr extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get anime_download_relocate => 'Rename / move';
+  @override
+  String get anime_download_relocate_rename_title => 'Rename file';
+  @override
+  String get anime_download_relocate_move_title => 'Move to folder';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  @override
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  @override
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 // Path: <root>
@@ -70678,6 +71124,48 @@ class _StringsRu extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get anime_download_relocate => 'Rename / move';
+  @override
+  String get anime_download_relocate_rename_title => 'Rename file';
+  @override
+  String get anime_download_relocate_move_title => 'Move to folder';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  @override
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  @override
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 // Path: <root>
@@ -76749,6 +77237,48 @@ class _StringsTh extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get anime_download_relocate => 'Rename / move';
+  @override
+  String get anime_download_relocate_rename_title => 'Rename file';
+  @override
+  String get anime_download_relocate_move_title => 'Move to folder';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  @override
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  @override
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 // Path: <root>
@@ -82852,6 +83382,48 @@ class _StringsTr extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get anime_download_relocate => 'Rename / move';
+  @override
+  String get anime_download_relocate_rename_title => 'Rename file';
+  @override
+  String get anime_download_relocate_move_title => 'Move to folder';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  @override
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  @override
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 // Path: <root>
@@ -88942,6 +89514,48 @@ class _StringsVi extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get anime_download_relocate => 'Rename / move';
+  @override
+  String get anime_download_relocate_rename_title => 'Rename file';
+  @override
+  String get anime_download_relocate_move_title => 'Move to folder';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  @override
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  @override
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 // Path: <root>
@@ -94610,6 +95224,47 @@ class _StringsZhCn extends _StringsEn {
   String get game_health_upscaling => '窗口超分';
   @override
   String get library_search => '搜索库';
+  @override
+  String get manga_online_queue_added => '已加入下载队列';
+  @override
+  String get manga_online_queue_section => '漫画目录下载';
+  @override
+  String get download_clear_finished => '清除已完成';
+  @override
+  String get download_status_queued => '排队中';
+  @override
+  String get download_status_cancelled => '已取消';
+  @override
+  String get game_waveform_select_title => '选择音频范围';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end}（时长 ${duration} / 共 ${total}）';
+  @override
+  String get anime_download_relocate => '重命名 / 移动';
+  @override
+  String get anime_download_relocate_rename_title => '重命名文件';
+  @override
+  String get anime_download_relocate_move_title => '移动到文件夹';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki 通过下载引擎改名/移动，因此不会掐断做种。在资源管理器里改名则永远无法挽回。';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      '已改名 / 移动，同步更新 ${rows} 个库条目';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      '失败，磁盘与库都未改动：${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      '文件已移动，但库仍指向旧路径：${reason}';
+  @override
+  String get anime_download_relocate_no_files => '该任务还没有可改名的文件（元数据未就绪）';
+  @override
+  String get anime_download_relocate_pick_folder => '选择目标文件夹';
 }
 
 // Path: <root>
@@ -100483,6 +101138,48 @@ class _StringsZhHk extends _StringsEn {
   String get game_health_upscaling => 'Window upscaling';
   @override
   String get library_search => 'Search library';
+  @override
+  String get manga_online_queue_added => 'Added to download queue';
+  @override
+  String get manga_online_queue_section => 'Manga catalog downloads';
+  @override
+  String get download_clear_finished => 'Clear finished';
+  @override
+  String get download_status_queued => 'Queued';
+  @override
+  String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
+  @override
+  String get anime_download_relocate => 'Rename / move';
+  @override
+  String get anime_download_relocate_rename_title => 'Rename file';
+  @override
+  String get anime_download_relocate_move_title => 'Move to folder';
+  @override
+  String get anime_download_relocate_hint =>
+      'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+  @override
+  String anime_download_relocate_ok({required Object rows}) =>
+      'Renamed / moved; ${rows} library entries updated';
+  @override
+  String anime_download_relocate_engine_failed({required Object reason}) =>
+      'Failed, nothing changed: ${reason}';
+  @override
+  String anime_download_relocate_library_failed({required Object reason}) =>
+      'Files moved, but the library still points at the old path: ${reason}';
+  @override
+  String get anime_download_relocate_no_files =>
+      'This task has no files to rename yet (metadata not ready)';
+  @override
+  String get anime_download_relocate_pick_folder => 'Choose destination folder';
 }
 
 /// Flat map(s) containing all translations.
@@ -105946,6 +106643,46 @@ extension on _StringsEn {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
@@ -111407,6 +112144,46 @@ extension on _StringsAr {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
@@ -116889,6 +117666,46 @@ extension on _StringsDe {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
@@ -122370,6 +123187,46 @@ extension on _StringsEs {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
@@ -127857,6 +128714,46 @@ extension on _StringsFr {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
@@ -133326,6 +134223,46 @@ extension on _StringsId {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
@@ -138810,6 +139747,46 @@ extension on _StringsIt {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
@@ -144256,6 +145233,46 @@ extension on _StringsJa {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
@@ -149706,6 +150723,46 @@ extension on _StringsKo {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
@@ -155183,6 +156240,46 @@ extension on _StringsNl {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
@@ -160657,6 +161754,46 @@ extension on _StringsPtBr {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
@@ -166136,6 +167273,46 @@ extension on _StringsRu {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
@@ -171599,6 +172776,46 @@ extension on _StringsTh {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
@@ -177071,6 +178288,46 @@ extension on _StringsTr {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
@@ -182538,6 +183795,46 @@ extension on _StringsVi {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
@@ -187962,6 +189259,43 @@ extension on _StringsZhCn {
         return '窗口超分';
       case 'library_search':
         return '搜索库';
+      case 'manga_online_queue_added':
+        return '已加入下载队列';
+      case 'manga_online_queue_section':
+        return '漫画目录下载';
+      case 'download_clear_finished':
+        return '清除已完成';
+      case 'download_status_queued':
+        return '排队中';
+      case 'download_status_cancelled':
+        return '已取消';
+      case 'game_waveform_select_title':
+        return '选择音频范围';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end}（时长 ${duration} / 共 ${total}）';
+      case 'anime_download_relocate':
+        return '重命名 / 移动';
+      case 'anime_download_relocate_rename_title':
+        return '重命名文件';
+      case 'anime_download_relocate_move_title':
+        return '移动到文件夹';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki 通过下载引擎改名/移动，因此不会掐断做种。在资源管理器里改名则永远无法挽回。';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) => '已改名 / 移动，同步更新 ${rows} 个库条目';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) => '失败，磁盘与库都未改动：${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) => '文件已移动，但库仍指向旧路径：${reason}';
+      case 'anime_download_relocate_no_files':
+        return '该任务还没有可改名的文件（元数据未就绪）';
+      case 'anime_download_relocate_pick_folder':
+        return '选择目标文件夹';
       default:
         return null;
     }
@@ -193403,6 +194737,46 @@ extension on _StringsZhHk {
         return 'Window upscaling';
       case 'library_search':
         return 'Search library';
+      case 'manga_online_queue_added':
+        return 'Added to download queue';
+      case 'manga_online_queue_section':
+        return 'Manga catalog downloads';
+      case 'download_clear_finished':
+        return 'Clear finished';
+      case 'download_status_queued':
+        return 'Queued';
+      case 'download_status_cancelled':
+        return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
+      case 'anime_download_relocate':
+        return 'Rename / move';
+      case 'anime_download_relocate_rename_title':
+        return 'Rename file';
+      case 'anime_download_relocate_move_title':
+        return 'Move to folder';
+      case 'anime_download_relocate_hint':
+        return 'Hibiki renames/moves through the download engine, so seeding is not interrupted. Renaming in Explorer can never be recovered.';
+      case 'anime_download_relocate_ok':
+        return ({required Object rows}) =>
+            'Renamed / moved; ${rows} library entries updated';
+      case 'anime_download_relocate_engine_failed':
+        return ({required Object reason}) =>
+            'Failed, nothing changed: ${reason}';
+      case 'anime_download_relocate_library_failed':
+        return ({required Object reason}) =>
+            'Files moved, but the library still points at the old path: ${reason}';
+      case 'anime_download_relocate_no_files':
+        return 'This task has no files to rename yet (metadata not ready)';
+      case 'anime_download_relocate_pick_folder':
+        return 'Choose destination folder';
       default:
         return null;
     }
