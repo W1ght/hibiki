@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45560 (2680 per locale)
+/// Strings: 45594 (2682 per locale)
 ///
-/// Built on 2026-07-26 at 15:02 UTC
+/// Built on 2026-07-26 at 17:55 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3559,6 +3559,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_clear_finished => 'Clear finished';
   String get download_status_queued => 'Queued';
   String get download_status_cancelled => 'Cancelled';
+  String get game_waveform_select_title => 'Select audio range';
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 // Path: <root>
@@ -9644,6 +9651,15 @@ class _StringsAr extends _StringsEn {
   String get download_status_queued => 'Queued';
   @override
   String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 // Path: <root>
@@ -15802,6 +15818,15 @@ class _StringsDe extends _StringsEn {
   String get download_status_queued => 'Queued';
   @override
   String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 // Path: <root>
@@ -21976,6 +22001,15 @@ class _StringsEs extends _StringsEn {
   String get download_status_queued => 'Queued';
   @override
   String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 // Path: <root>
@@ -28161,6 +28195,15 @@ class _StringsFr extends _StringsEn {
   String get download_status_queued => 'Queued';
   @override
   String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 // Path: <root>
@@ -34273,6 +34316,15 @@ class _StringsId extends _StringsEn {
   String get download_status_queued => 'Queued';
   @override
   String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 // Path: <root>
@@ -40433,6 +40485,15 @@ class _StringsIt extends _StringsEn {
   String get download_status_queued => 'Queued';
   @override
   String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 // Path: <root>
@@ -46398,6 +46459,15 @@ class _StringsJa extends _StringsEn {
   String get download_status_queued => 'Queued';
   @override
   String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 // Path: <root>
@@ -52366,6 +52436,15 @@ class _StringsKo extends _StringsEn {
   String get download_status_queued => 'Queued';
   @override
   String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 // Path: <root>
@@ -58504,6 +58583,15 @@ class _StringsNl extends _StringsEn {
   String get download_status_queued => 'Queued';
   @override
   String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 // Path: <root>
@@ -64657,6 +64745,15 @@ class _StringsPtBr extends _StringsEn {
   String get download_status_queued => 'Queued';
   @override
   String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 // Path: <root>
@@ -70793,6 +70890,15 @@ class _StringsRu extends _StringsEn {
   String get download_status_queued => 'Queued';
   @override
   String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 // Path: <root>
@@ -76874,6 +76980,15 @@ class _StringsTh extends _StringsEn {
   String get download_status_queued => 'Queued';
   @override
   String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 // Path: <root>
@@ -82987,6 +83102,15 @@ class _StringsTr extends _StringsEn {
   String get download_status_queued => 'Queued';
   @override
   String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 // Path: <root>
@@ -89087,6 +89211,15 @@ class _StringsVi extends _StringsEn {
   String get download_status_queued => 'Queued';
   @override
   String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 // Path: <root>
@@ -94765,6 +94898,15 @@ class _StringsZhCn extends _StringsEn {
   String get download_status_queued => '排队中';
   @override
   String get download_status_cancelled => '已取消';
+  @override
+  String get game_waveform_select_title => '选择音频范围';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end}（时长 ${duration} / 共 ${total}）';
 }
 
 // Path: <root>
@@ -100648,6 +100790,15 @@ class _StringsZhHk extends _StringsEn {
   String get download_status_queued => 'Queued';
   @override
   String get download_status_cancelled => 'Cancelled';
+  @override
+  String get game_waveform_select_title => 'Select audio range';
+  @override
+  String game_waveform_range_label(
+          {required Object start,
+          required Object end,
+          required Object duration,
+          required Object total}) =>
+      '${start} - ${end} (selected ${duration} / total ${total})';
 }
 
 /// Flat map(s) containing all translations.
@@ -106121,6 +106272,15 @@ extension on _StringsEn {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
@@ -111592,6 +111752,15 @@ extension on _StringsAr {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
@@ -117084,6 +117253,15 @@ extension on _StringsDe {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
@@ -122575,6 +122753,15 @@ extension on _StringsEs {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
@@ -128072,6 +128259,15 @@ extension on _StringsFr {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
@@ -133551,6 +133747,15 @@ extension on _StringsId {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
@@ -139045,6 +139250,15 @@ extension on _StringsIt {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
@@ -144501,6 +144715,15 @@ extension on _StringsJa {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
@@ -149961,6 +150184,15 @@ extension on _StringsKo {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
@@ -155448,6 +155680,15 @@ extension on _StringsNl {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
@@ -160932,6 +161173,15 @@ extension on _StringsPtBr {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
@@ -166421,6 +166671,15 @@ extension on _StringsRu {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
@@ -171894,6 +172153,15 @@ extension on _StringsTh {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
@@ -177376,6 +177644,15 @@ extension on _StringsTr {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
@@ -182853,6 +183130,15 @@ extension on _StringsVi {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
@@ -188287,6 +188573,15 @@ extension on _StringsZhCn {
         return '排队中';
       case 'download_status_cancelled':
         return '已取消';
+      case 'game_waveform_select_title':
+        return '选择音频范围';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end}（时长 ${duration} / 共 ${total}）';
       default:
         return null;
     }
@@ -193738,6 +194033,15 @@ extension on _StringsZhHk {
         return 'Queued';
       case 'download_status_cancelled':
         return 'Cancelled';
+      case 'game_waveform_select_title':
+        return 'Select audio range';
+      case 'game_waveform_range_label':
+        return (
+                {required Object start,
+                required Object end,
+                required Object duration,
+                required Object total}) =>
+            '${start} - ${end} (selected ${duration} / total ${total})';
       default:
         return null;
     }
