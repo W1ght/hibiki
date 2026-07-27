@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44761 (2633 per locale)
+/// Strings: 45101 (2653 per locale)
 ///
-/// Built on 2026-07-27 at 08:08 UTC
+/// Built on 2026-07-27 at 08:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3507,6 +3507,35 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   String get game_line_track_use => 'Use for this line';
   String get game_user_tags_title => 'My tags';
+  String get anki_lapis_section => 'Lapis card style';
+  String get anki_lapis_font_scale => 'Card font scale';
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  String get anki_lapis_custom_css => 'Custom CSS';
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  String get anki_lapis_apply => 'Apply style to Anki';
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  String get anki_lapis_backup => 'Back up Lapis template';
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  String get anki_lapis_restore => 'Restore from backup';
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  String get anki_lapis_restore_done => 'Template restored.';
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 // Path: <root>
@@ -9495,6 +9524,55 @@ class _StringsAr extends _StringsEn {
   String get game_line_track_use => 'Use for this line';
   @override
   String get game_user_tags_title => 'My tags';
+  @override
+  String get anki_lapis_section => 'Lapis card style';
+  @override
+  String get anki_lapis_font_scale => 'Card font scale';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  @override
+  String get anki_lapis_custom_css => 'Custom CSS';
+  @override
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  @override
+  String get anki_lapis_apply => 'Apply style to Anki';
+  @override
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  @override
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  @override
+  String get anki_lapis_backup => 'Back up Lapis template';
+  @override
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  @override
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  @override
+  String get anki_lapis_restore => 'Restore from backup';
+  @override
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  @override
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  @override
+  String get anki_lapis_restore_done => 'Template restored.';
+  @override
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 // Path: <root>
@@ -15551,6 +15629,55 @@ class _StringsDe extends _StringsEn {
   String get game_line_track_use => 'Use for this line';
   @override
   String get game_user_tags_title => 'My tags';
+  @override
+  String get anki_lapis_section => 'Lapis card style';
+  @override
+  String get anki_lapis_font_scale => 'Card font scale';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  @override
+  String get anki_lapis_custom_css => 'Custom CSS';
+  @override
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  @override
+  String get anki_lapis_apply => 'Apply style to Anki';
+  @override
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  @override
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  @override
+  String get anki_lapis_backup => 'Back up Lapis template';
+  @override
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  @override
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  @override
+  String get anki_lapis_restore => 'Restore from backup';
+  @override
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  @override
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  @override
+  String get anki_lapis_restore_done => 'Template restored.';
+  @override
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 // Path: <root>
@@ -21623,6 +21750,55 @@ class _StringsEs extends _StringsEn {
   String get game_line_track_use => 'Use for this line';
   @override
   String get game_user_tags_title => 'My tags';
+  @override
+  String get anki_lapis_section => 'Lapis card style';
+  @override
+  String get anki_lapis_font_scale => 'Card font scale';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  @override
+  String get anki_lapis_custom_css => 'Custom CSS';
+  @override
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  @override
+  String get anki_lapis_apply => 'Apply style to Anki';
+  @override
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  @override
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  @override
+  String get anki_lapis_backup => 'Back up Lapis template';
+  @override
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  @override
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  @override
+  String get anki_lapis_restore => 'Restore from backup';
+  @override
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  @override
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  @override
+  String get anki_lapis_restore_done => 'Template restored.';
+  @override
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 // Path: <root>
@@ -27706,6 +27882,55 @@ class _StringsFr extends _StringsEn {
   String get game_line_track_use => 'Use for this line';
   @override
   String get game_user_tags_title => 'My tags';
+  @override
+  String get anki_lapis_section => 'Lapis card style';
+  @override
+  String get anki_lapis_font_scale => 'Card font scale';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  @override
+  String get anki_lapis_custom_css => 'Custom CSS';
+  @override
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  @override
+  String get anki_lapis_apply => 'Apply style to Anki';
+  @override
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  @override
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  @override
+  String get anki_lapis_backup => 'Back up Lapis template';
+  @override
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  @override
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  @override
+  String get anki_lapis_restore => 'Restore from backup';
+  @override
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  @override
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  @override
+  String get anki_lapis_restore_done => 'Template restored.';
+  @override
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 // Path: <root>
@@ -33718,6 +33943,55 @@ class _StringsId extends _StringsEn {
   String get game_line_track_use => 'Use for this line';
   @override
   String get game_user_tags_title => 'My tags';
+  @override
+  String get anki_lapis_section => 'Lapis card style';
+  @override
+  String get anki_lapis_font_scale => 'Card font scale';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  @override
+  String get anki_lapis_custom_css => 'Custom CSS';
+  @override
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  @override
+  String get anki_lapis_apply => 'Apply style to Anki';
+  @override
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  @override
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  @override
+  String get anki_lapis_backup => 'Back up Lapis template';
+  @override
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  @override
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  @override
+  String get anki_lapis_restore => 'Restore from backup';
+  @override
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  @override
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  @override
+  String get anki_lapis_restore_done => 'Template restored.';
+  @override
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 // Path: <root>
@@ -39776,6 +40050,55 @@ class _StringsIt extends _StringsEn {
   String get game_line_track_use => 'Use for this line';
   @override
   String get game_user_tags_title => 'My tags';
+  @override
+  String get anki_lapis_section => 'Lapis card style';
+  @override
+  String get anki_lapis_font_scale => 'Card font scale';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  @override
+  String get anki_lapis_custom_css => 'Custom CSS';
+  @override
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  @override
+  String get anki_lapis_apply => 'Apply style to Anki';
+  @override
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  @override
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  @override
+  String get anki_lapis_backup => 'Back up Lapis template';
+  @override
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  @override
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  @override
+  String get anki_lapis_restore => 'Restore from backup';
+  @override
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  @override
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  @override
+  String get anki_lapis_restore_done => 'Template restored.';
+  @override
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 // Path: <root>
@@ -45651,6 +45974,55 @@ class _StringsJa extends _StringsEn {
   String get game_line_track_use => 'Use for this line';
   @override
   String get game_user_tags_title => 'My tags';
+  @override
+  String get anki_lapis_section => 'Lapis card style';
+  @override
+  String get anki_lapis_font_scale => 'Card font scale';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  @override
+  String get anki_lapis_custom_css => 'Custom CSS';
+  @override
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  @override
+  String get anki_lapis_apply => 'Apply style to Anki';
+  @override
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  @override
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  @override
+  String get anki_lapis_backup => 'Back up Lapis template';
+  @override
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  @override
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  @override
+  String get anki_lapis_restore => 'Restore from backup';
+  @override
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  @override
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  @override
+  String get anki_lapis_restore_done => 'Template restored.';
+  @override
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 // Path: <root>
@@ -51528,6 +51900,55 @@ class _StringsKo extends _StringsEn {
   String get game_line_track_use => 'Use for this line';
   @override
   String get game_user_tags_title => 'My tags';
+  @override
+  String get anki_lapis_section => 'Lapis card style';
+  @override
+  String get anki_lapis_font_scale => 'Card font scale';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  @override
+  String get anki_lapis_custom_css => 'Custom CSS';
+  @override
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  @override
+  String get anki_lapis_apply => 'Apply style to Anki';
+  @override
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  @override
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  @override
+  String get anki_lapis_backup => 'Back up Lapis template';
+  @override
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  @override
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  @override
+  String get anki_lapis_restore => 'Restore from backup';
+  @override
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  @override
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  @override
+  String get anki_lapis_restore_done => 'Template restored.';
+  @override
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 // Path: <root>
@@ -57566,6 +57987,55 @@ class _StringsNl extends _StringsEn {
   String get game_line_track_use => 'Use for this line';
   @override
   String get game_user_tags_title => 'My tags';
+  @override
+  String get anki_lapis_section => 'Lapis card style';
+  @override
+  String get anki_lapis_font_scale => 'Card font scale';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  @override
+  String get anki_lapis_custom_css => 'Custom CSS';
+  @override
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  @override
+  String get anki_lapis_apply => 'Apply style to Anki';
+  @override
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  @override
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  @override
+  String get anki_lapis_backup => 'Back up Lapis template';
+  @override
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  @override
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  @override
+  String get anki_lapis_restore => 'Restore from backup';
+  @override
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  @override
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  @override
+  String get anki_lapis_restore_done => 'Template restored.';
+  @override
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 // Path: <root>
@@ -63617,6 +64087,55 @@ class _StringsPtBr extends _StringsEn {
   String get game_line_track_use => 'Use for this line';
   @override
   String get game_user_tags_title => 'My tags';
+  @override
+  String get anki_lapis_section => 'Lapis card style';
+  @override
+  String get anki_lapis_font_scale => 'Card font scale';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  @override
+  String get anki_lapis_custom_css => 'Custom CSS';
+  @override
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  @override
+  String get anki_lapis_apply => 'Apply style to Anki';
+  @override
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  @override
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  @override
+  String get anki_lapis_backup => 'Back up Lapis template';
+  @override
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  @override
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  @override
+  String get anki_lapis_restore => 'Restore from backup';
+  @override
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  @override
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  @override
+  String get anki_lapis_restore_done => 'Template restored.';
+  @override
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 // Path: <root>
@@ -69652,6 +70171,55 @@ class _StringsRu extends _StringsEn {
   String get game_line_track_use => 'Use for this line';
   @override
   String get game_user_tags_title => 'My tags';
+  @override
+  String get anki_lapis_section => 'Lapis card style';
+  @override
+  String get anki_lapis_font_scale => 'Card font scale';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  @override
+  String get anki_lapis_custom_css => 'Custom CSS';
+  @override
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  @override
+  String get anki_lapis_apply => 'Apply style to Anki';
+  @override
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  @override
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  @override
+  String get anki_lapis_backup => 'Back up Lapis template';
+  @override
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  @override
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  @override
+  String get anki_lapis_restore => 'Restore from backup';
+  @override
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  @override
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  @override
+  String get anki_lapis_restore_done => 'Template restored.';
+  @override
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 // Path: <root>
@@ -75635,6 +76203,55 @@ class _StringsTh extends _StringsEn {
   String get game_line_track_use => 'Use for this line';
   @override
   String get game_user_tags_title => 'My tags';
+  @override
+  String get anki_lapis_section => 'Lapis card style';
+  @override
+  String get anki_lapis_font_scale => 'Card font scale';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  @override
+  String get anki_lapis_custom_css => 'Custom CSS';
+  @override
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  @override
+  String get anki_lapis_apply => 'Apply style to Anki';
+  @override
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  @override
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  @override
+  String get anki_lapis_backup => 'Back up Lapis template';
+  @override
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  @override
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  @override
+  String get anki_lapis_restore => 'Restore from backup';
+  @override
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  @override
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  @override
+  String get anki_lapis_restore_done => 'Template restored.';
+  @override
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 // Path: <root>
@@ -81650,6 +82267,55 @@ class _StringsTr extends _StringsEn {
   String get game_line_track_use => 'Use for this line';
   @override
   String get game_user_tags_title => 'My tags';
+  @override
+  String get anki_lapis_section => 'Lapis card style';
+  @override
+  String get anki_lapis_font_scale => 'Card font scale';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  @override
+  String get anki_lapis_custom_css => 'Custom CSS';
+  @override
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  @override
+  String get anki_lapis_apply => 'Apply style to Anki';
+  @override
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  @override
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  @override
+  String get anki_lapis_backup => 'Back up Lapis template';
+  @override
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  @override
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  @override
+  String get anki_lapis_restore => 'Restore from backup';
+  @override
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  @override
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  @override
+  String get anki_lapis_restore_done => 'Template restored.';
+  @override
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 // Path: <root>
@@ -87650,6 +88316,55 @@ class _StringsVi extends _StringsEn {
   String get game_line_track_use => 'Use for this line';
   @override
   String get game_user_tags_title => 'My tags';
+  @override
+  String get anki_lapis_section => 'Lapis card style';
+  @override
+  String get anki_lapis_font_scale => 'Card font scale';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  @override
+  String get anki_lapis_custom_css => 'Custom CSS';
+  @override
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  @override
+  String get anki_lapis_apply => 'Apply style to Anki';
+  @override
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  @override
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  @override
+  String get anki_lapis_backup => 'Back up Lapis template';
+  @override
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  @override
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  @override
+  String get anki_lapis_restore => 'Restore from backup';
+  @override
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  @override
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  @override
+  String get anki_lapis_restore_done => 'Template restored.';
+  @override
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 // Path: <root>
@@ -93239,6 +93954,49 @@ class _StringsZhCn extends _StringsEn {
   String get game_line_track_use => '用于本句';
   @override
   String get game_user_tags_title => '我的标签';
+  @override
+  String get anki_lapis_section => 'Lapis 卡片样式';
+  @override
+  String get anki_lapis_font_scale => '卡片字号缩放';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      '整体缩放 Lapis 卡片全部字号；点「应用样式到 Anki」后生效。';
+  @override
+  String get anki_lapis_custom_css => '自定义 CSS';
+  @override
+  String get anki_lapis_custom_css_hint => '追加到 Lapis 样式表中受保护的用户区段。';
+  @override
+  String get anki_lapis_apply => '应用样式到 Anki';
+  @override
+  String get anki_lapis_apply_done => 'Lapis 样式已应用（已先自动备份）。';
+  @override
+  String anki_lapis_apply_failed({required Object error}) => '应用样式失败：${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis 样式已是最新。';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Anki 端模板有改动';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'Anki 里的 Lapis 模板与 Hibiki 上次应用的状态不一致，可能被手动改过。继续应用会覆盖它（会先自动备份）。是否继续？';
+  @override
+  String get anki_lapis_backup => '备份 Lapis 模板';
+  @override
+  String anki_lapis_backup_done({required Object path}) => '模板已备份：${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) => '备份失败：${error}';
+  @override
+  String get anki_lapis_not_found => 'Anki 里没有找到 Lapis 笔记模板。';
+  @override
+  String get anki_lapis_restore => '从备份恢复';
+  @override
+  String get anki_lapis_restore_empty => '还没有备份。';
+  @override
+  String get anki_lapis_restore_confirm =>
+      '用该备份覆盖 Anki 里的 Lapis 模板？当前状态会先自动备份。';
+  @override
+  String get anki_lapis_restore_done => '模板已恢复。';
+  @override
+  String anki_lapis_restore_failed({required Object error}) => '恢复失败：${error}';
 }
 
 // Path: <root>
@@ -99035,6 +99793,55 @@ class _StringsZhHk extends _StringsEn {
   String get game_line_track_use => 'Use for this line';
   @override
   String get game_user_tags_title => 'My tags';
+  @override
+  String get anki_lapis_section => 'Lapis card style';
+  @override
+  String get anki_lapis_font_scale => 'Card font scale';
+  @override
+  String get anki_lapis_font_scale_hint =>
+      'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+  @override
+  String get anki_lapis_custom_css => 'Custom CSS';
+  @override
+  String get anki_lapis_custom_css_hint =>
+      'Appended to the Lapis stylesheet in a protected user section.';
+  @override
+  String get anki_lapis_apply => 'Apply style to Anki';
+  @override
+  String get anki_lapis_apply_done =>
+      'Lapis style applied. A backup was saved first.';
+  @override
+  String anki_lapis_apply_failed({required Object error}) =>
+      'Could not apply style: ${error}';
+  @override
+  String get anki_lapis_up_to_date => 'Lapis style is already up to date.';
+  @override
+  String get anki_lapis_foreign_edit_title => 'Template changed in Anki';
+  @override
+  String get anki_lapis_foreign_edit_body =>
+      'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+  @override
+  String get anki_lapis_backup => 'Back up Lapis template';
+  @override
+  String anki_lapis_backup_done({required Object path}) =>
+      'Template backed up: ${path}';
+  @override
+  String anki_lapis_backup_failed({required Object error}) =>
+      'Backup failed: ${error}';
+  @override
+  String get anki_lapis_not_found => 'Lapis note type not found in Anki.';
+  @override
+  String get anki_lapis_restore => 'Restore from backup';
+  @override
+  String get anki_lapis_restore_empty => 'No backups yet.';
+  @override
+  String get anki_lapis_restore_confirm =>
+      'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+  @override
+  String get anki_lapis_restore_done => 'Template restored.';
+  @override
+  String anki_lapis_restore_failed({required Object error}) =>
+      'Restore failed: ${error}';
 }
 
 /// Flat map(s) containing all translations.
@@ -104417,6 +105224,46 @@ extension on _StringsEn {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
@@ -109797,6 +110644,46 @@ extension on _StringsAr {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
@@ -115198,6 +116085,46 @@ extension on _StringsDe {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
@@ -120598,6 +121525,46 @@ extension on _StringsEs {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
@@ -126004,6 +126971,46 @@ extension on _StringsFr {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
@@ -131392,6 +132399,46 @@ extension on _StringsId {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
@@ -136795,6 +137842,46 @@ extension on _StringsIt {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
@@ -142160,6 +143247,46 @@ extension on _StringsJa {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
@@ -147529,6 +148656,46 @@ extension on _StringsKo {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
@@ -152925,6 +154092,46 @@ extension on _StringsNl {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
@@ -158318,6 +159525,46 @@ extension on _StringsPtBr {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
@@ -163716,6 +164963,46 @@ extension on _StringsRu {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
@@ -169098,6 +170385,46 @@ extension on _StringsTh {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
@@ -174489,6 +175816,46 @@ extension on _StringsTr {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
@@ -179875,6 +181242,46 @@ extension on _StringsVi {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
@@ -185215,6 +186622,46 @@ extension on _StringsZhCn {
         return '用于本句';
       case 'game_user_tags_title':
         return '我的标签';
+      case 'anki_lapis_section':
+        return 'Lapis 卡片样式';
+      case 'anki_lapis_font_scale':
+        return '卡片字号缩放';
+      case 'anki_lapis_font_scale_hint':
+        return '整体缩放 Lapis 卡片全部字号；点「应用样式到 Anki」后生效。';
+      case 'anki_lapis_custom_css':
+        return '自定义 CSS';
+      case 'anki_lapis_custom_css_hint':
+        return '追加到 Lapis 样式表中受保护的用户区段。';
+      case 'anki_lapis_apply':
+        return '应用样式到 Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis 样式已应用（已先自动备份）。';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => '应用样式失败：${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis 样式已是最新。';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Anki 端模板有改动';
+      case 'anki_lapis_foreign_edit_body':
+        return 'Anki 里的 Lapis 模板与 Hibiki 上次应用的状态不一致，可能被手动改过。继续应用会覆盖它（会先自动备份）。是否继续？';
+      case 'anki_lapis_backup':
+        return '备份 Lapis 模板';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => '模板已备份：${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => '备份失败：${error}';
+      case 'anki_lapis_not_found':
+        return 'Anki 里没有找到 Lapis 笔记模板。';
+      case 'anki_lapis_restore':
+        return '从备份恢复';
+      case 'anki_lapis_restore_empty':
+        return '还没有备份。';
+      case 'anki_lapis_restore_confirm':
+        return '用该备份覆盖 Anki 里的 Lapis 模板？当前状态会先自动备份。';
+      case 'anki_lapis_restore_done':
+        return '模板已恢复。';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => '恢复失败：${error}';
       default:
         return null;
     }
@@ -190575,6 +192022,46 @@ extension on _StringsZhHk {
         return 'Use for this line';
       case 'game_user_tags_title':
         return 'My tags';
+      case 'anki_lapis_section':
+        return 'Lapis card style';
+      case 'anki_lapis_font_scale':
+        return 'Card font scale';
+      case 'anki_lapis_font_scale_hint':
+        return 'Scales every Lapis font size; takes effect via "Apply style to Anki".';
+      case 'anki_lapis_custom_css':
+        return 'Custom CSS';
+      case 'anki_lapis_custom_css_hint':
+        return 'Appended to the Lapis stylesheet in a protected user section.';
+      case 'anki_lapis_apply':
+        return 'Apply style to Anki';
+      case 'anki_lapis_apply_done':
+        return 'Lapis style applied. A backup was saved first.';
+      case 'anki_lapis_apply_failed':
+        return ({required Object error}) => 'Could not apply style: ${error}';
+      case 'anki_lapis_up_to_date':
+        return 'Lapis style is already up to date.';
+      case 'anki_lapis_foreign_edit_title':
+        return 'Template changed in Anki';
+      case 'anki_lapis_foreign_edit_body':
+        return 'The Lapis template in Anki differs from what Hibiki last applied - it may have been edited by hand. Applying will overwrite it; a backup is saved first. Continue?';
+      case 'anki_lapis_backup':
+        return 'Back up Lapis template';
+      case 'anki_lapis_backup_done':
+        return ({required Object path}) => 'Template backed up: ${path}';
+      case 'anki_lapis_backup_failed':
+        return ({required Object error}) => 'Backup failed: ${error}';
+      case 'anki_lapis_not_found':
+        return 'Lapis note type not found in Anki.';
+      case 'anki_lapis_restore':
+        return 'Restore from backup';
+      case 'anki_lapis_restore_empty':
+        return 'No backups yet.';
+      case 'anki_lapis_restore_confirm':
+        return 'Overwrite the Lapis template in Anki with this backup? The current state is backed up first.';
+      case 'anki_lapis_restore_done':
+        return 'Template restored.';
+      case 'anki_lapis_restore_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
       default:
         return null;
     }
