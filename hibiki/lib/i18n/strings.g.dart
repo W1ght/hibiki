@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45679 (2687 per locale)
+/// Strings: 45815 (2695 per locale)
 ///
-/// Built on 2026-07-27 at 22:16 UTC
+/// Built on 2026-07-28 at 05:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3601,6 +3601,20 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  String get anki_dedup_auto => 'Automatic processing';
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  String get anki_dedup_auto_review => 'Review';
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 // Path: <root>
@@ -9737,6 +9751,28 @@ class _StringsAr extends _StringsEn {
   @override
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  @override
+  String get anki_dedup_auto => 'Automatic processing';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  @override
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  @override
+  String get anki_dedup_auto_review => 'Review';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 // Path: <root>
@@ -15941,6 +15977,28 @@ class _StringsDe extends _StringsEn {
   @override
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  @override
+  String get anki_dedup_auto => 'Automatic processing';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  @override
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  @override
+  String get anki_dedup_auto_review => 'Review';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 // Path: <root>
@@ -22161,6 +22219,28 @@ class _StringsEs extends _StringsEn {
   @override
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  @override
+  String get anki_dedup_auto => 'Automatic processing';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  @override
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  @override
+  String get anki_dedup_auto_review => 'Review';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 // Path: <root>
@@ -28392,6 +28472,28 @@ class _StringsFr extends _StringsEn {
   @override
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  @override
+  String get anki_dedup_auto => 'Automatic processing';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  @override
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  @override
+  String get anki_dedup_auto_review => 'Review';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 // Path: <root>
@@ -34552,6 +34654,28 @@ class _StringsId extends _StringsEn {
   @override
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  @override
+  String get anki_dedup_auto => 'Automatic processing';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  @override
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  @override
+  String get anki_dedup_auto_review => 'Review';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 // Path: <root>
@@ -40758,6 +40882,28 @@ class _StringsIt extends _StringsEn {
   @override
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  @override
+  String get anki_dedup_auto => 'Automatic processing';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  @override
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  @override
+  String get anki_dedup_auto_review => 'Review';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 // Path: <root>
@@ -46781,6 +46927,28 @@ class _StringsJa extends _StringsEn {
   @override
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  @override
+  String get anki_dedup_auto => 'Automatic processing';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  @override
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  @override
+  String get anki_dedup_auto_review => 'Review';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 // Path: <root>
@@ -52806,6 +52974,28 @@ class _StringsKo extends _StringsEn {
   @override
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  @override
+  String get anki_dedup_auto => 'Automatic processing';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  @override
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  @override
+  String get anki_dedup_auto_review => 'Review';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 // Path: <root>
@@ -58992,6 +59182,28 @@ class _StringsNl extends _StringsEn {
   @override
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  @override
+  String get anki_dedup_auto => 'Automatic processing';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  @override
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  @override
+  String get anki_dedup_auto_review => 'Review';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 // Path: <root>
@@ -65191,6 +65403,28 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  @override
+  String get anki_dedup_auto => 'Automatic processing';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  @override
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  @override
+  String get anki_dedup_auto_review => 'Review';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 // Path: <root>
@@ -71374,6 +71608,28 @@ class _StringsRu extends _StringsEn {
   @override
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  @override
+  String get anki_dedup_auto => 'Automatic processing';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  @override
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  @override
+  String get anki_dedup_auto_review => 'Review';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 // Path: <root>
@@ -77505,6 +77761,28 @@ class _StringsTh extends _StringsEn {
   @override
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  @override
+  String get anki_dedup_auto => 'Automatic processing';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  @override
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  @override
+  String get anki_dedup_auto_review => 'Review';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 // Path: <root>
@@ -83668,6 +83946,28 @@ class _StringsTr extends _StringsEn {
   @override
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  @override
+  String get anki_dedup_auto => 'Automatic processing';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  @override
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  @override
+  String get anki_dedup_auto_review => 'Review';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 // Path: <root>
@@ -89816,6 +90116,28 @@ class _StringsVi extends _StringsEn {
   @override
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  @override
+  String get anki_dedup_auto => 'Automatic processing';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  @override
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  @override
+  String get anki_dedup_auto_review => 'Review';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 // Path: <root>
@@ -95533,6 +95855,28 @@ class _StringsZhCn extends _StringsEn {
       '无法导入 .cbr/.rar 漫画压缩包，请转成 .cbz 或图片文件夹。';
   @override
   String get collection_add_failed => '没能把该条目加进合集，请重试。';
+  @override
+  String get anki_dedup_auto => '自动处理';
+  @override
+  String get anki_dedup_auto_hint =>
+      '默认关闭。打开后 Hibiki 会在启动时扫描（最多每周一次）并先把清单给你看，你不确认就不会删任何文件。';
+  @override
+  String get anki_dedup_auto_delete => '自动直接删除（不再询问）';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      '跳过确认弹窗。仍然只删字节完全相同的多余副本、绝不重编码，但删除不可撤销。';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      '发现 ${count} 个重复的 Anki 媒体文件（可释放 ${size}）';
+  @override
+  String get anki_dedup_auto_review => '查看';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      '已删除 ${count} 个重复的 Anki 媒体文件，释放 ${size}';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      '已备份到 ${path}（按「保留 90 天、至少留 10 份」清理了 ${count} 份旧备份）';
 }
 
 // Path: <root>
@@ -101477,6 +101821,28 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get collection_add_failed =>
       'Couldn\'t add the item to the collection. Please try again.';
+  @override
+  String get anki_dedup_auto => 'Automatic processing';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+  @override
+  String get anki_dedup_auto_delete => 'Delete automatically without asking';
+  @override
+  String get anki_dedup_auto_delete_hint =>
+      'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+  @override
+  String anki_dedup_auto_found({required Object count, required Object size}) =>
+      'Found ${count} duplicate Anki media files (${size} reclaimable)';
+  @override
+  String get anki_dedup_auto_review => 'Review';
+  @override
+  String anki_dedup_auto_done({required Object count, required Object size}) =>
+      'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+  @override
+  String anki_lapis_backup_done_pruned(
+          {required Object path, required Object count}) =>
+      'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
 }
 
 /// Flat map(s) containing all translations.
@@ -106980,6 +107346,25 @@ extension on _StringsEn {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
@@ -112481,6 +112866,25 @@ extension on _StringsAr {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
@@ -118003,6 +118407,25 @@ extension on _StringsDe {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
@@ -123524,6 +123947,25 @@ extension on _StringsEs {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
@@ -129051,6 +129493,25 @@ extension on _StringsFr {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
@@ -134560,6 +135021,25 @@ extension on _StringsId {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
@@ -140084,6 +140564,25 @@ extension on _StringsIt {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
@@ -145570,6 +146069,25 @@ extension on _StringsJa {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
@@ -151060,6 +151578,25 @@ extension on _StringsKo {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
@@ -156577,6 +157114,25 @@ extension on _StringsNl {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
@@ -162091,6 +162647,25 @@ extension on _StringsPtBr {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
@@ -167610,6 +168185,25 @@ extension on _StringsRu {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
@@ -173113,6 +173707,25 @@ extension on _StringsTh {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
@@ -178625,6 +179238,25 @@ extension on _StringsTr {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
@@ -184132,6 +184764,25 @@ extension on _StringsVi {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
@@ -189593,6 +190244,25 @@ extension on _StringsZhCn {
         return '无法导入 .cbr/.rar 漫画压缩包，请转成 .cbz 或图片文件夹。';
       case 'collection_add_failed':
         return '没能把该条目加进合集，请重试。';
+      case 'anki_dedup_auto':
+        return '自动处理';
+      case 'anki_dedup_auto_hint':
+        return '默认关闭。打开后 Hibiki 会在启动时扫描（最多每周一次）并先把清单给你看，你不确认就不会删任何文件。';
+      case 'anki_dedup_auto_delete':
+        return '自动直接删除（不再询问）';
+      case 'anki_dedup_auto_delete_hint':
+        return '跳过确认弹窗。仍然只删字节完全相同的多余副本、绝不重编码，但删除不可撤销。';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            '发现 ${count} 个重复的 Anki 媒体文件（可释放 ${size}）';
+      case 'anki_dedup_auto_review':
+        return '查看';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            '已删除 ${count} 个重复的 Anki 媒体文件，释放 ${size}';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            '已备份到 ${path}（按「保留 90 天、至少留 10 份」清理了 ${count} 份旧备份）';
       default:
         return null;
     }
@@ -195074,6 +195744,25 @@ extension on _StringsZhHk {
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
       case 'collection_add_failed':
         return 'Couldn\'t add the item to the collection. Please try again.';
+      case 'anki_dedup_auto':
+        return 'Automatic processing';
+      case 'anki_dedup_auto_hint':
+        return 'Off by default. When on, Hibiki scans at startup (at most once a week) and shows you the list first — nothing is deleted until you confirm.';
+      case 'anki_dedup_auto_delete':
+        return 'Delete automatically without asking';
+      case 'anki_dedup_auto_delete_hint':
+        return 'Skips the confirmation dialog. Only byte-identical extra copies are ever removed and nothing is re-encoded, but deletion cannot be undone.';
+      case 'anki_dedup_auto_found':
+        return ({required Object count, required Object size}) =>
+            'Found ${count} duplicate Anki media files (${size} reclaimable)';
+      case 'anki_dedup_auto_review':
+        return 'Review';
+      case 'anki_dedup_auto_done':
+        return ({required Object count, required Object size}) =>
+            'Removed ${count} duplicate Anki media files, ${size} reclaimed';
+      case 'anki_lapis_backup_done_pruned':
+        return ({required Object path, required Object count}) =>
+            'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
       default:
         return null;
     }
