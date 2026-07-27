@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45101 (2653 per locale)
+/// Strings: 45305 (2665 per locale)
 ///
-/// Built on 2026-07-27 at 08:32 UTC
+/// Built on 2026-07-27 at 10:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3536,6 +3536,29 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_lapis_restore_done => 'Template restored.';
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  String get anki_dedup_section => 'Anki media storage optimization';
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  String get anki_dedup_run => 'Deduplicate now';
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  String get anki_dedup_report_title => 'Media deduplication report';
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 // Path: <root>
@@ -9573,6 +9596,41 @@ class _StringsAr extends _StringsEn {
   @override
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  @override
+  String get anki_dedup_section => 'Anki media storage optimization';
+  @override
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  @override
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  @override
+  String get anki_dedup_run => 'Deduplicate now';
+  @override
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  @override
+  String get anki_dedup_report_title => 'Media deduplication report';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  @override
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  @override
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  @override
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  @override
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 // Path: <root>
@@ -15678,6 +15736,41 @@ class _StringsDe extends _StringsEn {
   @override
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  @override
+  String get anki_dedup_section => 'Anki media storage optimization';
+  @override
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  @override
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  @override
+  String get anki_dedup_run => 'Deduplicate now';
+  @override
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  @override
+  String get anki_dedup_report_title => 'Media deduplication report';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  @override
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  @override
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  @override
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  @override
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 // Path: <root>
@@ -21799,6 +21892,41 @@ class _StringsEs extends _StringsEn {
   @override
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  @override
+  String get anki_dedup_section => 'Anki media storage optimization';
+  @override
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  @override
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  @override
+  String get anki_dedup_run => 'Deduplicate now';
+  @override
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  @override
+  String get anki_dedup_report_title => 'Media deduplication report';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  @override
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  @override
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  @override
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  @override
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 // Path: <root>
@@ -27931,6 +28059,41 @@ class _StringsFr extends _StringsEn {
   @override
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  @override
+  String get anki_dedup_section => 'Anki media storage optimization';
+  @override
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  @override
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  @override
+  String get anki_dedup_run => 'Deduplicate now';
+  @override
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  @override
+  String get anki_dedup_report_title => 'Media deduplication report';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  @override
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  @override
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  @override
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  @override
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 // Path: <root>
@@ -33992,6 +34155,41 @@ class _StringsId extends _StringsEn {
   @override
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  @override
+  String get anki_dedup_section => 'Anki media storage optimization';
+  @override
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  @override
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  @override
+  String get anki_dedup_run => 'Deduplicate now';
+  @override
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  @override
+  String get anki_dedup_report_title => 'Media deduplication report';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  @override
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  @override
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  @override
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  @override
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 // Path: <root>
@@ -40099,6 +40297,41 @@ class _StringsIt extends _StringsEn {
   @override
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  @override
+  String get anki_dedup_section => 'Anki media storage optimization';
+  @override
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  @override
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  @override
+  String get anki_dedup_run => 'Deduplicate now';
+  @override
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  @override
+  String get anki_dedup_report_title => 'Media deduplication report';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  @override
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  @override
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  @override
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  @override
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 // Path: <root>
@@ -46023,6 +46256,41 @@ class _StringsJa extends _StringsEn {
   @override
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  @override
+  String get anki_dedup_section => 'Anki media storage optimization';
+  @override
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  @override
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  @override
+  String get anki_dedup_run => 'Deduplicate now';
+  @override
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  @override
+  String get anki_dedup_report_title => 'Media deduplication report';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  @override
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  @override
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  @override
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  @override
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 // Path: <root>
@@ -51949,6 +52217,41 @@ class _StringsKo extends _StringsEn {
   @override
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  @override
+  String get anki_dedup_section => 'Anki media storage optimization';
+  @override
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  @override
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  @override
+  String get anki_dedup_run => 'Deduplicate now';
+  @override
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  @override
+  String get anki_dedup_report_title => 'Media deduplication report';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  @override
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  @override
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  @override
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  @override
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 // Path: <root>
@@ -58036,6 +58339,41 @@ class _StringsNl extends _StringsEn {
   @override
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  @override
+  String get anki_dedup_section => 'Anki media storage optimization';
+  @override
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  @override
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  @override
+  String get anki_dedup_run => 'Deduplicate now';
+  @override
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  @override
+  String get anki_dedup_report_title => 'Media deduplication report';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  @override
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  @override
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  @override
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  @override
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 // Path: <root>
@@ -64136,6 +64474,41 @@ class _StringsPtBr extends _StringsEn {
   @override
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  @override
+  String get anki_dedup_section => 'Anki media storage optimization';
+  @override
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  @override
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  @override
+  String get anki_dedup_run => 'Deduplicate now';
+  @override
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  @override
+  String get anki_dedup_report_title => 'Media deduplication report';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  @override
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  @override
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  @override
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  @override
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 // Path: <root>
@@ -70220,6 +70593,41 @@ class _StringsRu extends _StringsEn {
   @override
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  @override
+  String get anki_dedup_section => 'Anki media storage optimization';
+  @override
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  @override
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  @override
+  String get anki_dedup_run => 'Deduplicate now';
+  @override
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  @override
+  String get anki_dedup_report_title => 'Media deduplication report';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  @override
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  @override
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  @override
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  @override
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 // Path: <root>
@@ -76252,6 +76660,41 @@ class _StringsTh extends _StringsEn {
   @override
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  @override
+  String get anki_dedup_section => 'Anki media storage optimization';
+  @override
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  @override
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  @override
+  String get anki_dedup_run => 'Deduplicate now';
+  @override
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  @override
+  String get anki_dedup_report_title => 'Media deduplication report';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  @override
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  @override
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  @override
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  @override
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 // Path: <root>
@@ -82316,6 +82759,41 @@ class _StringsTr extends _StringsEn {
   @override
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  @override
+  String get anki_dedup_section => 'Anki media storage optimization';
+  @override
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  @override
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  @override
+  String get anki_dedup_run => 'Deduplicate now';
+  @override
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  @override
+  String get anki_dedup_report_title => 'Media deduplication report';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  @override
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  @override
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  @override
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  @override
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 // Path: <root>
@@ -88365,6 +88843,41 @@ class _StringsVi extends _StringsEn {
   @override
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  @override
+  String get anki_dedup_section => 'Anki media storage optimization';
+  @override
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  @override
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  @override
+  String get anki_dedup_run => 'Deduplicate now';
+  @override
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  @override
+  String get anki_dedup_report_title => 'Media deduplication report';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  @override
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  @override
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  @override
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  @override
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 // Path: <root>
@@ -93997,6 +94510,38 @@ class _StringsZhCn extends _StringsEn {
   String get anki_lapis_restore_done => '模板已恢复。';
   @override
   String anki_lapis_restore_failed({required Object error}) => '恢复失败：${error}';
+  @override
+  String get anki_dedup_section => 'Anki 媒体存储优化';
+  @override
+  String get anki_dedup_auto => '每周自动媒体去重';
+  @override
+  String get anki_dedup_auto_hint =>
+      '找出字节完全相同的重复媒体文件，把所有引用统一指向一份后删除多余副本。绝不重编码、不降画质。';
+  @override
+  String get anki_dedup_scan => '扫描重复项（不做改动）';
+  @override
+  String get anki_dedup_run => '立即去重';
+  @override
+  String get anki_dedup_run_confirm => '改写引用并删除字节完全相同的重复文件？操作记录会先写入备份目录。';
+  @override
+  String get anki_dedup_report_title => '媒体去重报告';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} 组重复；多余副本 ${removed} 个（${size}）；改写笔记 ${notes} 张、模板 ${models} 个；跳过 ${skipped} 个。';
+  @override
+  String get anki_dedup_report_dry_note => '仅扫描——未做任何改动。';
+  @override
+  String get anki_dedup_report_clean => '没有发现字节完全相同的重复文件。';
+  @override
+  String anki_dedup_failed({required Object error}) => '去重失败：${error}';
+  @override
+  String get anki_dedup_unavailable => '需要本机运行 Anki（AnkiConnect）。';
 }
 
 // Path: <root>
@@ -99842,6 +100387,41 @@ class _StringsZhHk extends _StringsEn {
   @override
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
+  @override
+  String get anki_dedup_section => 'Anki media storage optimization';
+  @override
+  String get anki_dedup_auto => 'Deduplicate media weekly';
+  @override
+  String get anki_dedup_auto_hint =>
+      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+  @override
+  String get anki_dedup_scan => 'Scan for duplicates (no changes)';
+  @override
+  String get anki_dedup_run => 'Deduplicate now';
+  @override
+  String get anki_dedup_run_confirm =>
+      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+  @override
+  String get anki_dedup_report_title => 'Media deduplication report';
+  @override
+  String anki_dedup_report_body(
+          {required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped}) =>
+      '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+  @override
+  String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
+  @override
+  String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
+  @override
+  String anki_dedup_failed({required Object error}) =>
+      'Deduplication failed: ${error}';
+  @override
+  String get anki_dedup_unavailable =>
+      'Requires Anki running on this machine (AnkiConnect).';
 }
 
 /// Flat map(s) containing all translations.
@@ -105264,6 +105844,37 @@ extension on _StringsEn {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
@@ -110684,6 +111295,37 @@ extension on _StringsAr {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
@@ -116125,6 +116767,37 @@ extension on _StringsDe {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
@@ -121565,6 +122238,37 @@ extension on _StringsEs {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
@@ -127011,6 +127715,37 @@ extension on _StringsFr {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
@@ -132439,6 +133174,37 @@ extension on _StringsId {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
@@ -137882,6 +138648,37 @@ extension on _StringsIt {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
@@ -143287,6 +144084,37 @@ extension on _StringsJa {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
@@ -148696,6 +149524,37 @@ extension on _StringsKo {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
@@ -154132,6 +154991,37 @@ extension on _StringsNl {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
@@ -159565,6 +160455,37 @@ extension on _StringsPtBr {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
@@ -165003,6 +165924,37 @@ extension on _StringsRu {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
@@ -170425,6 +171377,37 @@ extension on _StringsTh {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
@@ -175856,6 +176839,37 @@ extension on _StringsTr {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
@@ -181282,6 +182296,37 @@ extension on _StringsVi {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
@@ -186662,6 +187707,37 @@ extension on _StringsZhCn {
         return '模板已恢复。';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => '恢复失败：${error}';
+      case 'anki_dedup_section':
+        return 'Anki 媒体存储优化';
+      case 'anki_dedup_auto':
+        return '每周自动媒体去重';
+      case 'anki_dedup_auto_hint':
+        return '找出字节完全相同的重复媒体文件，把所有引用统一指向一份后删除多余副本。绝不重编码、不降画质。';
+      case 'anki_dedup_scan':
+        return '扫描重复项（不做改动）';
+      case 'anki_dedup_run':
+        return '立即去重';
+      case 'anki_dedup_run_confirm':
+        return '改写引用并删除字节完全相同的重复文件？操作记录会先写入备份目录。';
+      case 'anki_dedup_report_title':
+        return '媒体去重报告';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} 组重复；多余副本 ${removed} 个（${size}）；改写笔记 ${notes} 张、模板 ${models} 个；跳过 ${skipped} 个。';
+      case 'anki_dedup_report_dry_note':
+        return '仅扫描——未做任何改动。';
+      case 'anki_dedup_report_clean':
+        return '没有发现字节完全相同的重复文件。';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => '去重失败：${error}';
+      case 'anki_dedup_unavailable':
+        return '需要本机运行 Anki（AnkiConnect）。';
       default:
         return null;
     }
@@ -192062,6 +193138,37 @@ extension on _StringsZhHk {
         return 'Template restored.';
       case 'anki_lapis_restore_failed':
         return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_dedup_section':
+        return 'Anki media storage optimization';
+      case 'anki_dedup_auto':
+        return 'Deduplicate media weekly';
+      case 'anki_dedup_auto_hint':
+        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
+      case 'anki_dedup_scan':
+        return 'Scan for duplicates (no changes)';
+      case 'anki_dedup_run':
+        return 'Deduplicate now';
+      case 'anki_dedup_run_confirm':
+        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
+      case 'anki_dedup_report_title':
+        return 'Media deduplication report';
+      case 'anki_dedup_report_body':
+        return (
+                {required Object groups,
+                required Object removed,
+                required Object size,
+                required Object notes,
+                required Object models,
+                required Object skipped}) =>
+            '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
+      case 'anki_dedup_report_dry_note':
+        return 'Scan only - nothing was changed.';
+      case 'anki_dedup_report_clean':
+        return 'No byte-identical duplicates found.';
+      case 'anki_dedup_failed':
+        return ({required Object error}) => 'Deduplication failed: ${error}';
+      case 'anki_dedup_unavailable':
+        return 'Requires Anki running on this machine (AnkiConnect).';
       default:
         return null;
     }
