@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45781 (2693 per locale)
+/// Strings: 45492 (2676 per locale)
 ///
-/// Built on 2026-07-27 at 14:41 UTC
+/// Built on 2026-07-27 at 18:12 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1760,13 +1760,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Read lyrics top-to-bottom, right-to-left (independent of book mode)';
   String get manage_audio_sources => 'Manage audio sources';
   String get manager => 'Dictionaries & sources';
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  String get manga_cloud_ocr_model => 'Model name';
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
   String get manga_mode_toggle => 'Reading mode';
   String get manga_ocr_delete => 'Delete models';
   String get manga_ocr_delete_confirm_message =>
@@ -1843,20 +1836,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  String get manga_rescan_button => 'Box scan';
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  String get manga_rescan_empty => 'No text recognised';
-  String get manga_rescan_failed => 'Recognition failed';
-  String get manga_rescan_local_source => 'On-device result';
-  String get manga_rescan_lookup => 'Look up';
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  String get manga_rescan_running => 'Recognising...';
-  String get manga_rescan_writeback => 'Save to page';
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   String get margin_bottom => 'Bottom margin';
   String get margin_left => 'Left margin';
   String get margin_right => 'Right margin';
@@ -3599,6 +3578,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Remove this game from the library? Game files on disk will not be deleted.';
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 // Path: <root>
@@ -6418,19 +6402,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get manager => 'المدير';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  @override
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  @override
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  @override
-  String get manga_cloud_ocr_model => 'Model name';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  @override
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
-  @override
   String get manga_mode_toggle => 'Reading Mode';
   @override
   String get manga_ocr_delete => 'Delete models';
@@ -6563,33 +6534,6 @@ class _StringsAr extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => 'Box scan';
-  @override
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  @override
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  @override
-  String get manga_rescan_empty => 'No text recognised';
-  @override
-  String get manga_rescan_failed => 'Recognition failed';
-  @override
-  String get manga_rescan_local_source => 'On-device result';
-  @override
-  String get manga_rescan_lookup => 'Look up';
-  @override
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  @override
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  @override
-  String get manga_rescan_running => 'Recognising...';
-  @override
-  String get manga_rescan_writeback => 'Save to page';
-  @override
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  @override
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   @override
   String get margin_bottom => 'الهامش السفلي';
   @override
@@ -9739,6 +9683,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 // Path: <root>
@@ -12587,19 +12538,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get manager => 'Verwalter';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  @override
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  @override
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  @override
-  String get manga_cloud_ocr_model => 'Model name';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  @override
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
-  @override
   String get manga_mode_toggle => 'Reading Mode';
   @override
   String get manga_ocr_delete => 'Delete models';
@@ -12732,33 +12670,6 @@ class _StringsDe extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => 'Box scan';
-  @override
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  @override
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  @override
-  String get manga_rescan_empty => 'No text recognised';
-  @override
-  String get manga_rescan_failed => 'Recognition failed';
-  @override
-  String get manga_rescan_local_source => 'On-device result';
-  @override
-  String get manga_rescan_lookup => 'Look up';
-  @override
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  @override
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  @override
-  String get manga_rescan_running => 'Recognising...';
-  @override
-  String get manga_rescan_writeback => 'Save to page';
-  @override
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  @override
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   @override
   String get margin_bottom => 'Unterer Rand';
   @override
@@ -15947,6 +15858,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 // Path: <root>
@@ -18798,19 +18716,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get manager => 'Gestor';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  @override
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  @override
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  @override
-  String get manga_cloud_ocr_model => 'Model name';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  @override
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
-  @override
   String get manga_mode_toggle => 'Reading Mode';
   @override
   String get manga_ocr_delete => 'Delete models';
@@ -18943,33 +18848,6 @@ class _StringsEs extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => 'Box scan';
-  @override
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  @override
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  @override
-  String get manga_rescan_empty => 'No text recognised';
-  @override
-  String get manga_rescan_failed => 'Recognition failed';
-  @override
-  String get manga_rescan_local_source => 'On-device result';
-  @override
-  String get manga_rescan_lookup => 'Look up';
-  @override
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  @override
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  @override
-  String get manga_rescan_running => 'Recognising...';
-  @override
-  String get manga_rescan_writeback => 'Save to page';
-  @override
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  @override
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   @override
   String get margin_bottom => 'Margen inferior';
   @override
@@ -22171,6 +22049,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 // Path: <root>
@@ -25030,19 +24915,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get manager => 'Gestionnaire';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  @override
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  @override
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  @override
-  String get manga_cloud_ocr_model => 'Model name';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  @override
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
-  @override
   String get manga_mode_toggle => 'Reading Mode';
   @override
   String get manga_ocr_delete => 'Delete models';
@@ -25175,33 +25047,6 @@ class _StringsFr extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => 'Box scan';
-  @override
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  @override
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  @override
-  String get manga_rescan_empty => 'No text recognised';
-  @override
-  String get manga_rescan_failed => 'Recognition failed';
-  @override
-  String get manga_rescan_local_source => 'On-device result';
-  @override
-  String get manga_rescan_lookup => 'Look up';
-  @override
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  @override
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  @override
-  String get manga_rescan_running => 'Recognising...';
-  @override
-  String get manga_rescan_writeback => 'Save to page';
-  @override
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  @override
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   @override
   String get margin_bottom => 'Marge inférieure';
   @override
@@ -28406,6 +28251,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 // Path: <root>
@@ -31228,19 +31080,6 @@ class _StringsId extends _StringsEn {
   @override
   String get manager => 'Manajer';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  @override
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  @override
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  @override
-  String get manga_cloud_ocr_model => 'Model name';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  @override
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
-  @override
   String get manga_mode_toggle => 'Reading Mode';
   @override
   String get manga_ocr_delete => 'Delete models';
@@ -31373,33 +31212,6 @@ class _StringsId extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => 'Box scan';
-  @override
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  @override
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  @override
-  String get manga_rescan_empty => 'No text recognised';
-  @override
-  String get manga_rescan_failed => 'Recognition failed';
-  @override
-  String get manga_rescan_local_source => 'On-device result';
-  @override
-  String get manga_rescan_lookup => 'Look up';
-  @override
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  @override
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  @override
-  String get manga_rescan_running => 'Recognising...';
-  @override
-  String get manga_rescan_writeback => 'Save to page';
-  @override
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  @override
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   @override
   String get margin_bottom => 'Margin bawah';
   @override
@@ -34570,6 +34382,13 @@ class _StringsId extends _StringsEn {
   @override
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 // Path: <root>
@@ -37415,19 +37234,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get manager => 'Gestore';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  @override
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  @override
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  @override
-  String get manga_cloud_ocr_model => 'Model name';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  @override
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
-  @override
   String get manga_mode_toggle => 'Reading Mode';
   @override
   String get manga_ocr_delete => 'Delete models';
@@ -37560,33 +37366,6 @@ class _StringsIt extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => 'Box scan';
-  @override
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  @override
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  @override
-  String get manga_rescan_empty => 'No text recognised';
-  @override
-  String get manga_rescan_failed => 'Recognition failed';
-  @override
-  String get manga_rescan_local_source => 'On-device result';
-  @override
-  String get manga_rescan_lookup => 'Look up';
-  @override
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  @override
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  @override
-  String get manga_rescan_running => 'Recognising...';
-  @override
-  String get manga_rescan_writeback => 'Save to page';
-  @override
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  @override
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   @override
   String get margin_bottom => 'Margine inferiore';
   @override
@@ -40780,6 +40559,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 // Path: <root>
@@ -43556,19 +43342,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get manager => '管理';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  @override
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  @override
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  @override
-  String get manga_cloud_ocr_model => 'Model name';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  @override
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
-  @override
   String get manga_mode_toggle => 'Reading Mode';
   @override
   String get manga_ocr_delete => 'Delete models';
@@ -43701,33 +43474,6 @@ class _StringsJa extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => 'Box scan';
-  @override
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  @override
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  @override
-  String get manga_rescan_empty => 'No text recognised';
-  @override
-  String get manga_rescan_failed => 'Recognition failed';
-  @override
-  String get manga_rescan_local_source => 'On-device result';
-  @override
-  String get manga_rescan_lookup => 'Look up';
-  @override
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  @override
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  @override
-  String get manga_rescan_running => 'Recognising...';
-  @override
-  String get manga_rescan_writeback => 'Save to page';
-  @override
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  @override
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   @override
   String get margin_bottom => '下余白';
   @override
@@ -46807,6 +46553,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 // Path: <root>
@@ -49584,19 +49337,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get manager => '관리';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  @override
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  @override
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  @override
-  String get manga_cloud_ocr_model => 'Model name';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  @override
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
-  @override
   String get manga_mode_toggle => 'Reading Mode';
   @override
   String get manga_ocr_delete => 'Delete models';
@@ -49729,33 +49469,6 @@ class _StringsKo extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => 'Box scan';
-  @override
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  @override
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  @override
-  String get manga_rescan_empty => 'No text recognised';
-  @override
-  String get manga_rescan_failed => 'Recognition failed';
-  @override
-  String get manga_rescan_local_source => 'On-device result';
-  @override
-  String get manga_rescan_lookup => 'Look up';
-  @override
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  @override
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  @override
-  String get manga_rescan_running => 'Recognising...';
-  @override
-  String get manga_rescan_writeback => 'Save to page';
-  @override
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  @override
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   @override
   String get margin_bottom => '아래 여백';
   @override
@@ -52836,6 +52549,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 // Path: <root>
@@ -55672,19 +55392,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get manager => 'Beheerder';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  @override
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  @override
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  @override
-  String get manga_cloud_ocr_model => 'Model name';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  @override
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
-  @override
   String get manga_mode_toggle => 'Reading Mode';
   @override
   String get manga_ocr_delete => 'Delete models';
@@ -55817,33 +55524,6 @@ class _StringsNl extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => 'Box scan';
-  @override
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  @override
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  @override
-  String get manga_rescan_empty => 'No text recognised';
-  @override
-  String get manga_rescan_failed => 'Recognition failed';
-  @override
-  String get manga_rescan_local_source => 'On-device result';
-  @override
-  String get manga_rescan_lookup => 'Look up';
-  @override
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  @override
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  @override
-  String get manga_rescan_running => 'Recognising...';
-  @override
-  String get manga_rescan_writeback => 'Save to page';
-  @override
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  @override
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   @override
   String get margin_bottom => 'Ondermarge';
   @override
@@ -59026,6 +58706,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 // Path: <root>
@@ -61872,19 +61559,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manager => 'Gerenciador';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  @override
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  @override
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  @override
-  String get manga_cloud_ocr_model => 'Model name';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  @override
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
-  @override
   String get manga_mode_toggle => 'Reading Mode';
   @override
   String get manga_ocr_delete => 'Delete models';
@@ -62017,33 +61691,6 @@ class _StringsPtBr extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => 'Box scan';
-  @override
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  @override
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  @override
-  String get manga_rescan_empty => 'No text recognised';
-  @override
-  String get manga_rescan_failed => 'Recognition failed';
-  @override
-  String get manga_rescan_local_source => 'On-device result';
-  @override
-  String get manga_rescan_lookup => 'Look up';
-  @override
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  @override
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  @override
-  String get manga_rescan_running => 'Recognising...';
-  @override
-  String get manga_rescan_writeback => 'Save to page';
-  @override
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  @override
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   @override
   String get margin_bottom => 'Margem inferior';
   @override
@@ -65229,6 +64876,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 // Path: <root>
@@ -68067,19 +67721,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get manager => 'Менеджер';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  @override
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  @override
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  @override
-  String get manga_cloud_ocr_model => 'Model name';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  @override
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
-  @override
   String get manga_mode_toggle => 'Reading Mode';
   @override
   String get manga_ocr_delete => 'Delete models';
@@ -68212,33 +67853,6 @@ class _StringsRu extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => 'Box scan';
-  @override
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  @override
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  @override
-  String get manga_rescan_empty => 'No text recognised';
-  @override
-  String get manga_rescan_failed => 'Recognition failed';
-  @override
-  String get manga_rescan_local_source => 'On-device result';
-  @override
-  String get manga_rescan_lookup => 'Look up';
-  @override
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  @override
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  @override
-  String get manga_rescan_running => 'Recognising...';
-  @override
-  String get manga_rescan_writeback => 'Save to page';
-  @override
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  @override
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   @override
   String get margin_bottom => 'Нижнее поле';
   @override
@@ -71416,6 +71030,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 // Path: <root>
@@ -74228,19 +73849,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get manager => 'จัดการ';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  @override
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  @override
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  @override
-  String get manga_cloud_ocr_model => 'Model name';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  @override
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
-  @override
   String get manga_mode_toggle => 'Reading Mode';
   @override
   String get manga_ocr_delete => 'Delete models';
@@ -74373,33 +73981,6 @@ class _StringsTh extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => 'Box scan';
-  @override
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  @override
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  @override
-  String get manga_rescan_empty => 'No text recognised';
-  @override
-  String get manga_rescan_failed => 'Recognition failed';
-  @override
-  String get manga_rescan_local_source => 'On-device result';
-  @override
-  String get manga_rescan_lookup => 'Look up';
-  @override
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  @override
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  @override
-  String get manga_rescan_running => 'Recognising...';
-  @override
-  String get manga_rescan_writeback => 'Save to page';
-  @override
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  @override
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   @override
   String get margin_bottom => 'ขอบล่าง';
   @override
@@ -77551,6 +77132,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 // Path: <root>
@@ -80382,19 +79970,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get manager => 'Yönetici';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  @override
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  @override
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  @override
-  String get manga_cloud_ocr_model => 'Model name';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  @override
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
-  @override
   String get manga_mode_toggle => 'Reading Mode';
   @override
   String get manga_ocr_delete => 'Delete models';
@@ -80527,33 +80102,6 @@ class _StringsTr extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => 'Box scan';
-  @override
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  @override
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  @override
-  String get manga_rescan_empty => 'No text recognised';
-  @override
-  String get manga_rescan_failed => 'Recognition failed';
-  @override
-  String get manga_rescan_local_source => 'On-device result';
-  @override
-  String get manga_rescan_lookup => 'Look up';
-  @override
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  @override
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  @override
-  String get manga_rescan_running => 'Recognising...';
-  @override
-  String get manga_rescan_writeback => 'Save to page';
-  @override
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  @override
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   @override
   String get margin_bottom => 'Alt kenar boşluğu';
   @override
@@ -83718,6 +83266,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 // Path: <root>
@@ -86542,19 +86097,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get manager => 'Quản lý';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  @override
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  @override
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  @override
-  String get manga_cloud_ocr_model => 'Model name';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  @override
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
-  @override
   String get manga_mode_toggle => 'Reading Mode';
   @override
   String get manga_ocr_delete => 'Delete models';
@@ -86687,33 +86229,6 @@ class _StringsVi extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => 'Box scan';
-  @override
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  @override
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  @override
-  String get manga_rescan_empty => 'No text recognised';
-  @override
-  String get manga_rescan_failed => 'Recognition failed';
-  @override
-  String get manga_rescan_local_source => 'On-device result';
-  @override
-  String get manga_rescan_lookup => 'Look up';
-  @override
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  @override
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  @override
-  String get manga_rescan_running => 'Recognising...';
-  @override
-  String get manga_rescan_writeback => 'Save to page';
-  @override
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  @override
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   @override
   String get margin_bottom => 'Lề dưới';
   @override
@@ -89870,6 +89385,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 // Path: <root>
@@ -92499,19 +92021,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manager => '词典与来源';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API Key';
-  @override
-  String get manga_cloud_ocr_enabled => '启用云端识别';
-  @override
-  String get manga_cloud_ocr_failed => '云端识别失败';
-  @override
-  String get manga_cloud_ocr_model => '模型名';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      '点击「云端重试」时，所选图片区域将用你自备的 API Key 发送至 Google Gemini API；仅在你手动触发时才会上传。';
-  @override
-  String get manga_cloud_ocr_section => '云端手写识别（Gemini）';
-  @override
   String get manga_mode_toggle => '阅读模式';
   @override
   String get manga_ocr_delete => '删除模型';
@@ -92633,32 +92142,6 @@ class _StringsZhCn extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       '正在上传页面 ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => '框选识别';
-  @override
-  String get manga_rescan_cloud_retry => '云端重试';
-  @override
-  String get manga_rescan_cloud_source => '云端识别结果（Gemini）';
-  @override
-  String get manga_rescan_empty => '未识别出文字';
-  @override
-  String get manga_rescan_failed => '识别失败';
-  @override
-  String get manga_rescan_local_source => '本地识别结果';
-  @override
-  String get manga_rescan_lookup => '查词';
-  @override
-  String get manga_rescan_mode_hint => '拖动框选要识别的区域';
-  @override
-  String get manga_rescan_model_missing => '识别模型未下载，请到「设置 > 漫画 OCR」下载';
-  @override
-  String get manga_rescan_running => '识别中…';
-  @override
-  String get manga_rescan_writeback => '回写本页';
-  @override
-  String get manga_rescan_writeback_done => '已回写本页';
-  @override
-  String get manga_rescan_writeback_failed => '回写失败';
   @override
   String get margin_bottom => '下边距';
   @override
@@ -95596,6 +95079,13 @@ class _StringsZhCn extends _StringsEn {
   String get game_remove_confirm => '从库中移除此游戏？不会删除磁盘上的游戏文件。';
   @override
   String get delete_collection_also_games => '同时把其中的游戏移出库（不会删除磁盘上的游戏文件）';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR 加速：${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU 加速不可用，OCR 改用 ${engine} 运行：${reason}';
 }
 
 // Path: <root>
@@ -98339,19 +97829,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manager => '詞典與來源';
   @override
-  String get manga_cloud_ocr_api_key => 'Gemini API key';
-  @override
-  String get manga_cloud_ocr_enabled => 'Enable cloud recognition';
-  @override
-  String get manga_cloud_ocr_failed => 'Cloud recognition failed';
-  @override
-  String get manga_cloud_ocr_model => 'Model name';
-  @override
-  String get manga_cloud_ocr_privacy =>
-      'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-  @override
-  String get manga_cloud_ocr_section => 'Cloud handwriting OCR (Gemini)';
-  @override
   String get manga_mode_toggle => 'Reading Mode';
   @override
   String get manga_ocr_delete => 'Delete models';
@@ -98484,33 +97961,6 @@ class _StringsZhHk extends _StringsEn {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  @override
-  String get manga_rescan_button => 'Box scan';
-  @override
-  String get manga_rescan_cloud_retry => 'Cloud retry';
-  @override
-  String get manga_rescan_cloud_source => 'Cloud result (Gemini)';
-  @override
-  String get manga_rescan_empty => 'No text recognised';
-  @override
-  String get manga_rescan_failed => 'Recognition failed';
-  @override
-  String get manga_rescan_local_source => 'On-device result';
-  @override
-  String get manga_rescan_lookup => 'Look up';
-  @override
-  String get manga_rescan_mode_hint => 'Drag to select an area to recognise';
-  @override
-  String get manga_rescan_model_missing =>
-      'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-  @override
-  String get manga_rescan_running => 'Recognising...';
-  @override
-  String get manga_rescan_writeback => 'Save to page';
-  @override
-  String get manga_rescan_writeback_done => 'Saved to this page';
-  @override
-  String get manga_rescan_writeback_failed => 'Failed to save to page';
   @override
   String get margin_bottom => '下邊距';
   @override
@@ -101544,6 +100994,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get delete_collection_also_games =>
       'Also remove the games in it from the library (game files on disk are kept)';
+  @override
+  String manga_ocr_acceleration_status({required Object engine}) =>
+      'OCR acceleration: ${engine}';
+  @override
+  String manga_ocr_acceleration_degraded(
+          {required Object engine, required Object reason}) =>
+      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
 }
 
 /// Flat map(s) containing all translations.
@@ -104044,18 +103501,6 @@ extension on _StringsEn {
         return 'Manage audio sources';
       case 'manager':
         return 'Dictionaries & sources';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading mode';
       case 'manga_ocr_delete':
@@ -104173,32 +103618,6 @@ extension on _StringsEn {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return 'Bottom margin';
       case 'margin_left':
@@ -107058,6 +106477,11 @@ extension on _StringsEn {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
@@ -109558,18 +108982,6 @@ extension on _StringsAr {
         return 'إدارة مصادر الصوت';
       case 'manager':
         return 'المدير';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading Mode';
       case 'manga_ocr_delete':
@@ -109687,32 +109099,6 @@ extension on _StringsAr {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return 'الهامش السفلي';
       case 'margin_left':
@@ -112570,6 +111956,11 @@ extension on _StringsAr {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
@@ -115077,18 +114468,6 @@ extension on _StringsDe {
         return 'Audioquellen verwalten';
       case 'manager':
         return 'Verwalter';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading Mode';
       case 'manga_ocr_delete':
@@ -115206,32 +114585,6 @@ extension on _StringsDe {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return 'Unterer Rand';
       case 'margin_left':
@@ -118103,6 +117456,11 @@ extension on _StringsDe {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
@@ -120610,18 +119968,6 @@ extension on _StringsEs {
         return 'Gestionar fuentes de audio';
       case 'manager':
         return 'Gestor';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading Mode';
       case 'manga_ocr_delete':
@@ -120739,32 +120085,6 @@ extension on _StringsEs {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return 'Margen inferior';
       case 'margin_left':
@@ -123635,6 +122955,11 @@ extension on _StringsEs {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
@@ -126146,18 +125471,6 @@ extension on _StringsFr {
         return 'Gérer les sources audio';
       case 'manager':
         return 'Gestionnaire';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading Mode';
       case 'manga_ocr_delete':
@@ -126275,32 +125588,6 @@ extension on _StringsFr {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return 'Marge inférieure';
       case 'margin_left':
@@ -129173,6 +128460,11 @@ extension on _StringsFr {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
@@ -131677,18 +130969,6 @@ extension on _StringsId {
         return 'Kelola sumber audio';
       case 'manager':
         return 'Manajer';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading Mode';
       case 'manga_ocr_delete':
@@ -131806,32 +131086,6 @@ extension on _StringsId {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return 'Margin bawah';
       case 'margin_left':
@@ -134693,6 +133947,11 @@ extension on _StringsId {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
@@ -137200,18 +136459,6 @@ extension on _StringsIt {
         return 'Gestisci sorgenti audio';
       case 'manager':
         return 'Gestore';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading Mode';
       case 'manga_ocr_delete':
@@ -137329,32 +136576,6 @@ extension on _StringsIt {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return 'Margine inferiore';
       case 'margin_left':
@@ -140228,6 +139449,11 @@ extension on _StringsIt {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
@@ -142720,18 +141946,6 @@ extension on _StringsJa {
         return '音声ソースの管理';
       case 'manager':
         return '管理';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading Mode';
       case 'manga_ocr_delete':
@@ -142849,32 +142063,6 @@ extension on _StringsJa {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return '下余白';
       case 'margin_left':
@@ -145725,6 +144913,11 @@ extension on _StringsJa {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
@@ -148219,18 +147412,6 @@ extension on _StringsKo {
         return '오디오 소스 관리';
       case 'manager':
         return '관리';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading Mode';
       case 'manga_ocr_delete':
@@ -148348,32 +147529,6 @@ extension on _StringsKo {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return '아래 여백';
       case 'margin_left':
@@ -151226,6 +150381,11 @@ extension on _StringsKo {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
@@ -153732,18 +152892,6 @@ extension on _StringsNl {
         return 'Audiobronnen beheren';
       case 'manager':
         return 'Beheerder';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading Mode';
       case 'manga_ocr_delete':
@@ -153861,32 +153009,6 @@ extension on _StringsNl {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return 'Ondermarge';
       case 'margin_left':
@@ -156754,6 +155876,11 @@ extension on _StringsNl {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
@@ -159259,18 +158386,6 @@ extension on _StringsPtBr {
         return 'Gerenciar fontes de áudio';
       case 'manager':
         return 'Gerenciador';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading Mode';
       case 'manga_ocr_delete':
@@ -159388,32 +158503,6 @@ extension on _StringsPtBr {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return 'Margem inferior';
       case 'margin_left':
@@ -162279,6 +161368,11 @@ extension on _StringsPtBr {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
@@ -164787,18 +163881,6 @@ extension on _StringsRu {
         return 'Управление аудиоисточниками';
       case 'manager':
         return 'Менеджер';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading Mode';
       case 'manga_ocr_delete':
@@ -164916,32 +163998,6 @@ extension on _StringsRu {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return 'Нижнее поле';
       case 'margin_left':
@@ -167809,6 +166865,11 @@ extension on _StringsRu {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
@@ -170308,18 +169369,6 @@ extension on _StringsTh {
         return 'จัดการแหล่งเสียง';
       case 'manager':
         return 'จัดการ';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading Mode';
       case 'manga_ocr_delete':
@@ -170437,32 +169486,6 @@ extension on _StringsTh {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return 'ขอบล่าง';
       case 'margin_left':
@@ -173323,6 +172346,11 @@ extension on _StringsTh {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
@@ -175827,18 +174855,6 @@ extension on _StringsTr {
         return 'Ses kaynaklarını yönet';
       case 'manager':
         return 'Yönetici';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading Mode';
       case 'manga_ocr_delete':
@@ -175956,32 +174972,6 @@ extension on _StringsTr {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return 'Alt kenar boşluğu';
       case 'margin_left':
@@ -178846,6 +177836,11 @@ extension on _StringsTr {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
@@ -181347,18 +180342,6 @@ extension on _StringsVi {
         return 'Quản lý nguồn âm thanh';
       case 'manager':
         return 'Quản lý';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading Mode';
       case 'manga_ocr_delete':
@@ -181476,32 +180459,6 @@ extension on _StringsVi {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return 'Lề dưới';
       case 'margin_left':
@@ -184364,6 +183321,11 @@ extension on _StringsVi {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
@@ -186845,18 +185807,6 @@ extension on _StringsZhCn {
         return '管理音频来源';
       case 'manager':
         return '词典与来源';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API Key';
-      case 'manga_cloud_ocr_enabled':
-        return '启用云端识别';
-      case 'manga_cloud_ocr_failed':
-        return '云端识别失败';
-      case 'manga_cloud_ocr_model':
-        return '模型名';
-      case 'manga_cloud_ocr_privacy':
-        return '点击「云端重试」时，所选图片区域将用你自备的 API Key 发送至 Google Gemini API；仅在你手动触发时才会上传。';
-      case 'manga_cloud_ocr_section':
-        return '云端手写识别（Gemini）';
       case 'manga_mode_toggle':
         return '阅读模式';
       case 'manga_ocr_delete':
@@ -186974,32 +185924,6 @@ extension on _StringsZhCn {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             '正在上传页面 ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return '框选识别';
-      case 'manga_rescan_cloud_retry':
-        return '云端重试';
-      case 'manga_rescan_cloud_source':
-        return '云端识别结果（Gemini）';
-      case 'manga_rescan_empty':
-        return '未识别出文字';
-      case 'manga_rescan_failed':
-        return '识别失败';
-      case 'manga_rescan_local_source':
-        return '本地识别结果';
-      case 'manga_rescan_lookup':
-        return '查词';
-      case 'manga_rescan_mode_hint':
-        return '拖动框选要识别的区域';
-      case 'manga_rescan_model_missing':
-        return '识别模型未下载，请到「设置 > 漫画 OCR」下载';
-      case 'manga_rescan_running':
-        return '识别中…';
-      case 'manga_rescan_writeback':
-        return '回写本页';
-      case 'manga_rescan_writeback_done':
-        return '已回写本页';
-      case 'manga_rescan_writeback_failed':
-        return '回写失败';
       case 'margin_bottom':
         return '下边距';
       case 'margin_left':
@@ -189836,6 +188760,11 @@ extension on _StringsZhCn {
         return '从库中移除此游戏？不会删除磁盘上的游戏文件。';
       case 'delete_collection_also_games':
         return '同时把其中的游戏移出库（不会删除磁盘上的游戏文件）';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR 加速：${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU 加速不可用，OCR 改用 ${engine} 运行：${reason}';
       default:
         return null;
     }
@@ -192327,18 +191256,6 @@ extension on _StringsZhHk {
         return '管理音訊來源';
       case 'manager':
         return '詞典與來源';
-      case 'manga_cloud_ocr_api_key':
-        return 'Gemini API key';
-      case 'manga_cloud_ocr_enabled':
-        return 'Enable cloud recognition';
-      case 'manga_cloud_ocr_failed':
-        return 'Cloud recognition failed';
-      case 'manga_cloud_ocr_model':
-        return 'Model name';
-      case 'manga_cloud_ocr_privacy':
-        return 'When you tap Cloud retry, the selected image area is sent to the Google Gemini API with your own API key. Nothing is uploaded unless you trigger it manually.';
-      case 'manga_cloud_ocr_section':
-        return 'Cloud handwriting OCR (Gemini)';
       case 'manga_mode_toggle':
         return 'Reading Mode';
       case 'manga_ocr_delete':
@@ -192456,32 +191373,6 @@ extension on _StringsZhHk {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_button':
-        return 'Box scan';
-      case 'manga_rescan_cloud_retry':
-        return 'Cloud retry';
-      case 'manga_rescan_cloud_source':
-        return 'Cloud result (Gemini)';
-      case 'manga_rescan_empty':
-        return 'No text recognised';
-      case 'manga_rescan_failed':
-        return 'Recognition failed';
-      case 'manga_rescan_local_source':
-        return 'On-device result';
-      case 'manga_rescan_lookup':
-        return 'Look up';
-      case 'manga_rescan_mode_hint':
-        return 'Drag to select an area to recognise';
-      case 'manga_rescan_model_missing':
-        return 'Recognition model not downloaded. Download it in Settings > Manga OCR.';
-      case 'manga_rescan_running':
-        return 'Recognising...';
-      case 'manga_rescan_writeback':
-        return 'Save to page';
-      case 'manga_rescan_writeback_done':
-        return 'Saved to this page';
-      case 'manga_rescan_writeback_failed':
-        return 'Failed to save to page';
       case 'margin_bottom':
         return '下邊距';
       case 'margin_left':
@@ -195328,6 +194219,11 @@ extension on _StringsZhHk {
         return 'Remove this game from the library? Game files on disk will not be deleted.';
       case 'delete_collection_also_games':
         return 'Also remove the games in it from the library (game files on disk are kept)';
+      case 'manga_ocr_acceleration_status':
+        return ({required Object engine}) => 'OCR acceleration: ${engine}';
+      case 'manga_ocr_acceleration_degraded':
+        return ({required Object engine, required Object reason}) =>
+            'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
       default:
         return null;
     }
