@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45662 (2686 per locale)
+/// Strings: 45679 (2687 per locale)
 ///
-/// Built on 2026-07-27 at 22:13 UTC
+/// Built on 2026-07-27 at 22:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3599,6 +3599,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This item is already in the collection.';
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 // Path: <root>
@@ -9732,6 +9734,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  @override
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 // Path: <root>
@@ -15933,6 +15938,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  @override
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 // Path: <root>
@@ -22150,6 +22158,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  @override
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 // Path: <root>
@@ -28378,6 +28389,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  @override
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 // Path: <root>
@@ -34535,6 +34549,9 @@ class _StringsId extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  @override
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 // Path: <root>
@@ -40738,6 +40755,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  @override
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 // Path: <root>
@@ -46758,6 +46778,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  @override
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 // Path: <root>
@@ -52780,6 +52803,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  @override
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 // Path: <root>
@@ -58963,6 +58989,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  @override
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 // Path: <root>
@@ -65159,6 +65188,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  @override
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 // Path: <root>
@@ -71339,6 +71371,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  @override
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 // Path: <root>
@@ -77467,6 +77502,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  @override
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 // Path: <root>
@@ -83627,6 +83665,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  @override
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 // Path: <root>
@@ -89772,6 +89813,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  @override
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 // Path: <root>
@@ -95487,6 +95531,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       '无法导入 .cbr/.rar 漫画压缩包，请转成 .cbz 或图片文件夹。';
+  @override
+  String get collection_add_failed => '没能把该条目加进合集，请重试。';
 }
 
 // Path: <root>
@@ -101428,6 +101474,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get drag_drop_manga_archive_unsupported =>
       'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+  @override
+  String get collection_add_failed =>
+      'Couldn\'t add the item to the collection. Please try again.';
 }
 
 /// Flat map(s) containing all translations.
@@ -106929,6 +106978,8 @@ extension on _StringsEn {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
@@ -112428,6 +112479,8 @@ extension on _StringsAr {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
@@ -117948,6 +118001,8 @@ extension on _StringsDe {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
@@ -123467,6 +123522,8 @@ extension on _StringsEs {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
@@ -128992,6 +129049,8 @@ extension on _StringsFr {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
@@ -134499,6 +134558,8 @@ extension on _StringsId {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
@@ -140021,6 +140082,8 @@ extension on _StringsIt {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
@@ -145505,6 +145568,8 @@ extension on _StringsJa {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
@@ -150993,6 +151058,8 @@ extension on _StringsKo {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
@@ -156508,6 +156575,8 @@ extension on _StringsNl {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
@@ -162020,6 +162089,8 @@ extension on _StringsPtBr {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
@@ -167537,6 +167608,8 @@ extension on _StringsRu {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
@@ -173038,6 +173111,8 @@ extension on _StringsTh {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
@@ -178548,6 +178623,8 @@ extension on _StringsTr {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
@@ -184053,6 +184130,8 @@ extension on _StringsVi {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
@@ -189512,6 +189591,8 @@ extension on _StringsZhCn {
         return '该条目已在这个合集里。';
       case 'drag_drop_manga_archive_unsupported':
         return '无法导入 .cbr/.rar 漫画压缩包，请转成 .cbz 或图片文件夹。';
+      case 'collection_add_failed':
+        return '没能把该条目加进合集，请重试。';
       default:
         return null;
     }
@@ -194991,6 +195072,8 @@ extension on _StringsZhHk {
         return 'This item is already in the collection.';
       case 'drag_drop_manga_archive_unsupported':
         return 'Can\'t import .cbr/.rar comic archives — repack as .cbz or a folder of images.';
+      case 'collection_add_failed':
+        return 'Couldn\'t add the item to the collection. Please try again.';
       default:
         return null;
     }
