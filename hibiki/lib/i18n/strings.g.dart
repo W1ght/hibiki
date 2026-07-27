@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45356 (2668 per locale)
+/// Strings: 45713 (2689 per locale)
 ///
-/// Built on 2026-07-27 at 10:10 UTC
+/// Built on 2026-07-27 at 13:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3567,6 +3567,31 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_dedup_plan_delete => 'Delete these files';
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  String get manga_reading_direction => 'Reading direction';
+  String get manga_direction_rtl => 'Right to left';
+  String get manga_direction_ltr => 'Left to right';
+  String get manga_zoom => 'Zoom';
+  String get manga_jump_to_page => 'Jump to page';
+  String get manga_previous_page => 'Previous page';
+  String get manga_next_page => 'Next page';
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  String get manga_import_direct => 'Import without OCR';
+  String get manga_library => 'Manga';
+  String get manga_import_action => 'Import Manga';
 }
 
 // Path: <root>
@@ -9650,6 +9675,52 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  @override
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  @override
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  @override
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  @override
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  @override
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  @override
+  String get manga_reading_direction => 'Reading direction';
+  @override
+  String get manga_direction_rtl => 'Right to left';
+  @override
+  String get manga_direction_ltr => 'Left to right';
+  @override
+  String get manga_zoom => 'Zoom';
+  @override
+  String get manga_jump_to_page => 'Jump to page';
+  @override
+  String get manga_previous_page => 'Previous page';
+  @override
+  String get manga_next_page => 'Next page';
+  @override
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  @override
+  String get manga_import_direct => 'Import without OCR';
+  @override
+  String get manga_library => 'Manga';
+  @override
+  String get manga_import_action => 'Import Manga';
 }
 
 // Path: <root>
@@ -15801,6 +15872,52 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  @override
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  @override
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  @override
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  @override
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  @override
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  @override
+  String get manga_reading_direction => 'Reading direction';
+  @override
+  String get manga_direction_rtl => 'Right to left';
+  @override
+  String get manga_direction_ltr => 'Left to right';
+  @override
+  String get manga_zoom => 'Zoom';
+  @override
+  String get manga_jump_to_page => 'Jump to page';
+  @override
+  String get manga_previous_page => 'Previous page';
+  @override
+  String get manga_next_page => 'Next page';
+  @override
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  @override
+  String get manga_import_direct => 'Import without OCR';
+  @override
+  String get manga_library => 'Manga';
+  @override
+  String get manga_import_action => 'Import Manga';
 }
 
 // Path: <root>
@@ -21968,6 +22085,52 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  @override
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  @override
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  @override
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  @override
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  @override
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  @override
+  String get manga_reading_direction => 'Reading direction';
+  @override
+  String get manga_direction_rtl => 'Right to left';
+  @override
+  String get manga_direction_ltr => 'Left to right';
+  @override
+  String get manga_zoom => 'Zoom';
+  @override
+  String get manga_jump_to_page => 'Jump to page';
+  @override
+  String get manga_previous_page => 'Previous page';
+  @override
+  String get manga_next_page => 'Next page';
+  @override
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  @override
+  String get manga_import_direct => 'Import without OCR';
+  @override
+  String get manga_library => 'Manga';
+  @override
+  String get manga_import_action => 'Import Manga';
 }
 
 // Path: <root>
@@ -28146,6 +28309,52 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  @override
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  @override
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  @override
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  @override
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  @override
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  @override
+  String get manga_reading_direction => 'Reading direction';
+  @override
+  String get manga_direction_rtl => 'Right to left';
+  @override
+  String get manga_direction_ltr => 'Left to right';
+  @override
+  String get manga_zoom => 'Zoom';
+  @override
+  String get manga_jump_to_page => 'Jump to page';
+  @override
+  String get manga_previous_page => 'Previous page';
+  @override
+  String get manga_next_page => 'Next page';
+  @override
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  @override
+  String get manga_import_direct => 'Import without OCR';
+  @override
+  String get manga_library => 'Manga';
+  @override
+  String get manga_import_action => 'Import Manga';
 }
 
 // Path: <root>
@@ -34253,6 +34462,52 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  @override
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  @override
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  @override
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  @override
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  @override
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  @override
+  String get manga_reading_direction => 'Reading direction';
+  @override
+  String get manga_direction_rtl => 'Right to left';
+  @override
+  String get manga_direction_ltr => 'Left to right';
+  @override
+  String get manga_zoom => 'Zoom';
+  @override
+  String get manga_jump_to_page => 'Jump to page';
+  @override
+  String get manga_previous_page => 'Previous page';
+  @override
+  String get manga_next_page => 'Next page';
+  @override
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  @override
+  String get manga_import_direct => 'Import without OCR';
+  @override
+  String get manga_library => 'Manga';
+  @override
+  String get manga_import_action => 'Import Manga';
 }
 
 // Path: <root>
@@ -40406,6 +40661,52 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  @override
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  @override
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  @override
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  @override
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  @override
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  @override
+  String get manga_reading_direction => 'Reading direction';
+  @override
+  String get manga_direction_rtl => 'Right to left';
+  @override
+  String get manga_direction_ltr => 'Left to right';
+  @override
+  String get manga_zoom => 'Zoom';
+  @override
+  String get manga_jump_to_page => 'Jump to page';
+  @override
+  String get manga_previous_page => 'Previous page';
+  @override
+  String get manga_next_page => 'Next page';
+  @override
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  @override
+  String get manga_import_direct => 'Import without OCR';
+  @override
+  String get manga_library => 'Manga';
+  @override
+  String get manga_import_action => 'Import Manga';
 }
 
 // Path: <root>
@@ -46376,6 +46677,52 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  @override
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  @override
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  @override
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  @override
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  @override
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  @override
+  String get manga_reading_direction => 'Reading direction';
+  @override
+  String get manga_direction_rtl => 'Right to left';
+  @override
+  String get manga_direction_ltr => 'Left to right';
+  @override
+  String get manga_zoom => 'Zoom';
+  @override
+  String get manga_jump_to_page => 'Jump to page';
+  @override
+  String get manga_previous_page => 'Previous page';
+  @override
+  String get manga_next_page => 'Next page';
+  @override
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  @override
+  String get manga_import_direct => 'Import without OCR';
+  @override
+  String get manga_library => 'Manga';
+  @override
+  String get manga_import_action => 'Import Manga';
 }
 
 // Path: <root>
@@ -52348,6 +52695,52 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  @override
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  @override
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  @override
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  @override
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  @override
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  @override
+  String get manga_reading_direction => 'Reading direction';
+  @override
+  String get manga_direction_rtl => 'Right to left';
+  @override
+  String get manga_direction_ltr => 'Left to right';
+  @override
+  String get manga_zoom => 'Zoom';
+  @override
+  String get manga_jump_to_page => 'Jump to page';
+  @override
+  String get manga_previous_page => 'Previous page';
+  @override
+  String get manga_next_page => 'Next page';
+  @override
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  @override
+  String get manga_import_direct => 'Import without OCR';
+  @override
+  String get manga_library => 'Manga';
+  @override
+  String get manga_import_action => 'Import Manga';
 }
 
 // Path: <root>
@@ -58481,6 +58874,52 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  @override
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  @override
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  @override
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  @override
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  @override
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  @override
+  String get manga_reading_direction => 'Reading direction';
+  @override
+  String get manga_direction_rtl => 'Right to left';
+  @override
+  String get manga_direction_ltr => 'Left to right';
+  @override
+  String get manga_zoom => 'Zoom';
+  @override
+  String get manga_jump_to_page => 'Jump to page';
+  @override
+  String get manga_previous_page => 'Previous page';
+  @override
+  String get manga_next_page => 'Next page';
+  @override
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  @override
+  String get manga_import_direct => 'Import without OCR';
+  @override
+  String get manga_library => 'Manga';
+  @override
+  String get manga_import_action => 'Import Manga';
 }
 
 // Path: <root>
@@ -64627,6 +65066,52 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  @override
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  @override
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  @override
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  @override
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  @override
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  @override
+  String get manga_reading_direction => 'Reading direction';
+  @override
+  String get manga_direction_rtl => 'Right to left';
+  @override
+  String get manga_direction_ltr => 'Left to right';
+  @override
+  String get manga_zoom => 'Zoom';
+  @override
+  String get manga_jump_to_page => 'Jump to page';
+  @override
+  String get manga_previous_page => 'Previous page';
+  @override
+  String get manga_next_page => 'Next page';
+  @override
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  @override
+  String get manga_import_direct => 'Import without OCR';
+  @override
+  String get manga_library => 'Manga';
+  @override
+  String get manga_import_action => 'Import Manga';
 }
 
 // Path: <root>
@@ -70757,6 +71242,52 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  @override
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  @override
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  @override
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  @override
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  @override
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  @override
+  String get manga_reading_direction => 'Reading direction';
+  @override
+  String get manga_direction_rtl => 'Right to left';
+  @override
+  String get manga_direction_ltr => 'Left to right';
+  @override
+  String get manga_zoom => 'Zoom';
+  @override
+  String get manga_jump_to_page => 'Jump to page';
+  @override
+  String get manga_previous_page => 'Previous page';
+  @override
+  String get manga_next_page => 'Next page';
+  @override
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  @override
+  String get manga_import_direct => 'Import without OCR';
+  @override
+  String get manga_library => 'Manga';
+  @override
+  String get manga_import_action => 'Import Manga';
 }
 
 // Path: <root>
@@ -76835,6 +77366,52 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  @override
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  @override
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  @override
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  @override
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  @override
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  @override
+  String get manga_reading_direction => 'Reading direction';
+  @override
+  String get manga_direction_rtl => 'Right to left';
+  @override
+  String get manga_direction_ltr => 'Left to right';
+  @override
+  String get manga_zoom => 'Zoom';
+  @override
+  String get manga_jump_to_page => 'Jump to page';
+  @override
+  String get manga_previous_page => 'Previous page';
+  @override
+  String get manga_next_page => 'Next page';
+  @override
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  @override
+  String get manga_import_direct => 'Import without OCR';
+  @override
+  String get manga_library => 'Manga';
+  @override
+  String get manga_import_action => 'Import Manga';
 }
 
 // Path: <root>
@@ -82945,6 +83522,52 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  @override
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  @override
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  @override
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  @override
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  @override
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  @override
+  String get manga_reading_direction => 'Reading direction';
+  @override
+  String get manga_direction_rtl => 'Right to left';
+  @override
+  String get manga_direction_ltr => 'Left to right';
+  @override
+  String get manga_zoom => 'Zoom';
+  @override
+  String get manga_jump_to_page => 'Jump to page';
+  @override
+  String get manga_previous_page => 'Previous page';
+  @override
+  String get manga_next_page => 'Next page';
+  @override
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  @override
+  String get manga_import_direct => 'Import without OCR';
+  @override
+  String get manga_library => 'Manga';
+  @override
+  String get manga_import_action => 'Import Manga';
 }
 
 // Path: <root>
@@ -89040,6 +89663,52 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  @override
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  @override
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  @override
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  @override
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  @override
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  @override
+  String get manga_reading_direction => 'Reading direction';
+  @override
+  String get manga_direction_rtl => 'Right to left';
+  @override
+  String get manga_direction_ltr => 'Left to right';
+  @override
+  String get manga_zoom => 'Zoom';
+  @override
+  String get manga_jump_to_page => 'Jump to page';
+  @override
+  String get manga_previous_page => 'Previous page';
+  @override
+  String get manga_next_page => 'Next page';
+  @override
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  @override
+  String get manga_import_direct => 'Import without OCR';
+  @override
+  String get manga_library => 'Manga';
+  @override
+  String get manga_import_action => 'Import Manga';
 }
 
 // Path: <root>
@@ -94714,6 +95383,50 @@ class _StringsZhCn extends _StringsEn {
   String get anki_dedup_plan_delete => '删除这些文件';
   @override
   String get anki_dedup_plan_journal => '每一次改写和删除都会先记进备份文件夹里的日志。';
+  @override
+  String get manga_ocr_default_engine => '默认 OCR 引擎';
+  @override
+  String get manga_ocr_engine_auto => '自动（不会上传到 Lens）';
+  @override
+  String get manga_ocr_engine_local_onnx => '本地 ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => '整页识别（Google Lens）';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens 使用 Chromium 的非公开接口。仅在你明确选择 Lens 时上传页面；自动模式绝不会上传。';
+  @override
+  String get manga_google_lens_disclosure_title => '将漫画页面发送到 Google Lens？';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      '识别本漫画会把尚无 OCR 文本的页面缩小为 JPEG 后发送给 Google，结果缓存在本设备。该接口并非官方公开 API，可能随时失效。只有同意后才会上传。';
+  @override
+  String get manga_google_lens_disclosure_accept => '同意并开始识别';
+  @override
+  String get manga_google_lens_disclosure_decline => '取消';
+  @override
+  String get manga_reading_direction => '阅读方向';
+  @override
+  String get manga_direction_rtl => '从右到左';
+  @override
+  String get manga_direction_ltr => '从左到右';
+  @override
+  String get manga_zoom => '缩放';
+  @override
+  String get manga_jump_to_page => '跳转页面';
+  @override
+  String get manga_previous_page => '上一页';
+  @override
+  String get manga_next_page => '下一页';
+  @override
+  String manga_page_number_hint({required Object total}) => '页码（1-${total}）';
+  @override
+  String get manga_import_direct => '直接导入';
+  @override
+  String get manga_library => '漫画';
+  @override
+  String get manga_import_action => '导入漫画';
 }
 
 // Path: <root>
@@ -100605,6 +101318,52 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
+  @override
+  String get manga_ocr_default_engine => 'Default OCR engine';
+  @override
+  String get manga_ocr_engine_auto => 'Automatic (never uploads to Lens)';
+  @override
+  String get manga_ocr_engine_local_onnx => 'Local ONNX';
+  @override
+  String get manga_ocr_engine_google_lens => 'Google Lens';
+  @override
+  String get manga_google_lens_section => 'Full-page OCR (Google Lens)';
+  @override
+  String get manga_google_lens_privacy =>
+      'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+  @override
+  String get manga_google_lens_disclosure_title =>
+      'Send manga pages to Google Lens?';
+  @override
+  String get manga_google_lens_disclosure_body =>
+      'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get manga_google_lens_disclosure_accept => 'Agree and start OCR';
+  @override
+  String get manga_google_lens_disclosure_decline => 'Cancel';
+  @override
+  String get manga_reading_direction => 'Reading direction';
+  @override
+  String get manga_direction_rtl => 'Right to left';
+  @override
+  String get manga_direction_ltr => 'Left to right';
+  @override
+  String get manga_zoom => 'Zoom';
+  @override
+  String get manga_jump_to_page => 'Jump to page';
+  @override
+  String get manga_previous_page => 'Previous page';
+  @override
+  String get manga_next_page => 'Next page';
+  @override
+  String manga_page_number_hint({required Object total}) =>
+      'Page number (1-${total})';
+  @override
+  String get manga_import_direct => 'Import without OCR';
+  @override
+  String get manga_library => 'Manga';
+  @override
+  String get manga_import_action => 'Import Manga';
 }
 
 /// Flat map(s) containing all translations.
@@ -106069,6 +106828,48 @@ extension on _StringsEn {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
@@ -111531,6 +112332,48 @@ extension on _StringsAr {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
@@ -117014,6 +117857,48 @@ extension on _StringsDe {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
@@ -122496,6 +123381,48 @@ extension on _StringsEs {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
@@ -127984,6 +128911,48 @@ extension on _StringsFr {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
@@ -133454,6 +134423,48 @@ extension on _StringsId {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
@@ -138939,6 +139950,48 @@ extension on _StringsIt {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
@@ -144386,6 +145439,48 @@ extension on _StringsJa {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
@@ -149837,6 +150932,48 @@ extension on _StringsKo {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
@@ -155315,6 +156452,48 @@ extension on _StringsNl {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
@@ -160790,6 +161969,48 @@ extension on _StringsPtBr {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
@@ -166270,6 +167491,48 @@ extension on _StringsRu {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
@@ -171734,6 +172997,48 @@ extension on _StringsTh {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
@@ -177207,6 +178512,48 @@ extension on _StringsTr {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
@@ -182675,6 +184022,48 @@ extension on _StringsVi {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
@@ -188097,6 +189486,48 @@ extension on _StringsZhCn {
         return '删除这些文件';
       case 'anki_dedup_plan_journal':
         return '每一次改写和删除都会先记进备份文件夹里的日志。';
+      case 'manga_ocr_default_engine':
+        return '默认 OCR 引擎';
+      case 'manga_ocr_engine_auto':
+        return '自动（不会上传到 Lens）';
+      case 'manga_ocr_engine_local_onnx':
+        return '本地 ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return '整页识别（Google Lens）';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens 使用 Chromium 的非公开接口。仅在你明确选择 Lens 时上传页面；自动模式绝不会上传。';
+      case 'manga_google_lens_disclosure_title':
+        return '将漫画页面发送到 Google Lens？';
+      case 'manga_google_lens_disclosure_body':
+        return '识别本漫画会把尚无 OCR 文本的页面缩小为 JPEG 后发送给 Google，结果缓存在本设备。该接口并非官方公开 API，可能随时失效。只有同意后才会上传。';
+      case 'manga_google_lens_disclosure_accept':
+        return '同意并开始识别';
+      case 'manga_google_lens_disclosure_decline':
+        return '取消';
+      case 'manga_reading_direction':
+        return '阅读方向';
+      case 'manga_direction_rtl':
+        return '从右到左';
+      case 'manga_direction_ltr':
+        return '从左到右';
+      case 'manga_zoom':
+        return '缩放';
+      case 'manga_jump_to_page':
+        return '跳转页面';
+      case 'manga_previous_page':
+        return '上一页';
+      case 'manga_next_page':
+        return '下一页';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => '页码（1-${total}）';
+      case 'manga_import_direct':
+        return '直接导入';
+      case 'manga_library':
+        return '漫画';
+      case 'manga_import_action':
+        return '导入漫画';
       default:
         return null;
     }
@@ -193539,6 +194970,48 @@ extension on _StringsZhHk {
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
         return 'A journal of every rewrite and deletion is written to the backup folder first.';
+      case 'manga_ocr_default_engine':
+        return 'Default OCR engine';
+      case 'manga_ocr_engine_auto':
+        return 'Automatic (never uploads to Lens)';
+      case 'manga_ocr_engine_local_onnx':
+        return 'Local ONNX';
+      case 'manga_ocr_engine_google_lens':
+        return 'Google Lens';
+      case 'manga_google_lens_section':
+        return 'Full-page OCR (Google Lens)';
+      case 'manga_google_lens_privacy':
+        return 'Google Lens uses an unofficial Chromium endpoint. Pages are uploaded only when you explicitly select Lens; Automatic mode never uploads them.';
+      case 'manga_google_lens_disclosure_title':
+        return 'Send manga pages to Google Lens?';
+      case 'manga_google_lens_disclosure_body':
+        return 'Recognizing this manga sends a reduced JPEG copy of each page without OCR text to Google. Results are cached on this device. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'manga_google_lens_disclosure_accept':
+        return 'Agree and start OCR';
+      case 'manga_google_lens_disclosure_decline':
+        return 'Cancel';
+      case 'manga_reading_direction':
+        return 'Reading direction';
+      case 'manga_direction_rtl':
+        return 'Right to left';
+      case 'manga_direction_ltr':
+        return 'Left to right';
+      case 'manga_zoom':
+        return 'Zoom';
+      case 'manga_jump_to_page':
+        return 'Jump to page';
+      case 'manga_previous_page':
+        return 'Previous page';
+      case 'manga_next_page':
+        return 'Next page';
+      case 'manga_page_number_hint':
+        return ({required Object total}) => 'Page number (1-${total})';
+      case 'manga_import_direct':
+        return 'Import without OCR';
+      case 'manga_library':
+        return 'Manga';
+      case 'manga_import_action':
+        return 'Import Manga';
       default:
         return null;
     }
