@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45305 (2665 per locale)
+/// Strings: 45356 (2668 per locale)
 ///
 /// Built on 2026-07-27 at 10:10 UTC
 
@@ -3537,13 +3537,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String anki_lapis_restore_failed({required Object error}) =>
       'Restore failed: ${error}';
   String get anki_dedup_section => 'Anki media storage optimization';
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   String get anki_dedup_run => 'Deduplicate now';
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   String get anki_dedup_report_title => 'Media deduplication report';
   String anki_dedup_report_body(
           {required Object groups,
@@ -3559,6 +3554,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Deduplication failed: ${error}';
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  String get anki_dedup_plan_title => 'Files to delete';
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  String get anki_dedup_plan_delete => 'Delete these files';
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 // Path: <root>
@@ -9599,17 +9607,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki media storage optimization';
   @override
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  @override
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
-  @override
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   @override
   String get anki_dedup_run => 'Deduplicate now';
-  @override
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   @override
   String get anki_dedup_report_title => 'Media deduplication report';
   @override
@@ -9631,6 +9631,25 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  @override
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  @override
+  String get anki_dedup_plan_title => 'Files to delete';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => 'Delete these files';
+  @override
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 // Path: <root>
@@ -15739,17 +15758,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki media storage optimization';
   @override
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  @override
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
-  @override
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   @override
   String get anki_dedup_run => 'Deduplicate now';
-  @override
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   @override
   String get anki_dedup_report_title => 'Media deduplication report';
   @override
@@ -15771,6 +15782,25 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  @override
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  @override
+  String get anki_dedup_plan_title => 'Files to delete';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => 'Delete these files';
+  @override
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 // Path: <root>
@@ -21895,17 +21925,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki media storage optimization';
   @override
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  @override
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
-  @override
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   @override
   String get anki_dedup_run => 'Deduplicate now';
-  @override
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   @override
   String get anki_dedup_report_title => 'Media deduplication report';
   @override
@@ -21927,6 +21949,25 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  @override
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  @override
+  String get anki_dedup_plan_title => 'Files to delete';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => 'Delete these files';
+  @override
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 // Path: <root>
@@ -28062,17 +28103,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki media storage optimization';
   @override
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  @override
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
-  @override
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   @override
   String get anki_dedup_run => 'Deduplicate now';
-  @override
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   @override
   String get anki_dedup_report_title => 'Media deduplication report';
   @override
@@ -28094,6 +28127,25 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  @override
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  @override
+  String get anki_dedup_plan_title => 'Files to delete';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => 'Delete these files';
+  @override
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 // Path: <root>
@@ -34158,17 +34210,9 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki media storage optimization';
   @override
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  @override
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
-  @override
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   @override
   String get anki_dedup_run => 'Deduplicate now';
-  @override
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   @override
   String get anki_dedup_report_title => 'Media deduplication report';
   @override
@@ -34190,6 +34234,25 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  @override
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  @override
+  String get anki_dedup_plan_title => 'Files to delete';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => 'Delete these files';
+  @override
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 // Path: <root>
@@ -40300,17 +40363,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki media storage optimization';
   @override
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  @override
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
-  @override
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   @override
   String get anki_dedup_run => 'Deduplicate now';
-  @override
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   @override
   String get anki_dedup_report_title => 'Media deduplication report';
   @override
@@ -40332,6 +40387,25 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  @override
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  @override
+  String get anki_dedup_plan_title => 'Files to delete';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => 'Delete these files';
+  @override
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 // Path: <root>
@@ -46259,17 +46333,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki media storage optimization';
   @override
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  @override
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
-  @override
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   @override
   String get anki_dedup_run => 'Deduplicate now';
-  @override
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   @override
   String get anki_dedup_report_title => 'Media deduplication report';
   @override
@@ -46291,6 +46357,25 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  @override
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  @override
+  String get anki_dedup_plan_title => 'Files to delete';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => 'Delete these files';
+  @override
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 // Path: <root>
@@ -52220,17 +52305,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki media storage optimization';
   @override
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  @override
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
-  @override
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   @override
   String get anki_dedup_run => 'Deduplicate now';
-  @override
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   @override
   String get anki_dedup_report_title => 'Media deduplication report';
   @override
@@ -52252,6 +52329,25 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  @override
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  @override
+  String get anki_dedup_plan_title => 'Files to delete';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => 'Delete these files';
+  @override
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 // Path: <root>
@@ -58342,17 +58438,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki media storage optimization';
   @override
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  @override
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
-  @override
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   @override
   String get anki_dedup_run => 'Deduplicate now';
-  @override
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   @override
   String get anki_dedup_report_title => 'Media deduplication report';
   @override
@@ -58374,6 +58462,25 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  @override
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  @override
+  String get anki_dedup_plan_title => 'Files to delete';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => 'Delete these files';
+  @override
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 // Path: <root>
@@ -64477,17 +64584,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki media storage optimization';
   @override
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  @override
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
-  @override
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   @override
   String get anki_dedup_run => 'Deduplicate now';
-  @override
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   @override
   String get anki_dedup_report_title => 'Media deduplication report';
   @override
@@ -64509,6 +64608,25 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  @override
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  @override
+  String get anki_dedup_plan_title => 'Files to delete';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => 'Delete these files';
+  @override
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 // Path: <root>
@@ -70596,17 +70714,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki media storage optimization';
   @override
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  @override
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
-  @override
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   @override
   String get anki_dedup_run => 'Deduplicate now';
-  @override
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   @override
   String get anki_dedup_report_title => 'Media deduplication report';
   @override
@@ -70628,6 +70738,25 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  @override
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  @override
+  String get anki_dedup_plan_title => 'Files to delete';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => 'Delete these files';
+  @override
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 // Path: <root>
@@ -76663,17 +76792,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki media storage optimization';
   @override
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  @override
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
-  @override
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   @override
   String get anki_dedup_run => 'Deduplicate now';
-  @override
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   @override
   String get anki_dedup_report_title => 'Media deduplication report';
   @override
@@ -76695,6 +76816,25 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  @override
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  @override
+  String get anki_dedup_plan_title => 'Files to delete';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => 'Delete these files';
+  @override
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 // Path: <root>
@@ -82762,17 +82902,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki media storage optimization';
   @override
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  @override
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
-  @override
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   @override
   String get anki_dedup_run => 'Deduplicate now';
-  @override
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   @override
   String get anki_dedup_report_title => 'Media deduplication report';
   @override
@@ -82794,6 +82926,25 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  @override
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  @override
+  String get anki_dedup_plan_title => 'Files to delete';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => 'Delete these files';
+  @override
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 // Path: <root>
@@ -88846,17 +88997,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki media storage optimization';
   @override
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  @override
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
-  @override
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   @override
   String get anki_dedup_run => 'Deduplicate now';
-  @override
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   @override
   String get anki_dedup_report_title => 'Media deduplication report';
   @override
@@ -88878,6 +89021,25 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  @override
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  @override
+  String get anki_dedup_plan_title => 'Files to delete';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => 'Delete these files';
+  @override
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 // Path: <root>
@@ -94513,16 +94675,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki 媒体存储优化';
   @override
-  String get anki_dedup_auto => '每周自动媒体去重';
-  @override
-  String get anki_dedup_auto_hint =>
-      '找出字节完全相同的重复媒体文件，把所有引用统一指向一份后删除多余副本。绝不重编码、不降画质。';
-  @override
   String get anki_dedup_scan => '扫描重复项（不做改动）';
   @override
   String get anki_dedup_run => '立即去重';
-  @override
-  String get anki_dedup_run_confirm => '改写引用并删除字节完全相同的重复文件？操作记录会先写入备份目录。';
   @override
   String get anki_dedup_report_title => '媒体去重报告';
   @override
@@ -94542,6 +94697,23 @@ class _StringsZhCn extends _StringsEn {
   String anki_dedup_failed({required Object error}) => '去重失败：${error}';
   @override
   String get anki_dedup_unavailable => '需要本机运行 Anki（AnkiConnect）。';
+  @override
+  String get anki_dedup_run_hint => '先扫描并列出将要删除的文件，你确认之后才会真正删除。';
+  @override
+  String get anki_dedup_plan_title => '将要删除的文件';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '共 ${count} 个多余副本，可回收 ${size}。每个文件都保留一份，所有引用先改指到保留的那一份；不重新编码任何文件。';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      '删除 ${file}（${size}）——保留 ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => '删除这些文件';
+  @override
+  String get anki_dedup_plan_journal => '每一次改写和删除都会先记进备份文件夹里的日志。';
 }
 
 // Path: <root>
@@ -100390,17 +100562,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_dedup_section => 'Anki media storage optimization';
   @override
-  String get anki_dedup_auto => 'Deduplicate media weekly';
-  @override
-  String get anki_dedup_auto_hint =>
-      'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
-  @override
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   @override
   String get anki_dedup_run => 'Deduplicate now';
-  @override
-  String get anki_dedup_run_confirm =>
-      'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
   @override
   String get anki_dedup_report_title => 'Media deduplication report';
   @override
@@ -100422,6 +100586,25 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_dedup_unavailable =>
       'Requires Anki running on this machine (AnkiConnect).';
+  @override
+  String get anki_dedup_run_hint =>
+      'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+  @override
+  String get anki_dedup_plan_title => 'Files to delete';
+  @override
+  String anki_dedup_plan_intro({required Object count, required Object size}) =>
+      '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+  @override
+  String anki_dedup_plan_entry(
+          {required Object file,
+          required Object size,
+          required Object canonical}) =>
+      'Delete ${file} (${size}) - keeping ${canonical}';
+  @override
+  String get anki_dedup_plan_delete => 'Delete these files';
+  @override
+  String get anki_dedup_plan_journal =>
+      'A journal of every rewrite and deletion is written to the backup folder first.';
 }
 
 /// Flat map(s) containing all translations.
@@ -105846,16 +106029,10 @@ extension on _StringsEn {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -105875,6 +106052,23 @@ extension on _StringsEn {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
@@ -111297,16 +111491,10 @@ extension on _StringsAr {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -111326,6 +111514,23 @@ extension on _StringsAr {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
@@ -116769,16 +116974,10 @@ extension on _StringsDe {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -116798,6 +116997,23 @@ extension on _StringsDe {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
@@ -122240,16 +122456,10 @@ extension on _StringsEs {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -122269,6 +122479,23 @@ extension on _StringsEs {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
@@ -127717,16 +127944,10 @@ extension on _StringsFr {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -127746,6 +127967,23 @@ extension on _StringsFr {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
@@ -133176,16 +133414,10 @@ extension on _StringsId {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -133205,6 +133437,23 @@ extension on _StringsId {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
@@ -138650,16 +138899,10 @@ extension on _StringsIt {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -138679,6 +138922,23 @@ extension on _StringsIt {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
@@ -144086,16 +144346,10 @@ extension on _StringsJa {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -144115,6 +144369,23 @@ extension on _StringsJa {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
@@ -149526,16 +149797,10 @@ extension on _StringsKo {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -149555,6 +149820,23 @@ extension on _StringsKo {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
@@ -154993,16 +155275,10 @@ extension on _StringsNl {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -155022,6 +155298,23 @@ extension on _StringsNl {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
@@ -160457,16 +160750,10 @@ extension on _StringsPtBr {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -160486,6 +160773,23 @@ extension on _StringsPtBr {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
@@ -165926,16 +166230,10 @@ extension on _StringsRu {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -165955,6 +166253,23 @@ extension on _StringsRu {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
@@ -171379,16 +171694,10 @@ extension on _StringsTh {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -171408,6 +171717,23 @@ extension on _StringsTh {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
@@ -176841,16 +177167,10 @@ extension on _StringsTr {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -176870,6 +177190,23 @@ extension on _StringsTr {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
@@ -182298,16 +182635,10 @@ extension on _StringsVi {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -182327,6 +182658,23 @@ extension on _StringsVi {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
@@ -187709,16 +188057,10 @@ extension on _StringsZhCn {
         return ({required Object error}) => '恢复失败：${error}';
       case 'anki_dedup_section':
         return 'Anki 媒体存储优化';
-      case 'anki_dedup_auto':
-        return '每周自动媒体去重';
-      case 'anki_dedup_auto_hint':
-        return '找出字节完全相同的重复媒体文件，把所有引用统一指向一份后删除多余副本。绝不重编码、不降画质。';
       case 'anki_dedup_scan':
         return '扫描重复项（不做改动）';
       case 'anki_dedup_run':
         return '立即去重';
-      case 'anki_dedup_run_confirm':
-        return '改写引用并删除字节完全相同的重复文件？操作记录会先写入备份目录。';
       case 'anki_dedup_report_title':
         return '媒体去重报告';
       case 'anki_dedup_report_body':
@@ -187738,6 +188080,23 @@ extension on _StringsZhCn {
         return ({required Object error}) => '去重失败：${error}';
       case 'anki_dedup_unavailable':
         return '需要本机运行 Anki（AnkiConnect）。';
+      case 'anki_dedup_run_hint':
+        return '先扫描并列出将要删除的文件，你确认之后才会真正删除。';
+      case 'anki_dedup_plan_title':
+        return '将要删除的文件';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '共 ${count} 个多余副本，可回收 ${size}。每个文件都保留一份，所有引用先改指到保留的那一份；不重新编码任何文件。';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            '删除 ${file}（${size}）——保留 ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return '删除这些文件';
+      case 'anki_dedup_plan_journal':
+        return '每一次改写和删除都会先记进备份文件夹里的日志。';
       default:
         return null;
     }
@@ -193140,16 +193499,10 @@ extension on _StringsZhHk {
         return ({required Object error}) => 'Restore failed: ${error}';
       case 'anki_dedup_section':
         return 'Anki media storage optimization';
-      case 'anki_dedup_auto':
-        return 'Deduplicate media weekly';
-      case 'anki_dedup_auto_hint':
-        return 'Finds byte-identical duplicate media files, points every reference at one copy, then deletes the extras. Never re-encodes anything.';
       case 'anki_dedup_scan':
         return 'Scan for duplicates (no changes)';
       case 'anki_dedup_run':
         return 'Deduplicate now';
-      case 'anki_dedup_run_confirm':
-        return 'Rewrite references and delete byte-identical duplicate files? A journal is written to the backup folder first.';
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
@@ -193169,6 +193522,23 @@ extension on _StringsZhHk {
         return ({required Object error}) => 'Deduplication failed: ${error}';
       case 'anki_dedup_unavailable':
         return 'Requires Anki running on this machine (AnkiConnect).';
+      case 'anki_dedup_run_hint':
+        return 'Scans first and lists exactly what would be deleted; nothing is removed until you confirm.';
+      case 'anki_dedup_plan_title':
+        return 'Files to delete';
+      case 'anki_dedup_plan_intro':
+        return ({required Object count, required Object size}) =>
+            '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
+      case 'anki_dedup_plan_entry':
+        return (
+                {required Object file,
+                required Object size,
+                required Object canonical}) =>
+            'Delete ${file} (${size}) - keeping ${canonical}';
+      case 'anki_dedup_plan_delete':
+        return 'Delete these files';
+      case 'anki_dedup_plan_journal':
+        return 'A journal of every rewrite and deletion is written to the backup folder first.';
       default:
         return null;
     }
