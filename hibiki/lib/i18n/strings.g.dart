@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44064 (2592 per locale)
+/// Strings: 44574 (2622 per locale)
 ///
-/// Built on 2026-07-27 at 05:46 UTC
+/// Built on 2026-07-27 at 06:19 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1883,6 +1883,41 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Removing a source does not delete imported media.';
   String get media_source_rescan => 'Rescan';
   String get media_source_scan_error => 'Scan failed';
+  String get media_tracking_access_token => 'Access token';
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  String get media_tracking_account => 'Bangumi account';
+  String get media_tracking_add_mapping => 'Add mapping';
+  String get media_tracking_anime => 'Anime';
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  String get media_tracking_chapter => 'Chapter';
+  String get media_tracking_connect => 'Connect and verify';
+  String get media_tracking_connected_as => 'Connected account';
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  String get media_tracking_episode => 'Episode';
+  String get media_tracking_kind => 'Category';
+  String get media_tracking_local_item => 'Local item';
+  String get media_tracking_manga => 'Manga';
+  String get media_tracking_mappings => 'Item mappings';
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  String get media_tracking_novel => 'Novel';
+  String get media_tracking_pending => 'Pending updates';
+  String get media_tracking_progress_mode => 'Progress unit';
+  String get media_tracking_progress_offset => 'Starting number';
+  String get media_tracking_saved => 'Mapping saved';
+  String get media_tracking_search => 'Search Bangumi';
+  String get media_tracking_search_results => 'Bangumi results';
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  String get media_tracking_sync_now => 'Sync now';
+  String get media_tracking_sync_success => 'Sync completed';
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  String get media_tracking_volume => 'Volume';
   String get microphone_permission_denied =>
       'Microphone permission is required to record.';
   String get mining_audio_quality => 'Audio quality';
@@ -2167,6 +2202,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_destination_system => 'System';
   String get settings_destination_system_summary =>
       'General, updates & diagnostics';
+  String get settings_destination_tracking => 'Media tracking';
   String get settings_destination_video => 'Video';
   String get settings_experimental_suffix => ' (experimental)';
   String get settings_search_hint => 'Search settings';
@@ -6498,6 +6534,70 @@ class _StringsAr extends _StringsEn {
   @override
   String get media_source_scan_error => 'Scan failed';
   @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_volume => 'Volume';
+  @override
   String get microphone_permission_denied => 'يلزم إذن الميكروفون للتسجيل.';
   @override
   String get mining_audio_quality => 'Audio quality';
@@ -7029,6 +7129,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get settings_destination_system_summary =>
       'General, updates & diagnostics';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
   @override
   String get settings_destination_video => 'فيديو';
   @override
@@ -12424,6 +12526,70 @@ class _StringsDe extends _StringsEn {
   @override
   String get media_source_scan_error => 'Scan failed';
   @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_volume => 'Volume';
+  @override
   String get microphone_permission_denied =>
       'Für die Aufnahme ist die Mikrofonberechtigung erforderlich.';
   @override
@@ -12960,6 +13126,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get settings_destination_system_summary =>
       'General, updates & diagnostics';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
   @override
   String get settings_destination_video => 'Video';
   @override
@@ -18393,6 +18561,70 @@ class _StringsEs extends _StringsEn {
   @override
   String get media_source_scan_error => 'Scan failed';
   @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_volume => 'Volume';
+  @override
   String get microphone_permission_denied =>
       'Se requiere permiso de micrófono para grabar.';
   @override
@@ -18932,6 +19164,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get settings_destination_system_summary =>
       'General, updates & diagnostics';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
   @override
   String get settings_destination_video => 'Vídeo';
   @override
@@ -24381,6 +24615,70 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_source_scan_error => 'Scan failed';
   @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_volume => 'Volume';
+  @override
   String get microphone_permission_denied =>
       'L\'autorisation du microphone est requise pour enregistrer.';
   @override
@@ -24922,6 +25220,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get settings_destination_system_summary =>
       'General, updates & diagnostics';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
   @override
   String get settings_destination_video => 'Vidéo';
   @override
@@ -30336,6 +30636,70 @@ class _StringsId extends _StringsEn {
   @override
   String get media_source_scan_error => 'Scan failed';
   @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_volume => 'Volume';
+  @override
   String get microphone_permission_denied =>
       'Izin mikrofon diperlukan untuk merekam.';
   @override
@@ -30873,6 +31237,8 @@ class _StringsId extends _StringsEn {
   @override
   String get settings_destination_system_summary =>
       'General, updates & diagnostics';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
   @override
   String get settings_destination_video => 'Video';
   @override
@@ -36280,6 +36646,70 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_source_scan_error => 'Scan failed';
   @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_volume => 'Volume';
+  @override
   String get microphone_permission_denied =>
       'È necessaria l\'autorizzazione del microfono per registrare.';
   @override
@@ -36820,6 +37250,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get settings_destination_system_summary =>
       'General, updates & diagnostics';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
   @override
   String get settings_destination_video => 'Video';
   @override
@@ -42177,6 +42609,70 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_source_scan_error => 'Scan failed';
   @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_volume => 'Volume';
+  @override
   String get microphone_permission_denied => '録音にはマイクの権限が必要です。';
   @override
   String get mining_audio_quality => 'Audio quality';
@@ -42703,6 +43199,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get settings_destination_system_summary =>
       'General, updates & diagnostics';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
   @override
   String get settings_destination_video => '動画';
   @override
@@ -47961,6 +48459,70 @@ class _StringsKo extends _StringsEn {
   @override
   String get media_source_scan_error => 'Scan failed';
   @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_volume => 'Volume';
+  @override
   String get microphone_permission_denied => '녹음하려면 마이크 권한이 필요합니다.';
   @override
   String get mining_audio_quality => 'Audio quality';
@@ -48483,6 +49045,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get settings_destination_system_summary =>
       'General, updates & diagnostics';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
   @override
   String get settings_destination_video => '비디오';
   @override
@@ -53806,6 +54370,70 @@ class _StringsNl extends _StringsEn {
   @override
   String get media_source_scan_error => 'Scan failed';
   @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_volume => 'Volume';
+  @override
   String get microphone_permission_denied =>
       'Microfoontoestemming is vereist om op te nemen.';
   @override
@@ -54342,6 +54970,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get settings_destination_system_summary =>
       'General, updates & diagnostics';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
   @override
   String get settings_destination_video => 'Video';
   @override
@@ -59764,6 +60394,70 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_source_scan_error => 'Scan failed';
   @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_volume => 'Volume';
+  @override
   String get microphone_permission_denied =>
       'É necessária permissão de microfone para gravar.';
   @override
@@ -60301,6 +60995,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get settings_destination_system_summary =>
       'General, updates & diagnostics';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
   @override
   String get settings_destination_video => 'Vídeo';
   @override
@@ -65715,6 +66411,70 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_source_scan_error => 'Scan failed';
   @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_volume => 'Volume';
+  @override
   String get microphone_permission_denied =>
       'Для записи требуется доступ к микрофону.';
   @override
@@ -66251,6 +67011,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get settings_destination_system_summary =>
       'General, updates & diagnostics';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
   @override
   String get settings_destination_video => 'Видео';
   @override
@@ -71633,6 +72395,70 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_source_scan_error => 'Scan failed';
   @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_volume => 'Volume';
+  @override
   String get microphone_permission_denied =>
       'ต้องมีสิทธิ์เข้าถึงไมโครโฟนเพื่อบันทึกเสียง';
   @override
@@ -72164,6 +72990,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get settings_destination_system_summary =>
       'General, updates & diagnostics';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
   @override
   String get settings_destination_video => 'วิดีโอ';
   @override
@@ -77544,6 +78372,70 @@ class _StringsTr extends _StringsEn {
   @override
   String get media_source_scan_error => 'Scan failed';
   @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_volume => 'Volume';
+  @override
   String get microphone_permission_denied =>
       'Kayıt için mikrofon izni gereklidir.';
   @override
@@ -78078,6 +78970,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get settings_destination_system_summary =>
       'General, updates & diagnostics';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
   @override
   String get settings_destination_video => 'Video';
   @override
@@ -83461,6 +84355,70 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_source_scan_error => 'Scan failed';
   @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_volume => 'Volume';
+  @override
   String get microphone_permission_denied => 'Cần quyền micro để ghi âm.';
   @override
   String get mining_audio_quality => 'Audio quality';
@@ -83995,6 +84953,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get settings_destination_system_summary =>
       'General, updates & diagnostics';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
   @override
   String get settings_destination_video => 'Video';
   @override
@@ -89160,6 +90120,66 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_source_scan_error => '扫描失败';
   @override
+  String get media_tracking_access_token => '访问令牌';
+  @override
+  String get media_tracking_access_token_hint => '创建具有写入权限的个人访问令牌';
+  @override
+  String get media_tracking_account => 'Bangumi 账号';
+  @override
+  String get media_tracking_add_mapping => '添加映射';
+  @override
+  String get media_tracking_anime => '番剧';
+  @override
+  String get media_tracking_bookmeter_note =>
+      '读书 Meter 未公开个人写入 API，因此仅参考其进度交互，不进行网页抓取。';
+  @override
+  String get media_tracking_chapter => '话';
+  @override
+  String get media_tracking_connect => '连接并验证';
+  @override
+  String get media_tracking_connected_as => '已连接账号';
+  @override
+  String get media_tracking_delete_mapping => '移除映射';
+  @override
+  String get media_tracking_episode => '集';
+  @override
+  String get media_tracking_kind => '分类';
+  @override
+  String get media_tracking_local_item => '本地条目';
+  @override
+  String get media_tracking_manga => '漫画';
+  @override
+  String get media_tracking_mappings => '条目映射';
+  @override
+  String get media_tracking_no_mappings =>
+      '暂无手动映射。首次看完一集或产生阅读进度时会自动匹配；歧义条目可在此手动添加。';
+  @override
+  String get media_tracking_novel => '小说';
+  @override
+  String get media_tracking_pending => '待同步记录';
+  @override
+  String get media_tracking_progress_mode => '进度单位';
+  @override
+  String get media_tracking_progress_offset => '起始编号';
+  @override
+  String get media_tracking_saved => '映射已保存';
+  @override
+  String get media_tracking_search => '搜索 Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi 搜索结果';
+  @override
+  String get media_tracking_summary => '自动将番剧、小说和漫画进度记录到 Bangumi';
+  @override
+  String get media_tracking_sync_failed => '同步失败，记录已保留在队列中。';
+  @override
+  String get media_tracking_sync_now => '立即同步';
+  @override
+  String get media_tracking_sync_success => '同步完成';
+  @override
+  String get media_tracking_token_required => '请先输入并验证访问令牌';
+  @override
+  String get media_tracking_volume => '卷';
+  @override
   String get microphone_permission_denied => '录音需要麦克风权限。';
   @override
   String get mining_audio_quality => '音频质量';
@@ -89667,6 +90687,8 @@ class _StringsZhCn extends _StringsEn {
   String get settings_destination_system => '系统';
   @override
   String get settings_destination_system_summary => '通用、更新与诊断';
+  @override
+  String get settings_destination_tracking => '媒体记录';
   @override
   String get settings_destination_video => '视频';
   @override
@@ -94794,6 +95816,70 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_source_scan_error => 'Scan failed';
   @override
+  String get media_tracking_access_token => 'Access token';
+  @override
+  String get media_tracking_access_token_hint =>
+      'Create a personal access token with write permission';
+  @override
+  String get media_tracking_account => 'Bangumi account';
+  @override
+  String get media_tracking_add_mapping => 'Add mapping';
+  @override
+  String get media_tracking_anime => 'Anime';
+  @override
+  String get media_tracking_bookmeter_note =>
+      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+  @override
+  String get media_tracking_chapter => 'Chapter';
+  @override
+  String get media_tracking_connect => 'Connect and verify';
+  @override
+  String get media_tracking_connected_as => 'Connected account';
+  @override
+  String get media_tracking_delete_mapping => 'Remove mapping';
+  @override
+  String get media_tracking_episode => 'Episode';
+  @override
+  String get media_tracking_kind => 'Category';
+  @override
+  String get media_tracking_local_item => 'Local item';
+  @override
+  String get media_tracking_manga => 'Manga';
+  @override
+  String get media_tracking_mappings => 'Item mappings';
+  @override
+  String get media_tracking_no_mappings =>
+      'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+  @override
+  String get media_tracking_novel => 'Novel';
+  @override
+  String get media_tracking_pending => 'Pending updates';
+  @override
+  String get media_tracking_progress_mode => 'Progress unit';
+  @override
+  String get media_tracking_progress_offset => 'Starting number';
+  @override
+  String get media_tracking_saved => 'Mapping saved';
+  @override
+  String get media_tracking_search => 'Search Bangumi';
+  @override
+  String get media_tracking_search_results => 'Bangumi results';
+  @override
+  String get media_tracking_summary =>
+      'Automatically record anime, novel, and manga progress to Bangumi';
+  @override
+  String get media_tracking_sync_failed =>
+      'Sync failed. The update remains queued.';
+  @override
+  String get media_tracking_sync_now => 'Sync now';
+  @override
+  String get media_tracking_sync_success => 'Sync completed';
+  @override
+  String get media_tracking_token_required =>
+      'Enter and verify an access token first';
+  @override
+  String get media_tracking_volume => 'Volume';
+  @override
   String get microphone_permission_denied => '錄音需要麥克風權限。';
   @override
   String get mining_audio_quality => 'Audio quality';
@@ -95310,6 +96396,8 @@ class _StringsZhHk extends _StringsEn {
   String get settings_destination_system => '系統';
   @override
   String get settings_destination_system_summary => '通用、更新與診斷';
+  @override
+  String get settings_destination_tracking => 'Media tracking';
   @override
   String get settings_destination_video => '影片';
   @override
@@ -100235,6 +101323,64 @@ extension on _StringsEn {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return 'Microphone permission is required to record.';
       case 'mining_audio_quality':
@@ -100735,6 +101881,8 @@ extension on _StringsEn {
         return 'System';
       case 'settings_destination_system_summary':
         return 'General, updates & diagnostics';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return 'Video';
       case 'settings_experimental_suffix':
@@ -105535,6 +106683,64 @@ extension on _StringsAr {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return 'يلزم إذن الميكروفون للتسجيل.';
       case 'mining_audio_quality':
@@ -106035,6 +107241,8 @@ extension on _StringsAr {
         return 'النظام';
       case 'settings_destination_system_summary':
         return 'General, updates & diagnostics';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return 'فيديو';
       case 'settings_experimental_suffix':
@@ -110840,6 +112048,64 @@ extension on _StringsDe {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return 'Für die Aufnahme ist die Mikrofonberechtigung erforderlich.';
       case 'mining_audio_quality':
@@ -111344,6 +112610,8 @@ extension on _StringsDe {
         return 'System';
       case 'settings_destination_system_summary':
         return 'General, updates & diagnostics';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return 'Video';
       case 'settings_experimental_suffix':
@@ -116159,6 +117427,64 @@ extension on _StringsEs {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return 'Se requiere permiso de micrófono para grabar.';
       case 'mining_audio_quality':
@@ -116664,6 +117990,8 @@ extension on _StringsEs {
         return 'Sistema';
       case 'settings_destination_system_summary':
         return 'General, updates & diagnostics';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return 'Vídeo';
       case 'settings_experimental_suffix':
@@ -121481,6 +122809,64 @@ extension on _StringsFr {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return 'L\'autorisation du microphone est requise pour enregistrer.';
       case 'mining_audio_quality':
@@ -121986,6 +123372,8 @@ extension on _StringsFr {
         return 'Système';
       case 'settings_destination_system_summary':
         return 'General, updates & diagnostics';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return 'Vidéo';
       case 'settings_experimental_suffix':
@@ -126798,6 +128186,64 @@ extension on _StringsId {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return 'Izin mikrofon diperlukan untuk merekam.';
       case 'mining_audio_quality':
@@ -127299,6 +128745,8 @@ extension on _StringsId {
         return 'Sistem';
       case 'settings_destination_system_summary':
         return 'General, updates & diagnostics';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return 'Video';
       case 'settings_experimental_suffix':
@@ -132107,6 +133555,64 @@ extension on _StringsIt {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return 'È necessaria l\'autorizzazione del microfono per registrare.';
       case 'mining_audio_quality':
@@ -132610,6 +134116,8 @@ extension on _StringsIt {
         return 'Sistema';
       case 'settings_destination_system_summary':
         return 'General, updates & diagnostics';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return 'Video';
       case 'settings_experimental_suffix':
@@ -137413,6 +138921,64 @@ extension on _StringsJa {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return '録音にはマイクの権限が必要です。';
       case 'mining_audio_quality':
@@ -137913,6 +139479,8 @@ extension on _StringsJa {
         return 'システム';
       case 'settings_destination_system_summary':
         return 'General, updates & diagnostics';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return '動画';
       case 'settings_experimental_suffix':
@@ -142698,6 +144266,64 @@ extension on _StringsKo {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return '녹음하려면 마이크 권한이 필요합니다.';
       case 'mining_audio_quality':
@@ -143198,6 +144824,8 @@ extension on _StringsKo {
         return '시스템';
       case 'settings_destination_system_summary':
         return 'General, updates & diagnostics';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return '비디오';
       case 'settings_experimental_suffix':
@@ -147997,6 +149625,64 @@ extension on _StringsNl {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return 'Microfoontoestemming is vereist om op te nemen.';
       case 'mining_audio_quality':
@@ -148500,6 +150186,8 @@ extension on _StringsNl {
         return 'Systeem';
       case 'settings_destination_system_summary':
         return 'General, updates & diagnostics';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return 'Video';
       case 'settings_experimental_suffix':
@@ -153310,6 +154998,64 @@ extension on _StringsPtBr {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return 'É necessária permissão de microfone para gravar.';
       case 'mining_audio_quality':
@@ -153814,6 +155560,8 @@ extension on _StringsPtBr {
         return 'Sistema';
       case 'settings_destination_system_summary':
         return 'General, updates & diagnostics';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return 'Vídeo';
       case 'settings_experimental_suffix':
@@ -158624,6 +160372,64 @@ extension on _StringsRu {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return 'Для записи требуется доступ к микрофону.';
       case 'mining_audio_quality':
@@ -159128,6 +160934,8 @@ extension on _StringsRu {
         return 'Система';
       case 'settings_destination_system_summary':
         return 'General, updates & diagnostics';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return 'Видео';
       case 'settings_experimental_suffix':
@@ -163931,6 +165739,64 @@ extension on _StringsTh {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return 'ต้องมีสิทธิ์เข้าถึงไมโครโฟนเพื่อบันทึกเสียง';
       case 'mining_audio_quality':
@@ -164432,6 +166298,8 @@ extension on _StringsTh {
         return 'ระบบ';
       case 'settings_destination_system_summary':
         return 'General, updates & diagnostics';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return 'วิดีโอ';
       case 'settings_experimental_suffix':
@@ -169236,6 +171104,64 @@ extension on _StringsTr {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return 'Kayıt için mikrofon izni gereklidir.';
       case 'mining_audio_quality':
@@ -169738,6 +171664,8 @@ extension on _StringsTr {
         return 'Sistem';
       case 'settings_destination_system_summary':
         return 'General, updates & diagnostics';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return 'Video';
       case 'settings_experimental_suffix':
@@ -174542,6 +176470,64 @@ extension on _StringsVi {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return 'Cần quyền micro để ghi âm.';
       case 'mining_audio_quality':
@@ -175044,6 +177030,8 @@ extension on _StringsVi {
         return 'Hệ thống';
       case 'settings_destination_system_summary':
         return 'General, updates & diagnostics';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return 'Video';
       case 'settings_experimental_suffix':
@@ -179826,6 +181814,64 @@ extension on _StringsZhCn {
         return '重新扫描';
       case 'media_source_scan_error':
         return '扫描失败';
+      case 'media_tracking_access_token':
+        return '访问令牌';
+      case 'media_tracking_access_token_hint':
+        return '创建具有写入权限的个人访问令牌';
+      case 'media_tracking_account':
+        return 'Bangumi 账号';
+      case 'media_tracking_add_mapping':
+        return '添加映射';
+      case 'media_tracking_anime':
+        return '番剧';
+      case 'media_tracking_bookmeter_note':
+        return '读书 Meter 未公开个人写入 API，因此仅参考其进度交互，不进行网页抓取。';
+      case 'media_tracking_chapter':
+        return '话';
+      case 'media_tracking_connect':
+        return '连接并验证';
+      case 'media_tracking_connected_as':
+        return '已连接账号';
+      case 'media_tracking_delete_mapping':
+        return '移除映射';
+      case 'media_tracking_episode':
+        return '集';
+      case 'media_tracking_kind':
+        return '分类';
+      case 'media_tracking_local_item':
+        return '本地条目';
+      case 'media_tracking_manga':
+        return '漫画';
+      case 'media_tracking_mappings':
+        return '条目映射';
+      case 'media_tracking_no_mappings':
+        return '暂无手动映射。首次看完一集或产生阅读进度时会自动匹配；歧义条目可在此手动添加。';
+      case 'media_tracking_novel':
+        return '小说';
+      case 'media_tracking_pending':
+        return '待同步记录';
+      case 'media_tracking_progress_mode':
+        return '进度单位';
+      case 'media_tracking_progress_offset':
+        return '起始编号';
+      case 'media_tracking_saved':
+        return '映射已保存';
+      case 'media_tracking_search':
+        return '搜索 Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi 搜索结果';
+      case 'media_tracking_summary':
+        return '自动将番剧、小说和漫画进度记录到 Bangumi';
+      case 'media_tracking_sync_failed':
+        return '同步失败，记录已保留在队列中。';
+      case 'media_tracking_sync_now':
+        return '立即同步';
+      case 'media_tracking_sync_success':
+        return '同步完成';
+      case 'media_tracking_token_required':
+        return '请先输入并验证访问令牌';
+      case 'media_tracking_volume':
+        return '卷';
       case 'microphone_permission_denied':
         return '录音需要麦克风权限。';
       case 'mining_audio_quality':
@@ -180326,6 +182372,8 @@ extension on _StringsZhCn {
         return '系统';
       case 'settings_destination_system_summary':
         return '通用、更新与诊断';
+      case 'settings_destination_tracking':
+        return '媒体记录';
       case 'settings_destination_video':
         return '视频';
       case 'settings_experimental_suffix':
@@ -185094,6 +187142,64 @@ extension on _StringsZhHk {
         return 'Rescan';
       case 'media_source_scan_error':
         return 'Scan failed';
+      case 'media_tracking_access_token':
+        return 'Access token';
+      case 'media_tracking_access_token_hint':
+        return 'Create a personal access token with write permission';
+      case 'media_tracking_account':
+        return 'Bangumi account';
+      case 'media_tracking_add_mapping':
+        return 'Add mapping';
+      case 'media_tracking_anime':
+        return 'Anime';
+      case 'media_tracking_bookmeter_note':
+        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
+      case 'media_tracking_chapter':
+        return 'Chapter';
+      case 'media_tracking_connect':
+        return 'Connect and verify';
+      case 'media_tracking_connected_as':
+        return 'Connected account';
+      case 'media_tracking_delete_mapping':
+        return 'Remove mapping';
+      case 'media_tracking_episode':
+        return 'Episode';
+      case 'media_tracking_kind':
+        return 'Category';
+      case 'media_tracking_local_item':
+        return 'Local item';
+      case 'media_tracking_manga':
+        return 'Manga';
+      case 'media_tracking_mappings':
+        return 'Item mappings';
+      case 'media_tracking_no_mappings':
+        return 'No manual mappings yet. Hibiki matches automatically on the first completed episode or reading progress; add ambiguous items here.';
+      case 'media_tracking_novel':
+        return 'Novel';
+      case 'media_tracking_pending':
+        return 'Pending updates';
+      case 'media_tracking_progress_mode':
+        return 'Progress unit';
+      case 'media_tracking_progress_offset':
+        return 'Starting number';
+      case 'media_tracking_saved':
+        return 'Mapping saved';
+      case 'media_tracking_search':
+        return 'Search Bangumi';
+      case 'media_tracking_search_results':
+        return 'Bangumi results';
+      case 'media_tracking_summary':
+        return 'Automatically record anime, novel, and manga progress to Bangumi';
+      case 'media_tracking_sync_failed':
+        return 'Sync failed. The update remains queued.';
+      case 'media_tracking_sync_now':
+        return 'Sync now';
+      case 'media_tracking_sync_success':
+        return 'Sync completed';
+      case 'media_tracking_token_required':
+        return 'Enter and verify an access token first';
+      case 'media_tracking_volume':
+        return 'Volume';
       case 'microphone_permission_denied':
         return '錄音需要麥克風權限。';
       case 'mining_audio_quality':
@@ -185594,6 +187700,8 @@ extension on _StringsZhHk {
         return '系統';
       case 'settings_destination_system_summary':
         return '通用、更新與診斷';
+      case 'settings_destination_tracking':
+        return 'Media tracking';
       case 'settings_destination_video':
         return '影片';
       case 'settings_experimental_suffix':
