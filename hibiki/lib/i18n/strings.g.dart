@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 44761 (2633 per locale)
 ///
-/// Built on 2026-07-27 at 08:00 UTC
+/// Built on 2026-07-27 at 08:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -347,7 +347,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_tag_default_section => 'Default tags';
   String get anki_tag_include_category => 'Add source category tag';
   String get anki_tag_include_category_hint =>
-      'Books get "book", videos get "video"';
+      'Books get "book", videos get "video", games get "game"';
   String get anki_tag_include_hibiki => 'Add "hibiki" tag';
   String get anki_tag_include_hibiki_hint => 'Mark every card mined by Hibiki';
   String get anki_tags => 'Tags';
@@ -3811,7 +3811,7 @@ class _StringsAr extends _StringsEn {
   String get anki_tag_include_category => 'إضافة وسم فئة المصدر';
   @override
   String get anki_tag_include_category_hint =>
-      'تحصل الكتب على "book" والفيديوهات على "video"';
+      'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game"';
   @override
   String get anki_tag_include_hibiki => 'إضافة وسم "hibiki"';
   @override
@@ -9799,7 +9799,7 @@ class _StringsDe extends _StringsEn {
   String get anki_tag_include_category => 'Tag für Quellkategorie hinzufügen';
   @override
   String get anki_tag_include_category_hint =>
-      'Bücher erhalten „book“, Videos „video“';
+      'Bücher erhalten „book“, Videos „video“, Spiele „game“';
   @override
   String get anki_tag_include_hibiki => 'Tag „hibiki“ hinzufügen';
   @override
@@ -15855,7 +15855,7 @@ class _StringsEs extends _StringsEn {
       'Añadir etiqueta de categoría de origen';
   @override
   String get anki_tag_include_category_hint =>
-      'Los libros llevan «book» y los vídeos «video»';
+      'Los libros llevan «book», los vídeos «video» y los juegos «game»';
   @override
   String get anki_tag_include_hibiki => 'Añadir la etiqueta «hibiki»';
   @override
@@ -21927,7 +21927,7 @@ class _StringsFr extends _StringsEn {
       'Ajouter une étiquette de catégorie source';
   @override
   String get anki_tag_include_category_hint =>
-      'Les livres reçoivent « book », les vidéos « video »';
+      'Les livres reçoivent « book », les vidéos « video », les jeux « game »';
   @override
   String get anki_tag_include_hibiki => 'Ajouter l\'étiquette « hibiki »';
   @override
@@ -28010,7 +28010,7 @@ class _StringsId extends _StringsEn {
   String get anki_tag_include_category => 'Tambahkan tag kategori sumber';
   @override
   String get anki_tag_include_category_hint =>
-      'Buku diberi "book", video diberi "video"';
+      'Buku diberi "book", video diberi "video", gim diberi "game"';
   @override
   String get anki_tag_include_hibiki => 'Tambahkan tag "hibiki"';
   @override
@@ -34022,7 +34022,7 @@ class _StringsIt extends _StringsEn {
       'Aggiungi etichetta categoria di origine';
   @override
   String get anki_tag_include_category_hint =>
-      'I libri ricevono "book", i video "video"';
+      'I libri ricevono "book", i video "video", i giochi "game"';
   @override
   String get anki_tag_include_hibiki => 'Aggiungi etichetta "hibiki"';
   @override
@@ -40072,7 +40072,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_tag_include_category => 'ソース分類タグを追加';
   @override
-  String get anki_tag_include_category_hint => '書籍には「book」、動画には「video」';
+  String get anki_tag_include_category_hint =>
+      '書籍には「book」、動画には「video」、ゲームには「game」';
   @override
   String get anki_tag_include_hibiki => '「hibiki」タグを追加';
   @override
@@ -45945,7 +45946,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_tag_include_category => '소스 분류 태그 추가';
   @override
-  String get anki_tag_include_category_hint => '책은 "book", 비디오는 "video"';
+  String get anki_tag_include_category_hint =>
+      '책은 "book", 비디오는 "video", 게임은 "game"';
   @override
   String get anki_tag_include_hibiki => '"hibiki" 태그 추가';
   @override
@@ -51830,7 +51832,7 @@ class _StringsNl extends _StringsEn {
   String get anki_tag_include_category => 'Tag voor broncategorie toevoegen';
   @override
   String get anki_tag_include_category_hint =>
-      'Boeken krijgen "book", video\'s krijgen "video"';
+      'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game"';
   @override
   String get anki_tag_include_hibiki => 'Tag "hibiki" toevoegen';
   @override
@@ -57869,7 +57871,7 @@ class _StringsPtBr extends _StringsEn {
       'Adicionar tag de categoria de origem';
   @override
   String get anki_tag_include_category_hint =>
-      'Livros recebem "book", vídeos recebem "video"';
+      'Livros recebem "book", vídeos recebem "video", jogos recebem "game"';
   @override
   String get anki_tag_include_hibiki => 'Adicionar tag "hibiki"';
   @override
@@ -63918,7 +63920,7 @@ class _StringsRu extends _StringsEn {
   String get anki_tag_include_category => 'Добавлять тег категории источника';
   @override
   String get anki_tag_include_category_hint =>
-      'Книги получают «book», видео — «video»';
+      'Книги получают «book», видео — «video», игры — «game»';
   @override
   String get anki_tag_include_hibiki => 'Добавлять тег «hibiki»';
   @override
@@ -69952,7 +69954,7 @@ class _StringsTh extends _StringsEn {
   String get anki_tag_include_category => 'เพิ่มแท็กหมวดหมู่แหล่งที่มา';
   @override
   String get anki_tag_include_category_hint =>
-      'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video"';
+      'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game"';
   @override
   String get anki_tag_include_hibiki => 'เพิ่มแท็ก "hibiki"';
   @override
@@ -75937,7 +75939,7 @@ class _StringsTr extends _StringsEn {
   String get anki_tag_include_category => 'Kaynak kategorisi etiketi ekle';
   @override
   String get anki_tag_include_category_hint =>
-      'Kitaplara "book", videolara "video"';
+      'Kitaplara "book", videolara "video", oyunlara "game"';
   @override
   String get anki_tag_include_hibiki => '"hibiki" etiketi ekle';
   @override
@@ -81952,7 +81954,7 @@ class _StringsVi extends _StringsEn {
   String get anki_tag_include_category => 'Thêm thẻ phân loại nguồn';
   @override
   String get anki_tag_include_category_hint =>
-      'Sách gắn "book", video gắn "video"';
+      'Sách gắn "book", video gắn "video", trò chơi gắn "game"';
   @override
   String get anki_tag_include_hibiki => 'Thêm thẻ "hibiki"';
   @override
@@ -87927,7 +87929,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_tag_include_category => '添加来源分类标签';
   @override
-  String get anki_tag_include_category_hint => '书籍标「book」、视频标「video」';
+  String get anki_tag_include_category_hint => '书籍标「book」、视频标「video」、游戏标「game」';
   @override
   String get anki_tag_include_hibiki => '添加「hibiki」标签';
   @override
@@ -93527,7 +93529,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_tag_include_category => '加入來源分類標籤';
   @override
-  String get anki_tag_include_category_hint => '書籍標「book」、影片標「video」';
+  String get anki_tag_include_category_hint => '書籍標「book」、影片標「video」、遊戲標「game」';
   @override
   String get anki_tag_include_hibiki => '加入「hibiki」標籤';
   @override
@@ -99274,7 +99276,7 @@ extension on _StringsEn {
       case 'anki_tag_include_category':
         return 'Add source category tag';
       case 'anki_tag_include_category_hint':
-        return 'Books get "book", videos get "video"';
+        return 'Books get "book", videos get "video", games get "game"';
       case 'anki_tag_include_hibiki':
         return 'Add "hibiki" tag';
       case 'anki_tag_include_hibiki_hint':
@@ -104657,7 +104659,7 @@ extension on _StringsAr {
       case 'anki_tag_include_category':
         return 'إضافة وسم فئة المصدر';
       case 'anki_tag_include_category_hint':
-        return 'تحصل الكتب على "book" والفيديوهات على "video"';
+        return 'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game"';
       case 'anki_tag_include_hibiki':
         return 'إضافة وسم "hibiki"';
       case 'anki_tag_include_hibiki_hint':
@@ -110037,7 +110039,7 @@ extension on _StringsDe {
       case 'anki_tag_include_category':
         return 'Tag für Quellkategorie hinzufügen';
       case 'anki_tag_include_category_hint':
-        return 'Bücher erhalten „book“, Videos „video“';
+        return 'Bücher erhalten „book“, Videos „video“, Spiele „game“';
       case 'anki_tag_include_hibiki':
         return 'Tag „hibiki“ hinzufügen';
       case 'anki_tag_include_hibiki_hint':
@@ -115438,7 +115440,7 @@ extension on _StringsEs {
       case 'anki_tag_include_category':
         return 'Añadir etiqueta de categoría de origen';
       case 'anki_tag_include_category_hint':
-        return 'Los libros llevan «book» y los vídeos «video»';
+        return 'Los libros llevan «book», los vídeos «video» y los juegos «game»';
       case 'anki_tag_include_hibiki':
         return 'Añadir la etiqueta «hibiki»';
       case 'anki_tag_include_hibiki_hint':
@@ -120839,7 +120841,7 @@ extension on _StringsFr {
       case 'anki_tag_include_category':
         return 'Ajouter une étiquette de catégorie source';
       case 'anki_tag_include_category_hint':
-        return 'Les livres reçoivent « book », les vidéos « video »';
+        return 'Les livres reçoivent « book », les vidéos « video », les jeux « game »';
       case 'anki_tag_include_hibiki':
         return 'Ajouter l\'étiquette « hibiki »';
       case 'anki_tag_include_hibiki_hint':
@@ -126244,7 +126246,7 @@ extension on _StringsId {
       case 'anki_tag_include_category':
         return 'Tambahkan tag kategori sumber';
       case 'anki_tag_include_category_hint':
-        return 'Buku diberi "book", video diberi "video"';
+        return 'Buku diberi "book", video diberi "video", gim diberi "game"';
       case 'anki_tag_include_hibiki':
         return 'Tambahkan tag "hibiki"';
       case 'anki_tag_include_hibiki_hint':
@@ -131632,7 +131634,7 @@ extension on _StringsIt {
       case 'anki_tag_include_category':
         return 'Aggiungi etichetta categoria di origine';
       case 'anki_tag_include_category_hint':
-        return 'I libri ricevono "book", i video "video"';
+        return 'I libri ricevono "book", i video "video", i giochi "game"';
       case 'anki_tag_include_hibiki':
         return 'Aggiungi etichetta "hibiki"';
       case 'anki_tag_include_hibiki_hint':
@@ -137034,7 +137036,7 @@ extension on _StringsJa {
       case 'anki_tag_include_category':
         return 'ソース分類タグを追加';
       case 'anki_tag_include_category_hint':
-        return '書籍には「book」、動画には「video」';
+        return '書籍には「book」、動画には「video」、ゲームには「game」';
       case 'anki_tag_include_hibiki':
         return '「hibiki」タグを追加';
       case 'anki_tag_include_hibiki_hint':
@@ -142399,7 +142401,7 @@ extension on _StringsKo {
       case 'anki_tag_include_category':
         return '소스 분류 태그 추가';
       case 'anki_tag_include_category_hint':
-        return '책은 "book", 비디오는 "video"';
+        return '책은 "book", 비디오는 "video", 게임은 "game"';
       case 'anki_tag_include_hibiki':
         return '"hibiki" 태그 추가';
       case 'anki_tag_include_hibiki_hint':
@@ -147769,7 +147771,7 @@ extension on _StringsNl {
       case 'anki_tag_include_category':
         return 'Tag voor broncategorie toevoegen';
       case 'anki_tag_include_category_hint':
-        return 'Boeken krijgen "book", video\'s krijgen "video"';
+        return 'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game"';
       case 'anki_tag_include_hibiki':
         return 'Tag "hibiki" toevoegen';
       case 'anki_tag_include_hibiki_hint':
@@ -153165,7 +153167,7 @@ extension on _StringsPtBr {
       case 'anki_tag_include_category':
         return 'Adicionar tag de categoria de origem';
       case 'anki_tag_include_category_hint':
-        return 'Livros recebem "book", vídeos recebem "video"';
+        return 'Livros recebem "book", vídeos recebem "video", jogos recebem "game"';
       case 'anki_tag_include_hibiki':
         return 'Adicionar tag "hibiki"';
       case 'anki_tag_include_hibiki_hint':
@@ -158558,7 +158560,7 @@ extension on _StringsRu {
       case 'anki_tag_include_category':
         return 'Добавлять тег категории источника';
       case 'anki_tag_include_category_hint':
-        return 'Книги получают «book», видео — «video»';
+        return 'Книги получают «book», видео — «video», игры — «game»';
       case 'anki_tag_include_hibiki':
         return 'Добавлять тег «hibiki»';
       case 'anki_tag_include_hibiki_hint':
@@ -163955,7 +163957,7 @@ extension on _StringsTh {
       case 'anki_tag_include_category':
         return 'เพิ่มแท็กหมวดหมู่แหล่งที่มา';
       case 'anki_tag_include_category_hint':
-        return 'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video"';
+        return 'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game"';
       case 'anki_tag_include_hibiki':
         return 'เพิ่มแท็ก "hibiki"';
       case 'anki_tag_include_hibiki_hint':
@@ -169338,7 +169340,7 @@ extension on _StringsTr {
       case 'anki_tag_include_category':
         return 'Kaynak kategorisi etiketi ekle';
       case 'anki_tag_include_category_hint':
-        return 'Kitaplara "book", videolara "video"';
+        return 'Kitaplara "book", videolara "video", oyunlara "game"';
       case 'anki_tag_include_hibiki':
         return '"hibiki" etiketi ekle';
       case 'anki_tag_include_hibiki_hint':
@@ -174729,7 +174731,7 @@ extension on _StringsVi {
       case 'anki_tag_include_category':
         return 'Thêm thẻ phân loại nguồn';
       case 'anki_tag_include_category_hint':
-        return 'Sách gắn "book", video gắn "video"';
+        return 'Sách gắn "book", video gắn "video", trò chơi gắn "game"';
       case 'anki_tag_include_hibiki':
         return 'Thêm thẻ "hibiki"';
       case 'anki_tag_include_hibiki_hint':
@@ -180111,7 +180113,7 @@ extension on _StringsZhCn {
       case 'anki_tag_include_category':
         return '添加来源分类标签';
       case 'anki_tag_include_category_hint':
-        return '书籍标「book」、视频标「video」';
+        return '书籍标「book」、视频标「video」、游戏标「game」';
       case 'anki_tag_include_hibiki':
         return '添加「hibiki」标签';
       case 'anki_tag_include_hibiki_hint':
@@ -185454,7 +185456,7 @@ extension on _StringsZhHk {
       case 'anki_tag_include_category':
         return '加入來源分類標籤';
       case 'anki_tag_include_category_hint':
-        return '書籍標「book」、影片標「video」';
+        return '書籍標「book」、影片標「video」、遊戲標「game」';
       case 'anki_tag_include_hibiki':
         return '加入「hibiki」標籤';
       case 'anki_tag_include_hibiki_hint':
